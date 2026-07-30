@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.codex-remote-attachments/
+Modoscrisissurvival/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+.env
+.env*.local
+.DS_Store
+Thumbs.db

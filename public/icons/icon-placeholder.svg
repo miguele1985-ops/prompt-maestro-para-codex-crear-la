@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Icono placeholder">
+  <rect width="512" height="512" rx="96" fill="#08110d"/>
+  <path d="M96 128 256 64l160 64v112c0 88-62 168-160 208C158 408 96 328 96 240Z" fill="#42e58f"/>
+  <path d="M156 314 242 178l42 74 28-44 56 106H156Z" fill="#08110d"/>
+  <path d="M185 348c44 22 98 22 142 0" fill="none" stroke="#08110d" stroke-width="24" stroke-linecap="round"/>
+</svg>

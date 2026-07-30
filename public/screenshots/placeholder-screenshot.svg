@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1280" role="img" aria-label="Captura placeholder">
+  <rect width="720" height="1280" fill="#08110d"/>
+  <rect x="72" y="80" width="576" height="1120" rx="56" fill="#101c15" stroke="#42e58f" stroke-width="4"/>
+  <text x="120" y="180" fill="#42e58f" font-family="Arial" font-size="36">Modo Crisis</text>
+  <text x="120" y="250" fill="#f5fff8" font-family="Arial" font-size="52">Placeholder</text>
+  <rect x="120" y="320" width="480" height="180" rx="18" fill="#14271c"/>
+  <rect x="120" y="540" width="220" height="180" rx="18" fill="#14271c"/>
+  <rect x="380" y="540" width="220" height="180" rx="18" fill="#14271c"/>
+  <text x="120" y="820" fill="#bfd1c5" font-family="Arial" font-size="28">Sustituir por captura real</text>
+</svg>
