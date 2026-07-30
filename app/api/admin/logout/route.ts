@@ -1,6 +1,6 @@
 import { adminSessionCookieName } from "../_utils";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export async function POST() {
@@ -11,4 +11,3 @@ export async function POST() {
   );
   return response;
 }
-

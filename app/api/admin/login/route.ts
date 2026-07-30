@@ -5,7 +5,7 @@ import {
   safeEqual,
 } from "../_utils";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const attempts = new Map<string, { count: number; resetAt: number }>();
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, message: "Credenciales incorrectas." }, { status: 401 });
   }
 
-  const session = adminSessionValue();
+  const session = await adminSessionValue();
   if (!session) {
     return Response.json({ ok: false, message: "ADMIN_TOKEN no está configurado." }, { status: 500 });
   }
@@ -73,4 +73,3 @@ export async function POST(request: Request) {
   );
   return response;
 }
-

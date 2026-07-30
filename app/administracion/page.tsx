@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Download,
   Eye,
@@ -167,6 +167,7 @@ function slugify(value: string) {
 }
 
 export default function AdminPage() {
+  const [checkingSession, setCheckingSession] = useState(true);
   const [activeTab, setActiveTab] = useState<AdminTab>("sitio");
   const [status, setStatus] = useState("");
   const [saving, setSaving] = useState(false);
@@ -210,6 +211,26 @@ export default function AdminPage() {
     () => pages.find((page) => page.slug === selectedSlug) || pages[0] || emptyPage,
     [pages, selectedSlug],
   );
+
+  useEffect(() => {
+    let active = true;
+
+    async function verifySession() {
+      const response = await fetch("/api/admin/session", { cache: "no-store" }).catch(() => null);
+      if (!active) return;
+      if (!response?.ok) {
+        window.location.href = `/admin-login?next=${encodeURIComponent("/administracion")}`;
+        return;
+      }
+      setCheckingSession(false);
+    }
+
+    verifySession();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const completion = useMemo(() => {
     const pending = [
@@ -376,6 +397,19 @@ export default function AdminPage() {
   async function logout() {
     await fetch("/api/admin/logout", { method: "POST" });
     window.location.href = "/admin-login";
+  }
+
+  if (checkingSession) {
+    return (
+      <section className="page-hero admin-login-page">
+        <div className="admin-login-card">
+          <ShieldCheck aria-hidden />
+          <p className="eyebrow">Acceso restringido</p>
+          <h1>Comprobando sesion</h1>
+          <p>Un momento, estamos verificando el acceso al panel de administracion.</p>
+        </div>
+      </section>
+    );
   }
 
   return (

@@ -14,6 +14,8 @@ import { blogArticles, guideCategories } from "@/content/guides";
 import { allContentPages, calculators, crisisScenarios } from "@/content/pages";
 import { pageMetadata } from "@/lib/seo";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return allContentPages.map((page) => ({ slug: page.slug }));
 }
