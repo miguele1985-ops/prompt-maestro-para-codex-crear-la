@@ -79,19 +79,19 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                 <p>{section.body}</p>
                 {section.items ? (
                   <div className="option-list">
-                    <strong>QuÃƒÆ’Ã‚Â© permite hacer</strong>
+                    <strong>Qué permite hacer</strong>
                     <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
                   </div>
                 ) : null}
                 {section.steps ? (
                   <div className="option-list">
-                    <strong>CÃƒÆ’Ã‚Â³mo usarlo</strong>
+                    <strong>Cómo usarlo</strong>
                     <ol>{section.steps.map((step) => <li key={step}>{step}</li>)}</ol>
                   </div>
                 ) : null}
                 {section.tips ? (
                   <div className="option-list">
-                    <strong>Para sacarle el mÃƒÆ’Ã‚Â¡ximo partido</strong>
+                    <strong>Para sacarle el máximo partido</strong>
                     <ul>{section.tips.map((tip) => <li key={tip}>{tip}</li>)}</ul>
                   </div>
                 ) : null}
@@ -136,9 +136,9 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         <section className="content-band">
           <DownloadCard />
           <article className="mini-card">
-            <h2>Instrucciones de instalaciÃƒÆ’Ã‚Â³n</h2>
+            <h2>Instrucciones de instalación</h2>
             <ol>{downloadInfo.installSteps.map((step) => <li key={step}>{step}</li>)}</ol>
-            <SafetyWarning>No descargues copias de webs no oficiales. Verifica el hash SHA-256 cuando estÃƒÆ’Ã‚Â© disponible.</SafetyWarning>
+            <SafetyWarning>No descargues copias de webs no oficiales. Verifica el hash SHA-256 cuando esté disponible.</SafetyWarning>
           </article>
           <article className="mini-card">
             <h2>Permisos posibles</h2>
@@ -156,7 +156,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         <section className="content-band changelog">
           {changelog.map((entry) => (
             <article className="mini-card" key={entry.version}>
-              <h2>{entry.version} Ãƒâ€šÃ‚Â· {entry.title}</h2>
+              <h2>{entry.version} · {entry.title}</h2>
               <p>{entry.date}</p>
               <ul>{entry.changes.map((change) => <li key={change}>{change}</li>)}</ul>
             </article>

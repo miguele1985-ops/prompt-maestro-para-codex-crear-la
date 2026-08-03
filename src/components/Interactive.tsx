@@ -16,7 +16,7 @@ export function CrisisDemo({ scenarios }: { scenarios: Scenario[] }) {
         ))}
       </div>
       <article className="scenario-detail">
-        <p className="eyebrow">DemostraciÃ³n web</p>
+        <p className="eyebrow">Demostración web</p>
         <h3>{selected.title}</h3>
         <strong>Prioridad inmediata</strong>
         <p>{selected.priority}</p>
@@ -125,7 +125,7 @@ export function CalculatorGrid({ calculators }: { calculators: Calculator[] }) {
 export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
   const [active, setActive] = useState<MediaAsset | null>(null);
   return (
-    <section className="gallery" aria-label="GalerÃ­a de capturas">
+    <section className="gallery" aria-label="Galería de capturas">
       <div className="gallery-grid">
         {assets.map((asset) => (
           <button type="button" key={asset.src} onClick={() => setActive(asset)} className="screenshot-thumb">

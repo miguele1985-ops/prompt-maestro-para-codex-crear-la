@@ -1245,38 +1245,156 @@ export const legalPages: ContentPage[] = [
   {
     slug: "aviso-legal",
     title: "Aviso legal",
-    description: "Borrador editable pendiente de revisión legal.",
-    body: ["Titular: Configurar antes de publicar.", "Datos de contacto: Añadir correo de soporte.", "Este texto no constituye asesoramiento legal definitivo."],
-    seoTitle: "Aviso legal",
-    seoDescription: "Aviso legal editable de Modo Crisis Survival pendiente de revisión profesional.",
+    description: "Información legal del sitio web y de la distribución de la aplicación Modo Crisis Survival.",
+    body: [
+      "Este Aviso Legal regula el uso del sitio web [www.tudominio.com], cuyo objeto principal es ofrecer información y permitir la descarga de la aplicación móvil Modo Crisis Survival, así como recibir donaciones voluntarias para colaborar con el proyecto.",
+      "El acceso y uso del sitio web atribuye la condición de usuario e implica la aceptación de este Aviso Legal, la Política de Privacidad, la Política de Cookies y las Condiciones de Uso.",
+    ],
+    sections: [
+      {
+        title: "1. Datos identificativos",
+        body: "En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico, se facilitan los datos principales del titular.",
+        items: ["Titular: Miguel Ángel", "Correo electrónico de contacto: Migueleclip@gmail.com", "Dominio web: [www.tudominio.com]", "Actividad: desarrollo y distribución de la aplicación móvil Modo Crisis Survival"],
+      },
+      {
+        title: "2. Condiciones de acceso y uso",
+        body: "El acceso al sitio web es gratuito, salvo el coste de conexión del proveedor de acceso del usuario. El usuario se compromete a utilizar el sitio web de forma adecuada, lícita y respetuosa con la legislación vigente.",
+        items: ["No utilizar el sitio web con fines fraudulentos o ilícitos", "No dañar sistemas propios, de proveedores o de terceros", "No introducir virus u otros elementos dañinos", "No intentar acceder o manipular datos del titular, usuarios o terceros"],
+      },
+      {
+        title: "3. Propiedad intelectual e industrial",
+        body: "Los textos, imágenes, logotipos, diseño, código fuente de la app y demás contenidos son propiedad de Miguel Ángel o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial.",
+        warning: "Queda prohibida la reproducción, distribución, comunicación pública o transformación sin autorización expresa, salvo uso personal y privado permitido por la ley.",
+      },
+      {
+        title: "4. Descarga y uso de la aplicación",
+        body: "La aplicación Modo Crisis Survival se ofrece de forma gratuita para su descarga. Su uso se rige por este Aviso Legal y por las Condiciones de Uso específicas de la app.",
+      },
+      {
+        title: "5. Exclusión de responsabilidad",
+        body: "El titular no garantiza la ausencia de interrupciones, errores o virus en el sitio web ni la disponibilidad continua del mismo. Tampoco se responsabiliza del uso ilícito, negligente o contrario a estas condiciones que pueda realizar el usuario.",
+        warning: "La información de la app es educativa y de apoyo. No sustituye al 112, autoridades, profesionales sanitarios ni formación especializada.",
+      },
+      {
+        title: "6. Enlaces externos",
+        body: "El sitio web puede contener enlaces a webs de terceros, como plataformas de pago para donaciones. El titular no asume responsabilidad sobre el contenido, funcionamiento o políticas de dichos sitios.",
+      },
+      {
+        title: "7. Legislación aplicable y modificaciones",
+        body: "Estas condiciones se rigen por la legislación española. El titular puede modificar este Aviso Legal para adaptarlo a novedades legislativas o jurisprudenciales.",
+        items: ["Jurisdicción: juzgados y tribunales competentes conforme a la normativa aplicable", "Última actualización: [fecha]"],
+      },
+    ],
+    seoTitle: "Aviso legal de Modo Crisis Survival",
+    seoDescription: "Aviso legal del sitio web oficial de Modo Crisis Survival, titular, condiciones de uso, propiedad intelectual, responsabilidad y legislación aplicable.",
   },
   {
     slug: "privacidad",
     title: "Política de privacidad",
-    description: "Datos, permisos, almacenamiento local, exportaciones, analítica, contacto y derechos.",
+    description: "Información sobre datos personales de la web, funcionamiento offline de la app, donaciones, contacto y derechos del usuario.",
     body: [
-      "Configurar qué datos se almacenan localmente y qué datos se envían si se habilitan formularios o analítica.",
-      "Cámara, micrófono, ubicación, archivos y notificaciones deben explicarse según el comportamiento real de la app.",
-      "Revisión legal y de protección de datos requerida antes de publicar.",
+      "Responsable del tratamiento: Miguel Ángel. Correo electrónico: Migueleclip@gmail.com.",
+      "La aplicación Modo Crisis Survival funciona offline y no requiere registro, cuenta de usuario ni inicio de sesión. Según la configuración actual declarada para la app, no envía información a servidores propios durante su uso offline.",
+      "El sitio web sí puede tratar datos cuando el usuario navega, contacta o realiza una donación voluntaria mediante proveedores externos.",
+    ],
+    sections: [
+      {
+        title: "1. Aplicación Modo Crisis Survival",
+        body: "La app está diseñada para funcionar sin conexión y guardar la información en el propio dispositivo. No incluye publicidad ni analítica de terceros configurada por defecto.",
+        items: ["Sin registro obligatorio", "Sin cuenta de usuario", "Sin envío de datos a servidores propios durante el uso offline", "Almacenamiento local en el dispositivo", "Permisos solicitados solo según la función utilizada"],
+        warning: "Si en el futuro se añaden funciones online, analítica, copias en la nube o envío de datos, esta política deberá actualizarse antes de publicar esos cambios.",
+      },
+      {
+        title: "2. Datos tratados por el sitio web",
+        body: "La web puede tratar datos técnicos de navegación, datos enviados mediante formularios de contacto y datos gestionados por pasarelas externas de donación.",
+        items: ["Navegación: IP y datos técnicos del navegador según cookies aceptadas", "Contacto: nombre, correo y mensaje si el usuario escribe", "Donaciones: datos gestionados por PayPal, Stripe u otro proveedor configurado"],
+      },
+      {
+        title: "3. Finalidad y conservación",
+        body: "Los datos del sitio web se usan para responder consultas, procesar donaciones voluntarias y elaborar estadísticas anónimas si se aceptan cookies analíticas. Se conservan solo durante el tiempo necesario y los plazos legalmente exigibles.",
+      },
+      {
+        title: "4. Destinatarios y derechos",
+        body: "No se cederán datos a terceros salvo obligación legal o proveedores necesarios para el funcionamiento de la web. El usuario puede ejercer sus derechos escribiendo a Migueleclip@gmail.com.",
+        items: ["Acceso", "Rectificación", "Supresión", "Limitación", "Oposición", "Portabilidad", "Reclamación ante la Agencia Española de Protección de Datos: www.aepd.es"],
+      },
+      {
+        title: "5. Menores, seguridad y cambios",
+        body: "No se solicitan intencionadamente datos de menores a través del sitio web. Se aplican medidas técnicas y organizativas para proteger los datos y esta política puede actualizarse por cambios legales o técnicos.",
+        items: ["Última actualización: [fecha]"],
+      },
     ],
     seoTitle: "Política de privacidad",
-    seoDescription: "Política de privacidad editable con permisos, datos locales, contacto, cookies y terceros.",
+    seoDescription: "Política de privacidad de Modo Crisis Survival, datos de la web, funcionamiento offline de la app, contacto, donaciones y derechos RGPD.",
   },
   {
     slug: "cookies",
     title: "Política de cookies",
-    description: "Consentimiento, categorías y cambio de preferencias.",
-    body: ["No se carga analítica no esencial antes del consentimiento.", "Categorías: necesarias, analíticas, preferencias y marketing solo si se utiliza."],
+    description: "Información sobre cookies necesarias, analíticas opcionales, consentimiento y gestión desde el navegador.",
+    body: [
+      "Las cookies son pequeños archivos de texto que un sitio web instala en el dispositivo del usuario al navegar por él. Permiten almacenar y recuperar información sobre hábitos de navegación o configuración.",
+      "Esta política afecta exclusivamente al sitio web. La aplicación Modo Crisis Survival funciona offline y no utiliza cookies.",
+    ],
+    sections: [
+      {
+        title: "1. Cookies utilizadas",
+        body: "Este sitio web utiliza cookies técnicas o necesarias y puede utilizar cookies analíticas opcionales solo si se configuran y el usuario las acepta.",
+        items: ["Necesarias: recuerdan preferencias básicas como el consentimiento de cookies", "Analíticas: medición estadística de visitas si se configura Google Analytics, Matomo u otra herramienta", "Preferencias: ajustes no esenciales si se habilitan", "Marketing: solo si se configura expresamente en el futuro"],
+      },
+      {
+        title: "2. Donaciones y terceros",
+        body: "Si se usan plataformas externas de pago para donaciones, como PayPal o Stripe, esas plataformas pueden instalar sus propias cookies al redirigir al usuario a su pasarela.",
+        warning: "Las cookies de PayPal, Stripe u otros proveedores se rigen por las políticas de esos servicios externos.",
+      },
+      {
+        title: "3. Consentimiento",
+        body: "Al acceder al sitio se muestra un banner de cookies que permite aceptar, rechazar o configurar cookies no esenciales antes de que se instalen.",
+      },
+      {
+        title: "4. Gestión desde el navegador",
+        body: "El usuario puede permitir, bloquear o eliminar cookies desde la configuración de Chrome, Firefox, Safari, Edge u otro navegador.",
+        items: ["Desactivar algunas cookies puede afectar a ciertas partes del sitio", "Las cookies analíticas no deben cargarse antes del consentimiento", "Última actualización: [fecha]"],
+      },
+    ],
     seoTitle: "Política de cookies",
-    seoDescription: "Política de cookies y consentimiento configurable de Modo Crisis Survival.",
+    seoDescription: "Política de cookies de Modo Crisis Survival, cookies necesarias, analíticas opcionales, terceros, consentimiento y gestión.",
   },
   {
     slug: "condiciones",
     title: "Condiciones de uso",
-    description: "Borrador editable sobre uso de la web, aplicación, descargas, limitaciones y responsabilidades.",
-    body: ["Pendiente de revisión legal.", "La información educativa no sustituye servicios de emergencia, profesionales sanitarios ni autoridades."],
+    description: "Condiciones aplicables a la descarga y utilización de la aplicación móvil Modo Crisis Survival.",
+    body: [
+      "Estas Condiciones de Uso regulan la descarga y utilización de la aplicación móvil Modo Crisis Survival, desarrollada por Miguel Ángel. La descarga o uso de la app implica la aceptación íntegra de estas condiciones.",
+      "Modo Crisis Survival es una aplicación móvil de carácter informativo y educativo orientada a la supervivencia y preparación ante situaciones de emergencia, diseñada para funcionar sin conexión a Internet.",
+    ],
+    sections: [
+      {
+        title: "1. Licencia de uso",
+        body: "Se concede al usuario una licencia limitada, no exclusiva, intransferible y revocable para instalar y utilizar la app exclusivamente para uso personal y no comercial.",
+        items: ["No realizar ingeniería inversa", "No descompilar ni desensamblar la app", "No modificar, distribuir, sublicenciar, vender o explotar comercialmente la app sin autorización", "No utilizar la app con fines ilícitos"],
+      },
+      {
+        title: "2. Aviso importante sobre el contenido",
+        body: "El contenido de la app se ofrece únicamente con fines informativos y educativos. No sustituye el asesoramiento, diagnóstico o tratamiento de profesionales cualificados, cuerpos de rescate, protección civil o autoridades.",
+        warning: "En una emergencia real que ponga en riesgo la vida, la salud o la seguridad, llama siempre al 112 o al servicio equivalente de tu país y sigue las instrucciones oficiales.",
+      },
+      {
+        title: "3. Exclusión de garantías y responsabilidad",
+        body: "El titular no garantiza la exactitud, actualidad, exhaustividad o idoneidad de la información para cada situación concreta. El uso práctico de técnicas, consejos o recomendaciones es responsabilidad exclusiva del usuario.",
+        warning: "La app se proporciona tal cual, sin garantías de seguridad absoluta ni de idoneidad para una emergencia concreta.",
+      },
+      {
+        title: "4. Disponibilidad, actualizaciones y propiedad intelectual",
+        body: "La app está diseñada para funcionar offline, pero no se garantiza que esté libre de errores o interrupciones. El titular puede publicar actualizaciones para corregir errores, mejorar funciones o añadir contenido.",
+        items: ["Los derechos de código, diseño, textos, gráficos e iconos pertenecen a Miguel Ángel o a terceros licenciados", "Las condiciones pueden modificarse y publicarse en la web", "Última actualización: [fecha]"],
+      },
+      {
+        title: "5. Legislación aplicable",
+        body: "Estas Condiciones de Uso se rigen por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales competentes conforme a la normativa aplicable.",
+      },
+    ],
     seoTitle: "Condiciones de uso",
-    seoDescription: "Condiciones de uso editables de la web y la aplicación Modo Crisis Survival.",
+    seoDescription: "Condiciones de uso de Modo Crisis Survival, licencia, finalidad educativa, limitaciones, responsabilidades y legislación aplicable.",
   },
 ];
 

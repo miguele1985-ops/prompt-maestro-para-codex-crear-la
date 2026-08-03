@@ -14,7 +14,7 @@ export function ApkDownloadButton({ label = "Descargar aplicación para Android"
 
 export function QrDownload() {
   return (
-    <div className="qr-placeholder" aria-label="CÃ³digo QR pendiente de generar">
+    <div className="qr-placeholder" aria-label="Código QR pendiente de generar">
       <ShieldCheck aria-hidden />
       <span>QR pendiente de generar</span>
     </div>
@@ -28,10 +28,10 @@ export function DownloadCard({ compact = false }: { compact?: boolean }) {
         <p className="eyebrow">APK oficial Android</p>
         <h2 id="download-title">{downloadInfo.name}</h2>
         <dl className="download-meta">
-          <div><dt>VersiÃ³n</dt><dd>{downloadInfo.version}</dd></div>
+          <div><dt>Versión</dt><dd>{downloadInfo.version}</dd></div>
           <div><dt>Fecha</dt><dd>{downloadInfo.date}</dd></div>
-          <div><dt>TamaÃ±o</dt><dd>{downloadInfo.size}</dd></div>
-          <div><dt>Android mÃ­nimo</dt><dd>{downloadInfo.minimumAndroidVersion}</dd></div>
+          <div><dt>Tamaño</dt><dd>{downloadInfo.size}</dd></div>
+          <div><dt>Android mínimo</dt><dd>{downloadInfo.minimumAndroidVersion}</dd></div>
           <div><dt>SHA-256</dt><dd>{downloadInfo.sha256}</dd></div>
         </dl>
         <div className="actions">

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SafetyWarning } from "@/components/Badges";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
-import { blogPosts, getBlogPost } from "@/content/blog";
+import { blogAppUseGuides, blogPosts, getBlogPost } from "@/content/blog";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
@@ -28,6 +28,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) notFound();
+  const appUseGuide = blogAppUseGuides[post.slug];
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -69,6 +70,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             ) : null}
           </section>
         ))}
+
+        {appUseGuide ? (
+          <section className="blog-article-section blog-app-use">
+            <h2>{appUseGuide.title}</h2>
+            <p>{appUseGuide.intro}</p>
+            <ol>
+              {appUseGuide.steps.map((step) => <li key={step}>{step}</li>)}
+            </ol>
+          </section>
+        ) : null}
 
         {post.relatedLinks?.length ? (
           <nav className="blog-related" aria-label="Enlaces relacionados">

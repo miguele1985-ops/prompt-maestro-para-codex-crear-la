@@ -19,6 +19,12 @@ export interface BlogPost {
   relatedLinks?: Array<{ label: string; href: string }>;
 }
 
+export interface BlogAppUseGuide {
+  title: string;
+  intro: string;
+  steps: string[];
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "que-debe-incluir-aplicacion-supervivencia-offline",
@@ -284,3 +290,156 @@ export const blogArticles = blogPosts.map((post) => post.title);
 export function getBlogPost(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
+
+export const blogAppUseGuides: Record<string, BlogAppUseGuide> = {
+  "que-debe-incluir-aplicacion-supervivencia-offline": {
+    title: "Cómo llevar esta preparación a la app",
+    intro: "La idea no es leer el artículo y olvidarlo, sino convertirlo en elementos útiles dentro de Modo Crisis Survival.",
+    steps: [
+      "Abre la pantalla principal y marca con estrella las funciones que vas a usar primero.",
+      "Revisa Guías de supervivencia y guarda como favoritas las categorías que más encajan con tu zona.",
+      "Añade contactos, ubicaciones, documentos, notas y elementos de inventario antes de necesitarlos.",
+      "Prueba mapas, brújula, Modo Crisis y SOS con calma para saber dónde está cada cosa.",
+    ],
+  },
+  "como-prepararse-para-un-apagon": {
+    title: "Cómo preparar un apagón dentro de la app",
+    intro: "Un apagón se trabaja mejor si lo conviertes en checklist, inventario y protocolo visible.",
+    steps: [
+      "Abre Checklists y revisa la lista de apagón, casa preparada y mochila de 72 horas.",
+      "En Inventario añade linternas, pilas, powerbanks, radio, agua, comida que no dependa de nevera y medicación.",
+      "En Control de batería elige el modo de ahorro que tenga sentido según la duración estimada.",
+      "En Notas guarda instrucciones familiares: dónde están las luces, qué comida usar primero y cuándo pedir ayuda.",
+    ],
+  },
+  "como-crear-plan-familiar-emergencia": {
+    title: "Cómo añadir el plan familiar",
+    intro: "El plan familiar debe quedar registrado para que no dependa de la memoria en un momento de nervios.",
+    steps: [
+      "En Herramientas abre Planes de Emergencia o Plan Familiar.",
+      "Añade miembros, roles, puntos de encuentro, rutas y contactos alternativos.",
+      "Guarda necesidades especiales como medicación, alergias, movilidad reducida o menores a cargo.",
+      "Revisa el porcentaje de preparación y programa simulacros o recordatorios de revisión.",
+    ],
+  },
+  "que-guardar-mochila-72-horas": {
+    title: "Cómo montar la mochila con la app",
+    intro: "La app ayuda a que la mochila no sea una lista mental, sino una revisión marcada y actualizable.",
+    steps: [
+      "Abre Checklists y selecciona Mochila 72 Horas.",
+      "Marca lo que ya tienes y deja visibles los elementos pendientes.",
+      "Añade en Inventario cantidades reales de agua, comida, botiquín, pilas y batería externa.",
+      "Crea una revisión mensual para comprobar caducidades, carga de baterías y estado del material.",
+    ],
+  },
+  "como-utilizar-mapas-offline": {
+    title: "Cómo añadir mapas offline",
+    intro: "Los mapas deben prepararse antes de perder cobertura, porque suelen ocupar mucho y necesitan una prueba previa.",
+    steps: [
+      "Descarga o copia un archivo MBTiles compatible desde una fuente autorizada.",
+      "Entra en Mapa Offline y pulsa Mapas para consultar los mapas instalados.",
+      "Selecciona Importar otro mapa, elige el archivo MBTiles y actívalo.",
+      "Guarda puntos importantes como casa, vehículo, punto de encuentro, centro médico y fuente de agua.",
+    ],
+  },
+  "que-es-archivo-mbtiles": {
+    title: "Cómo usar un MBTiles en Modo Crisis Survival",
+    intro: "Un MBTiles funciona como un mapa empaquetado que puedes importar y llevar en el teléfono.",
+    steps: [
+      "Comprueba la licencia del mapa y que cubre la zona que necesitas.",
+      "Copia el archivo al teléfono con un nombre claro.",
+      "Desde Mapa Offline abre el gestor de mapas e importa el archivo.",
+      "Prueba zoom, desplazamiento y ubicación antes de depender del mapa en una salida o emergencia.",
+    ],
+  },
+  "como-ahorrar-bateria-emergencia": {
+    title: "Cómo usar el control de batería",
+    intro: "La batería se gestiona desde el primer minuto, no cuando el teléfono ya está casi agotado.",
+    steps: [
+      "Abre Control de batería y revisa la autonomía orientativa.",
+      "Elige Normal, Ahorro moderado, Ahorro alto o Ultra emergencia según la situación.",
+      "Reduce brillo, conexiones y uso de pantalla cuando no sean necesarios.",
+      "Reserva batería para mapas, llamadas, contactos, ubicación y protocolos importantes.",
+    ],
+  },
+  "que-hacer-cuando-no-hay-cobertura": {
+    title: "Cómo preparar la app para quedarse sin cobertura",
+    intro: "Cuando no hay red, solo funciona lo que ya está guardado en el teléfono.",
+    steps: [
+      "Marca como favoritos Modo Crisis, SOS, Brújula, Mapas Offline, Contactos y Notas.",
+      "Guarda rutas, puntos de encuentro y contactos antes de salir.",
+      "Prepara mensajes cortos o instrucciones en Notas por si necesitas comunicarlos rápido.",
+      "Consulta Comunicaciones, Morse, señales con las manos y silbato como recursos de apoyo.",
+    ],
+  },
+  "como-guardar-agua-emergencias": {
+    title: "Cómo registrar agua y autonomía",
+    intro: "El agua debe aparecer en inventario y en calculadoras para entender cuánto margen tienes.",
+    steps: [
+      "En Inventario añade agua embotellada, garrafas o depósitos con litros reales.",
+      "Usa la calculadora de Gestión de Agua para estimar días aproximados según personas.",
+      "Añade una revisión para comprobar fechas, envases y estado del almacenamiento.",
+      "Consulta Guías de Agua para almacenamiento, hervido y potabilización con prudencia.",
+    ],
+  },
+  "como-preparar-coche-averia": {
+    title: "Cómo preparar el vehículo en la app",
+    intro: "El coche puede ser recurso importante si el kit está pensado, revisado y localizado.",
+    steps: [
+      "Abre Supervivencia Vehículo y revisa el kit del coche.",
+      "Añade al Inventario agua, manta, linterna, chaleco, señalización, botiquín, cargadores y documentación.",
+      "Guarda la ubicación del vehículo si lo dejas en una zona poco conocida.",
+      "Consulta el escenario concreto antes de actuar: avería aislada, nieve, accidente, riada, incendio o túnel.",
+    ],
+  },
+  "que-hacer-durante-dana": {
+    title: "Cómo usar la app ante DANA o inundación",
+    intro: "La app ayuda a consultar protocolos y mapas, pero las órdenes oficiales siempre tienen prioridad.",
+    steps: [
+      "Consulta Desastres Naturales y la ficha de DANA o inundación.",
+      "Revisa rutas alternativas y evita cauces, barrancos, garajes y pasos inundados.",
+      "Guarda en Ubicaciones puntos altos, centros seguros y puntos de encuentro familiares.",
+      "Si hay conexión, revisa Alertas y Meteorología, contrastando siempre con fuentes oficiales.",
+    ],
+  },
+  "diferencias-alertas-oficiales-avisos-meteorologicos": {
+    title: "Cómo consultar avisos dentro de la app",
+    intro: "Las alertas online sirven para prepararse mejor, pero pueden sufrir retrasos y dependen de fuentes externas.",
+    steps: [
+      "Abre Con uso de Internet y entra en Alertas o El Tiempo.",
+      "Selecciona zona y tipo de alerta cuando la pantalla lo permita.",
+      "Lee fuente, fecha, ubicación y severidad antes de tomar decisiones.",
+      "Contrasta con Protección Civil, AEMET, ES-Alert u organismos oficiales cuando haya riesgo real.",
+    ],
+  },
+  "como-preparar-ninos-sin-asustarlos": {
+    title: "Cómo enseñar a menores con la app",
+    intro: "La preparación infantil debe ser sencilla, repetida y sin tono alarmista.",
+    steps: [
+      "Usa Aprende en familia para repartir responsabilidades sencillas.",
+      "Practica el número 112, nombre, teléfono familiar y adulto de confianza.",
+      "Utiliza el juego 72 Horas para aprender decisiones básicas sin generar miedo.",
+      "Guarda el plan familiar visible y repásalo con frases claras.",
+    ],
+  },
+  "documentacion-conviene-tener-disponible": {
+    title: "Cómo guardar documentos en la app",
+    intro: "La documentación debe estar disponible offline, pero también protegida por ser información sensible.",
+    steps: [
+      "Abre Documentos y Biblioteca para importar PDF o fotos importantes.",
+      "Crea categorías claras: salud, seguros, identidad, vivienda, vehículo o manuales.",
+      "Evita guardar datos innecesarios y protege el teléfono con bloqueo seguro.",
+      "Añade una revisión para actualizar documentos caducados o teléfonos antiguos.",
+    ],
+  },
+  "como-revisar-kit-emergencia": {
+    title: "Cómo convertir la revisión en rutina",
+    intro: "La preparación mejora cuando la app recuerda qué falta, qué caduca y qué conviene revisar.",
+    steps: [
+      "Abre Revisiones y elige revisión mensual, mochila, invierno, verano o vehículo.",
+      "Comprueba agua, alimentos, pilas, botiquín, powerbanks, documentación y material usado.",
+      "Actualiza Inventario con cantidades reales después de cada revisión.",
+      "Anota pendientes para comprar, sustituir o probar antes de la siguiente fecha.",
+    ],
+  },
+};
