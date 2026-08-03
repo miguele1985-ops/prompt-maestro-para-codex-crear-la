@@ -3509,6 +3509,56 @@ h3 {
   }
 }
 
+/* Softer commercial headings: less heavy than the first survival draft. */
+h1,
+h2,
+.section-header h2,
+.page-hero h1,
+.download-card h2,
+.cta-panel h2 {
+  font-family: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 820;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--forest);
+}
+
+.section-header h2,
+.download-card h2,
+.cta-panel h2 {
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+  line-height: 1.14;
+  max-width: 44rem;
+}
+
+.section-header .eyebrow {
+  color: #b65321;
+  font-size: .7rem;
+  letter-spacing: .08em;
+}
+
+.section-header .eyebrow::before {
+  width: 1rem;
+  opacity: .85;
+}
+
+.hero h1 {
+  font-weight: 840;
+  color: var(--paper-soft);
+}
+
+.page-hero h1 {
+  color: var(--paper-soft);
+}
+
+@media (max-width: 640px) {
+  .section-header h2,
+  .download-card h2,
+  .cta-panel h2 {
+    font-size: clamp(1.32rem, 6vw, 1.72rem);
+  }
+}
+
 /* Compact internal page hero: keeps feature detail pages readable on mobile. */
 .page-hero {
   min-height: auto;

@@ -30,11 +30,11 @@ export const moduleGroups = [
     text: "Agrupa las acciones que el usuario necesita encontrar bajo presión: pedir ayuda, ver ubicación, activar señales y consultar prioridades por escenario.",
   },
   {
-    title: "Preparación familiar",
-    kicker: "Antes de que pase algo",
+    title: "Herramientas",
+    kicker: "Preparación y control",
     image: "/screenshots/app/personal-tools.jpg",
-    items: ["Roles familiares", "Puntos de encuentro", "Rutas", "Simulacros", "Retos semanales"],
-    text: "Ayuda a convertir la preparación en tareas concretas: inventario, plan familiar, contactos, revisiones y progreso orientativo.",
+    items: ["Inventario", "Checklists", "Contactos", "Ubicaciones", "Documentos", "Respaldo"],
+    text: "Agrupa las herramientas personales que ayudan a preparar y organizar recursos: inventario, checklists, contactos, ubicaciones, documentos, respaldo, notas, batería y plan familiar.",
   },
   {
     title: "Biblioteca offline",
