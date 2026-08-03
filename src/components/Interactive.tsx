@@ -16,7 +16,7 @@ export function CrisisDemo({ scenarios }: { scenarios: Scenario[] }) {
         ))}
       </div>
       <article className="scenario-detail">
-        <p className="eyebrow">Demostración web</p>
+        <p className="eyebrow">DemostraciÃ³n web</p>
         <h3>{selected.title}</h3>
         <strong>Prioridad inmediata</strong>
         <p>{selected.priority}</p>
@@ -35,28 +35,62 @@ export function CrisisDemo({ scenarios }: { scenarios: Scenario[] }) {
 export function GuideSearch({ categories }: { categories: GuideCategory[] }) {
   const [query, setQuery] = useState("");
   const filtered = useMemo(() => {
-    return categories.filter((category) => category.title.toLowerCase().includes(query.toLowerCase()));
+    const normalizedQuery = query.toLowerCase().trim();
+    if (!normalizedQuery) {
+      return categories;
+    }
+
+    return categories.filter((category) => {
+      const searchableText = [
+        category.title,
+        category.description,
+        category.articleCountLabel,
+        category.expansion,
+        ...(category.articleExamples ?? []),
+        ...(category.usageTips ?? []),
+      ].join(" ").toLowerCase();
+
+      return searchableText.includes(normalizedQuery);
+    });
   }, [categories, query]);
   return (
     <section className="search-panel">
       <label htmlFor="guide-search">Buscar categorías</label>
       <div className="search-box">
         <Search size={18} aria-hidden />
-        <input id="guide-search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Agua, fuego, nudos..." />
+        <input id="guide-search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Agua, alimentación, primeros auxilios..." />
       </div>
-      <div className="category-grid">
+      <div className="category-grid guide-category-grid">
         {filtered.map((category) => (
-          <article key={category.id} className="mini-card">
-            <h3>{category.title}</h3>
+          <article key={category.id} className="mini-card guide-category-card">
+            <div className="mini-card-head">
+              <h3>{category.title}</h3>
+              <span>{category.articleCountLabel}</span>
+            </div>
             <p>{category.description}</p>
-            <span>{category.articleCountLabel}</span>
+            {category.expansion ? <p className="mini-card-detail">{category.expansion}</p> : null}
+            {category.articleExamples?.length ? (
+              <div className="mini-card-block">
+                <strong>Artículos y ampliaciones</strong>
+                <ul className="mini-card-list">
+                  {category.articleExamples.map((article) => <li key={article}>{article}</li>)}
+                </ul>
+              </div>
+            ) : null}
+            {category.usageTips?.length ? (
+              <div className="mini-card-block">
+                <strong>Modo de uso en la app</strong>
+                <ul className="mini-card-list">
+                  {category.usageTips.map((tip) => <li key={tip}>{tip}</li>)}
+                </ul>
+              </div>
+            ) : null}
           </article>
         ))}
       </div>
     </section>
   );
 }
-
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
   return (
     <div className="faq-list">
@@ -91,7 +125,7 @@ export function CalculatorGrid({ calculators }: { calculators: Calculator[] }) {
 export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
   const [active, setActive] = useState<MediaAsset | null>(null);
   return (
-    <section className="gallery" aria-label="Galería de capturas">
+    <section className="gallery" aria-label="GalerÃ­a de capturas">
       <div className="gallery-grid">
         {assets.map((asset) => (
           <button type="button" key={asset.src} onClick={() => setActive(asset)} className="screenshot-thumb">

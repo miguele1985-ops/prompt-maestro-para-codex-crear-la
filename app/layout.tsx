@@ -4,6 +4,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { StatsTracker } from "@/components/StatsTracker";
 import { siteConfig } from "@/content/site-config";
 import { appJsonLd, organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <CookieBanner />
+        <StatsTracker />
         <SeoJsonLd data={[organizationJsonLd(), websiteJsonLd(), appJsonLd()]} />
       </body>
     </html>

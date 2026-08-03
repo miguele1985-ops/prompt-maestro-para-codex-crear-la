@@ -64,6 +64,9 @@ export interface GuideCategory {
   title: string;
   description: string;
   articleCountLabel: string;
+  expansion?: string;
+  articleExamples?: string[];
+  usageTips?: string[];
 }
 
 export interface Calculator {

@@ -675,6 +675,7 @@ const encyclopediaSections: ContentPage["sections"] = [
     imageAlt: "Pantalla de Plantas de España con fichas comestibles, peligrosas, medicinales, buscador y aviso de seguridad",
     steps: ["Filtrar por zona.", "Comparar hábitat y época.", "Leer confusiones.", "Guardar fichas relevantes.", "No consumir sin experto."],
     tips: ["La ubicación importa.", "Las fotos no bastan.", "Marca especies peligrosas de tu zona."],
+    warning: "Nunca consumas una planta, un hongo o un animal basandote unicamente en una fotografia o en una aplicacion. Una identificacion incorrecta puede provocar intoxicaciones graves o la muerte.",
   },
   {
     title: "Huerto",
@@ -695,14 +696,24 @@ const encyclopediaSections: ContentPage["sections"] = [
     tips: ["La mejor opción depende del escenario.", "Prioriza seguridad.", "Evita rankings absolutos."],
   },
   {
-    title: "Caza y Pesca",
-    body: "Enfoque educativo, legal y responsable sobre rastros, riesgos sanitarios, conservación, normativa, licencias y restricciones.",
-    items: ["Huellas", "Rastros", "Riesgos sanitarios", "Normativa", "Licencias", "Conservación"],
+    title: "Caza de supervivencia",
+    body: "La seccion de caza tiene un enfoque educativo, legal y responsable. Ayuda a estudiar huellas, rastros, senales, comportamiento animal, riesgos sanitarios y restricciones, sin promover caza furtiva ni metodos ilegales.",
+    items: ["Huellas y rastros", "Senales de presencia", "Seguridad", "Riesgos sanitarios", "Legislacion y restricciones"],
     image: "/screenshots/app/encyclopedia-hunting.jpg",
-    imageAlt: "Pantalla de Caza de Supervivencia con huellas, rastros, fichas visuales y recomendaciones de verificación",
-    steps: ["Leer normativa.", "Revisar restricciones.", "Identificar riesgos.", "Evitar métodos ilegales.", "Priorizar seguridad alimentaria."],
-    tips: ["No fomentes caza o pesca ilegal.", "Respeta especies protegidas.", "Incluye avisos legales visibles."],
-    warning: "La caza y la pesca están reguladas y pueden requerir licencias o autorizaciones.",
+    imageAlt: "Pantalla de caza de supervivencia",
+    steps: ["Leer normativa.", "Revisar restricciones.", "Identificar riesgos.", "Evitar metodos ilegales.", "Priorizar seguridad alimentaria."],
+    tips: ["No fomentes caza ilegal.", "Respeta especies protegidas.", "Incluye avisos legales visibles."],
+    warning: "La caza esta regulada. Deben respetarse licencias, vedas, especies protegidas, zonas autorizadas y legislacion aplicable.",
+  },
+  {
+    title: "Pesca de supervivencia",
+    body: "La seccion de pesca explica evaluacion del agua, energia necesaria, seguridad del entorno, tecnicas basicas, nudos, riesgos sanitarios, limpieza, conservacion y normativa.",
+    items: ["Evaluacion del agua", "Tecnicas basicas", "Nudos y lineas", "Riesgos sanitarios", "Normativa y licencias"],
+    image: "/screenshots/app/encyclopedia-hunting-fishing.jpg",
+    imageAlt: "Pantalla de pesca de supervivencia",
+    steps: ["Evaluar si el agua y la orilla son seguras.", "Comprobar normativa.", "Preparar lineas y nudos.", "Identificar riesgos sanitarios.", "Conservar el alimento con seguridad."],
+    tips: ["No fomentes pesca ilegal.", "Respeta especies protegidas.", "Evita zonas prohibidas o contaminadas."],
+    warning: "La pesca puede requerir licencia y esta prohibida en determinadas zonas, epocas o especies. Respeta siempre la normativa vigente.",
   },
   {
     title: "Desastres",
@@ -1067,16 +1078,16 @@ export const pages: ContentPage[] = [
     slug: "ia-enciclopedia",
     title: "IA y enciclopedia offline",
     eyebrow: "Asistente local y biblioteca visual",
-    description: "Asistente Offline IA, recursos, panel de preparación, nudos útiles, plantas, huerto, comparativas, caza y pesca y desastres.",
+    description: "Asistente Offline IA, recursos instalados, panel de preparacion, nudos, plantas, huerto, comparativas, caza, pesca, desastres y juegos offline.",
     body: [
-      "IA y enciclopedia agrupa la consulta local opcional y la biblioteca visual avanzada de la app.",
-      "Incluye un asistente local opcional, gestión de recursos offline y fichas visuales para temas que conviene preparar antes: nudos, plantas, huerto, desastres, comparativas, caza y pesca.",
-      "La web debe dejar claros los límites: la IA puede equivocarse, las fichas de plantas no autorizan consumo y las secciones de caza o pesca deben respetar normativa.",
+      "La categoria IA y enciclopedia agrupa las funciones de consulta, referencia y aprendizaje avanzado que ayudan a encontrar informacion dentro de la app sin depender de Internet. Reune el asistente offline, el estado de los recursos instalados y varias guias visuales para preparar, comparar, identificar riesgos y consultar procedimientos rapidamente.",
+      "El objetivo de esta categoria no es sustituir a profesionales ni a fuentes oficiales, sino ordenar la informacion importante en un punto claro de la aplicacion. Desde aqui puedes revisar si los recursos estan preparados, consultar el panel de preparacion, estudiar nudos utiles, ver fichas de plantas y animales, planificar un huerto, comparar metodos, acceder a contenidos de caza y pesca responsable y repasar desastres naturales.",
+      "La inteligencia artificial local, cuando el telefono y el modelo lo permiten, puede responder usando recursos offline de la app. Aun asi, puede equivocarse, omitir datos o generar respuestas incorrectas. En salud, emergencias, plantas, hongos, caza, pesca, mapas o alertas, confirma siempre con fuentes oficiales o personas cualificadas."
     ],
-    highlights: ["Asistente Offline IA", "Recursos", "Panel Prep.", "Nudos", "Plantas", "Huerto", "Comparativas", "Desastres"],
+    highlights: ["Asistente Offline IA", "Recursos instalados", "Panel de preparacion", "Nudos utiles", "Plantas y animales", "Plantas de Espana", "Huerto", "Caza", "Pesca", "Desastres naturales"],
     sections: encyclopediaSections,
     seoTitle: "IA y enciclopedia offline de Modo Crisis Survival",
-    seoDescription: "IA y enciclopedia de Modo Crisis Survival: asistente offline, recursos, panel de preparación, nudos, plantas, huerto, comparativas y desastres.",
+    seoDescription: "Consulta las funciones de IA y enciclopedia offline de Modo Crisis Survival: asistente local, recursos, panel de preparacion, nudos, plantas, huerto, caza, pesca y desastres.",
   },
   {
     slug: "donaciones",
@@ -1206,6 +1217,27 @@ export const pages: ContentPage[] = [
     ],
     seoTitle: "Seguridad y limitaciones de Modo Crisis Survival",
     seoDescription: "Avisos de seguridad, privacidad, permisos, Caja Negra, IA, mapas, meteorología, salud, plantas, caza y pesca.",
+  },
+  {
+    slug: "centro-descargas",
+    title: "Centro de descargas",
+    eyebrow: "Mapas, IA y recursos opcionales",
+    description: "Zona preparada para descargar mapas MBTiles, modelos GGUF de IA local y consultar instrucciones para instalarlos en la app.",
+    body: [
+      "El Centro de descargas reune los recursos grandes que no siempre conviene incluir dentro del APK: mapas offline, modelos de inteligencia artificial local y guias para importarlos en el telefono.",
+      "Descarga solo archivos de fuentes oficiales o verificadas. Los mapas pueden ocupar mucho espacio y los modelos de IA pueden requerir telefonos potentes, memoria suficiente y bateria.",
+      "La app completa se descarga por separado. Esta pagina sirve para preparar recursos opcionales y aprender como anadirlos correctamente."
+    ],
+    highlights: ["Mapas MBTiles", "Modelos GGUF", "Instrucciones de instalacion", "Recursos opcionales", "Verificacion antes de usar"],
+    sections: [
+      { title: "Mapas offline MBTiles", body: "Los mapas MBTiles permiten llevar mapas locales dentro del telefono para consultarlos sin cobertura. Puedes preparar mapas por zona, copiarlos al dispositivo e importarlos desde la app.", items: ["Mapa normal", "Mapa topografico", "Relieve", "Mapas de otros paises", "Archivos grandes"], warning: "No alojes ni descargues mapas con derechos de autor sin permiso. Revisa licencias, tamano y actualizacion del mapa." },
+      { title: "Modelos IA local GGUF", body: "La IA local puede funcionar con modelos GGUF compatibles si el telefono tiene memoria, procesador, espacio y bateria suficientes. El modelo se descarga aparte y se importa manualmente.", items: ["Modelo GGUF", "Espacio suficiente", "Telefono compatible", "Consumo de bateria", "Funcionamiento variable"], warning: "La IA puede equivocarse y consumir mucha bateria. No la uses como unica fuente en una emergencia." },
+      { title: "Antes de instalar recursos", body: "Comprueba siempre el origen del archivo, el espacio disponible, la version de la app y si el recurso es realmente necesario para tu zona o uso.", items: ["Origen fiable", "Espacio libre", "Nombre claro", "Copia de seguridad", "Prueba antes de necesitarlo"] }
+    ],
+    cta: "Descargar aplicacion para Android",
+    seoTitle: "Centro de descargas de Modo Crisis Survival",
+    seoDescription: "Descarga mapas offline MBTiles, modelos GGUF de IA local e instrucciones para instalarlos en Modo Crisis Survival.",
+    keywords: ["descargar mapas MBTiles", "modelo GGUF", "IA local Android", "Modo Crisis Survival descargas"]
   },
 ];
 

@@ -15,11 +15,13 @@ import {
   Settings,
   ShieldCheck,
   Smartphone,
+  TrendingUp,
   Trash2,
 } from "lucide-react";
 import { changelog, downloadInfo } from "@/content/downloads";
 import { allContentPages } from "@/content/pages";
 import { siteConfig } from "@/content/site-config";
+import type { SiteStats } from "@/lib/counters";
 import type { ChangelogEntry, ContentPage } from "@/types/content";
 
 type AdminTab = "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "avanzado";
@@ -107,6 +109,14 @@ const tabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Se
   { id: "multimedia", label: "Multimedia", helper: "Rutas de imágenes, capturas y vídeo", icon: ImageIcon },
   { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
 ];
+
+const emptyStats: SiteStats = {
+  configured: false,
+  visits: 0,
+  downloads: 0,
+  donations: 0,
+  message: "Cargando contadores reales...",
+};
 
 const emptySection: PageSection = {
   title: "Nueva opción",
@@ -197,6 +207,7 @@ export default function AdminPage() {
     donations: siteConfig.donations,
     seo: siteConfig.seo,
   });
+  const [realStats, setRealStats] = useState<SiteStats>(emptyStats);
   const [download, setDownload] = useState<DownloadEditor>({
     ...downloadInfo,
     permissions: [...downloadInfo.permissions],
@@ -222,6 +233,18 @@ export default function AdminPage() {
         window.location.href = `/admin-login?next=${encodeURIComponent("/administracion")}`;
         return;
       }
+      fetch("/api/stats", { cache: "no-store" })
+        .then((statsResponse) => statsResponse.json())
+        .then((stats: SiteStats) => setRealStats(stats))
+        .catch(() =>
+          setRealStats({
+            configured: false,
+            visits: 0,
+            downloads: 0,
+            donations: 0,
+            message: "No se pudieron cargar los contadores reales.",
+          }),
+        );
       setCheckingSession(false);
     }
 
@@ -439,6 +462,21 @@ export default function AdminPage() {
             <strong>{completion.pending}</strong>
             <p>Campos por revisar antes de publicar</p>
           </div>
+          <div className="admin-metric admin-counter-card">
+            <span><TrendingUp aria-hidden /> Visitas web</span>
+            <strong>{realStats.visits.toLocaleString("es-ES")}</strong>
+            <p>{realStats.configured ? "Registradas automaticamente" : "KV sin configurar"}</p>
+          </div>
+          <div className="admin-metric admin-counter-card">
+            <span><Download aria-hidden /> Descargas</span>
+            <strong>{realStats.downloads.toLocaleString("es-ES")}</strong>
+            <p>Boton oficial del APK</p>
+          </div>
+          <div className="admin-metric admin-counter-card">
+            <span>Clics en donar</span>
+            <strong>{realStats.donations.toLocaleString("es-ES")}</strong>
+            <p>Botones de donacion</p>
+          </div>
           <div className="admin-actions-card">
             <button className="button secondary" type="button" onClick={logout}>
               <LogOut aria-hidden /> Salir
@@ -450,6 +488,11 @@ export default function AdminPage() {
         </div>
 
         {status ? <p className="admin-status admin-floating-status" role="status">{status}</p> : null}
+        {!realStats.configured ? (
+          <p className="admin-status admin-floating-status" role="status">
+            {realStats.message}
+          </p>
+        ) : null}
 
         <div className="admin-shell">
           <aside className="admin-nav" aria-label="Áreas de administración">
@@ -494,6 +537,12 @@ export default function AdminPage() {
                 </div>
                 <TextArea label="Frase principal" value={site.slogan} rows={3} onChange={(value) => setSiteField("slogan", value)} />
                 <TextArea label="Descripción comercial" value={site.description} rows={5} onChange={(value) => setSiteField("description", value)} />
+                <div className="admin-subpanel">
+                  <h3>Contadores reales</h3>
+                  <p>
+                    Las visitas y descargas se registran automaticamente en Cloudflare KV. Los clics en donar se suman cuando un visitante pulsa un boton de donacion.
+                  </p>
+                </div>
                 <div className="admin-form-grid colors-grid">
                   {Object.entries(site.colors).map(([key, value]) => (
                     <label key={key} className="color-field">
