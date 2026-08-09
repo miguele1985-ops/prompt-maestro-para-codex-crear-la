@@ -9,14 +9,14 @@ export async function GET() {
     return NextResponse.json(await readSiteStats(), {
       headers: { "cache-control": "no-store" },
     });
-  } catch {
+  } catch (error) {
     return NextResponse.json(
       {
         configured: false,
         visits: 0,
         downloads: 0,
         donations: 0,
-        message: "No se pudieron leer los contadores reales.",
+        message: error instanceof Error ? error.message : "No se pudieron leer los contadores reales.",
       },
       { status: 500, headers: { "cache-control": "no-store" } },
     );

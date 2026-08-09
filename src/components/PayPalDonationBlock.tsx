@@ -38,7 +38,7 @@ const supportCards = [
   { title: "Contenido para familias", icon: Users },
 ];
 
-const donationAmounts = ["Donar 2 €", "Donar 5 €", "Donar 10 €", "Elegir otra cantidad"];
+const donationAmounts = ["Donar 5 €", "Donar 10 €", "Donar 15 €", "Elegir otra cantidad"];
 
 export function PayPalDonationBlock() {
   const [paypalReady, setPaypalReady] = useState(false);

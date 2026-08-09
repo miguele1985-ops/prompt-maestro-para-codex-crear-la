@@ -23,6 +23,18 @@ function getKvConfig() {
   return { accountId, namespaceId, apiToken };
 }
 
+function missingKvConfigMessage() {
+  const missing = [
+    process.env.COUNTERS_KV_ACCOUNT_ID || process.env.CLOUDFLARE_ACCOUNT_ID ? "" : "COUNTERS_KV_ACCOUNT_ID",
+    process.env.COUNTERS_KV_NAMESPACE_ID || process.env.CLOUDFLARE_KV_NAMESPACE_ID ? "" : "COUNTERS_KV_NAMESPACE_ID",
+    process.env.COUNTERS_KV_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN ? "" : "COUNTERS_KV_API_TOKEN",
+  ].filter(Boolean);
+
+  return missing.length
+    ? `Faltan variables para contadores reales: ${missing.join(", ")}.`
+    : "Configura Cloudflare KV para activar contadores reales.";
+}
+
 function valueTarget(name: CounterName) {
   const config = getKvConfig();
   if (!config) return null;
@@ -44,7 +56,10 @@ async function readCounter(name: CounterName) {
   });
 
   if (response.status === 404) return 0;
-  if (!response.ok) throw new Error(`No se pudo leer el contador ${name}`);
+  if (!response.ok) {
+    const details = await response.text().catch(() => "");
+    throw new Error(`No se pudo leer el contador ${name}. Cloudflare respondio ${response.status}. ${details}`.trim());
+  }
 
   const value = Number.parseInt((await response.text()).trim(), 10);
   return Number.isFinite(value) ? value : 0;
@@ -64,7 +79,10 @@ async function writeCounter(name: CounterName, value: number) {
     cache: "no-store",
   });
 
-  if (!response.ok) throw new Error(`No se pudo guardar el contador ${name}`);
+  if (!response.ok) {
+    const details = await response.text().catch(() => "");
+    throw new Error(`No se pudo guardar el contador ${name}. Cloudflare respondio ${response.status}. ${details}`.trim());
+  }
 }
 
 export async function readSiteStats(): Promise<SiteStats> {
@@ -74,7 +92,7 @@ export async function readSiteStats(): Promise<SiteStats> {
       visits: 0,
       downloads: 0,
       donations: 0,
-      message: "Configura Cloudflare KV para activar contadores reales.",
+      message: missingKvConfigMessage(),
     };
   }
 

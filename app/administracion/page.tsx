@@ -234,15 +234,25 @@ export default function AdminPage() {
         return;
       }
       fetch("/api/stats", { cache: "no-store" })
-        .then((statsResponse) => statsResponse.json())
+        .then(async (statsResponse) => {
+          const text = await statsResponse.text();
+          const stats = text ? (JSON.parse(text) as SiteStats) : null;
+          if (!statsResponse.ok || !stats) {
+            throw new Error(stats?.message || text || `Error ${statsResponse.status} al leer contadores.`);
+          }
+          return stats;
+        })
         .then((stats: SiteStats) => setRealStats(stats))
-        .catch(() =>
+        .catch((error) =>
           setRealStats({
             configured: false,
             visits: 0,
             downloads: 0,
             donations: 0,
-            message: "No se pudieron cargar los contadores reales.",
+            message:
+              error instanceof Error
+                ? error.message
+                : "No se pudieron cargar los contadores reales. Revisa variables y permisos de Cloudflare KV.",
           }),
         );
       fetch("/api/admin/content", { cache: "no-store" })

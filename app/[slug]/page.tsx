@@ -22,6 +22,7 @@ import { readAdminContent } from "@/lib/admin-content";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 export const dynamicParams = true;
 
 const mapDownloads = [
@@ -103,10 +104,6 @@ function ResourceDownloadsPanel({ showAiImage = true }: { showAiImage?: boolean 
     </article>
   );
 }
-export function generateStaticParams() {
-  return allContentPages.map((page) => ({ slug: page.slug }));
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const savedContent = await readAdminContent().catch(() => null);
