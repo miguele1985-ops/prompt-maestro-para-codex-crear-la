@@ -245,6 +245,20 @@ export default function AdminPage() {
             message: "No se pudieron cargar los contadores reales.",
           }),
         );
+      fetch("/api/admin/content", { cache: "no-store" })
+        .then((contentResponse) => contentResponse.json())
+        .then((result: { ok?: boolean; data?: AdminData | null; message?: string }) => {
+          if (!result.ok || !result.data) return;
+          if (result.data.site) setSite((current) => ({ ...current, ...result.data?.site }));
+          if (result.data.download) setDownload((current) => ({ ...current, ...result.data?.download }));
+          if (Array.isArray(result.data.changelog)) setEntries(result.data.changelog);
+          if (Array.isArray(result.data.pages) && result.data.pages.length) {
+            setPages(result.data.pages);
+            setSelectedSlug(result.data.pages[0].slug);
+          }
+          setStatus(result.message || "Contenido editable cargado desde Cloudflare KV.");
+        })
+        .catch(() => null);
       setCheckingSession(false);
     }
 
@@ -360,7 +374,7 @@ export default function AdminPage() {
       setPages(parsed.pages);
       setSelectedSlug(parsed.pages[0].slug);
     }
-    setStatus("JSON avanzado aplicado al borrador. Pulsa Guardar cambios para publicarlo en archivos.");
+    setStatus("JSON avanzado aplicado al borrador. Pulsa Guardar cambios para guardarlo en Cloudflare KV.");
   }
 
   async function saveAll() {

@@ -439,7 +439,7 @@ export const blogAppUseGuides: Record<string, BlogAppUseGuide> = {
       "Abre Revisiones y elige revisión mensual, mochila, invierno, verano o vehículo.",
       "Comprueba agua, alimentos, pilas, botiquín, powerbanks, documentación y material usado.",
       "Actualiza Inventario con cantidades reales después de cada revisión.",
-      "Anota pendientes para comprar, sustituir o probar antes de la siguiente fecha.",
+      "Anota pendientes para conseguir, sustituir o probar antes de la siguiente fecha.",
     ],
   },
 };

@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = isDev
-  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
-  : "script-src 'self' 'unsafe-inline'";
+  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.paypalobjects.com"
+  : "script-src 'self' 'unsafe-inline' https://www.paypalobjects.com";
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -16,7 +16,7 @@ const securityHeaders = [
   {
     key: "Content-Security-Policy",
     value:
-      `default-src 'self'; ${scriptSrc}; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; frame-src https://www.youtube.com https://player.vimeo.com; base-uri 'self'; form-action 'self'`,
+      `default-src 'self'; ${scriptSrc}; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://www.paypalobjects.com; font-src 'self'; connect-src 'self' https://www.paypal.com https://www.paypalobjects.com; media-src 'self'; frame-src https://www.youtube.com https://player.vimeo.com https://www.paypal.com; base-uri 'self'; form-action 'self' https://www.paypal.com`,
   },
 ];
 

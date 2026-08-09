@@ -3,9 +3,19 @@ import { Download, ShieldCheck } from "lucide-react";
 import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
 import { downloadInfo } from "@/content/downloads";
 
-export function ApkDownloadButton({ label = "Descargar aplicación para Android" }: { label?: string }) {
+type DownloadInfo = typeof downloadInfo;
+
+export function ApkDownloadButton({
+  label = "Descargar aplicación para Android",
+  info = downloadInfo,
+}: {
+  label?: string;
+  info?: Partial<DownloadInfo>;
+}) {
+  const current = { ...downloadInfo, ...info };
+
   return (
-    <TrackedDownloadLink className="button primary" href={downloadInfo.apkUrl} download>
+    <TrackedDownloadLink className="button primary" href={current.apkUrl} download>
       <Download size={18} aria-hidden />
       {label}
     </TrackedDownloadLink>
@@ -21,22 +31,47 @@ export function QrDownload() {
   );
 }
 
-export function DownloadCard({ compact = false }: { compact?: boolean }) {
+export function DownloadCard({
+  compact = false,
+  info = downloadInfo,
+}: {
+  compact?: boolean;
+  info?: Partial<DownloadInfo>;
+}) {
+  const current = { ...downloadInfo, ...info };
+
   return (
     <section className="download-card" aria-labelledby="download-title">
       <div>
         <p className="eyebrow">APK oficial Android</p>
-        <h2 id="download-title">{downloadInfo.name}</h2>
+        <h2 id="download-title">{current.name}</h2>
         <dl className="download-meta">
-          <div><dt>Versión</dt><dd>{downloadInfo.version}</dd></div>
-          <div><dt>Fecha</dt><dd>{downloadInfo.date}</dd></div>
-          <div><dt>Tamaño</dt><dd>{downloadInfo.size}</dd></div>
-          <div><dt>Android mínimo</dt><dd>{downloadInfo.minimumAndroidVersion}</dd></div>
-          <div><dt>SHA-256</dt><dd>{downloadInfo.sha256}</dd></div>
+          <div>
+            <dt>Versión</dt>
+            <dd>{current.version}</dd>
+          </div>
+          <div>
+            <dt>Fecha</dt>
+            <dd>{current.date}</dd>
+          </div>
+          <div>
+            <dt>Tamaño</dt>
+            <dd>{current.size}</dd>
+          </div>
+          <div>
+            <dt>Android mínimo</dt>
+            <dd>{current.minimumAndroidVersion}</dd>
+          </div>
+          <div>
+            <dt>SHA-256</dt>
+            <dd>{current.sha256}</dd>
+          </div>
         </dl>
         <div className="actions">
-          <ApkDownloadButton label="Descargar Modo Crisis Survival" />
-          <Link className="button secondary" href="/descargar">Ver instrucciones</Link>
+          <ApkDownloadButton label="Descargar Modo Crisis Survival" info={current} />
+          <Link className="button secondary" href="/descargar">
+            Ver instrucciones
+          </Link>
         </div>
       </div>
       {!compact ? <QrDownload /> : null}

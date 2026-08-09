@@ -1,4 +1,5 @@
 import { requireAdminToken } from "../_utils";
+import { writeAdminContent } from "@/lib/admin-content";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -20,12 +21,20 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, message: "JSON invalido." }, { status: 400 });
   }
 
-  return Response.json(
-    {
-      ok: false,
-      message:
-        "Cloudflare Pages no puede guardar cambios directamente en archivos del proyecto. Para publicar cambios, editalos en GitHub/local y vuelve a desplegar, o conecta almacenamiento externo como Cloudflare KV/R2.",
-    },
-    { status: 501 },
-  );
+  try {
+    await writeAdminContent(JSON.parse(text));
+  } catch (error) {
+    return Response.json(
+      {
+        ok: false,
+        message: error instanceof Error ? error.message : "No se pudo guardar en Cloudflare KV.",
+      },
+      { status: 500 },
+    );
+  }
+
+  return Response.json({
+    ok: true,
+    message: "Cambios guardados en Cloudflare KV. La web usara estos datos cuando la pagina lea contenido dinamico.",
+  });
 }

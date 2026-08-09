@@ -529,6 +529,9 @@ export default function HomePage() {
               <small>Revisa cambios antes de descargar</small>
             </Link>
           </div>
+          <p className="hero-donation-note">
+            Supervivencia Offline es gratuita y completa. Las aportaciones son voluntarias y ayudan a mantener la web, mejorar la app, corregir errores y preparar nuevos recursos offline.
+          </p>
           <ul className="hero-pills" aria-label="Puntos destacados">
             <li>Modo Crisis</li>
             <li>SOS y 112</li>
@@ -713,7 +716,7 @@ export default function HomePage() {
           <SectionHeader
             eyebrow="Donaciones"
             title="Ayuda a mantener vivo el proyecto"
-            description="Las donaciones son voluntarias. No desbloquean funciones extra: ayudan a cubrir mantenimiento, recursos, pruebas y futuras actualizaciones."
+            description="Las donaciones son voluntarias. La app sigue siendo completa para todos: tu apoyo ayuda a cubrir mantenimiento, recursos, pruebas y futuras actualizaciones."
           />
           <div className="actions">
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
