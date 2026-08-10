@@ -11,7 +11,7 @@ import {
   Users,
   Wrench,
 } from "lucide-react";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { trackDonation } from "@/components/StatsTracker";
 import { donationFaqs } from "@/content/donations";
 
@@ -29,6 +29,15 @@ declare global {
   }
 }
 
+export type DonationSettings = {
+  amount5Url?: string;
+  amount10Url?: string;
+  amount15Url?: string;
+  customAmountUrl?: string;
+  paypalHostedButtonId?: string;
+  qrImage?: string;
+};
+
 const supportCards = [
   { title: "Mejoras de la app", icon: Wrench },
   { title: "Nuevas guías", icon: BookOpen },
@@ -38,11 +47,33 @@ const supportCards = [
   { title: "Contenido para familias", icon: Users },
 ];
 
-const donationAmounts = ["Donar 5 €", "Donar 10 €", "Donar 15 €", "Elegir otra cantidad"];
+function isConfiguredUrl(value?: string) {
+  if (!value) return false;
+  const normalized = value.trim().toLowerCase();
+  return Boolean(
+    normalized &&
+      normalized !== "#" &&
+      !normalized.includes("configurar") &&
+      !normalized.includes("pendiente") &&
+      !normalized.includes("añadir"),
+  );
+}
 
-export function PayPalDonationBlock() {
+export function PayPalDonationBlock({ donations }: { donations?: DonationSettings }) {
   const [paypalReady, setPaypalReady] = useState(false);
   const [qrVisible, setQrVisible] = useState(true);
+  const hostedButtonId = donations?.paypalHostedButtonId?.trim() || "9TZTUQQTQ8J7Q";
+  const qrImage = donations?.qrImage?.trim() || "/assets/img/paypal-donacion-qr.png";
+
+  const donationAmounts = useMemo(
+    () => [
+      { label: "Donar 5 €", href: donations?.amount5Url },
+      { label: "Donar 10 €", href: donations?.amount10Url },
+      { label: "Donar 15 €", href: donations?.amount15Url },
+      { label: "Elegir otra cantidad", href: donations?.customAmountUrl },
+    ],
+    [donations?.amount5Url, donations?.amount10Url, donations?.amount15Url, donations?.customAmountUrl],
+  );
 
   const renderPayPal = useCallback(() => {
     const container = document.getElementById("donate-button");
@@ -50,7 +81,7 @@ export function PayPalDonationBlock() {
 
     window.PayPal.Donation.Button({
       env: "production",
-      hosted_button_id: "9TZTUQQTQ8J7Q",
+      hosted_button_id: hostedButtonId,
       image: {
         src: "https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif",
         alt: "Botón Donar con PayPal",
@@ -58,7 +89,7 @@ export function PayPalDonationBlock() {
       },
     }).render("#donate-button");
     setPaypalReady(true);
-  }, []);
+  }, [hostedButtonId]);
 
   return (
     <section className="content-band donation-page-block" aria-labelledby="donation-main-title">
@@ -72,17 +103,19 @@ export function PayPalDonationBlock() {
           {donationAmounts.map((amount) => (
             <a
               className="donation-amount-button"
-              href="#"
-              key={amount}
-              onClick={(event) => event.preventDefault()}
+              href={isConfiguredUrl(amount.href) ? amount.href! : "#donate-button-container"}
+              key={amount.label}
+              onClick={() => trackDonation(amount.label)}
+              rel={isConfiguredUrl(amount.href) ? "noopener noreferrer" : undefined}
+              target={isConfiguredUrl(amount.href) ? "_blank" : undefined}
             >
               <HeartHandshake size={18} aria-hidden />
-              {amount}
+              {amount.label}
             </a>
           ))}
         </div>
         <p className="donation-amount-note">
-          Estos accesos quedan preparados para enlazar importes concretos. Para donar ahora, usa el botón oficial de PayPal o escanea el QR.
+          Puedes configurar estos enlaces desde administración. Si aún no están configurados, usa el botón oficial de PayPal o el QR.
         </p>
       </article>
 
@@ -110,7 +143,7 @@ export function PayPalDonationBlock() {
           {qrVisible ? (
             <figure className="donation-qr-figure">
               <img
-                src="/assets/img/paypal-donacion-qr.png"
+                src={qrImage}
                 alt="Código QR para donar a Supervivencia Offline mediante PayPal"
                 onError={() => setQrVisible(false)}
               />
@@ -118,7 +151,7 @@ export function PayPalDonationBlock() {
             </figure>
           ) : (
             <div className="donation-qr-missing">
-              Coloca el QR en <strong>public/assets/img/paypal-donacion-qr.png</strong> para mostrarlo aquí.
+              Configura la imagen QR en administración o coloca el archivo en <strong>public/assets/img/paypal-donacion-qr.png</strong>.
             </div>
           )}
         </article>
@@ -200,9 +233,7 @@ export function PayPalDonationBlock() {
         <p>
           La preparación familiar no debería depender de pagar una suscripción ni de tener conexión a internet.
         </p>
-        <p>
-          Supervivencia Offline quiere ser una herramienta sencilla, clara y accesible para cualquier hogar.
-        </p>
+        <p>Supervivencia Offline quiere ser una herramienta sencilla, clara y accesible para cualquier hogar.</p>
         <p>Tu apoyo permite que siga siendo gratuita y que pueda mejorar con el tiempo.</p>
       </article>
 

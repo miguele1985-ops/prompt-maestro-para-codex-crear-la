@@ -1,6 +1,6 @@
 import adminOverrides from "./admin-overrides.json";
 
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "";
 
 const baseSiteConfig = {
   appName: "Modo Crisis Survival",
@@ -42,24 +42,30 @@ const baseSiteConfig = {
     enabled: true,
     primaryUrl: "Configurar antes de publicar",
     paypalUrl: "Configurar antes de publicar",
+    amount5Url: "Configurar antes de publicar",
+    amount10Url: "Configurar antes de publicar",
+    amount15Url: "Configurar antes de publicar",
+    customAmountUrl: "Configurar antes de publicar",
+    paypalHostedButtonId: "9TZTUQQTQ8J7Q",
+    qrImage: "/assets/img/paypal-donacion-qr.png",
     bizumInfo: "Configurar antes de publicar",
     kofiUrl: "Configurar antes de publicar",
     patreonUrl: "Configurar antes de publicar",
     note: "Las donaciones son voluntarias y ayudan a mantener el desarrollo, los recursos, las actualizaciones y el soporte del proyecto. La app sigue siendo completa para todos.",
   },
   seo: {
-    title: "Modo Crisis Survival: aplicaciÃƒÆ’Ã‚Â³n de supervivencia offline y emergencias",
+    title: "Modo Crisis Survival: aplicación de supervivencia offline y emergencias",
     description:
     "Aplicaci\u00f3n de supervivencia offline, preparaci\u00f3n familiar, mapas MBTiles, gu\u00edas, bot\u00f3n SOS, calculadoras, inventarios, IA local opcional y herramientas para emergencias.",
     keywords: [
-      "aplicaciÃƒÆ’Ã‚Â³n de supervivencia offline",
+      "aplicación de supervivencia offline",
       "app de supervivencia",
-      "aplicaciÃƒÆ’Ã‚Â³n para emergencias",
-      "aplicaciÃƒÆ’Ã‚Â³n sin Internet",
-      "guÃƒÆ’Ã‚Â­as de supervivencia",
-      "mapas offline de EspaÃƒÆ’Ã‚Â±a",
+      "aplicación para emergencias",
+      "aplicación sin Internet",
+      "guías de supervivencia",
+      "mapas offline de España",
       "app para apagones",
-      "preparaciÃƒÆ’Ã‚Â³n familiar ante emergencias",
+      "preparación familiar ante emergencias",
       "mapas MBTiles",
       "app de emergencias para Android",
     ],
@@ -93,7 +99,7 @@ export const siteConfig = {
 
 export const navigation = [
   { label: "Inicio", href: "/" },
-  { label: "GuÃƒÆ’Ã‚Â­as", href: "/guias-supervivencia" },
+  { label: "Guías", href: "/guias-supervivencia" },
   { label: "Blog", href: "/blog" },
   { label: "Herramientas", href: "/herramientas-supervivencia" },
   { label: "Recursos", href: "/recursos-avanzados" },

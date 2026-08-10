@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
+  Coins,
   Download,
   Eye,
   FileText,
@@ -9,7 +10,6 @@ import {
   Image as ImageIcon,
   ListPlus,
   LogOut,
-  Palette,
   Plus,
   Save,
   Search,
@@ -26,7 +26,7 @@ import type { CounterBreakdown, SiteStats } from "@/lib/counters";
 import type { BugReport } from "@/lib/bug-reports";
 import type { ChangelogEntry, ContentPage } from "@/types/content";
 
-type AdminTab = "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "avanzado";
+type AdminTab = "constructor" | "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "avanzado";
 
 type SiteEditor = {
   appName: string;
@@ -67,6 +67,12 @@ type SiteEditor = {
     enabled: boolean;
     primaryUrl: string;
     paypalUrl: string;
+    amount5Url: string;
+    amount10Url: string;
+    amount15Url: string;
+    customAmountUrl: string;
+    paypalHostedButtonId: string;
+    qrImage: string;
     bizumInfo: string;
     kofiUrl: string;
     patreonUrl: string;
@@ -91,6 +97,14 @@ type DownloadEditor = {
   sha256: string;
   permissions: string[];
   installSteps: string[];
+  resources: DownloadResource[];
+};
+
+type DownloadResource = {
+  label: string;
+  url: string;
+  size: string;
+  description: string;
 };
 
 type AdminData = {
@@ -102,17 +116,8 @@ type AdminData = {
 
 type PageSection = NonNullable<ContentPage["sections"]>[number];
 
-const tabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Settings }> = [
-  { id: "sitio", label: "Portada y marca", helper: "Nombre, logo, textos, botones y colores", icon: Settings },
-  { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes, botones y avisos", icon: FileText },
-  { id: "descarga", label: "APK", helper: "Archivo, versión, permisos e instalación", icon: Download },
-  { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes y avisos", icon: FileText },
-  { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
-  { id: "multimedia", label: "Multimedia", helper: "Rutas de imágenes, capturas y vídeo", icon: ImageIcon },
-  { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
-];
-
 const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Settings }> = [
+  { id: "constructor", label: "Constructor", helper: "Vista tipo WordPress para editar lo importante", icon: Settings },
   { id: "sitio", label: "Portada y marca", helper: "Nombre, logo, textos, botones y colores", icon: Settings },
   { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes, botones y avisos", icon: FileText },
   { id: "multimedia", label: "Imágenes", helper: "Logo, capturas, vídeos y recursos visuales", icon: ImageIcon },
@@ -139,6 +144,8 @@ const emptySection: PageSection = {
   warning: "",
   image: "/screenshots/placeholder-screenshot.svg",
   imageAlt: "Captura pendiente de sustituir",
+  buttonLabel: "",
+  buttonHref: "",
 };
 
 const emptyPage: ContentPage = {
@@ -150,6 +157,7 @@ const emptyPage: ContentPage = {
   highlights: ["Pendiente de completar"],
   sections: [emptySection],
   cta: "Descargar Modo Crisis Survival",
+  ctaHref: "/descargar",
   seoTitle: "Nueva página",
   seoDescription: "Metadescripción pendiente de editar.",
   keywords: ["Pendiente de añadir"],
@@ -190,7 +198,7 @@ function slugify(value: string) {
 
 export default function AdminPage() {
   const [checkingSession, setCheckingSession] = useState(true);
-  const [activeTab, setActiveTab] = useState<AdminTab>("sitio");
+  const [activeTab, setActiveTab] = useState<AdminTab>("constructor");
   const [status, setStatus] = useState("");
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -226,6 +234,7 @@ export default function AdminPage() {
     ...downloadInfo,
     permissions: [...downloadInfo.permissions],
     installSteps: [...downloadInfo.installSteps],
+    resources: [...downloadInfo.resources],
   });
   const [entries, setEntries] = useState<ChangelogEntry[]>(changelog);
   const [pages, setPages] = useState<ContentPage[]>(allContentPages);
@@ -236,6 +245,27 @@ export default function AdminPage() {
     () => pages.find((page) => page.slug === selectedSlug) || pages[0] || emptyPage,
     [pages, selectedSlug],
   );
+
+  const mediaAssets = useMemo(() => {
+    const items = [
+      { label: "Logo", value: site.logo, group: "Marca" },
+      { label: "Imagen principal", value: site.heroImage, group: "Portada" },
+      { label: "Poster de video", value: site.videoPoster, group: "Video" },
+      { label: "QR donaciones", value: site.donations.qrImage, group: "Donaciones" },
+      { label: "Icono de descarga", value: download.icon, group: "Descarga" },
+      ...pages.flatMap((page) =>
+        (page.sections || [])
+          .filter((section) => section.image)
+          .map((section) => ({
+            label: section.title,
+            value: section.image || "",
+            group: page.title,
+          })),
+      ),
+    ];
+
+    return items.filter((item, index, source) => item.value && source.findIndex((candidate) => candidate.value === item.value) === index);
+  }, [download.icon, pages, site.donations.qrImage, site.heroImage, site.logo, site.videoPoster]);
 
   useEffect(() => {
     let active = true;
@@ -326,6 +356,35 @@ export default function AdminPage() {
     setDownload((current) => ({ ...current, [key]: value }));
   }
 
+  function updateDownloadResource(index: number, patch: Partial<DownloadResource>) {
+    setDownload((current) => ({
+      ...current,
+      resources: current.resources.map((resource, itemIndex) => (itemIndex === index ? { ...resource, ...patch } : resource)),
+    }));
+  }
+
+  function addDownloadResource() {
+    setDownload((current) => ({
+      ...current,
+      resources: [
+        ...current.resources,
+        {
+          label: "Nuevo recurso descargable",
+          url: "Configurar antes de publicar",
+          size: "Pendiente",
+          description: "Explica que archivo es, para que sirve y como se usa en la app.",
+        },
+      ],
+    }));
+  }
+
+  function removeDownloadResource(index: number) {
+    setDownload((current) => ({
+      ...current,
+      resources: current.resources.filter((_, itemIndex) => itemIndex !== index),
+    }));
+  }
+
   function updatePage(nextPage: ContentPage) {
     setPages((current) => current.map((page) => (page.slug === selectedSlug ? nextPage : page)));
     setSelectedSlug(nextPage.slug);
@@ -339,6 +398,17 @@ export default function AdminPage() {
     const sections = [...(selectedPage.sections || [])];
     sections[index] = { ...sections[index], ...patch };
     updatePage({ ...selectedPage, sections });
+  }
+
+  function updatePageSectionMedia(pageSlug: string, index: number, patch: Partial<PageSection>) {
+    setPages((current) =>
+      current.map((page) => {
+        if (page.slug !== pageSlug) return page;
+        const sections = [...(page.sections || [])];
+        sections[index] = { ...sections[index], ...patch };
+        return { ...page, sections };
+      }),
+    );
   }
 
   function addSection() {
@@ -532,7 +602,7 @@ export default function AdminPage() {
             <span>APK, versión, tamaño, hash, permisos e instalación.</span>
           </button>
           <button type="button" onClick={() => setActiveTab("sitio")}>
-            <Palette aria-hidden />
+            <Settings aria-hidden />
             <strong>Colores</strong>
             <span>Fondo, verde, naranja, avisos, peligro y texto.</span>
           </button>
@@ -647,6 +717,115 @@ export default function AdminPage() {
           </aside>
 
           <div className="admin-main">
+            {activeTab === "constructor" ? (
+              <section className="admin-panel admin-editor-panel admin-builder-panel">
+                <PanelTitle
+                  icon={<Settings aria-hidden />}
+                  title="Constructor visual"
+                  description="Edita lo mas importante de la web desde una pantalla sencilla: portada, botones, fotos, donaciones, recursos descargables y paginas."
+                />
+                <div className="builder-layout">
+                  <div className="builder-column">
+                    <article className="builder-card">
+                      <h3>Portada y marca</h3>
+                      <div className="admin-form-grid">
+                        <TextField label="Nombre de la app" value={site.appName} onChange={(value) => setSiteField("appName", value)} />
+                        <TextField label="Logo" value={site.logo} onChange={(value) => setSiteField("logo", value)} />
+                        <TextField label="Imagen principal" value={site.heroImage} onChange={(value) => setSiteField("heroImage", value)} />
+                      </div>
+                      <TextArea label="Frase principal" value={site.slogan} rows={3} onChange={(value) => setSiteField("slogan", value)} />
+                      <TextArea label="Descripcion corta de portada" value={site.description} rows={4} onChange={(value) => setSiteField("description", value)} />
+                    </article>
+
+                    <article className="builder-card">
+                      <h3>Botones y descargas</h3>
+                      <div className="admin-form-grid">
+                        <TextField label="Enlace APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
+                        <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
+                        <TextField label="Version" value={download.version} onChange={(value) => setDownloadField("version", value)} />
+                        <TextField label="Tamano" value={download.size} onChange={(value) => setDownloadField("size", value)} />
+                      </div>
+                    </article>
+
+                    <article className="builder-card">
+                      <h3>Donaciones</h3>
+                      <div className="admin-form-grid">
+                        <TextField label="Boton 5 euros" value={site.donations.amount5Url} onChange={(value) => setSiteField("donations", { ...site.donations, amount5Url: value })} />
+                        <TextField label="Boton 10 euros" value={site.donations.amount10Url} onChange={(value) => setSiteField("donations", { ...site.donations, amount10Url: value })} />
+                        <TextField label="Boton 15 euros" value={site.donations.amount15Url} onChange={(value) => setSiteField("donations", { ...site.donations, amount15Url: value })} />
+                        <TextField label="Otra cantidad" value={site.donations.customAmountUrl} onChange={(value) => setSiteField("donations", { ...site.donations, customAmountUrl: value })} />
+                        <TextField label="PayPal hosted button ID" value={site.donations.paypalHostedButtonId} onChange={(value) => setSiteField("donations", { ...site.donations, paypalHostedButtonId: value })} />
+                        <TextField label="Imagen QR" value={site.donations.qrImage} onChange={(value) => setSiteField("donations", { ...site.donations, qrImage: value })} />
+                      </div>
+                      <TextArea label="Explicacion corta para donar" value={site.donations.note} rows={4} onChange={(value) => setSiteField("donations", { ...site.donations, note: value })} />
+                    </article>
+                  </div>
+
+                  <div className="builder-column">
+                    <article className="builder-card">
+                      <h3>Paginas</h3>
+                      <div className="builder-page-grid">
+                        {pages.map((page) => (
+                          <button
+                            className={selectedSlug === page.slug ? "builder-page-card active" : "builder-page-card"}
+                            key={page.slug}
+                            type="button"
+                            onClick={() => {
+                              setSelectedSlug(page.slug);
+                              setActiveTab("paginas");
+                            }}
+                          >
+                            <strong>{page.title}</strong>
+                            <span>/{page.slug}</span>
+                          </button>
+                        ))}
+                      </div>
+                      <button className="button secondary" type="button" onClick={addPage}>
+                        <Plus aria-hidden /> Crear pagina nueva
+                      </button>
+                    </article>
+
+                    <article className="builder-card">
+                      <h3>Recursos descargables</h3>
+                      <div className="builder-resource-stack">
+                        {download.resources.map((resource, index) => (
+                          <div className="builder-resource-row" key={`${resource.label}-${index}`}>
+                            <TextField label="Nombre" value={resource.label} onChange={(value) => updateDownloadResource(index, { label: value })} />
+                            <TextField label="URL" value={resource.url} onChange={(value) => updateDownloadResource(index, { url: value })} />
+                            <TextField label="Tamano" value={resource.size} onChange={(value) => updateDownloadResource(index, { size: value })} />
+                            <TextArea label="Descripcion" value={resource.description} rows={3} onChange={(value) => updateDownloadResource(index, { description: value })} />
+                            <button className="button secondary danger-button" type="button" onClick={() => removeDownloadResource(index)}>
+                              <Trash2 aria-hidden /> Quitar recurso
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                      <button className="button secondary" type="button" onClick={addDownloadResource}>
+                        <Plus aria-hidden /> Anadir recurso
+                      </button>
+                    </article>
+
+                    <article className="builder-card">
+                      <h3>Biblioteca de imagenes usadas</h3>
+                      <div className="builder-media-grid">
+                        {mediaAssets.map((asset) => (
+                          <div className="builder-media-card" key={asset.value}>
+                            <span>{asset.group}</span>
+                            <strong>{asset.label}</strong>
+                            {/\.(jpg|jpeg|png|webp|gif|svg)$/i.test(asset.value) ? <img src={asset.value} alt="" /> : null}
+                            <code>{asset.value}</code>
+                          </div>
+                        ))}
+                      </div>
+                      <button className="button secondary" type="button" onClick={() => setActiveTab("multimedia")}>
+                        Editar rutas de imagenes
+                      </button>
+                    </article>
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
             {activeTab === "sitio" ? (
               <section className="admin-panel admin-editor-panel">
                 <PanelTitle icon={<Settings aria-hidden />} title="Identidad, textos principales y colores" description="Estos campos controlan la marca, el mensaje principal, correos, redes y la paleta de la web." />
@@ -736,6 +915,26 @@ export default function AdminPage() {
                   <TextField label="Android mínimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
                 </div>
                 <TextArea label="Hash SHA-256" value={download.sha256} rows={3} onChange={(value) => setDownloadField("sha256", value)} />
+                <div className="admin-subpanel">
+                  <h3>Recursos grandes descargables</h3>
+                  <p>Mapas MBTiles, modelos de IA local u otros archivos grandes que se descargan desde el centro de descargas.</p>
+                  <div className="builder-resource-stack">
+                    {download.resources.map((resource, index) => (
+                      <article className="builder-resource-row" key={`${resource.label}-${index}`}>
+                        <TextField label="Nombre del recurso" value={resource.label} onChange={(value) => updateDownloadResource(index, { label: value })} />
+                        <TextField label="URL de descarga" value={resource.url} onChange={(value) => updateDownloadResource(index, { url: value })} />
+                        <TextField label="Tamano" value={resource.size} onChange={(value) => updateDownloadResource(index, { size: value })} />
+                        <TextArea label="Descripcion" value={resource.description} rows={3} onChange={(value) => updateDownloadResource(index, { description: value })} />
+                        <button className="button secondary danger-button" type="button" onClick={() => removeDownloadResource(index)}>
+                          <Trash2 aria-hidden /> Quitar recurso
+                        </button>
+                      </article>
+                    ))}
+                  </div>
+                  <button className="button secondary" type="button" onClick={addDownloadResource}>
+                    <Plus aria-hidden /> Anadir recurso descargable
+                  </button>
+                </div>
                 <ListEditor label="Permisos que explica la página de descarga" value={download.permissions} onChange={(value) => setDownloadField("permissions", value)} />
                 <ListEditor label="Pasos de instalación" value={download.installSteps} onChange={(value) => setDownloadField("installSteps", value)} />
               </section>
@@ -761,6 +960,7 @@ export default function AdminPage() {
                   <TextField label="Título" value={selectedPage.title} onChange={(value) => updatePageField("title", value)} />
                   <TextField label="Etiqueta superior" value={selectedPage.eyebrow || ""} onChange={(value) => updatePageField("eyebrow", value)} />
                   <TextField label="CTA opcional" value={selectedPage.cta || ""} onChange={(value) => updatePageField("cta", value)} />
+                  <TextField label="Enlace del CTA" value={selectedPage.ctaHref || ""} onChange={(value) => updatePageField("ctaHref", value)} />
                 </div>
                 <TextArea label="Descripción de la página" value={selectedPage.description} rows={4} onChange={(value) => updatePageField("description", value)} />
                 <ListEditor label="Párrafos principales" value={selectedPage.body} onChange={(value) => updatePageField("body", value)} />
@@ -793,6 +993,10 @@ export default function AdminPage() {
                       <ListEditor label="Cómo usarlo paso a paso" value={section.steps || []} onChange={(value) => updateSection(index, { steps: value })} />
                       <ListEditor label="Consejos para sacarle partido" value={section.tips || []} onChange={(value) => updateSection(index, { tips: value })} />
                       <TextArea label="Aviso o limitación" value={section.warning || ""} rows={3} onChange={(value) => updateSection(index, { warning: value })} />
+                      <div className="admin-form-grid">
+                        <TextField label="Texto del boton" value={section.buttonLabel || ""} onChange={(value) => updateSection(index, { buttonLabel: value })} />
+                        <TextField label="Enlace del boton" value={section.buttonHref || ""} onChange={(value) => updateSection(index, { buttonHref: value })} />
+                      </div>
                     </article>
                   ))}
                 </div>
@@ -839,6 +1043,25 @@ export default function AdminPage() {
                 <p className="admin-help">
                   Guarda imágenes en <code>/public/images</code>, capturas en <code>/public/screenshots</code>, vídeos en <code>/public/videos</code> y usa rutas como <code>/screenshots/app/home.jpg</code>.
                 </p>
+                <div className="admin-subpanel">
+                  <h3>Fotos y capturas de todas las paginas</h3>
+                  <p className="admin-help">Cambia cualquier imagen de una seccion sin entrar pagina por pagina.</p>
+                  <div className="admin-media-section-list">
+                    {pages.flatMap((page) =>
+                      (page.sections || []).map((section, index) => (
+                        <article className="media-section-card" key={`${page.slug}-${index}`}>
+                          <div>
+                            <span className="admin-editor-kicker">/{page.slug}</span>
+                            <strong>{section.title}</strong>
+                            <small>{page.title}</small>
+                          </div>
+                          <MediaPath title="Imagen o captura" value={section.image || ""} onChange={(value) => updatePageSectionMedia(page.slug, index, { image: value })} />
+                          <TextField label="Texto alternativo" value={section.imageAlt || ""} onChange={(value) => updatePageSectionMedia(page.slug, index, { imageAlt: value })} />
+                        </article>
+                      )),
+                    )}
+                  </div>
+                </div>
               </section>
             ) : null}
 

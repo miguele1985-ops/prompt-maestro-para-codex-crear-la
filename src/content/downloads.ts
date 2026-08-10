@@ -31,6 +31,26 @@ const baseDownloadInfo = {
     "Conceder únicamente los permisos necesarios para las funciones que vayas a usar.",
     "Descargar o importar mapas, modelos y recursos opcionales antes de depender de ellos sin cobertura.",
   ],
+  resources: [
+    {
+      label: "España completo topográfico",
+      url: "https://descargas.modocrisissurvival.com/mapas/espana-topografico-n.mbtiles",
+      size: "2,55 GB",
+      description: "Mapa MBTiles topográfico de España para importar en la app y consultarlo sin cobertura.",
+    },
+    {
+      label: "España completa relieve",
+      url: "https://descargas.modocrisissurvival.com/mapas/espana-relieve.mbtiles",
+      size: "1,68 GB",
+      description: "Mapa MBTiles de relieve de España para consultar forma del terreno y zonas elevadas sin conexión.",
+    },
+    {
+      label: "IA local Qwen2.5-0.5B-Instruct-GGUF",
+      url: "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/tree/main",
+      size: "415 MB",
+      description: "Modelo GGUF opcional descargado desde Hugging Face para usar la IA local en teléfonos compatibles.",
+    },
+  ],
 };
 
 const downloadOverrides = adminOverrides.download as Partial<typeof baseDownloadInfo>;
@@ -40,6 +60,7 @@ export const downloadInfo = {
   ...downloadOverrides,
   permissions: downloadOverrides.permissions?.length ? downloadOverrides.permissions : baseDownloadInfo.permissions,
   installSteps: downloadOverrides.installSteps?.length ? downloadOverrides.installSteps : baseDownloadInfo.installSteps,
+  resources: downloadOverrides.resources?.length ? downloadOverrides.resources : baseDownloadInfo.resources,
 };
 
 const baseChangelog: ChangelogEntry[] = [

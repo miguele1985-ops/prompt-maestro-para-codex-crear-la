@@ -40,11 +40,14 @@ export interface ContentPage {
     items?: string[];
     image?: string;
     imageAlt?: string;
+    buttonLabel?: string;
+    buttonHref?: string;
     steps?: string[];
     tips?: string[];
     warning?: string;
   }>;
   cta?: string;
+  ctaHref?: string;
   seoTitle: string;
   seoDescription: string;
   keywords?: string[];
