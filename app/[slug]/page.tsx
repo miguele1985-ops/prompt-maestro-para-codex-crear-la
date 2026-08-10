@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { SafetyWarning } from "@/components/Badges";
 import { ContactForm } from "@/components/ContactForm";
 import { DownloadCard } from "@/components/DownloadCard";
+import { BugReportForm } from "@/components/BugReportForm";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { CalculatorGrid, CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive";
 import { PayPalDonationBlock } from "@/components/PayPalDonationBlock";
@@ -119,13 +120,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (page.slug === "donaciones") {
     const ogTitle = "Apoyar Supervivencia Offline";
-    const ogDescription = "La app es gratuita. Si te resulta útil, puedes apoyar el proyecto con una donación voluntaria.";
+    const ogDescription = "La app es gratuita. Si te resulta ÃƒÂºtil, puedes apoyar el proyecto con una donaciÃƒÂ³n voluntaria.";
     const ogImage = absoluteUrl("/assets/img/og-supervivencia-offline.jpg");
 
     return {
       ...metadata,
-      title: "Apoyar Supervivencia Offline | Donación voluntaria",
-      description: "Apoya Supervivencia Offline con una donación voluntaria. La app es gratuita y puede usarse completa sin pagar. Tu ayuda permite mantener y mejorar el proyecto.",
+      title: "Apoyar Supervivencia Offline | DonaciÃƒÂ³n voluntaria",
+      description: "Apoya Supervivencia Offline con una donaciÃƒÂ³n voluntaria. La app es gratuita y puede usarse completa sin pagar. Tu ayuda permite mantener y mejorar el proyecto.",
       openGraph: {
         ...metadata.openGraph,
         title: ogTitle,
@@ -195,19 +196,19 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                 <p>{section.body}</p>
                 {section.items ? (
                   <div className="option-list">
-                    <strong>Qué permite hacer</strong>
+                    <strong>QuÃƒÂ© permite hacer</strong>
                     <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
                   </div>
                 ) : null}
                 {section.steps ? (
                   <div className="option-list">
-                    <strong>Cómo usarlo</strong>
+                    <strong>CÃƒÂ³mo usarlo</strong>
                     <ol>{section.steps.map((step) => <li key={step}>{step}</li>)}</ol>
                   </div>
                 ) : null}
                 {section.tips ? (
                   <div className="option-list">
-                    <strong>Para sacarle el máximo partido</strong>
+                    <strong>Para sacarle el mÃƒÂ¡ximo partido</strong>
                     <ul>{section.tips.map((tip) => <li key={tip}>{tip}</li>)}</ul>
                   </div>
                 ) : null}
@@ -228,13 +229,14 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
             <div>
               <p className="eyebrow">Apoyo voluntario</p>
               <h2>Ayuda a mantener descargas seguras</h2>
-              <p>{"Los mapas, la web y las guías de instalación requieren mantenimiento. La app sigue siendo gratuita y completa; donar solo ayuda a sostener el proyecto."}</p>
+              <p>{"Los mapas, la web y las guÃƒÂ­as de instalaciÃƒÂ³n requieren mantenimiento. La app sigue siendo gratuita y completa; donar solo ayuda a sostener el proyecto."}</p>
             </div>
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
               Apoyar el proyecto
             </TrackedDonationLink>
           </article>
           <ResourceDownloadsPanel showAiImage={false} />
+          <BugReportForm source="Centro de descargas" title="Reportar un fallo de descarga" />
         </section>
       ) : null}
 
@@ -269,10 +271,11 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         <section className="content-band">
           <DownloadCard info={visibleDownloadInfo} />
           <ResourceDownloadsPanel />
+          <BugReportForm source="Descargar aplicación" title="Reportar un fallo de descarga" />
           <article className="mini-card">
-            <h2>Instrucciones de instalación</h2>
+            <h2>Instrucciones de instalaciÃƒÂ³n</h2>
             <ol>{downloadInfo.installSteps.map((step) => <li key={step}>{step}</li>)}</ol>
-            <SafetyWarning>No descargues copias de webs no oficiales. Verifica el hash SHA-256 cuando esté disponible.</SafetyWarning>
+            <SafetyWarning>No descargues copias de webs no oficiales. Verifica el hash SHA-256 cuando estÃƒÂ© disponible.</SafetyWarning>
           </article>
           <article className="mini-card">
             <h2>Permisos posibles</h2>
@@ -296,7 +299,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         <section className="content-band changelog">
           {visibleChangelog.map((entry) => (
             <article className="mini-card" key={entry.version}>
-              <h2>{entry.version} · {entry.title}</h2>
+              <h2>{entry.version} Ã‚Â· {entry.title}</h2>
               <p>{entry.date}</p>
               <ul>{entry.changes.map((change) => <li key={change}>{change}</li>)}</ul>
             </article>

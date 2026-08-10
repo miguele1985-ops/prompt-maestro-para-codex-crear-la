@@ -9,6 +9,7 @@ import {
   Image as ImageIcon,
   ListPlus,
   LogOut,
+  Palette,
   Plus,
   Save,
   Search,
@@ -21,7 +22,8 @@ import {
 import { changelog, downloadInfo } from "@/content/downloads";
 import { allContentPages } from "@/content/pages";
 import { siteConfig } from "@/content/site-config";
-import type { SiteStats } from "@/lib/counters";
+import type { CounterBreakdown, SiteStats } from "@/lib/counters";
+import type { BugReport } from "@/lib/bug-reports";
 import type { ChangelogEntry, ContentPage } from "@/types/content";
 
 type AdminTab = "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "avanzado";
@@ -101,29 +103,39 @@ type AdminData = {
 type PageSection = NonNullable<ContentPage["sections"]>[number];
 
 const tabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Settings }> = [
-  { id: "sitio", label: "Web", helper: "Nombre, textos, colores y contacto", icon: Settings },
-  { id: "seo", label: "SEO", helper: "Google, metadatos y palabras clave", icon: Search },
-  { id: "descarga", label: "APK", helper: "Archivo, versión, permisos e instalación", icon: Download },
-  { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes y avisos", icon: FileText },
+  { id: "sitio", label: "Portada y marca", helper: "Nombre, logo, textos, botones y colores", icon: Settings },
+  { id: "paginas", label: "PÃ¡ginas", helper: "Textos, secciones, imÃ¡genes, botones y avisos", icon: FileText },
+  { id: "descarga", label: "APK", helper: "Archivo, versiÃ³n, permisos e instalaciÃ³n", icon: Download },
+  { id: "paginas", label: "PÃ¡ginas", helper: "Textos, secciones, imÃ¡genes y avisos", icon: FileText },
   { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
-  { id: "multimedia", label: "Multimedia", helper: "Rutas de imágenes, capturas y vídeo", icon: ImageIcon },
+  { id: "multimedia", label: "Multimedia", helper: "Rutas de imÃ¡genes, capturas y vÃ­deo", icon: ImageIcon },
+  { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
+];
+
+const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Settings }> = [
+  { id: "sitio", label: "Portada y marca", helper: "Nombre, logo, textos, botones y colores", icon: Settings },
+  { id: "paginas", label: "PÃ¡ginas", helper: "Textos, secciones, imÃ¡genes, botones y avisos", icon: FileText },
+  { id: "multimedia", label: "ImÃ¡genes", helper: "Logo, capturas, vÃ­deos y recursos visuales", icon: ImageIcon },
+  { id: "descarga", label: "Descargas", helper: "APK, versiÃ³n, tamaÃ±o, permisos e instalaciÃ³n", icon: Download },
+  { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
+  { id: "seo", label: "SEO", helper: "Google, metadatos y palabras clave", icon: Search },
   { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
 ];
 
 const emptyStats: SiteStats = {
   configured: false,
-  visits: 0,
-  downloads: 0,
-  donations: 0,
+  visits: { today: 0, week: 0, month: 0, total: 0 },
+  downloads: { today: 0, week: 0, month: 0, total: 0 },
+  donations: { today: 0, week: 0, month: 0, total: 0 },
   message: "Cargando contadores reales...",
 };
 
 const emptySection: PageSection = {
-  title: "Nueva opción",
-  body: "Explica qué hace esta opción, cuándo se usa y por qué aporta valor.",
-  items: ["Función pendiente de completar"],
-  steps: ["Abrir la sección en la aplicación", "Revisar las opciones disponibles"],
-  tips: ["Añadir consejo útil"],
+  title: "Nueva opciÃ³n",
+  body: "Explica quÃ© hace esta opciÃ³n, cuÃ¡ndo se usa y por quÃ© aporta valor.",
+  items: ["FunciÃ³n pendiente de completar"],
+  steps: ["Abrir la secciÃ³n en la aplicaciÃ³n", "Revisar las opciones disponibles"],
+  tips: ["AÃ±adir consejo Ãºtil"],
   warning: "",
   image: "/screenshots/placeholder-screenshot.svg",
   imageAlt: "Captura pendiente de sustituir",
@@ -131,16 +143,16 @@ const emptySection: PageSection = {
 
 const emptyPage: ContentPage = {
   slug: "nueva-pagina",
-  title: "Nueva página",
+  title: "Nueva pÃ¡gina",
   eyebrow: "Configurar",
-  description: "Descripción pendiente de añadir.",
-  body: ["Primer párrafo pendiente de editar."],
+  description: "DescripciÃ³n pendiente de aÃ±adir.",
+  body: ["Primer pÃ¡rrafo pendiente de editar."],
   highlights: ["Pendiente de completar"],
   sections: [emptySection],
   cta: "Descargar Modo Crisis Survival",
-  seoTitle: "Nueva página",
-  seoDescription: "Metadescripción pendiente de editar.",
-  keywords: ["Pendiente de añadir"],
+  seoTitle: "Nueva pÃ¡gina",
+  seoDescription: "MetadescripciÃ³n pendiente de editar.",
+  keywords: ["Pendiente de aÃ±adir"],
 };
 
 function listToText(value?: string[]) {
@@ -208,6 +220,8 @@ export default function AdminPage() {
     seo: siteConfig.seo,
   });
   const [realStats, setRealStats] = useState<SiteStats>(emptyStats);
+  const [bugReports, setBugReports] = useState<BugReport[]>([]);
+  const [reportsStatus, setReportsStatus] = useState("Cargando reportes de fallos...");
   const [download, setDownload] = useState<DownloadEditor>({
     ...downloadInfo,
     permissions: [...downloadInfo.permissions],
@@ -246,16 +260,28 @@ export default function AdminPage() {
         .catch((error) =>
           setRealStats({
             configured: false,
-            visits: 0,
-            downloads: 0,
-            donations: 0,
+            visits: { today: 0, week: 0, month: 0, total: 0 },
+            downloads: { today: 0, week: 0, month: 0, total: 0 },
+            donations: { today: 0, week: 0, month: 0, total: 0 },
             message:
               error instanceof Error
                 ? error.message
                 : "No se pudieron cargar los contadores reales. Revisa variables y permisos de Cloudflare KV.",
           }),
         );
-      fetch("/api/admin/content", { cache: "no-store" })
+      fetch("/api/admin/reports", { cache: "no-store" })
+        .then(async (reportsResponse) => {
+          const result = await reportsResponse.json().catch(() => ({}));
+          if (!reportsResponse.ok || !result.ok) {
+            throw new Error(result.message || "No se pudieron cargar los reportes de fallos.");
+          }
+          setBugReports(Array.isArray(result.reports) ? result.reports : []);
+          setReportsStatus(result.reports?.length ? "Reportes cargados." : "No hay reportes de fallos guardados.");
+        })
+        .catch((error) => {
+          setBugReports([]);
+          setReportsStatus(error instanceof Error ? error.message : "No se pudieron cargar los reportes de fallos.");
+        });      fetch("/api/admin/content", { cache: "no-store" })
         .then((contentResponse) => contentResponse.json())
         .then((result: { ok?: boolean; data?: AdminData | null; message?: string }) => {
           if (!result.ok || !result.data) return;
@@ -287,7 +313,7 @@ export default function AdminPage() {
       download.size,
       download.sha256,
       download.date,
-    ].filter((value) => /pendiente|configurar|añadir/i.test(value || "")).length;
+    ].filter((value) => /pendiente|configurar|aÃ±adir/i.test(value || "")).length;
     const totalSections = pages.reduce((sum, page) => sum + (page.sections?.length || 0), 0);
     return { pending, pages: pages.length, sections: totalSections };
   }, [download.date, download.sha256, download.size, pages, site.contactEmail, site.legalOwner, site.supportEmail]);
@@ -325,7 +351,7 @@ export default function AdminPage() {
 
   function addPage() {
     const slug = `nueva-pagina-${Date.now()}`;
-    const next = { ...emptyPage, slug, title: "Nueva página pendiente", seoTitle: "Nueva página pendiente" };
+    const next = { ...emptyPage, slug, title: "Nueva pÃ¡gina pendiente", seoTitle: "Nueva pÃ¡gina pendiente" };
     setPages((current) => [...current, next]);
     setSelectedSlug(slug);
   }
@@ -347,9 +373,9 @@ export default function AdminPage() {
   function addChangelogEntry() {
     setEntries((current) => [
       {
-        version: "Añadir versión actual",
-        date: "Pendiente de añadir",
-        title: "Nueva actualización",
+        version: "AÃ±adir versiÃ³n actual",
+        date: "Pendiente de aÃ±adir",
+        title: "Nueva actualizaciÃ³n",
         changes: ["Cambio pendiente de describir"],
         fixes: [],
         downloadUrl: download.apkUrl,
@@ -374,7 +400,7 @@ export default function AdminPage() {
   function applyAdvancedJson() {
     const parsed = parseJson<AdminData | null>(advancedJson, null);
     if (!parsed) {
-      setStatus("El JSON avanzado no es válido. Revisa comas, comillas y corchetes.");
+      setStatus("El JSON avanzado no es vÃ¡lido. Revisa comas, comillas y corchetes.");
       return;
     }
     if (parsed.site) setSite((current) => ({ ...current, ...parsed.site }));
@@ -402,7 +428,7 @@ export default function AdminPage() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(payload),
     });
-    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
+    const result = await response.json().catch(() => ({ message: "Respuesta no vÃ¡lida." }));
     setSaving(false);
     setStatus(result.message || (response.ok ? "Cambios guardados." : "No se pudo guardar."));
   }
@@ -418,7 +444,7 @@ export default function AdminPage() {
       method: "POST",
       body: form,
     });
-    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
+    const result = await response.json().catch(() => ({ message: "Respuesta no vÃ¡lida." }));
     setUploading(false);
     setStatus(result.message || (response.ok ? "APK guardado." : "No se pudo subir el APK."));
     if (response.ok) {
@@ -461,18 +487,65 @@ export default function AdminPage() {
 
   return (
     <>
-      <section className="page-hero admin-hero admin-workspace-hero">
-        <p className="eyebrow">Administración protegida</p>
-        <h1>Centro de control de la web</h1>
+      <section className="page-hero admin-hero admin-workspace-hero admin-cms-hero">
+        <p className="eyebrow">AdministraciÃ³n protegida</p>
+        <h1>Gestiona Supervivencia Offline sin tocar cÃ³digo</h1>
         <p>
-          Modifica textos, páginas, capturas, SEO, colores, APK y actualizaciones desde formularios claros. Guarda cuando lo tengas listo y la web leerá estos cambios desde el archivo central de administración.
+          Modifica textos, pÃ¡ginas, capturas, SEO, colores, APK y actualizaciones desde formularios claros. Guarda cuando lo tengas listo y la web leerÃ¡ estos cambios desde el archivo central de administraciÃ³n.
         </p>
       </section>
 
-      <section className="content-band admin-dashboard">
+      <section className="content-band admin-dashboard admin-cms-dashboard">
+        <div className="admin-cms-header">
+          <div>
+            <p className="eyebrow">Escritorio</p>
+            <h2>Panel de administraciÃ³n</h2>
+            <p>
+              Gestiona la web como en un panel tipo WordPress: cambia portada, pÃ¡ginas, fotos, botones, colores,
+              descargas, SEO y actualizaciones desde formularios sencillos.
+            </p>
+          </div>
+          <button className="button primary" type="button" onClick={saveAll} disabled={saving}>
+            <Save aria-hidden /> {saving ? "Guardando..." : "Guardar cambios"}
+          </button>
+        </div>
+
+        <div className="admin-quick-grid" aria-label="Accesos rÃ¡pidos del panel">
+          <button type="button" onClick={() => setActiveTab("sitio")}>
+            <Settings aria-hidden />
+            <strong>Portada</strong>
+            <span>Nombre, frase principal, botones, donaciones y colores.</span>
+          </button>
+          <button type="button" onClick={() => setActiveTab("paginas")}>
+            <FileText aria-hidden />
+            <strong>PÃ¡ginas</strong>
+            <span>Textos, secciones, imÃ¡genes, avisos y enlaces internos.</span>
+          </button>
+          <button type="button" onClick={() => setActiveTab("multimedia")}>
+            <ImageIcon aria-hidden />
+            <strong>Fotos y vÃ­deos</strong>
+            <span>Logo, capturas de la app, portada y recursos visuales.</span>
+          </button>
+          <button type="button" onClick={() => setActiveTab("descarga")}>
+            <Download aria-hidden />
+            <strong>Descargas</strong>
+            <span>APK, versiÃ³n, tamaÃ±o, hash, permisos e instalaciÃ³n.</span>
+          </button>
+          <button type="button" onClick={() => setActiveTab("sitio")}>
+            <Palette aria-hidden />
+            <strong>Colores</strong>
+            <span>Fondo, verde, naranja, avisos, peligro y texto.</span>
+          </button>
+          <button type="button" onClick={() => setActiveTab("seo")}>
+            <Search aria-hidden />
+            <strong>SEO</strong>
+            <span>TÃ­tulos, descripciÃ³n para Google y palabras clave.</span>
+          </button>
+        </div>
+
         <div className="admin-topbar">
           <div className="admin-metric">
-            <span>Páginas</span>
+            <span>PÃ¡ginas</span>
             <strong>{completion.pages}</strong>
             <p>Secciones editables: {completion.sections}</p>
           </div>
@@ -488,17 +561,17 @@ export default function AdminPage() {
           </div>
           <div className="admin-metric admin-counter-card">
             <span><TrendingUp aria-hidden /> Visitas web</span>
-            <strong>{realStats.visits.toLocaleString("es-ES")}</strong>
+            <CounterBreakdownView stats={realStats.visits} />
             <p>{realStats.configured ? "Registradas automaticamente" : "KV sin configurar"}</p>
           </div>
           <div className="admin-metric admin-counter-card">
             <span><Download aria-hidden /> Descargas</span>
-            <strong>{realStats.downloads.toLocaleString("es-ES")}</strong>
+            <CounterBreakdownView stats={realStats.downloads} />
             <p>Boton oficial del APK</p>
           </div>
           <div className="admin-metric admin-counter-card">
             <span>Clics en donar</span>
-            <strong>{realStats.donations.toLocaleString("es-ES")}</strong>
+            <CounterBreakdownView stats={realStats.donations} />
             <p>Botones de donacion</p>
           </div>
           <div className="admin-actions-card">
@@ -518,16 +591,42 @@ export default function AdminPage() {
           </p>
         ) : null}
 
+
+        <section className="admin-reports-panel" aria-labelledby="admin-reports-title">
+          <div className="admin-reports-heading">
+            <div>
+              <p className="eyebrow">Mensajes</p>
+              <h2 id="admin-reports-title">Reportes de fallos</h2>
+              <p>Mensajes enviados desde las páginas de descarga y centro de descargas.</p>
+            </div>
+            <strong>{bugReports.length.toLocaleString("es-ES")}</strong>
+          </div>
+          {bugReports.length ? (
+            <div className="admin-reports-list">
+              {bugReports.slice(0, 20).map((report) => (
+                <article className="admin-report-card" key={report.id}>
+                  <div>
+                    <strong>{report.source}</strong>
+                    <time dateTime={report.createdAt}>{formatReportDate(report.createdAt)}</time>
+                  </div>
+                  <p>{report.message}</p>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="admin-status admin-floating-status">{reportsStatus}</p>
+          )}
+        </section>
         <div className="admin-shell">
-          <aside className="admin-nav" aria-label="Áreas de administración">
+          <aside className="admin-nav" aria-label="Ãreas de administraciÃ³n">
             <div className="admin-nav-intro">
               <ShieldCheck aria-hidden />
               <div>
                 <strong>Modo editor</strong>
-                <p>Protegido por sesión. No indexado.</p>
+                <p>Protegido por sesiÃ³n. No indexado.</p>
               </div>
             </div>
-            {tabs.map((tab) => {
+            {adminTabs.map((tab) => {
               const Icon = tab.icon;
               return (
                 <button
@@ -552,15 +651,15 @@ export default function AdminPage() {
               <section className="admin-panel admin-editor-panel">
                 <PanelTitle icon={<Settings aria-hidden />} title="Identidad, textos principales y colores" description="Estos campos controlan la marca, el mensaje principal, correos, redes y la paleta de la web." />
                 <div className="admin-form-grid">
-                  <TextField label="Nombre de la aplicación" value={site.appName} onChange={(value) => setSiteField("appName", value)} />
+                  <TextField label="Nombre de la aplicaciÃ³n" value={site.appName} onChange={(value) => setSiteField("appName", value)} />
                   <TextField label="Dominio oficial" value={site.siteUrl} onChange={(value) => setSiteField("siteUrl", value)} />
                   <TextField label="Correo de soporte" value={site.supportEmail} onChange={(value) => setSiteField("supportEmail", value)} />
                   <TextField label="Correo de contacto" value={site.contactEmail} onChange={(value) => setSiteField("contactEmail", value)} />
-                  <TextField label="Titular / organización" value={site.organizationName} onChange={(value) => setSiteField("organizationName", value)} />
+                  <TextField label="Titular / organizaciÃ³n" value={site.organizationName} onChange={(value) => setSiteField("organizationName", value)} />
                   <TextField label="Responsable legal" value={site.legalOwner} onChange={(value) => setSiteField("legalOwner", value)} />
                 </div>
                 <TextArea label="Frase principal" value={site.slogan} rows={3} onChange={(value) => setSiteField("slogan", value)} />
-                <TextArea label="Descripción comercial" value={site.description} rows={5} onChange={(value) => setSiteField("description", value)} />
+                <TextArea label="DescripciÃ³n comercial" value={site.description} rows={5} onChange={(value) => setSiteField("description", value)} />
                 <div className="admin-subpanel">
                   <h3>Contadores reales</h3>
                   <p>
@@ -584,7 +683,7 @@ export default function AdminPage() {
                 </div>
                 <div className="admin-subpanel">
                   <h3>Donaciones</h3>
-                  <p>Configura enlaces reales antes de publicar. Si quedan pendientes, la portada enviará a la página explicativa.</p>
+                  <p>Configura enlaces reales antes de publicar. Si quedan pendientes, la portada enviarÃ¡ a la pÃ¡gina explicativa.</p>
                   <label className="check">
                     <input
                       type="checkbox"
@@ -594,7 +693,7 @@ export default function AdminPage() {
                     Activar bloque de donaciones
                   </label>
                   <div className="admin-form-grid">
-                    <TextField label="Enlace principal de donación" value={site.donations.primaryUrl} onChange={(value) => setSiteField("donations", { ...site.donations, primaryUrl: value })} />
+                    <TextField label="Enlace principal de donaciÃ³n" value={site.donations.primaryUrl} onChange={(value) => setSiteField("donations", { ...site.donations, primaryUrl: value })} />
                     <TextField label="PayPal" value={site.donations.paypalUrl} onChange={(value) => setSiteField("donations", { ...site.donations, paypalUrl: value })} />
                     <TextField label="Bizum / instrucciones" value={site.donations.bizumInfo} onChange={(value) => setSiteField("donations", { ...site.donations, bizumInfo: value })} />
                     <TextField label="Ko-fi" value={site.donations.kofiUrl} onChange={(value) => setSiteField("donations", { ...site.donations, kofiUrl: value })} />
@@ -607,19 +706,19 @@ export default function AdminPage() {
 
             {activeTab === "seo" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<Search aria-hidden />} title="SEO global" description="Edita el título general, metadescripción y palabras clave. Las páginas también tienen su SEO propio." />
-                <TextField label="Título SEO principal" value={site.seo.title} onChange={(value) => setSiteField("seo", { ...site.seo, title: value })} />
-                <TextArea label="Meta descripción principal" value={site.seo.description} rows={4} onChange={(value) => setSiteField("seo", { ...site.seo, description: value })} />
+                <PanelTitle icon={<Search aria-hidden />} title="SEO global" description="Edita el tÃ­tulo general, metadescripciÃ³n y palabras clave. Las pÃ¡ginas tambiÃ©n tienen su SEO propio." />
+                <TextField label="TÃ­tulo SEO principal" value={site.seo.title} onChange={(value) => setSiteField("seo", { ...site.seo, title: value })} />
+                <TextArea label="Meta descripciÃ³n principal" value={site.seo.description} rows={4} onChange={(value) => setSiteField("seo", { ...site.seo, description: value })} />
                 <ListEditor label="Palabras clave principales" value={site.seo.keywords} onChange={(value) => setSiteField("seo", { ...site.seo, keywords: value })} />
               </section>
             ) : null}
 
             {activeTab === "descarga" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<Smartphone aria-hidden />} title="Descarga de Android y datos del APK" description="Sube el archivo oficial o cambia manualmente versión, tamaño, hash, permisos e instrucciones." />
+                <PanelTitle icon={<Smartphone aria-hidden />} title="Descarga de Android y datos del APK" description="Sube el archivo oficial o cambia manualmente versiÃ³n, tamaÃ±o, hash, permisos e instrucciones." />
                 <form className="apk-upload-card" onSubmit={uploadApk}>
-                  <TextField label="Versión" value={download.version} onChange={(value) => setDownloadField("version", value)} />
-                  <TextField label="Fecha de actualización" value={download.date} onChange={(value) => setDownloadField("date", value)} />
+                  <TextField label="VersiÃ³n" value={download.version} onChange={(value) => setDownloadField("version", value)} />
+                  <TextField label="Fecha de actualizaciÃ³n" value={download.date} onChange={(value) => setDownloadField("date", value)} />
                   <label>
                     Archivo APK
                     <input name="apk" type="file" accept=".apk,application/vnd.android.package-archive" />
@@ -633,23 +732,23 @@ export default function AdminPage() {
                   <TextField label="Ruta del icono" value={download.icon} onChange={(value) => setDownloadField("icon", value)} />
                   <TextField label="Ruta del APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
                   <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
-                  <TextField label="Tamaño" value={download.size} onChange={(value) => setDownloadField("size", value)} />
-                  <TextField label="Android mínimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
+                  <TextField label="TamaÃ±o" value={download.size} onChange={(value) => setDownloadField("size", value)} />
+                  <TextField label="Android mÃ­nimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
                 </div>
                 <TextArea label="Hash SHA-256" value={download.sha256} rows={3} onChange={(value) => setDownloadField("sha256", value)} />
-                <ListEditor label="Permisos que explica la página de descarga" value={download.permissions} onChange={(value) => setDownloadField("permissions", value)} />
-                <ListEditor label="Pasos de instalación" value={download.installSteps} onChange={(value) => setDownloadField("installSteps", value)} />
+                <ListEditor label="Permisos que explica la pÃ¡gina de descarga" value={download.permissions} onChange={(value) => setDownloadField("permissions", value)} />
+                <ListEditor label="Pasos de instalaciÃ³n" value={download.installSteps} onChange={(value) => setDownloadField("installSteps", value)} />
               </section>
             ) : null}
 
             {activeTab === "paginas" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<FileText aria-hidden />} title="Editor de páginas y opciones de la aplicación" description="Cada página puede tener texto principal, destacados, SEO y tantas secciones visuales como necesites." />
+                <PanelTitle icon={<FileText aria-hidden />} title="Editor de pÃ¡ginas y opciones de la aplicaciÃ³n" description="Cada pÃ¡gina puede tener texto principal, destacados, SEO y tantas secciones visuales como necesites." />
                 <div className="admin-page-toolbar">
                   <label>
-                    Página
+                    PÃ¡gina
                     <select value={selectedSlug} onChange={(event) => setSelectedSlug(event.target.value)}>
-                      {pages.map((page) => <option key={page.slug} value={page.slug}>{page.title} · /{page.slug}</option>)}
+                      {pages.map((page) => <option key={page.slug} value={page.slug}>{page.title} Â· /{page.slug}</option>)}
                     </select>
                   </label>
                   <button className="button secondary" type="button" onClick={addPage}><Plus aria-hidden /> Nueva</button>
@@ -659,41 +758,41 @@ export default function AdminPage() {
                 </div>
                 <div className="admin-form-grid">
                   <TextField label="URL / slug" value={selectedPage.slug} onChange={(value) => updatePageField("slug", slugify(value) || selectedPage.slug)} />
-                  <TextField label="Título" value={selectedPage.title} onChange={(value) => updatePageField("title", value)} />
+                  <TextField label="TÃ­tulo" value={selectedPage.title} onChange={(value) => updatePageField("title", value)} />
                   <TextField label="Etiqueta superior" value={selectedPage.eyebrow || ""} onChange={(value) => updatePageField("eyebrow", value)} />
                   <TextField label="CTA opcional" value={selectedPage.cta || ""} onChange={(value) => updatePageField("cta", value)} />
                 </div>
-                <TextArea label="Descripción de la página" value={selectedPage.description} rows={4} onChange={(value) => updatePageField("description", value)} />
-                <ListEditor label="Párrafos principales" value={selectedPage.body} onChange={(value) => updatePageField("body", value)} />
+                <TextArea label="DescripciÃ³n de la pÃ¡gina" value={selectedPage.description} rows={4} onChange={(value) => updatePageField("description", value)} />
+                <ListEditor label="PÃ¡rrafos principales" value={selectedPage.body} onChange={(value) => updatePageField("body", value)} />
                 <ListEditor label="Destacados / chips" value={selectedPage.highlights || []} onChange={(value) => updatePageField("highlights", value)} />
                 <div className="admin-form-grid">
-                  <TextField label="Título SEO de esta página" value={selectedPage.seoTitle} onChange={(value) => updatePageField("seoTitle", value)} />
-                  <TextField label="Meta descripción de esta página" value={selectedPage.seoDescription} onChange={(value) => updatePageField("seoDescription", value)} />
+                  <TextField label="TÃ­tulo SEO de esta pÃ¡gina" value={selectedPage.seoTitle} onChange={(value) => updatePageField("seoTitle", value)} />
+                  <TextField label="Meta descripciÃ³n de esta pÃ¡gina" value={selectedPage.seoDescription} onChange={(value) => updatePageField("seoDescription", value)} />
                 </div>
-                <ListEditor label="Palabras clave de esta página" value={selectedPage.keywords || []} onChange={(value) => updatePageField("keywords", value)} />
+                <ListEditor label="Palabras clave de esta pÃ¡gina" value={selectedPage.keywords || []} onChange={(value) => updatePageField("keywords", value)} />
                 <div className="section-editor-header">
                   <h3>Secciones visuales</h3>
-                  <button className="button secondary" type="button" onClick={addSection}><Plus aria-hidden /> Añadir sección</button>
+                  <button className="button secondary" type="button" onClick={addSection}><Plus aria-hidden /> AÃ±adir secciÃ³n</button>
                 </div>
                 <div className="section-editor-list">
                   {(selectedPage.sections || []).map((section, index) => (
                     <article className="section-editor-card" key={`${selectedPage.slug}-${index}`}>
                       <div className="section-editor-top">
-                        <strong>Sección {index + 1}</strong>
-                        <button className="icon-danger" type="button" onClick={() => removeSection(index)} aria-label="Eliminar sección">
+                        <strong>SecciÃ³n {index + 1}</strong>
+                        <button className="icon-danger" type="button" onClick={() => removeSection(index)} aria-label="Eliminar secciÃ³n">
                           <Trash2 aria-hidden />
                         </button>
                       </div>
-                      <TextField label="Título de la sección" value={section.title} onChange={(value) => updateSection(index, { title: value })} />
-                      <TextArea label="Explicación" value={section.body} rows={5} onChange={(value) => updateSection(index, { body: value })} />
+                      <TextField label="TÃ­tulo de la secciÃ³n" value={section.title} onChange={(value) => updateSection(index, { title: value })} />
+                      <TextArea label="ExplicaciÃ³n" value={section.body} rows={5} onChange={(value) => updateSection(index, { body: value })} />
                       <div className="admin-form-grid">
                         <TextField label="Imagen o captura" value={section.image || ""} onChange={(value) => updateSection(index, { image: value })} />
                         <TextField label="Texto alternativo" value={section.imageAlt || ""} onChange={(value) => updateSection(index, { imageAlt: value })} />
                       </div>
-                      <ListEditor label="Qué permite hacer" value={section.items || []} onChange={(value) => updateSection(index, { items: value })} />
-                      <ListEditor label="Cómo usarlo paso a paso" value={section.steps || []} onChange={(value) => updateSection(index, { steps: value })} />
+                      <ListEditor label="QuÃ© permite hacer" value={section.items || []} onChange={(value) => updateSection(index, { items: value })} />
+                      <ListEditor label="CÃ³mo usarlo paso a paso" value={section.steps || []} onChange={(value) => updateSection(index, { steps: value })} />
                       <ListEditor label="Consejos para sacarle partido" value={section.tips || []} onChange={(value) => updateSection(index, { tips: value })} />
-                      <TextArea label="Aviso o limitación" value={section.warning || ""} rows={3} onChange={(value) => updateSection(index, { warning: value })} />
+                      <TextArea label="Aviso o limitaciÃ³n" value={section.warning || ""} rows={3} onChange={(value) => updateSection(index, { warning: value })} />
                     </article>
                   ))}
                 </div>
@@ -702,21 +801,21 @@ export default function AdminPage() {
 
             {activeTab === "actualizaciones" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<ListPlus aria-hidden />} title="Actualizaciones y changelog" description="Añade versiones con novedades, correcciones y enlace de descarga sin tocar archivos de código." />
-                <button className="button secondary" type="button" onClick={addChangelogEntry}><Plus aria-hidden /> Añadir versión</button>
+                <PanelTitle icon={<ListPlus aria-hidden />} title="Actualizaciones y changelog" description="AÃ±ade versiones con novedades, correcciones y enlace de descarga sin tocar archivos de cÃ³digo." />
+                <button className="button secondary" type="button" onClick={addChangelogEntry}><Plus aria-hidden /> AÃ±adir versiÃ³n</button>
                 <div className="changelog-editor-list">
                   {entries.map((entry, index) => (
                     <article className="section-editor-card" key={`${entry.version}-${index}`}>
                       <div className="section-editor-top">
                         <strong>{entry.version}</strong>
-                        <button className="icon-danger" type="button" onClick={() => removeChangelog(index)} aria-label="Eliminar actualización">
+                        <button className="icon-danger" type="button" onClick={() => removeChangelog(index)} aria-label="Eliminar actualizaciÃ³n">
                           <Trash2 aria-hidden />
                         </button>
                       </div>
                       <div className="admin-form-grid">
-                        <TextField label="Versión" value={entry.version} onChange={(value) => updateChangelog(index, { version: value })} />
+                        <TextField label="VersiÃ³n" value={entry.version} onChange={(value) => updateChangelog(index, { version: value })} />
                         <TextField label="Fecha" value={entry.date} onChange={(value) => updateChangelog(index, { date: value })} />
-                        <TextField label="Título" value={entry.title} onChange={(value) => updateChangelog(index, { title: value })} />
+                        <TextField label="TÃ­tulo" value={entry.title} onChange={(value) => updateChangelog(index, { title: value })} />
                         <TextField label="Enlace de descarga" value={entry.downloadUrl || ""} onChange={(value) => updateChangelog(index, { downloadUrl: value })} />
                       </div>
                       <ListEditor label="Novedades" value={entry.changes} onChange={(value) => updateChangelog(index, { changes: value })} />
@@ -729,23 +828,23 @@ export default function AdminPage() {
 
             {activeTab === "multimedia" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<ImageIcon aria-hidden />} title="Imágenes, capturas y vídeo" description="Cambia las rutas de los recursos usados por la portada y la descarga. Las capturas de cada página se editan dentro del editor de páginas." />
+                <PanelTitle icon={<ImageIcon aria-hidden />} title="ImÃ¡genes, capturas y vÃ­deo" description="Cambia las rutas de los recursos usados por la portada y la descarga. Las capturas de cada pÃ¡gina se editan dentro del editor de pÃ¡ginas." />
                 <div className="media-preview-grid">
                   <MediaPath title="Logo" value={site.logo} onChange={(value) => setSiteField("logo", value)} />
                   <MediaPath title="Imagen principal" value={site.heroImage} onChange={(value) => setSiteField("heroImage", value)} />
-                  <MediaPath title="Poster de vídeo" value={site.videoPoster} onChange={(value) => setSiteField("videoPoster", value)} />
-                  <MediaPath title="Vídeo de presentación" value={site.presentationVideo} onChange={(value) => setSiteField("presentationVideo", value)} />
+                  <MediaPath title="Poster de vÃ­deo" value={site.videoPoster} onChange={(value) => setSiteField("videoPoster", value)} />
+                  <MediaPath title="VÃ­deo de presentaciÃ³n" value={site.presentationVideo} onChange={(value) => setSiteField("presentationVideo", value)} />
                   <MediaPath title="Icono de descarga" value={download.icon} onChange={(value) => setDownloadField("icon", value)} />
                 </div>
                 <p className="admin-help">
-                  Guarda imágenes en <code>/public/images</code>, capturas en <code>/public/screenshots</code>, vídeos en <code>/public/videos</code> y usa rutas como <code>/screenshots/app/home.jpg</code>.
+                  Guarda imÃ¡genes en <code>/public/images</code>, capturas en <code>/public/screenshots</code>, vÃ­deos en <code>/public/videos</code> y usa rutas como <code>/screenshots/app/home.jpg</code>.
                 </p>
               </section>
             ) : null}
 
             {activeTab === "avanzado" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<ShieldCheck aria-hidden />} title="Modo avanzado JSON" description="Úsalo solo para copiar, revisar o pegar un bloque completo. El editor visual es más seguro para el día a día." />
+                <PanelTitle icon={<ShieldCheck aria-hidden />} title="Modo avanzado JSON" description="Ãšsalo solo para copiar, revisar o pegar un bloque completo. El editor visual es mÃ¡s seguro para el dÃ­a a dÃ­a." />
                 <div className="admin-page-toolbar">
                   <button className="button secondary" type="button" onClick={refreshAdvancedJson}>Actualizar JSON desde formularios</button>
                   <button className="button secondary" type="button" onClick={applyAdvancedJson}>Aplicar JSON al borrador</button>
@@ -772,6 +871,36 @@ function PanelTitle({ icon, title, description }: { icon: React.ReactNode; title
   );
 }
 
+function CounterBreakdownView({ stats }: { stats: CounterBreakdown }) {
+  const items = [
+    { label: "Hoy", value: stats.today },
+    { label: "Semana", value: stats.week },
+    { label: "Mes", value: stats.month },
+    { label: "Total", value: stats.total },
+  ];
+
+  return (
+    <dl className="admin-counter-breakdown">
+      {items.map((item) => (
+        <div key={item.label}>
+          <dt>{item.label}</dt>
+          <dd>{item.value.toLocaleString("es-ES")}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+
+function formatReportDate(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Fecha no disponible";
+
+  return date.toLocaleString("es-ES", {
+    dateStyle: "short",
+    timeStyle: "short",
+  });
+}
 function TextField({ label, value, onChange }: { label: string; value: string; onChange: (value: string) => void }) {
   return (
     <label>
@@ -795,7 +924,7 @@ function ListEditor({ label, value, onChange }: { label: string; value: string[]
     <label>
       {label}
       <textarea value={listToText(value)} rows={6} onChange={(event) => onChange(textToList(event.target.value))} />
-      <small className="field-help">Una línea por elemento.</small>
+      <small className="field-help">Una lÃ­nea por elemento.</small>
     </label>
   );
 }
@@ -816,7 +945,7 @@ function VideoLabel() {
   return (
     <div className="video-label">
       <Smartphone aria-hidden />
-      <span>Vídeo o archivo</span>
+      <span>VÃ­deo o archivo</span>
     </div>
   );
 }
