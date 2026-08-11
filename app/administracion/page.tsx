@@ -6,7 +6,6 @@ import {
   Download,
   Eye,
   FileText,
-  FileUp,
   Image as ImageIcon,
   ListPlus,
   LogOut,
@@ -129,7 +128,7 @@ const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: type
   { id: "sitio", label: "Portada y marca", helper: "Nombre, logo, textos, botones y colores", icon: Settings },
   { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes, botones y avisos", icon: FileText },
   { id: "multimedia", label: "Imágenes", helper: "Logo, capturas, vídeos y recursos visuales", icon: ImageIcon },
-  { id: "descarga", label: "Descargas", helper: "APK, versión, tamaño, permisos e instalación", icon: Download },
+  { id: "descarga", label: "Descargas", helper: "URL externa del APK, version, tamano e instalacion", icon: Download },
   { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
   { id: "seo", label: "SEO", helper: "Google, metadatos y palabras clave", icon: Search },
   { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
@@ -209,7 +208,6 @@ export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<AdminTab>("constructor");
   const [status, setStatus] = useState("");
   const [saving, setSaving] = useState(false);
-  const [uploading, setUploading] = useState(false);
   const [site, setSite] = useState<SiteEditor>({
     appName: siteConfig.appName,
     slogan: siteConfig.slogan,
@@ -514,43 +512,13 @@ export default function AdminPage() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(payload),
     });
-    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
+    const result = await response.json().catch(() => ({ message: "Respuesta no valida." }));
     setSaving(false);
     setStatus(result.message || (response.ok ? "Cambios guardados." : "No se pudo guardar."));
   }
 
-  async function uploadApk(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setUploading(true);
-    setStatus("");
-    const form = new FormData(event.currentTarget);
-    form.set("version", download.version);
-    form.set("date", download.date);
-    const response = await fetch("/api/admin/apk", {
-      method: "POST",
-      body: form,
-    });
-    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
-    setUploading(false);
-    setStatus(result.message || (response.ok ? "APK guardado." : "No se pudo subir el APK."));
-    if (response.ok) {
-      setSite((current) => ({
-        ...current,
-        currentVersion: result.version,
-        lastUpdated: result.date,
-        apkSize: result.size,
-        apkSha256: result.sha256,
-        apkUrl: result.apkUrl,
-      }));
-      setDownload((current) => ({
-        ...current,
-        version: result.version,
-        date: result.date,
-        size: result.size,
-        sha256: result.sha256,
-        apkUrl: result.apkUrl,
-      }));
-    }
+  function showApkUrlHelp() {
+    setStatus("Cloudflare Pages no puede guardar APK grandes desde el panel. Sube el archivo a Cloudflare R2 u otro alojamiento, pega aqui la URL publica y pulsa Guardar cambios.");
   }
 
   async function logout() {
@@ -615,7 +583,7 @@ export default function AdminPage() {
           <button type="button" onClick={() => setActiveTab("descarga")}>
             <Download aria-hidden />
             <strong>Descargas</strong>
-            <span>APK, versión, tamaño, hash, permisos e instalación.</span>
+            <span>URL externa del APK, version, tamano, hash e instalacion.</span>
           </button>
           <button type="button" onClick={() => setActiveTab("sitio")}>
             <Settings aria-hidden />
@@ -653,7 +621,7 @@ export default function AdminPage() {
           <div className="admin-metric admin-counter-card">
             <span><Download aria-hidden /> Descargas</span>
             <CounterBreakdownView stats={realStats.downloads} />
-            <p>Boton oficial del APK</p>
+            <p>Enlace oficial del APK</p>
           </div>
           <div className="admin-metric admin-counter-card">
             <span>Clics en donar</span>
@@ -757,9 +725,7 @@ export default function AdminPage() {
                       <h3>Botones y descargas</h3>
                       <div className="admin-form-grid">
                         <TextField label="Enlace APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
-                        <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
                   <TextField label="Version" value={download.version} onChange={(value) => setDownloadField("version", value)} />
-                  <TextField label="Tamano" value={download.size} onChange={(value) => setDownloadField("size", value)} />
                   <TextField label="Build para aviso en app" value={download.latestBuild} onChange={(value) => setDownloadField("latestBuild", value)} />
                 </div>
               </article>
@@ -911,31 +877,39 @@ export default function AdminPage() {
 
             {activeTab === "descarga" ? (
               <section className="admin-panel admin-editor-panel">
-                <PanelTitle icon={<Smartphone aria-hidden />} title="Descarga de Android y datos del APK" description="Sube el archivo oficial o cambia manualmente versión, tamaño, hash, permisos e instrucciones." />
-                <form className="apk-upload-card" onSubmit={uploadApk}>
-                  <TextField label="Versión" value={download.version} onChange={(value) => setDownloadField("version", value)} />
-                  <TextField label="Fecha de actualización" value={download.date} onChange={(value) => setDownloadField("date", value)} />
-                  <label>
-                    Archivo APK
-                    <input name="apk" type="file" accept=".apk,application/vnd.android.package-archive" />
-                  </label>
-                  <button className="button primary" type="submit" disabled={uploading}>
-                    <FileUp aria-hidden /> {uploading ? "Subiendo..." : "Subir APK oficial"}
-                  </button>
-                </form>
+                <PanelTitle icon={<Smartphone aria-hidden />} title="Descarga de Android por URL externa" description="Cloudflare Pages no guarda APK grandes desde el panel. Sube el APK a Cloudflare R2, a tu dominio de descargas o a otro alojamiento, pega aqui la URL publica y guarda los cambios." />
+                <div className="apk-upload-card apk-url-card">
+                  <TextField label="Version" value={download.version} onChange={(value) => setDownloadField("version", value)} />
+                  <TextField label="Fecha de actualizacion" value={download.date} onChange={(value) => setDownloadField("date", value)} />
+                  <TextField label="URL oficial del APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
+                  <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
+                  <TextField label="Tamano del APK" value={download.size} onChange={(value) => setDownloadField("size", value)} />
+                  <TextField label="Hash SHA-256 opcional" value={download.sha256} onChange={(value) => setDownloadField("sha256", value)} />
+                  <div className="admin-help-card">
+                    <strong>Como publicar una APK grande</strong>
+                    <p>Sube el archivo APK a Cloudflare R2, a descargas.modocrisissurvival.com o al alojamiento que uses para archivos grandes. Copia la URL publica directa, pegala aqui como URL oficial del APK y pulsa Guardar cambios.</p>
+                    <p>La web y el aviso de actualizacion de la app usaran este enlace para enviar al usuario a la descarga correcta.</p>
+                  </div>
+                  <div className="admin-inline-actions">
+                    {download.apkUrl ? (
+                      <a className="button secondary" href={download.apkUrl} target="_blank" rel="noreferrer">
+                        <Eye aria-hidden /> Probar enlace del APK
+                      </a>
+                    ) : null}
+                    <button className="button secondary" type="button" onClick={showApkUrlHelp}>
+                      <Download aria-hidden /> Ver instrucciones
+                    </button>
+                  </div>
+                </div>
                 <div className="admin-form-grid">
                   <TextField label="Nombre mostrado" value={download.name} onChange={(value) => setDownloadField("name", value)} />
                   <TextField label="Ruta del icono" value={download.icon} onChange={(value) => setDownloadField("icon", value)} />
-                  <TextField label="Ruta del APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
-                  <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
-                  <TextField label="Tamaño" value={download.size} onChange={(value) => setDownloadField("size", value)} />
-                  <TextField label="Android mínimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
+                  <TextField label="Android minimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
                 </div>
-                <TextArea label="Hash SHA-256" value={download.sha256} rows={3} onChange={(value) => setDownloadField("sha256", value)} />
                 <div className="admin-subpanel">
                   <h3>Aviso de actualizacion dentro de la app</h3>
                   <p>
-                    La app consulta /app-version.json. Cuando subas una APK nueva, pon aqui una version o build superior para que aparezca el aviso de actualizacion.
+                    La app consulta /app-version.json. Cuando publiques una APK nueva en Cloudflare R2 u otro alojamiento, sube aqui la version o build y usa la misma URL oficial del APK.
                   </p>
                   <div className="admin-form-grid">
                     <TextField label="Ultima version disponible" value={download.latestVersion} onChange={(value) => setDownloadField("latestVersion", value)} />
