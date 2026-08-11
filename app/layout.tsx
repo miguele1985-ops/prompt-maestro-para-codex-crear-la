@@ -13,6 +13,16 @@ export const metadata: Metadata = pageMetadata({
   description: siteConfig.seo.description,
 });
 
+metadata.icons = {
+  icon: [
+    { url: "/brand/logo.jpg", type: "image/jpeg" },
+  ],
+  shortcut: ["/brand/logo.jpg"],
+  apple: [
+    { url: "/brand/logo.jpg", type: "image/jpeg" },
+  ],
+};
+
 metadata.verification = {
   ...metadata.verification,
   google: "wq8LI-PjzqCnIREw5ac1-sYX5tpdGVYKWeOuU9dBh78",
