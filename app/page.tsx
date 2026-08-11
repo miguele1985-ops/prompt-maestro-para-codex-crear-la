@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { CheckCircle2, Database, HardDriveDownload, HeartHandshake, Map, ShieldCheck } from "lucide-react";
 import { SafetyWarning } from "@/components/Badges";
-import { DownloadCard, ApkDownloadButton } from "@/components/DownloadCard";
+import { DownloadCard } from "@/components/DownloadCard";
+import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { ScreenshotGallery } from "@/components/Interactive";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -508,7 +509,10 @@ export default function HomePage() {
             En un apagón, una catástrofe natural, una avería en una zona aislada o una pérdida de cobertura, muchas funciones habituales del teléfono dejan de estar disponibles. Esta app está pensada para que la información y las herramientas importantes sigan contigo.
           </p>
           <div className="actions">
-            <ApkDownloadButton label="Descargar aplicación para Android" />
+            <DownloadDonationGate
+              apkUrl={siteConfig.apkUrl}
+              label="Descargar aplicacion para Android"
+            />
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
               <HeartHandshake size={20} aria-hidden />
               <span>

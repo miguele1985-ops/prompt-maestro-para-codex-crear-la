@@ -91,6 +91,14 @@ type DownloadEditor = {
   apkUrl: string;
   alternativeUrl: string;
   version: string;
+  latestVersion: string;
+  latestBuild: string;
+  minimumSupportedVersion: string;
+  updateTitle: string;
+  updateMessage: string;
+  releaseNotesUrl: string;
+  enabled: boolean;
+  force: boolean;
   date: string;
   size: string;
   minimumAndroidVersion: string;
@@ -232,6 +240,14 @@ export default function AdminPage() {
   const [reportsStatus, setReportsStatus] = useState("Cargando reportes de fallos...");
   const [download, setDownload] = useState<DownloadEditor>({
     ...downloadInfo,
+    latestVersion: "1.0.0",
+    latestBuild: "1",
+    minimumSupportedVersion: "1.0.0",
+    updateTitle: "Actualizacion disponible",
+    updateMessage: "Hay una nueva version de Modo Crisis Survival disponible. Descargala desde la web oficial para mantener la app actualizada.",
+    releaseNotesUrl: "/actualizaciones",
+    enabled: true,
+    force: false,
     permissions: [...downloadInfo.permissions],
     installSteps: [...downloadInfo.installSteps],
     resources: [...downloadInfo.resources],
@@ -742,10 +758,11 @@ export default function AdminPage() {
                       <div className="admin-form-grid">
                         <TextField label="Enlace APK" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
                         <TextField label="Enlace alternativo" value={download.alternativeUrl} onChange={(value) => setDownloadField("alternativeUrl", value)} />
-                        <TextField label="Version" value={download.version} onChange={(value) => setDownloadField("version", value)} />
-                        <TextField label="Tamano" value={download.size} onChange={(value) => setDownloadField("size", value)} />
-                      </div>
-                    </article>
+                  <TextField label="Version" value={download.version} onChange={(value) => setDownloadField("version", value)} />
+                  <TextField label="Tamano" value={download.size} onChange={(value) => setDownloadField("size", value)} />
+                  <TextField label="Build para aviso en app" value={download.latestBuild} onChange={(value) => setDownloadField("latestBuild", value)} />
+                </div>
+              </article>
 
                     <article className="builder-card">
                       <h3>Donaciones</h3>
@@ -915,6 +932,41 @@ export default function AdminPage() {
                   <TextField label="Android mínimo" value={download.minimumAndroidVersion} onChange={(value) => setDownloadField("minimumAndroidVersion", value)} />
                 </div>
                 <TextArea label="Hash SHA-256" value={download.sha256} rows={3} onChange={(value) => setDownloadField("sha256", value)} />
+                <div className="admin-subpanel">
+                  <h3>Aviso de actualizacion dentro de la app</h3>
+                  <p>
+                    La app consulta /app-version.json. Cuando subas una APK nueva, pon aqui una version o build superior para que aparezca el aviso de actualizacion.
+                  </p>
+                  <div className="admin-form-grid">
+                    <TextField label="Ultima version disponible" value={download.latestVersion} onChange={(value) => setDownloadField("latestVersion", value)} />
+                    <TextField label="Build disponible" value={download.latestBuild} onChange={(value) => setDownloadField("latestBuild", value)} />
+                    <TextField label="Version minima soportada" value={download.minimumSupportedVersion} onChange={(value) => setDownloadField("minimumSupportedVersion", value)} />
+                    <TextField label="URL de descarga para la app" value={download.apkUrl} onChange={(value) => setDownloadField("apkUrl", value)} />
+                    <TextField label="URL de notas de version" value={download.releaseNotesUrl} onChange={(value) => setDownloadField("releaseNotesUrl", value)} />
+                    <label className="check">
+                      <input
+                        type="checkbox"
+                        checked={download.enabled}
+                        onChange={(event) => setDownloadField("enabled", event.target.checked)}
+                      />
+                      Aviso activado
+                    </label>
+                    <label className="check">
+                      <input
+                        type="checkbox"
+                        checked={download.force}
+                        onChange={(event) => setDownloadField("force", event.target.checked)}
+                      />
+                      Forzar actualizacion
+                    </label>
+                  </div>
+                  <TextField label="Titulo del aviso" value={download.updateTitle} onChange={(value) => setDownloadField("updateTitle", value)} />
+                  <TextArea label="Mensaje que vera el usuario en la app" value={download.updateMessage} rows={4} onChange={(value) => setDownloadField("updateMessage", value)} />
+                  <div className="admin-help-card">
+                    <strong>Ejemplo para una APK nueva</strong>
+                    <code>{`{"enabled":true,"latestVersion":"1.0.2","latestBuild":3,"downloadUrl":"https://supervivenciaoffline.com/descargar","force":false}`}</code>
+                  </div>
+                </div>
                 <div className="admin-subpanel">
                   <h3>Recursos grandes descargables</h3>
                   <p>Mapas MBTiles, modelos de IA local u otros archivos grandes que se descargan desde el centro de descargas.</p>
