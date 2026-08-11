@@ -13,6 +13,11 @@ export const metadata: Metadata = pageMetadata({
   description: siteConfig.seo.description,
 });
 
+metadata.verification = {
+  ...metadata.verification,
+  google: "wq8LI-PjzqCnIREw5ac1-sYX5tpdGVYKWeOuU9dBh78",
+};
+
 export const viewport: Viewport = {
   themeColor: siteConfig.colors.background,
   colorScheme: "dark",
