@@ -1,10 +1,14 @@
 import { NextResponse } from "next/server";
+import { requireAdminToken } from "../admin/_utils";
 import { readSiteStats } from "@/lib/counters";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const tokenError = await requireAdminToken(request);
+  if (tokenError) return tokenError;
+
   try {
     return NextResponse.json(await readSiteStats(), {
       headers: { "cache-control": "no-store" },

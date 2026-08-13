@@ -4,36 +4,19 @@ import {
   configuredAdminToken,
   safeEqual,
 } from "../_utils";
+import { forbiddenOriginResponse, hasValidBrowserOrigin, isRateLimited, rateLimitKey, rateLimitResponse } from "@/lib/request-security";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const attempts = new Map<string, { count: number; resetAt: number }>();
-const windowMs = 10 * 60 * 1000;
 const maxAttempts = 8;
-
-function clientKey(request: Request) {
-  return request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
-    || request.headers.get("x-real-ip")
-    || "local";
-}
-
-function isRateLimited(request: Request) {
-  const key = clientKey(request);
-  const now = Date.now();
-  const current = attempts.get(key);
-  if (!current || current.resetAt < now) {
-    attempts.set(key, { count: 1, resetAt: now + windowMs });
-    return false;
-  }
-  current.count += 1;
-  attempts.set(key, current);
-  return current.count > maxAttempts;
-}
+const windowSeconds = 10 * 60;
 
 export async function POST(request: Request) {
-  if (isRateLimited(request)) {
-    return Response.json({ ok: false, message: "Demasiados intentos. Espera unos minutos." }, { status: 429 });
+  if (!hasValidBrowserOrigin(request)) return forbiddenOriginResponse();
+
+  if (await isRateLimited({ key: rateLimitKey(request, "admin-login", windowSeconds), limit: maxAttempts, windowSeconds })) {
+    return rateLimitResponse("Demasiados intentos. Espera unos minutos.");
   }
 
   const body = await request.json().catch(() => ({})) as {

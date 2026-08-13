@@ -38,8 +38,8 @@ describe("content architecture", () => {
     expect(JSON.stringify(allContentPages).toLowerCase()).not.toContain("testimonio");
   });
 
-  it("keeps missing commercial data explicit", () => {
-    expect(siteConfig.currentVersion).toMatch(/Añadir|Pendiente|confirmar/);
+  it("keeps release data explicit", () => {
+    expect(siteConfig.currentVersion).toMatch(/\d+\.\d+/);
     expect(siteConfig.apkSha256).toMatch(/Pendiente/);
   });
 

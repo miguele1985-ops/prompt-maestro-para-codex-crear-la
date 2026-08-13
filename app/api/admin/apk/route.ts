@@ -1,4 +1,5 @@
 import { requireAdminToken } from "../_utils";
+import { forbiddenOriginResponse, hasValidBrowserOrigin } from "@/lib/request-security";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -20,6 +21,8 @@ async function sha256(file: File) {
 }
 
 export async function POST(request: Request) {
+  if (!hasValidBrowserOrigin(request)) return forbiddenOriginResponse();
+
   const tokenError = await requireAdminToken(request);
   if (tokenError) return tokenError;
 

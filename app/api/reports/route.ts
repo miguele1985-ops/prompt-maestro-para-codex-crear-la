@@ -1,11 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
 import { addBugReport } from "@/lib/bug-reports";
+import { forbiddenOriginResponse, hasValidBrowserOrigin, isRateLimited, rateLimitKey, rateLimitResponse } from "@/lib/request-security";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
-  const payload = await request.json().catch(() => ({}));
+  if (!hasValidBrowserOrigin(request)) return forbiddenOriginResponse();
+
+  const windowSeconds = 60 * 60;
+  if (await isRateLimited({ key: rateLimitKey(request, "bug-report", windowSeconds), limit: 5, windowSeconds })) {
+    return rateLimitResponse("Has enviado varios reportes. Espera un rato antes de enviar otro.");
+  }
+
+  const text = await request.text();
+  if (text.length > 6000) {
+    return NextResponse.json({ ok: false, message: "El reporte es demasiado largo." }, { status: 413 });
+  }
+
+  let payload: Record<string, unknown>;
+  try {
+    payload = JSON.parse(text || "{}");
+  } catch {
+    return NextResponse.json({ ok: false, message: "JSON invalido." }, { status: 400 });
+  }
   const message = String(payload.message || "").trim();
   const source = String(payload.source || "Web").trim();
 

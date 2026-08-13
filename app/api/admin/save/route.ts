@@ -1,5 +1,6 @@
 import { requireAdminToken } from "../_utils";
 import { writeAdminContent } from "@/lib/admin-content";
+import { forbiddenOriginResponse, hasValidBrowserOrigin } from "@/lib/request-security";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -7,6 +8,8 @@ export const dynamic = "force-dynamic";
 const maxBodyChars = 1_200_000;
 
 export async function POST(request: Request) {
+  if (!hasValidBrowserOrigin(request)) return forbiddenOriginResponse();
+
   const tokenError = await requireAdminToken(request);
   if (tokenError) return tokenError;
 
