@@ -3582,6 +3582,107 @@ h3 {
   color: #170b03;
 }
 
+.map-install-guide {
+  display: grid;
+  gap: 1rem;
+  margin-top: .35rem;
+  border: 1px solid rgba(220, 165, 63, .22);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 8% 0, rgba(220, 165, 63, .12), transparent 16rem),
+    rgba(255, 252, 242, .62);
+  padding: clamp(1rem, 3vw, 1.25rem);
+}
+
+.map-install-steps {
+  display: grid;
+  gap: 1rem;
+}
+
+.map-install-step {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(16rem, 1.12fr);
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(27, 55, 35, .13);
+  border-radius: 14px;
+  background: rgba(255, 252, 242, .78);
+  padding: clamp(.85rem, 2vw, 1rem);
+  box-shadow: 0 14px 30px rgba(13, 31, 18, .07);
+}
+
+.map-install-step-copy {
+  display: grid;
+  gap: .45rem;
+}
+
+.map-install-step-copy span {
+  width: fit-content;
+  border: 1px solid rgba(220, 165, 63, .36);
+  border-radius: 999px;
+  background: rgba(220, 165, 63, .13);
+  color: var(--orange-dark);
+  padding: .28rem .62rem;
+  font-size: .82rem;
+  font-weight: 950;
+}
+
+.map-install-step-copy h4 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  letter-spacing: 0;
+}
+
+.map-install-step-copy p {
+  margin: 0;
+  color: rgba(29, 35, 28, .78);
+}
+
+.map-install-images {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .75rem;
+  justify-items: center;
+}
+
+.map-install-images-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.map-install-images-triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.map-install-images img {
+  width: 100%;
+  max-width: 18rem;
+  max-height: 30rem;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid rgba(9, 10, 8, .14);
+  background: #070908;
+  box-shadow: 0 18px 36px rgba(13, 31, 18, .18);
+}
+
+@media (max-width: 760px) {
+  .map-install-step {
+    grid-template-columns: 1fr;
+  }
+
+  .map-install-images,
+  .map-install-images-pair,
+  .map-install-images-triple {
+    grid-template-columns: 1fr;
+  }
+
+  .map-install-images img {
+    max-width: min(100%, 22rem);
+    max-height: none;
+  }
+}
+
 .download-center-donation-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -5460,17 +5561,18 @@ h2,
 .donation-gate {
   position: fixed;
   inset: 0;
-  z-index: 2147483000;
+  z-index: 2147483647;
   display: grid;
   place-items: center;
   padding: clamp(1rem, 4vw, 2rem);
-  background: rgba(4, 8, 5, 0.78);
+  isolation: isolate;
+  background: rgba(4, 8, 5, 0.9);
   backdrop-filter: blur(12px);
 }
 
 .donation-gate-panel {
   position: relative;
-  z-index: 2;
+  z-index: 2147483647;
   width: min(720px, 100%);
   max-height: min(88vh, 780px);
   overflow: auto;
@@ -5481,7 +5583,7 @@ h2,
   border-radius: 14px;
   background:
     radial-gradient(circle at top right, rgba(255, 122, 24, 0.2), transparent 34%),
-    linear-gradient(145deg, #0b150d, #142413 58%, #080d08);
+    linear-gradient(145deg, rgba(11, 21, 13, .98), rgba(20, 36, 19, .98) 58%, rgba(8, 13, 8, .98));
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.52);
   color: #fff8e8;
 }
@@ -5572,6 +5674,46 @@ h2,
   font-size: 0.92rem;
 }
 
+.download-gate-guide {
+  border: 1px solid rgba(255, 190, 90, 0.36);
+  border-radius: 12px;
+  background: rgba(255, 248, 232, 0.08);
+  overflow: hidden;
+}
+
+.download-gate-guide summary {
+  cursor: pointer;
+  padding: 0.9rem 1rem;
+  color: #ffe0a4;
+  font-weight: 950;
+}
+
+.download-gate-guide .apk-install-guide-compact {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 190, 90, 0.22);
+  border-radius: 0;
+  background: rgba(255, 252, 242, 0.95);
+}
+
+.apk-install-guide-compact .section-heading {
+  margin-bottom: 0;
+}
+
+.apk-install-guide-compact .map-install-step {
+  grid-template-columns: 1fr;
+}
+
+.apk-install-guide-compact .map-install-images,
+.apk-install-guide-compact .map-install-images-triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.apk-install-guide-compact .map-install-images img {
+  max-width: 8rem;
+  max-height: 14rem;
+}
+
 @media (max-width: 640px) {
   .donation-gate {
     align-items: end;
@@ -5585,6 +5727,16 @@ h2,
 
   .donation-gate-actions {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .apk-install-guide-compact .map-install-images,
+  .apk-install-guide-compact .map-install-images-triple {
+    grid-template-columns: 1fr;
+  }
+
+  .apk-install-guide-compact .map-install-images img {
+    max-width: min(100%, 16rem);
+    max-height: none;
   }
 }
 

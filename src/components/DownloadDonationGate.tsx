@@ -3,6 +3,7 @@
 import { Download, HeartHandshake, X } from "lucide-react";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
+import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { trackDonation, trackDownload } from "@/components/StatsTracker";
 import { siteConfig } from "@/content/site-config";
 
@@ -18,7 +19,7 @@ function configuredUrl(value?: string) {
 
 export function DownloadDonationGate({
   apkUrl,
-  label = "Descargar aplicacion para Android",
+  label = "Descargar aplicación para Android",
   className = "button primary",
 }: DownloadDonationGateProps) {
   const [open, setOpen] = useState(false);
@@ -69,10 +70,12 @@ export function DownloadDonationGate({
           <p className="eyebrow">Antes de descargar</p>
           <h2 id={titleId}>Ayuda a mantener viva Supervivencia Offline</h2>
           <p>
-            La app es gratuita y puede usarse completa sin pagar. Si te resulta útil, una pequeña aportación ayuda a mantener la web, corregir errores, preparar nuevas guías, mejorar la app y conservar descargas seguras.
+            La app es gratuita y puede usarse completa sin pagar. Si te resulta útil, una pequeña aportación ayuda a
+            mantener la web, corregir errores, preparar nuevas guías, mejorar la app y conservar descargas seguras.
           </p>
           <p>
-            Donar es totalmente voluntario. No desbloquea funciones, no crea una cuenta especial y no es necesario para usar la aplicación.
+            Donar es totalmente voluntario. No desbloquea funciones, no crea una cuenta especial y no es necesario para
+            usar la aplicación.
           </p>
         </div>
 
@@ -103,6 +106,11 @@ export function DownloadDonationGate({
           <Download size={18} aria-hidden />
           Seguir con la descarga
         </a>
+
+        <details className="download-gate-guide">
+          <summary>Ver guía de instalación</summary>
+          <ApkInstallGuide compact />
+        </details>
 
         <p className="donation-gate-legal">
           La descarga no depende de donar. Tu apoyo solo ayuda a que el proyecto siga mejorando.

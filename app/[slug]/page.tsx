@@ -5,6 +5,7 @@ import { SafetyWarning } from "@/components/Badges";
 import { ContactForm } from "@/components/ContactForm";
 import { DownloadCard } from "@/components/DownloadCard";
 import { BugReportForm } from "@/components/BugReportForm";
+import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { CalculatorGrid, CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive";
 import { PayPalDonationBlock } from "@/components/PayPalDonationBlock";
@@ -34,6 +35,212 @@ function isAiResource(resource: DownloadResource) {
   return searchable.includes("ia") || searchable.includes("gguf") || searchable.includes("hugging") || searchable.includes("qwen");
 }
 
+const mapInstallGuide = [
+  {
+    title: "Abrir Mapas desde la app",
+    text:
+      "Entra en la aplicaci\u00f3n y abre la opci\u00f3n Mapas. Dentro de la pantalla de mapas pulsa el bot\u00f3n Descargas. La app abrir\u00e1 el Centro de descargas de la web para que puedas bajar los mapas disponibles.",
+    images: [
+      {
+        src: "/screenshots/app/map-guide/paso-1-mapas-app.jpg",
+        alt: "Pantalla de mapa offline de la app con el bot\u00f3n Descargar visible",
+      },
+    ],
+  },
+  {
+    title: "Elegir el mapa que quieres descargar",
+    text:
+      "En el Centro de descargas hay dos mapas preparados: Espa\u00f1a completo topogr\u00e1fico y Espa\u00f1a completa relieve. Descarga el que necesites con una conexi\u00f3n estable. Tambi\u00e9n puedes usar otros mapas propios si est\u00e1n en formato .mbtiles.",
+    images: [
+      {
+        src: "/screenshots/app/map-guide/paso-2-centro-descargas.jpg",
+        alt: "Centro de descargas con los mapas MBTiles disponibles para descargar",
+      },
+    ],
+  },
+  {
+    title: "Localizar el archivo descargado",
+    text:
+      "Cuando termine la descarga, el archivo normalmente queda en la carpeta Descargas del m\u00f3vil. Vuelve a la app, entra otra vez en Mapas y selecciona la pesta\u00f1a correcta, por ejemplo Relieve si has descargado el mapa de relieve.",
+    images: [
+      {
+        src: "/screenshots/app/map-guide/paso-3-archivo-descargado.jpg",
+        alt: "Archivo espana-relieve.mbtiles descargado en el m\u00f3vil",
+      },
+      {
+        src: "/screenshots/app/map-guide/paso-3-pestana-relieve.jpg",
+        alt: "Pantalla de mapas con la pesta\u00f1a Relieve seleccionada",
+      },
+    ],
+  },
+  {
+    title: "Importar el mapa en la app",
+    text:
+      "Pulsa Mapas, abre la gesti\u00f3n de mapas y toca Importar otro mapa. Selecciona el archivo .mbtiles descargado. La importaci\u00f3n puede tardar un poco; cuando termine, la app mostrar\u00e1 el mapa como importado.",
+    images: [
+      {
+        src: "/screenshots/app/map-guide/paso-4-importar-mapa.jpg",
+        alt: "Ventana de gesti\u00f3n de mapas offline con el bot\u00f3n Importar otro mapa",
+      },
+      {
+        src: "/screenshots/app/map-guide/paso-4-mapa-importado.jpg",
+        alt: "Mapa de relieve importado y activo dentro de la app",
+      },
+    ],
+  },
+  {
+    title: "Cambiar entre mapas instalados",
+    text:
+      "Si tienes m\u00e1s de un mapa instalado, vuelve al bot\u00f3n Mapas y elige cu\u00e1l quieres usar. As\u00ed puedes guardar varios mapas MBTiles y cambiar entre mapa normal, topogr\u00e1fico, relieve u otros mapas seg\u00fan la zona.",
+    images: [
+      {
+        src: "/screenshots/app/map-guide/paso-5-cambiar-mapa.jpg",
+        alt: "Lista de mapas offline instalados para cambiar entre mapas MBTiles",
+      },
+    ],
+  },
+];
+
+function MapInstallGuide() {
+  return (
+    <section className="map-install-guide" aria-labelledby="map-install-guide-title">
+      <div className="section-heading compact-heading">
+        <p className="eyebrow">Tutorial de instalaci&oacute;n</p>
+        <h3 id="map-install-guide-title">C&oacute;mo descargar e importar mapas en la app</h3>
+        <p>
+          Sigue estos pasos para descargar un mapa MBTiles desde la web y dejarlo listo dentro de Supervivencia Offline.
+          Hazlo con Wi-Fi si puedes: los mapas ocupan bastante espacio.
+        </p>
+      </div>
+
+      <div className="map-install-steps">
+        {mapInstallGuide.map((step, index) => (
+          <article className="map-install-step" key={step.title}>
+            <div className="map-install-step-copy">
+              <span>Paso {index + 1}</span>
+              <h4>{step.title}</h4>
+              <p>{step.text}</p>
+            </div>
+            <div className={`map-install-images ${step.images.length > 1 ? "map-install-images-pair" : ""}`}>
+              {step.images.map((image) => (
+                <img src={image.src} alt={image.alt} key={image.src} loading="lazy" />
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <SafetyWarning>
+        Comprueba que el archivo termina en .mbtiles, que tienes espacio libre suficiente y que el mapa se ha importado
+        correctamente antes de depender de &eacute;l sin cobertura.
+      </SafetyWarning>
+    </section>
+  );
+}
+
+const aiInstallGuide = [
+  {
+    title: "Abrir el asistente IA offline",
+    text:
+      "Entra en la aplicación y abre Asistente Offline IA. Dentro de esa pantalla pulsa Centro de descargas IA y recursos para abrir la página de descargas.",
+    images: [
+      {
+        src: "/screenshots/app/ai-guide/paso-1-asistente-ia.jpg",
+        alt: "Pantalla del asistente IA offline con acceso al centro de descargas",
+      },
+    ],
+  },
+  {
+    title: "Entrar en la descarga del modelo",
+    text:
+      "En el Centro de descargas pulsa Descargar IA local desde Hugging Face. La descarga se realiza desde la página oficial del modelo.",
+    images: [
+      {
+        src: "/screenshots/app/ai-guide/paso-2-centro-descargas-ia.jpg",
+        alt: "Centro de descargas con el botón de IA local",
+      },
+    ],
+  },
+  {
+    title: "Descargar el archivo GGUF recomendado",
+    text:
+      "En Hugging Face busca el archivo qwen2.5-0.5b-instruct-q5_0.gguf. Es el modelo recomendado para teléfonos compatibles y pesa aproximadamente 490 MB. Pulsa la flecha de descarga.",
+    images: [
+      {
+        src: "/screenshots/app/ai-guide/paso-3-hugging-face-modelo.jpg",
+        alt: "Página oficial de Hugging Face con el archivo GGUF recomendado",
+      },
+    ],
+  },
+  {
+    title: "Importar el modelo desde Recursos",
+    text:
+      "Cuando termine la descarga, vuelve a la app. Entra en Recursos y pulsa Importar modelo GGUF. Si tu móvil no es de gama alta, evita modelos más grandes porque consumen mucha memoria, batería y procesador.",
+    images: [
+      {
+        src: "/screenshots/app/ai-guide/paso-4-importar-gguf.jpg",
+        alt: "Pantalla de recursos offline con el botón Importar modelo GGUF",
+      },
+    ],
+  },
+  {
+    title: "Seleccionar el archivo y usar la IA",
+    text:
+      "Selecciona el archivo GGUF descargado. Cuando aparezca el mensaje de modelo importado, la IA se cargará automáticamente y ya podrás usar el asistente offline.",
+    images: [
+      {
+        src: "/screenshots/app/ai-guide/paso-5-seleccionar-archivo.jpg",
+        alt: "Selector de archivos para elegir el modelo GGUF descargado",
+      },
+      {
+        src: "/screenshots/app/ai-guide/paso-5-modelo-importado.jpg",
+        alt: "Mensaje de modelo GGUF importado correctamente",
+      },
+      {
+        src: "/screenshots/app/ai-guide/paso-5-ia-lista.jpg",
+        alt: "Asistente IA offline listo para responder dentro de la app",
+      },
+    ],
+  },
+];
+
+function AiInstallGuide() {
+  return (
+    <section className="map-install-guide ai-install-guide" aria-labelledby="ai-install-guide-title">
+      <div className="section-heading compact-heading">
+        <p className="eyebrow">Tutorial de IA local</p>
+        <h3 id="ai-install-guide-title">Cómo descargar e importar la IA local</h3>
+        <p>
+          La IA local se descarga aparte porque el modelo ocupa mucho espacio. Usa Wi-Fi, comprueba el espacio libre y
+          descarga el archivo oficial desde Hugging Face.
+        </p>
+      </div>
+
+      <div className="map-install-steps">
+        {aiInstallGuide.map((step, index) => (
+          <article className="map-install-step" key={step.title}>
+            <div className="map-install-step-copy">
+              <span>Paso {index + 1}</span>
+              <h4>{step.title}</h4>
+              <p>{step.text}</p>
+            </div>
+            <div className={`map-install-images ${step.images.length > 1 ? "map-install-images-triple" : ""}`}>
+              {step.images.map((image) => (
+                <img src={image.src} alt={image.alt} key={image.src} loading="lazy" />
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <SafetyWarning>
+        La IA local puede cometer errores. Sus respuestas son orientativas y no sustituyen al 112, servicios oficiales,
+        autoridades, profesionales sanitarios ni formación especializada.
+      </SafetyWarning>
+    </section>
+  );
+}
+
 function ResourceDownloadsPanel({
   resources = downloadInfo.resources,
   showAiImage = true,
@@ -51,8 +258,8 @@ function ResourceDownloadsPanel({
         <p className="eyebrow">Recursos opcionales</p>
         <h2 id="resource-downloads-title">Mapas e IA para preparar la app</h2>
         <p>
-          Estos recursos se descargan aparte del APK para no hacer la instalacion principal demasiado pesada. Descargalos antes
-          de necesitarlos sin cobertura y anadelos desde la app.
+          Estos recursos se descargan aparte del APK para no hacer la instalación principal demasiado pesada. Descárgalos
+          antes de necesitarlos sin cobertura y añádelos desde la app.
         </p>
       </div>
 
@@ -78,6 +285,7 @@ function ResourceDownloadsPanel({
         Los mapas son recursos opcionales. Pueden tardar bastante en descargarse y necesitan espacio libre suficiente en el
         dispositivo. Revisa tambien la licencia y la actualidad del mapa antes de usarlo.
       </SafetyWarning>
+      <MapInstallGuide />
 
       <div className="section-heading compact-heading resource-subheading">
         <p className="eyebrow">IA local opcional</p>
@@ -92,7 +300,7 @@ function ResourceDownloadsPanel({
             <h3>{aiResource?.label || "IA local desde Hugging Face"}</h3>
             <p>{aiResource?.description || "Modelo GGUF opcional para usar el asistente local cuando el telefono sea compatible."}</p>
             <p>
-              Supervivencia Offline no aloja, modifica ni redistribuye este archivo. La descarga se realiza desde la pagina
+              Supervivencia Offline no aloja, modifica ni redistribuye este archivo. La descarga se realiza desde la página
               oficial del modelo en Hugging Face.
             </p>
             <span>Ocupa {aiResource?.size || "415 MB"}</span>
@@ -109,8 +317,9 @@ function ResourceDownloadsPanel({
       </div>
       <SafetyWarning>
         La IA local puede cometer errores. Sus respuestas son orientativas y no sustituyen al 112, servicios oficiales,
-        autoridades, profesionales sanitarios ni formacion especializada.
+        autoridades, profesionales sanitarios ni formación especializada.
       </SafetyWarning>
+      <AiInstallGuide />
     </article>
   );
 }
@@ -326,6 +535,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       {page.slug === "descargar" ? (
         <section className="content-band">
           <DownloadCard />
+          <ApkInstallGuide />
           <ResourceDownloadsPanel resources={visibleDownloadResources} />
           <BugReportForm source="Descargar aplicacion" title="Reportar un fallo de descarga" />
           <article className="mini-card">

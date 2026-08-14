@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Download, ShieldCheck } from "lucide-react";
+import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
 import { downloadInfo } from "@/content/downloads";
 
@@ -68,7 +69,11 @@ export function DownloadCard({
           </div>
         </dl>
         <div className="actions">
-          <ApkDownloadButton label="Descargar Modo Crisis Survival" info={current} />
+          <DownloadDonationGate
+            apkUrl={current.apkUrl}
+            label="Descargar Modo Crisis Survival"
+            className="button primary"
+          />
           <Link className="button secondary" href="/descargar">
             Ver instrucciones
           </Link>
