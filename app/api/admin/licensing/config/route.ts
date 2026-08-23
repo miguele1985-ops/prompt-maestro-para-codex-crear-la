@@ -1,5 +1,5 @@
 import { requireAdminToken } from "../../_utils";
-import { updateAppConfig, writeAuditLog } from "@/lib/licensing-d1";
+import { readAppConfig, updateAppConfig, writeAuditLog } from "@/lib/licensing-d1";
 import { forbiddenOriginResponse, hasValidBrowserOrigin } from "@/lib/request-security";
 
 export const runtime = "edge";
@@ -22,7 +22,31 @@ export async function PATCH(request: Request) {
     supportUrl?: string;
     gracePeriodEnabled?: boolean;
     gracePeriodEnd?: string | null;
+    webOnly?: boolean;
   };
+
+  if (body.webOnly) {
+    const current = await readAppConfig();
+    const next = await updateAppConfig({
+      ...current,
+      minimumSupportedVersion: body.minimumSupportedVersion || current.minimumSupportedVersion,
+      latestVersion: body.latestVersion || current.latestVersion,
+      purchaseUrl: body.purchaseUrl || current.purchaseUrl,
+      supportUrl: body.supportUrl || current.supportUrl,
+    });
+
+    await writeAuditLog({
+      action: "CAMBIAR_DATOS_WEB_LICENCIAS",
+      details: {
+        minimumSupportedVersion: next.minimumSupportedVersion,
+        latestVersion: next.latestVersion,
+        purchaseUrl: next.purchaseUrl,
+        supportUrl: next.supportUrl,
+      },
+    });
+
+    return Response.json({ ok: true, config: next }, { headers: { "cache-control": "no-store" } });
+  }
 
   const dangerous = body.appMode === "LICENSE_REQUIRED" || body.licensingEnabled || body.globalLockEnabled;
   if (dangerous && body.confirmation !== "ACTIVAR LICENCIAS") {
@@ -59,4 +83,3 @@ export async function PATCH(request: Request) {
 
   return Response.json({ ok: true, config: next }, { headers: { "cache-control": "no-store" } });
 }
-

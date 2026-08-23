@@ -579,6 +579,9 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       {page.slug === "contacto" ? (
         <section className="content-band">
           <ContactForm />
+          <div id="reportar-fallo">
+            <BugReportForm source="Contacto" title="Reportar un fallo de la app o la web" />
+          </div>
         </section>
       ) : null}
     </>

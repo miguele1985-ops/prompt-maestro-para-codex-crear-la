@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { CheckCircle2, Database, HardDriveDownload, HeartHandshake, Map, ShieldCheck } from "lucide-react";
+import { Bug, CheckCircle2, Database, HardDriveDownload, HeartHandshake, Map, ShieldCheck } from "lucide-react";
 import { SafetyWarning } from "@/components/Badges";
 import { DeferredScreenshotGallery } from "@/components/DeferredScreenshotGallery";
 import { DownloadCard } from "@/components/DownloadCard";
 import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { FeatureGrid } from "@/components/FeatureCard";
+import { PublicHomeCounters } from "@/components/PublicHomeCounters";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
@@ -527,6 +528,13 @@ export default function HomePage() {
                 <small>Mapas, IA y cómo instalarlo</small>
               </span>
             </Link>
+            <Link className="hero-report-button" href="/contacto#reportar-fallo">
+              <Bug size={20} aria-hidden />
+              <span>
+                <strong>Reportar fallo</strong>
+                <small>Avisa de errores facilmente</small>
+              </span>
+            </Link>
             <Link className="update-notice-button" href="/actualizaciones" aria-label="Ver actualización disponible de Modo Crisis Survival">
               <span>Nueva actualización</span>
               <strong>{siteConfig.currentVersion}</strong>
@@ -536,6 +544,7 @@ export default function HomePage() {
           <p className="hero-donation-note">
             Supervivencia Offline es gratuita y completa. Las aportaciones son voluntarias y ayudan a mantener la web, mejorar la app, corregir errores y preparar nuevos recursos offline.
           </p>
+          <PublicHomeCounters donatedEuros={siteConfig.donations.donatedEuros} />
           <ul className="hero-pills" aria-label="Puntos destacados">
             <li>Modo Crisis</li>
             <li>SOS y 112</li>

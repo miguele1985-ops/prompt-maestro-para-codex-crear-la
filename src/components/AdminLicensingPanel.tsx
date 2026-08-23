@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { AlertTriangle, CheckCircle2, KeyRound, Lock, MessageSquare, RotateCcw, Save, ShieldCheck } from "lucide-react";
-import type { AppConfig, AppMode, LicenseRecord, LicenseType, RemoteMessage } from "@/lib/licensing-core";
+import { CheckCircle2, KeyRound, Save, ShieldCheck } from "lucide-react";
+import type { AppConfig, LicenseRecord, LicenseType } from "@/lib/licensing-core";
 
 type Summary = {
   configured: boolean;
@@ -33,7 +33,7 @@ const defaultConfig: AppConfig = {
   updatedAt: new Date(0).toISOString(),
 };
 
-const modeLabels: Record<AppMode, string> = {
+const modeLabels: Record<AppConfig["appMode"], string> = {
   FREE: "Gratis",
   NOTICE: "Aviso",
   GRACE_PERIOD: "Periodo de gracia",
@@ -43,39 +43,23 @@ const modeLabels: Record<AppMode, string> = {
 export function AdminLicensingPanel() {
   const [summary, setSummary] = useState<Summary | null>(null);
   const [config, setConfig] = useState<AppConfig>(defaultConfig);
-  const [confirmation, setConfirmation] = useState("");
   const [status, setStatus] = useState("Cargando sistema de licencias...");
   const [generatedCodes, setGeneratedCodes] = useState("");
   const [licenses, setLicenses] = useState<LicenseRecord[]>([]);
-  const [messages, setMessages] = useState<RemoteMessage[]>([]);
   const [licenseForm, setLicenseForm] = useState({ count: 1, maxDevices: 2, licenseType: "PERMANENT" as LicenseType, expiresAt: "", notes: "" });
-  const [messageForm, setMessageForm] = useState({
-    title: "Nueva version disponible",
-    body: "Ya puedes descargar la nueva version de Modo Crisis Survival.",
-    buttonText: "Descargar",
-    buttonUrl: "https://modo-crisis-survival.pages.dev/descargar",
-    type: "UPDATE",
-    enabled: true,
-    dismissible: true,
-    blocking: false,
-  });
 
-  const dangerousChange = config.appMode === "LICENSE_REQUIRED" || config.licensingEnabled || config.globalLockEnabled;
   const totals = summary?.dashboard?.totals;
 
   async function loadAll() {
-    const [dashboardResponse, licensesResponse, messagesResponse] = await Promise.all([
+    const [dashboardResponse, licensesResponse] = await Promise.all([
       fetch("/api/admin/licensing", { cache: "no-store" }),
       fetch("/api/admin/licensing/licenses", { cache: "no-store" }),
-      fetch("/api/admin/licensing/messages", { cache: "no-store" }),
     ]);
     const dashboard = (await dashboardResponse.json().catch(() => null)) as Summary | null;
     const licensePayload = (await licensesResponse.json().catch(() => null)) as { licenses?: LicenseRecord[] } | null;
-    const messagePayload = (await messagesResponse.json().catch(() => null)) as { messages?: RemoteMessage[] } | null;
     setSummary(dashboard);
     if (dashboard?.dashboard?.config) setConfig(dashboard.dashboard.config);
     setLicenses(licensePayload?.licenses || []);
-    setMessages(messagePayload?.messages || []);
     setStatus(dashboard?.configured === false ? dashboard.message || "D1 no esta configurado." : "Sistema listo.");
   }
 
@@ -90,12 +74,18 @@ export function AdminLicensingPanel() {
     return "Las instalaciones sin licencia valida pueden quedar bloqueadas.";
   }, [config.appMode]);
 
-  async function saveConfig(resetFree = false) {
+  async function saveConfig() {
     setStatus("Guardando configuracion...");
     const response = await fetch("/api/admin/licensing/config", {
       method: "PATCH",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ ...config, resetFree, confirmation }),
+      body: JSON.stringify({
+        webOnly: true,
+        minimumSupportedVersion: config.minimumSupportedVersion,
+        latestVersion: config.latestVersion,
+        purchaseUrl: config.purchaseUrl,
+        supportUrl: config.supportUrl,
+      }),
     });
     const payload = (await response.json().catch(() => null)) as { ok?: boolean; message?: string; config?: AppConfig } | null;
     if (!response.ok || !payload?.ok) {
@@ -103,8 +93,7 @@ export function AdminLicensingPanel() {
       return;
     }
     if (payload.config) setConfig(payload.config);
-    setConfirmation("");
-    setStatus(resetFree ? "Modo gratis restablecido." : "Configuracion guardada.");
+    setStatus("Configuracion guardada.");
     await loadAll();
   }
 
@@ -125,22 +114,6 @@ export function AdminLicensingPanel() {
     await loadAll();
   }
 
-  async function saveMessage() {
-    setStatus("Publicando mensaje...");
-    const response = await fetch("/api/admin/licensing/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(messageForm),
-    });
-    const payload = (await response.json().catch(() => null)) as { ok?: boolean; message?: string } | null;
-    if (!response.ok || !payload?.ok) {
-      setStatus(payload?.message || "No se pudo guardar el mensaje.");
-      return;
-    }
-    setStatus("Mensaje guardado.");
-    await loadAll();
-  }
-
   async function changeLicenseStatus(license: LicenseRecord, statusValue: LicenseRecord["status"]) {
     await fetch(`/api/admin/licensing/licenses/${encodeURIComponent(license.id)}`, {
       method: "PATCH",
@@ -154,10 +127,10 @@ export function AdminLicensingPanel() {
     <div className="licensing-admin">
       <section className="licensing-hero">
         <div>
-          <p className="admin-kicker">Control remoto preparado</p>
-          <h2>Licencias, mensajes y bloqueo remoto</h2>
+          <p className="admin-kicker">Gestión web</p>
+          <h2>Licencias y pagos</h2>
           <p>
-            El sistema queda instalado en modo seguro: la app sigue gratis hasta que actives licencias manualmente. Los cambios sensibles pasan por API protegida y quedan registrados.
+            Este panel web queda centrado en pagos, URLs y generación de códigos. Los mensajes remotos y el bloqueo de la app se gestionarán desde la app creador.
           </p>
         </div>
         <div className={`license-mode-pill mode-${config.appMode.toLowerCase().replace("_", "-")}`}>
@@ -170,26 +143,18 @@ export function AdminLicensingPanel() {
         <div><span>Modo actual</span><strong>{modeLabels[config.appMode]}</strong><small>{modeDescription}</small></div>
         <div><span>Licencias</span><strong>{totals?.licenses ?? 0}</strong><small>{totals?.activeLicenses ?? 0} activas</small></div>
         <div><span>Dispositivos</span><strong>{totals?.activeDevices ?? 0}</strong><small>Activaciones en uso</small></div>
-        <div><span>Mensajes</span><strong>{totals?.activeMessages ?? 0}</strong><small>Activos para Android</small></div>
+        <div><span>Pagos</span><strong>URL</strong><small>Enlace de compra o donación</small></div>
       </div>
 
       <section className="admin-edit-card">
         <div className="admin-card-heading">
-          <Lock aria-hidden />
+          <Save aria-hidden />
           <div>
-            <h3>Estado global de la app</h3>
-            <p>Mientras esté en Gratis, ningún usuario necesita código y un fallo de servidor no bloquea la app.</p>
+            <h3>Pago, soporte y versión</h3>
+            <p>Desde la web solo se editan enlaces y datos necesarios para pagos/licencias. Los bloqueos y mensajes se dejan para la app creador.</p>
           </div>
         </div>
         <div className="admin-form-grid">
-          <label>Modo
-            <select value={config.appMode} onChange={(event) => setConfig({ ...config, appMode: event.target.value as AppMode })}>
-              <option value="FREE">GRATIS</option>
-              <option value="NOTICE">AVISO</option>
-              <option value="GRACE_PERIOD">PERIODO DE GRACIA</option>
-              <option value="LICENSE_REQUIRED">LICENCIA OBLIGATORIA</option>
-            </select>
-          </label>
           <label>Versión mínima
             <input type="number" min="1" value={config.minimumSupportedVersion} onChange={(event) => setConfig({ ...config, minimumSupportedVersion: Number(event.target.value || 1) })} />
           </label>
@@ -203,23 +168,18 @@ export function AdminLicensingPanel() {
             <input value={config.supportUrl} onChange={(event) => setConfig({ ...config, supportUrl: event.target.value })} />
           </label>
         </div>
-        <div className="admin-toggle-row">
-          <label><input type="checkbox" checked={config.licensingEnabled} onChange={(event) => setConfig({ ...config, licensingEnabled: event.target.checked })} /> Activar comprobación de licencias</label>
-          <label><input type="checkbox" checked={config.globalLockEnabled} onChange={(event) => setConfig({ ...config, globalLockEnabled: event.target.checked })} /> Bloqueo global</label>
-        </div>
-        {dangerousChange ? (
-          <div className="danger-confirm">
-            <AlertTriangle aria-hidden />
-            <div>
-              <strong>Confirmación obligatoria</strong>
-              <p>Vas a exigir licencia a instalaciones que reciban esta configuración. Escribe ACTIVAR LICENCIAS para aplicar el cambio.</p>
-              <input value={confirmation} onChange={(event) => setConfirmation(event.target.value)} placeholder="ACTIVAR LICENCIAS" />
-            </div>
-          </div>
-        ) : null}
         <div className="admin-actions-row">
-          <button type="button" className="admin-primary-button" onClick={() => saveConfig(false)}><Save aria-hidden /> Guardar estado</button>
-          <button type="button" className="admin-safe-button" onClick={() => saveConfig(true)}><RotateCcw aria-hidden /> Restablecer modo gratis</button>
+          <button type="button" className="admin-primary-button" onClick={saveConfig}><Save aria-hidden /> Guardar datos</button>
+        </div>
+      </section>
+
+      <section className="admin-edit-card">
+        <div className="admin-card-heading">
+          <ShieldCheck aria-hidden />
+          <div>
+            <h3>Mensajes y bloqueo remoto</h3>
+            <p>Estos controles no se muestran en la web. Se reservarán para la app creador, para evitar cambios accidentales desde el panel público de administración.</p>
+          </div>
         </div>
       </section>
 
@@ -260,51 +220,6 @@ export function AdminLicensingPanel() {
 
       <section className="admin-edit-card">
         <div className="admin-card-heading">
-          <MessageSquare aria-hidden />
-          <div>
-            <h3>Mensajes remotos para Android</h3>
-            <p>Publica avisos, actualizaciones o mensajes bloqueantes. El botón abre una URL segura configurada aquí.</p>
-          </div>
-        </div>
-        <div className="admin-form-grid">
-          <label>Título
-            <input value={messageForm.title} onChange={(event) => setMessageForm({ ...messageForm, title: event.target.value })} />
-          </label>
-          <label>Tipo
-            <select value={messageForm.type} onChange={(event) => setMessageForm({ ...messageForm, type: event.target.value })}>
-              <option>INFO</option>
-              <option>IMPORTANT</option>
-              <option>UPDATE</option>
-              <option>PROMOTION</option>
-              <option>LICENSE</option>
-              <option>BLOCKING</option>
-            </select>
-          </label>
-          <label>Texto del botón
-            <input value={messageForm.buttonText} onChange={(event) => setMessageForm({ ...messageForm, buttonText: event.target.value })} />
-          </label>
-          <label>URL del botón
-            <input value={messageForm.buttonUrl} onChange={(event) => setMessageForm({ ...messageForm, buttonUrl: event.target.value })} />
-          </label>
-        </div>
-        <label className="admin-full-label">Mensaje
-          <textarea value={messageForm.body} onChange={(event) => setMessageForm({ ...messageForm, body: event.target.value })} rows={5} />
-        </label>
-        <div className="admin-toggle-row">
-          <label><input type="checkbox" checked={messageForm.enabled} onChange={(event) => setMessageForm({ ...messageForm, enabled: event.target.checked })} /> Activo</label>
-          <label><input type="checkbox" checked={messageForm.dismissible} onChange={(event) => setMessageForm({ ...messageForm, dismissible: event.target.checked })} /> Permitir cerrar</label>
-          <label><input type="checkbox" checked={messageForm.blocking} onChange={(event) => setMessageForm({ ...messageForm, blocking: event.target.checked })} /> Bloqueante</label>
-        </div>
-        <div className="remote-message-preview">
-          <strong>{messageForm.title}</strong>
-          <p>{messageForm.body}</p>
-          {messageForm.buttonText ? <span>{messageForm.buttonText}</span> : null}
-        </div>
-        <button type="button" className="admin-primary-button" onClick={saveMessage}><Save aria-hidden /> Guardar mensaje</button>
-      </section>
-
-      <section className="admin-edit-card">
-        <div className="admin-card-heading">
           <CheckCircle2 aria-hidden />
           <div>
             <h3>Licencias recientes</h3>
@@ -322,20 +237,6 @@ export function AdminLicensingPanel() {
                 <button type="button" onClick={() => changeLicenseStatus(license, "ACTIVE")}>Activar</button>
                 <button type="button" onClick={() => changeLicenseStatus(license, "SUSPENDED")}>Suspender</button>
                 <button type="button" onClick={() => changeLicenseStatus(license, "REVOKED")}>Revocar</button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="admin-edit-card">
-        <h3>Mensajes guardados</h3>
-        <div className="license-list">
-          {messages.slice(0, 10).map((message) => (
-            <article key={message.id}>
-              <div>
-                <strong>{message.title}</strong>
-                <span>{message.type} · {message.enabled ? "Activo" : "Inactivo"} · {message.blocking ? "Bloqueante" : "No bloqueante"}</span>
               </div>
             </article>
           ))}

@@ -1150,19 +1150,9 @@ export const pages: ContentPage[] = [
     title: "Descargar Modo Crisis Survival para Android",
     eyebrow: "APK oficial",
     description: "Descarga la aplicaci\u00f3n oficial para Android y prepara los recursos opcionales: mapas offline MBTiles e IA local.",
-    body: [
-      "Desde esta p\u00e1gina puedes descargar el APK oficial de Modo Crisis Survival para Android. La app est\u00e1 pensada para funcionar principalmente sin conexi\u00f3n y reunir gu\u00edas, mapas, herramientas, checklists, inventario, preparaci\u00f3n familiar e IA local opcional en el tel\u00e9fono.",
-      "Despu\u00e9s de instalar la aplicaci\u00f3n, tambi\u00e9n puedes descargar recursos grandes por separado, como mapas MBTiles de Espa\u00f1a y el modelo GGUF de IA local. Estos archivos ocupan bastante espacio, por eso conviene descargarlos con Wi-Fi y comprobar que el m\u00f3vil tiene memoria suficiente.",
-      "Descarga siempre la app y sus recursos desde enlaces oficiales. Evita copias recibidas por mensajer\u00eda, redes sociales, foros o p\u00e1ginas no verificadas.",
-    ],
-    highlights: ["APK oficial", "Mapas MBTiles", "IA local opcional", "Android m\u00ednimo configurable", "Gu\u00eda de instalaci\u00f3n", "Permisos visibles"],
-    sections: [
-      {
-        title: "Qu\u00e9 se descarga en esta p\u00e1gina",
-        body: "Primero instala la APK oficial. Despu\u00e9s, si quieres usar mapas offline o IA local, descarga los recursos opcionales y a\u00f1\u00e1delos desde la app siguiendo las instrucciones del centro de descargas.",
-        items: ["APK oficial Android", "Mapa Espa\u00f1a completo topogr\u00e1fico", "Mapa Espa\u00f1a completa relieve", "Modelo IA local GGUF", "Instrucciones de instalaci\u00f3n"],
-      },
-    ],
+    body: [],
+    highlights: [],
+    sections: [],
     seoTitle: "Descargar Modo Crisis Survival APK",
     seoDescription: "Descarga oficial del APK de Modo Crisis Survival para Android, con versi\u00f3n, mapas MBTiles, IA local, permisos e instrucciones de instalaci\u00f3n.",
   },  {

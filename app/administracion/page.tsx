@@ -130,7 +130,7 @@ const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: type
   { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes, botones y avisos", icon: FileText },
   { id: "multimedia", label: "Imágenes", helper: "Logo, capturas, vídeos y recursos visuales", icon: ImageIcon },
   { id: "descarga", label: "Descargas", helper: "URL externa del APK, version, tamano e instalacion", icon: Download },
-  { id: "licencias", label: "Licencias", helper: "Modo gratis, mensajes y codigos", icon: ShieldCheck },
+  { id: "licencias", label: "Licencias", helper: "Pagos, URLs y codigos", icon: ShieldCheck },
   { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
   { id: "seo", label: "SEO", helper: "Google, metadatos y palabras clave", icon: Search },
   { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
