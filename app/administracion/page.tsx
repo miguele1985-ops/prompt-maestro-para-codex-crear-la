@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
-  Coins,
   Download,
   Eye,
   FileText,
@@ -18,6 +17,7 @@ import {
   TrendingUp,
   Trash2,
 } from "lucide-react";
+import { AdminLicensingPanel } from "@/components/AdminLicensingPanel";
 import { changelog, downloadInfo } from "@/content/downloads";
 import { allContentPages } from "@/content/pages";
 import { siteConfig } from "@/content/site-config";
@@ -25,7 +25,7 @@ import type { CounterBreakdown, SiteStats } from "@/lib/counters";
 import type { BugReport } from "@/lib/bug-reports";
 import type { ChangelogEntry, ContentPage } from "@/types/content";
 
-type AdminTab = "constructor" | "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "avanzado";
+type AdminTab = "constructor" | "sitio" | "seo" | "descarga" | "paginas" | "actualizaciones" | "multimedia" | "licencias" | "avanzado";
 
 type SiteEditor = {
   appName: string;
@@ -72,6 +72,7 @@ type SiteEditor = {
     customAmountUrl: string;
     paypalHostedButtonId: string;
     qrImage: string;
+    donatedEuros: string;
     bizumInfo: string;
     kofiUrl: string;
     patreonUrl: string;
@@ -129,6 +130,7 @@ const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: type
   { id: "paginas", label: "Páginas", helper: "Textos, secciones, imágenes, botones y avisos", icon: FileText },
   { id: "multimedia", label: "Imágenes", helper: "Logo, capturas, vídeos y recursos visuales", icon: ImageIcon },
   { id: "descarga", label: "Descargas", helper: "URL externa del APK, version, tamano e instalacion", icon: Download },
+  { id: "licencias", label: "Licencias", helper: "Modo gratis, mensajes y codigos", icon: ShieldCheck },
   { id: "actualizaciones", label: "Actualizaciones", helper: "Historial de versiones editable", icon: ListPlus },
   { id: "seo", label: "SEO", helper: "Google, metadatos y palabras clave", icon: Search },
   { id: "avanzado", label: "Avanzado", helper: "JSON completo para ajustes finos", icon: ShieldCheck },
@@ -628,6 +630,11 @@ export default function AdminPage() {
             <CounterBreakdownView stats={realStats.donations} />
             <p>Botones de donacion</p>
           </div>
+          <div className="admin-metric admin-counter-card">
+            <span>Euros donados</span>
+            <strong>{formatEuros(site.donations.donatedEuros)}</strong>
+            <p>Contador manual editable</p>
+          </div>
           <div className="admin-actions-card">
             <button className="button secondary" type="button" onClick={logout}>
               <LogOut aria-hidden /> Salir
@@ -739,6 +746,7 @@ export default function AdminPage() {
                         <TextField label="Otra cantidad" value={site.donations.customAmountUrl} onChange={(value) => setSiteField("donations", { ...site.donations, customAmountUrl: value })} />
                         <TextField label="PayPal hosted button ID" value={site.donations.paypalHostedButtonId} onChange={(value) => setSiteField("donations", { ...site.donations, paypalHostedButtonId: value })} />
                         <TextField label="Imagen QR" value={site.donations.qrImage} onChange={(value) => setSiteField("donations", { ...site.donations, qrImage: value })} />
+                        <TextField label="Euros donados manualmente" value={site.donations.donatedEuros} onChange={(value) => setSiteField("donations", { ...site.donations, donatedEuros: value })} />
                       </div>
                       <TextArea label="Explicacion corta para donar" value={site.donations.note} rows={4} onChange={(value) => setSiteField("donations", { ...site.donations, note: value })} />
                     </article>
@@ -857,6 +865,7 @@ export default function AdminPage() {
                   <div className="admin-form-grid">
                     <TextField label="Enlace principal de donación" value={site.donations.primaryUrl} onChange={(value) => setSiteField("donations", { ...site.donations, primaryUrl: value })} />
                     <TextField label="PayPal" value={site.donations.paypalUrl} onChange={(value) => setSiteField("donations", { ...site.donations, paypalUrl: value })} />
+                    <TextField label="Euros donados manualmente" value={site.donations.donatedEuros} onChange={(value) => setSiteField("donations", { ...site.donations, donatedEuros: value })} />
                     <TextField label="Bizum / instrucciones" value={site.donations.bizumInfo} onChange={(value) => setSiteField("donations", { ...site.donations, bizumInfo: value })} />
                     <TextField label="Ko-fi" value={site.donations.kofiUrl} onChange={(value) => setSiteField("donations", { ...site.donations, kofiUrl: value })} />
                     <TextField label="Patreon" value={site.donations.patreonUrl} onChange={(value) => setSiteField("donations", { ...site.donations, patreonUrl: value })} />
@@ -1091,6 +1100,8 @@ export default function AdminPage() {
               </section>
             ) : null}
 
+            {activeTab === "licencias" ? <AdminLicensingPanel /> : null}
+
             {activeTab === "avanzado" ? (
               <section className="admin-panel admin-editor-panel">
                 <PanelTitle icon={<ShieldCheck aria-hidden />} title="Modo avanzado JSON" description="Úsalo solo para copiar, revisar o pegar un bloque completo. El editor visual es más seguro para el día a día." />
@@ -1138,6 +1149,21 @@ function CounterBreakdownView({ stats }: { stats: CounterBreakdown }) {
       ))}
     </dl>
   );
+}
+
+function formatEuros(value: string) {
+  const normalized = String(value || "0")
+    .replace(",", ".")
+    .replace(/[^\d.]/g, "");
+  const amount = Number.parseFloat(normalized);
+
+  if (!Number.isFinite(amount)) return "0 €";
+
+  return new Intl.NumberFormat("es-ES", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: amount % 1 === 0 ? 0 : 2,
+  }).format(amount);
 }
 
 

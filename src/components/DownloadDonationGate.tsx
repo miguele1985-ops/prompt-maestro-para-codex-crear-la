@@ -1,9 +1,9 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Download, HeartHandshake, X } from "lucide-react";
 import { useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
-import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { trackDonation, trackDownload } from "@/components/StatsTracker";
 import { siteConfig } from "@/content/site-config";
 
@@ -12,6 +12,14 @@ type DownloadDonationGateProps = {
   label?: string;
   className?: string;
 };
+
+const ApkInstallGuide = dynamic(
+  () => import("@/components/ApkInstallGuide").then((module) => module.ApkInstallGuide),
+  {
+    ssr: false,
+    loading: () => <p className="muted">Cargando guía de instalación...</p>,
+  },
+);
 
 function configuredUrl(value?: string) {
   return Boolean(value && !/configurar|pendiente|anadir|añadir/i.test(value));

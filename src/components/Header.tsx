@@ -48,7 +48,7 @@ export function Header() {
     <header className="site-header" ref={panelRef}>
       <Link className="brand" href="/" aria-label={`${siteConfig.appName} inicio`}>
         <span className="brand-mark">
-          <img src={siteConfig.logo} alt="" aria-hidden />
+          <img src={siteConfig.logo} alt="" aria-hidden width={512} height={512} decoding="async" />
         </span>
         <span>{siteConfig.appName}</span>
       </Link>

@@ -31,7 +31,14 @@ export function StatsTracker() {
     if (sessionStorage.getItem(storageKey)) return;
 
     sessionStorage.setItem(storageKey, "1");
-    sendCounterEvent("visit", pathname);
+    const trackVisit = () => sendCounterEvent("visit", pathname);
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(trackVisit, { timeout: 3000 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timeoutId = globalThis.setTimeout(trackVisit, 1200);
+    return () => globalThis.clearTimeout(timeoutId);
   }, [pathname]);
 
   return null;

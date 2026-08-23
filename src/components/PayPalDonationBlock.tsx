@@ -36,6 +36,7 @@ export type DonationSettings = {
   customAmountUrl?: string;
   paypalHostedButtonId?: string;
   qrImage?: string;
+  donatedEuros?: string;
 };
 
 const supportCards = [
@@ -64,6 +65,7 @@ export function PayPalDonationBlock({ donations }: { donations?: DonationSetting
   const [qrVisible, setQrVisible] = useState(true);
   const hostedButtonId = donations?.paypalHostedButtonId?.trim() || "9TZTUQQTQ8J7Q";
   const qrImage = donations?.qrImage?.trim() || "/assets/img/paypal-donacion-qr.png";
+  const donatedEuros = formatDonationEuros(donations?.donatedEuros);
 
   const donationAmounts = useMemo(
     () => [
@@ -117,6 +119,12 @@ export function PayPalDonationBlock({ donations }: { donations?: DonationSetting
         <p className="donation-amount-note">
           Puedes configurar estos enlaces desde administración. Si aún no están configurados, usa el botón oficial de PayPal o el QR.
         </p>
+        {donatedEuros ? (
+          <div className="donation-public-counter" aria-label="Total de aportaciones registradas manualmente">
+            <span>Aportaciones registradas</span>
+            <strong>{donatedEuros}</strong>
+          </div>
+        ) : null}
       </article>
 
       <div className="donation-payment-grid">
@@ -264,4 +272,19 @@ export function PayPalDonationBlock({ donations }: { donations?: DonationSetting
       />
     </section>
   );
+}
+
+function formatDonationEuros(value?: string) {
+  const normalized = String(value || "0")
+    .replace(",", ".")
+    .replace(/[^\d.]/g, "");
+  const amount = Number.parseFloat(normalized);
+
+  if (!Number.isFinite(amount) || amount <= 0) return "";
+
+  return new Intl.NumberFormat("es-ES", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: amount % 1 === 0 ? 0 : 2,
+  }).format(amount);
 }

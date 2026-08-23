@@ -48,6 +48,7 @@ const baseSiteConfig = {
     customAmountUrl: "https://www.paypal.com/donate/?hosted_button_id=SSVXWRYX2VHDL",
     paypalHostedButtonId: "SSVXWRYX2VHDL",
     qrImage: "/assets/img/paypal-donacion-qr.png",
+    donatedEuros: "0",
     bizumInfo: "Configurar antes de publicar",
     kofiUrl: "Configurar antes de publicar",
     patreonUrl: "Configurar antes de publicar",

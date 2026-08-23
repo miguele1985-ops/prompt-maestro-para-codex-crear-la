@@ -130,7 +130,7 @@ export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
         {assets.map((asset) => (
           <button type="button" key={asset.src} onClick={() => setActive(asset)} className="screenshot-thumb">
             <span className="phone-frame">
-              <img src={asset.src} alt="" aria-hidden />
+              <img src={asset.src} alt="" aria-hidden loading="lazy" decoding="async" />
             </span>
             <strong>{asset.alt}</strong>
           </button>
@@ -140,7 +140,7 @@ export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={active.alt}>
           <button className="lightbox-close" type="button" onClick={() => setActive(null)} aria-label="Cerrar vista ampliada"><X /></button>
           <div className="phone-frame large">
-            <img src={active.src} alt={active.alt} />
+            <img src={active.src} alt={active.alt} loading="eager" decoding="async" />
           </div>
           <p>{active.caption}</p>
         </div>

@@ -30,7 +30,7 @@ export function pageMetadata({
       description,
       url: absoluteUrl(path),
       siteName: siteConfig.appName,
-      images: [{ url: absoluteUrl("/og.png"), width: 1200, height: 630, alt: siteConfig.appName }],
+      images: [{ url: absoluteUrl("/og.jpg"), width: 1200, height: 630, alt: siteConfig.appName }],
       locale: "es_ES",
       type: "website",
     },
@@ -38,7 +38,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [absoluteUrl("/og.png")],
+      images: [absoluteUrl("/og.jpg")],
     },
   };
 }
