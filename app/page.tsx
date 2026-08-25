@@ -204,6 +204,12 @@ const screenshotAssets = [
     category: "Agua",
   },
   {
+    src: "/screenshots/app/calculator-rain-capture.jpg",
+    alt: "Captación de lluvia con modo de cálculo, precipitación, superficie de captación y unidades",
+    caption: "Captación de lluvia: estima litros recogidos, recipientes, depósito, autonomía y modo inverso por superficie o lluvia necesaria.",
+    category: "Lluvia",
+  },
+  {
     src: "/screenshots/app/calculator-energy.jpg",
     alt: "Energía y Electricidad con calculadora de powerbank, horas estimadas y cargas de móvil",
     caption: "Energía: estima horas de carga, cargas de móvil y consumo de dispositivos comunes.",
@@ -232,6 +238,24 @@ const screenshotAssets = [
     alt: "Cruce de ríos con anchura, velocidad, profundidad, peso con equipo y resultado de riesgo",
     caption: "Cruce de ríos: evalúa corriente, profundidad y empuje antes de decidir no cruzar o buscar alternativa.",
     category: "Ríos",
+  },
+  {
+    src: "/screenshots/app/calculator-required-speed.jpg",
+    alt: "Velocidad necesaria con modos de cálculo, distancia, tiempo manual y límite por luz",
+    caption: "Velocidad necesaria: calcula velocidad, ritmo, tiempo, llegada a tiempo y margen según desnivel, terreno, carga y paradas.",
+    category: "Velocidad",
+  },
+  {
+    src: "/screenshots/app/calculator-thermal-feel.jpg",
+    alt: "Sensación térmica con modo frío, temperatura del aire, velocidad del viento y unidades",
+    caption: "Sensación térmica: calcula frío por viento o calor por humedad, nivel de riesgo y consejos rápidos de protección.",
+    category: "Sensación térmica",
+  },
+  {
+    src: "/screenshots/app/calculator-daylight-hours.jpg",
+    alt: "Horas de luz con modo rápido, hora actual, puesta de sol y margen de seguridad",
+    caption: "Horas de luz: calcula luz restante, hora límite recomendada, alerta de margen y si puedes llegar antes del anochecer.",
+    category: "Luz",
   },
   {
     src: "/screenshots/app/calculator-converter.jpg",
@@ -624,9 +648,9 @@ export default function HomePage() {
                       src={image.src}
                       alt={image.alt}
                       width={576}
-                      height={880}
-                      widths={[240, 360]}
-                      sizes="(max-width: 768px) 38vw, 150px"
+                      height={1280}
+                      widths={[240, 360, 576]}
+                      sizes="(max-width: 760px) 72vw, 150px"
                       loading="lazy"
                       decoding="async"
                     />

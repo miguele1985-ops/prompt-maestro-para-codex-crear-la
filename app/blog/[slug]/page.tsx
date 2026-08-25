@@ -22,6 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.excerpt,
     slug: `blog/${post.slug}`,
     keywords: post.keywords,
+    image: post.image,
+    imageAlt: post.imageAlt,
   });
 }
 
@@ -30,6 +32,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getBlogPost(slug);
   if (!post) notFound();
   const appUseGuide = blogAppUseGuides[post.slug];
+  const articleLinks = [
+    ...(post.relatedLinks ?? []),
+    { label: "Inicio", href: "/" },
+    { label: "Descargar la app", href: "/descargar" },
+  ].filter((link, index, links) => links.findIndex((item) => item.href === link.href) === index);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -40,6 +47,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     author: { "@type": "Organization", name: "Modo Crisis Survival" },
     publisher: { "@type": "Organization", name: "Modo Crisis Survival" },
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+    ...(post.updatedAt || post.publishedAt ? { dateModified: post.updatedAt ?? post.publishedAt } : {}),
   };
 
   return (
@@ -60,9 +69,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           className="blog-article-cover"
           src={post.image}
           alt={post.imageAlt}
-          width={576}
-          height={880}
-          widths={[360, 576]}
+          width={1200}
+          height={750}
+          widths={[360, 576, 960, 1200]}
           sizes="min(100vw - 2rem, 960px)"
           loading="eager"
           fetchPriority="high"
@@ -93,21 +102,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </section>
         ) : null}
 
-        {post.relatedLinks?.length ? (
-          <nav className="blog-related" aria-label="Enlaces relacionados">
-            <h2>Seguir explorando</h2>
-            <div>
-              {post.relatedLinks.map((link) => (
-                <Link href={link.href} key={link.href}>{link.label}</Link>
-              ))}
-              <Link href="/blog">Volver al blog</Link>
-            </div>
-          </nav>
-        ) : (
-          <nav className="blog-related" aria-label="Enlaces relacionados">
+        <section className="blog-download-cta">
+          <div>
+            <p className="eyebrow">App Android offline</p>
+            <h2>Guarda esta preparación en el móvil</h2>
+            <p>
+              Modo Crisis Survival reúne guías, checklists, mapas offline, contactos y calculadoras para consultar información útil incluso sin cobertura.
+            </p>
+          </div>
+          <Link href="/descargar">Descargar la app</Link>
+        </section>
+
+        <nav className="blog-related" aria-label="Enlaces relacionados">
+          <h2>Seguir explorando</h2>
+          <div>
+            {articleLinks.map((link) => (
+              <Link href={link.href} key={link.href}>{link.label}</Link>
+            ))}
             <Link href="/blog">Volver al blog</Link>
-          </nav>
-        )}
+          </div>
+        </nav>
       </article>
     </>
   );

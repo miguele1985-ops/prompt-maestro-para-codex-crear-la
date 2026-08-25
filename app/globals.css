@@ -5071,8 +5071,8 @@ h3 {
 
 .use-case-collage img {
   width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
+  aspect-ratio: 9 / 20;
+  object-fit: contain;
   object-position: top center;
   display: block;
   border: .32rem solid #050505;
@@ -5083,6 +5083,7 @@ h3 {
 
 .use-case-collage picture {
   display: block;
+  min-width: 0;
 }
 
 .use-case-collage picture:nth-child(1),
@@ -5092,8 +5093,21 @@ h3 {
 
 @media (max-width: 760px) {
   .use-case-collage {
-    width: min(100%, 22rem);
-    gap: .5rem;
+    width: 100%;
+    display: flex;
+    gap: .65rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: .1rem .05rem .85rem;
+    scroll-padding-inline: .05rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .use-case-collage picture {
+    flex: 0 0 min(72vw, 15rem);
+    scroll-snap-align: start;
   }
 
   .use-case-collage img {
@@ -5368,7 +5382,9 @@ h2,
 }
 
 .blog-card img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   background: #111;
@@ -5436,8 +5452,10 @@ h2,
 }
 
 .blog-article-cover {
+  display: block;
   width: 100%;
-  max-height: 460px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   border: 1px solid rgba(30, 42, 24, .14);
   border-radius: 8px;
@@ -5461,6 +5479,48 @@ h2,
 
 .blog-article-section li + li {
   margin-top: .35rem;
+}
+
+.blog-download-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid rgba(216, 64, 18, .24);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 251, 239, .92), rgba(255, 236, 205, .86));
+}
+
+.blog-download-cta div {
+  display: grid;
+  gap: .45rem;
+}
+
+.blog-download-cta h2,
+.blog-download-cta p {
+  margin: 0;
+}
+
+.blog-download-cta h2 {
+  color: var(--forest);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.1;
+}
+
+.blog-download-cta > a {
+  flex: 0 0 auto;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--orange), #d43d12);
+  color: #fff8e8;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(216, 64, 18, .22);
 }
 
 .blog-related {
@@ -5528,8 +5588,14 @@ h2,
   }
 
   .blog-card a,
-  .blog-related a {
+  .blog-related a,
+  .blog-download-cta > a {
     width: 100%;
+  }
+
+  .blog-download-cta {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 
@@ -6078,6 +6144,43 @@ h2,
   background: rgba(255, 252, 242, 0.95);
 }
 
+.download-card-guide {
+  margin-top: 1rem;
+  border: 1px solid rgba(220, 165, 63, .36);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(30, 42, 24, .92), rgba(92, 61, 18, .82));
+  overflow: hidden;
+}
+
+.download-card-guide summary {
+  cursor: pointer;
+  padding: .95rem 1rem;
+  color: #ffe7ae;
+  font-weight: 950;
+  list-style: none;
+}
+
+.download-card-guide summary::-webkit-details-marker {
+  display: none;
+}
+
+.download-card-guide summary::before {
+  content: "▼ ";
+}
+
+.download-card-guide[open] summary::before {
+  content: "▲ ";
+}
+
+.download-card-guide .apk-install-guide-compact {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(220, 165, 63, .3);
+  border-radius: 0;
+  background: rgba(255, 252, 242, .96);
+}
+
 .apk-install-guide-compact .section-heading {
   margin-bottom: 0;
 }
@@ -6605,9 +6708,9 @@ h2,
 /* Home: public project counters and logo fit */
 .hero-public-counters {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: .6rem;
-  max-width: 54rem;
+  max-width: 42rem;
   margin: .8rem 0 .25rem;
 }
 
@@ -6673,14 +6776,14 @@ h2,
 
 @media (max-width: 900px) {
   .hero-public-counters {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 36rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 42rem;
   }
 }
 
 @media (max-width: 520px) {
   .hero-public-counters {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: .45rem;
   }
 

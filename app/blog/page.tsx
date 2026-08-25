@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
-import { blogPosts } from "@/content/blog";
+import { orderedBlogPosts } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -32,13 +32,13 @@ export default function BlogPage() {
         </div>
 
         <div className="blog-grid">
-          {blogPosts.map((post) => (
+          {orderedBlogPosts.map((post) => (
             <article className="blog-card" key={post.slug}>
               <ResponsiveImage
                 src={post.image}
                 alt={post.imageAlt}
-                width={576}
-                height={880}
+                width={1200}
+                height={750}
                 widths={[240, 360, 576]}
                 sizes="(max-width: 760px) 100vw, 360px"
                 loading="lazy"

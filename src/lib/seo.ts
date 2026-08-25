@@ -11,14 +11,20 @@ export function pageMetadata({
   description,
   slug = "",
   keywords = [],
+  image = "/og.jpg",
+  imageAlt = siteConfig.appName,
 }: {
   title: string;
   description: string;
   slug?: string;
   keywords?: string[];
+  image?: string;
+  imageAlt?: string;
 }): Metadata {
   const path = slug ? `/${slug}` : "/";
   const fullTitle = title.includes(siteConfig.appName) ? title : `${title} | ${siteConfig.appName}`;
+  const socialImage = absoluteUrl(image);
+  const socialImageHeight = image === "/og.jpg" ? 630 : 750;
 
   return {
     title: fullTitle,
@@ -30,7 +36,7 @@ export function pageMetadata({
       description,
       url: absoluteUrl(path),
       siteName: siteConfig.appName,
-      images: [{ url: absoluteUrl("/og.jpg"), width: 1200, height: 630, alt: siteConfig.appName }],
+      images: [{ url: socialImage, width: 1200, height: socialImageHeight, alt: imageAlt }],
       locale: "es_ES",
       type: "website",
     },
@@ -38,7 +44,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [absoluteUrl("/og.jpg")],
+      images: [socialImage],
     },
   };
 }

@@ -66,13 +66,13 @@ export const features: AppFeature[] = [
     id: "calculators",
     slug: "recursos-avanzados",
     title: "Calculadoras",
-    shortDescription: "Agua, energía, potabilización, hipotermia, conversiones y más.",
+    shortDescription: "Agua, lluvia, velocidad, sensación térmica, horas de luz, energía y conversiones.",
     fullDescription:
       "Calculadoras orientativas con advertencias claras para evitar decisiones de riesgo basadas en una cifra.",
     icon: "Calculator",
     availability: "offline",
     category: "Herramientas",
-    highlights: ["Agua", "Energía", "Ríos", "Hipotermia"],
+    highlights: ["Lluvia", "Velocidad", "Sensación térmica", "Horas de luz"],
   },
   {
     id: "black-box",

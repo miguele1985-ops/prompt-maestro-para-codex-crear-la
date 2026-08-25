@@ -47,8 +47,8 @@ export const moduleGroups = [
     title: "Recursos avanzados",
     kicker: "Herramientas de campo",
     image: "/screenshots/app/advanced-resources.jpg",
-    items: ["Calculadoras", "Vehículo", "Comunicación local", "Código Morse", "Frecuencias", "Calendario lunar"],
-    text: "Incluye funciones de apoyo para orientación, señales, ahorro de batería, radio, vehículo y cálculo orientativo en emergencias.",
+    items: ["Calculadoras", "Lluvia", "Velocidad", "Sensación térmica", "Horas de luz", "Frecuencias"],
+    text: "Incluye funciones de apoyo para orientación, señales, ahorro de batería, radio, vehículo, captación de lluvia, velocidad necesaria, sensación térmica, horas de luz y cálculo orientativo en emergencias.",
   },
   {
     title: "Aprendizaje interactivo",

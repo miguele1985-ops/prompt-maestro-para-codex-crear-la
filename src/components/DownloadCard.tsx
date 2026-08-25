@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Download, ShieldCheck } from "lucide-react";
+import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
 import { downloadInfo } from "@/content/downloads";
@@ -74,10 +74,11 @@ export function DownloadCard({
             label="Descargar Modo Crisis Survival"
             className="button primary"
           />
-          <Link className="button secondary" href="/descargar">
-            Ver instrucciones
-          </Link>
         </div>
+        <details className="download-card-guide">
+          <summary>Ver guía de instalación</summary>
+          <ApkInstallGuide compact />
+        </details>
       </div>
       {!compact ? <QrDownload /> : null}
     </section>

@@ -5,7 +5,6 @@ import { SafetyWarning } from "@/components/Badges";
 import { ContactForm } from "@/components/ContactForm";
 import { DownloadCard } from "@/components/DownloadCard";
 import { BugReportForm } from "@/components/BugReportForm";
-import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { CalculatorGrid, CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive";
 import { PayPalDonationBlock } from "@/components/PayPalDonationBlock";
@@ -18,7 +17,7 @@ import { donationFaqJsonLd } from "@/content/donations";
 import { faqs } from "@/content/faqs";
 import { features } from "@/content/features";
 import { siteConfig } from "@/content/site-config";
-import { blogPosts } from "@/content/blog";
+import { orderedBlogPosts } from "@/content/blog";
 import { guideCategories } from "@/content/guides";
 import { allContentPages, calculators, crisisScenarios } from "@/content/pages";
 import { readAdminContent } from "@/lib/admin-content";
@@ -507,7 +506,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
             <div className="blog-list blog-list-linked">
               <h2>Articulos del blog</h2>
               <p>Contenido practico para ampliar las guias de supervivencia y aprender a usar mejor las funciones de la app.</p>
-              {blogPosts.map((article) => (
+              {orderedBlogPosts.map((article) => (
                 <Link href={`/blog/${article.slug}`} key={article.slug}>
                   <span>{article.category}</span>
                   <strong>{article.title}</strong>
@@ -535,7 +534,6 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       {page.slug === "descargar" ? (
         <section className="content-band">
           <DownloadCard />
-          <ApkInstallGuide />
           <ResourceDownloadsPanel resources={visibleDownloadResources} />
           <BugReportForm source="Descargar aplicacion" title="Reportar un fallo de descarga" />
           <article className="mini-card">

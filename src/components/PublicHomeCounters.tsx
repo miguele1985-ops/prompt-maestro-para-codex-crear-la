@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Euro, HeartHandshake, TrendingUp } from "lucide-react";
+import { Download, Euro, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type PublicStats = {
@@ -62,7 +62,6 @@ export function PublicHomeCounters({ donatedEuros }: { donatedEuros?: string }) 
   const counters = [
     { label: "Visitas", value: formatCount(stats.visits), icon: TrendingUp },
     { label: "Descargas", value: formatCount(stats.downloads), icon: Download },
-    { label: "Clics en donar", value: formatCount(stats.donationClicks), icon: HeartHandshake },
     { label: "Donado", value: stats.donatedEuros || "0 €", icon: Euro },
   ];
 
