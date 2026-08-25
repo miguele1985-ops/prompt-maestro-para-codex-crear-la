@@ -505,15 +505,9 @@ const appUseCases: AppUseCase[] = [
   {
     title: "Herramientas y recursos: una biblioteca organizada por tareas",
     text: "Las funciones no aparecen como una lista interminable: están agrupadas en guías, herramientas personales, recursos avanzados, aprendizaje interactivo, IA y enciclopedia, y contenidos con Internet cuando lo necesitan.",
-    image: "/screenshots/app/home-tools-resources-1.jpg",
-    alt: "Pantallas de herramientas personales, recursos avanzados, guías e IA de Modo Crisis Survival",
+    image: "/screenshots/app/advanced-resources.jpg",
+    alt: "Pantalla de recursos avanzados de Modo Crisis Survival",
     points: ["Herramientas personales", "Recursos avanzados", "Guías", "IA y enciclopedia", "Favoritos", "Categorías"],
-    images: [
-      { src: "/screenshots/app/home-tools-resources-1.jpg", alt: "Herramientas personales y recursos avanzados" },
-      { src: "/screenshots/app/home-tools-resources-2.jpg", alt: "IA y enciclopedia" },
-      { src: "/screenshots/app/home-tools-resources-3.jpg", alt: "Guías de supervivencia y herramientas personales" },
-      { src: "/screenshots/app/home-tools-resources-4.jpg", alt: "Recursos avanzados, Internet y aprendizaje interactivo" },
-    ],
   },
 ];
 
