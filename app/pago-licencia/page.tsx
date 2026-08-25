@@ -4,7 +4,6 @@ import {
   AlertTriangle,
   BadgeEuro,
   CheckCircle2,
-  CreditCard,
   KeyRound,
   Lock,
   ShieldCheck,

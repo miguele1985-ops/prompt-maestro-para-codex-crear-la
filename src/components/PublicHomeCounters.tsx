@@ -29,18 +29,35 @@ export function PublicHomeCounters({ donatedEuros }: { donatedEuros?: string }) 
 
   useEffect(() => {
     let cancelled = false;
+    let idleId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-    fetch("/api/public-stats", { cache: "no-store" })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data: PublicStats | null) => {
-        if (!cancelled && data) setStats(data);
-      })
-      .catch(() => null);
+    const loadStats = () => {
+      fetch("/api/public-stats", { cache: "no-store" })
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data: PublicStats | null) => {
+          if (!cancelled && data) {
+            setStats({
+              ...data,
+              donatedEuros: data.donatedEuros || donatedEuros?.trim() || emptyStats.donatedEuros,
+            });
+          }
+        })
+        .catch(() => null);
+    };
+
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(loadStats, { timeout: 3500 });
+    } else {
+      timeoutId = setTimeout(loadStats, 1800);
+    }
 
     return () => {
       cancelled = true;
+      if (idleId) window.cancelIdleCallback(idleId);
+      if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [donatedEuros]);
 
   const counters = [
     { label: "Visitas", value: formatCount(stats.visits), icon: TrendingUp },

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import type { Calculator, FaqItem, GuideCategory, MediaAsset, Scenario } from "@/types/content";
 
 export function CrisisDemo({ scenarios }: { scenarios: Scenario[] }) {
@@ -130,7 +131,17 @@ export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
         {assets.map((asset) => (
           <button type="button" key={asset.src} onClick={() => setActive(asset)} className="screenshot-thumb">
             <span className="phone-frame">
-              <img src={asset.src} alt="" aria-hidden loading="lazy" decoding="async" />
+              <ResponsiveImage
+                src={asset.src}
+                alt=""
+                aria-hidden
+                width={576}
+                height={880}
+                widths={[240, 360]}
+                sizes="(max-width: 768px) 42vw, 190px"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
             <strong>{asset.alt}</strong>
           </button>
@@ -140,7 +151,16 @@ export function ScreenshotGallery({ assets }: { assets: MediaAsset[] }) {
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={active.alt}>
           <button className="lightbox-close" type="button" onClick={() => setActive(null)} aria-label="Cerrar vista ampliada"><X /></button>
           <div className="phone-frame large">
-            <img src={active.src} alt={active.alt} loading="eager" decoding="async" />
+            <ResponsiveImage
+              src={active.src}
+              alt={active.alt}
+              width={576}
+              height={880}
+              widths={[360, 576]}
+              sizes="(max-width: 768px) 80vw, 384px"
+              loading="eager"
+              decoding="async"
+            />
           </div>
           <p>{active.caption}</p>
         </div>

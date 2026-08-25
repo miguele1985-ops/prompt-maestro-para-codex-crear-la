@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { blogPosts } from "@/content/blog";
 import { pageMetadata } from "@/lib/seo";
 
@@ -33,7 +34,16 @@ export default function BlogPage() {
         <div className="blog-grid">
           {blogPosts.map((post) => (
             <article className="blog-card" key={post.slug}>
-              <img src={post.image} alt={post.imageAlt} loading="lazy" />
+              <ResponsiveImage
+                src={post.image}
+                alt={post.imageAlt}
+                width={576}
+                height={880}
+                widths={[240, 360, 576]}
+                sizes="(max-width: 760px) 100vw, 360px"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="blog-card-body">
                 <div className="blog-card-meta">
                   <span>{post.category}</span>

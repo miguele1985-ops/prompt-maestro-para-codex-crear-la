@@ -6,6 +6,7 @@ import { DownloadCard } from "@/components/DownloadCard";
 import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { PublicHomeCounters } from "@/components/PublicHomeCounters";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
@@ -570,24 +571,17 @@ export default function HomePage() {
             <span>v4.0 Ultra · confirmar APK final</span>
           </div>
           <div className="phone-mockup real-screen">
-            <picture>
-              {siteConfig.heroImage === "/screenshots/app/home.jpg" ? (
-                <source
-                  type="image/webp"
-                  srcSet="/screenshots/app/home-360.webp 360w, /screenshots/app/home.webp 576w"
-                  sizes="(max-width: 768px) 76vw, 336px"
-                />
-              ) : null}
-              <img
-                src={siteConfig.heroImage}
-                alt="Pantalla principal de Modo Crisis Survival"
-                width={576}
-                height={880}
-                loading="eager"
-                fetchPriority="high"
-                decoding="sync"
-              />
-            </picture>
+            <ResponsiveImage
+              src={siteConfig.heroImage}
+              alt="Pantalla principal de Modo Crisis Survival"
+              width={576}
+              height={880}
+              widths={[360, 576]}
+              sizes="(max-width: 768px) 76vw, 336px"
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
+            />
           </div>
         </div>
       </section>
@@ -625,10 +619,29 @@ export default function HomePage() {
               <div className={item.images ? "use-case-collage" : "use-case-phone"} aria-label={item.images ? item.alt : undefined}>
                 {item.images ? (
                   item.images.map((image) => (
-                    <img key={image.src} src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+                    <ResponsiveImage
+                      key={image.src}
+                      src={image.src}
+                      alt={image.alt}
+                      width={576}
+                      height={880}
+                      widths={[240, 360]}
+                      sizes="(max-width: 768px) 38vw, 150px"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   ))
                 ) : (
-                  <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                  <ResponsiveImage
+                    src={item.image}
+                    alt={item.alt}
+                    width={576}
+                    height={880}
+                    widths={[240, 360]}
+                    sizes="(max-width: 768px) 72vw, 260px"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 )}
               </div>
             </article>
@@ -645,7 +658,16 @@ export default function HomePage() {
           {moduleGroups.map((group) => (
             <article className="module-card" key={group.title}>
               <div className="module-shot">
-                <img src={group.image} alt={`Captura de ${group.title}`} loading="lazy" decoding="async" />
+                <ResponsiveImage
+                  src={group.image}
+                  alt={`Captura de ${group.title}`}
+                  width={576}
+                  height={880}
+                  widths={[240, 360]}
+                  sizes="(max-width: 768px) 84px, 170px"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div>
                 <span>{group.kicker}</span>

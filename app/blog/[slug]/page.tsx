@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SafetyWarning } from "@/components/Badges";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { blogAppUseGuides, blogPosts, getBlogPost } from "@/content/blog";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
@@ -55,7 +56,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </section>
 
       <article className="content-band blog-article">
-        <img className="blog-article-cover" src={post.image} alt={post.imageAlt} />
+        <ResponsiveImage
+          className="blog-article-cover"
+          src={post.image}
+          alt={post.imageAlt}
+          width={576}
+          height={880}
+          widths={[360, 576]}
+          sizes="min(100vw - 2rem, 960px)"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
 
         {post.warning ? <SafetyWarning title="Aviso importante">{post.warning}</SafetyWarning> : null}
 

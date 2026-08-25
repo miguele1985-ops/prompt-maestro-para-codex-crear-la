@@ -20,6 +20,13 @@ const securityHeaders = [
   },
 ];
 
+const longTermAssetCache = [
+  {
+    key: "Cache-Control",
+    value: "public, max-age=31536000, immutable",
+  },
+];
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
@@ -46,19 +53,27 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/screenshots/:path*",
-        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+        headers: longTermAssetCache,
       },
       {
         source: "/brand/:path*",
-        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+        headers: longTermAssetCache,
       },
       {
         source: "/assets/:path*",
-        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+        headers: longTermAssetCache,
+      },
+      {
+        source: "/images/:path*",
+        headers: longTermAssetCache,
       },
       {
         source: "/og.jpg",
-        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+        headers: longTermAssetCache,
+      },
+      {
+        source: "/og.png",
+        headers: longTermAssetCache,
       },
     ];
   },
