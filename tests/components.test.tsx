@@ -10,19 +10,19 @@ import { faqs } from "../src/content/faqs";
 
 describe("interactive components", () => {
   it("renders FAQ accordion with visible questions", () => {
-    render(<FaqAccordion items={faqs.slice(0, 2)} />);
+    render(React.createElement(FaqAccordion, { items: faqs.slice(0, 2) }));
     expect(screen.getByText(/funciona sin Internet/)).toBeInTheDocument();
   });
 
   it("validates the contact form", async () => {
-    render(<ContactForm />);
+    render(React.createElement(ContactForm));
     await userEvent.click(screen.getByRole("button", { name: /enviar/i }));
     expect(screen.getByRole("alert")).toHaveTextContent("Revisa");
   });
 
   it("stores cookie rejection", async () => {
     localStorage.clear();
-    render(<CookieBanner />);
+    render(React.createElement(CookieBanner));
     await userEvent.click(await screen.findByRole("button", { name: /rechazar/i }));
     expect(localStorage.getItem("mcs-cookie-consent")).toBe("rejected");
   });
