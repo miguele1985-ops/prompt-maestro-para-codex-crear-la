@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -325,8 +326,13 @@ function ResourceDownloadsPanel({
 
 async function getVisibleContent() {
   const savedContent = await readAdminContent().catch(() => null);
+  const savedPages = savedContent?.pages?.length ? savedContent.pages : allContentPages;
   return {
-    pages: savedContent?.pages?.length ? savedContent.pages : allContentPages,
+    pages: savedPages.map((page) =>
+      page.slug === "descargar"
+        ? { ...page, body: [], highlights: [], sections: [] }
+        : page,
+    ),
     visibleChangelog: savedContent?.changelog?.length ? savedContent.changelog : changelog,
     visibleDownloadInfo: savedContent?.download as Partial<typeof downloadInfo> | undefined,
     visibleSite: savedContent?.site as Partial<typeof siteConfig> | undefined,
@@ -392,7 +398,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
 
   const visibleDownloadResources = visibleDownloadInfo?.resources?.length ? visibleDownloadInfo.resources : downloadInfo.resources;
   const visibleDonations = { ...siteConfig.donations, ...(visibleSite?.donations || {}) };
-  const isDownloadPage = page.slug === "descargar";
+  const isDownloadPage = slug === "descargar" || page.slug === "descargar";
+  const isResourcesPage = slug === "recursos-avanzados" || page.slug === "recursos-avanzados";
   const showPageHero = !isDownloadPage;
   const showPageContent = page.slug !== "donaciones" && page.slug !== "centro-descargas" && !isDownloadPage;
 
@@ -427,46 +434,62 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
           {page.sections?.map((section) => {
             const hasShowcase = Boolean(section.image || section.steps || section.tips);
             return (
-              <article className={hasShowcase ? "option-showcase" : "mini-card"} key={section.title}>
-                {section.image ? (
-                  <div className="option-screen">
-                    <img src={section.image} alt={section.imageAlt || section.title} />
+              <Fragment key={section.title}>
+                <article className={hasShowcase ? "option-showcase" : "mini-card"}>
+                  {section.image ? (
+                    <div className="option-screen">
+                      <img src={section.image} alt={section.imageAlt || section.title} />
+                    </div>
+                  ) : null}
+                  <div className="option-copy">
+                    <h2>{section.title}</h2>
+                    <p>{section.body}</p>
+                    {section.items ? (
+                      <div className="option-list">
+                        <strong>Que permite hacer</strong>
+                        <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                      </div>
+                    ) : null}
+                    {section.steps ? (
+                      <div className="option-list">
+                        <strong>Como usarlo</strong>
+                        <ol>{section.steps.map((step) => <li key={step}>{step}</li>)}</ol>
+                      </div>
+                    ) : null}
+                    {section.tips ? (
+                      <div className="option-list">
+                        <strong>Para sacarle el maximo partido</strong>
+                        <ul>{section.tips.map((tip) => <li key={tip}>{tip}</li>)}</ul>
+                      </div>
+                    ) : null}
+                    {section.warning ? <SafetyWarning>{section.warning}</SafetyWarning> : null}
+                    {page.slug === "herramientas-supervivencia" && section.title === "Mapa Offline" ? (
+                      <Link className="option-link-button" href="/centro-descargas">
+                        Como descargar e instalar los mapas
+                      </Link>
+                    ) : null}
+                    {section.buttonLabel && section.buttonHref ? (
+                      <Link className="option-link-button" href={section.buttonHref}>
+                        {section.buttonLabel}
+                      </Link>
+                    ) : null}
                   </div>
+                </article>
+                {isResourcesPage && section.title === "Señales de humo" ? (
+                  <article className="resource-calculator-block">
+                    <div className="section-heading compact-heading">
+                      <p className="eyebrow">Herramientas de calculo</p>
+                      <h2>Calculadoras</h2>
+                      <p>
+                        Estimaciones orientativas para agua, captacion de lluvia, energia, velocidad necesaria,
+                        sensacion termica, horas de luz, potabilizacion, destilacion solar, rios, conversor survival,
+                        silbato, senales de humo e hipotermia.
+                      </p>
+                    </div>
+                    <CalculatorGrid calculators={calculators} />
+                  </article>
                 ) : null}
-                <div className="option-copy">
-                  <h2>{section.title}</h2>
-                  <p>{section.body}</p>
-                  {section.items ? (
-                    <div className="option-list">
-                      <strong>Que permite hacer</strong>
-                      <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                    </div>
-                  ) : null}
-                  {section.steps ? (
-                    <div className="option-list">
-                      <strong>Como usarlo</strong>
-                      <ol>{section.steps.map((step) => <li key={step}>{step}</li>)}</ol>
-                    </div>
-                  ) : null}
-                  {section.tips ? (
-                    <div className="option-list">
-                      <strong>Para sacarle el maximo partido</strong>
-                      <ul>{section.tips.map((tip) => <li key={tip}>{tip}</li>)}</ul>
-                    </div>
-                  ) : null}
-                  {section.warning ? <SafetyWarning>{section.warning}</SafetyWarning> : null}
-                  {page.slug === "herramientas-supervivencia" && section.title === "Mapa Offline" ? (
-                    <Link className="option-link-button" href="/centro-descargas">
-                      Como descargar e instalar los mapas
-                    </Link>
-                  ) : null}
-                  {section.buttonLabel && section.buttonHref ? (
-                    <Link className="option-link-button" href={section.buttonHref}>
-                      {section.buttonLabel}
-                    </Link>
-                  ) : null}
-                </div>
-              </article>
+              </Fragment>
             );
           })}
         </section>
@@ -519,20 +542,6 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
             </div>
           </section>
         </>
-      ) : null}
-
-      {page.slug === "herramientas-supervivencia" ? (
-        <section className="content-band">
-          <div className="section-heading compact-heading">
-            <p className="eyebrow">Herramientas de calculo</p>
-            <h2>Calculadoras</h2>
-            <p>
-              Estimaciones orientativas para agua, energia, potabilizacion, destilacion solar, rios, conversor survival,
-              silbato, senales de humo e hipotermia.
-            </p>
-          </div>
-          <CalculatorGrid calculators={calculators} />
-        </section>
       ) : null}
 
       {page.slug === "descargar" ? (

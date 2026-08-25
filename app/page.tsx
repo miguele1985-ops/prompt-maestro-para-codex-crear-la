@@ -631,7 +631,7 @@ export default function HomePage() {
         </div>
         <div className="use-case-grid">
           {appUseCases.map((item, index) => (
-            <article className="use-case-card" key={item.title}>
+            <article className={item.images ? "use-case-card use-case-card-collage" : "use-case-card"} key={item.title}>
               <div className="use-case-copy">
                 <span className="step-number">0{index + 1}</span>
                 <h3>{item.title}</h3>

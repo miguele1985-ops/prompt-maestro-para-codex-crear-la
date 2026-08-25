@@ -5061,19 +5061,28 @@ h3 {
   }
 }
 .use-case-collage {
+  order: 2;
   justify-self: center;
-  width: min(100%, 30rem);
+  width: min(100%, 28rem);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .65rem;
   align-items: start;
 }
 
+.use-case-card-collage {
+  grid-template-columns: minmax(18rem, .95fr) minmax(0, 1.05fr);
+}
+
+.use-case-card-collage .use-case-copy {
+  order: 1;
+}
+
 .use-case-collage img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 20;
-  object-fit: contain;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
   object-position: top center;
   display: block;
   border: .32rem solid #050505;
@@ -5085,6 +5094,9 @@ h3 {
 .use-case-collage picture {
   display: block;
   min-width: 0;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 1.15rem;
 }
 
 .use-case-collage picture:nth-child(1),
@@ -5092,8 +5104,34 @@ h3 {
   transform: translateY(.65rem);
 }
 
+.resource-calculator-block {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--field-line);
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(247, 242, 230, .96), rgba(239, 232, 214, .88));
+  padding: clamp(1rem, 3vw, 1.4rem);
+  box-shadow: 0 18px 44px rgba(30, 42, 24, .09);
+}
+
+.resource-calculator-block .feature-grid {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .use-case-card-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .use-case-card-collage .use-case-copy,
+  .use-case-card-collage .use-case-collage {
+    order: initial;
+  }
+}
+
 @media (max-width: 760px) {
   .use-case-collage {
+    order: initial;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
