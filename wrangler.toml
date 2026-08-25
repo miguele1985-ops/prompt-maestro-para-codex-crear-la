@@ -1,6 +1,6 @@
 name = "modo-crisis-survival"
 pages_build_output_dir = "./.vercel/output/static"
-compatibility_date = "2026-07-30"
+compatibility_date = "2026-08-25"
 compatibility_flags = ["nodejs_compat"]
 
 # Licencias futuras:
@@ -10,3 +10,7 @@ compatibility_flags = ["nodejs_compat"]
 # binding = "LICENSES_DB"
 # database_name = "modo-crisis-licensing"
 # database_id = "CONFIGURAR_EN_CLOUDFLARE"
+
+[[kv_namespaces]]
+binding = "MCS_APP_KV"
+id = "56939c1281e5488c87f59b1f03f1245a"
