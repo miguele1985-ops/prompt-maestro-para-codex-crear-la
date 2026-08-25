@@ -5,11 +5,20 @@ export const DEFAULT_CONFIG = {
   appMode: "FREE",
   licensingEnabled: false,
   globalLockEnabled: false,
-  minimumSupportedVersion: null,
+  minimumSupportedVersion: "1.0.0",
   minimumSupportedVersionCode: null,
-  latestVersion: null,
+  latestVersion: "1.0",
   latestVersionCode: null,
+  updateEnabled: true,
+  force: false,
+  forceUpdate: false,
+  mandatory: false,
+  title: "Actualizacion disponible",
+  message: "Hay una nueva version disponible.",
+  downloadUrl: "/downloads/modo-crisis-survival.apk",
+  releaseNotesUrl: "/actualizaciones",
   purchaseUrl: "https://modo-crisis-survival.pages.dev/donaciones",
+  supportUrl: "https://modo-crisis-survival.pages.dev/contacto",
   configurationVersion: 1,
   licenseMessage:
     "La app está actualmente en modo gratuito. Si en el futuro se requiere activación, podrás introducir aquí tu código.",
@@ -80,6 +89,19 @@ export const writeMessages = async (env, messages) => {
 };
 
 export const normalizeMode = (value) => (APP_MODES.has(value) ? value : "FREE");
+
+export const booleanFromPayload = (value) => {
+  if (typeof value === "boolean") return value;
+  if (typeof value === "number") return value !== 0;
+  if (typeof value === "string") return ["1", "true", "yes", "si", "sí", "on"].includes(value.trim().toLowerCase());
+  return false;
+};
+
+export const normalizeForceFlag = (raw, current = DEFAULT_CONFIG) => {
+  const candidate = raw.force ?? raw.forceUpdate ?? raw.mandatory;
+  if (candidate === undefined) return Boolean(current.force ?? current.forceUpdate ?? current.mandatory);
+  return booleanFromPayload(candidate);
+};
 
 export const normalizeAdminMessage = (raw) => {
   const id = String(raw.id || `mensaje-${Date.now()}`).trim();

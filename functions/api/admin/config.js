@@ -1,4 +1,13 @@
-import { handleOptions, isSafeUrl, json, normalizeMode, readConfig, requireAdmin, writeConfig } from "../_shared.js";
+import {
+  handleOptions,
+  isSafeUrl,
+  json,
+  normalizeForceFlag,
+  normalizeMode,
+  readConfig,
+  requireAdmin,
+  writeConfig,
+} from "../_shared.js";
 
 export async function onRequest(context) {
   const options = handleOptions(context.request);
@@ -13,12 +22,17 @@ export async function onRequest(context) {
     if (body.purchaseUrl && !isSafeUrl(body.purchaseUrl)) return json({ error: "purchaseUrl no permitida" }, 400);
 
     const current = await readConfig(context.env);
+    const force = normalizeForceFlag(body, current);
     const next = {
       ...current,
       ...body,
       appMode: normalizeMode(body.appMode || current.appMode),
-      licensingEnabled: Boolean(body.licensingEnabled),
-      globalLockEnabled: Boolean(body.globalLockEnabled),
+      licensingEnabled: body.licensingEnabled === undefined ? current.licensingEnabled : Boolean(body.licensingEnabled),
+      globalLockEnabled: body.globalLockEnabled === undefined ? current.globalLockEnabled : Boolean(body.globalLockEnabled),
+      updateEnabled: body.updateEnabled === undefined ? current.updateEnabled : Boolean(body.updateEnabled),
+      force,
+      forceUpdate: force,
+      mandatory: force,
       configurationVersion: Number(current.configurationVersion || 0) + 1,
     };
 

@@ -6,7 +6,16 @@ export async function onRequest(context) {
   if (context.request.method !== "GET") return json({ error: "Método no permitido" }, 405);
 
   try {
-    return json(await readConfig(context.env));
+    const config = await readConfig(context.env);
+    const force = Boolean(config.force ?? config.forceUpdate ?? config.mandatory);
+
+    return json({
+      schemaVersion: 1,
+      ...config,
+      force,
+      forceUpdate: force,
+      mandatory: force,
+    });
   } catch (error) {
     return json({ error: error.message || "Error de configuración" }, 500);
   }
