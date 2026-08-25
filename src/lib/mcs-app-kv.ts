@@ -80,9 +80,20 @@ const ADMIN_MESSAGE_TYPES = new Set<McsAdminMessage["type"]>([
 const APP_MODES = new Set<McsAppConfig["appMode"]>(["FREE", "NOTICE", "GRACE_PERIOD", "LICENSE_REQUIRED"]);
 
 function runtimeEnv() {
-  return process.env as unknown as {
+  const runtimeGlobal = globalThis as typeof globalThis & {
     MCS_APP_KV?: McsKvNamespace;
     MCS_ADMIN_TOKEN?: string;
+    __MCS_APP_KV__?: McsKvNamespace;
+    __MCS_ADMIN_TOKEN__?: string;
+  };
+  const env = process.env as unknown as {
+    MCS_APP_KV?: McsKvNamespace;
+    MCS_ADMIN_TOKEN?: string;
+  };
+
+  return {
+    MCS_APP_KV: runtimeGlobal.MCS_APP_KV || runtimeGlobal.__MCS_APP_KV__ || env.MCS_APP_KV,
+    MCS_ADMIN_TOKEN: runtimeGlobal.MCS_ADMIN_TOKEN || runtimeGlobal.__MCS_ADMIN_TOKEN__ || env.MCS_ADMIN_TOKEN,
   };
 }
 
@@ -120,12 +131,13 @@ export function getMcsAppKv() {
 }
 
 export function requireMcsAdmin(request: Request) {
-  const expected = String(runtimeEnv().MCS_ADMIN_TOKEN || "").trim();
-  if (!expected) return jsonResponse({ error: "MCS_ADMIN_TOKEN no está configurado" }, 500);
-
   const header = request.headers.get("authorization") || "";
   const token = header.replace(/^Bearer\s+/i, "").trim();
-  if (!token || token !== expected) return jsonResponse({ error: "No autorizado" }, 401);
+  if (!token) return jsonResponse({ error: "No autorizado" }, 401);
+
+  const expected = String(runtimeEnv().MCS_ADMIN_TOKEN || "").trim();
+  if (!expected) return jsonResponse({ error: "MCS_ADMIN_TOKEN no está configurado" }, 500);
+  if (token !== expected) return jsonResponse({ error: "No autorizado" }, 401);
 
   return null;
 }

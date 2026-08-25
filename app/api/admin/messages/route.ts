@@ -2,6 +2,7 @@ import {
   jsonResponse,
   methodNotAllowed,
   normalizeAdminMessage,
+  handleOptions,
   readMcsMessages,
   requireMcsAdmin,
   writeMcsMessages,
@@ -12,6 +13,10 @@ export const dynamic = "force-dynamic";
 
 export function GET() {
   return methodNotAllowed();
+}
+
+export function OPTIONS(request: Request) {
+  return handleOptions(request);
 }
 
 export async function POST(request: Request) {
