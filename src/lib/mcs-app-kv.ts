@@ -14,10 +14,19 @@ export interface McsAppConfig {
   appMode: "FREE" | "NOTICE" | "GRACE_PERIOD" | "LICENSE_REQUIRED";
   licensingEnabled: boolean;
   globalLockEnabled: boolean;
-  minimumSupportedVersion: number | null;
+  minimumSupportedVersion: string | number | null;
   minimumSupportedVersionCode: number | null;
-  latestVersion: number | null;
+  latestVersion: string | number | null;
   latestVersionCode: number | null;
+  updateEnabled?: boolean;
+  enabled?: boolean;
+  force?: boolean;
+  forceUpdate?: boolean;
+  mandatory?: boolean;
+  title?: string;
+  message?: string;
+  downloadUrl?: string;
+  releaseNotesUrl?: string;
   purchaseUrl: string;
   supportUrl?: string;
   configurationVersion: number;
@@ -133,6 +142,18 @@ export function isSafeUrl(value: unknown) {
 
 export function normalizeMode(value: unknown): McsAppConfig["appMode"] {
   return APP_MODES.has(value as McsAppConfig["appMode"]) ? (value as McsAppConfig["appMode"]) : "FREE";
+}
+
+export function booleanFromPayload(value: unknown, fallback = false) {
+  if (value === undefined || value === null) return fallback;
+  return value === true || value === 1 || value === "1" || value === "true";
+}
+
+export function normalizeForceFlag(raw: Record<string, unknown>, current?: Partial<McsAppConfig>) {
+  if ("force" in raw) return booleanFromPayload(raw.force);
+  if ("forceUpdate" in raw) return booleanFromPayload(raw.forceUpdate);
+  if ("mandatory" in raw) return booleanFromPayload(raw.mandatory);
+  return Boolean(current?.force || current?.forceUpdate || current?.mandatory);
 }
 
 export async function readMcsConfig() {

@@ -2,7 +2,6 @@
 
 import { useId, useState } from "react";
 import { Send } from "lucide-react";
-import { siteConfig } from "@/content/site-config";
 
 type BugReportFormProps = {
   source: string;
@@ -12,14 +11,8 @@ type BugReportFormProps = {
 export function BugReportForm({ source, title = "Reportar un fallo" }: BugReportFormProps) {
   const textareaId = useId();
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "error" | "sent" | "mail">("idle");
+  const [status, setStatus] = useState<"idle" | "error" | "sent">("idle");
   const [feedback, setFeedback] = useState("");
-
-  function openMailFallback(trimmed: string) {
-    const subject = encodeURIComponent(`[Supervivencia Offline] Fallo en ${source}`);
-    const body = encodeURIComponent(`Página: ${source}\n\nFallo reportado:\n${trimmed}`);
-    window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
-  }
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -47,9 +40,8 @@ export function BugReportForm({ source, title = "Reportar un fallo" }: BugReport
       setFeedback("Fallo enviado. Aparecerá en la pantalla de administración.");
       setMessage("");
     } catch (error) {
-      setStatus("mail");
-      setFeedback(error instanceof Error ? error.message : "No se pudo guardar el reporte. Puedes enviarlo por correo.");
-      openMailFallback(trimmed);
+      setStatus("error");
+      setFeedback(error instanceof Error ? error.message : "No se pudo enviar el fallo. Inténtalo de nuevo.");
     }
   }
 
@@ -72,8 +64,7 @@ export function BugReportForm({ source, title = "Reportar un fallo" }: BugReport
         <button className="button primary" type="submit">
           <Send aria-hidden /> Enviar fallo
         </button>
-        <p className="field-help">Se guardará en la administración. Si falla el guardado, se abrirá el correo a {siteConfig.contactEmail}.</p>
-        {status === "error" || status === "mail" ? <p role="alert" className="warning-text">{feedback}</p> : null}
+        {status === "error" ? <p role="alert" className="warning-text">{feedback}</p> : null}
         {status === "sent" ? <p role="status" className="admin-status">{feedback}</p> : null}
       </form>
     </article>

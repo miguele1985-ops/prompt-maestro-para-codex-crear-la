@@ -55,7 +55,7 @@ export async function readBugReports() {
   return normalizeReports(JSON.parse(text));
 }
 
-async function writeBugReports(reports: BugReport[]) {
+export async function writeBugReports(reports: BugReport[]) {
   const target = reportsTarget();
   if (!target) throw new Error("Cloudflare KV no esta configurado para guardar reportes de fallos.");
 
@@ -92,4 +92,14 @@ export async function addBugReport(input: { source: string; message: string; use
   const current = await readBugReports();
   await writeBugReports([report, ...current]);
   return report;
+}
+
+export async function deleteBugReport(id: string) {
+  const reportId = id.trim();
+  if (!reportId) throw new Error("ID de reporte no válido.");
+
+  const current = await readBugReports();
+  const next = current.filter((report) => report.id !== reportId);
+  await writeBugReports(next);
+  return { deleted: next.length !== current.length, reports: next };
 }

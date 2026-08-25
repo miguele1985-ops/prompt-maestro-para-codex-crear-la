@@ -40,11 +40,13 @@ export async function buildAppVersionPayload() {
     download.latestVersion || download.currentVersion || download.version || site.currentVersion || siteConfig.currentVersion,
   );
   const latestBuild = cleanBuild(download.latestBuild || download.versionCode || site.latestBuild);
-  const downloadUrl = absoluteUrl(download.downloadUrl || "/descargar", "/descargar");
-  const force = Boolean(download.force || download.mandatoryUpdate);
+  const downloadUrl = absoluteUrl(download.downloadUrl || download.apkUrl || site.apkUrl || siteConfig.apkUrl, "/descargar");
+  const force = download.force === true;
+  const enabled = download.enabled !== false;
 
   return {
-    enabled: download.enabled !== false,
+    enabled,
+    updateEnabled: enabled,
     latestVersion: version,
     latestVersionLabel: String(
       download.latestVersionLabel || download.currentVersion || download.version || site.currentVersion || `V ${version}`,
@@ -52,6 +54,7 @@ export async function buildAppVersionPayload() {
     latestBuild,
     minimumSupportedVersion: cleanVersion(download.minimumSupportedVersion || "1.0.0"),
     force,
+    forceUpdate: force,
     mandatory: force,
     title: String(download.updateTitle || "Actualizacion disponible"),
     message: String(

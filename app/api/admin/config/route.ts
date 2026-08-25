@@ -3,6 +3,7 @@ import {
   isSafeUrl,
   jsonResponse,
   methodNotAllowed,
+  normalizeForceFlag,
   normalizeMode,
   readMcsConfig,
   requireMcsAdmin,
@@ -29,12 +30,17 @@ export async function POST(request: Request) {
     if (body.purchaseUrl && !isSafeUrl(body.purchaseUrl)) return jsonResponse({ error: "purchaseUrl no permitida" }, 400);
 
     const current = await readMcsConfig();
+    const force = normalizeForceFlag(body, current);
     const next = {
       ...current,
       ...body,
       appMode: normalizeMode(body.appMode || current.appMode),
       licensingEnabled: Boolean(body.licensingEnabled),
       globalLockEnabled: Boolean(body.globalLockEnabled),
+      updateEnabled: body.updateEnabled === undefined ? current.updateEnabled : Boolean(body.updateEnabled),
+      force,
+      forceUpdate: force,
+      mandatory: force,
       configurationVersion: Number(current.configurationVersion || 0) + 1,
     };
 

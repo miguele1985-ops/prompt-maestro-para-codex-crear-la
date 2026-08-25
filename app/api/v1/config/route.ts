@@ -1,10 +1,30 @@
 import { readAppConfig } from "@/lib/licensing-d1";
+import { buildAppVersionPayload } from "@/lib/app-version";
+import { booleanFromPayload, readMcsConfig, type McsAppConfig } from "@/lib/mcs-app-kv";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
+function optionalBoolean(value: unknown) {
+  if (value === undefined || value === null) return undefined;
+  return booleanFromPayload(value);
+}
+
+function optionalText(value: unknown) {
+  const text = String(value ?? "").trim();
+  return text || undefined;
+}
+
+function updateValue(config: McsAppConfig | null, key: keyof McsAppConfig, fallback: unknown) {
+  return optionalText(config?.[key]) ?? fallback;
+}
+
 export async function GET() {
-  const config = await readAppConfig().catch(() => null);
+  const [config, mcsConfig, update] = await Promise.all([
+    readAppConfig().catch(() => null),
+    readMcsConfig().catch(() => null),
+    buildAppVersionPayload(),
+  ]);
   const safeConfig = config || {
     licensingEnabled: false,
     globalLockEnabled: false,
@@ -15,6 +35,10 @@ export async function GET() {
     supportUrl: "https://modo-crisis-survival.pages.dev/contacto",
     configurationVersion: 1,
   };
+  const updateEnabled = optionalBoolean(mcsConfig?.updateEnabled ?? mcsConfig?.enabled) ?? update.updateEnabled;
+  const force = optionalBoolean(mcsConfig?.force ?? mcsConfig?.forceUpdate ?? mcsConfig?.mandatory) ?? update.force;
+  const latestVersion = updateValue(mcsConfig, "latestVersion", update.latestVersion);
+  const minimumSupportedVersion = updateValue(mcsConfig, "minimumSupportedVersion", update.minimumSupportedVersion);
 
   return Response.json(
     {
@@ -22,8 +46,22 @@ export async function GET() {
       appMode: safeConfig.appMode,
       licensingEnabled: safeConfig.licensingEnabled,
       globalLockEnabled: safeConfig.globalLockEnabled,
-      minimumSupportedVersion: safeConfig.minimumSupportedVersion,
-      latestVersion: safeConfig.latestVersion,
+      minimumSupportedVersion,
+      latestVersion,
+      updateEnabled,
+      force,
+      forceUpdate: force,
+      mandatory: force,
+      title: updateValue(mcsConfig, "title", update.title),
+      message: updateValue(mcsConfig, "message", update.message),
+      downloadUrl: updateValue(mcsConfig, "downloadUrl", update.downloadUrl),
+      releaseNotesUrl: updateValue(mcsConfig, "releaseNotesUrl", update.releaseNotesUrl),
+      latestBuild: mcsConfig?.latestVersionCode ?? update.latestBuild,
+      latestVersionLabel: update.latestVersionLabel,
+      apkUrl: update.apkUrl,
+      apkSize: update.apkSize,
+      licensingMinimumSupportedVersion: safeConfig.minimumSupportedVersion,
+      licensingLatestVersion: safeConfig.latestVersion,
       purchaseUrl: safeConfig.purchaseUrl,
       supportUrl: safeConfig.supportUrl,
       configurationVersion: safeConfig.configurationVersion,
@@ -31,4 +69,3 @@ export async function GET() {
     { headers: { "cache-control": "no-store" } },
   );
 }
-

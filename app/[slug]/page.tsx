@@ -392,21 +392,25 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
 
   const visibleDownloadResources = visibleDownloadInfo?.resources?.length ? visibleDownloadInfo.resources : downloadInfo.resources;
   const visibleDonations = { ...siteConfig.donations, ...(visibleSite?.donations || {}) };
-  const showPageContent = page.slug !== "donaciones" && page.slug !== "centro-descargas";
+  const isDownloadPage = page.slug === "descargar";
+  const showPageHero = !isDownloadPage;
+  const showPageContent = page.slug !== "donaciones" && page.slug !== "centro-descargas" && !isDownloadPage;
 
   return (
     <>
-      <section className="page-hero">
-        <p className="eyebrow">{page.eyebrow || "Modo Crisis Survival"}</p>
-        <h1>{page.title}</h1>
-        <p>{page.description}</p>
-        {page.cta && page.ctaHref ? (
-          <Link className="button primary page-hero-cta" href={page.ctaHref}>
-            {page.cta}
-          </Link>
-        ) : null}
-        <ShareButtons title={page.title} />
-      </section>
+      {showPageHero ? (
+        <section className="page-hero">
+          <p className="eyebrow">{page.eyebrow || "Modo Crisis Survival"}</p>
+          <h1>{page.title}</h1>
+          <p>{page.description}</p>
+          {page.cta && page.ctaHref ? (
+            <Link className="button primary page-hero-cta" href={page.ctaHref}>
+              {page.cta}
+            </Link>
+          ) : null}
+          <ShareButtons title={page.title} />
+        </section>
+      ) : null}
 
       {showPageContent ? (
         <section className="content-band page-content">
@@ -532,19 +536,9 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       ) : null}
 
       {page.slug === "descargar" ? (
-        <section className="content-band">
+        <section className="content-band download-only-band">
           <DownloadCard />
-          <ResourceDownloadsPanel resources={visibleDownloadResources} />
           <BugReportForm source="Descargar aplicacion" title="Reportar un fallo de descarga" />
-          <article className="mini-card">
-            <h2>Instrucciones de instalacion</h2>
-            <ol>{(visibleDownloadInfo?.installSteps || downloadInfo.installSteps).map((step) => <li key={step}>{step}</li>)}</ol>
-            <SafetyWarning>No descargues copias de webs no oficiales. Verifica el hash SHA-256 cuando este disponible.</SafetyWarning>
-          </article>
-          <article className="mini-card">
-            <h2>Permisos posibles</h2>
-            <ul>{(visibleDownloadInfo?.permissions || downloadInfo.permissions).map((permission) => <li key={permission}>{permission}</li>)}</ul>
-          </article>
         </section>
       ) : null}
 

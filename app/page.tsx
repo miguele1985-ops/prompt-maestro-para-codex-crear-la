@@ -650,7 +650,7 @@ export default function HomePage() {
                       width={576}
                       height={1280}
                       widths={[240, 360, 576]}
-                      sizes="(max-width: 760px) 72vw, 150px"
+                      sizes="(max-width: 760px) 46vw, 150px"
                       loading="lazy"
                       decoding="async"
                     />

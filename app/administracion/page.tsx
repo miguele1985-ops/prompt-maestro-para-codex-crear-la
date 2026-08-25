@@ -519,6 +519,26 @@ export default function AdminPage() {
     setStatus(result.message || (response.ok ? "Cambios guardados." : "No se pudo guardar."));
   }
 
+  async function deleteBugReportItem(reportId: string) {
+    const previous = bugReports;
+    setBugReports((current) => current.filter((report) => report.id !== reportId));
+    setReportsStatus("Borrando reporte...");
+
+    const response = await fetch(`/api/admin/reports/${encodeURIComponent(reportId)}`, {
+      method: "DELETE",
+      cache: "no-store",
+    });
+    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
+
+    if (!response.ok || !result.ok) {
+      setBugReports(previous);
+      setReportsStatus(result.message || "No se pudo borrar el reporte.");
+      return;
+    }
+
+    setReportsStatus(result.reports?.length ? "Reporte borrado." : "No hay reportes de fallos guardados.");
+  }
+
   function showApkUrlHelp() {
     setStatus("Cloudflare Pages no puede guardar APK grandes desde el panel. Sube el archivo a Cloudflare R2 u otro alojamiento, pega aqui la URL publica y pulsa Guardar cambios.");
   }
@@ -658,7 +678,7 @@ export default function AdminPage() {
             <div>
               <p className="eyebrow">Mensajes</p>
               <h2 id="admin-reports-title">Reportes de fallos</h2>
-              <p>Mensajes enviados desde las páginas de descarga y centro de descargas.</p>
+              <p>Mensajes enviados desde contacto, descarga y centro de descargas.</p>
             </div>
             <strong>{bugReports.length.toLocaleString("es-ES")}</strong>
           </div>
@@ -667,8 +687,13 @@ export default function AdminPage() {
               {bugReports.slice(0, 20).map((report) => (
                 <article className="admin-report-card" key={report.id}>
                   <div>
-                    <strong>{report.source}</strong>
-                    <time dateTime={report.createdAt}>{formatReportDate(report.createdAt)}</time>
+                    <div>
+                      <strong>{report.source}</strong>
+                      <time dateTime={report.createdAt}>{formatReportDate(report.createdAt)}</time>
+                    </div>
+                    <button className="icon-danger" type="button" onClick={() => deleteBugReportItem(report.id)} aria-label="Borrar reporte">
+                      <Trash2 aria-hidden />
+                    </button>
                   </div>
                   <p>{report.message}</p>
                 </article>

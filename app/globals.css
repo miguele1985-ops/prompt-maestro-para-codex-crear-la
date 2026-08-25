@@ -5071,6 +5071,7 @@ h3 {
 
 .use-case-collage img {
   width: 100%;
+  height: auto;
   aspect-ratio: 9 / 20;
   object-fit: contain;
   object-position: top center;
@@ -5094,20 +5095,15 @@ h3 {
 @media (max-width: 760px) {
   .use-case-collage {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .65rem;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    padding: .1rem .05rem .85rem;
-    scroll-padding-inline: .05rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    overflow: visible;
+    padding: .1rem 0 0;
   }
 
   .use-case-collage picture {
-    flex: 0 0 min(72vw, 15rem);
-    scroll-snap-align: start;
+    min-width: 0;
   }
 
   .use-case-collage img {
@@ -5832,7 +5828,13 @@ h2,
   display: flex;
   justify-content: space-between;
   gap: .8rem;
-  align-items: baseline;
+  align-items: flex-start;
+}
+
+.admin-report-card > div > div {
+  display: grid;
+  gap: .2rem;
+  min-width: 0;
 }
 
 .admin-report-card strong {
@@ -6179,6 +6181,10 @@ h2,
   border-top: 1px solid rgba(220, 165, 63, .3);
   border-radius: 0;
   background: rgba(255, 252, 242, .96);
+}
+
+.download-only-band {
+  padding-top: clamp(1rem, 3vw, 1.75rem);
 }
 
 .apk-install-guide-compact .section-heading {
