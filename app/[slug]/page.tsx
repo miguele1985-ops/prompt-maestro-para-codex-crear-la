@@ -29,10 +29,39 @@ export const runtime = "edge";
 export const dynamicParams = true;
 
 type DownloadResource = (typeof downloadInfo.resources)[number];
+type ContentPageItem = (typeof allContentPages)[number];
+type PageSection = NonNullable<ContentPageItem["sections"]>[number];
+
+const resourceCalculatorTitles = ["Captación de lluvia", "Velocidad necesaria", "Sensación térmica", "Horas de luz"];
 
 function isAiResource(resource: DownloadResource) {
   const searchable = `${resource.label} ${resource.description} ${resource.url}`.toLowerCase();
   return searchable.includes("ia") || searchable.includes("gguf") || searchable.includes("hugging") || searchable.includes("qwen");
+}
+
+function resourcesPageWithRequiredCalculators(page: ContentPageItem) {
+  if (page.slug !== "recursos-avanzados") return page;
+
+  const canonicalResourcePage = allContentPages.find((item) => item.slug === "recursos-avanzados");
+  const requiredCalculatorSections = resourceCalculatorTitles
+    .map((title) => canonicalResourcePage?.sections?.find((section) => section.title === title))
+    .filter((section): section is PageSection => Boolean(section));
+
+  if (!requiredCalculatorSections.length) return page;
+
+  const currentSections = page.sections || [];
+  const sectionsWithoutRequiredCalculators = currentSections.filter((section) => !resourceCalculatorTitles.includes(section.title));
+  const smokeSignalsIndex = sectionsWithoutRequiredCalculators.findIndex((section) => section.title === "Señales de humo");
+  const insertAt = smokeSignalsIndex >= 0 ? smokeSignalsIndex + 1 : sectionsWithoutRequiredCalculators.length;
+
+  return {
+    ...page,
+    sections: [
+      ...sectionsWithoutRequiredCalculators.slice(0, insertAt),
+      ...requiredCalculatorSections,
+      ...sectionsWithoutRequiredCalculators.slice(insertAt),
+    ],
+  };
 }
 
 const mapInstallGuide = [
@@ -331,7 +360,7 @@ async function getVisibleContent() {
     pages: savedPages.map((page) =>
       page.slug === "descargar"
         ? { ...page, body: [], highlights: [], sections: [] }
-        : page,
+        : resourcesPageWithRequiredCalculators(page),
     ),
     visibleChangelog: savedContent?.changelog?.length ? savedContent.changelog : changelog,
     visibleDownloadInfo: savedContent?.download as Partial<typeof downloadInfo> | undefined,
