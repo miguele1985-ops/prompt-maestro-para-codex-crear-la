@@ -14,11 +14,13 @@ export function ApkDownloadButton({
   info?: Partial<DownloadInfo>;
 }) {
   const current = { ...downloadInfo, ...info };
+  const versionText = current.version?.trim();
+  const buttonLabel = versionText && !label.includes(versionText) ? `${label} · ${versionText}` : label;
 
   return (
     <TrackedDownloadLink className="button primary" href={current.apkUrl} download>
       <Download size={18} aria-hidden />
-      {label}
+      {buttonLabel}
     </TrackedDownloadLink>
   );
 }
@@ -72,6 +74,7 @@ export function DownloadCard({
           <DownloadDonationGate
             apkUrl={current.apkUrl}
             label="Descargar Modo Crisis Survival"
+            version={current.version}
             className="button primary"
           />
         </div>

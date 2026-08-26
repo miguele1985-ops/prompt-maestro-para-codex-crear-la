@@ -10,6 +10,7 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
+import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
 import { siteConfig } from "@/content/site-config";
 
@@ -530,8 +531,9 @@ export default function HomePage() {
           </p>
           <div className="actions">
             <DownloadDonationGate
-              apkUrl={siteConfig.apkUrl}
+              apkUrl={downloadInfo.apkUrl}
               label="Descargar aplicacion para Android"
+              version={downloadInfo.version}
             />
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
               <HeartHandshake size={20} aria-hidden />
@@ -554,10 +556,9 @@ export default function HomePage() {
                 <small>Avisa de errores facilmente</small>
               </span>
             </Link>
-            <Link className="update-notice-button" href="/actualizaciones" aria-label="Ver actualización disponible de Modo Crisis Survival">
+            <Link className="update-notice-button update-notice-button-new" href="/actualizaciones" aria-label="Ver nueva actualización de Modo Crisis Survival">
               <span>Nueva actualización</span>
-              <strong>{siteConfig.currentVersion}</strong>
-              <small>Revisa cambios antes de descargar</small>
+              <strong>{downloadInfo.version}</strong>
             </Link>
           </div>
           <p className="hero-donation-note">

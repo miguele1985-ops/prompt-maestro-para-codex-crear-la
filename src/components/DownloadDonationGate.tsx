@@ -10,6 +10,7 @@ import { siteConfig } from "@/content/site-config";
 type DownloadDonationGateProps = {
   apkUrl: string;
   label?: string;
+  version?: string;
   className?: string;
 };
 
@@ -28,12 +29,15 @@ function configuredUrl(value?: string) {
 export function DownloadDonationGate({
   apkUrl,
   label = "Descargar aplicación para Android",
+  version = siteConfig.currentVersion,
   className = "button primary",
 }: DownloadDonationGateProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const titleId = useId();
   const donations = siteConfig.donations;
+  const versionText = version?.trim();
+  const buttonLabel = versionText && !label.includes(versionText) ? `${label} · ${versionText}` : label;
   const amounts = [
     { label: "Donar 5 €", href: donations.amount5Url },
     { label: "Donar 10 €", href: donations.amount10Url },
@@ -112,7 +116,7 @@ export function DownloadDonationGate({
           onClick={() => trackDownload(apkUrl)}
         >
           <Download size={18} aria-hidden />
-          Seguir con la descarga
+          {versionText ? `Seguir con la descarga · ${versionText}` : "Seguir con la descarga"}
         </a>
 
         <details className="download-gate-guide">
@@ -131,7 +135,7 @@ export function DownloadDonationGate({
     <>
       <button className={className} type="button" onClick={() => setOpen(true)}>
         <Download size={18} aria-hidden />
-        {label}
+        {buttonLabel}
       </button>
 
       {mounted && open ? createPortal(overlay, document.body) : null}
