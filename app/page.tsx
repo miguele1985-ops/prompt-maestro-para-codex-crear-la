@@ -13,6 +13,9 @@ import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } 
 import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
 import { siteConfig } from "@/content/site-config";
+import { readAdminContent } from "@/lib/admin-content";
+
+export const dynamic = "force-dynamic";
 
 const trustItems = [
   "Modo offline activo",
@@ -516,7 +519,10 @@ function isConfiguredDonationUrl(value: string) {
   return Boolean(value && !/configurar|pendiente|añadir/i.test(value));
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const savedContent = await readAdminContent().catch(() => null);
+  const visibleDownloadInfo = { ...downloadInfo, ...(savedContent?.download || {}) };
+
   return (
     <>
       <section className="hero">
@@ -531,9 +537,9 @@ export default function HomePage() {
           </p>
           <div className="actions">
             <DownloadDonationGate
-              apkUrl={downloadInfo.apkUrl}
+              apkUrl={visibleDownloadInfo.apkUrl}
               label="Descargar aplicacion para Android"
-              version={downloadInfo.version}
+              version={visibleDownloadInfo.version}
             />
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
               <HeartHandshake size={20} aria-hidden />
@@ -556,10 +562,12 @@ export default function HomePage() {
                 <small>Avisa de errores facilmente</small>
               </span>
             </Link>
-            <Link className="update-notice-button update-notice-button-new" href="/actualizaciones" aria-label="Ver nueva actualización de Modo Crisis Survival">
-              <span>Nueva actualización</span>
-              <strong>{downloadInfo.version}</strong>
-            </Link>
+            {visibleDownloadInfo.showWebUpdateNotice ? (
+              <Link className="update-notice-button update-notice-button-new" href="/actualizaciones" aria-label="Ver nueva actualización de Modo Crisis Survival">
+                <span>Nueva actualización</span>
+                <strong>{visibleDownloadInfo.version}</strong>
+              </Link>
+            ) : null}
           </div>
           <p className="hero-donation-note">
             Supervivencia Offline es gratuita y completa. Las aportaciones son voluntarias y ayudan a mantener la web, mejorar la app, corregir errores y preparar nuevos recursos offline.

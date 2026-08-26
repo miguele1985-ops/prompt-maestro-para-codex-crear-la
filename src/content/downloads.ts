@@ -9,6 +9,7 @@ const baseDownloadInfo = {
   alternativeUrl: siteConfig.alternativeApkUrl,
   version: siteConfig.currentVersion,
   date: siteConfig.lastUpdated,
+  showWebUpdateNotice: false,
   size: siteConfig.apkSize,
   minimumAndroidVersion: siteConfig.minimumAndroidVersion,
   sha256: siteConfig.apkSha256,

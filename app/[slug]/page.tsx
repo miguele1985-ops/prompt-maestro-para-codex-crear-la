@@ -556,7 +556,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
 
       {page.slug === "descargar" ? (
         <section className="content-band download-only-band">
-          <DownloadCard />
+          <DownloadCard info={visibleDownloadInfo} />
           <BugReportForm source="Descargar aplicacion" title="Reportar un fallo de descarga" />
         </section>
       ) : null}

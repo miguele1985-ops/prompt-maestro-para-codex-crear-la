@@ -98,6 +98,7 @@ type DownloadEditor = {
   updateMessage: string;
   releaseNotesUrl: string;
   enabled: boolean;
+  showWebUpdateNotice: boolean;
   force: boolean;
   date: string;
   size: string;
@@ -247,6 +248,7 @@ export default function AdminPage() {
     updateMessage: "Hay una nueva version de Modo Crisis Survival disponible. Descargala desde la web oficial para mantener la app actualizada.",
     releaseNotesUrl: "/actualizaciones",
     enabled: true,
+    showWebUpdateNotice: Boolean(downloadInfo.showWebUpdateNotice),
     force: false,
     permissions: [...downloadInfo.permissions],
     installSteps: [...downloadInfo.installSteps],
@@ -954,6 +956,14 @@ export default function AdminPage() {
                     <label className="check">
                       <input
                         type="checkbox"
+                        checked={download.showWebUpdateNotice}
+                        onChange={(event) => setDownloadField("showWebUpdateNotice", event.target.checked)}
+                      />
+                      Mostrar Nueva actualización en la portada
+                    </label>
+                    <label className="check">
+                      <input
+                        type="checkbox"
                         checked={download.enabled}
                         onChange={(event) => setDownloadField("enabled", event.target.checked)}
                       />
@@ -970,6 +980,14 @@ export default function AdminPage() {
                   </div>
                   <TextField label="Titulo del aviso" value={download.updateTitle} onChange={(value) => setDownloadField("updateTitle", value)} />
                   <TextArea label="Mensaje que vera el usuario en la app" value={download.updateMessage} rows={4} onChange={(value) => setDownloadField("updateMessage", value)} />
+                  <div className="admin-inline-actions">
+                    <button className="button secondary" type="button" onClick={() => setDownloadField("showWebUpdateNotice", true)}>
+                      Mostrar aviso en portada
+                    </button>
+                    <button className="button secondary danger-button" type="button" onClick={() => setDownloadField("showWebUpdateNotice", false)}>
+                      Quitar aviso de portada
+                    </button>
+                  </div>
                   <div className="admin-help-card">
                     <strong>Ejemplo para una APK nueva</strong>
                     <code>{`{"enabled":true,"latestVersion":"1.0.2","latestBuild":3,"downloadUrl":"https://supervivenciaoffline.com/descargar","force":false}`}</code>
