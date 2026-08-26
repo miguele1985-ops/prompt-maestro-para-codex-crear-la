@@ -10,21 +10,32 @@ export function ContactForm() {
     event.preventDefault();
     const formElement = event.currentTarget;
     const form = new FormData(formElement);
-    const required = ["name", "email", "subject", "message", "privacy"];
-    const valid = required.every((field) => Boolean(form.get(field)?.toString().trim()));
 
     if (form.get("company")) return;
 
-    if (!valid) {
+    const name = form.get("name")?.toString().trim() || "";
+    const email = form.get("email")?.toString().trim() || "";
+    const subject = form.get("subject")?.toString().trim() || "";
+    const message = form.get("message")?.toString().trim() || "";
+    const privacyAccepted = form.get("privacy") === "on";
+
+    if (!name || !email || !subject || !message) {
       setStatus("error");
-      setFeedback("Revisa los campos obligatorios.");
+      setFeedback("Completa nombre, correo, asunto y mensaje.");
       return;
     }
 
-    const name = form.get("name")?.toString().trim() || "Sin nombre";
-    const email = form.get("email")?.toString().trim() || "Sin correo";
-    const subject = form.get("subject")?.toString().trim() || "Contacto desde la web";
-    const message = form.get("message")?.toString().trim() || "";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus("error");
+      setFeedback("Introduce un correo válido.");
+      return;
+    }
+
+    if (!privacyAccepted) {
+      setStatus("error");
+      setFeedback("Acepta la política de privacidad para enviar el mensaje.");
+      return;
+    }
 
     try {
       const response = await fetch("/api/contact", {

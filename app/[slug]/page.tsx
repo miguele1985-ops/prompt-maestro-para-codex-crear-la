@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { DownloadCard } from "@/components/DownloadCard";
 import { BugReportForm } from "@/components/BugReportForm";
 import { FeatureGrid } from "@/components/FeatureCard";
-import { CalculatorGrid, CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive";
+import { CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive";
 import { PayPalDonationBlock } from "@/components/PayPalDonationBlock";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { ShareButtons } from "@/components/ShareButtons";
@@ -402,6 +402,9 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const isResourcesPage = slug === "recursos-avanzados" || page.slug === "recursos-avanzados";
   const showPageHero = !isDownloadPage;
   const showPageContent = page.slug !== "donaciones" && page.slug !== "centro-descargas" && !isDownloadPage;
+  const sectionsToRender = isResourcesPage
+    ? page.sections?.filter((section) => section.title !== "Calculadoras")
+    : page.sections;
 
   return (
     <>
@@ -431,7 +434,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
               ))}
             </ul>
           ) : null}
-          {page.sections?.map((section) => {
+          {sectionsToRender?.map((section) => {
             const hasShowcase = Boolean(section.image || section.steps || section.tips);
             return (
               <Fragment key={section.title}>
@@ -475,23 +478,30 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                     ) : null}
                   </div>
                 </article>
-                {isResourcesPage && section.title === "Señales de humo" ? (
-                  <article className="resource-calculator-block">
-                    <div className="section-heading compact-heading">
-                      <p className="eyebrow">Herramientas de calculo</p>
-                      <h2>Calculadoras</h2>
-                      <p>
-                        Estimaciones orientativas para agua, captacion de lluvia, energia, velocidad necesaria,
-                        sensacion termica, horas de luz, potabilizacion, destilacion solar, rios, conversor survival,
-                        silbato, senales de humo e hipotermia.
-                      </p>
-                    </div>
-                    <CalculatorGrid calculators={calculators} />
-                  </article>
-                ) : null}
               </Fragment>
             );
           })}
+          {isResourcesPage ? (
+            <article className="resource-calculator-block resource-calculator-block-compact">
+              <div className="section-heading compact-heading">
+                <p className="eyebrow">Herramientas de calculo</p>
+                <h2>Calculadoras</h2>
+                <p>
+                  Estimaciones orientativas para agua, captacion de lluvia, energia, velocidad necesaria,
+                  sensacion termica, horas de luz, potabilizacion, destilacion solar, rios, conversor survival,
+                  silbato, senales de humo e hipotermia.
+                </p>
+              </div>
+              <div className="compact-calculator-grid">
+                {calculators.map((calculator) => (
+                  <article className="compact-calculator-card" key={calculator.id}>
+                    <h3>{calculator.title}</h3>
+                    <p>{calculator.description}</p>
+                  </article>
+                ))}
+              </div>
+            </article>
+          ) : null}
         </section>
       ) : null}
 

@@ -17,7 +17,7 @@ describe("interactive components", () => {
   it("validates the contact form", async () => {
     render(React.createElement(ContactForm));
     await userEvent.click(screen.getByRole("button", { name: /enviar/i }));
-    expect(screen.getByRole("alert")).toHaveTextContent("Revisa");
+    expect(screen.getByRole("alert")).toHaveTextContent("Completa");
   });
 
   it("stores cookie rejection", async () => {

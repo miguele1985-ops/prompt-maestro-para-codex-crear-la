@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   const subject = String(payload.subject || "").trim();
   const message = String(payload.message || "").trim();
 
-  if (!name || !email || !subject || message.length < 8) {
+  if (!name || !email || !subject || !message) {
     return NextResponse.json({ ok: false, message: "Revisa los campos obligatorios." }, { status: 400 });
   }
 
