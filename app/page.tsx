@@ -16,6 +16,7 @@ import { siteConfig } from "@/content/site-config";
 import { readAdminContent } from "@/lib/admin-content";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 const trustItems = [
   "Modo offline activo",
