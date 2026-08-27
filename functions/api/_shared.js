@@ -15,7 +15,7 @@ export const DEFAULT_CONFIG = {
   mandatory: false,
   title: "Actualizacion disponible",
   message: "Hay una nueva version disponible.",
-  downloadUrl: "/downloads/modo-crisis-survival.apk",
+  downloadUrl: "https://descargas.modocrisissurvival.com/apk/supervivencia-offline-usuarios.apk",
   releaseNotesUrl: "/actualizaciones",
   purchaseUrl: "https://modo-crisis-survival.pages.dev/donaciones",
   supportUrl: "https://modo-crisis-survival.pages.dev/contacto",

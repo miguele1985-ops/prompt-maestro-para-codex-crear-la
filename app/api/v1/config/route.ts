@@ -1,5 +1,6 @@
 import { readAppConfig } from "@/lib/licensing-d1";
 import { buildAppVersionPayload } from "@/lib/app-version";
+import { officialApkUrl } from "@/content/site-config";
 import { booleanFromPayload, readMcsConfig, type McsAppConfig } from "@/lib/mcs-app-kv";
 
 export const runtime = "edge";
@@ -54,11 +55,11 @@ export async function GET() {
       mandatory: force,
       title: updateValue(mcsConfig, "title", update.title),
       message: updateValue(mcsConfig, "message", update.message),
-      downloadUrl: updateValue(mcsConfig, "downloadUrl", update.downloadUrl),
+      downloadUrl: officialApkUrl,
       releaseNotesUrl: updateValue(mcsConfig, "releaseNotesUrl", update.releaseNotesUrl),
       latestBuild: mcsConfig?.latestVersionCode ?? update.latestBuild,
       latestVersionLabel: update.latestVersionLabel,
-      apkUrl: update.apkUrl,
+      apkUrl: officialApkUrl,
       apkSize: update.apkSize,
       licensingMinimumSupportedVersion: safeConfig.minimumSupportedVersion,
       licensingLatestVersion: safeConfig.latestVersion,

@@ -1,4 +1,5 @@
 import { requireAdminToken } from "../_utils";
+import { officialApkUrl } from "@/content/site-config";
 import { writeAdminContent } from "@/lib/admin-content";
 import { readMcsConfig, writeMcsConfig } from "@/lib/mcs-app-kv";
 import { forbiddenOriginResponse, hasValidBrowserOrigin } from "@/lib/request-security";
@@ -31,7 +32,7 @@ async function syncDownloadConfig(data: Record<string, unknown>) {
     mandatory: force,
     title: String(download.updateTitle || current.title || "Actualizacion disponible"),
     message: String(download.updateMessage || current.message || "Hay una nueva version disponible."),
-    downloadUrl: String(download.downloadUrl || download.apkUrl || current.downloadUrl || "/downloads/modo-crisis-survival.apk"),
+    downloadUrl: officialApkUrl,
     releaseNotesUrl: String(download.releaseNotesUrl || current.releaseNotesUrl || "/actualizaciones"),
     configurationVersion: Number(current.configurationVersion || 0) + 1,
   });

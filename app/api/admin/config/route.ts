@@ -9,6 +9,7 @@ import {
   requireMcsAdmin,
   writeMcsConfig,
 } from "@/lib/mcs-app-kv";
+import { officialApkUrl } from "@/content/site-config";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -41,6 +42,7 @@ export async function POST(request: Request) {
       force,
       forceUpdate: force,
       mandatory: force,
+      downloadUrl: officialApkUrl,
       configurationVersion: Number(current.configurationVersion || 0) + 1,
     };
 

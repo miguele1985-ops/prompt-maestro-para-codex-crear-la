@@ -18,7 +18,7 @@ import { changelog, downloadInfo } from "@/content/downloads";
 import { donationFaqJsonLd } from "@/content/donations";
 import { faqs } from "@/content/faqs";
 import { features } from "@/content/features";
-import { siteConfig } from "@/content/site-config";
+import { officialApkUrl, siteConfig } from "@/content/site-config";
 import { orderedBlogPosts } from "@/content/blog";
 import { guideCategories } from "@/content/guides";
 import { allContentPages, calculators, crisisScenarios } from "@/content/pages";
@@ -68,7 +68,7 @@ function resourcesPageWithRequiredCalculators(page: ContentPageItem) {
 
 function UpdateChangelogBlock({ entries, download }: { entries: ChangelogEntryItem[]; download: typeof downloadInfo }) {
   const latest = entries[0];
-  const downloadHref = latest?.downloadUrl || download.apkUrl;
+  const downloadHref = officialApkUrl || download.apkUrl || latest?.downloadUrl;
   const version = latest?.version || download.version;
   const rawDate = latest?.date || download.date;
   const date = rawDate && !/pendiente/i.test(rawDate) ? rawDate : "Fecha pendiente de publicar";
@@ -151,7 +151,7 @@ function UpdateChangelogBlock({ entries, download }: { entries: ChangelogEntryIt
                 <p>{entry.fixes.join(" · ")}</p>
               </div>
             ) : null}
-            <TrackedDownloadLink className="button secondary" href={entry.downloadUrl || downloadHref} download>
+            <TrackedDownloadLink className="button secondary" href={downloadHref} download>
               <Download size={16} aria-hidden /> Descargar {entry.version}
             </TrackedDownloadLink>
           </article>
@@ -464,6 +464,8 @@ async function getVisibleContent() {
     visibleDownloadInfo: {
       ...downloadInfo,
       ...(savedDownload || {}),
+      apkUrl: officialApkUrl,
+      alternativeUrl: officialApkUrl,
       permissions: savedDownload?.permissions?.length ? savedDownload.permissions : downloadInfo.permissions,
       installSteps: savedDownload?.installSteps?.length ? savedDownload.installSteps : downloadInfo.installSteps,
       resources: savedDownload?.resources?.length ? savedDownload.resources : downloadInfo.resources,

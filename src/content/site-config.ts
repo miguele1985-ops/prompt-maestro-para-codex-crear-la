@@ -1,6 +1,7 @@
 import adminOverrides from "./admin-overrides.json";
 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "";
+export const officialApkUrl = "https://descargas.modocrisissurvival.com/apk/supervivencia-offline-usuarios.apk";
 
 const baseSiteConfig = {
   appName: "Modo Crisis Survival",
@@ -8,7 +9,7 @@ const baseSiteConfig = {
   description:
     "Aplicaci\u00f3n de supervivencia offline, preparaci\u00f3n familiar, mapas MBTiles, gu\u00edas, bot\u00f3n SOS, calculadoras, inventarios, IA local opcional y herramientas para emergencias.",
   siteUrl: "https://dominio-pendiente.example",
-  apkUrl: "/downloads/modo-crisis-survival.apk",
+  apkUrl: officialApkUrl,
   alternativeApkUrl: "Configurar antes de publicar",
   currentVersion: "V 1.0",
   apkSize: "2 GB",
@@ -79,6 +80,7 @@ export const siteConfig = {
   ...baseSiteConfig,
   ...siteOverrides,
   siteUrl: configuredSiteUrl || siteOverrides.siteUrl || baseSiteConfig.siteUrl,
+  apkUrl: officialApkUrl,
   colors: {
     ...baseSiteConfig.colors,
     ...siteOverrides.colors,

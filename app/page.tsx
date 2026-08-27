@@ -12,7 +12,7 @@ import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
 import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
-import { siteConfig } from "@/content/site-config";
+import { officialApkUrl, siteConfig } from "@/content/site-config";
 import { readAdminContent } from "@/lib/admin-content";
 
 export const dynamic = "force-dynamic";
@@ -522,7 +522,7 @@ function isConfiguredDonationUrl(value: string) {
 
 export default async function HomePage() {
   const savedContent = await readAdminContent().catch(() => null);
-  const visibleDownloadInfo = { ...downloadInfo, ...(savedContent?.download || {}) };
+  const visibleDownloadInfo = { ...downloadInfo, ...(savedContent?.download || {}), apkUrl: officialApkUrl, alternativeUrl: officialApkUrl };
 
   return (
     <>

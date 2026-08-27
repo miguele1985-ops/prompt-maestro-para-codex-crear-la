@@ -1,4 +1,4 @@
-import { siteConfig } from "@/content/site-config";
+import { officialApkUrl, siteConfig } from "@/content/site-config";
 import { readAdminContent } from "@/lib/admin-content";
 
 function cleanVersion(version: unknown) {
@@ -40,7 +40,7 @@ export async function buildAppVersionPayload() {
     download.latestVersion || download.currentVersion || download.version || site.currentVersion || siteConfig.currentVersion,
   );
   const latestBuild = cleanBuild(download.latestBuild || download.versionCode || site.latestBuild);
-  const downloadUrl = absoluteUrl(download.downloadUrl || download.apkUrl || site.apkUrl || siteConfig.apkUrl, "/descargar");
+  const downloadUrl = officialApkUrl;
   const force = download.force === true;
   const enabled = download.enabled !== false;
 
@@ -63,7 +63,7 @@ export async function buildAppVersionPayload() {
     ),
     downloadUrl,
     releaseNotesUrl: absoluteUrl(download.releaseNotesUrl || "/actualizaciones", "/actualizaciones"),
-    apkUrl: absoluteUrl(download.apkUrl || site.apkUrl || siteConfig.apkUrl, "/descargar"),
+    apkUrl: officialApkUrl,
     apkSize: String(download.apkSize || site.apkSize || siteConfig.apkSize),
     publishedAt: String(download.lastUpdated || site.lastUpdated || siteConfig.lastUpdated),
   };
