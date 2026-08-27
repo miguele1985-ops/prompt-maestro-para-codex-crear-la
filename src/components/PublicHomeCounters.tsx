@@ -34,8 +34,8 @@ export function PublicHomeCounters({ donatedEuros }: { donatedEuros?: string }) 
 
     const loadStats = () => {
       fetch("/api/public-stats", { cache: "no-store" })
-        .then((response) => (response.ok ? response.json() : null))
-        .then((data: PublicStats | null) => {
+        .then(async (response) => (response.ok ? ((await response.json().catch(() => null)) as PublicStats | null) : null))
+        .then((data) => {
           if (!cancelled && data) {
             setStats({
               ...data,

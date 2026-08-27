@@ -16,6 +16,21 @@ import {
   type LicenseType,
   type MessageType,
 } from "@/lib/licensing-core";
+import {
+  KvLicensingStore,
+  createKvLicenses,
+  listKvLicenseDevices,
+  listKvLicenses,
+  listKvMessages,
+  readKvActiveMessages,
+  readKvAppConfig,
+  readKvDashboardSummary,
+  releaseKvDevice,
+  updateKvAppConfig,
+  updateKvLicense,
+  upsertKvMessage,
+  writeKvAuditLog,
+} from "@/lib/licensing-kv";
 
 type D1Result<T> = {
   success: boolean;
@@ -138,12 +153,14 @@ function toMessage(row: Record<string, unknown>): RemoteMessage {
 }
 
 export async function readAppConfig(): Promise<AppConfig> {
-  if (!getD1Config()) return defaultAppConfig;
+  if (!getD1Config()) return readKvAppConfig();
   const result = await queryD1<Record<string, unknown>>("SELECT * FROM app_config WHERE id = 1 LIMIT 1");
   return result.results?.[0] ? toAppConfig(result.results[0]) : defaultAppConfig;
 }
 
 export async function updateAppConfig(input: Partial<AppConfig>) {
+  if (!getD1Config()) return updateKvAppConfig(input);
+
   const purchaseUrl = validateHttpsUrl(input.purchaseUrl);
   const supportUrl = validateHttpsUrl(input.supportUrl);
   const appMode = input.appMode;
@@ -178,11 +195,15 @@ export async function updateAppConfig(input: Partial<AppConfig>) {
 
 export class D1LicensingStore implements LicensingStore {
   async getLicenseByHash(codeHash: string) {
+    if (!getD1Config()) return new KvLicensingStore().getLicenseByHash(codeHash);
+
     const result = await queryD1<Record<string, unknown>>("SELECT * FROM licenses WHERE code_hash = ? LIMIT 1", [codeHash]);
     return result.results?.[0] ? toLicense(result.results[0]) : null;
   }
 
   async getActiveDevice(licenseId: string, installationIdHash: string) {
+    if (!getD1Config()) return new KvLicensingStore().getActiveDevice(licenseId, installationIdHash);
+
     const result = await queryD1<Record<string, unknown>>(
       "SELECT * FROM license_devices WHERE license_id = ? AND installation_id_hash = ? AND active = 1 LIMIT 1",
       [licenseId, installationIdHash],
@@ -191,11 +212,15 @@ export class D1LicensingStore implements LicensingStore {
   }
 
   async countActiveDevices(licenseId: string) {
+    if (!getD1Config()) return new KvLicensingStore().countActiveDevices(licenseId);
+
     const result = await queryD1<{ count: number }>("SELECT COUNT(*) as count FROM license_devices WHERE license_id = ? AND active = 1", [licenseId]);
     return Number(result.results?.[0]?.count || 0);
   }
 
   async createDevice(input: { id: string; licenseId: string; installationIdHash: string; deviceLabel?: string | null; appVersion?: string | null }) {
+    if (!getD1Config()) return new KvLicensingStore().createDevice(input);
+
     const released = await queryD1<Record<string, unknown>>(
       "SELECT * FROM license_devices WHERE license_id = ? AND installation_id_hash = ? AND active = 0 LIMIT 1",
       [input.licenseId, input.installationIdHash],
@@ -231,6 +256,8 @@ export class D1LicensingStore implements LicensingStore {
   }
 
   async touchDevice(deviceId: string, appVersion?: string | null) {
+    if (!getD1Config()) return new KvLicensingStore().touchDevice(deviceId, appVersion);
+
     await queryD1("UPDATE license_devices SET last_seen_at = CURRENT_TIMESTAMP, app_version = COALESCE(?, app_version) WHERE id = ?", [
       appVersion || null,
       deviceId,
@@ -241,6 +268,8 @@ export class D1LicensingStore implements LicensingStore {
   }
 
   async markLicenseActivated(licenseId: string) {
+    if (!getD1Config()) return new KvLicensingStore().markLicenseActivated(licenseId);
+
     await queryD1("UPDATE licenses SET activated_at = COALESCE(activated_at, CURRENT_TIMESTAMP) WHERE id = ?", [licenseId]);
   }
 }
@@ -255,6 +284,8 @@ export async function createLicenses(input: {
   notes?: string | null;
   createdBy?: string | null;
 }) {
+  if (!getD1Config()) return createKvLicenses(input);
+
   const count = Math.max(1, Math.min(200, Math.floor(input.count || 1)));
   const created: Array<{ id: string; code: string; codeLast4: string }> = [];
 
@@ -285,6 +316,8 @@ export async function createLicenses(input: {
 }
 
 export async function listLicenses(status?: LicenseStatus | "ALL") {
+  if (!getD1Config()) return listKvLicenses(status);
+
   const result = status && status !== "ALL"
     ? await queryD1<Record<string, unknown>>("SELECT * FROM licenses WHERE status = ? ORDER BY created_at DESC LIMIT 200", [status])
     : await queryD1<Record<string, unknown>>("SELECT * FROM licenses ORDER BY created_at DESC LIMIT 200");
@@ -292,6 +325,8 @@ export async function listLicenses(status?: LicenseStatus | "ALL") {
 }
 
 export async function updateLicense(id: string, input: { status?: LicenseStatus; maxDevices?: number; notes?: string | null }) {
+  if (!getD1Config()) return updateKvLicense(id, input);
+
   await queryD1(
     `UPDATE licenses
      SET status = COALESCE(?, status),
@@ -304,15 +339,21 @@ export async function updateLicense(id: string, input: { status?: LicenseStatus;
 }
 
 export async function listLicenseDevices(licenseId: string) {
+  if (!getD1Config()) return listKvLicenseDevices(licenseId);
+
   const result = await queryD1<Record<string, unknown>>("SELECT * FROM license_devices WHERE license_id = ? ORDER BY first_activated_at DESC", [licenseId]);
   return (result.results || []).map(toDevice);
 }
 
 export async function releaseDevice(deviceId: string) {
+  if (!getD1Config()) return releaseKvDevice(deviceId);
+
   await queryD1("UPDATE license_devices SET active = 0, released_at = CURRENT_TIMESTAMP WHERE id = ?", [deviceId]);
 }
 
 export async function readActiveMessages(appVersion?: number) {
+  if (!getD1Config()) return readKvActiveMessages(appVersion);
+
   const now = new Date().toISOString();
   const result = await queryD1<Record<string, unknown>>(
     `SELECT * FROM messages
@@ -329,11 +370,15 @@ export async function readActiveMessages(appVersion?: number) {
 }
 
 export async function listMessages() {
+  if (!getD1Config()) return listKvMessages();
+
   const result = await queryD1<Record<string, unknown>>("SELECT * FROM messages ORDER BY created_at DESC LIMIT 200");
   return (result.results || []).map(toMessage);
 }
 
 export async function upsertMessage(input: Partial<RemoteMessage> & { title: string; body: string }) {
+  if (!getD1Config()) return upsertKvMessage(input);
+
   const id = input.id || randomId("msg");
   const safeUrl = validateHttpsUrl(input.buttonUrl);
   await queryD1(
@@ -373,7 +418,8 @@ export async function upsertMessage(input: Partial<RemoteMessage> & { title: str
 }
 
 export async function writeAuditLog(input: { action: string; adminUser?: string | null; ip?: string | null; result?: string; details?: unknown }) {
-  if (!getD1Config()) return;
+  if (!getD1Config()) return writeKvAuditLog(input);
+
   await queryD1(
     "INSERT INTO audit_log (id, action, admin_user, ip, result, details) VALUES (?, ?, ?, ?, ?, ?)",
     [randomId("aud"), input.action, input.adminUser || null, input.ip || null, input.result || "OK", JSON.stringify(input.details || {})],
@@ -381,6 +427,8 @@ export async function writeAuditLog(input: { action: string; adminUser?: string 
 }
 
 export async function readDashboardSummary() {
+  if (!getD1Config()) return readKvDashboardSummary();
+
   const [config, licenseRows, activeRows, revokedRows, deviceRows, messageRows] = await Promise.all([
     readAppConfig(),
     queryD1<{ count: number }>("SELECT COUNT(*) as count FROM licenses"),

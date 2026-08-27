@@ -24,7 +24,7 @@ export async function POST(request: Request) {
   if (auth) return auth;
 
   try {
-    const body = await request.json();
+    const body = (await request.json()) as Record<string, unknown>;
     const message = normalizeAdminMessage(body);
     const messages = await readMcsMessages();
     const index = messages.findIndex((item) => item.id === message.id);

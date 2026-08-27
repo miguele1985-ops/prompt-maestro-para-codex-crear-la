@@ -30,7 +30,7 @@ export function BugReportForm({ source, title = "Reportar un fallo" }: BugReport
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ source, message: trimmed }),
       });
-      const result = await response.json().catch(() => ({}));
+      const result = (await response.json().catch(() => ({}))) as { ok?: boolean; message?: string };
 
       if (!response.ok || !result.ok) {
         throw new Error(result.message || "No se pudo guardar el reporte.");

@@ -22,7 +22,7 @@ function AdminLoginForm() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ username, password, token }),
     });
-    const result = await response.json().catch(() => ({ message: "No se pudo iniciar sesión." }));
+    const result = (await response.json().catch(() => ({ message: "No se pudo iniciar sesión." }))) as { message?: string };
     setLoading(false);
     if (response.ok) {
       window.location.href = next;

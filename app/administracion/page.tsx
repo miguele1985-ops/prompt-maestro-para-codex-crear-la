@@ -124,6 +124,8 @@ type AdminData = {
 };
 
 type PageSection = NonNullable<ContentPage["sections"]>[number];
+type ReportsPayload = { ok?: boolean; message?: string; reports?: BugReport[] };
+type AdminContentPayload = { ok?: boolean; data?: AdminData | null; message?: string };
 
 const adminTabs: Array<{ id: AdminTab; label: string; helper: string; icon: typeof Settings }> = [
   { id: "constructor", label: "Constructor", helper: "Vista tipo WordPress para editar lo importante", icon: Settings },
@@ -319,7 +321,7 @@ export default function AdminPage() {
         );
       fetch("/api/admin/reports", { cache: "no-store" })
         .then(async (reportsResponse) => {
-          const result = await reportsResponse.json().catch(() => ({}));
+          const result = (await reportsResponse.json().catch(() => ({}))) as ReportsPayload;
           if (!reportsResponse.ok || !result.ok) {
             throw new Error(result.message || "No se pudieron cargar los reportes de fallos.");
           }
@@ -329,9 +331,10 @@ export default function AdminPage() {
         .catch((error) => {
           setBugReports([]);
           setReportsStatus(error instanceof Error ? error.message : "No se pudieron cargar los reportes de fallos.");
-        });      fetch("/api/admin/content", { cache: "no-store" })
-        .then((contentResponse) => contentResponse.json())
-        .then((result: { ok?: boolean; data?: AdminData | null; message?: string }) => {
+        });
+      fetch("/api/admin/content", { cache: "no-store" })
+        .then(async (contentResponse) => (await contentResponse.json().catch(() => ({}))) as AdminContentPayload)
+        .then((result) => {
           if (!result.ok || !result.data) return;
           if (result.data.site) setSite((current) => ({ ...current, ...result.data?.site }));
           if (result.data.download) setDownload((current) => ({ ...current, ...result.data?.download }));
@@ -516,7 +519,7 @@ export default function AdminPage() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(payload),
     });
-    const result = await response.json().catch(() => ({ message: "Respuesta no valida." }));
+    const result = (await response.json().catch(() => ({ message: "Respuesta no valida." }))) as { message?: string };
     setSaving(false);
     setStatus(result.message || (response.ok ? "Cambios guardados." : "No se pudo guardar."));
   }
@@ -530,7 +533,7 @@ export default function AdminPage() {
       method: "DELETE",
       cache: "no-store",
     });
-    const result = await response.json().catch(() => ({ message: "Respuesta no válida." }));
+    const result = (await response.json().catch(() => ({ message: "Respuesta no válida." }))) as ReportsPayload;
 
     if (!response.ok || !result.ok) {
       setBugReports(previous);

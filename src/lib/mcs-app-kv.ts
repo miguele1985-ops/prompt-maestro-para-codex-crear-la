@@ -85,15 +85,22 @@ function runtimeEnv() {
     MCS_ADMIN_TOKEN?: string;
     __MCS_APP_KV__?: McsKvNamespace;
     __MCS_ADMIN_TOKEN__?: string;
+    [key: symbol]: unknown;
   };
+  const cloudflareContext = runtimeGlobal[Symbol.for("__cloudflare-request-context__")] as { env?: Record<string, unknown> } | undefined;
+  const cloudflareEnv = cloudflareContext?.env || {};
   const env = process.env as unknown as {
     MCS_APP_KV?: McsKvNamespace;
     MCS_ADMIN_TOKEN?: string;
   };
 
   return {
-    MCS_APP_KV: runtimeGlobal.MCS_APP_KV || runtimeGlobal.__MCS_APP_KV__ || env.MCS_APP_KV,
-    MCS_ADMIN_TOKEN: runtimeGlobal.MCS_ADMIN_TOKEN || runtimeGlobal.__MCS_ADMIN_TOKEN__ || env.MCS_ADMIN_TOKEN,
+    MCS_APP_KV: (cloudflareEnv.MCS_APP_KV as McsKvNamespace | undefined) || runtimeGlobal.MCS_APP_KV || runtimeGlobal.__MCS_APP_KV__ || env.MCS_APP_KV,
+    MCS_ADMIN_TOKEN:
+      String(cloudflareEnv.MCS_ADMIN_TOKEN || "") ||
+      runtimeGlobal.MCS_ADMIN_TOKEN ||
+      runtimeGlobal.__MCS_ADMIN_TOKEN__ ||
+      env.MCS_ADMIN_TOKEN,
   };
 }
 
@@ -130,6 +137,15 @@ export function getMcsAppKv() {
   return kv;
 }
 
+function safeEqual(left: string, right: string) {
+  if (left.length !== right.length) return false;
+  let result = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    result |= left.charCodeAt(index) ^ right.charCodeAt(index);
+  }
+  return result === 0;
+}
+
 export function requireMcsAdmin(request: Request) {
   const header = request.headers.get("authorization") || "";
   const token = header.replace(/^Bearer\s+/i, "").trim();
@@ -137,19 +153,26 @@ export function requireMcsAdmin(request: Request) {
 
   const expected = String(runtimeEnv().MCS_ADMIN_TOKEN || "").trim();
   if (!expected) return jsonResponse({ error: "MCS_ADMIN_TOKEN no está configurado" }, 500);
-  if (token !== expected) return jsonResponse({ error: "No autorizado" }, 401);
+  if (!safeEqual(token, expected)) return jsonResponse({ error: "No autorizado" }, 401);
 
   return null;
 }
 
 export function isSafeUrl(value: unknown) {
   if (!value) return true;
+  const text = String(value).trim();
+  if (text.startsWith("/") && !text.startsWith("//")) return true;
   try {
-    const parsed = new URL(String(value));
-    return parsed.protocol === "https:" || parsed.protocol === "http:";
+    const parsed = new URL(text);
+    return parsed.protocol === "https:";
   } catch {
     return false;
   }
+}
+
+function cleanIdentifier(value: unknown, fallback: string) {
+  const id = String(value || "").trim().replace(/[^a-zA-Z0-9._-]/g, "-").slice(0, 80);
+  return id || fallback;
 }
 
 export function normalizeMode(value: unknown): McsAppConfig["appMode"] {
@@ -187,21 +210,23 @@ export async function writeMcsMessages(messages: McsAdminMessage[]) {
 }
 
 export function normalizeAdminMessage(raw: Record<string, unknown>): McsAdminMessage {
-  const id = String(raw.id || `mensaje-${Date.now()}`).trim();
-  const title = String(raw.title || "").trim();
-  const body = String(raw.body || raw.message || "").trim();
+  const id = cleanIdentifier(raw.id, `mensaje-${Date.now()}`);
+  const title = String(raw.title || "").trim().slice(0, 140);
+  const body = String(raw.body || raw.message || "").trim().slice(0, 4000);
   const type = raw.type as McsAdminMessage["type"];
+  const url = raw.url ? String(raw.url).trim() : null;
+  const version = String(raw.version || "1").trim().slice(0, 40);
 
   if (!title || !body) throw new Error("Título y mensaje son obligatorios");
-  if (!isSafeUrl(raw.url)) throw new Error("La URL debe empezar por https:// o http://");
+  if (!isSafeUrl(url)) throw new Error("La URL debe ser https:// o una ruta interna como /descargar");
 
   return {
     id,
-    version: String(raw.version || "1"),
+    version,
     title,
     body,
-    buttonText: String(raw.buttonText || "").trim(),
-    url: raw.url ? String(raw.url).trim() : null,
+    buttonText: String(raw.buttonText || "").trim().slice(0, 80),
+    url,
     dismissible: raw.dismissible !== false,
     blocking: Boolean(raw.blocking) || type === "BLOCKING",
     type: ADMIN_MESSAGE_TYPES.has(type) ? type : "INFO",

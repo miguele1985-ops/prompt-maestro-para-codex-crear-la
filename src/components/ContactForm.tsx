@@ -43,7 +43,7 @@ export function ContactForm() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ name, email, subject, message }),
       });
-      const result = await response.json().catch(() => ({}));
+      const result = (await response.json().catch(() => ({}))) as { ok?: boolean; message?: string };
 
       if (!response.ok || !result.ok) {
         throw new Error(result.message || "No se pudo enviar el mensaje.");

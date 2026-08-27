@@ -12,7 +12,17 @@ async function sha256(value: string) {
 }
 
 export function configuredAdminToken() {
-  return process.env.ADMIN_TOKEN || (process.env.NODE_ENV === "production" ? "" : "modo-crisis-local");
+  const runtimeGlobal = globalThis as typeof globalThis & { [key: symbol]: unknown };
+  const cloudflareContext = runtimeGlobal[Symbol.for("__cloudflare-request-context__")] as { env?: Record<string, unknown> } | undefined;
+  const cloudflareEnv = cloudflareContext?.env || {};
+
+  return (
+    process.env.ADMIN_TOKEN ||
+    process.env.MCS_ADMIN_TOKEN ||
+    String(cloudflareEnv.ADMIN_TOKEN || "") ||
+    String(cloudflareEnv.MCS_ADMIN_TOKEN || "") ||
+    (process.env.NODE_ENV === "production" ? "" : "modo-crisis-local")
+  );
 }
 
 export async function adminSessionValue() {
@@ -43,11 +53,20 @@ function sessionFromCookie(request: Request) {
   return sessionCookie?.split("=").slice(1).join("=") || "";
 }
 
+function bearerTokenFromHeader(request: Request) {
+  const header = request.headers.get("authorization") || "";
+  return header.replace(/^Bearer\s+/i, "").trim();
+}
+
 export async function requireAdminToken(request: Request) {
   const expected = await adminSessionValue();
   const current = sessionFromCookie(request);
 
   if (expected && current && safeEqual(current, expected)) return null;
+
+  const bearer = bearerTokenFromHeader(request);
+  const configuredToken = configuredAdminToken();
+  if (bearer && configuredToken && safeEqual(bearer, configuredToken)) return null;
 
   return Response.json(
     { ok: false, message: "Sesion de administracion no valida." },

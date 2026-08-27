@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   if (auth) return auth;
 
   try {
-    const body = await request.json();
+    const body = (await request.json()) as Record<string, unknown>;
     if (body.purchaseUrl && !isSafeUrl(body.purchaseUrl)) return jsonResponse({ error: "purchaseUrl no permitida" }, 400);
 
     const current = await readMcsConfig();

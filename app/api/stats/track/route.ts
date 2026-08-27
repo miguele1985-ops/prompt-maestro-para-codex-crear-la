@@ -14,7 +14,7 @@ const publicEvents: Record<string, CounterName> = {
 export async function POST(request: NextRequest) {
   if (!hasValidBrowserOrigin(request)) return forbiddenOriginResponse();
 
-  const payload = await request.json().catch(() => ({}));
+  const payload = (await request.json().catch(() => ({}))) as { type?: string };
   const counter = publicEvents[String(payload.type || "")];
 
   if (!counter) {
