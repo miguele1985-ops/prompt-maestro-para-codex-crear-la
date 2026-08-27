@@ -1,4 +1,4 @@
-import { Download, ShieldCheck } from "lucide-react";
+import { Download } from "lucide-react";
 import { ApkInstallGuide } from "@/components/ApkInstallGuide";
 import { DownloadDonationGate } from "@/components/DownloadDonationGate";
 import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
@@ -27,9 +27,15 @@ export function ApkDownloadButton({
 
 export function QrDownload() {
   return (
-    <div className="qr-placeholder" aria-label="Código QR pendiente de generar">
-      <ShieldCheck aria-hidden />
-      <span>QR pendiente de generar</span>
+    <div className="qr-placeholder qr-download-card" aria-label="Código QR para descargar la APK oficial">
+      <img
+        className="qr-download-image"
+        src="/assets/img/qr-descarga-modo-crisis-survival.png"
+        alt="QR para descargar la APK oficial de Modo Crisis Survival"
+        loading="lazy"
+        decoding="async"
+      />
+      <span>Escanea para descargar</span>
     </div>
   );
 }

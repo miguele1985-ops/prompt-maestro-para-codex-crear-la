@@ -1480,6 +1480,30 @@ dd { margin: 0; font-weight: 800; word-break: break-word; }
   color: var(--primary);
 }
 
+.qr-download-card {
+  aspect-ratio: auto;
+  gap: .55rem;
+  padding: .75rem;
+  border-style: solid;
+  background: rgba(255, 255, 255, .76);
+  color: var(--forest);
+}
+
+.qr-download-image {
+  display: block;
+  width: 100%;
+  max-width: 9.5rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.qr-download-card span {
+  font-size: .82rem;
+  font-weight: 800;
+}
+
 .crisis-demo { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1rem; }
 .scenario-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
 .scenario-list button, .share-row button, .cookie-actions button, .cookie-actions a {
@@ -3036,6 +3060,9 @@ dd { margin: 0; font-weight: 800; word-break: break-word; }
   .qr-placeholder {
     width: 100%;
     max-width: 12rem;
+  }
+  .qr-download-image {
+    max-width: 10rem;
   }
   .comparison-table div { grid-template-columns: 1fr; }
   .comparison-table span + span, .comparison-table strong + strong { border-left: 0; }
