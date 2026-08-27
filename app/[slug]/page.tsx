@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { CalendarDays, Download, FileCheck2, ShieldCheck, Sparkles } from "lucide-react";
 import { SafetyWarning } from "@/components/Badges";
 import { ContactForm } from "@/components/ContactForm";
 import { DownloadCard } from "@/components/DownloadCard";
@@ -31,6 +32,7 @@ export const dynamicParams = true;
 type DownloadResource = (typeof downloadInfo.resources)[number];
 type ContentPageItem = (typeof allContentPages)[number];
 type PageSection = NonNullable<ContentPageItem["sections"]>[number];
+type ChangelogEntryItem = (typeof changelog)[number];
 
 const resourceCalculatorTitles = ["Captación de lluvia", "Velocidad necesaria", "Sensación térmica", "Horas de luz"];
 
@@ -62,6 +64,101 @@ function resourcesPageWithRequiredCalculators(page: ContentPageItem) {
       ...sectionsWithoutRequiredCalculators.slice(insertAt),
     ],
   };
+}
+
+function UpdateChangelogBlock({ entries, download }: { entries: ChangelogEntryItem[]; download: typeof downloadInfo }) {
+  const latest = entries[0];
+  const downloadHref = latest?.downloadUrl || download.apkUrl;
+  const version = latest?.version || download.version;
+  const rawDate = latest?.date || download.date;
+  const date = rawDate && !/pendiente/i.test(rawDate) ? rawDate : "Fecha pendiente de publicar";
+  const changes = latest?.changes?.length ? latest.changes : ["Modo Crisis", "Mapas offline", "Guías", "Herramientas"];
+
+  return (
+    <section className="content-band update-center">
+      <article className="update-highlight-card">
+        <div className="update-highlight-copy">
+          <p className="eyebrow">Última versión oficial</p>
+          <h2>{version} - {latest?.title || "Actualización disponible"}</h2>
+          <p>
+            Mantén Modo Crisis Survival al día para recibir las últimas mejoras de uso offline, correcciones de estabilidad,
+            recursos revisados y cambios preparados para Android.
+          </p>
+          <div className="update-actions">
+            <TrackedDownloadLink className="button primary" href={downloadHref} download>
+              <Download size={18} aria-hidden /> Descargar {version}
+            </TrackedDownloadLink>
+            <Link className="button secondary" href="/descargar">
+              Ver página de descarga
+            </Link>
+          </div>
+        </div>
+        <dl className="update-facts">
+          <div>
+            <FileCheck2 aria-hidden />
+            <dt>Versión</dt>
+            <dd>{version}</dd>
+          </div>
+          <div>
+            <CalendarDays aria-hidden />
+            <dt>Fecha</dt>
+            <dd>{date}</dd>
+          </div>
+          <div>
+            <ShieldCheck aria-hidden />
+            <dt>Descarga</dt>
+            <dd>APK oficial</dd>
+          </div>
+        </dl>
+      </article>
+
+      <div className="update-info-grid">
+        <article className="update-info-panel">
+          <Sparkles aria-hidden />
+          <h3>Qué trae esta actualización</h3>
+          <ul>
+            {changes.map((change) => (
+              <li key={change}>{change}</li>
+            ))}
+          </ul>
+        </article>
+        <article className="update-info-panel">
+          <ShieldCheck aria-hidden />
+          <h3>Antes de actualizar</h3>
+          <ul>
+            <li>Descarga siempre desde esta web oficial.</li>
+            <li>Instala la APK nueva encima de la anterior para conservar tus datos locales.</li>
+            <li>Revisa mapas, modelos IA y recursos offline después de abrir la app.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div className="update-timeline">
+        {entries.map((entry) => (
+          <article className="update-version-card" key={entry.version}>
+            <div>
+              <span>{entry.date}</span>
+              <h3>{entry.version} - {entry.title}</h3>
+            </div>
+            <ul>
+              {entry.changes.map((change) => (
+                <li key={change}>{change}</li>
+              ))}
+            </ul>
+            {entry.fixes?.length ? (
+              <div className="update-fixes">
+                <strong>Correcciones</strong>
+                <p>{entry.fixes.join(" · ")}</p>
+              </div>
+            ) : null}
+            <TrackedDownloadLink className="button secondary" href={entry.downloadUrl || downloadHref} download>
+              <Download size={16} aria-hidden /> Descargar {entry.version}
+            </TrackedDownloadLink>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 const mapInstallGuide = [
@@ -356,6 +453,7 @@ function ResourceDownloadsPanel({
 async function getVisibleContent() {
   const savedContent = await readAdminContent().catch(() => null);
   const savedPages = savedContent?.pages?.length ? savedContent.pages : allContentPages;
+  const savedDownload = savedContent?.download as Partial<typeof downloadInfo> | undefined;
   return {
     pages: savedPages.map((page) =>
       page.slug === "descargar"
@@ -363,7 +461,13 @@ async function getVisibleContent() {
         : resourcesPageWithRequiredCalculators(page),
     ),
     visibleChangelog: savedContent?.changelog?.length ? savedContent.changelog : changelog,
-    visibleDownloadInfo: savedContent?.download as Partial<typeof downloadInfo> | undefined,
+    visibleDownloadInfo: {
+      ...downloadInfo,
+      ...(savedDownload || {}),
+      permissions: savedDownload?.permissions?.length ? savedDownload.permissions : downloadInfo.permissions,
+      installSteps: savedDownload?.installSteps?.length ? savedDownload.installSteps : downloadInfo.installSteps,
+      resources: savedDownload?.resources?.length ? savedDownload.resources : downloadInfo.resources,
+    },
     visibleSite: savedContent?.site as Partial<typeof siteConfig> | undefined,
   };
 }
@@ -605,15 +709,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       ) : null}
 
       {page.slug === "actualizaciones" ? (
-        <section className="content-band changelog">
-          {visibleChangelog.map((entry) => (
-            <article className="mini-card" key={entry.version}>
-              <h2>{entry.version} - {entry.title}</h2>
-              <p>{entry.date}</p>
-              <ul>{entry.changes.map((change) => <li key={change}>{change}</li>)}</ul>
-            </article>
-          ))}
-        </section>
+        <UpdateChangelogBlock entries={visibleChangelog} download={visibleDownloadInfo} />
       ) : null}
 
       {page.slug === "contacto" ? (

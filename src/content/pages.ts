@@ -1202,11 +1202,17 @@ export const pages: ContentPage[] = [
   {
     slug: "actualizaciones",
     title: "Actualizaciones y changelog",
-    eyebrow: "Historial editable",
-    description: "Versiones, fechas, novedades, correcciones, cambios y enlace de descarga.",
-    body: ["El changelog se edita desde el archivo de descargas. No se inventan versiones ni fechas no confirmadas."],
+    eyebrow: "APK oficial",
+    description: "Consulta la versión disponible, descarga la actualización oficial y revisa qué cambia antes de instalar.",
+    body: [
+      "Aquí se publican las versiones oficiales de Modo Crisis Survival para Android, con las novedades importantes, correcciones y enlace de descarga.",
+      "Si ya tienes la app instalada, descarga la versión nueva desde esta página y ábrela en Android para actualizarla sobre la anterior.",
+    ],
+    highlights: ["APK oficial", "Novedades claras", "Correcciones", "Descarga directa", "Historial de versiones"],
+    cta: "Descargar versión actual",
+    ctaHref: "/descargar",
     seoTitle: "Actualizaciones de Modo Crisis Survival",
-    seoDescription: "Historial de versiones editable con novedades, correcciones, cambios y descarga.",
+    seoDescription: "Descarga la última actualización oficial de Modo Crisis Survival y revisa el historial de versiones, novedades y correcciones.",
   },
   {
     slug: "contacto",
