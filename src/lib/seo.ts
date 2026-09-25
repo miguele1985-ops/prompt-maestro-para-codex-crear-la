@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/content/site-config";
 
 export function absoluteUrl(path = "/") {
+  if (/^https?:\/\//i.test(path)) return path;
   const base = siteConfig.siteUrl.replace(/\/$/, "");
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
@@ -53,7 +54,7 @@ export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.organizationName,
+    name: /configurar|pendiente/i.test(siteConfig.organizationName) ? siteConfig.appName : siteConfig.organizationName,
     url: siteConfig.siteUrl,
     logo: absoluteUrl(siteConfig.logo),
     contactPoint: {
@@ -71,10 +72,9 @@ export function appJsonLd() {
     name: siteConfig.appName,
     operatingSystem: "Android",
     applicationCategory: "UtilitiesApplication",
-    description: siteConfig.seo.description,
+    description: "Aplicación Android de preparación y supervivencia con guías, mapas y recursos offline.",
     downloadUrl: absoluteUrl(siteConfig.apkUrl),
     softwareVersion: siteConfig.currentVersion,
-    offers: { "@type": "Offer", price: "Configurar antes de publicar", priceCurrency: "EUR" },
   };
 }
 
@@ -84,10 +84,5 @@ export function websiteJsonLd() {
     "@type": "WebSite",
     name: siteConfig.appName,
     url: siteConfig.siteUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.siteUrl}/guias-supervivencia?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }

@@ -103,9 +103,9 @@ export const siteConfig = {
 export const navigation = [
   { label: "Inicio", href: "/" },
   { label: "Guías", href: "/guias-supervivencia" },
+  { label: "Artículos", href: "/blog" },
+  { label: "Comparativas", href: "/comparativas" },
   { label: "Herramientas", href: "/herramientas-supervivencia" },
-  { label: "Aprendizaje", href: "/aprendizaje-supervivencia" },
-  { label: "Plantas y Fauna", href: "/plantas-y-fauna" },
   { label: "App", href: "/aplicacion-supervivencia-offline" },
   { label: "Sobre nosotros", href: "/sobre-nosotros" },
   { label: "Donar", href: "/donaciones" },

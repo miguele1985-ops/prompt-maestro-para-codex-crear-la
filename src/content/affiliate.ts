@@ -9,7 +9,7 @@ export function amazonSearchUrl(query: string) {
 }
 
 export const affiliateDisclosure =
-  "Esta página contiene enlaces de afiliado de Amazon. Si compras a través de ellos, el proyecto puede recibir una comisión sin coste adicional para ti. La preparación urgente, el 112 y las guías críticas no dependen de comprar nada.";
+  "En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Los enlaces identificados como afiliados pueden generar una comisión sin coste adicional para ti.";
 
 export const comparisonCategories = [
   {

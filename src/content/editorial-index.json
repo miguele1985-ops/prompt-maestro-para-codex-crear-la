@@ -1,0 +1,2049 @@
+{
+  "plantas-comestibles-y-peligrosas-que-se-pueden-confundir": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Hay casos reales o es una precaución exagerada"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Qué grupos de plantas pueden confundirse"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Cómo se diferencian con seguridad"
+      },
+      {
+        "id": "seccion-4",
+        "title": "El olor y el sabor sirven como prueba"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Puede una IA confirmar que la planta es comestible"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Qué hacer si alguien ya ha comido una planta dudosa"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Preguntas frecuentes"
+      },
+      {
+        "id": "seccion-8",
+        "title": "¿Qué especies comestibles están bien documentadas en España?"
+      },
+      {
+        "id": "seccion-9",
+        "title": "¿Qué plantas peligrosas merece la pena aprender a reconocer?"
+      },
+      {
+        "id": "seccion-10",
+        "title": "¿Qué rasgos debes observar antes de poner nombre a una planta?"
+      },
+      {
+        "id": "seccion-11",
+        "title": "¿Qué falsas reglas debes descartar?"
+      },
+      {
+        "id": "seccion-12",
+        "title": "¿Qué aporta una buena guía de campo?"
+      },
+      {
+        "id": "seccion-13",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-14",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-15",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-16",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 1809,
+    "readingMinutes": 10,
+    "summary": "Si necesitas una fotografía de Internet para decidir si puedes comer una planta silvestre, todavía no tienes una identificación suficiente. En una confusión botánica, el problema no es que la receta salga mal: puedes ingerir una especie tóxica que se parece a otra conocida.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Comunicado de ANSES",
+        "url": "https://www.anses.fr/system/files/PRES2020CPA08.pdf?download=1"
+      },
+      {
+        "title": "Informe de toxicovigilancia",
+        "url": "https://www.anses.fr/sites/default/files/Toxicovigilance-2022-SA-0042-RA.pdf"
+      },
+      {
+        "title": "ANSES en su boletín de toxicovigilancia",
+        "url": "https://vigilanses.anses.fr/sites/default/files/VigilAnsesN8_Juin2019_0.pdf"
+      },
+      {
+        "title": "Fuente: Ministerio de Justicia",
+        "url": "https://www.mjusticia.gob.es/es/institucional/organismos/instituto-nacional/servicios/servicio-informacion/publicaciones"
+      },
+      {
+        "title": "MITECO — Inventario Español de Conocimientos Tradicionales",
+        "url": "https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-espanol-de-los-conocimientos-tradicionales/inventario_esp_conocimientos_tradicionales.html"
+      },
+      {
+        "title": "MITECO — ficha de Urtica dioica",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/temas/inventarios-nacionales/iect_urtica_dioica_tcm30-164128.pdf"
+      },
+      {
+        "title": "MITECO — ficha de Taraxacum officinale",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/temas/inventarios-nacionales/iect_taraxacum_officinale_tcm30-164137.pdf"
+      },
+      {
+        "title": "MITECO/CENEAM — DruidNet y precauciones",
+        "url": "https://www.miteco.gob.es/es/ceneam/recursos/pag-web/druidnet---app-sobre-usos-tradicionales-de-las-plantas-silvestre.html"
+      }
+    ]
+  },
+  "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué cinco nudos conviene reconocer?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Por qué empezar por el ocho?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Para qué sirve el ballestrinque?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué debes saber del as de guía?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Por qué aprender el mariposa?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "¿Cómo practicar sin crear malos hábitos?"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-8",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-10",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 851,
+    "readingMinutes": 5,
+    "summary": "No necesitas memorizar veinte nudos: es más útil dominar unos pocos, saber inspeccionarlos y entender para qué no sirven. Como base educativa, cinco familias cubren muchas tareas cotidianas: ocho, ballestrinque, as de guía, mariposa y un nudo de unión apropiado al contexto. Pero “saber hacer el dibujo” no equivale a estar capacitado para escalada, rápel, rescate o suspensión de personas.",
+    "sourceFile": "1-ARTICULOS_26_30_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Petzl — Nudos y advertencias de formación",
+        "url": "https://www.petzl.com/ES/es/Sport/Nudos?ActivityName=Descenso-de-barrancos"
+      },
+      {
+        "title": "Petzl — nudo en ocho",
+        "url": "https://www.petzl.com/INT/es/Sport/El-encordamiento-con-un-nudo-en-ocho"
+      },
+      {
+        "title": "Petzl — ensayos y límites de nudos de unión",
+        "url": "https://www.petzl.com/ES/es/Sport/Nudos-de-union-para-cabos-de-cuerda-en-rapel"
+      }
+    ]
+  },
+  "animales-venenosos-de-espana-cuales-hay-y-que-hacer": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué víboras hay en España?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué hacer tras una mordedura de serpiente?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué ocurre con abejas y avispas?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿“Venenoso” y “peligroso” son lo mismo?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Cómo reducir el riesgo en campo?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 716,
+    "readingMinutes": 4,
+    "summary": "España tiene animales capaces de inocular veneno, pero “venenoso” no significa que cada encuentro sea una emergencia mortal. En serpientes, MITECO recoge tres especies de víbora en su inventario: Vipera aspis, Vipera latasti y Vipera seoanei. La mayoría de las serpientes presentes en la Península e islas no son venenosas, según la información sanitaria de la Comunidad de Madrid.",
+    "sourceFile": "1-ARTICULOS_26_30_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "MITECO — Inventario de reptiles, Vipera",
+        "url": "https://www.miteco.gob.es/es/biodiversidad/temas/inventarios-nacionales/inventario-especies-terrestres/inventario-nacional-de-biodiversidad/bdn-ieet-atlas-vert-reptiles-v.html"
+      },
+      {
+        "title": "Comunidad de Madrid — mordeduras y picaduras: actuación",
+        "url": "https://www.comunidad.madrid/salud/mordeduras-picaduras-animales"
+      }
+    ]
+  },
+  "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué hacer si el agua está turbia?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Cuánto tiempo hay que hervir?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Y si no puedes hervir?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué pasa con el agua de un pozo tras una inundación?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Un paño, arena o carbón improvisado potabilizan?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "¿Qué método usar según el problema?"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-8",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-10",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 823,
+    "readingMinutes": 5,
+    "summary": "Si no tienes filtro ni pastillas y el problema es microbiológico, hervir es la opción doméstica más fiable de las recogidas por CDC y EPA; pero no convierte en potable agua contaminada con combustible, metales pesados u otras sustancias químicas. Si sospechas contaminación química, radiactiva o por combustible, usa otra fuente y sigue las indicaciones de las autoridades.",
+    "sourceFile": "1-ARTICULOS_26_30_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "CDC — cómo hacer que el agua sea segura en emergencias",
+        "url": "https://www.cdc.gov/water-emergency/es/about/how-to-make-water-safe.html"
+      },
+      {
+        "title": "EPA — desinfección de agua potable en emergencias",
+        "url": "https://espanol.epa.gov/espanol/desinfeccion-de-agua-potable-en-situaciones-de-emergencia"
+      },
+      {
+        "title": "CDC — pozos después de una emergencia",
+        "url": "https://www.cdc.gov/water-emergency/es/about/how-to-disinfect-wells-after-an-emergency.html"
+      }
+    ]
+  },
+  "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Por qué se producen las intoxicaciones?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué caracteres se necesitan para identificar una seta?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué falsas reglas siguen circulando?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué hacer antes de consumir setas correctamente identificadas?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Cuándo una intoxicación puede ser especialmente grave?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "¿Qué NO debe hacer una web de supervivencia?"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-8",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-10",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 894,
+    "readingMinutes": 5,
+    "summary": "No existe una regla casera que permita separar todas las setas comestibles de las tóxicas. La Comunidad de Madrid advierte que hay especies tóxicas e incluso mortales muy parecidas a comestibles y que la única prevención segura es identificar la especie que se va a comer con certeza, desechando cualquier ejemplar dudoso.",
+    "sourceFile": "1-ARTICULOS_26_30_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "AESAN — consejos para recolección y autoconsumo de setas silvestres",
+        "url": "https://www.aesan.gob.es/AECOSAN/docs/documentos/publicaciones/seguridad_alimentaria/consejos_recoleccion_setas.pdf"
+      },
+      {
+        "title": "AESAN — falsas creencias y consumo seguro",
+        "url": "https://www.aesan.gob.es/AECOSAN/docs/documentos/noticias/2020/imprimible_consejos_recoleccion_setas.pdf"
+      },
+      {
+        "title": "Comunidad de Madrid — setas silvestres, intoxicaciones e identificación",
+        "url": "https://www.comunidad.madrid/salud/setas-silvestres"
+      }
+    ]
+  },
+  "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué debería contener como mínimo?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Cuándo compensa comprar un botiquín ya montado?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Cuándo es mejor montarlo tú?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Cada cuánto hay que revisarlo?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 731,
+    "readingMinutes": 4,
+    "summary": "Un buen botiquín doméstico no es el que contiene más cosas, sino el que permite encontrar material básico rápidamente y cuyo contenido sabes utilizar. Cruz Roja España recomienda que esté en un lugar accesible y conocido por quienes viven en casa, fuera del alcance de niños pequeños, y que la caja sea hermética y fácil de transportar.",
+    "sourceFile": "1-ARTICULOS_06_10_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Cruz Roja, 4/02/2025 — Botiquín de primeros auxilios en casa",
+        "url": "https://www2.cruzroja.es/ca/web/ahora/-/todo-lo-que-debe-tener-botiquin-primeros-auxilios-casa"
+      },
+      {
+        "title": "Cruz Roja — Primeros auxilios en el hogar",
+        "url": "https://www2.cruzroja.es/-/primeros-auxilios-en-el-hogar"
+      }
+    ]
+  },
+  "depositos-de-agua-para-emergencias-que-capacidad-elegir": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿5, 10 o 20 litros?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Un bidón plegable sirve como reserva permanente?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué características importan más que los litros?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Cuánta agua debe almacenar una familia?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 688,
+    "readingMinutes": 4,
+    "summary": "Para una reserva doméstica de emergencia suele ser más práctico repartir el agua entre varios recipientes que depender de un único depósito enorme. Diez litros de agua pesan aproximadamente diez kilos, veinte litros unos veinte kilos antes de sumar el envase. Esa diferencia determina quién puede moverlo, dónde puede guardarse y si un fallo deja sin toda la reserva.",
+    "sourceFile": "1-ARTICULOS_06_10_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Decathlon — Bidón Quechua plegable de 10 L",
+        "url": "https://www.decathlon.es/es/p/bidon-de-agua-10-litros-plegable-con-grifo-para-camping-quechua/303364/m8513669"
+      }
+    ]
+  },
+  "linterna-frontal-vs-de-mano-para-un-apagon": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Cuántos lúmenes hacen falta dentro de casa?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Pilas o batería recargable?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿La luz roja aporta algo?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué protección frente al agua conviene?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 698,
+    "readingMinutes": 4,
+    "summary": "Para moverte y trabajar durante un apagón, una frontal suele ser más útil que una linterna de mano porque deja ambas manos libres; para inspeccionar a distancia, una buena linterna de mano puede ser superior. No hay que elegir necesariamente una: un hogar preparado puede tener una frontal por adulto y una luz de mano o farol para usos específicos.",
+    "sourceFile": "1-ARTICULOS_06_10_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Petzl España — ACTIK 450 lm",
+        "url": "https://www.petzl.com/ES/es/Sport/Linternas-frontales/ACTIK"
+      },
+      {
+        "title": "Petzl — ACTIK CORE 625 lm, alimentación y autonomía",
+        "url": "https://www.petzl.com/INT/es/Sport/nuevo/ACTIK-CORE"
+      }
+    ]
+  },
+  "kit-de-emergencia-para-el-coche-que-llevar-en-2026": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué equipamiento exige o recomienda comprobar la DGT?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Por qué la V16 debe ir en la guantera?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué añadir para quedar inmovilizado varias horas?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué hacer si el coche se avería?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 775,
+    "readingMinutes": 4,
+    "summary": "En 2026 un kit de emergencia para el coche debe empezar por lo obligatorio: V16 conectada cuando corresponda, chaleco reflectante y solución para un pinchazo; después se añaden agua, abrigo, luz y energía según viaje y estación. La DGT confirma que desde el 1 de enero de 2026 la V16 conectada sustituyó a los triángulos como único medio legal de señalización de vehículos inmovilizados para los vehículos obligados.",
+    "sourceFile": "1-ARTICULOS_06_10_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "DGT — V16, actualizado 28/08/2026",
+        "url": "https://www.dgt.es/muevete-con-seguridad/tecnologia-e-innovacion-en-carretera/Dispositivos-de-presenalizacion-V16/"
+      },
+      {
+        "title": "DGT — Recomendaciones y equipamiento del vehículo",
+        "url": "https://www.dgt.es/conoce-el-estado-del-trafico/recomendaciones-de-trafico/"
+      },
+      {
+        "title": "DGT — Qué hacer en caso de avería, actualizado 05/03/2026",
+        "url": "https://www.dgt.es/muevete-con-seguridad/viaja-seguro/consejos-extranjeros/en-caso-de-emergencia/index.html"
+      },
+      {
+        "title": "DGT — documentación del vehículo",
+        "url": "https://www.dgt.es/nuestros-servicios/tu-vehiculo/documentacion-de-un-vehiculo/que-documentacion-debes-llevar-en-tu-vehiculo/"
+      }
+    ]
+  },
+  "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué ocurrió realmente el 28 de abril de 2025?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Cuál fue la causa según el informe final?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué cambió legalmente en España?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué sigue igual para una familia?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué recomendaciones siguen abiertas?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos después del apagón"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 958,
+    "readingMinutes": 5,
+    "summary": "Un año después del apagón ibérico del 28 de abril de 2025 sabemos mucho más sobre lo ocurrido y España ya ha aprobado medidas específicas para reforzar el sistema eléctrico. El informe final de ENTSO-E, publicado el 20 de marzo de 2026, no atribuye el cero eléctrico a una sola causa: describe una combinación de oscilaciones, deficiencias en control de tensión y potencia reactiva, prácticas distintas de regulación, reducciones rápidas de producción y desconexiones de generación.",
+    "sourceFile": "1-ARTICULOS_06_10_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "ENTSO-E, 20/03/2026 — informe final",
+        "url": "https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/"
+      },
+      {
+        "title": "ENTSO-E — expediente del apagón y documentación",
+        "url": "https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/"
+      },
+      {
+        "title": "BOE — Real Decreto 997/2025",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-22434"
+      },
+      {
+        "title": "DGT — efectos del apagón sobre el tráfico",
+        "url": "https://www.dgt.es/comunicacion/notas-de-prensa/20250429-trafico-garantizo-desplazamientos-por-carretera-no-se-produjeron-incidencias-relevantes/"
+      }
+    ]
+  },
+  "mejores-mochilas-de-emergencia-72h-en-espana-2026": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué debería tener una mochila de 72 horas?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué modelos encajan mejor como base de un kit?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿30, 40 o 50 litros?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Errores comunes al preparar la mochila"
+      },
+      {
+        "id": "seccion-5",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 1040,
+    "readingMinutes": 6,
+    "summary": "Para una mochila de emergencia de 72 horas no existe un número mágico de litros. En la práctica, para un adulto que pueda caminar con su equipo, 30–40 litros es un punto de partida razonable, pero el criterio decisivo es que el peso final sea transportable. Protección Civil recomienda adaptar el kit a las necesidades de cada familia y señala expresamente que la mochila debe tener un peso adecuado para la persona que la llevará.",
+    "sourceFile": "2-ARTICULOS_01_05_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Protección Civil — Plan Familia Preparada / kit básico",
+        "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
+      },
+      {
+        "title": "Decathlon — Forclaz Travel 500 Organizer 40 L",
+        "url": "https://www.decathlon.es/es/p/mochila-montana-y-trekking-40l-forclaz-travel-500-organizer-equipaje-de-mano/338564/c101c382m8787846"
+      },
+      {
+        "title": "Osprey — Farpoint 40",
+        "url": "https://www.osprey.com/es/farpoint-40-s26"
+      },
+      {
+        "title": "Deuter — Futura 32",
+        "url": "https://www.deuter.com/es-es/futura-32/3400826"
+      },
+      {
+        "title": "Salomon — Trailblazer 30",
+        "url": "https://www.salomon.com/es-es/product/trailblazer-30-lc12608"
+      }
+    ]
+  },
+  "filtros-de-agua-portatiles-cuales-funcionan-de-verdad": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué significa realmente el tamaño de poro?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué filtros tienen especificaciones claras?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Un filtro sirve para agua de una DANA o inundación?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Conviene filtrar y después desinfectar?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores y mitos habituales"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 869,
+    "readingMinutes": 5,
+    "summary": "Un filtro portátil puede reducir bacterias y parásitos, pero no todos convierten cualquier agua en agua segura. La diferencia decisiva está en qué contaminantes puede tratar cada tecnología. CDC advierte que los filtros portátiles habituales no eliminan virus y que hervir o desinfectar tampoco elimina metales pesados, sales ni la mayoría de contaminantes químicos.",
+    "sourceFile": "2-ARTICULOS_01_05_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "CDC — Cómo hacer que el agua sea segura en una emergencia",
+        "url": "https://www.cdc.gov/water-emergency/es/about/how-to-make-water-safe.html"
+      },
+      {
+        "title": "CDC — Tratamiento de agua al hacer senderismo, acampar o viajar",
+        "url": "https://www.cdc.gov/drinking-water/es/prevention/water-treatment-hiking-camping-traveling.html"
+      },
+      {
+        "title": "EPA — Desinfección de agua potable en emergencias",
+        "url": "https://espanol.epa.gov/espanol/desinfeccion-de-agua-potable-en-situaciones-de-emergencia"
+      },
+      {
+        "title": "LifeStraw Europe — Peak Solo, especificaciones",
+        "url": "https://eu.lifestraw.com/products/lifestraw-peak-solo"
+      }
+    ]
+  },
+  "generador-electrico-para-casa-cual-comprar-sin-riesgos": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Cuánta potencia necesitas realmente?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué aporta un generador inverter?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Dónde se puede utilizar sin riesgo de monóxido?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Puedo enchufarlo a una toma de casa?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Gasolina, diésel o estación de batería?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores que debes evitar"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 933,
+    "readingMinutes": 5,
+    "summary": "Para un apagón doméstico, comprar un generador empieza por calcular qué cargas son realmente esenciales, no por buscar el modelo con más vatios. Un equipo inverter de alrededor de 2–3 kW puede cubrir muchas necesidades básicas seleccionadas, pero no convierte automáticamente una vivienda completa en autónoma. Motores, bombas, frigoríficos y herramientas pueden tener picos de arranque superiores a su consumo estable.",
+    "sourceFile": "2-ARTICULOS_01_05_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "CDC — Seguridad durante un apagón y generadores",
+        "url": "https://www.cdc.gov/natural-disasters/es/response/que-hacer-para-protegerse-durante-un-apagon.html"
+      },
+      {
+        "title": "BOE — Reglamento Electrotécnico para Baja Tensión, ITC-BT-40",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099"
+      },
+      {
+        "title": "BOE — recopilación de seguridad industrial, ITC-BT-40",
+        "url": "https://www.boe.es/biblioteca_juridica/codigos/abrir_pdf.php?fich=351_Reglamentacion_de_Seguridad_Industrial_Instalaciones_industriales.pdf"
+      },
+      {
+        "title": "Pramac — P3500i, especificaciones",
+        "url": "https://www.pramac.com/es_ES/product?folder=69&product=15263"
+      }
+    ]
+  },
+  "radios-de-manivela-y-a-pilas-para-emergencias": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué radio funciona mejor cuando se va la luz?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Por qué una radio a pilas sigue teniendo sentido?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué aporta realmente una manivela?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿DAB+ es imprescindible en España?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Solar o manivela: cuál es mejor?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 795,
+    "readingMinutes": 4,
+    "summary": "Para un apagón en España, una radio sencilla a pilas puede ser más fiable como receptor de larga autonomía que una radio “de emergencia” llena de funciones. La manivela y el pequeño panel solar son buenos respaldos cuando no puedes recargar, pero no sustituyen una batería cargada ni un juego de pilas almacenado.",
+    "sourceFile": "2-ARTICULOS_01_05_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Sony España — ICF-P27, especificaciones",
+        "url": "https://www.sony.es/electronics/radios/icf-p27/specifications"
+      },
+      {
+        "title": "Sangean Europe — MMR-88",
+        "url": "https://eu.sangean.com/en/product/mmr-88-yellow"
+      },
+      {
+        "title": "Sangean Europe — MMR-88 DAB+",
+        "url": "https://eu.sangean.com/es/product/mmr-88-dab-yellow"
+      }
+    ]
+  },
+  "powerbanks-solares-aguantan-un-apagon-largo": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Por qué los mAh engañan al comparar baterías?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Panel integrado o panel solar separado?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué sabemos realmente de la Anker PowerCore Solar 20000?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué cambia con un panel externo de 10 W?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Cuánta energía necesita un móvil durante 72 horas?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 912,
+    "readingMinutes": 5,
+    "summary": "Una powerbank con un pequeño panel solar integrado no debe considerarse una fuente fiable de energía indefinida durante un apagón largo. La superficie fotovoltaica es demasiado pequeña para compararla con un panel plegable de 10, 20 o más vatios. Para emergencias, es más útil pensar en dos piezas: batería con capacidad expresada también en Wh y un panel externo cuya potencia esté documentada.",
+    "sourceFile": "2-ARTICULOS_01_05_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Anker — PowerCore Solar 20000, ficha de soporte",
+        "url": "https://service.anker.com/product-description/a085g000004x2BCAAY?recordId=a085g000004x2BCAAY"
+      },
+      {
+        "title": "Goal Zero — Venture 35 + Nomad 10, especificaciones y tiempos",
+        "url": "https://goalzero.com/products/venture-35-nomad-10-kit"
+      },
+      {
+        "title": "Sony — referencia de consumo autónomo de radio separada",
+        "url": "https://www.sony.es/electronics/radios/icf-p27/specifications"
+      }
+    ]
+  },
+  "dana-aviso-naranja-o-rojo-que-debes-hacer": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué diferencia oficialmente un aviso naranja de uno rojo?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Un aviso rojo significa que toda la provincia se inundará?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué hacer en casa si hay riesgo de inundación?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué hacer si te sorprende en el coche?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 728,
+    "readingMinutes": 4,
+    "summary": "Un aviso naranja significa peligro importante; un aviso rojo, peligro extraordinario. Desde la Directriz Básica de 2026, estos significados están expresamente armonizados: con naranja pueden producirse impactos graves en personas o bienes vulnerables o expuestos; con rojo, impactos muy graves o catastróficos. No son una escala de “cuánta lluvia caerá en toda España”: AEMET emite avisos por fenómeno, zona, horario y probabilidad.",
+    "sourceFile": "3-ARTICULOS_11_15_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "BOE — Directriz Básica FMA 2026",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-9158"
+      },
+      {
+        "title": "AEMET — Plan Meteoalerta",
+        "url": "https://www.aemet.es/documentos/es/eltiempo/prediccion/avisos/plan_meteoalerta/plan_meteoalerta.pdf"
+      },
+      {
+        "title": "Protección Civil — Inundaciones y autoprotección",
+        "url": "https://www.proteccioncivil.es/es/coordinacion/gestion-de-riesgos/hidrologicos/inundaciones"
+      }
+    ]
+  },
+  "calor-extremo-de-2026-61-dias-bajo-ola-de-calor": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Fue realmente la ola de calor más larga?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Por qué se habla de un “verano de cuatro meses”?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Cómo preparar una vivienda antes del siguiente episodio?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué pasa si el calor coincide con un apagón?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 763,
+    "readingMinutes": 4,
+    "summary": "España acumuló en 2026 un récord de 61 días bajo condiciones de ola de calor en Península y Baleares, según AEMET. No fue una sola ola de 61 días: hubo varios episodios, incluidos dos de 23 y 24 días. El verano meteorológico fue además el más cálido de la serie oficial iniciada en 1961, con una temperatura media peninsular de 24,5 °C, 2,4 °C por encima del promedio 1991–2020.",
+    "sourceFile": "3-ARTICULOS_11_15_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "AEMET — Balance verano 2026",
+        "url": "https://www.aemet.es/es/noticias/2026/09/resumen_verano2026"
+      },
+      {
+        "title": "AEMET — 61 días bajo ola de calor",
+        "url": "https://www.aemet.es/es/noticias/2026/09/olas_de_calor_2026"
+      },
+      {
+        "title": "AEMET — Julio 2026",
+        "url": "https://www.aemet.es/es/noticias/2026/08/resumen_julio2026"
+      }
+    ]
+  },
+  "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué exige la Ley de Montes?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué cambió en la planificación nacional en 2026?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Quién decide las medidas concretas alrededor de una vivienda?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué debería revisar un propietario?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué medidas tienen sentido aunque la norma local sea distinta?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 772,
+    "readingMinutes": 4,
+    "summary": "No existe una única distancia estatal de “limpieza alrededor de toda vivienda rural” aplicable de la misma forma en toda España. La Ley de Montes obliga a las comunidades autónomas a regular actividades, normas de seguridad para edificaciones y, específicamente, la prevención en zonas de interfaz urbano-forestal. Por tanto, las obligaciones concretas de una parcela dependen de comunidad autónoma, municipio, clasificación del terreno y planes aplicables.",
+    "sourceFile": "3-ARTICULOS_11_15_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "BOE — Ley 43/2003 de Montes",
+        "url": "https://boe.es/buscar/act.php?id=BOE-A-2003-21339"
+      },
+      {
+        "title": "BOE — Directriz Básica de incendios forestales 2026",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-9159"
+      },
+      {
+        "title": "BOE — RD 716/2025",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2025-17312"
+      },
+      {
+        "title": "Generalitat Valenciana — recomendaciones interfaz urbano-forestal",
+        "url": "https://mediambient.gva.es/documents/162905929/164304947/06-Interfaz%2Burbano-forestal-stopalfoc%2B%28154%2C3k%29/7b300ded-f4a7-4b76-a9a5-211d33dfbfd0"
+      }
+    ]
+  },
+  "es-alert-por-que-a-veces-no-llega-a-tu-movil": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Cómo llega el aviso sin saber mi número?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Por qué no sonó si tenía el móvil en silencio?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿ES-Alert necesita datos móviles o una app?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué debes hacer cuando llegue?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuente"
+      }
+    ],
+    "words": 697,
+    "readingMinutes": 4,
+    "summary": "ES-Alert no es un SMS enviado a tu número: utiliza Cell Broadcast para emitir el aviso desde las antenas móviles de la zona afectada a los terminales conectados a esas celdas. Si el teléfono está apagado o fuera de cobertura, no recibe la alerta en ese momento. Si vuelve a encenderse o entra en cobertura dentro de la zona mientras el aviso sigue vigente, Protección Civil indica que se mostrará entonces.",
+    "sourceFile": "3-ARTICULOS_11_15_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Protección Civil — Public Warning System / ES-Alert",
+        "url": "https://www.proteccioncivil.es/coordinacion/redes/ran/public-warning-system"
+      }
+    ]
+  },
+  "semaforos-sin-luz-como-moverte-durante-un-apagon": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué ocurrió con el tráfico durante el apagón de 2025?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Quién manda si un semáforo no funciona?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Es mejor caminar que conducir?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué ocurre con metro y tren?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué llevar si dependes del transporte urbano?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 784,
+    "readingMinutes": 4,
+    "summary": "Si un apagón deja semáforos fuera de servicio, la opción más segura es reducir desplazamientos y seguir las indicaciones de los agentes y autoridades. Durante el apagón ibérico del 28 de abril de 2025, la DGT pidió evitar viajes innecesarios y señaló que los principales problemas se produjeron en accesos a grandes ciudades precisamente por la interrupción de semáforos, que desplazó tráfico hacia vías de circunvalación.",
+    "sourceFile": "3-ARTICULOS_11_15_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "DGT — tráfico durante el apagón de 2025",
+        "url": "https://www.dgt.es/comunicacion/notas-de-prensa/20250429-trafico-garantizo-desplazamientos-por-carretera-no-se-produjeron-incidencias-relevantes/"
+      }
+    ]
+  },
+  "generador-en-casa-normativa-y-peligros-que-debes-evitar": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué dice el REBT sobre red y generador?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Puedo alimentar aparatos directamente?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Por qué el monóxido de carbono es el mayor peligro?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué ocurre con combustible, lluvia y mantenimiento?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores que pueden convertir una solución en un peligro"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 772,
+    "readingMinutes": 4,
+    "summary": "Un generador portátil no debe conectarse de cualquier manera a la instalación de una vivienda. Si va a alimentar circuitos fijos como fuente alternativa, el Reglamento Electrotécnico para Baja Tensión (REBT) exige condiciones técnicas y una conmutación que impida acoplar simultáneamente la red y el generador. Además, un generador de combustión nunca debe utilizarse dentro de casa, garaje o espacio cerrado por el riesgo de monóxido de carbono.",
+    "sourceFile": "4-ARTICULOS_16_20_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "BOE — Reglamento Electrotécnico para Baja Tensión e ITC-BT-40",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099"
+      },
+      {
+        "title": "CDC — seguridad con generadores durante apagones",
+        "url": "https://www.cdc.gov/natural-disasters/es/response/que-hacer-para-protegerse-durante-un-apagon.html"
+      }
+    ]
+  },
+  "evacuacion-de-vivienda-checklist-paso-a-paso": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué debes hacer al recibir una orden de evacuación?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué información familiar debería estar preparada?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué debería estar listo para coger?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Cómo elegir punto de encuentro?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-6",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 654,
+    "readingMinutes": 4,
+    "summary": "Si las autoridades ordenan evacuar, la prioridad es salir cuando se indique y seguir la ruta o instrucciones oficiales; no retrasar la salida para completar una mochila. La preparación debe hacerse antes. Un plan familiar permite saber quién ayuda a niños, mayores, personas con movilidad reducida y mascotas, qué medicación debe acompañarlos y dónde se reunirán si quedan separados.",
+    "sourceFile": "4-ARTICULOS_16_20_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Protección Civil — Manual Plan Familia Preparada",
+        "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
+      }
+    ]
+  },
+  "sin-cobertura-movil-como-comunicarte-de-verdad": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué probar primero cuando desaparece la cobertura?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Una radio permite hablar con la familia?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué aportan los mapas offline?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Y la comunicación por satélite?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué plan familiar funciona sin tecnología?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 712,
+    "readingMinutes": 4,
+    "summary": "Si falla la cobertura móvil, el plan más fiable no empieza comprando un walkie-talkie: empieza acordando de antemano dónde reunirse, a quién contactar y qué hacer si nadie puede llamar. Durante el apagón del 28 de abril de 2025 las telecomunicaciones sufrieron interrupciones y la radio recuperó protagonismo como fuente de información; el CIS registró un uso amplio de la radio durante el incidente.",
+    "sourceFile": "4-ARTICULOS_16_20_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "CIS — Estudio 3513 sobre el apagón del 28 de abril de 2025",
+        "url": "https://www.cis.es/es/estudios/encuesta-flash-sobre-el-apagon-electrico-del-28-de-abril"
+      },
+      {
+        "title": "Protección Civil — Plan Familia Preparada",
+        "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
+      }
+    ]
+  },
+  "preppers-espanoles-que-aprendieron-del-gran-apagon": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué contaron quienes ya estaban preparados?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué resultó más útil durante un corte de horas?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿La experiencia cambió los hábitos?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué lección es más transferible?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Preparacionismo significa esperar una catástrofe?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 788,
+    "readingMinutes": 4,
+    "summary": "Los testimonios de preparacionistas españoles tras el apagón de 2025 coinciden en algo sencillo: tener luz, radio, energía y un plan antes del corte evitó improvisar cuando las tiendas y las comunicaciones ya estaban afectadas. Pero esos testimonios no permiten afirmar cómo reaccionó “el prepper español medio”: son experiencias individuales publicadas por medios, no una muestra representativa.",
+    "sourceFile": "4-ARTICULOS_16_20_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "Xataka — entrevistas a dos preparacionistas, 29/04/2025",
+        "url": "https://www.xataka.com/magnet/ayer-me-senti-reivindicado-dos-preppers-espanoles-nos-cuentan-como-vivieron-gran-apagon-ayer"
+      },
+      {
+        "title": "La Voz de Asturias — caso de plan de contingencia, 19/05/2025",
+        "url": "https://www.lavozdeasturias.es/noticia/asturias/2025/05/18/duraba-72-horas-activabamos-refugio-finca-autosuficiente-asturias-plan-contingencia-ante-emergencias/00031747562961304635846.htm"
+      },
+      {
+        "title": "CIS — Encuesta flash, estudio 3513",
+        "url": "https://www.cis.es/es/estudios/encuesta-flash-sobre-el-apagon-electrico-del-28-de-abril"
+      },
+      {
+        "title": "DatosRTVE — encuesta sobre cambios tras el apagón",
+        "url": "https://www.rtve.es/noticias/20250528/apagon-encuesta-rtve-reacciones-ciudadania/16598407.shtml"
+      }
+    ]
+  },
+  "estaban-preparados-los-hogares-espanoles-para-el-apagon": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué midió exactamente el CIS?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué se compró después?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Cambió la vida cotidiana?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué podemos concluir sin exagerar?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Cómo comprobar si tu casa está preparada?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores al interpretar las encuestas"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes verificadas"
+      }
+    ],
+    "words": 939,
+    "readingMinutes": 5,
+    "summary": "No existe en las fuentes consultadas una encuesta nacional representativa que permita decir cuántos litros de agua o cuántos días de comida tenía cada hogar español antes del apagón de 2025. Sí existen datos mucho más concretos sobre lo que ocurrió: el CIS preguntó inmediatamente después qué habían echado en falta quienes detectaron carencias en casa, y RTVE preguntó semanas después qué habían comprado o cambiado sus participantes.",
+    "sourceFile": "4-ARTICULOS_16_20_MODO_CRISIS_SURVIVAL.html",
+    "sources": [
+      {
+        "title": "CIS — Estudio 3513, ficha y documentación",
+        "url": "https://www.cis.es/es/estudios/encuesta-flash-sobre-el-apagon-electrico-del-28-de-abril"
+      },
+      {
+        "title": "CIS — resultados de la Encuesta flash sobre el apagón",
+        "url": "https://www.cis.es/documents/d/guest/es3513vp_a"
+      },
+      {
+        "title": "DatosRTVE — resultados de encuesta un mes después",
+        "url": "https://www.rtve.es/noticias/20250528/apagon-encuesta-rtve-reacciones-ciudadania/16598407.shtml"
+      },
+      {
+        "title": "RTVE — testimonios un año después, 28/04/2026",
+        "url": "https://www.rtve.es/noticias/20260428/ano-apagon-cambio-vida-recordo-importancia-ser-previsores/17039731.shtml"
+      }
+    ]
+  },
+  "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Por qué intervino Protección Civil?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué hizo la DGT?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué riesgos concretos señalaron las autoridades?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Por qué unas gafas de sol normales no servían?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué enseñó este evento sobre preparación?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores y mitos"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 542,
+    "readingMinutes": 3,
+    "summary": "Artículo 21 · /aprendizaje/",
+    "sourceFile": "5-ARTICULOS_21_25_MODO_CRISIS_SURVIVAL.html",
+    "sources": []
+  },
+  "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Mito 1: “El alcohol te calienta si tienes hipotermia”"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Mito 2: “Un generador en el garaje es seguro si dejo la puerta abierta”"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Mito 3: “En un apagón, las velas son la mejor iluminación”"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Mito 4: “Si el agua parece limpia, se puede beber”"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Mito 5: “Cuanto más equipo lleves, más preparado estás”"
+      },
+      {
+        "id": "seccion-6",
+        "title": "¿Por qué sobreviven estos mitos?"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 519,
+    "readingMinutes": 3,
+    "summary": "Artículo 22 · /aprendizaje/",
+    "sourceFile": "5-ARTICULOS_21_25_MODO_CRISIS_SURVIVAL.html",
+    "sources": []
+  },
+  "verano-de-2026-el-mas-calido-de-la-serie-en-espana": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué récord batió exactamente?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Hubo una sola ola de calor de 61 días?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Qué temperaturas destacaron?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿También fue un verano seco?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Por qué AEMET habla de un “verano de cuatro meses”?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "¿Qué implica para preparación doméstica?"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-8",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-10",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 588,
+    "readingMinutes": 3,
+    "summary": "Artículo 23 · /aprendizaje/",
+    "sourceFile": "5-ARTICULOS_21_25_MODO_CRISIS_SURVIVAL.html",
+    "sources": []
+  },
+  "mascotas-en-emergencias-apagon-calor-y-evacuacion": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "¿Qué debería tener preparado para una evacuación?"
+      },
+      {
+        "id": "seccion-2",
+        "title": "¿Qué hacer con una mascota durante un apagón?"
+      },
+      {
+        "id": "seccion-3",
+        "title": "¿Cómo prepararse para calor extremo?"
+      },
+      {
+        "id": "seccion-4",
+        "title": "¿Qué pasa si el refugio no admite animales?"
+      },
+      {
+        "id": "seccion-5",
+        "title": "¿Qué datos deben acompañar a la mascota?"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-7",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 512,
+    "readingMinutes": 3,
+    "summary": "Artículo 24 · /guias/",
+    "sourceFile": "5-ARTICULOS_21_25_MODO_CRISIS_SURVIVAL.html",
+    "sources": []
+  },
+  "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "1. Bolsas de plástico resistentes: mucho más que basura"
+      },
+      {
+        "id": "seccion-2",
+        "title": "2. Cinta adhesiva: reparar, fijar y organizar"
+      },
+      {
+        "id": "seccion-3",
+        "title": "3. Toallas, sábanas y ropa seca: aislamiento improvisado"
+      },
+      {
+        "id": "seccion-4",
+        "title": "4. Botellas y recipientes: reserva y reparto"
+      },
+      {
+        "id": "seccion-5",
+        "title": "5. Silbato: señalizar sin gritar continuamente"
+      },
+      {
+        "id": "seccion-6",
+        "title": "6. Papel: cuando el móvil deja de ser tu memoria"
+      },
+      {
+        "id": "seccion-7",
+        "title": "7. Copias de llaves"
+      },
+      {
+        "id": "seccion-8",
+        "title": "¿Qué objetos NO deberías convertir en “herramientas de supervivencia”?"
+      },
+      {
+        "id": "seccion-9",
+        "title": "Errores comunes"
+      },
+      {
+        "id": "seccion-10",
+        "title": "FAQ"
+      },
+      {
+        "id": "seccion-11",
+        "title": "Enlazado interno sugerido"
+      },
+      {
+        "id": "seccion-12",
+        "title": "Fuentes"
+      }
+    ],
+    "words": 598,
+    "readingMinutes": 3,
+    "summary": "Artículo 25 · /aprendizaje/",
+    "sourceFile": "5-ARTICULOS_21_25_MODO_CRISIS_SURVIVAL.html",
+    "sources": []
+  },
+  "apagon-general-espana-pasos": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Qué se sabe del apagón del 28 de abril de 2025"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Qué hacer durante los primeros cinco minutos"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Cómo organizar la primera hora sin gastar toda la batería"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Hay que salir de casa o quedarse dentro"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Cuánto aguanta la comida de la nevera"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Qué errores convierten un apagón en una emergencia mayor"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Qué revisar cuando vuelve la electricidad"
+      },
+      {
+        "id": "seccion-8",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 1035,
+    "readingMinutes": 6,
+    "summary": "Un apagón exige resolver tres preguntas antes de buscar explicaciones: ¿hay alguien en peligro?, ¿el corte afecta solo a tu vivienda?, ¿puedes permanecer donde estás con seguridad? Averiguar la causa nacional no debe retrasar la ayuda a una persona que depende de un equipo eléctrico ni hacerte salir a una calle con semáforos apagados.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Fuente: informe final de ENTSO-E",
+        "url": "https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/"
+      },
+      {
+        "title": "Fuente: seguridad alimentaria en cortes eléctricos",
+        "url": "https://www.foodsafety.gov/keep-food-safe/food-safety-in-disaster-or-emergency"
+      },
+      {
+        "title": "Fuente: CDC, protección durante un apagón",
+        "url": "https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html"
+      },
+      {
+        "title": "Comisión Europea",
+        "url": "https://commission.europa.eu/topics/preparedness_es"
+      }
+    ]
+  },
+  "mochila-emergencia-72-horas-peso-realista": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Para qué situación está preparada esta mochila"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Qué productos concretos tiene sentido comprar"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Qué añadir sin comprar un kit cerrado"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Cuánta agua puede llevar una persona"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Cómo repartir el equipo en una familia"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Cómo probarla antes de darla por terminada"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 960,
+    "readingMinutes": 5,
+    "summary": "Una mochila de emergencia debe poder transportarse. Si al llenarla necesitas arrastrarla o no puedes bajar una escalera con ella, la lista ha fallado. La etiqueta «72 horas» tampoco significa que toda la autonomía doméstica tenga que ir sobre tus hombros: una reserva para permanecer en casa y una bolsa para evacuar resuelven situaciones distintas.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Fuente: Comisión Europea",
+        "url": "https://commission.europa.eu/topics/preparedness_es"
+      },
+      {
+        "title": "Decathlon",
+        "url": "https://www.decathlon.es/es/p/mochila-de-montana-y-senderismo-quechua-nh100-20-litros-roja/_/R-p-301674?c=marr%C3%B3n+dorado"
+      },
+      {
+        "title": "Decathlon",
+        "url": "https://www.decathlon.es/es/p/linterna-frontal-recargable-120-lumenes-hl100-usb/302568/c195c443m8505682"
+      },
+      {
+        "title": "Decathlon",
+        "url": "https://www.decathlon.es/es/p/bidon-filtrante-flexible-y-compresible-1-litro/375940/c149m8975330"
+      },
+      {
+        "title": "GRAYL Europa",
+        "url": "https://thegrayl.eu/products/16-9oz-ultrapress-filter-purifier-water-bottle-nature-edition"
+      }
+    ]
+  },
+  "agua-sin-electricidad-metodos-limites": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Qué método sirve para cada riesgo"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Cuánto tiempo hay que hervir el agua"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Un filtro de senderismo elimina virus"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Todas las pastillas potabilizadoras funcionan igual"
+      },
+      {
+        "id": "seccion-5",
+        "title": "La luz UV sirve durante un apagón"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Se puede beber agua de una DANA si se filtra y hierve"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 972,
+    "readingMinutes": 5,
+    "summary": "Antes de elegir pastillas, filtro o hervido hay que identificar el problema. El agua puede contener microorganismos, sustancias químicas o ambos. Un método útil contra bacterias no necesariamente elimina virus, y matar microorganismos no retira combustible, sales o metales disueltos.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "CDC sobre agua en emergencias",
+        "url": "https://www.cdc.gov/water-emergency/about/index.html"
+      },
+      {
+        "title": "Yellow Book sobre desinfección",
+        "url": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html"
+      },
+      {
+        "title": "Fuente: aviso de hervido",
+        "url": "https://www.cdc.gov/natural-disasters/psa-toolkit/boil-water-advisory.html"
+      },
+      {
+        "title": "Ficha del fabricante",
+        "url": "https://www.decathlon.es/es/p/bidon-filtrante-flexible-y-compresible-1-litro/375940/c149m8975330"
+      },
+      {
+        "title": "Fuente: tratamiento de agua en actividades y viajes",
+        "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+      }
+    ]
+  },
+  "lluvia-autoconsumo-generadores-normativa": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Es legal recoger agua de lluvia en una finca"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Puedo colocar un depósito en la terraza de un piso"
+      },
+      {
+        "id": "seccion-3",
+        "title": "El agua de lluvia recogida se puede beber"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Se pueden tener placas solares para autoabastecerse"
+      },
+      {
+        "id": "seccion-5",
+        "title": "Es legal utilizar un generador de gasolina en una vivienda"
+      },
+      {
+        "id": "seccion-6",
+        "title": "Basta con ponerlo en el balcón"
+      },
+      {
+        "id": "seccion-7",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 959,
+    "readingMinutes": 5,
+    "summary": "El autoabastecimiento no tiene una autorización única que lo cubra todo. Recoger lluvia, cultivar, instalar placas o utilizar un generador son actuaciones diferentes. Para saber qué puedes hacer hay que concretar el lugar, la instalación, el uso del recurso y si afecta a otras personas.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Real Decreto Legislativo 1/2001, artículo 54",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2001-14276#a54"
+      },
+      {
+        "title": "Ley 49/1960, artículo 7",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906"
+      },
+      {
+        "title": "Real Decreto 3/2023",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-628"
+      },
+      {
+        "title": "Texto consolidado del Real Decreto 244/2019",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089"
+      },
+      {
+        "title": "Real Decreto 842/2002, ITC-BT-40",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099"
+      },
+      {
+        "title": "CDC",
+        "url": "https://www.cdc.gov/natural-disasters/psa-toolkit/use-a-generator-safely.html"
+      },
+      {
+        "title": "Ley 37/2003",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-20976"
+      }
+    ]
+  },
+  "gps-movil-sin-internet-mapas-offline": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Qué puedes comprobar en casa"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Lo que esa ubicación no hace por ti"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 329,
+    "readingMinutes": 2,
+    "summary": "El mapa deja de cargar y aparece la conclusión automática: «Ya no tengo GPS». Sin embargo, puede haber fallado la descarga del mapa mientras el teléfono sigue recibiendo señales de navegación por satélite. Ubicación, cartografía y envío de mensajes son funciones diferentes.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Fuente: ESA, Outdoor Navigation",
+        "url": "https://gssc.esa.int/navipedia/index.php?title=Outdoor_Navigation"
+      }
+    ]
+  },
+  "bateria-10000-mah-cargas-reales": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Qué cálculo resulta más útil"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Cómo probar tu autonomía sin herramientas especiales"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 333,
+    "readingMinutes": 2,
+    "summary": "La cuenta parece obvia: batería externa de 10.000 mAh, móvil de 5.000 mAh, dos cargas. El problema es que comparar miliamperios hora sin comprobar la tensión mezcla cantidades que no describen directamente la misma energía disponible.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Especificaciones oficiales",
+        "url": "https://www.mi.com/es/product/xiaomi-33w-power-bank-10000-integrated-cable/specs/"
+      }
+    ]
+  },
+  "peso-reserva-familiar-emergencias": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "De dónde salen las famosas 72 horas"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Una prueba familiar que evita compras inútiles"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 336,
+    "readingMinutes": 2,
+    "summary": "Tres personas, tres días y una hipótesis de tres litros por persona y día: el resultado son 27 litros. Solo el agua pesa aproximadamente 27 kilos. No hemos añadido comida, ropa ni los propios recipientes.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Fuente: Comisión Europea",
+        "url": "https://commission.europa.eu/topics/preparedness_es"
+      }
+    ]
+  },
+  "filtros-agua-portatiles-comparativa-riesgo": {
+    "toc": [
+      {
+        "id": "seccion-1",
+        "title": "Qué diferencias tienen los cuatro modelos"
+      },
+      {
+        "id": "seccion-2",
+        "title": "Cuál elegiría para cada situación"
+      },
+      {
+        "id": "seccion-3",
+        "title": "Qué revisar antes de pagar"
+      },
+      {
+        "id": "seccion-4",
+        "title": "Preguntas frecuentes"
+      }
+    ],
+    "words": 753,
+    "readingMinutes": 4,
+    "summary": "Para elegir un filtro portátil, pregunta primero qué agua vas a tratar. Un equipo ligero de senderismo puede servir dentro de su uso previsto y ser insuficiente para otros riesgos. La capacidad declarada contra virus distingue opciones que, en una fotografía comercial, parecen hacer exactamente lo mismo.",
+    "sourceFile": "1-Contenidos_Modo_Crisis_Survival-1.html",
+    "sources": [
+      {
+        "title": "Decathlon bidón filtrante flexible 1 L, 8975330",
+        "url": "https://www.decathlon.es/es/p/bidon-filtrante-flexible-y-compresible-1-litro/375940/c149m8975330"
+      },
+      {
+        "title": "LifeStraw Peak Series Collapsible Squeeze 1 L",
+        "url": "https://eu.lifestraw.com/products/lifestraw-peak-series-collapsible-squeeze-1l-bottle-with-filter"
+      },
+      {
+        "title": "Katadyn BeFree 1 L Black Edition, 8020426",
+        "url": "https://eu.katadyngroup.com/produkte/wasseraufbereitung/wasserfilter/1090/katadyn-befree-filter-1.0-l-black-edition"
+      },
+      {
+        "title": "GRAYL UltraPress Nature 500 ml",
+        "url": "https://thegrayl.eu/products/16-9oz-ultrapress-filter-purifier-water-bottle-nature-edition"
+      }
+    ]
+  }
+}

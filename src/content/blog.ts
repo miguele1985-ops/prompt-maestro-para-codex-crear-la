@@ -32,6 +32,23 @@ export interface BlogAppUseGuide {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lluvia-autoconsumo-generadores-normativa",
+    title: "Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar",
+    excerpt: "Distingue captación, obras, instalaciones eléctricas y seguridad antes de preparar un sistema doméstico de respaldo en España.",
+    category: "Preparación del hogar", image: "/images/blog/generador-electrico-casa-seguro.jpg", imageAlt: "Equipo de respaldo eléctrico en exterior, imagen ilustrativa",
+    date: "25 septiembre 2026", publishedAt: "2026-09-25", readingTime: "8 min", keywords: ["recoger agua lluvia", "generador casa", "autoconsumo"], sections: [],
+    warning: "Consulta las ordenanzas y los requisitos de tu instalación con el organismo competente antes de realizar obras o conexiones.",
+    relatedLinks: [{ label: "Captación de lluvia", href: "/blog/calculadora-captacion-lluvia-supervivencia" }],
+  },
+  {
+    slug: "peso-reserva-familiar-emergencias",
+    title: "Cuánto pesa una reserva familiar de emergencia y cómo organizarla",
+    excerpt: "El agua cambia el peso de cualquier kit. Separa lo que guardas en casa de lo que puedes transportar y prepara una prueba familiar sencilla.",
+    category: "Preparación familiar", image: "/images/blog/mochila-emergencia-72h-comparativa.jpg", imageAlt: "Mochila y suministros de preparación familiar, imagen ilustrativa",
+    date: "25 septiembre 2026", publishedAt: "2026-09-25", readingTime: "4 min", keywords: ["reserva familiar", "peso mochila emergencia", "agua emergencia"], sections: [],
+    relatedLinks: [{ label: "Plan familiar", href: "/preparacion-familiar" }, { label: "Calculadora de agua", href: "/blog/calculadora-gestion-agua-supervivencia" }],
+  },
+  {
     slug: "que-debe-incluir-aplicacion-supervivencia-offline",
     title: "Qué debe incluir una aplicación de supervivencia offline",
     excerpt: "Una app de emergencias no debería depender solo de Internet: debe guardar guías, mapas, contactos, herramientas y recursos críticos en el dispositivo.",

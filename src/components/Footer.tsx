@@ -43,9 +43,9 @@ export function Footer() {
       <div className="footer-brand">
         <strong>{siteConfig.appName}</strong>
         <p>
-          Modo Crisis Survival es una aplicación de preparación y supervivencia offline diseñada para ayudar a organizar información, herramientas y recursos ante emergencias.
+          Guías de supervivencia, preparación familiar y comparativas de equipo. Aprende en la web y lleva tus recursos contigo con nuestra aplicación offline.
         </p>
-        <p>Versión: V 1.0</p>
+        <Link href="/aplicacion-supervivencia-offline">Conoce la aplicación para Android</Link>
       </div>
       <nav className="footer-columns" aria-label="Navegación de pie de página">
         {footerColumns.map((column) => (

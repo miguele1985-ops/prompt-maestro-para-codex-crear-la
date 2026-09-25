@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./journal.css";
+import "./editorial.css";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { StatsTracker } from "@/components/StatsTracker";
 import { siteConfig } from "@/content/site-config";
-import { appJsonLd, organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
+import { organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: siteConfig.seo.title,
@@ -45,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <CookieBanner />
         <StatsTracker />
-        <SeoJsonLd data={[organizationJsonLd(), websiteJsonLd(), appJsonLd()]} />
+        <SeoJsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
       </body>
     </html>
   );
