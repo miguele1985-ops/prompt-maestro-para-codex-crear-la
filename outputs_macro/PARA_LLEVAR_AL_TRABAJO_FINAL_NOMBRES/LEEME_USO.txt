@@ -1,0 +1,45 @@
+USO EN EL TRABAJO
+=================
+
+1. Copia esta carpeta completa al ordenador del trabajo o al pen drive.
+2. Abre calculadora_sustancias_macro.xlsm.
+3. Pulsa Habilitar contenido si Excel pregunta por las macros.
+4. Rellena las hojas:
+   - Base de datos: sustancias, purezas, precios base, precio unidad, clasificacion legal y si entra como fiscalizada.
+   - Calculadora: envoltorio, sustancia, pureza, peso neto, riqueza, calificacion y gramos no fiscalizados. La calificacion legal se rellena desde la base de datos al elegir la sustancia.
+   - Informe: datos que se sustituyen en las plantillas Word. Usa "DILIGENCIA PREVIA" para el numero de diligencias previas.
+5. Pulsa el boton Generar informe Word en la hoja Informe.
+6. Los documentos se guardan dentro de la carpeta informes.
+
+PLANTILLAS INCLUIDAS
+====================
+
+- plantilla_informe_sustancias.docx: genera el informe.
+- CARATULA plantilla.doc: genera la caratula.
+- Platilla oficio.docx: genera el oficio.
+
+IMPORTANTE
+==========
+
+- No hace falta ejecutar ningun .bat.
+- El Excel usa rutas relativas: busca las plantillas Word en la misma carpeta donde este el Excel.
+- En la caratula, el numero de atestado usa solo lo que hay antes de la barra "/".
+- En el informe y el oficio, el numero de diligencias se toma de "DILIGENCIA PREVIA".
+- El desplegable de Sustancia lee la base de datos desde la primera sustancia y no deberia mostrar huecos al principio.
+- En Base de datos, columna I "Precio Unidad": si tiene precio, se usa para valorar por unidades. En Calculadora se rellena menor dosis/unidades como peso neto x precio unidad.
+- En Base de datos, columna K "Sustancia no fiscalizada": con los datos actuales, Si entra en los cuadros verdes de valoracion y No no entra. Las sustancias con No salen en el primer cuadro del Word, pero no en los cuadros verdes.
+- Hachis y Ketamina se calculan solo como menor gramos: peso neto x precio gramos. En esos casos no se rellenan mayor, menor dosis ni los cortes.
+- Si el ordenador del trabajo bloquea todas las macros por politica de seguridad, Excel tampoco dejara ejecutar este sistema hasta que informatica habilite macros para este archivo o carpeta.
+
+SI ALGUNA VEZ HAY QUE RECARGAR LA MACRO
+=======================================
+
+El Excel de esta carpeta ya se ha guardado con la macro corregida. Si en otro ordenador Excel siguiera usando una version antigua, recarga el archivo GeneradorInformesExcel.bas asi:
+
+1. Abre calculadora_sustancias_macro.xlsm.
+2. Pulsa ALT + F11.
+3. En la izquierda, si ves un modulo llamado GeneradorInformesExcel, quitalo primero: boton derecho > Quitar GeneradorInformesExcel. Si pregunta si quieres exportarlo, pulsa No.
+4. En el menu, pulsa Archivo > Importar archivo.
+5. Elige GeneradorInformesExcel.bas, que esta en esta misma carpeta.
+6. Guarda el Excel.
+7. Vuelve a Excel y pulsa Generar informe Word.
