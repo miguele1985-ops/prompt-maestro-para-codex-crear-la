@@ -10,6 +10,7 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
+import { comparisonCategories } from "@/content/affiliate";
 import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
 import { officialApkUrl, siteConfig } from "@/content/site-config";
@@ -749,6 +750,26 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="content-band home-comparison-section">
+        <SectionHeader
+          eyebrow="Comparativas"
+          title="Equipo útil sin compras impulsivas"
+          description="Guías para elegir filtros de agua, baterías, radios, linternas y botiquines antes de necesitarlos. Las recomendaciones comerciales quedan separadas de las pantallas urgentes."
+        />
+        <div className="home-comparison-grid">
+          {comparisonCategories.slice(0, 3).map((category) => (
+            <article className="home-comparison-card" key={category.slug}>
+              <h3>{category.title}</h3>
+              <p>{category.summary}</p>
+              <Link href={category.guideHref}>Leer criterio</Link>
+            </article>
+          ))}
+        </div>
+        <Link className="button secondary home-comparison-link" href="/comparativas">
+          Ver todas las comparativas
+        </Link>
       </section>
 
       <section className="content-band">

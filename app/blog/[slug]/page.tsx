@@ -89,6 +89,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {section.bullets.map((item) => <li key={item}>{item}</li>)}
               </ul>
             ) : null}
+            {section.links ? (
+              <div className="blog-section-links">
+                {section.links.map((link) =>
+                  link.href.startsWith("http") ? (
+                    <a
+                      href={link.href}
+                      key={link.href}
+                      target="_blank"
+                      rel={link.sponsored ? "sponsored noopener noreferrer" : "noopener noreferrer"}
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} key={link.href}>{link.label}</Link>
+                  ),
+                )}
+              </div>
+            ) : null}
           </section>
         ))}
 

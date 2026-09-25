@@ -8,7 +8,7 @@ const baseSiteConfig = {
   slogan: "Tu tel\u00e9fono puede quedarse sin cobertura. Tu preparaci\u00f3n no deber\u00eda desaparecer con ella.",
   description:
     "Aplicaci\u00f3n de supervivencia offline, preparaci\u00f3n familiar, mapas MBTiles, gu\u00edas, bot\u00f3n SOS, calculadoras, inventarios, IA local opcional y herramientas para emergencias.",
-  siteUrl: "https://dominio-pendiente.example",
+  siteUrl: "https://www.modocrisissurvival.com",
   apkUrl: officialApkUrl,
   alternativeApkUrl: "Configurar antes de publicar",
   currentVersion: "V 1.0",
@@ -103,11 +103,10 @@ export const siteConfig = {
 export const navigation = [
   { label: "Inicio", href: "/" },
   { label: "Guías", href: "/guias-supervivencia" },
-  { label: "Blog", href: "/blog" },
   { label: "Herramientas", href: "/herramientas-supervivencia" },
-  { label: "Recursos", href: "/recursos-avanzados" },
-  { label: "Internet", href: "/con-uso-de-internet" },
   { label: "Aprendizaje", href: "/aprendizaje-supervivencia" },
-  { label: "IA y enciclopedia", href: "/ia-enciclopedia" },
+  { label: "Plantas y Fauna", href: "/plantas-y-fauna" },
+  { label: "App", href: "/aplicacion-supervivencia-offline" },
+  { label: "Sobre nosotros", href: "/sobre-nosotros" },
   { label: "Donar", href: "/donaciones" },
 ];

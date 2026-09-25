@@ -9,6 +9,7 @@ const footerColumns = [
       ["/guias-supervivencia", "Guías"],
       ["/herramientas-supervivencia", "Herramientas"],
       ["/recursos-avanzados", "Recursos avanzados"],
+      ["/comparativas", "Comparativas"],
       ["/con-uso-de-internet", "Con uso de Internet"],
     ],
   },
@@ -16,6 +17,7 @@ const footerColumns = [
     title: "App",
     links: [
       ["/aprendizaje-supervivencia", "Aprendizaje"],
+      ["/plantas-y-fauna", "Plantas y Fauna"],
       ["/ia-enciclopedia", "IA y enciclopedia"],
       ["/centro-descargas", "Centro de descargas"],
       ["/descargar", "Descarga"],
@@ -26,6 +28,7 @@ const footerColumns = [
     title: "Legal y contacto",
     links: [
       ["/aviso-legal", "Aviso legal"],
+      ["/sobre-nosotros", "Sobre nosotros"],
       ["/privacidad", "Privacidad"],
       ["/contacto", "Contacto"],
       ["/condiciones", "Condiciones"],

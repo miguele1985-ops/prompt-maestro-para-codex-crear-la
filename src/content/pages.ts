@@ -1296,6 +1296,78 @@ export const pages: ContentPage[] = [
     seoDescription: "Descarga mapas offline MBTiles, modelos GGUF de IA local e instrucciones para instalarlos en Modo Crisis Survival.",
     keywords: ["descargar mapas MBTiles", "modelo GGUF", "IA local Android", "Modo Crisis Survival descargas"]
   },
+  {
+    slug: "plantas-y-fauna",
+    title: "Plantas y Fauna",
+    eyebrow: "Enciclopedia offline",
+    description: "Entrada pública a las fichas educativas de plantas, animales y recursos naturales de Modo Crisis Survival.",
+    body: [
+      "Esta sección organiza contenidos de naturaleza y enciclopedia para aprender antes de necesitarlos. Las fichas deben utilizarse con prudencia: una imagen, una app o una descripción breve no certifican que una planta, hongo o animal sea seguro.",
+      "La prioridad es aprender a reconocer límites, evitar confusiones peligrosas y consultar fuentes fiables. La app mantiene recursos offline para estudiar y revisar, pero no sustituye formación práctica ni asesoramiento especializado.",
+    ],
+    highlights: ["Plantas", "Animales", "Hongos con máxima prudencia", "Nudos", "Huerto", "Límites de IA"],
+    sections: [
+      {
+        title: "Plantas comestibles y tóxicas",
+        body: "Las fichas ayudan a estudiar rasgos generales, hábitat y riesgos de confusión. No se debe consumir una especie solo porque coincida con una fotografía o descripción.",
+        items: ["Rasgos visibles", "Confusiones peligrosas", "Hábitat", "Época", "Avisos de seguridad"],
+        buttonLabel: "Ver IA y enciclopedia",
+        buttonHref: "/ia-enciclopedia",
+        warning: "Nunca consumas plantas, hongos o frutos silvestres basándote solo en una app.",
+      },
+      {
+        title: "Fauna y rastros",
+        body: "El contenido de fauna sirve para aprender comportamiento básico, huellas, señales de presencia y prevención de accidentes.",
+        items: ["Animales comunes", "Rastros", "Prevención", "Respeto al entorno"],
+      },
+      {
+        title: "Nudos, huerto y recursos naturales",
+        body: "La enciclopedia también conecta con nudos útiles, huerto básico, pesca, caza y otros contenidos que pueden tener normativa específica según zona y temporada.",
+        items: ["Nudos", "Huerto", "Caza y pesca", "Normativa local", "Uso responsable"],
+      },
+    ],
+    cta: "Abrir enciclopedia",
+    ctaHref: "/ia-enciclopedia",
+    seoTitle: "Plantas y fauna en Modo Crisis Survival",
+    seoDescription: "Fichas educativas de plantas, animales, nudos, huerto y recursos naturales de Modo Crisis Survival con avisos de seguridad y límites de identificación.",
+    keywords: ["plantas supervivencia", "fauna emergencia", "plantas tóxicas España", "enciclopedia offline"],
+  },
+  {
+    slug: "sobre-nosotros",
+    title: "Sobre Modo Crisis Survival",
+    eyebrow: "Proyecto independiente",
+    description: "Quién está detrás del proyecto, cómo se revisa el contenido y cómo se financia la web y la app.",
+    body: [
+      "Modo Crisis Survival es un proyecto independiente creado para reunir guías, herramientas, checklists, mapas offline y recursos de preparación en una app Android y una web pública.",
+      "El objetivo no es sustituir a servicios de emergencia, autoridades ni profesionales, sino ayudar a organizar información útil antes de una situación difícil.",
+    ],
+    highlights: ["Proyecto independiente", "App gratuita", "Revisión continua", "Fuentes oficiales", "Donaciones", "Afiliación transparente"],
+    sections: [
+      {
+        title: "Cómo se revisa el contenido",
+        body: "Las páginas combinan preparación práctica, avisos de seguridad y enlaces a fuentes oficiales cuando procede. Los contenidos de salud, plantas, agua, meteorología y emergencias se tratan como apoyo educativo, no como orden profesional.",
+        items: ["Fuentes oficiales cuando proceden", "Avisos visibles", "Sin promesas de seguridad absoluta", "Correcciones mediante formulario"],
+      },
+      {
+        title: "Cómo se financia",
+        body: "La app se ofrece de forma gratuita. El mantenimiento puede apoyarse con donaciones voluntarias y, en páginas de preparación no urgente, con enlaces de afiliado claramente identificados.",
+        items: ["Donaciones voluntarias", "Enlaces afiliados en comparativas", "Sin publicidad en pantallas urgentes", "Sin pago obligatorio para consultar guías críticas"],
+        buttonLabel: "Ver comparativas",
+        buttonHref: "/comparativas",
+      },
+      {
+        title: "Correcciones y contacto",
+        body: "Si detectas un error, una captura incorrecta, una instrucción confusa o un enlace roto, puedes avisar desde la página de contacto. Las correcciones ayudan a mejorar el proyecto.",
+        buttonLabel: "Contactar",
+        buttonHref: "/contacto",
+      },
+    ],
+    cta: "Descargar la app",
+    ctaHref: "/descargar",
+    seoTitle: "Sobre Modo Crisis Survival",
+    seoDescription: "Información sobre Modo Crisis Survival, proyecto independiente de preparación offline, revisión de contenidos, financiación, donaciones y afiliación transparente.",
+    keywords: ["Modo Crisis Survival", "sobre supervivencia offline", "app emergencias independiente", "financiación proyecto"],
+  },
 ];
 
 export const legalPages: ContentPage[] = [
@@ -1496,7 +1568,12 @@ export const legalPages: ContentPage[] = [
         items: ["Los derechos de código, diseño, textos, gráficos e iconos pertenecen a Miguel Ángel o a terceros licenciados", "Las condiciones pueden modificarse y publicarse en la web", "La continuidad del proyecto puede depender de tiempo, recursos, donaciones y viabilidad técnica", "Última actualización: [fecha]"],
       },
       {
-        title: "7. Legislación aplicable",
+        title: "7. Enlaces de afiliado y financiación",
+        body: "La web puede incluir enlaces de afiliado, especialmente en páginas de comparativas, preparación previa y elección de equipo. Si el usuario compra a través de esos enlaces, el proyecto puede recibir una comisión sin coste adicional para el usuario.",
+        items: ["Los enlaces de afiliado se identificarán de forma visible cuando correspondan", "Las pantallas urgentes, el 112 y las guías críticas no dependerán de comprar productos", "La selección de equipo debe revisarse con criterio, necesidades reales y límites del fabricante", "Las donaciones y la afiliación ayudan al mantenimiento, pero no convierten la app en un servicio oficial"],
+      },
+      {
+        title: "8. Legislación aplicable",
         body: "Estas Condiciones de Uso se rigen por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales competentes conforme a la normativa aplicable.",
         warning: "Este texto debe revisarse por un profesional legal antes de publicar la versión definitiva de la web y la app.",
       },
