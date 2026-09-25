@@ -11,6 +11,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } from "@/content/app-details";
 import { comparisonCategories } from "@/content/affiliate";
+import { orderedBlogPosts } from "@/content/blog";
 import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
 import { officialApkUrl, siteConfig } from "@/content/site-config";
@@ -27,6 +28,8 @@ const trustItems = [
   "Favoritos y buscador central",
   "SOS y alertas visibles",
 ];
+
+const homeLatestArticles = orderedBlogPosts.slice(0, 4);
 
 const screenshotAssets = [
   {
@@ -534,6 +537,11 @@ export default async function HomePage() {
           <p className="lead">
             Modo Crisis Survival convierte tu teléfono móvil en una completa herramienta de preparación, orientación y supervivencia, incluso cuando no tienes conexión a Internet.
           </p>
+          <div className="home-mode-panel" aria-label="Nueva modalidad de la web">
+            <span>Nueva modalidad 2026</span>
+            <strong>Web preparada para descarga, blog SEO, comparativas y administración remota</strong>
+            <p>El inicio ahora destaca la APK oficial, los artículos nuevos, las guías de compra con afiliado y el acceso a recursos offline.</p>
+          </div>
           <p>
             En un apagón, una catástrofe natural, una avería en una zona aislada o una pérdida de cobertura, muchas funciones habituales del teléfono dejan de estar disponibles. Esta app está pensada para que la información y las herramientas importantes sigan contigo.
           </p>
@@ -617,6 +625,57 @@ export default async function HomePage() {
 
       <section className="trust-strip" aria-label="Barra de confianza">
         {trustItems.map((item) => <span key={item}>{item}</span>)}
+      </section>
+
+      <section className="content-band home-new-mode-section" aria-labelledby="home-new-mode-title">
+        <div className="home-new-mode-copy">
+          <p className="eyebrow">Inicio renovado</p>
+          <h2 id="home-new-mode-title">Descarga, aprende y prepara tu app desde una web más directa</h2>
+          <p>
+            Esta portada agrupa lo importante arriba: APK oficial, QR de descarga, actualización, comparativas,
+            artículos SEO y recursos offline. Así se nota el cambio sin tener que bajar media página.
+          </p>
+          <div className="home-new-mode-actions">
+            <Link className="button primary" href="/descargar">Descargar APK oficial</Link>
+            <Link className="button secondary" href="/blog">Ver blog SEO</Link>
+            <Link className="button secondary" href="/comparativas">Comparativas Amazon</Link>
+            <Link className="button secondary" href="/vista-previa-web.html">Vista previa remota</Link>
+          </div>
+        </div>
+        <div className="home-new-mode-card">
+          <img src="/assets/img/qr-descarga-modo-crisis-survival.png" alt="QR de descarga de Modo Crisis Survival" loading="lazy" decoding="async" />
+          <div>
+            <span>APK oficial</span>
+            <strong>{visibleDownloadInfo.version}</strong>
+            <p>Escanea el QR o usa el botón de descarga para instalar la versión publicada.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="content-band home-latest-seo" aria-labelledby="home-latest-seo-title">
+        <SectionHeader
+          eyebrow="Blog actualizado"
+          title="Últimos artículos añadidos para mejorar SEO"
+          description="Nuevas guías con imágenes propias, enlaces internos y, cuando corresponde, enlaces de Amazon con afiliado."
+        />
+        <div className="home-latest-grid">
+          {homeLatestArticles.map((post) => (
+            <Link className="home-latest-card" href={`/blog/${post.slug}`} key={post.slug}>
+              <ResponsiveImage
+                src={post.image}
+                alt={post.imageAlt}
+                width={576}
+                height={324}
+                widths={[240, 360, 576]}
+                sizes="(max-width: 760px) 92vw, 260px"
+                loading="lazy"
+                decoding="async"
+              />
+              <span>{post.category}</span>
+              <strong>{post.title}</strong>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="content-band app-explainer">
