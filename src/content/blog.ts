@@ -1,4 +1,6 @@
 import { affiliateDisclosure, amazonSearchUrl } from "@/content/affiliate";
+import upgrades from "@/content/article-upgrades.json";
+import { editorialPhoto } from "@/content/editorial-photos";
 
 export interface BlogSection {
   heading: string;
@@ -357,7 +359,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Material adaptado", body: "Además de agua, luz y comida, revisa gafas, audífonos, pilas, cargadores, bastón, copias de recetas, ropa de abrigo y teléfonos escritos en papel.", bullets: ["Medicación suficiente y revisada", "Lista de dosis", "Contactos prioritarios", "Ayudas de movilidad", "Documentación sanitaria"] },
       { heading: "Plan de apoyo", body: "El plan familiar debe indicar quién llama, quién acompaña, dónde reunirse y cómo actuar si no hay cobertura. En Modo Crisis Survival puedes guardar esos datos para consultarlos sin Internet." },
     ],
-    relatedLinks: [{ label: "Documentos offline", href: "/documentos-offline" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
+    relatedLinks: [{ label: "Documentos offline", href: "/blog/documentacion-conviene-tener-disponible" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
   },
   {
     slug: "checklist-evacuacion-incendio-vivienda",
@@ -449,7 +451,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Privacidad primero", body: "La información médica es sensible. Protege el teléfono con bloqueo seguro y revisa qué documentos realmente necesitas llevar en el dispositivo." },
       { heading: "Organización dentro de la app", body: "Modo Crisis Survival permite preparar documentos, notas y contactos para que la información importante no dependa de encontrar correos o archivos en la nube." },
     ],
-    relatedLinks: [{ label: "Documentos offline", href: "/documentos-offline" }, { label: "Herramientas personales", href: "/herramientas-supervivencia" }],
+    relatedLinks: [{ label: "Documentos offline", href: "/blog/documentacion-conviene-tener-disponible" }, { label: "Herramientas personales", href: "/herramientas-supervivencia" }],
   },
   {
     slug: "rutas-evacuacion-mapas-offline",
@@ -1606,7 +1608,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "FAQ", body: "No debes llevar la serpiente al hospital si eso te expone. Una foto obtenida sin riesgo puede ayudar, pero no retrases la asistencia. Ante signos graves tras picadura de avispa o abeja, busca ayuda urgente y sigue tu plan médico si tienes autoinyector prescrito." }
     ],
     warning: "Contenido de seguridad. No sustituye atención médica ni instrucciones del 112 o de personal sanitario.",
-    relatedLinks: [{ label: "Plantas y fauna", href: "/plantas-y-fauna" }, { label: "Primeros auxilios", href: "/primeros-auxilios" }],
+    relatedLinks: [{ label: "Plantas y fauna", href: "/plantas-y-fauna" }, { label: "Guías de preparación", href: "/guias-supervivencia" }],
   },
   {
     slug: "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
@@ -1656,6 +1658,34 @@ export const blogPosts: BlogPost[] = [
     relatedLinks: [{ label: "Plantas y fauna", href: "/plantas-y-fauna" }, { label: "Descargar la app", href: "/descargar" }],
   }
 ];
+
+const refreshedEditorialCovers: Record<string, {image:string;alt:string}> = {
+  "dana-aviso-naranja-o-rojo-que-debes-hacer": {image:"lluvia-prevencion-editorial",alt:"Calle residencial con lluvia, imagen ilustrativa generada con IA; no representa un episodio real."},
+  "que-hacer-durante-dana": {image:"lluvia-prevencion-editorial",alt:"Entorno urbano durante una lluvia, imagen ilustrativa generada con IA."},
+  "como-prepararse-para-un-apagon": {image:"preparacion-apagon-editorial",alt:"Comprobación de una linterna frontal junto a una radio y batería externa en casa. Ilustración fotográfica generada con IA."},
+  "apagon-general-espana-pasos": {image:"preparacion-apagon-editorial",alt:"Material de iluminación y comunicación preparado en una cocina. Imagen generada con IA."},
+  "como-ahorrar-bateria-emergencia": {image:"preparacion-apagon-editorial",alt:"Batería externa, cable y equipo básico de comunicación. Imagen generada con IA."},
+  "que-guardar-mochila-72-horas": {image:"mochila-familiar-editorial",alt:"Persona preparando una mochila con abrigo y suministros en casa. Imagen generada con IA."},
+  "como-crear-plan-familiar-emergencia": {image:"mochila-familiar-editorial",alt:"Preparación doméstica de una mochila y documentos para una salida. Imagen generada con IA."},
+  "mochila-emergencia-72-horas-peso-realista": {image:"mochila-familiar-editorial",alt:"Mochila compacta con abrigo, botella y linterna. Imagen generada con IA."},
+  "peso-reserva-familiar-emergencias": {image:"mochila-familiar-editorial",alt:"Organización de suministros transportables en una vivienda. Imagen generada con IA."},
+};
+for (const post of blogPosts) {
+  const cover=refreshedEditorialCovers[post.slug];
+  if(cover){post.image=`/images/blog/${cover.image}.jpg`;post.imageAlt=cover.alt;}
+  const revision = upgrades[post.slug as keyof typeof upgrades];
+  if (revision) {
+    const photo = editorialPhoto(post.slug);
+    post.image = photo.image;
+    post.imageAlt = photo.alt;
+    post.excerpt = revision.keys.slice(0, 2).join(" ");
+    post.updatedAt = "2026-09-26";
+    const next = blogPosts.find((item) => item.slug === revision.next);
+    if (next && !post.relatedLinks?.some((link) => link.href === `/blog/${next.slug}`)) {
+      post.relatedLinks = [{ label: next.title, href: `/blog/${next.slug}` }, ...(post.relatedLinks ?? [])];
+    }
+  }
+}
 
 function blogPostDateValue(post: BlogPost) {
   return post.updatedAt ?? post.publishedAt ?? "";

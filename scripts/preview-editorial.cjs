@@ -3,7 +3,7 @@ const { JSDOM } = require('jsdom');
 const { chromium } = require('playwright');
 
 (async () => {
-  const origin = 'http://localhost:3000';
+  const origin = process.argv[2] || 'http://localhost:3000';
   const browser = await chromium.launch({ channel: 'msedge', headless: true });
   const page = await browser.newPage();
   for (const [name, width, height] of [['desktop',1440,1000],['mobile',390,844]]) {
@@ -42,6 +42,6 @@ const { chromium } = require('playwright');
   for (const link of document.querySelectorAll('a[href^="/"]')) link.href = 'https://www.modocrisissurvival.com' + link.getAttribute('href');
   const robots = document.createElement('meta'); robots.name='robots'; robots.content='noindex,follow'; document.head.append(robots);
   const style = document.createElement('style'); style.textContent='@media(max-width:1000px){.site-header{flex-wrap:wrap}.desktop-nav{display:flex!important;flex-wrap:wrap;width:100%}.desktop-nav a{font:12px Arial!important;padding:8px!important}}'; document.head.append(style);
-  fs.writeFileSync('public/inicio-remoto.html', '<!doctype html>\n' + document.documentElement.outerHTML);
+  fs.writeFileSync(process.argv[3] || 'public/inicio-remoto.html', '<!doctype html>\n' + document.documentElement.outerHTML);
   console.log('Standalone preview exported with embedded images and styles.');
 })();

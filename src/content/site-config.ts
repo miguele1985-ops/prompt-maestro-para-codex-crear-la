@@ -1,6 +1,5 @@
 import adminOverrides from "./admin-overrides.json";
 
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "";
 export const officialApkUrl = "https://descargas.modocrisissurvival.com/apk/supervivencia-offline-usuarios.apk";
 
 const baseSiteConfig = {
@@ -79,7 +78,7 @@ const siteOverrides = adminOverrides.site as Partial<typeof baseSiteConfig>;
 export const siteConfig = {
   ...baseSiteConfig,
   ...siteOverrides,
-  siteUrl: configuredSiteUrl || siteOverrides.siteUrl || baseSiteConfig.siteUrl,
+  siteUrl: baseSiteConfig.siteUrl,
   apkUrl: officialApkUrl,
   colors: {
     ...baseSiteConfig.colors,

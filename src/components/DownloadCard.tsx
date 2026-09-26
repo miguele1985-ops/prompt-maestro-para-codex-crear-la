@@ -43,17 +43,20 @@ export function QrDownload() {
 export function DownloadCard({
   compact = false,
   info = downloadInfo,
+  primaryHeading = false,
 }: {
   compact?: boolean;
   info?: Partial<DownloadInfo>;
+  primaryHeading?: boolean;
 }) {
   const current = { ...downloadInfo, ...info };
+  const Heading = primaryHeading ? "h1" : "h2";
 
   return (
     <section className="download-card" aria-labelledby="download-title">
       <div>
         <p className="eyebrow">APK oficial Android</p>
-        <h2 id="download-title">{current.name}</h2>
+        <Heading id="download-title">{current.name}</Heading>
         <dl className="download-meta">
           <div>
             <dt>Versión</dt>

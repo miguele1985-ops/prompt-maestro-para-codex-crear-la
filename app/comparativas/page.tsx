@@ -1,88 +1,9 @@
-import Link from "next/link";
-import type { Metadata } from "next";
-import { ExternalLink, ShieldCheck, ShoppingBag } from "lucide-react";
-import { affiliateDisclosure, amazonSearchUrl, comparisonCategories } from "@/content/affiliate";
-import { pageMetadata } from "@/lib/seo";
-
-export const metadata: Metadata = pageMetadata({
-  title: "Comparativas de equipo de emergencia",
-  description:
-    "Comparativas de filtros de agua, baterías externas, radios, linternas y botiquines para preparar el hogar y la mochila sin compras impulsivas.",
-  slug: "comparativas",
-  keywords: ["comparativas emergencia", "equipo supervivencia", "filtros agua", "powerbank emergencia", "radio emergencia"],
-});
-
-export default function ComparativasPage() {
-  return (
-    <>
-      <section className="page-hero comparison-hero">
-        <p className="eyebrow">Preparación antes de la emergencia</p>
-        <h1>Comparativas y recomendaciones documentadas</h1>
-        <p>
-          Elige equipo con criterio: qué mirar, qué límites tiene cada producto y cuándo comprar no resuelve el problema.
-          Las pantallas urgentes de Modo Crisis Survival se mantienen sin publicidad.
-        </p>
-      </section>
-
-      <section className="content-band affiliate-disclosure">
-        <ShieldCheck aria-hidden />
-        <div>
-          <h2>Transparencia de afiliación</h2>
-          <p>{affiliateDisclosure}</p>
-        </div>
-      </section>
-
-      <section className="content-band comparison-category-grid" aria-label="Categorías de comparativas">
-        {comparisonCategories.map((category) => (
-          <article className="comparison-category-card" key={category.slug}>
-            <div className="comparison-category-icon">
-              <ShoppingBag aria-hidden />
-            </div>
-            <div>
-              <p className="eyebrow">Comparativa</p>
-              <h2>{category.title}</h2>
-              <p>{category.summary}</p>
-              <div className="comparison-checklist">
-                {category.checklist.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </div>
-            <div className="comparison-actions">
-              <a href={amazonSearchUrl(category.amazonQuery)} target="_blank" rel="sponsored noopener noreferrer">
-                Ver opciones en Amazon <ExternalLink size={16} aria-hidden />
-              </a>
-              <Link href={category.guideHref}>
-                Leer criterio de compra
-              </Link>
-            </div>
-          </article>
-        ))}
-      </section>
-
-      <section className="content-band editorial-method">
-        <p className="eyebrow">Método editorial</p>
-        <h2>Cómo usamos las comparativas</h2>
-        <p>
-          Las comparativas no sustituyen instrucciones oficiales, formación ni sentido común. Sirven para preparar antes:
-          revisar necesidades reales, peso, mantenimiento, límites declarados por el fabricante y compatibilidad con la app
-          o la mochila familiar.
-        </p>
-        <div className="method-grid">
-          <article>
-            <h3>No se compra en mitad de una urgencia</h3>
-            <p>Primero seguridad, 112 y fuentes oficiales. La compra se decide antes, con calma y pruebas básicas.</p>
-          </article>
-          <article>
-            <h3>Sin datos inventados</h3>
-            <p>No publicamos reseñas de uso ni puntuaciones si no se han probado. Separamos ficha documental y prueba real.</p>
-          </article>
-          <article>
-            <h3>La app sigue siendo gratuita</h3>
-            <p>La afiliación ayuda a mantener el proyecto, pero las guías y recursos críticos siguen accesibles.</p>
-          </article>
-        </div>
-      </section>
-    </>
-  );
-}
+import Link from 'next/link';
+import { blogPosts } from '@/content/blog';
+import { affiliateDisclosure } from '@/content/affiliate';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
+import { pageMetadata } from '@/lib/seo';
+import { readingMinutes } from '@/lib/editorial';
+export const metadata=pageMetadata({title:'Comparativas de equipo de supervivencia y emergencia',description:'Elige mochilas, radios, filtros de agua y baterías con criterios de capacidad, mantenimiento y límites. Comparativas documentales con fuentes.',slug:'comparativas'});
+export default function ComparativasPage(){const posts=blogPosts.filter(post=>post.category==='Comparativas');return <div className="editorial-library"><div className="journal-section"><Breadcrumbs items={[{label:'Inicio',href:'/'},{label:'Comparativas',href:'/comparativas'}]} /><header className="editorial-library-heading"><p className="journal-kicker">Equipo que encaja con tu plan</p><h1>Compara antes de comprar</h1><p>Qué mirar, qué limitaciones importan y qué mantenimiento necesita cada equipo. Análisis documentales con fuentes, sin puntuaciones ni pruebas de uso inventadas.</p></header><p className="editorial-affiliate-notice">{affiliateDisclosure}</p><div className="editorial-library-grid">{posts.map(post=><article key={post.slug}><Link href={`/blog/${post.slug}`}><ResponsiveImage src={post.image} alt={post.imageAlt} width={576} height={360} sizes="(max-width:700px) 90vw, 360px" loading="lazy" /><div><span className="journal-kicker">Comparativa documental · {readingMinutes(post)} min</span><h2>{post.title}</h2><p>{post.excerpt}</p><span className="journal-read">Ver criterios y alternativas</span></div></Link></article>)}</div><section className="journal-editorial-method"><h2>Cómo leer estas comparativas</h2><p>Las fotografías son ilustrativas y no demuestran que hayamos probado el producto. Contrasta la ficha del modelo exacto, los recambios y las condiciones del vendedor. Reutilizar material que ya tienes puede ser la opción más adecuada.</p><Link href="/sobre-nosotros">Criterio editorial y financiación</Link></section></div></div>;}

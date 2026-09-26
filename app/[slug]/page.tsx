@@ -12,6 +12,7 @@ import { CrisisDemo, FaqAccordion, GuideSearch } from "@/components/Interactive"
 import { PayPalDonationBlock } from "@/components/PayPalDonationBlock";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { ShareButtons } from "@/components/ShareButtons";
+import { WebToolsLinks } from "@/components/WebToolsLinks";
 import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { changelog, downloadInfo } from "@/content/downloads";
@@ -491,7 +492,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const ogTitle = "Apoyar Supervivencia Offline";
   const ogDescription = "La app es gratuita. Si te resulta util, puedes apoyar el proyecto con una donacion voluntaria.";
-  const ogImage = absoluteUrl("/assets/img/og-supervivencia-offline.jpg");
+  const ogImage = absoluteUrl("/og.jpg");
 
   return {
     ...metadata,
@@ -558,6 +559,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       ) : null}
 
       {showPageContent ? (
+        <>
+        {isResourcesPage || page.slug === "herramientas-supervivencia" ? <WebToolsLinks /> : null}
         <section className="content-band page-content">
           {page.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -638,6 +641,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
             </article>
           ) : null}
         </section>
+        </>
       ) : null}
 
       {page.slug === "centro-descargas" ? (
@@ -691,7 +695,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
 
       {page.slug === "descargar" ? (
         <section className="content-band download-only-band">
-          <DownloadCard info={visibleDownloadInfo} />
+          <DownloadCard info={visibleDownloadInfo} primaryHeading />
           <BugReportForm source="Descargar aplicacion" title="Reportar un fallo de descarga" />
         </section>
       ) : null}

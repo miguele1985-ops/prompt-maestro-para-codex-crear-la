@@ -1,0 +1,182 @@
+{
+  "mejores-mochilas-de-emergencia-72h-en-espana-2026": {
+    "intro": "¿Podrías caminar con tu mochila de emergencia o solo moverla del armario al coche? Antes de comparar litros y bolsillos, decide quién la llevará y en qué situación. Esta guía te ayuda a elegir una base cómoda, separar la reserva doméstica del equipo de evacuación y evitar comprar capacidad que acabarás llenando sin necesidad.",
+    "keys": ["El ajuste y el peso cargado importan más que el aspecto táctico.", "Una mochila para salir no debe contener toda la reserva de casa.", "Las especificaciones del fabricante no equivalen a una prueba de campo propia."],
+    "action": "Vacía una mochila que ya tengas y reúne lo que realmente llevarías. Pésala, ajústala y prueba un recorrido corto en un entorno seguro. Anota qué molesta y qué sobra antes de buscar una nueva.",
+    "next": "evacuacion-de-vivienda-checklist-paso-a-paso"
+  },
+  "filtros-de-agua-portatiles-cuales-funcionan-de-verdad": {
+    "intro": "Un filtro puede ser una buena compra y aun así no servir para el agua que tienes delante. Antes de elegirlo, necesitas saber qué contaminantes trata, cuáles deja pasar y cómo se mantiene. Aquí comparamos tecnologías y limitaciones para que no confundas agua transparente con agua segura.",
+    "keys": ["Define el riesgo del agua antes de elegir tecnología.", "Busca límites y ensayos concretos, no solo la palabra purificador.", "Incluye recambios, limpieza y vida útil en el presupuesto."],
+    "action": "Abre el manual del filtro que estés considerando y localiza tres datos: contaminantes tratados, condiciones de uso y procedimiento de mantenimiento. Si alguno falta, pregunta al fabricante antes de comprar.",
+    "next": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas"
+  },
+  "generador-electrico-para-casa-cual-comprar-sin-riesgos": {
+    "intro": "Querer mantener encendida la nevera durante un apagón no significa que necesites un generador de combustible. La primera decisión es dónde podrías usarlo y qué aparatos son prioritarios. Después llegan la potencia, la autonomía y el ruido. Esta comparación empieza por esas preguntas para evitar una compra inútil o peligrosa.",
+    "keys": ["Distingue un generador de combustible de una batería portátil.", "Comprueba potencia continua y arranque de los aparatos.", "No improvises conexiones a la instalación de la vivienda."],
+    "action": "Haz una lista de los aparatos imprescindibles y consulta sus etiquetas o manuales. Separa lo que puedes dejar apagado de lo que requiere continuidad y lleva esa lista a un instalador si necesitas respaldo conectado a la vivienda.",
+    "next": "generador-en-casa-normativa-y-peligros-que-debes-evitar"
+  },
+  "radios-de-manivela-y-a-pilas-para-emergencias": {
+    "intro": "Cuando el móvil pierde batería, una radio solo resulta útil si puedes sintonizarla y alimentarla sin pelearte con sus controles. ¿Pilas, batería o manivela? Vamos a separar lo que ayuda de verdad de los extras que quedan bien en la caja, con criterios para elegir y probarla antes de necesitarla.",
+    "keys": ["Prueba recepción dentro de tu vivienda.", "Valora controles sencillos y alimentación de repuesto.", "La manivela es un apoyo, no una promesa de energía ilimitada."],
+    "action": "Sintoniza una emisora informativa en varios puntos de casa. Deja anotada su frecuencia junto a la radio y comprueba que otra persona sabe encenderla, ajustar el volumen y cambiar su alimentación.",
+    "next": "sin-cobertura-movil-como-comunicarte-de-verdad"
+  },
+  "powerbanks-solares-aguantan-un-apagon-largo": {
+    "intro": "El pequeño panel de una batería solar no te dice cuántas cargas tendrás cuando se vaya la luz. Para decidir si compensa, separa la energía que llevas almacenada de la que podrías recuperar del sol. Esta guía explica qué mirar en capacidad, entradas y tiempos sin convertir una cifra de publicidad en una garantía.",
+    "keys": ["Capacidad almacenada y velocidad de recarga son datos distintos.", "El resultado depende del panel, orientación y condiciones de luz.", "Comprueba compatibilidad de cables y dispositivos antes del apagón."],
+    "action": "Carga tu batería desde la red y prueba con el teléfono que usarás. Anota el resultado real y conserva el cable adecuado con ella. Revisa después si el panel aporta algo útil a tu escenario o solo añade volumen.",
+    "next": "radios-de-manivela-y-a-pilas-para-emergencias"
+  },
+  "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu": {
+    "intro": "Un botiquín con muchas piezas puede fallar en lo más sencillo: que nadie encuentre lo necesario. Comprar uno hecho ahorra tiempo; montarlo permite ajustar el contenido. Aquí tienes criterios para comparar ambos sin confundir material de primeros auxilios con un cajón de medicamentos.",
+    "keys": ["Compara contenido útil, no el número de piezas.", "Revisa embalajes, caducidades y accesibilidad.", "Tener material no sustituye saber utilizarlo."],
+    "action": "Revisa el botiquín sin estrenar ni abrir material estéril. Separa lo caducado o deteriorado, apunta lo que falta y acuerda un lugar conocido por los adultos responsables, fuera del alcance de niños pequeños.",
+    "next": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
+  },
+  "depositos-de-agua-para-emergencias-que-capacidad-elegir": {
+    "intro": "Un depósito de veinte litros resuelve poco si no puedes levantarlo, limpiarlo o sacar el agua con facilidad. Elegir capacidad también es elegir dónde guardarlo y quién podrá moverlo. Esta guía compara tamaños y formatos para organizar una reserva manejable, no solo una cifra grande de litros.",
+    "keys": ["Comprueba que el recipiente sea apto para agua potable.", "Reparte la reserva y valora el peso de cada unidad.", "El acceso para limpiar y secar cuenta tanto como la capacidad."],
+    "action": "Mide el espacio disponible y prueba a mover un recipiente con una cantidad de agua que puedas manejar cómodamente. Decide qué parte de la reserva será fija y qué parte necesitarías transportar.",
+    "next": "calculadora-gestion-agua-supervivencia"
+  },
+  "linterna-frontal-vs-de-mano-para-un-apagon": {
+    "intro": "Buscar una llave, bajar una escalera o atender a otra persona cambia mucho cuando tienes las manos libres. Pero una frontal no sustituye todos los usos de una linterna. Comparamos autonomía, alimentación y comodidad para elegir según la tarea, sin dejar que el máximo de lúmenes decida por ti.",
+    "keys": ["La frontal libera las manos; la de mano permite orientar el haz por separado.", "Compara la autonomía en el modo que realmente usarás.", "Comprueba manejo, repuestos y deslumbramiento dentro de casa."],
+    "action": "Prueba la luz en una habitación a oscuras y en un recorrido doméstico despejado. Comprueba si puedes cambiar de modo sin mirar y si otro miembro de la familia sabe dónde están las pilas o el cable.",
+    "next": "radios-de-manivela-y-a-pilas-para-emergencias"
+  },
+  "kit-de-emergencia-para-el-coche-que-llevar-en-2026": {
+    "intro": "La mejor bolsa de emergencia para el coche es la que puedes alcanzar cuando hace falta. Antes de llenarla de accesorios, separa equipamiento reglamentario, material para una espera y necesidades personales. Esta lista te ayuda a preparar el vehículo sin pagar por objetos que solo ocupan maletero.",
+    "keys": ["Consulta la normativa aplicable a tu vehículo y país.", "Lo necesario antes de salir debe estar accesible desde el habitáculo.", "Adapta agua, abrigo y energía al viaje y la estación."],
+    "action": "Con el coche estacionado de forma segura, localiza el material sin descargar todo el maletero. Revisa el modelo de señalización en la lista oficial de la DGT y sustituye lo deteriorado o descargado.",
+    "next": "semaforos-sin-luz-como-moverte-durante-un-apagon"
+  },
+  "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces": {
+    "intro": "Después de un gran apagón es fácil quedarse con un titular y difícil distinguir qué cambió realmente. Este artículo separa el análisis del incidente, las medidas posteriores y lo que sigue dependiendo de cada hogar. El objetivo no es predecir el próximo corte, sino entender qué aprendizajes puedes aprovechar.",
+    "keys": ["Distingue causas documentadas de explicaciones simplificadas.", "Una mejora del sistema no elimina toda posibilidad de interrupción.", "Traduce la información en un plan doméstico proporcionado."],
+    "action": "Anota qué habría quedado interrumpido en tu casa: comunicación, acceso, iluminación o necesidades personales. Elige una carencia que puedas resolver esta semana, sin comprar un equipo completo por impulso.",
+    "next": "estaban-preparados-los-hogares-espanoles-para-el-apagon"
+  },
+  "dana-aviso-naranja-o-rojo-que-debes-hacer": {
+    "intro": "Llega un aviso de lluvias y la pregunta es inmediata: ¿afecta a mi zona y qué debo cambiar hoy? El color es solo una parte del mensaje. Aprende a leer el fenómeno, el lugar y el horario, y a distinguir un aviso meteorológico de las instrucciones concretas de protección civil.",
+    "keys": ["Lee zona, fenómeno y periodo de validez, no solo el color.", "Consulta instrucciones de las autoridades de tu localidad.", "Un plan alternativo de desplazamiento se prepara antes de salir."],
+    "action": "Guarda los canales oficiales de tu municipio y de AEMET. Revisa tus desplazamientos previstos y acuerda con tu familia cómo comunicar cambios, siempre dando prioridad a las instrucciones de emergencia.",
+    "next": "es-alert-por-que-a-veces-no-llega-a-tu-movil"
+  },
+  "calor-extremo-de-2026-61-dias-bajo-ola-de-calor": {
+    "intro": "Un día muy caluroso y varias jornadas sin descanso nocturno no plantean el mismo problema en casa. Más allá del récord de 2026, importa saber cómo organizar la vivienda, los horarios y el apoyo a quienes lo necesitan. Aquí conectamos los datos del episodio con preguntas prácticas para preparar los próximos avisos.",
+    "keys": ["Una cifra anual no describe la exposición de cada municipio.", "Consulta previsiones y avisos de tu zona.", "Planifica ayuda y una alternativa si la vivienda no resulta adecuada."],
+    "action": "Identifica una persona con la que mantener contacto durante los avisos y un lugar cercano donde puedas buscar un ambiente más fresco. Consulta su horario real antes de necesitarlo.",
+    "next": "mascotas-en-emergencias-apagon-calor-y-evacuacion"
+  },
+  "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026": {
+    "intro": "Vivir cerca del monte obliga a mirar más allá de la puerta de casa. ¿Qué puedes revisar tú y qué depende del ayuntamiento o de la comunidad autónoma? Esta guía distingue preparación de la vivienda, acceso y obligaciones locales para que no apliques una regla genérica donde corresponde una norma concreta.",
+    "keys": ["No todas las obligaciones son iguales en cada territorio.", "Revisa accesos y el plan familiar antes de la temporada de riesgo.", "Consulta permisos antes de actuar sobre vegetación o parcelas."],
+    "action": "Solicita a tu ayuntamiento las indicaciones aplicables a tu dirección. Comprueba cómo recibirías un aviso y acuerda un punto de encuentro; no esperes a un incendio para decidir quién ayuda a cada persona.",
+    "next": "evacuacion-de-vivienda-checklist-paso-a-paso"
+  },
+  "es-alert-por-que-a-veces-no-llega-a-tu-movil": {
+    "intro": "Que otra persona reciba una alerta y tú no la veas no demuestra, por sí solo, que tu móvil esté averiado. La recepción depende de la zona y de condiciones técnicas. Esta guía explica qué revisar y por qué conviene tener más de una forma de informarte, sin confiar toda la preparación a una notificación.",
+    "keys": ["No uses la ausencia de aviso como confirmación de que no hay riesgo.", "Comprueba compatibilidad y ajustes siguiendo instrucciones oficiales.", "Una alerta sirve para actuar según su texto, no para reenviar rumores."],
+    "action": "Localiza la información oficial de alertas de tu teléfono y de Protección Civil. Acuerda un canal alternativo con tu familia y guarda los contactos importantes también fuera del móvil.",
+    "next": "sin-cobertura-movil-como-comunicarte-de-verdad"
+  },
+  "semaforos-sin-luz-como-moverte-durante-un-apagon": {
+    "intro": "Un cruce que recorres todos los días cambia cuando dejan de funcionar los semáforos. Antes de salir durante un apagón, conviene preguntarse si el desplazamiento es necesario y qué información tienes del recorrido. Repasamos las prioridades y los riesgos sin convertir la costumbre en una falsa sensación de control.",
+    "keys": ["Un trayecto habitual puede dejar de ser previsible.", "Sigue las indicaciones de agentes y la señalización aplicable.", "Evita sumar desplazamientos innecesarios a una incidencia."],
+    "action": "Prepara una alternativa para recoger a familiares o aplazar un desplazamiento sin depender de mensajes de último minuto. Guarda un mapa offline de tu zona y acuerda un punto de encuentro accesible.",
+    "next": "kit-de-emergencia-para-el-coche-que-llevar-en-2026"
+  },
+  "generador-en-casa-normativa-y-peligros-que-debes-evitar": {
+    "intro": "Antes de comprar combustible o un alargador, hay una pregunta decisiva: ¿puedes usar ese generador en un lugar adecuado? Un garaje abierto no es lo mismo que un emplazamiento seguro. Esta guía separa riesgos de uso, conexión eléctrica y requisitos locales para que no improvises durante un corte.",
+    "keys": ["Ventilación aparente no equivale a un emplazamiento seguro.", "La instalación eléctrica no admite conexiones improvisadas.", "Comprueba instrucciones del fabricante y requisitos locales."],
+    "action": "Si estás valorando un generador, consulta su manual y explica a un profesional dónde piensas usarlo y qué quieres alimentar. Si el emplazamiento no cumple las condiciones, cambia de solución antes de comprar.",
+    "next": "generador-electrico-para-casa-cual-comprar-sin-riesgos"
+  },
+  "evacuacion-de-vivienda-checklist-paso-a-paso": {
+    "intro": "Si tuvieras que salir de casa con poco tiempo, ¿sabrías quién recoge la medicación, quién ayuda a otra persona y dónde os reuniréis? Una evacuación se prepara repartiendo decisiones, no solo llenando una mochila. Usa esta guía para convertir una lista de objetos en un plan familiar practicable.",
+    "keys": ["Las instrucciones de las autoridades prevalecen sobre la lista.", "Reparte responsabilidades según movilidad y necesidades.", "Prepara un encuentro alternativo si no podéis comunicaros."],
+    "action": "Haced un ensayo tranquilo, sin prisas ni bloquear salidas. Cada persona debe poder explicar su tarea y el punto de encuentro. Ajustad el plan si depende de una sola persona o de un teléfono concreto.",
+    "next": "mejores-mochilas-de-emergencia-72h-en-espana-2026"
+  },
+  "sin-cobertura-movil-como-comunicarte-de-verdad": {
+    "intro": "Cuando falla la cobertura, instalar otra aplicación no crea una red donde no la hay. Lo que sí ayuda es conocer qué necesita cada sistema y acordar un plan antes. Aquí distinguimos cobertura, conexión a Internet y comunicación local para elegir alternativas con límites claros.",
+    "keys": ["Una app offline no transmite mensajes por sí sola a distancia.", "Prueba cualquier sistema local con los dispositivos que usarás.", "Un punto y una hora acordados pueden resolver una falta de contacto."],
+    "action": "Escribid en papel dos contactos y un punto de encuentro. Probad la herramienta elegida sin datos móviles en una situación controlada y comprobad qué deja de funcionar al perder Internet.",
+    "next": "radios-de-manivela-y-a-pilas-para-emergencias"
+  },
+  "preppers-espanoles-que-aprendieron-del-gran-apagon": {
+    "intro": "Prepararse no exige una casa aislada ni un almacén lleno. El apagón dejó preguntas muy corrientes: cómo informarse, cargar un móvil o encontrar luz. Miramos esas necesidades sin idealizar el preparacionismo y sin presentar testimonios aislados como si describieran a toda España.",
+    "keys": ["Empieza por problemas cotidianos antes de comprar equipo especializado.", "Una experiencia personal no es una encuesta representativa.", "La preparación también consiste en acuerdos y hábitos."],
+    "action": "Haz un inventario breve de lo que ya tienes. Selecciona una mejora de organización y otra de material, con un presupuesto definido. Evita comprar duplicados antes de haber probado lo existente.",
+    "next": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
+  },
+  "estaban-preparados-los-hogares-espanoles-para-el-apagon": {
+    "intro": "Un porcentaje llamativo puede contar menos de lo que parece. Para saber qué faltó en los hogares durante el apagón, hay que mirar a quién se preguntó y qué significa cada respuesta. Esta lectura de los datos te ayuda a distinguir evidencia de titulares y a revisar tus propias carencias sin alarmismo.",
+    "keys": ["Comprueba el tamaño y la definición del grupo encuestado.", "Echar algo en falta no equivale a no tenerlo en todos los hogares.", "Usa los datos para formular preguntas, no para comprar por miedo."],
+    "action": "Repasa iluminación, comunicación, agua y necesidades personales en tu vivienda. Anota una respuesta concreta para cada punto y comprueba físicamente los recursos, en lugar de dar por hecho que están disponibles.",
+    "next": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces"
+  },
+  "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos": {
+    "intro": "Un fenómeno astronómico previsible también puede poner a prueba carreteras, comunicaciones y espacios naturales. El eclipse de agosto de 2026 permite entender por qué las autoridades preparan un evento con antelación y qué puede aprender un viajero para la próxima gran concentración.",
+    "keys": ["Separa el fenómeno astronómico de los riesgos del desplazamiento.", "Las instrucciones de observación no se sustituyen por trucos caseros.", "Planifica salida, regreso y comunicación antes de una concentración."],
+    "action": "Para tu próximo evento multitudinario, descarga el itinerario y consulta restricciones oficiales. Acuerda un punto de encuentro y una alternativa de regreso, sin depender de que la red móvil funcione con normalidad.",
+    "next": "sin-cobertura-movil-como-comunicarte-de-verdad"
+  },
+  "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro": {
+    "intro": "Un consejo repetido muchas veces no se convierte en una buena decisión. Algunos trucos de supervivencia mezclan una sensación convincente con una conclusión peligrosa. Revisamos cinco ideas populares y, sobre todo, el criterio que puedes usar para no caer en la siguiente.",
+    "keys": ["Busca una fuente identificable y condiciones de aplicación.", "Desconfía de soluciones que prometen resolver cualquier emergencia.", "Aprender los límites de una técnica es parte de aprenderla."],
+    "action": "Elige un consejo de emergencia que tengas guardado y busca su fuente original. Si no puedes encontrarla o no explica riesgos y límites, no lo incorpores a tu plan solo porque se haya compartido mucho.",
+    "next": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
+  },
+  "verano-de-2026-el-mas-calido-de-la-serie-en-espana": {
+    "intro": "El récord de un verano no cuenta cómo se vivió en cada casa, pero sí invita a revisar la preparación para el calor. Aquí explicamos qué mide el balance climático y cómo leerlo sin confundir medias nacionales, olas de calor y temperaturas de tu municipio.",
+    "keys": ["Una media nacional no sustituye el aviso local.", "Distingue un balance pasado de una previsión para mañana.", "Las noches y la duración del episodio también importan al planificar."],
+    "action": "Guarda una fuente oficial de previsión local y revisa qué habitaciones reciben más sol. Organiza de antemano cómo pedirías ayuda y a dónde acudirías si no puedes mantener condiciones adecuadas en casa.",
+    "next": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor"
+  },
+  "mascotas-en-emergencias-apagon-calor-y-evacuacion": {
+    "intro": "La mochila está preparada, pero ¿puedes salir con tu mascota sin buscar el transportín, su documentación o un destino que la admita? Incluirla en el plan familiar cambia el transporte, los suministros y el lugar de encuentro. Esta guía reúne las decisiones que conviene tomar antes de una urgencia.",
+    "keys": ["Prepara transporte e identificación adecuados al animal.", "Comprueba con antelación qué destinos admiten mascotas.", "Consulta las necesidades particulares con su veterinario."],
+    "action": "Reúne documentación y contactos veterinarios y comprueba que el medio de transporte está disponible. Confirma una alternativa de alojamiento que admita al animal; no presupongas que cualquier refugio lo hará.",
+    "next": "evacuacion-de-vivienda-checklist-paso-a-paso"
+  },
+  "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia": {
+    "intro": "Antes de comprar un kit, abre tus armarios: quizá ya tengas parte de lo que necesitas. El reto es reunirlo, comprobar su estado y conocer sus límites. Estos objetos corrientes pueden ayudarte a organizar, proteger o transportar sin recurrir a inventos que creen un riesgo nuevo.",
+    "keys": ["Asigna una función concreta a cada objeto.", "Reutilizar no significa improvisar reparaciones peligrosas.", "Una lista corta y localizada sirve más que material disperso."],
+    "action": "Reúne en una caja los objetos de la lista que ya tengas y estén en buen estado. Escribe dónde guardarás el resto y qué usos no debes darles. Compra después únicamente las carencias reales.",
+    "next": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu"
+  },
+  "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar": {
+    "intro": "Reconocer un nudo en una imagen es más fácil que hacerlo, revisarlo y recordar sus límites. Para tareas cotidianas, vale más practicar unos pocos que memorizar una colección. Esta guía te ayuda a elegir por función y a organizar una práctica sin cargas críticas ni personas suspendidas.",
+    "keys": ["Aprende la función y las limitaciones, no solo la forma.", "Practica con una cuerda visible y sin carga crítica.", "Escalada, rescate y altura requieren formación específica."],
+    "action": "Elige un solo nudo de una fuente técnica fiable y practícalo sobre una mesa. Deshazlo y repítelo, explicando qué función tiene y para qué no debes usarlo. No conviertas este ejercicio en una prueba de seguridad.",
+    "next": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
+  },
+  "animales-venenosos-de-espana-cuales-hay-y-que-hacer": {
+    "intro": "Encontrarte con un animal desconocido no exige acercarte para identificarlo. La primera ventaja es mantener distancia y evitar otro contacto. Esta guía distingue prevención, información sobre especies y motivos para buscar asistencia, sin convertir una fotografía en un diagnóstico.",
+    "keys": ["No captures ni manipules al animal para identificarlo.", "Una guía general no permite valorar una lesión individual.", "Conoce los canales de ayuda antes de salir al campo."],
+    "action": "Antes de una salida, revisa la cobertura y guarda la ubicación de tu recorrido. Lleva contactos de emergencia accesibles y enseña a quienes te acompañan a no tocar animales desconocidos.",
+    "next": "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro"
+  },
+  "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas": {
+    "intro": "Que el agua parezca limpia no responde a la pregunta importante: ¿qué puede contener? Sin filtro ni pastillas, la decisión depende del tipo de contaminación y de las fuentes disponibles. Esta guía explica los límites del tratamiento doméstico y cuándo no debes intentar recuperar un agua sospechosa.",
+    "keys": ["Aclarar el agua no equivale a desinfectarla.", "Un tratamiento para microbios no resuelve cualquier contaminante.", "Sigue las indicaciones locales sobre el suministro."],
+    "action": "Prepara una reserva de agua segura antes de una incidencia y comprueba dónde se publican los avisos de tu abastecimiento. Guarda esas indicaciones junto a tu plan doméstico, sin esperar a que falle Internet.",
+    "next": "depositos-de-agua-para-emergencias-que-capacidad-elegir"
+  },
+  "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas": {
+    "intro": "Una seta parecida a la de una fotografía sigue siendo una seta sin identificar. Este artículo no ofrece una lista para decidir qué comer: explica por qué fallan los atajos y qué debe aportar un aprendizaje responsable. La decisión útil ante la duda es detenerse, no buscar otra imagen que confirme lo que esperabas.",
+    "keys": ["No decidas el consumo con una fotografía o una app.", "Descarta reglas populares sobre olor, color o animales que las comen.", "Una sospecha de intoxicación requiere atención, no una búsqueda prolongada."],
+    "action": "Si quieres aprender micología, busca una asociación o formación especializada de tu zona. Separa la observación de la recolección para consumo y no uses imágenes generadas como referencia de identificación.",
+    "next": "plantas-comestibles-y-peligrosas-que-se-pueden-confundir"
+  },
+  "plantas-comestibles-y-peligrosas-que-se-pueden-confundir": {
+    "intro": "Dos plantas pueden parecerse en una pantalla y tener consecuencias muy distintas al ingerirlas. Antes de aprender nombres comestibles, conviene entender por qué una identificación puede fallar. Esta guía se centra en límites, confusiones y aprendizaje responsable, no en autorizar el consumo de una planta encontrada.",
+    "keys": ["Parecido visual no equivale a identificación suficiente.", "No pruebes sabor ni preparados para despejar una duda.", "Las fotografías ilustrativas no son una herramienta de identificación."],
+    "action": "Practica observación sin recolectar ni consumir y contrasta el aprendizaje con una fuente botánica especializada. Si tu objetivo es preparar reservas, prioriza alimentos conocidos en lugar de depender de recolección improvisada.",
+    "next": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas"
+  }
+}
