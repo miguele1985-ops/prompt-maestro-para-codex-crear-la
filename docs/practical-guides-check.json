@@ -1,0 +1,299 @@
+{
+  "checks": [
+    {
+      "route": "/preparacion-practica",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/objetos-casa-sin-improvisaciones",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/comparar-equipo-antes-comprar",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/contactos-familiares-claros",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/inventario-que-se-usa",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/documentos-accesibles",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/mapas-antes-de-salir",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/luz-y-bateria",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ensayo-familiar-tranquilo",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ocho-retos-de-preparacion",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/revision-por-temporadas",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/huerto-observar-antes-de-sembrar",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/copias-que-se-pueden-abrir",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/objetos-casa-sin-improvisaciones",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/comparar-equipo-antes-comprar",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/contactos-familiares-claros",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/inventario-que-se-usa",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/documentos-accesibles",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/mapas-antes-de-salir",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/luz-y-bateria",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ensayo-familiar-tranquilo",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ocho-retos-de-preparacion",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/revision-por-temporadas",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/huerto-observar-antes-de-sembrar",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/copias-que-se-pueden-abrir",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/objetos-casa-sin-improvisaciones",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/comparar-equipo-antes-comprar",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/contactos-familiares-claros",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/inventario-que-se-usa",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/documentos-accesibles",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/mapas-antes-de-salir",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/luz-y-bateria",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ensayo-familiar-tranquilo",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/ocho-retos-de-preparacion",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/revision-por-temporadas",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/huerto-observar-antes-de-sembrar",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/preparacion-practica/copias-que-se-pueden-abrir",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1
+    }
+  ],
+  "actions": "mark, progress, download content and reset passed"
+}

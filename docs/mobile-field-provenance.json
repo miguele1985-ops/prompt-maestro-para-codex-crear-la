@@ -1,0 +1,133 @@
+{
+  "importedAt": "2026-09-26",
+  "mobileReadOnly": true,
+  "assets": [
+    {
+      "id": "ortiga-mayor",
+      "source": "assets/species/plantas_comestibles/ortiga_mayor_custom_1.jpg",
+      "sha256": "5a129e9b097035510d5ea872463017f34414261bc6d70eac4f4fab86a7a54d93",
+      "destination": "/images/from-app/ortiga-mayor.jpg",
+      "credit": "Material incluido en la app Modo Crisis Survival y facilitado por su responsable para esta web. No se declara dominio público ni licencia Creative Commons."
+    },
+    {
+      "id": "diente-de-leon",
+      "source": "assets/species/plantas_comestibles/diente_leon_custom_1.jpg",
+      "sha256": "4c3c2e0769e4f96a2ec253a8b0c056aed911cadf87e09aff087688d44f740bc3",
+      "destination": "/images/from-app/diente-de-leon.jpg",
+      "credit": "Material incluido en la app Modo Crisis Survival y facilitado por su responsable para esta web. No se declara dominio público ni licencia Creative Commons."
+    },
+    {
+      "id": "llanten-mayor",
+      "source": "assets/species/plantas_comestibles/llanten_mayor_custom_1.jpg",
+      "sha256": "fa5826a0b69f2a311325700095e0b62e03f838c127ee829e07a5ee869e162143",
+      "destination": "/images/from-app/llanten-mayor.jpg",
+      "credit": "Material incluido en la app Modo Crisis Survival y facilitado por su responsable para esta web. No se declara dominio público ni licencia Creative Commons."
+    }
+  ],
+  "knotsSource": {
+    "path": "src/data/knotsData.js",
+    "sha256": "b8dc4f3c14941544129e1e702b7dd736ea9a739f1a9c501cc3343ca4a6b75e53",
+    "entries": [
+      {
+        "id": "as-de-guia",
+        "name": "As de guia",
+        "category": "Rescate basico"
+      },
+      {
+        "id": "ballestrinque",
+        "name": "Ballestrinque",
+        "category": "Campamento"
+      },
+      {
+        "id": "nudo-ocho",
+        "name": "Nudo ocho",
+        "category": "Seguridad"
+      },
+      {
+        "id": "prusik",
+        "name": "Nudo prusik",
+        "category": "Nudos de emergencia"
+      },
+      {
+        "id": "pescador-doble",
+        "name": "Pescador doble",
+        "category": "Unir cuerdas"
+      },
+      {
+        "id": "vuelta-escota",
+        "name": "Vuelta de escota",
+        "category": "Unir cuerdas"
+      },
+      {
+        "id": "nudo-tensor",
+        "name": "Nudo tensor",
+        "category": "Tensar cuerdas"
+      },
+      {
+        "id": "mariposa-alpina",
+        "name": "Mariposa alpina",
+        "category": "Seguridad"
+      },
+      {
+        "id": "nudo-lenador",
+        "name": "Nudo lenador",
+        "category": "Cargas y arrastre"
+      },
+      {
+        "id": "nudo-llano",
+        "name": "Nudo llano",
+        "category": "Unir cuerdas"
+      },
+      {
+        "id": "vuelta-redonda-dos-cotes",
+        "name": "Vuelta redonda y dos cotes",
+        "category": "Campamento"
+      },
+      {
+        "id": "nudo-corredizo",
+        "name": "Nudo corredizo",
+        "category": "Nudos rapidos"
+      },
+      {
+        "id": "nudo-alondra",
+        "name": "Nudo de alondra",
+        "category": "Campamento"
+      },
+      {
+        "id": "nudo-camionero",
+        "name": "Nudo de camionero",
+        "category": "Tensar cuerdas"
+      },
+      {
+        "id": "nudo-palomar",
+        "name": "Nudo palomar",
+        "category": "Pesca"
+      },
+      {
+        "id": "clinch-mejorado",
+        "name": "Clinch mejorado",
+        "category": "Pesca"
+      },
+      {
+        "id": "nudo-simple-tope",
+        "name": "Nudo simple de tope",
+        "category": "Nudos rapidos"
+      },
+      {
+        "id": "nudo-dinamico-munter",
+        "name": "Nudo dinamico / Munter",
+        "category": "Seguridad"
+      },
+      {
+        "id": "amarre-cuadrado",
+        "name": "Amarre cuadrado basico",
+        "category": "Refugio y lona"
+      }
+    ]
+  },
+  "excluded": [
+    "Láminas de knots-ai con discordancias de nombre, pasos o usos técnicos",
+    "Fichas con tratamientos o dosificaciones medicinales",
+    "Recomendaciones de consumo de especies basadas en una imagen"
+  ]
+}

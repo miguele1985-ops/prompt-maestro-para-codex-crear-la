@@ -1,0 +1,794 @@
+[
+  {
+    "id": "bag72",
+    "title": "Mochila 72 Horas",
+    "category": "Evacuación",
+    "items": [
+      {
+        "id": "72-1",
+        "text": "Agua potable calculada según personas, duración y capacidad de transporte"
+      },
+      {
+        "id": "72-2",
+        "text": "Comida no perecedera (3 días)"
+      },
+      {
+        "id": "72-3",
+        "text": "Linterna LED y pilas de repuesto"
+      },
+      {
+        "id": "72-4",
+        "text": "Powerbank cargado"
+      },
+      {
+        "id": "72-5",
+        "text": "Radio portátil de pilas"
+      },
+      {
+        "id": "72-6",
+        "text": "Botiquín básico"
+      },
+      {
+        "id": "72-7",
+        "text": "Manta térmica (una por persona)"
+      },
+      {
+        "id": "72-8",
+        "text": "Silbato de emergencia"
+      },
+      {
+        "id": "72-9",
+        "text": "Herramienta adecuada que sepas usar y puedas transportar legalmente"
+      },
+      {
+        "id": "72-10",
+        "text": "Documentos originales + fotocopias"
+      },
+      {
+        "id": "72-11",
+        "text": "Dinero en efectivo (billetes pequeños)"
+      },
+      {
+        "id": "72-12",
+        "text": "Ropa de repuesto (2 mudas)"
+      },
+      {
+        "id": "72-13",
+        "text": "Higiene básica: jabón, gel, toallitas"
+      },
+      {
+        "id": "72-14",
+        "text": "Medicación personal preparada según la pauta profesional"
+      },
+      {
+        "id": "72-15",
+        "text": "Cargador de móvil"
+      },
+      {
+        "id": "72-16",
+        "text": "Bolsas de basura (útiles para muchas cosas)"
+      },
+      {
+        "id": "72-17",
+        "text": "Guantes de trabajo"
+      },
+      {
+        "id": "72-18",
+        "text": "Mascarillas FFP2"
+      },
+      {
+        "id": "72-19",
+        "text": "Copia de llaves de casa y coche"
+      },
+      {
+        "id": "72-20",
+        "text": "Teléfonos de emergencia en papel"
+      }
+    ]
+  },
+  {
+    "id": "first-aid-kit",
+    "title": "Revisión del botiquín",
+    "category": "Salud",
+    "items": [
+      {
+        "id": "fa-1",
+        "text": "Gasas estériles (varios tamaños)"
+      },
+      {
+        "id": "fa-2",
+        "text": "Vendas elásticas (5cm y 10cm)"
+      },
+      {
+        "id": "fa-3",
+        "text": "Esparadrapo médico"
+      },
+      {
+        "id": "fa-4",
+        "text": "Material de limpieza adecuado, con envases intactos"
+      },
+      {
+        "id": "fa-5",
+        "text": "Productos de cura indicados por un profesional para tu botiquín"
+      },
+      {
+        "id": "fa-6",
+        "text": "Tijeras de punta roma"
+      },
+      {
+        "id": "fa-7",
+        "text": "Pinzas de precisión"
+      },
+      {
+        "id": "fa-8",
+        "text": "Guantes de nitrilo (varios pares)"
+      },
+      {
+        "id": "fa-9",
+        "text": "Termómetro digital"
+      },
+      {
+        "id": "fa-13",
+        "text": "Manta térmica de emergencia"
+      },
+      {
+        "id": "fa-14",
+        "text": "Mascarillas FFP2"
+      },
+      {
+        "id": "fa-16",
+        "text": "Medicación personal habitual"
+      }
+    ]
+  },
+  {
+    "id": "home-prepared",
+    "title": "Casa Preparada para Emergencias",
+    "category": "Hogar",
+    "items": [
+      {
+        "id": "hp-1",
+        "text": "Reserva de agua calculada para las necesidades del hogar"
+      },
+      {
+        "id": "hp-2",
+        "text": "Comida no perecedera para 7 días"
+      },
+      {
+        "id": "hp-3",
+        "text": "Linternas revisadas en cada habitación"
+      },
+      {
+        "id": "hp-4",
+        "text": "Pilas de repuesto (AA, AAA)"
+      },
+      {
+        "id": "hp-5",
+        "text": "Powerbanks cargados"
+      },
+      {
+        "id": "hp-6",
+        "text": "Radio portátil funcionando"
+      },
+      {
+        "id": "hp-7",
+        "text": "Documentos localizados y en lugar accesible"
+      },
+      {
+        "id": "hp-8",
+        "text": "Extintor revisado"
+      },
+      {
+        "id": "hp-9",
+        "text": "Botiquín completo y con caducidades al día"
+      },
+      {
+        "id": "hp-10",
+        "text": "Iluminación a pilas disponible sin depender de llamas"
+      },
+      {
+        "id": "hp-11",
+        "text": "Dinero en efectivo en casa"
+      },
+      {
+        "id": "hp-12",
+        "text": "Plan familiar revisado y actualizado"
+      },
+      {
+        "id": "hp-13",
+        "text": "Manta térmica para cada persona"
+      },
+      {
+        "id": "hp-14",
+        "text": "Alimentos que puedan consumirse sin encender equipos de combustión"
+      },
+      {
+        "id": "hp-15",
+        "text": "Gel antibacteriano y toallitas húmedas"
+      }
+    ]
+  },
+  {
+    "id": "blackout",
+    "title": "Preparación ante un apagón",
+    "category": "Emergencia",
+    "items": [
+      {
+        "id": "bl-1",
+        "text": "Ahorro de batería del móvil activado"
+      },
+      {
+        "id": "bl-2",
+        "text": "Plan de contacto familiar y necesidades de apoyo revisados"
+      },
+      {
+        "id": "bl-3",
+        "text": "Linternas localizadas, probadas y con repuestos"
+      },
+      {
+        "id": "bl-4",
+        "text": "Instrucciones de los aparatos consultadas para cortes y reconexión"
+      },
+      {
+        "id": "bl-5",
+        "text": "Plan para conservar alimentos sin abrir innecesariamente nevera y congelador"
+      },
+      {
+        "id": "bl-6",
+        "text": "Reservas de agua contabilizadas"
+      },
+      {
+        "id": "bl-7",
+        "text": "Comida accesible sin electricidad"
+      },
+      {
+        "id": "bl-8",
+        "text": "Radio probada y emisora informativa anotada"
+      },
+      {
+        "id": "bl-9",
+        "text": "Toda la familia sabe que generadores y barbacoas no se usan dentro de casa"
+      },
+      {
+        "id": "bl-10",
+        "text": "Baterías externas cargadas antes de un corte"
+      }
+    ]
+  },
+  {
+    "id": "evacuation",
+    "title": "Plan de evacuación",
+    "category": "Evacuación",
+    "items": [
+      {
+        "id": "ev-1",
+        "text": "Documentos originales (DNI, pasaportes)"
+      },
+      {
+        "id": "ev-2",
+        "text": "Medicación y documentación preparadas según necesidades individuales"
+      },
+      {
+        "id": "ev-3",
+        "text": "Agua (lo que puedas llevar)"
+      },
+      {
+        "id": "ev-4",
+        "text": "Comida de emergencia"
+      },
+      {
+        "id": "ev-5",
+        "text": "Ropa de repuesto"
+      },
+      {
+        "id": "ev-6",
+        "text": "Móvil cargado + cargador"
+      },
+      {
+        "id": "ev-7",
+        "text": "Dinero en efectivo"
+      },
+      {
+        "id": "ev-8",
+        "text": "Llaves de casa y coche"
+      },
+      {
+        "id": "ev-9",
+        "text": "Responsable de acompañar a cada menor o dependiente acordado"
+      },
+      {
+        "id": "ev-10",
+        "text": "Mascotas con transportín y comida"
+      },
+      {
+        "id": "ev-11",
+        "text": "Botiquín básico"
+      },
+      {
+        "id": "ev-12",
+        "text": "Instrucciones oficiales sobre suministros conocidas; no manipular instalaciones con riesgo"
+      },
+      {
+        "id": "ev-13",
+        "text": "Punto de reunión familiar confirmado"
+      }
+    ]
+  },
+  {
+    "id": "car-kit",
+    "title": "Kit Supervivencia Coche",
+    "category": "Vehículo",
+    "items": [
+      {
+        "id": "ck-1",
+        "text": "Señalización reglamentaria revisada: V16 conectada certificada cuando corresponda en España"
+      },
+      {
+        "id": "ck-2",
+        "text": "Chaleco reflectante (accesible desde interior)"
+      },
+      {
+        "id": "ck-3",
+        "text": "Botiquín básico"
+      },
+      {
+        "id": "ck-4",
+        "text": "Manta térmica"
+      },
+      {
+        "id": "ck-5",
+        "text": "Linterna de pilas o manivela"
+      },
+      {
+        "id": "ck-6",
+        "text": "Agua adaptada a ocupantes, trayecto y condiciones"
+      },
+      {
+        "id": "ck-7",
+        "text": "Comida de emergencia (barritas, frutos secos)"
+      },
+      {
+        "id": "ck-8",
+        "text": "Asistencia en carretera y manual del vehículo localizados"
+      },
+      {
+        "id": "ck-9",
+        "text": "Extintor pequeño revisado"
+      },
+      {
+        "id": "ck-10",
+        "text": "Contacto de asistencia para inmovilización o remolque"
+      },
+      {
+        "id": "ck-11",
+        "text": "Kit de herramientas básico"
+      },
+      {
+        "id": "ck-12",
+        "text": "Cargador de coche (mechero USB)"
+      },
+      {
+        "id": "ck-13",
+        "text": "Mapa de carreteras físico"
+      }
+    ]
+  },
+  {
+    "id": "family-plan",
+    "title": "Plan Familiar Completo",
+    "category": "Familia",
+    "items": [
+      {
+        "id": "fp-1",
+        "text": "Punto de reunión 1 definido (cerca de casa)"
+      },
+      {
+        "id": "fp-2",
+        "text": "Punto de reunión 2 definido (fuera del barrio)"
+      },
+      {
+        "id": "fp-3",
+        "text": "Contacto fuera de la zona designado"
+      },
+      {
+        "id": "fp-4",
+        "text": "Árbol de llamadas establecido"
+      },
+      {
+        "id": "fp-5",
+        "text": "Roles asignados en emergencia"
+      },
+      {
+        "id": "fp-6",
+        "text": "Teléfonos importantes anotados y conocidos según edad y capacidad"
+      },
+      {
+        "id": "fp-7",
+        "text": "Información personal imprescindible guardada de forma privada y accesible"
+      },
+      {
+        "id": "fp-8",
+        "text": "Plan practicado con toda la familia"
+      },
+      {
+        "id": "fp-9",
+        "text": "Tarjetas del plan entregadas a cada miembro"
+      },
+      {
+        "id": "fp-10",
+        "text": "Plan revisado y actualizado este año"
+      }
+    ]
+  },
+  {
+    "id": "bag24",
+    "title": "Mochila 24 Horas",
+    "category": "Evacuación",
+    "items": [
+      {
+        "id": "24-1",
+        "text": "Agua adaptada al recorrido, necesidades y peso transportable"
+      },
+      {
+        "id": "24-2",
+        "text": "Comida para 24h (barritas, frutos secos)"
+      },
+      {
+        "id": "24-3",
+        "text": "Linterna y pilas"
+      },
+      {
+        "id": "24-4",
+        "text": "Powerbank pequeño cargado"
+      },
+      {
+        "id": "24-5",
+        "text": "Botiquín revisado y material cuyo uso conoces"
+      },
+      {
+        "id": "24-6",
+        "text": "Manta térmica"
+      },
+      {
+        "id": "24-7",
+        "text": "DNI / Pasaporte"
+      },
+      {
+        "id": "24-8",
+        "text": "Dinero en efectivo"
+      },
+      {
+        "id": "24-9",
+        "text": "Medicación imprescindible"
+      },
+      {
+        "id": "24-10",
+        "text": "Móvil cargado + cable"
+      }
+    ]
+  },
+  {
+    "id": "car-winter",
+    "title": "Kit Coche Invierno",
+    "category": "Vehículo",
+    "items": [
+      {
+        "id": "cw-1",
+        "text": "Equipo invernal compatible revisado según manual y restricciones"
+      },
+      {
+        "id": "cw-2",
+        "text": "Pala pequeña plegable"
+      },
+      {
+        "id": "cw-3",
+        "text": "Previsión y estado oficial de las carreteras consultados"
+      },
+      {
+        "id": "cw-4",
+        "text": "Ropa de abrigo extra en el maletero"
+      },
+      {
+        "id": "cw-5",
+        "text": "Manta de lana o saco de dormir"
+      },
+      {
+        "id": "cw-6",
+        "text": "Botas impermeables"
+      },
+      {
+        "id": "cw-7",
+        "text": "Quitanieves y rasqueta para parabrisas"
+      },
+      {
+        "id": "cw-8",
+        "text": "Anticongelante revisado"
+      },
+      {
+        "id": "cw-9",
+        "text": "Líquido limpiaparabrisas anticongelante"
+      },
+      {
+        "id": "cw-10",
+        "text": "Batería revisada (el frío la debilita)"
+      }
+    ]
+  },
+  {
+    "id": "heat-wave",
+    "title": "Preparación para el calor",
+    "category": "Emergencia",
+    "items": [
+      {
+        "id": "hw-1",
+        "text": "Lugar fresco y alternativa fuera del hogar identificados"
+      },
+      {
+        "id": "hw-2",
+        "text": "Protección solar de ventanas revisada"
+      },
+      {
+        "id": "hw-3",
+        "text": "Ventilación prevista cuando las condiciones exteriores sean adecuadas"
+      },
+      {
+        "id": "hw-4",
+        "text": "Agua accesible y necesidades consultadas si hay restricciones médicas"
+      },
+      {
+        "id": "hw-5",
+        "text": "Contacto y apoyo acordados para personas vulnerables"
+      },
+      {
+        "id": "hw-6",
+        "text": "Horarios previstos para evitar esfuerzo en las horas más calurosas"
+      },
+      {
+        "id": "hw-7",
+        "text": "Ropa ligera y de colores claros"
+      },
+      {
+        "id": "hw-8",
+        "text": "Plan para no dejar personas ni animales en un coche cerrado"
+      }
+    ]
+  },
+  {
+    "id": "extreme-cold",
+    "title": "Preparación para el frío",
+    "category": "Emergencia",
+    "items": [
+      {
+        "id": "cf-1",
+        "text": "Abrigo y lugar protegido previstos para cada persona"
+      },
+      {
+        "id": "cf-2",
+        "text": "Estado del aislamiento doméstico revisado"
+      },
+      {
+        "id": "cf-3",
+        "text": "Calefacción revisada según manual, sin tapar rejillas de ventilación"
+      },
+      {
+        "id": "cf-4",
+        "text": "Nadie usará generadores, braseros improvisados ni barbacoas en interiores"
+      },
+      {
+        "id": "cf-5",
+        "text": "Comida calórica preparada"
+      },
+      {
+        "id": "cf-6",
+        "text": "Ropa en capas: cabeza, cuello, manos, pies"
+      },
+      {
+        "id": "cf-7",
+        "text": "Apoyo a menores y personas vulnerables acordado"
+      },
+      {
+        "id": "cf-8",
+        "text": "Tuberías protegidas del congelamiento"
+      }
+    ]
+  },
+  {
+    "id": "flood",
+    "title": "Preparación ante inundaciones",
+    "category": "Emergencia",
+    "items": [
+      {
+        "id": "fl-1",
+        "text": "Regla conocida: no tocar cuadros ni aparatos eléctricos en agua; seguir indicaciones oficiales"
+      },
+      {
+        "id": "fl-2",
+        "text": "Zonas y rutas oficiales consultadas antes de un aviso"
+      },
+      {
+        "id": "fl-3",
+        "text": "Dirección y ubicación conocidas para pedir ayuda en una emergencia"
+      },
+      {
+        "id": "fl-4",
+        "text": "Reserva de agua potable y canales de avisos del abastecimiento localizados"
+      },
+      {
+        "id": "fl-5",
+        "text": "Documentos en bolsa estanca"
+      },
+      {
+        "id": "fl-6",
+        "text": "Todos conocen que no deben atravesar zonas inundadas a pie ni en coche"
+      },
+      {
+        "id": "fl-7",
+        "text": "Plan familiar y canal oficial de información preparados"
+      }
+    ]
+  },
+  {
+    "id": "house-fire",
+    "title": "Prevención y plan ante incendios",
+    "category": "Emergencia",
+    "items": [
+      {
+        "id": "hf-1",
+        "text": "Salidas y punto de encuentro planificados según el edificio"
+      },
+      {
+        "id": "hf-2",
+        "text": "Todos saben pedir ayuda al 112 y dar la dirección"
+      },
+      {
+        "id": "hf-3",
+        "text": "Instrucciones de bomberos locales consultadas previamente"
+      },
+      {
+        "id": "hf-4",
+        "text": "Todos conocen que no deben volver a un edificio afectado"
+      },
+      {
+        "id": "hf-5",
+        "text": "Ayuda para personas que la necesiten acordada"
+      },
+      {
+        "id": "hf-6",
+        "text": "Detectores y medidas de prevención revisados según sus instrucciones"
+      }
+    ]
+  },
+  {
+    "id": "pets",
+    "title": "Kit para Mascotas",
+    "category": "Mascotas",
+    "items": [
+      {
+        "id": "pet-1",
+        "text": "Comida para 3 días"
+      },
+      {
+        "id": "pet-2",
+        "text": "Agua prevista según especie, tamaño, duración y consejo veterinario"
+      },
+      {
+        "id": "pet-3",
+        "text": "Transportín accesible y revisado"
+      },
+      {
+        "id": "pet-4",
+        "text": "Correa resistente de repuesto"
+      },
+      {
+        "id": "pet-5",
+        "text": "Medicación de la mascota si la necesita"
+      },
+      {
+        "id": "pet-6",
+        "text": "Cartilla de vacunación al día"
+      },
+      {
+        "id": "pet-7",
+        "text": "Chapa de identificación actualizada"
+      },
+      {
+        "id": "pet-8",
+        "text": "Chip registrado con datos actuales"
+      },
+      {
+        "id": "pet-9",
+        "text": "Teléfono del veterinario anotado"
+      }
+    ]
+  },
+  {
+    "id": "kids-kit",
+    "title": "Kit para Niños",
+    "category": "Familia",
+    "items": [
+      {
+        "id": "kk-1",
+        "text": "Alimentos adecuados a edad, alergias y necesidades, evitando riesgos de atragantamiento"
+      },
+      {
+        "id": "kk-2",
+        "text": "Agua (botella ligera)"
+      },
+      {
+        "id": "kk-3",
+        "text": "Muda de ropa completa"
+      },
+      {
+        "id": "kk-4",
+        "text": "Medicación si la necesita"
+      },
+      {
+        "id": "kk-5",
+        "text": "Objeto de confort pequeño"
+      },
+      {
+        "id": "kk-6",
+        "text": "Tarjeta con nombre y teléfonos familiares"
+      },
+      {
+        "id": "kk-7",
+        "text": "Linterna pequeña (que sepa usarla)"
+      },
+      {
+        "id": "kk-8",
+        "text": "Medio de aviso apropiado a la edad y supervisión disponible"
+      },
+      {
+        "id": "kk-9",
+        "text": "Entretenimiento offline (libro, cartas)"
+      }
+    ]
+  },
+  {
+    "id": "monthly-review",
+    "title": "Revisión Mensual de Preparación",
+    "category": "Mantenimiento",
+    "items": [
+      {
+        "id": "mr-1",
+        "text": "Powerbanks: cargar y probar todos"
+      },
+      {
+        "id": "mr-2",
+        "text": "Linternas: encender y comprobar pilas"
+      },
+      {
+        "id": "mr-3",
+        "text": "Radio: encender y sintonizar"
+      },
+      {
+        "id": "mr-4",
+        "text": "Medicamentos: revisar caducidades"
+      },
+      {
+        "id": "mr-5",
+        "text": "Comida: revisar caducidades y rotar stock"
+      },
+      {
+        "id": "mr-6",
+        "text": "Envases y fechas del agua revisados según fabricante y autoridad sanitaria"
+      },
+      {
+        "id": "mr-7",
+        "text": "Documentos: verificar que están completos"
+      },
+      {
+        "id": "mr-8",
+        "text": "Plan familiar: actualizar si hubo cambios"
+      },
+      {
+        "id": "mr-9",
+        "text": "Mantenimiento de equipos de protección revisado con personal competente"
+      },
+      {
+        "id": "mr-10",
+        "text": "Mochila 72h: revisar contenido y estado"
+      }
+    ]
+  }
+]

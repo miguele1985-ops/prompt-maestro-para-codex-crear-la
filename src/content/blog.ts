@@ -1,6 +1,7 @@
 import { affiliateDisclosure, amazonSearchUrl } from "@/content/affiliate";
 import upgrades from "@/content/article-upgrades.json";
 import { editorialPhoto } from "@/content/editorial-photos";
+import { batchTwoRevisions } from "./batch-two";
 
 export interface BlogSection {
   heading: string;
@@ -1689,6 +1690,13 @@ for (const post of blogPosts) {
 
 function blogPostDateValue(post: BlogPost) {
   return post.updatedAt ?? post.publishedAt ?? "";
+}
+
+for (const [slug, revision] of Object.entries(batchTwoRevisions)) {
+  const post=blogPosts.find(item=>item.slug===slug);
+  if(!post)throw new Error(`Missing batch two canonical article: ${slug}`);
+  Object.assign(post,revision,{updatedAt:"2026-09-26"});
+  const photo=editorialPhoto(slug);post.image=photo.image;post.imageAlt=photo.alt;
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

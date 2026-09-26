@@ -1,0 +1,5416 @@
+{
+  "scope": "Inventario de todos los archivos en src y assets; no se ejecuta la app ni se leen datos personales, .env o dependencias. Metadatos, no validación editorial completa.",
+  "mobileReadOnly": true,
+  "files": 518,
+  "images": 274,
+  "inventory": [
+    {
+      "file": "src/app/+not-found.tsx",
+      "bytes": 12611,
+      "sha256": "f70d4b89946feb15ed6bd62bcfe69a97e2c6d37e5068a89e56732d74f3db7da7"
+    },
+    {
+      "file": "src/app/blackout.jsx",
+      "bytes": 9011,
+      "sha256": "b477b72a8ff9d36fcd45c02b9d467bc502f006f2bb42df0d7ebd3d549e5ff295"
+    },
+    {
+      "file": "src/app/crisis/index.jsx",
+      "bytes": 15559,
+      "sha256": "2eca0d4fd7a98c63af62885956faea0d7a06dbd50464f5111f24d6b40abee125"
+    },
+    {
+      "file": "src/app/crisis/[id].jsx",
+      "bytes": 12686,
+      "sha256": "7e04cb849c67c8f0835294695348c4851951e4a55e5d0d7f59a30f40a4841263"
+    },
+    {
+      "file": "src/app/guides/article/[id].jsx",
+      "bytes": 14167,
+      "sha256": "36c265b25ca7d124ad1c397c2daaaa38a0da2d9a9748cfc0aa97183da8f0f108"
+    },
+    {
+      "file": "src/app/guides/index.jsx",
+      "bytes": 6294,
+      "sha256": "18d4116f55ba05f8dd390d04e8eb54ecbb5b79aa40e02eb6d4153a846da16139"
+    },
+    {
+      "file": "src/app/guides/urban-shtf.jsx",
+      "bytes": 13036,
+      "sha256": "c2db03a6e53d56394e1bfdd477f7c9ccce79ce36e3e3afa138c60e97fdb364c2"
+    },
+    {
+      "file": "src/app/guides/[id].jsx",
+      "bytes": 7763,
+      "sha256": "ab0d4d452638d9d467125dbf2aeabcc3c2f1f293f63a3ae0df68d1bd38be34ff"
+    },
+    {
+      "file": "src/app/index.jsx",
+      "bytes": 38751,
+      "sha256": "5c7ab9434ff7c788b5f7fb5b1a40d8b20dc8f851f83656c0c409c76af3dd5737"
+    },
+    {
+      "file": "src/app/search.jsx",
+      "bytes": 10139,
+      "sha256": "33c48faf5c77a2b313c45a59439c74af99a3f7395f0eae6936b5c74784b21113"
+    },
+    {
+      "file": "src/app/settings.jsx",
+      "bytes": 16443,
+      "sha256": "b67c182faf50f7de728127d5f80267f214a942da851b954eaa00b8ba5e7121c9"
+    },
+    {
+      "file": "src/app/tools/admin-control.jsx",
+      "bytes": 24322,
+      "sha256": "c2a305075915b4a256b3d5e2e3e571201d7c81181dd639e26a52042bc8818f0f"
+    },
+    {
+      "file": "src/app/tools/assistant.jsx",
+      "bytes": 13145,
+      "sha256": "01545cab1de1de79083e8064f455a2912df30401bbc7b393485ef971a648b65d",
+      "collections": [
+        {
+          "name": "QUICK_QUESTIONS",
+          "entries": 8
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/backup.jsx",
+      "bytes": 53762,
+      "sha256": "ee0d941951b9a3701364fb45d3853556135c135b72089ced4a2c0cb3c9bb2ce5",
+      "collections": [
+        {
+          "name": "fallback",
+          "entries": 3
+        },
+        {
+          "name": "tiles",
+          "entries": 0
+        },
+        {
+          "name": "allPoints",
+          "entries": 2
+        },
+        {
+          "name": "bounds",
+          "entries": 4
+        },
+        {
+          "name": "stats",
+          "entries": 8
+        },
+        {
+          "name": "emergencyPlans",
+          "entries": 0
+        },
+        {
+          "name": "payload",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/battery-mode.jsx",
+      "bytes": 19296,
+      "sha256": "ddd1cae55a4d5e4cfb29f499d23b62781d2f9af194714c3220f0c3ba3ff90585",
+      "collections": [
+        {
+          "name": "SETTING_RULES",
+          "entries": 12
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/black-box.tsx",
+      "bytes": 66,
+      "sha256": "7029eb3e11ab47834e7584a6c61c15398e33669648f93fc64a9d28178121cd61",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/calculators.jsx",
+      "bytes": 3966,
+      "sha256": "cad9e2de81c4ca3e96064097d183c6462079293d3052d400bc738f5b3a8a5250",
+      "collections": [
+        {
+          "name": "TOOLS",
+          "entries": 13
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/calm.jsx",
+      "bytes": 14031,
+      "sha256": "64baaa1f3514a4456c3eb2398f75d1996fbd7f1cf822669af4b4550ecdef1ace",
+      "collections": [
+        {
+          "name": "BREATH_STEPS",
+          "entries": 4
+        },
+        {
+          "name": "GROUNDING",
+          "entries": 5
+        },
+        {
+          "name": "CALM_TRACKS",
+          "entries": 3
+        },
+        {
+          "name": "STOP",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/checklists.jsx",
+      "bytes": 10827,
+      "sha256": "807bc6f3b3bf2195e7b831e30a31f2b53678f9116c111e81edb51d4c38e34513",
+      "collections": [
+        {
+          "name": "CAT_COLORS",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/chemical-water.jsx",
+      "bytes": 5234,
+      "sha256": "c85e1d8af7c92c42e1cb0f750f1cd17e71792abaa5b44a3069d647b1d10fe668",
+      "collections": [
+        {
+          "name": "PRODUCTS",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/communications.jsx",
+      "bytes": 40456,
+      "sha256": "c7c82d0c158e16405453a7b28b618001b25fd1997957348195646c29e7070d5c",
+      "collections": [
+        {
+          "name": "MORSE_IMAGES",
+          "entries": 1
+        },
+        {
+          "name": "MORSE_CODE",
+          "entries": 36
+        },
+        {
+          "name": "PRESET_MESSAGES",
+          "entries": 8
+        },
+        {
+          "name": "PMR_CHANNELS",
+          "entries": 8
+        },
+        {
+          "name": "COMM_METHODS",
+          "entries": 5
+        },
+        {
+          "name": "permissions",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/comparisons-library.jsx",
+      "bytes": 11673,
+      "sha256": "e33d6ae8650a6c9d739b92713980781d7f6242796e20e0f4643989535250c3d5",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/compass.jsx",
+      "bytes": 12735,
+      "sha256": "498f6623cb7e5c2c21c0ee07aca1d1d675e458effc3a66e1bd1922ba7d3b08f9",
+      "collections": [
+        {
+          "name": "DIRECTIONS",
+          "entries": 16
+        },
+        {
+          "name": "tips",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/contacts.jsx",
+      "bytes": 16955,
+      "sha256": "14962630d73bb1afc6628692e4bc0d97ec19a4026aeddabc70c6117e57066213",
+      "collections": [
+        {
+          "name": "CONTACT_TYPES",
+          "entries": 11
+        },
+        {
+          "name": "contactScopeOptions",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/dashboard.jsx",
+      "bytes": 17058,
+      "sha256": "f065d050861f522930c2cda52417a4c5fcba6c08c195ce3d80a579b37ae84ed5",
+      "collections": [
+        {
+          "name": "map",
+          "entries": 6
+        },
+        {
+          "name": "alerts",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/daylight-hours.jsx",
+      "bytes": 13942,
+      "sha256": "af132656aac9510d2a87ee65dbf59c9cff639a0140d0a9a968ef13a563dd9309",
+      "collections": [
+        {
+          "name": "MODE_OPTIONS",
+          "entries": 2
+        },
+        {
+          "name": "MARGIN_OPTIONS",
+          "entries": 6
+        },
+        {
+          "name": "INITIAL_FORM",
+          "entries": 9
+        },
+        {
+          "name": "next",
+          "entries": 2
+        },
+        {
+          "name": "next",
+          "entries": 3
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/disaster-alerts.tsx",
+      "bytes": 78,
+      "sha256": "318e2c62681aa09fb52b6fcec79411cc870d0bf3044007e028e0a766e1d02458",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/disasters.jsx",
+      "bytes": 23984,
+      "sha256": "079b56536270e67de99698595ab26078e4a4cb77c868c8780fd68db29add8f17",
+      "collections": [
+        {
+          "name": "DISASTERS",
+          "entries": 6
+        },
+        {
+          "name": "RISK_COLORS",
+          "entries": 3
+        },
+        {
+          "name": "allDisasters",
+          "entries": 2
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/documents.jsx",
+      "bytes": 32686,
+      "sha256": "9b7db2e6f53de2c21d8c122abf25714a8db3009dfea946921606efcb723ca4c7",
+      "collections": [
+        {
+          "name": "DOC_CATEGORIES",
+          "entries": 11
+        },
+        {
+          "name": "DOC_TIPS",
+          "entries": 7
+        },
+        {
+          "name": "PDF_CATEGORIES",
+          "entries": 9
+        },
+        {
+          "name": "item",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/emergency-center.tsx",
+      "bytes": 80,
+      "sha256": "fea9067f6e7a75e5f31367e3e31d8fdb2f66286330c949c43be7e36a86395f3e",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/emergency-plans.jsx",
+      "bytes": 50977,
+      "sha256": "cb8cf6773a569ff6a195e3b066c781da8474d5dfd783c476951c3381ac6b14f4",
+      "collections": [
+        {
+          "name": "SECTIONS",
+          "entries": 6
+        },
+        {
+          "name": "points",
+          "entries": 2
+        },
+        {
+          "name": "allPoints",
+          "entries": 2
+        },
+        {
+          "name": "bounds",
+          "entries": 4
+        },
+        {
+          "name": "tiles",
+          "entries": 0
+        },
+        {
+          "name": "imported",
+          "entries": 4
+        },
+        {
+          "name": "nextPoints",
+          "entries": 2
+        },
+        {
+          "name": "names",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/energy.jsx",
+      "bytes": 11049,
+      "sha256": "849f0a02894fa9d3be81626898aab922a7bf0dffb9fc1106e72c678b7f8873ac",
+      "collections": [
+        {
+          "name": "DEVICE_CONSUMPTION",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/family-certificate.tsx",
+      "bytes": 79,
+      "sha256": "5b2a828ec085877498d78bf6c9aca9c43722657e74aaffee17fa7e755013a835",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/family-drill.tsx",
+      "bytes": 66,
+      "sha256": "478791f8f8fb15858b603d983241e77ec21323e53371e32be6f739bb22903aae",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/family-learning.jsx",
+      "bytes": 15252,
+      "sha256": "1af15fa0923cf00cc9842d6488b0e5e6ae54fc4df809f87e01d235998d35b3dd",
+      "collections": [
+        {
+          "name": "LESSONS",
+          "entries": 6
+        },
+        {
+          "name": "QUESTIONS",
+          "entries": 18
+        },
+        {
+          "name": "INITIAL",
+          "entries": 2
+        },
+        {
+          "name": "answers",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/family-preparedness.tsx",
+      "bytes": 86,
+      "sha256": "a7fb469ef84f1570999536f096d3b8956d22bd78733add4a3044d75fb9e17be4",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/family.jsx",
+      "bytes": 10018,
+      "sha256": "f7bfe1e9cc52eb6aecde7b46d3c5be00afa86ecefa6234975170ad106f63831d",
+      "collections": [
+        {
+          "name": "EMPTY_MEMBER",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/favorites.jsx",
+      "bytes": 7996,
+      "sha256": "98c0ce0f98cb66ff14f31bdd292bd3619d322b76205797ee0d744156d2f2d527",
+      "collections": [
+        {
+          "name": "favoriteArticles",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/frequencies.jsx",
+      "bytes": 15467,
+      "sha256": "ac9ccd7175e28c9f6393b7a4e5d0673d47b4ff088e4d5ed3bd5740917f571183",
+      "collections": [
+        {
+          "name": "USAGE_GUIDES",
+          "entries": 6
+        },
+        {
+          "name": "replacements",
+          "entries": 31
+        },
+        {
+          "name": "section",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/games.jsx",
+      "bytes": 166969,
+      "sha256": "20e261bf965d5e54533e16365db1188e68daf6e5d8ed83d6305b3526b9507cba",
+      "collections": [
+        {
+          "name": "TABS",
+          "entries": 4
+        },
+        {
+          "name": "SUDOKU_PUZZLE",
+          "entries": 9
+        },
+        {
+          "name": "SUDOKU_SOLUTION",
+          "entries": 9
+        },
+        {
+          "name": "SPANISH_SUITS",
+          "entries": 4
+        },
+        {
+          "name": "SPANISH_RANKS",
+          "entries": 10
+        },
+        {
+          "name": "MEMORY_SYMBOLS",
+          "entries": 12
+        },
+        {
+          "name": "RESCUE_TILES",
+          "entries": 12
+        },
+        {
+          "name": "RESCUE_WEATHER",
+          "entries": 4
+        },
+        {
+          "name": "RESCUE_SCENARIOS",
+          "entries": 3
+        },
+        {
+          "name": "RESCUE_ACTIONS",
+          "entries": 9
+        },
+        {
+          "name": "RESCUE_EVENTS",
+          "entries": 4
+        },
+        {
+          "name": "SURVIVAL_CHARACTERS",
+          "entries": 5
+        },
+        {
+          "name": "HOME_ROOMS",
+          "entries": 6
+        },
+        {
+          "name": "HOME_ITEMS",
+          "entries": 13
+        },
+        {
+          "name": "HOME_SCENE_AREAS",
+          "entries": 6
+        },
+        {
+          "name": "HOME_SCENE_ITEMS",
+          "entries": 15
+        },
+        {
+          "name": "WORLD_SCENE_AREAS",
+          "entries": 3
+        },
+        {
+          "name": "WORLD_SCENE_POINTS",
+          "entries": 12
+        },
+        {
+          "name": "SCENE_OBJECT_ICONS",
+          "entries": 26
+        },
+        {
+          "name": "CRAFT_RECIPES",
+          "entries": 3
+        },
+        {
+          "name": "EDUCATION_LIBRARY",
+          "entries": 6
+        },
+        {
+          "name": "ACADEMY_CASES",
+          "entries": 11
+        },
+        {
+          "name": "ACADEMY_ZONES",
+          "entries": 6
+        },
+        {
+          "name": "ACADEMY_TOOLS",
+          "entries": 6
+        },
+        {
+          "name": "INITIAL_RESCUE_STATE",
+          "entries": 21
+        },
+        {
+          "name": "nextOpen",
+          "entries": 2
+        },
+        {
+          "name": "nextHand",
+          "entries": 2
+        },
+        {
+          "name": "nextDeck",
+          "entries": 1
+        },
+        {
+          "name": "nextDealer",
+          "entries": 0
+        },
+        {
+          "name": "floorLines",
+          "entries": 7
+        },
+        {
+          "name": "verticalLines",
+          "entries": 5
+        },
+        {
+          "name": "map",
+          "entries": 6
+        },
+        {
+          "name": "topicTool",
+          "entries": 11
+        },
+        {
+          "name": "next",
+          "entries": 4
+        },
+        {
+          "name": "passive",
+          "entries": 6
+        },
+        {
+          "name": "next",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/garden.jsx",
+      "bytes": 46970,
+      "sha256": "5210297c51c4c0fb943ad97d2600912df2099e445d71653528cf5954cd35a4d0",
+      "collections": [
+        {
+          "name": "tabs",
+          "entries": 11
+        },
+        {
+          "name": "actionLabels",
+          "entries": 4
+        },
+        {
+          "name": "defaultState",
+          "entries": 19
+        },
+        {
+          "name": "emptySeed",
+          "entries": 10
+        },
+        {
+          "name": "emptyPlot",
+          "entries": 6
+        },
+        {
+          "name": "restricted",
+          "entries": 1
+        },
+        {
+          "name": "actions",
+          "entries": 0
+        },
+        {
+          "name": "warnings",
+          "entries": 1
+        },
+        {
+          "name": "fields",
+          "entries": 10
+        },
+        {
+          "name": "fields",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/hand-signals.jsx",
+      "bytes": 17397,
+      "sha256": "99f8d1e41a4d0d5c5ef33e41be9fb96cb2b35c245b100a27f5664e9f46179343",
+      "collections": [
+        {
+          "name": "PHOTO_ALIASES",
+          "entries": 2
+        },
+        {
+          "name": "item",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/health.jsx",
+      "bytes": 25081,
+      "sha256": "5b4621403298b6034eb49d8690f2a28913d82a3207dd7f0a663b0002a7d9a90e",
+      "collections": [
+        {
+          "name": "BLOOD_TYPES",
+          "entries": 9
+        },
+        {
+          "name": "emptyPersonForm",
+          "entries": 10
+        },
+        {
+          "name": "mainProfile",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/household-survival.jsx",
+      "bytes": 10066,
+      "sha256": "22784182180167c950c61c576e721d33b4471af8c3d2e8a3fdabee6998a94ecc",
+      "collections": [
+        {
+          "name": "INITIAL",
+          "entries": 4
+        },
+        {
+          "name": "tabOptions",
+          "entries": 5
+        },
+        {
+          "name": "quizAnswers",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/hunting-fishing.jsx",
+      "bytes": 21981,
+      "sha256": "d16148922b4d45943967f545a723e5a80e288bf1a9ea9adf29459f9167f9ed88",
+      "collections": [
+        {
+          "name": "HUNTING_GUIDE_PHOTOS",
+          "entries": 4
+        },
+        {
+          "name": "FISHING_SECTION_PHOTOS",
+          "entries": 10
+        },
+        {
+          "name": "guideFields",
+          "entries": 4
+        },
+        {
+          "name": "trackFields",
+          "entries": 5
+        },
+        {
+          "name": "nextGuide",
+          "entries": 4
+        },
+        {
+          "name": "nextTrack",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/hypothermia-check.jsx",
+      "bytes": 4603,
+      "sha256": "66b87c37cbe0f2fea78b2b0b3d90592be2dfdb6badc27284e1457764bd85c372",
+      "collections": [
+        {
+          "name": "STAGES",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/inventory.jsx",
+      "bytes": 33340,
+      "sha256": "d089609cdedb6a942a7e99ba346bd2f13101ea07569f40e715ac8a4571b2d222",
+      "collections": [
+        {
+          "name": "BASE_CATEGORIES",
+          "entries": 16
+        },
+        {
+          "name": "CAT_COLORS",
+          "entries": 15
+        },
+        {
+          "name": "EMPTY_FORM",
+          "entries": 9
+        },
+        {
+          "name": "map",
+          "entries": 4
+        },
+        {
+          "name": "payload",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/kids.jsx",
+      "bytes": 7127,
+      "sha256": "f146558c0aa5c5aa50b38f0364588aaaddd0bce8057954be065c089eaf29bee1",
+      "collections": [
+        {
+          "name": "LESSONS",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/knots.jsx",
+      "bytes": 21984,
+      "sha256": "12e4fcf1e1834a9a82eae74a964a581d0c7ef7cc0a2ba39c0e60793b538b4cb7",
+      "collections": [
+        {
+          "name": "DIFFICULTIES",
+          "entries": 4
+        },
+        {
+          "name": "MODES",
+          "entries": 2
+        },
+        {
+          "name": "item",
+          "entries": 11
+        },
+        {
+          "name": "knotFields",
+          "entries": 16
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/lunar-calendar.jsx",
+      "bytes": 10921,
+      "sha256": "21168012d6e916cf98a3c2becbfdf2ef12194d62e3fde216984a3f85f45d37d3",
+      "collections": [
+        {
+          "name": "MONTHS",
+          "entries": 12
+        },
+        {
+          "name": "WEEKDAYS",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/maps.jsx",
+      "bytes": 93180,
+      "sha256": "533f0447e0331c38808e561aac1ce4621e2ff96678de5353d23c4be966a041b2",
+      "collections": [
+        {
+          "name": "POINT_TYPES",
+          "entries": 15
+        },
+        {
+          "name": "POINT_COLORS",
+          "entries": 15
+        },
+        {
+          "name": "SUPPORTED_MAP_EXTENSIONS",
+          "entries": 7
+        },
+        {
+          "name": "MAP_MODES",
+          "entries": 4
+        },
+        {
+          "name": "EMPTY_FORM",
+          "entries": 8
+        },
+        {
+          "name": "routes",
+          "entries": 2
+        },
+        {
+          "name": "fallback",
+          "entries": 3
+        },
+        {
+          "name": "tiles",
+          "entries": 0
+        },
+        {
+          "name": "allPoints",
+          "entries": 8
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/morse.jsx",
+      "bytes": 2898,
+      "sha256": "fc7cfc900168d8190878ba25fa3f93aa245774b36aa7df407fe8cc7e3d264c63",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/notes.jsx",
+      "bytes": 13205,
+      "sha256": "4fad004418a68f9bceffb83bb07ed8a6af86e95c2cc080f40df0b5d02b22abfa",
+      "collections": [
+        {
+          "name": "CATEGORIES",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/plants-spain.jsx",
+      "bytes": 13492,
+      "sha256": "8905b972d82b48c5689796a62b08020378459c8616d44c1761f947b67706296a",
+      "collections": [
+        {
+          "name": "TABS",
+          "entries": 3
+        },
+        {
+          "name": "nextPlant",
+          "entries": 4
+        },
+        {
+          "name": "common",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/plants.jsx",
+      "bytes": 19036,
+      "sha256": "cfe5193ac91b95bb94305c35c728aca60deb858be2effa45aafad4ae4e30e417",
+      "collections": [
+        {
+          "name": "LEVEL_COLORS",
+          "entries": 6
+        },
+        {
+          "name": "item",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/radio-streams.jsx",
+      "bytes": 20615,
+      "sha256": "072b8c99d5d2b85325492e5baba3484f8d635839c66500f433a199de093cb111",
+      "collections": [
+        {
+          "name": "emptyForm",
+          "entries": 8
+        },
+        {
+          "name": "item",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/rain-capture.jsx",
+      "bytes": 18828,
+      "sha256": "cf8f6cf57013d9903bbe070534d69b87c24d69e9b1f4a33d55385a3cd8e2596f",
+      "collections": [
+        {
+          "name": "MODE_OPTIONS",
+          "entries": 3
+        },
+        {
+          "name": "PRECIP_OPTIONS",
+          "entries": 3
+        },
+        {
+          "name": "AREA_OPTIONS",
+          "entries": 2
+        },
+        {
+          "name": "SURFACE_OPTIONS",
+          "entries": 5
+        },
+        {
+          "name": "CONTAINER_OPTIONS",
+          "entries": 5
+        },
+        {
+          "name": "CONSUMPTION_OPTIONS",
+          "entries": 5
+        },
+        {
+          "name": "INITIAL_FORM",
+          "entries": 18
+        },
+        {
+          "name": "next",
+          "entries": 2
+        },
+        {
+          "name": "next",
+          "entries": 3
+        },
+        {
+          "name": "common",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/required-speed.jsx",
+      "bytes": 17563,
+      "sha256": "099e1cb66780093d5e0a726d76015aa531165fe9634647523d1f20effb442d5a",
+      "collections": [
+        {
+          "name": "MODE_OPTIONS",
+          "entries": 4
+        },
+        {
+          "name": "MARGIN_OPTIONS",
+          "entries": 5
+        },
+        {
+          "name": "STOP_OPTIONS",
+          "entries": 7
+        },
+        {
+          "name": "INITIAL",
+          "entries": 23
+        },
+        {
+          "name": "settings",
+          "entries": 9
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/resources.jsx",
+      "bytes": 14347,
+      "sha256": "ff77281ac243bdb6c25f8b21b3cafce5741131c6436d015dc2733ddfb136b821",
+      "collections": [
+        {
+          "name": "model",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/river-crossing.jsx",
+      "bytes": 4456,
+      "sha256": "1c98bfe23c69190bc7b2d783b6756ee0f54330c0bc211607bcb964dfb43e346d",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/routines.jsx",
+      "bytes": 17940,
+      "sha256": "bb9f6fb359531520283c3b944e7d4b91c5e1dee517c0b10729bf288d7077900d",
+      "collections": [
+        {
+          "name": "ROUTINES",
+          "entries": 5
+        },
+        {
+          "name": "next",
+          "entries": 1
+        },
+        {
+          "name": "nextTask",
+          "entries": 3
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/saved-locations.jsx",
+      "bytes": 15307,
+      "sha256": "a24966421ed443497b8886a929a33d07bb714fce313a78e599424fa3761dec9f",
+      "collections": [
+        {
+          "name": "unique",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/smoke-signals.jsx",
+      "bytes": 7706,
+      "sha256": "4b35423c89f76e5c156bb3896cc0daec5034a8944e950bdb4220c57a0cc6c1fe",
+      "collections": [
+        {
+          "name": "SIGNALS",
+          "entries": 4
+        },
+        {
+          "name": "MATERIALS",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/solar-distillation.jsx",
+      "bytes": 4792,
+      "sha256": "f5fa8716051155b21896fe962c1b3a1c32a659f7d5565b7ff75e31a9d26bdf1d",
+      "collections": [
+        {
+          "name": "BOTTLE_PRESETS",
+          "entries": 6
+        },
+        {
+          "name": "MATERIALS",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/sos-flashlight.tsx",
+      "bytes": 76,
+      "sha256": "bc14fe221f35875275ccbabed7c1e25315ab486d0bcfe06625f1fd040b9fa8e3",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/sos.jsx",
+      "bytes": 17763,
+      "sha256": "cc3287d2d2feb5235c1713a25712096a4633cace7ba297e368a8eda492237016",
+      "collections": [
+        {
+          "name": "SOS_PATTERN",
+          "entries": 18
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/support.jsx",
+      "bytes": 12375,
+      "sha256": "0a4be7eab0c39726d812fbab05bc25cb9690471981debc33aa4bc826fc56da4e",
+      "collections": [
+        {
+          "name": "supportCards",
+          "entries": 6
+        },
+        {
+          "name": "donationButtons",
+          "entries": 4
+        },
+        {
+          "name": "faqs",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/survival-72-hours.jsx",
+      "bytes": 585,
+      "sha256": "f85e3d9ee375695c386de5f4c376d892e825e9fcef903d08e22e7fd9b1128334",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/survival-converter.jsx",
+      "bytes": 8755,
+      "sha256": "d87f4c60e60a63e88acad48a945ee46bb560a985e4aab01d4aad2313a42bbf9f",
+      "collections": [
+        {
+          "name": "CATEGORIES",
+          "entries": 10
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/survival-learning.jsx",
+      "bytes": 8491,
+      "sha256": "6d597e7f9ce937a5c3977ca5815cdab4bad9e2ba951d4a22c73c1696bae05a5b",
+      "collections": [
+        {
+          "name": "INITIAL",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/survival-myths.jsx",
+      "bytes": 7773,
+      "sha256": "308eab366e39f52db6d77b57f7f70b43482738c402711268a41818011a6c3f42",
+      "collections": [
+        {
+          "name": "INITIAL",
+          "entries": 3
+        },
+        {
+          "name": "scenarioAnswers",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/thermal-sensation.jsx",
+      "bytes": 8532,
+      "sha256": "22417448a4bcc1306312fe2b6e48082085a05e0c32188f99cda46515f5a2ea8e",
+      "collections": [
+        {
+          "name": "MODE_OPTIONS",
+          "entries": 2
+        },
+        {
+          "name": "TEMP_OPTIONS",
+          "entries": 2
+        },
+        {
+          "name": "WIND_OPTIONS",
+          "entries": 3
+        },
+        {
+          "name": "INITIAL_STATE",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/vehicle.jsx",
+      "bytes": 17004,
+      "sha256": "f7eb73678d1c2ca4868b5619ba5648c72773302241918ede2bead79b68202132",
+      "collections": [
+        {
+          "name": "VEHICLE_SCENARIOS",
+          "entries": 11
+        },
+        {
+          "name": "FUEL_SAVING",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/water.jsx",
+      "bytes": 12734,
+      "sha256": "7e3cdc2186c49f2f4cd5e68126a2acdedccd11acf903cc2bf393fcecb549e0ce",
+      "collections": [
+        {
+          "name": "PURIFICATION_METHODS",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/tools/weather.tsx",
+      "bytes": 64,
+      "sha256": "8e561d96c9fb6f03aa330aea806e3d960f3e28e8a5ba2b66f97ad5cb92e31b9c",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/weekly-challenge.tsx",
+      "bytes": 80,
+      "sha256": "1b32b1384923d1258b383b7fb1b10a745bd6dc981a9ef638b23d2e88b0f31670",
+      "collections": []
+    },
+    {
+      "file": "src/app/tools/whistle-decoder.jsx",
+      "bytes": 11292,
+      "sha256": "7ded267d09b17840a091b60cf9427f17e967174a6cc9032149a7d741edb56bf2",
+      "collections": [
+        {
+          "name": "PATTERNS",
+          "entries": 8
+        },
+        {
+          "name": "SOUND_EXAMPLES",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/app/_layout.jsx",
+      "bytes": 16698,
+      "sha256": "1fca8e8a930095149e1a9e295eb913888cb0174e73765d8f25dd533c121475be"
+    },
+    {
+      "file": "src/components/AppUpdatePrompt.jsx",
+      "bytes": 6172,
+      "sha256": "d21d216de74fc9cfd498b3477fab1af9380ceb806c65fcc58f72a7bfebfe3672"
+    },
+    {
+      "file": "src/components/CalculatorUI.jsx",
+      "bytes": 7148,
+      "sha256": "367d3d5d07d278f559b24151adc79aa14ab23569b384e7d2227b0499f88d1a1b"
+    },
+    {
+      "file": "src/components/CompactSelect.jsx",
+      "bytes": 3898,
+      "sha256": "05cbb0e137a7c478673038d6ef9a8f6889b9c316414127adf2a248e1b017368a"
+    },
+    {
+      "file": "src/components/DonationNudge.jsx",
+      "bytes": 4795,
+      "sha256": "afcfb14b58b9eec43800ab1a483cd2f7b2ab33832d3bef405ef8c7b0b7cb2edb"
+    },
+    {
+      "file": "src/components/EditableItemModal.jsx",
+      "bytes": 7126,
+      "sha256": "defd0e96197a842bfe69033de6429d8bfcfccde67885620aba959fa7fe978265"
+    },
+    {
+      "file": "src/components/EditableLocalPhoto.jsx",
+      "bytes": 8822,
+      "sha256": "5876fba50d358da6286379f5b20287dd8d825ee792a1549ed0925385679660ef"
+    },
+    {
+      "file": "src/components/KeyboardAvoidingAnimatedView.jsx",
+      "bytes": 3678,
+      "sha256": "e5244465e2ab6631122eee6c655870f0c54c3d5834f7d8eb06ce1cbff69a28b8"
+    },
+    {
+      "file": "src/components/LicenseGate.jsx",
+      "bytes": 10925,
+      "sha256": "b92b994af55e755250d8d3b2768bf5bc738749b795e545e1742366b1a9e2cbd1"
+    },
+    {
+      "file": "src/components/MorseOfflineBlock.jsx",
+      "bytes": 5532,
+      "sha256": "170a0165445b8923a41b7b55aa430657324bafea07d4f43fe2573b9c93eaf378"
+    },
+    {
+      "file": "src/components/OfflineCoordinatePicker.jsx",
+      "bytes": 24425,
+      "sha256": "338a39f24411d2087e223dffdc9b1af0f2023aa5cbed15064b4c2eddfe191dec"
+    },
+    {
+      "file": "src/components/OfflineVoiceReader.tsx",
+      "bytes": 11225,
+      "sha256": "93c6b8d1ad33b011f9d9123182837687a3cb6529fbec2f7ff48e4c52da89e224"
+    },
+    {
+      "file": "src/components/RemoteMessageHost.jsx",
+      "bytes": 5519,
+      "sha256": "6502e9ee8d5345c58b60fb37f496b8fa37b4a6b7cae00e0cad5cab511e1cad8b"
+    },
+    {
+      "file": "src/data/basePhotoManifest.js",
+      "bytes": 8155,
+      "sha256": "22db06bea48b3b4911646f402b00044696f12e946df79d0ed94ecd2c7693472c",
+      "collections": [
+        {
+          "name": "HAND_SIGNAL_BASE_PHOTOS",
+          "entries": 29
+        },
+        {
+          "name": "SPAIN_PLANT_BASE_PHOTOS",
+          "entries": 20
+        },
+        {
+          "name": "SPAIN_PLANT_BASE_GALLERY_OVERRIDES",
+          "entries": 20
+        },
+        {
+          "name": "ANIMAL_TRACK_BASE_PHOTOS",
+          "entries": 13
+        }
+      ]
+    },
+    {
+      "file": "src/data/checklistsData.js",
+      "bytes": 16836,
+      "sha256": "1ef970bde71af615e464cbd1309b19ae53daca9e77ec564ffe07bcc28b42de5f",
+      "collections": [
+        {
+          "name": "INITIAL_CHECKLISTS",
+          "entries": 16
+        }
+      ]
+    },
+    {
+      "file": "src/data/crisisData.js",
+      "bytes": 25529,
+      "sha256": "205c8e9fe05a8dad7dbe4ce32bf7e44c130aa51340ac0a1376bc57b87f0786fd",
+      "collections": [
+        {
+          "name": "CRISIS_SCENARIOS",
+          "entries": 16
+        }
+      ]
+    },
+    {
+      "file": "src/data/customCrisisStorage.js",
+      "bytes": 2665,
+      "sha256": "cc2a10bd42a37af439d9e513862b719d36ab09c35b8560a0ba1c33b05491baa9"
+    },
+    {
+      "file": "src/data/embeddedTopoMaps.js",
+      "bytes": 38,
+      "sha256": "17ebde429bdcbb8d8f928063e2a0efdbe58e04bfc6112af5ffd6fd22b1565fa1",
+      "collections": [
+        {
+          "name": "EMBEDDED_TOPO_MAPS",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/data/emergencyPhonesSpain.js",
+      "bytes": 12247,
+      "sha256": "c3daa556cd454af9de572712522cce9e0ddb399ac107fdc90da031cda837d2b7",
+      "collections": [
+        {
+          "name": "EMERGENCY_PHONE_REGIONS",
+          "entries": 19
+        },
+        {
+          "name": "NATIONAL_EMERGENCY_PHONES",
+          "entries": 20
+        },
+        {
+          "name": "REGIONAL_EMERGENCY_PHONES",
+          "entries": 19
+        }
+      ]
+    },
+    {
+      "file": "src/data/encyclopediaImportedData.js",
+      "bytes": 93986,
+      "sha256": "a2b9b43929fc29de6c6af24ad32931a8ad77cf469d96e7c4954227f99537f10d",
+      "collections": [
+        {
+          "name": "SPAIN_EDIBLE_PLANTS",
+          "entries": 30
+        },
+        {
+          "name": "SPAIN_DANGEROUS_PLANTS",
+          "entries": 30
+        },
+        {
+          "name": "SPAIN_MEDICINAL_PLANTS",
+          "entries": 30
+        },
+        {
+          "name": "SURVIVAL_COMPARISONS",
+          "entries": 6
+        }
+      ]
+    },
+    {
+      "file": "src/data/extraGuidesData.js",
+      "bytes": 37996,
+      "sha256": "0c8f832e9f9e366050047026abadf984b839673e50428c575ab7861034ed7c8e",
+      "collections": [
+        {
+          "name": "EXTRA_GUIDES",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/data/frequencyGuideData.js",
+      "bytes": 10958,
+      "sha256": "3a81d5f298a0e5b78420f15a2db744dae21e7a863744da8a4b8cc0857874db61",
+      "collections": []
+    },
+    {
+      "file": "src/data/guidesAdvanced.js",
+      "bytes": 78105,
+      "sha256": "aa5912edcb229d6db298d5c70aa8efc43702a7d7e64736b9f4fcd7505b20a9b4",
+      "collections": [
+        {
+          "name": "GUIDES_ADVANCED",
+          "entries": 11
+        }
+      ]
+    },
+    {
+      "file": "src/data/guidesData.js",
+      "bytes": 172787,
+      "sha256": "9c915afcc16c0a61df323811c59c0852cb2ab89cfe1ee36693435032aad5997a",
+      "collections": [
+        {
+          "name": "GUIDES",
+          "entries": 14
+        }
+      ]
+    },
+    {
+      "file": "src/data/guidesPhase4.js",
+      "bytes": 36232,
+      "sha256": "2558b9b89e130a5afae7716781b739e6ac5654e1719c54ec93366e26302a8e55",
+      "collections": [
+        {
+          "name": "GUIDES_PHASE4",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/data/huntingFishingData.js",
+      "bytes": 18157,
+      "sha256": "8aca54be08b4e646d8ccae0b9094b51a08acd0c62f711b5cf1286ee6e6ca9b4e",
+      "collections": [
+        {
+          "name": "HUNTING_SOURCE_RECORDS",
+          "entries": 0
+        },
+        {
+          "name": "FISHING_SOURCE_RECORDS",
+          "entries": 0
+        },
+        {
+          "name": "ANIMAL_TRACKS",
+          "entries": 13
+        },
+        {
+          "name": "HUNTING_SECTIONS",
+          "entries": 5
+        },
+        {
+          "name": "FISHING_SECTIONS",
+          "entries": 10
+        },
+        {
+          "name": "HUNTING_FISHING_GUIDES",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/data/initialData.js",
+      "bytes": 2826,
+      "sha256": "a056ce705e4e5ff94a8c93ba9609a20fea6ba4b8d897843190e199c95814e243",
+      "collections": [
+        {
+          "name": "MERGE_CATEGORY_BY_ID",
+          "entries": 7
+        },
+        {
+          "name": "nextCategories",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/data/interactiveLearningData.js",
+      "bytes": 258538,
+      "sha256": "99e8a7e5eef61a0e7e9a6d59bb143c3f8d0b694f57e26e64d05e26c6c9cdc399",
+      "collections": [
+        {
+          "name": "LEARNING_RANKS",
+          "entries": 7
+        },
+        {
+          "name": "LEARNING_QUIZZES",
+          "entries": 5
+        },
+        {
+          "name": "LEARNING_CHAPTERS",
+          "entries": 10
+        },
+        {
+          "name": "SURVIVAL_MYTHS",
+          "entries": 60
+        },
+        {
+          "name": "MYTH_SCENARIOS",
+          "entries": 17
+        },
+        {
+          "name": "HOUSEHOLD_OBJECTS",
+          "entries": 31
+        },
+        {
+          "name": "HOUSEHOLD_QUIZ",
+          "entries": 20
+        },
+        {
+          "name": "HOUSEHOLD_CHALLENGES",
+          "entries": 5
+        },
+        {
+          "name": "HOUSEHOLD_COMBINATIONS",
+          "entries": 8
+        },
+        {
+          "name": "HOUSEHOLD_EMERGENCY_SOLUTIONS",
+          "entries": 10
+        },
+        {
+          "name": "HOUSEHOLD_WARNINGS",
+          "entries": 8
+        }
+      ]
+    },
+    {
+      "file": "src/data/knotsData.js",
+      "bytes": 21244,
+      "sha256": "b8dc4f3c14941544129e1e702b7dd736ea9a739f1a9c501cc3343ca4a6b75e53",
+      "collections": [
+        {
+          "name": "KNOT_CATEGORIES",
+          "entries": 11
+        },
+        {
+          "name": "BASE_WARNINGS",
+          "entries": 3
+        },
+        {
+          "name": "KNOT_IMAGES",
+          "entries": 18
+        },
+        {
+          "name": "KNOT_GUIDES",
+          "entries": 19
+        },
+        {
+          "name": "KNOT_GUIDE_CATEGORY",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/data/spainPlantExternalManifest.js",
+      "bytes": 144,
+      "sha256": "7afee35994e2279057d1c9b265a870eaf8c791af38b90db8c942fffc6ca6d5d5",
+      "collections": []
+    },
+    {
+      "file": "src/data/speciesGuidesData.js",
+      "bytes": 6345,
+      "sha256": "b8661446c5da4a08de00bac532f9d5462bd36cdd5c9d9ebb86dc5e18895fad01",
+      "collections": [
+        {
+          "name": "SECTIONS",
+          "entries": 4
+        },
+        {
+          "name": "SPECIES_GUIDE_CATEGORY",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/data/speciesImages.js",
+      "bytes": 9618,
+      "sha256": "6101ba5ed4327b1a4021497eb46ee3b51f9f242461eac76d8df96eb8b0e7d8f2",
+      "collections": [
+        {
+          "name": "SPECIES_IMAGES",
+          "entries": 39
+        }
+      ]
+    },
+    {
+      "file": "src/data/trampasData.json",
+      "bytes": 7102,
+      "sha256": "62b5598f2eb907abd16e6319684c5e8215d8a88b5d01e75356b90fdd3cfae5bb",
+      "collections": []
+    },
+    {
+      "file": "src/features/battery/batteryModes.js",
+      "bytes": 6525,
+      "sha256": "bc0e27617d5965b4938e7c2c491bd7fb717007ef235afa29e8078e9b97c3d65e",
+      "collections": [
+        {
+          "name": "BATTERY_MODES",
+          "entries": 4
+        },
+        {
+          "name": "DEFAULT_BATTERY_SETTINGS",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/features/battery/nativeBatteryEstimate.js",
+      "bytes": 423,
+      "sha256": "eb4ab1234d28ade946bc46a53145ad0824a22136c85ef7e60f0c290a94bd8138",
+      "collections": []
+    },
+    {
+      "file": "src/features/battery/useBatteryEstimate.js",
+      "bytes": 3412,
+      "sha256": "898842f8684770fdb21e4558d5b913ecb9cedc93f77fe85e95d2c9e2c1f3bf09",
+      "collections": []
+    },
+    {
+      "file": "src/features/blackBox/BlackBoxScreen.tsx",
+      "bytes": 25372,
+      "sha256": "3b5cb24b96b498baa11763f8e14b8e0c49d1fac4a7780eaa573c18a7223911b8",
+      "collections": []
+    },
+    {
+      "file": "src/features/certificates/FamilyCertificateScreen.tsx",
+      "bytes": 6739,
+      "sha256": "41c24887147e5dab2c8fec26b93e20761d410a5f7dfff1baa8a1a464220c8449",
+      "collections": [
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/features/comparisons/comparisonData.js",
+      "bytes": 57301,
+      "sha256": "399d2164aeffc1b585034cd10903b69f0a23ba6b3bbe998ad8b305ce6f100def",
+      "collections": [
+        {
+          "name": "COMPARISON_CATEGORIES",
+          "entries": 16
+        },
+        {
+          "name": "CONTEXTS",
+          "entries": 10
+        },
+        {
+          "name": "RATING_LABELS",
+          "entries": 6
+        },
+        {
+          "name": "EMERGENCY_QUERIES",
+          "entries": 5
+        },
+        {
+          "name": "COMPARISONS",
+          "entries": 12
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/alertLocationStorage.ts",
+      "bytes": 1733,
+      "sha256": "d6554db088c5bc4d59494e9706243ffcf5c03e92222d598d2e192ba9ee6b6d1a"
+    },
+    {
+      "file": "src/features/disasterAlerts/alertTranslation.ts",
+      "bytes": 5881,
+      "sha256": "eeba7a8b2dea90cba05c3206f5323c1a3cae99d4d69510e2b0c03b7620da294d",
+      "collections": [
+        {
+          "name": "SPANISH_HINTS",
+          "entries": 12
+        },
+        {
+          "name": "TYPE_LABELS",
+          "entries": 10
+        },
+        {
+          "name": "COUNTRY_NAMES",
+          "entries": 8
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AlertCard.tsx",
+      "bytes": 4531,
+      "sha256": "891ce8baa82e0721d0b160112ddbc522bd8a536bfbf56b2be65b697b73a8de54",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AlertLocationPicker.tsx",
+      "bytes": 3857,
+      "sha256": "05bc23ae4b0289a20931f550b84b117558bc579e02512a04a0df0b6c3df1b694",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AlertsErrorState.tsx",
+      "bytes": 1034,
+      "sha256": "1665f4906863cdbdd1dd146f57dec2d66a80a426a19b1b17682177376a54755a",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AlertsHeader.tsx",
+      "bytes": 1312,
+      "sha256": "270a2dab67e98f71a780e83e436fba05b452c9b01f9d9a2fbe4f559d8600f7b6",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AlertsLoadingState.tsx",
+      "bytes": 463,
+      "sha256": "71f76d8710dddbc1285e208668c16c59e3e01f06a266edd03f7350a4524dc395",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/AreaFilterChips.tsx",
+      "bytes": 906,
+      "sha256": "83463cc3aa205b08e48b32590eb79ceb392cf518fe2a8a354e26cba0e2d3656c",
+      "collections": [
+        {
+          "name": "areas",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/components/CacheInfoBanner.tsx",
+      "bytes": 558,
+      "sha256": "95742309b762b03d76d012ce4abf5500940723a5001556e7342e0acffdf1e8f7",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/CriticalBanner.tsx",
+      "bytes": 523,
+      "sha256": "8b6b038cb1726ae0e0f4de13ee7a7ae03d5b82e387ea9ea9def9eacea354f67e",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/EmptyAlertsState.tsx",
+      "bytes": 630,
+      "sha256": "b03f93494fd2ab04d48bfbd480360c468341727dbfae7c84ca770ff163dea980",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/components/FilterChips.tsx",
+      "bytes": 668,
+      "sha256": "8d8b1fbad71aebc1d16e5871784a627421d34f4de21cf193c42c1c57ea3722d0",
+      "collections": [
+        {
+          "name": "filters",
+          "entries": 10
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/components/SourceStatusCard.tsx",
+      "bytes": 842,
+      "sha256": "87eb7a77c892af9a1cc3c3d9a86b9925335b236b963a007d83108e6566d75af0",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/constants.ts",
+      "bytes": 1263,
+      "sha256": "c073ff4a351fb4b5714473c06b4e688a7ee3b74bda707f5a9860f9bf4c89d02e",
+      "collections": [
+        {
+          "name": "severityColorMap",
+          "entries": 4
+        },
+        {
+          "name": "severityBorderColorMap",
+          "entries": 4
+        },
+        {
+          "name": "typeIconMap",
+          "entries": 10
+        },
+        {
+          "name": "sourceLabelMap",
+          "entries": 3
+        },
+        {
+          "name": "sourceColorMap",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/DisasterAlertsScreen.tsx",
+      "bytes": 5710,
+      "sha256": "639937c11b4cbb0a7c1cdf1fea36d2a4a5976e476f7550678d60a1b45427f61e",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/disasterAlertsService.ts",
+      "bytes": 5176,
+      "sha256": "a628a7993639054b03ff0e6a575c8844cff468698b18319ad7fb999ce1a40bd2"
+    },
+    {
+      "file": "src/features/disasterAlerts/disasterAlertsStorage.ts",
+      "bytes": 1315,
+      "sha256": "194d949eae4e7cbd8142454736714813f3045f34683e6393a0842fdb57bcd2ae"
+    },
+    {
+      "file": "src/features/disasterAlerts/disasterAlertsUtils.ts",
+      "bytes": 7015,
+      "sha256": "54afc4f0375ba58b1448c981154d51a257c231b8f8049fcf1f0b1adf7a2f9667",
+      "collections": [
+        {
+          "name": "weight",
+          "entries": 4
+        },
+        {
+          "name": "areaWeight",
+          "entries": 4
+        }
+      ]
+    },
+    {
+      "file": "src/features/disasterAlerts/emscService.ts",
+      "bytes": 1539,
+      "sha256": "00cdd4ec3cb6bf8d2739f10a15cd4f5007cfacc3354a3b5aa86c7d99bcbfb3bc"
+    },
+    {
+      "file": "src/features/disasterAlerts/gdacsService.ts",
+      "bytes": 1965,
+      "sha256": "715ce6529b16e85216ee9ee69b8af2c93e23227592577e7e6724b442194479c8"
+    },
+    {
+      "file": "src/features/disasterAlerts/ifrcService.ts",
+      "bytes": 124,
+      "sha256": "d62b8031c40cddcba737b0522d33b195f9b54edc2ee70045fb4d5e5d7c82c65c"
+    },
+    {
+      "file": "src/features/disasterAlerts/spanishAdministrativeAreas.ts",
+      "bytes": 6853,
+      "sha256": "32e91909c309bc7096fe3ed28d4c348dbb174e9f19af27d7a09fb95d86a885fe"
+    },
+    {
+      "file": "src/features/disasterAlerts/types.ts",
+      "bytes": 1445,
+      "sha256": "b9b7397eea58f9c6515953924dccdfc3933e9f3c2afad74d1243b013f96f3904",
+      "collections": []
+    },
+    {
+      "file": "src/features/disasterAlerts/useDisasterAlerts.ts",
+      "bytes": 2273,
+      "sha256": "1d1c2d1f68029eb93910a541741ea81c6c2db46a343f86d2df10ff3a6918c9f3",
+      "collections": []
+    },
+    {
+      "file": "src/features/donations/donationNudgeStorage.js",
+      "bytes": 1609,
+      "sha256": "69bc32f657c9bd3568725e8ffa6e94c4a3b6d64227b1f3829b1ba5e5bbf1d1ed"
+    },
+    {
+      "file": "src/features/drill/FamilyDrillScreen.tsx",
+      "bytes": 5995,
+      "sha256": "baee8c662d5aec8e6849a887186e5154d8dba18a5c97937057d9b8c60c45fdea",
+      "collections": [
+        {
+          "name": "scenarios",
+          "entries": 9
+        },
+        {
+          "name": "result",
+          "entries": 7
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/features/emergencyCenter/EmergencyCenterScreen.tsx",
+      "bytes": 8192,
+      "sha256": "d66f256aed9aa5ffea159c278bd768b10b3ad152d322c3f29b0d60226845cfc6",
+      "collections": []
+    },
+    {
+      "file": "src/features/emergencyPlans/defaultPlans.js",
+      "bytes": 3996,
+      "sha256": "f04ba63febd70ca094b555b06d37a734ec1b1b8a6b32326cf1c3bdfd07ca4c36",
+      "collections": [
+        {
+          "name": "PLAN_TYPES",
+          "entries": 3
+        },
+        {
+          "name": "ROLES",
+          "entries": 8
+        },
+        {
+          "name": "DEFAULT_SUPPLIES",
+          "entries": 12
+        },
+        {
+          "name": "DEFAULT_PLANS",
+          "entries": 1
+        }
+      ]
+    },
+    {
+      "file": "src/features/emergencyPlans/emergencyPlansStorage.js",
+      "bytes": 516,
+      "sha256": "9399875bbbe3107e93222b367d0f49388a38cba93d64f354c124acb0bd513f7e"
+    },
+    {
+      "file": "src/features/emergencyPlans/exportPlan.js",
+      "bytes": 1778,
+      "sha256": "8a9a69b7395aab15c86043cd73305293946e84c2c6f5883e62931feaaa26fc59",
+      "collections": [
+        {
+          "name": "EMERGENCY_NUMBERS",
+          "entries": 6
+        },
+        {
+          "name": "lines",
+          "entries": 23
+        }
+      ]
+    },
+    {
+      "file": "src/features/familyPreparedness/FamilyPreparednessScreen.tsx",
+      "bytes": 9505,
+      "sha256": "7753a46e27a8b484d1acd6d975206816402f3e0bde546056e3bbd9a8858ee333",
+      "collections": [
+        {
+          "name": "modules",
+          "entries": 4
+        },
+        {
+          "name": "next",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/features/familyPreparedness/reminders.ts",
+      "bytes": 1905,
+      "sha256": "15486fb832913331a586b5e982de6a308a80173e04c4ed64856bbc6a53b16af9",
+      "collections": [
+        {
+          "name": "nextIds",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/features/familyPreparedness/storage.ts",
+      "bytes": 855,
+      "sha256": "3b607a86701d3840678ac36e299d2b797c75a500c3234fc6ca03386686d4442f"
+    },
+    {
+      "file": "src/features/familyPreparedness/types.ts",
+      "bytes": 434,
+      "sha256": "b3716baff4d0bc2422ad5c7d5a2261b5bd4ca608a5c13b7ce84339605dcb82e1",
+      "collections": [
+        {
+          "name": "DEFAULT_PREPAREDNESS",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/features/garden/gardenData.js",
+      "bytes": 19671,
+      "sha256": "7aa7fbc65c993b75073a051165bba29fdcec58a8165246c0b36c7a0beb4ee21b",
+      "collections": [
+        {
+          "name": "MONTH_NAMES",
+          "entries": 12
+        },
+        {
+          "name": "COMMUNITIES",
+          "entries": 19
+        },
+        {
+          "name": "PROVINCES_BY_COMMUNITY",
+          "entries": 19
+        },
+        {
+          "name": "CLIMATE_ZONES",
+          "entries": 9
+        },
+        {
+          "name": "CLIMATE_BY_COMMUNITY",
+          "entries": 19
+        },
+        {
+          "name": "OBJECTIVES",
+          "entries": 4
+        },
+        {
+          "name": "GARDEN_TYPES",
+          "entries": 6
+        },
+        {
+          "name": "EXPERIENCE_LEVELS",
+          "entries": 3
+        },
+        {
+          "name": "WATER_LEVELS",
+          "entries": 4
+        },
+        {
+          "name": "SUNLIGHT_LEVELS",
+          "entries": 4
+        },
+        {
+          "name": "CALORIC_CROPS",
+          "entries": 10
+        },
+        {
+          "name": "BEGINNER_CROP_IDS",
+          "entries": 8
+        },
+        {
+          "name": "med",
+          "entries": 34
+        },
+        {
+          "name": "CROPS",
+          "entries": 34
+        },
+        {
+          "name": "ROTATION_ZONES",
+          "entries": 4
+        },
+        {
+          "name": "PRESERVATION_GUIDES",
+          "entries": 7
+        },
+        {
+          "name": "MATERIALS",
+          "entries": 10
+        },
+        {
+          "name": "CLIMATE_ADVICE",
+          "entries": 9
+        }
+      ]
+    },
+    {
+      "file": "src/features/interactiveLearning/LearningUI.jsx",
+      "bytes": 7283,
+      "sha256": "0242d1316003050453ad1885faf47fb3330bc592796599b13ba75d228d6d6290",
+      "collections": []
+    },
+    {
+      "file": "src/features/interactiveLearning/progress.js",
+      "bytes": 495,
+      "sha256": "57286c62cf9c849a2016ab3de18c4d1e05882cadf2b7a6753e7a77743b0a0758",
+      "collections": []
+    },
+    {
+      "file": "src/features/licensing/appAccessManager.js",
+      "bytes": 1946,
+      "sha256": "c1061467da3aa024c8bfb4884218765063fb8492036f7080b6a4f431736ce4c0"
+    },
+    {
+      "file": "src/features/licensing/installationIdManager.js",
+      "bytes": 1258,
+      "sha256": "735dcaabf92679f554c089ff77eca2e286e52e2f36c27c3fadfba5272db1f524"
+    },
+    {
+      "file": "src/features/licensing/licenseCertificateVerifier.js",
+      "bytes": 3151,
+      "sha256": "52e69c54f9bce054e6c6302fcb79cd524106efaa634ff76e3fa2f4eb55f9cdeb"
+    },
+    {
+      "file": "src/features/licensing/licensePublicKey.js",
+      "bytes": 264,
+      "sha256": "58e74534f8a366572122ec2c9a8acd1e2d2c662ac27adee322361990355fef43"
+    },
+    {
+      "file": "src/features/licensing/licenseRepository.js",
+      "bytes": 2698,
+      "sha256": "0ca72570c5b0e851394fdd6312653b404610671a7616ea6ef6df02b06e8b8bcd"
+    },
+    {
+      "file": "src/features/licensing/licensingConstants.js",
+      "bytes": 1662,
+      "sha256": "ecefc390c3a786bd32088d829ebbc74c2ba7396ada31a90738872e5af1c867e7"
+    },
+    {
+      "file": "src/features/licensing/remoteConfigRepository.js",
+      "bytes": 3629,
+      "sha256": "9fc9877497b99b21154259132565fba4d6c4dd131d4e2778b0fd76587d189b04"
+    },
+    {
+      "file": "src/features/licensing/remoteMessageRepository.js",
+      "bytes": 4707,
+      "sha256": "4f9b7e73c4a9499f0b4aa58dace99cdb829d027229b2919b6fb4e24067045227"
+    },
+    {
+      "file": "src/features/licensing/secureLicenseStorage.js",
+      "bytes": 815,
+      "sha256": "2a7f604a87c05bb056ee49ed45113a423d76248d6005c8cdb7e25bd733f53b75"
+    },
+    {
+      "file": "src/features/licensing/storageKeys.js",
+      "bytes": 473,
+      "sha256": "c204af648b070c509beb7afe708e0f325766e3c9fe5bc2a05e6c65eec8944b5d"
+    },
+    {
+      "file": "src/features/licensing/urlUtils.js",
+      "bytes": 419,
+      "sha256": "ceb5eb05f85468e53f80886e4d970ed1962393f0f73aa956397c38df79ba769c"
+    },
+    {
+      "file": "src/features/licensing/useAppAccess.js",
+      "bytes": 1902,
+      "sha256": "6943c7e84347cf76d63fe01e8afb3937b5aedb0b0b95d2e9839f465387262666"
+    },
+    {
+      "file": "src/features/licensing/versionPolicy.js",
+      "bytes": 901,
+      "sha256": "807eab6c55c7229c2196f47bf0f7b1f282d0f5dd4696fe3f7acbafbaa1c29fed"
+    },
+    {
+      "file": "src/features/radio/radioData.js",
+      "bytes": 2405,
+      "sha256": "6f4b37fe2d2bba1ff3fb538c5f1fdd61469e680411869eb18b4ec198242be9e9",
+      "collections": [
+        {
+          "name": "AUTONOMIES",
+          "entries": 22
+        },
+        {
+          "name": "RADIO_CATEGORIES",
+          "entries": 7
+        },
+        {
+          "name": "DEFAULT_RADIO_CHANNELS",
+          "entries": 0
+        },
+        {
+          "name": "STATE_TO_AUTONOMY",
+          "entries": 28
+        }
+      ]
+    },
+    {
+      "file": "src/features/radio/radioStorage.js",
+      "bytes": 1384,
+      "sha256": "91a30935824ddf1e5ceb9169d1928e1c3c0157aa001efcdf8d79ddc1a0b5a9a8"
+    },
+    {
+      "file": "src/features/radio/spanishRadioDirectory.js",
+      "bytes": 3175,
+      "sha256": "38fac52d81370259965997fb8e402606f21e7a507dad85a2d03cb9c334265c9e",
+      "collections": [
+        {
+          "name": "SERVERS",
+          "entries": 3
+        },
+        {
+          "name": "result",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/features/sosFlashlight/SosFlashlightScreen.tsx",
+      "bytes": 10147,
+      "sha256": "651700e292c4a442c096f6b5863414fe99ec3f6c1d850f1b8498f99bcc759b97",
+      "collections": [
+        {
+          "name": "MORSE",
+          "entries": 37
+        },
+        {
+          "name": "timeline",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/components/CacheBanner.tsx",
+      "bytes": 758,
+      "sha256": "a7e9254035df24c6f0112b32358ae2fd628f5f018e050bcc7fdc4104c124bea9",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/components/CurrentWeatherCard.tsx",
+      "bytes": 2747,
+      "sha256": "0f239b2a793e53e98585198be7d264de742d4233d55cab5b5ee7a0c069b29e9d",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/components/DailyForecastRow.tsx",
+      "bytes": 2015,
+      "sha256": "b02d7cfad0b2ae377c1e0fbccb0a73f37e73b3a0da854495cfa9513e0eee0427",
+      "collections": [
+        {
+          "name": "DAYS",
+          "entries": 7
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/components/HourlyForecastRow.tsx",
+      "bytes": 1835,
+      "sha256": "c3f2250bd3fba611bfe9af0b16444ed1d6d52771f3cce946f04e1c33a31e593d",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/components/SurvivalAlertCard.tsx",
+      "bytes": 3423,
+      "sha256": "3ff0517dfa40a90d6494eaaee7a84803275a13304897c44ddef9378d443fca06",
+      "collections": [
+        {
+          "name": "alerts",
+          "entries": 0
+        },
+        {
+          "name": "LEVEL_STYLES",
+          "entries": 3
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/components/WeatherErrorState.tsx",
+      "bytes": 1282,
+      "sha256": "f58f3409ea0b6cef13d0483e147bb6d88efaf4f078bc50351690a4f1e6d89d84",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/components/WeatherLoadingState.tsx",
+      "bytes": 585,
+      "sha256": "d43b7453ab1e70d1f5aec6e5eea1084ccfccc4237189bcf170c233ab12d6a7b6",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/locationSearchService.ts",
+      "bytes": 1449,
+      "sha256": "fac8db8641cd8c9949505ba3299e500aefb2bc4bbb4b3b39341e2dbdce60475e"
+    },
+    {
+      "file": "src/features/weather/types.ts",
+      "bytes": 2951,
+      "sha256": "1b4700fee339e74733a85662f20fa5e7ee0ef42c5ca5c626f5cb13dd9d9f9e30",
+      "collections": [
+        {
+          "name": "DEFAULT_COORDS",
+          "entries": 2
+        },
+        {
+          "name": "WMO_MAP",
+          "entries": 24
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/useWeather.ts",
+      "bytes": 3894,
+      "sha256": "cdc23caac58def244d4e7c95ab00614515cb3bedb0a635cc7d43465fe630e7e9",
+      "collections": [
+        {
+          "name": "coords",
+          "entries": 2
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/weatherAlerts.ts",
+      "bytes": 4215,
+      "sha256": "b67ec96ea371a51a7ce6229c4cebe337086bbd375c6bb318af7051ca1eb359f3",
+      "collections": [
+        {
+          "name": "alerts",
+          "entries": 0
+        }
+      ]
+    },
+    {
+      "file": "src/features/weather/WeatherScreen.tsx",
+      "bytes": 15054,
+      "sha256": "9eeb32a43ce4f72ea8ed6fcbde6c6538c63649ba83c164c4a89141b2409e533e",
+      "collections": []
+    },
+    {
+      "file": "src/features/weather/weatherService.ts",
+      "bytes": 4963,
+      "sha256": "08771898b51e341a526232a81b9818f56cd8d7803007f0d5dce11dca7c2230e7"
+    },
+    {
+      "file": "src/features/weather/weatherStorage.ts",
+      "bytes": 2967,
+      "sha256": "302128b3496355561f240dfe5415e6c78110930bcdb30c2afdd919711913d4c8"
+    },
+    {
+      "file": "src/features/weeklyChallenge/WeeklyChallengeScreen.tsx",
+      "bytes": 5080,
+      "sha256": "79a2a11ed2142d2ef2d3f3eca6729148da7fd6a4c2f7d921c1b4cf9e262dbf1e",
+      "collections": [
+        {
+          "name": "challenges",
+          "entries": 8
+        },
+        {
+          "name": "next",
+          "entries": 5
+        }
+      ]
+    },
+    {
+      "file": "src/services/appUpdateService.js",
+      "bytes": 3930,
+      "sha256": "2867f8e8a2b2dec8d6b55020d90b98da04406ea2e3ff987f819b5d7bb643c42e"
+    },
+    {
+      "file": "src/services/editableContent.js",
+      "bytes": 1554,
+      "sha256": "1c354e7c57b685353bdba4a8c7a5256988644fb22ef66d5f10c3271108ff3cb5"
+    },
+    {
+      "file": "src/services/locationService.js",
+      "bytes": 2330,
+      "sha256": "2d7522ff9c5379567bc017da53a71538399c8f9e4a8790446b8643ab9a33a1fe"
+    },
+    {
+      "file": "src/services/offlineLlm.js",
+      "bytes": 3837,
+      "sha256": "5f43f6d19d0a60908afa8d22d8e7664c721c4ae579153dd989366ed6c193a3de"
+    },
+    {
+      "file": "src/services/offlineResources.js",
+      "bytes": 6645,
+      "sha256": "4da9bd441783d91865af095de3a30e49de68c396c6686e23b23bb04d42b882dc"
+    },
+    {
+      "file": "src/services/offlineSearch.js",
+      "bytes": 8286,
+      "sha256": "10b4f925f3bb8ee6da817b959abfaae75a84d27e878000c9dce50f10f69bb9fa"
+    },
+    {
+      "file": "src/store/useAppStore.js",
+      "bytes": 21827,
+      "sha256": "74595a62fcd9a49887506f9368895003eac8c2df66e11e7802abb16905ecb739"
+    },
+    {
+      "file": "src/utils/appVariant.js",
+      "bytes": 614,
+      "sha256": "aab0d639a93a231516fac98cbe01a81a0cd05d2efc2bb96650d15f1c277d0428"
+    },
+    {
+      "file": "src/utils/auth/AuthWebView.jsx",
+      "bytes": 3821,
+      "sha256": "57bc1e05a8fcff1802ae7c5ca9dc658388977ec4964a9f9b78859df9698efa0e"
+    },
+    {
+      "file": "src/utils/auth/index.js",
+      "bytes": 150,
+      "sha256": "93de79c30d322bd698a00388bcdd028defd13616c56e56544ef899bd961e06f3"
+    },
+    {
+      "file": "src/utils/auth/store.js",
+      "bytes": 2331,
+      "sha256": "9365e7807695e4bb3171a0918da0911b2f7b55d8d35089787eb420a7ba5f13cc"
+    },
+    {
+      "file": "src/utils/auth/useAuth.js",
+      "bytes": 2429,
+      "sha256": "594cc7ac62f8d866a43848593d450c14913ec85aebea08a0525312f48b5b45bc"
+    },
+    {
+      "file": "src/utils/auth/useAuthModal.jsx",
+      "bytes": 1816,
+      "sha256": "c974686973780f070b692e42356a9be0da3026f6d55438eb580f1dbcbf7faf2b"
+    },
+    {
+      "file": "src/utils/auth/useUser.js",
+      "bytes": 347,
+      "sha256": "8085347e465eb1bedb77458e82d213c5bb5d0c42fba72dadcb882f5a180f1218"
+    },
+    {
+      "file": "src/utils/daylightCalculator.js",
+      "bytes": 10013,
+      "sha256": "9148c8b7d1a06f3dd7b536770f2b768109485f2a6a01995ca7ec3dc2e82eb2c8"
+    },
+    {
+      "file": "src/utils/iap/index.js",
+      "bytes": 104,
+      "sha256": "2d31100357ca085e82bcfa459aaca6352981ed0889161c6c63b1bac52c4c75b9"
+    },
+    {
+      "file": "src/utils/iap/store.js",
+      "bytes": 312,
+      "sha256": "55fa55fb7bd0831d7c044a4d3ffe2d91cc91ccad38ad0e92a544af77147a3a96"
+    },
+    {
+      "file": "src/utils/iap/useInAppPurchase.js",
+      "bytes": 5265,
+      "sha256": "c942332c804cf00b43e2bf0c15571c3b3828973c277b593cd73911ac3bbee71a"
+    },
+    {
+      "file": "src/utils/rainCaptureCalculator.js",
+      "bytes": 7971,
+      "sha256": "0c1966320d65714054ef31bae53a5d187780f4ec4467f5232af2c5d26a1a64c8"
+    },
+    {
+      "file": "src/utils/theme.js",
+      "bytes": 382,
+      "sha256": "6c79638b0083cf80c9b28aa59d7885fd5753a5379e35fd722ab63d4b8a4fa3ea"
+    },
+    {
+      "file": "src/utils/thermalSensationCalculator.js",
+      "bytes": 8774,
+      "sha256": "225737678e3fbb75c4fe22d771fb666844fcc8f3d4050360e7093aad7a8bf4f0"
+    },
+    {
+      "file": "src/utils/travelPlannerCalculator.js",
+      "bytes": 11576,
+      "sha256": "d0e16fccb97eb493e1abe2b94c737d7a2c359c8aec7a0c82555a1e9b5485dc11"
+    },
+    {
+      "file": "src/utils/useHandleStreamResponse.js",
+      "bytes": 1032,
+      "sha256": "1ccc80629b40117e32fef0d9d97ef1f128944d4210b4a77c31257a4da84f4dfa"
+    },
+    {
+      "file": "src/utils/usePreventBack.js",
+      "bytes": 840,
+      "sha256": "ef53c6fd024e5709a05bd1a23fa986eaa4b4a4a03b8cac12f02d32636f4f4651"
+    },
+    {
+      "file": "src/utils/useUpload.js",
+      "bytes": 4047,
+      "sha256": "1743bb82b8b0227802b998d4be3ec9b36c67b9d7c15249666b6333ad253c913f"
+    },
+    {
+      "file": "src/utils/__tests__/daylightCalculator.test.js",
+      "bytes": 4110,
+      "sha256": "0be84d58f57100bb57bb98e65d2d47398b14048dfe89177889b6ef3e59e377a4"
+    },
+    {
+      "file": "src/utils/__tests__/rainCaptureCalculator.test.js",
+      "bytes": 4924,
+      "sha256": "2017aa8cb7470184eefd59ea01543d612cf64ca34fbaa88544962138611905b7"
+    },
+    {
+      "file": "src/utils/__tests__/thermalSensationCalculator.test.js",
+      "bytes": 2914,
+      "sha256": "d481569b9b7c87d061bee111ace2bca5547ee38e41bb3fc9784d78f99b43561c"
+    },
+    {
+      "file": "src/utils/__tests__/travelPlannerCalculator.test.js",
+      "bytes": 5563,
+      "sha256": "c8c23f602305700c7d292ead047ca6c206ad4914d4004395e53cfc4d7f68d996"
+    },
+    {
+      "file": "src/__create/anything-menu.ios.tsx",
+      "bytes": 421,
+      "sha256": "a962021317b438a96d9a942cdc02b1b25682786205bb4164f45b830d280074dd"
+    },
+    {
+      "file": "src/__create/anything-menu.tsx",
+      "bytes": 57,
+      "sha256": "433dd6c084cb61dc810903bdeeb636b2b73576e8e58a99d6dcfb2e2554a20711"
+    },
+    {
+      "file": "src/__create/fetch.ts",
+      "bytes": 2579,
+      "sha256": "4f69e552d4f9202774cd58783fcdc595690c8960f1d7e99c2cd256ac19e19cb5"
+    },
+    {
+      "file": "src/__create/placeholder.svg",
+      "bytes": 1121,
+      "sha256": "33f562c855401040f7b6d1854df4c1a8484236d84716a0cc9c1697d240f30b25"
+    },
+    {
+      "file": "src/__create/polyfills.ts",
+      "bytes": 144,
+      "sha256": "46ee577c70fc92d4869fcf583a1588e7dae9a0684ac3da5ce6d49124aa41d819"
+    },
+    {
+      "file": "assets/audio/calm/agua-relax.mp3",
+      "bytes": 1907712,
+      "sha256": "edd47f30b83db1d99f587324242643be15d88ae2d2400282fbab4d21b99d30e6"
+    },
+    {
+      "file": "assets/audio/calm/lluvia-relax.mp3",
+      "bytes": 28801567,
+      "sha256": "c23604fd879061a120902471953146ced6144d31b5f424c4ce2f85456f0187dc"
+    },
+    {
+      "file": "assets/audio/calm/olas-mar.mp3",
+      "bytes": 1178644,
+      "sha256": "d862a1d8da9be60c4dcb6bb9f8a62be4544d345deca80e81dc5697696496e8cc"
+    },
+    {
+      "file": "assets/audio/whistle/alpina6.wav",
+      "bytes": 325508,
+      "sha256": "ba1bcd60173a701bbb972f112ef5446c6d49beccfe170923366f92691c084c78"
+    },
+    {
+      "file": "assets/audio/whistle/corto.wav",
+      "bytes": 23418,
+      "sha256": "0cbc01ad0775f2797fb65b1f80193a927f24993e1dada9a6a13dac1fb714c2d5"
+    },
+    {
+      "file": "assets/audio/whistle/largo.wav",
+      "bytes": 54288,
+      "sha256": "9fd572240e1b61e84a809d71a9dc06c3a2dce22b7940614fb76862439f314243"
+    },
+    {
+      "file": "assets/audio/whistle/respuesta3.wav",
+      "bytes": 162776,
+      "sha256": "be6037a2f118d164c2330d5d412a6a4da14c5d1bebf5218959e8d028647d323a"
+    },
+    {
+      "file": "assets/audio/whistle/sos.wav",
+      "bytes": 358588,
+      "sha256": "ae7ada52a1b7bb223fdeae6aa0ad6b9ae038496f5ec7b0dc76742f1e7709d3c8"
+    },
+    {
+      "file": "assets/comparisons/communication.json",
+      "bytes": 178,
+      "sha256": "1963d0872eba19afe8f2eb385b7d057e5c3490d38f4e4ae3f6b1450fbd4cc534"
+    },
+    {
+      "file": "assets/comparisons/energy.json",
+      "bytes": 162,
+      "sha256": "a86dc17dc3b269b1a9ebca9d36699b40ee2c7bdda6136ec3e0f469a153fa25ae"
+    },
+    {
+      "file": "assets/comparisons/fire.json",
+      "bytes": 173,
+      "sha256": "dd8b73820ed1c9ab9a61d3bc270656e8fdcb3e7eb04c7a7d4b97cae85a2a8883"
+    },
+    {
+      "file": "assets/comparisons/first-aid.json",
+      "bytes": 175,
+      "sha256": "7405b091896aca227ba2a818aa188382873461dbb3721b3dbbb1e8c4a773c0f5"
+    },
+    {
+      "file": "assets/comparisons/home.json",
+      "bytes": 173,
+      "sha256": "27c142b861a824cd59604486b310428492e1efe8dd449a54b5e4686b07f6e9c4"
+    },
+    {
+      "file": "assets/comparisons/lighting.json",
+      "bytes": 172,
+      "sha256": "55a92cffa35498b6309f6f542841d31d5ee37e40b339b1a8bc5cacf1784f2f12"
+    },
+    {
+      "file": "assets/comparisons/protection.json",
+      "bytes": 196,
+      "sha256": "fe3c99e1e317c4296c469ec1c200308e87b77fb9845fab628d547f815338d22c"
+    },
+    {
+      "file": "assets/comparisons/signaling.json",
+      "bytes": 181,
+      "sha256": "bf918b09e3413002051ecaf32732e3cacf7756aee48b29f472b98f8db6375a9a"
+    },
+    {
+      "file": "assets/comparisons/tools.json",
+      "bytes": 166,
+      "sha256": "c34126f1ecbe1a34c97094a50f0b0211f975e8213d635b1c7fbda478695794a6"
+    },
+    {
+      "file": "assets/comparisons/vehicle.json",
+      "bytes": 170,
+      "sha256": "c24b250e591742de864914b582e031f783c515c601a310f6ffa6a98badf549a6"
+    },
+    {
+      "file": "assets/comparisons/water.json",
+      "bytes": 183,
+      "sha256": "394ca6f3e7c7385fb43c3033b6261575a33c92fa6f249017d4a86f7bd2ab158a"
+    },
+    {
+      "file": "assets/content/offline-manifest.json",
+      "bytes": 592,
+      "sha256": "0e693f6581243b7f20b4778330f7a5d9f3c105c6e8bd251083221985358dc824"
+    },
+    {
+      "file": "assets/hand-signals-ai/abrazar.png",
+      "bytes": 1370855,
+      "sha256": "5a866326c527e1d82de4fa42021b380d73907733a7b968e6973c5a6eac9ef5e4",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/agacharse.png",
+      "bytes": 1586091,
+      "sha256": "27d8e89649164fd6151f837c6f340ff9cb22d60e30e2fd30ab3012ea6c2a4979",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/agua.png",
+      "bytes": 1325570,
+      "sha256": "5af23c8833e253b3bfb1001f506d8e2e86f0b33a2a1db2b59e9ce7dcf3108ae8",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/alto.png",
+      "bytes": 1555333,
+      "sha256": "971a0bd9025c665ee52431a034b4bfa172c9fcfaf79a7399e189d251fd9485cc",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/ayuda.png",
+      "bytes": 1386511,
+      "sha256": "3317323fb369bc3fe11184087c6a04479b92fcc949b9fdc9699d9660cf922a75",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/bajar.png",
+      "bytes": 1541109,
+      "sha256": "eeb0fdc718bf45883fb4fba8cba3737340b585673894d6a59ff515cf8a674a49",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/comida.png",
+      "bytes": 1420375,
+      "sha256": "b3e9ea0bcd3f9c5b820e740b64f400751e9186195a3476a522f5e18e5e8adafb",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/contar.png",
+      "bytes": 1444521,
+      "sha256": "70cef43b5edc296291538eda63fe630bf7e8997d47b26d199b15043e3d778d3f",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/cubrir-boca.png",
+      "bytes": 1534441,
+      "sha256": "d649e99a468650bd400f141a0c8403406a2bf232fa65d8b9e744c880d69e5c63",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/derecha.png",
+      "bytes": 1459597,
+      "sha256": "62a52395b49c67f8a702b1295d1b613a61c59617d9b889f530f600c7b0a93ef6",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/espera.png",
+      "bytes": 1366418,
+      "sha256": "6821accfe84aecd88fe102eef6b261c96072c5824f2d6a2ff86be99bfc755726",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/herido.png",
+      "bytes": 1529323,
+      "sha256": "cb4e3064e50ba1ac1dcd47be68a2ab3724fc9565ec00661a2b3ac3102f1a2a4e",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/izquierda.png",
+      "bytes": 1442941,
+      "sha256": "988f22918b2708a20a2e06e8b26eeb8eca76b03c75c895587b727de49861557c",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/lento.png",
+      "bytes": 1323339,
+      "sha256": "b22264996543ff1073cf628ea72b02b8221002709812b27de8f9361ff8988ba3",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/luz.png",
+      "bytes": 1659617,
+      "sha256": "bc30d47cd6657ef72c655c16d68ae8186d1df6b9ce4d86e31e64a8cf2b211f2e",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/mirar.png",
+      "bytes": 1378687,
+      "sha256": "c416c9503fd1672729adea91a79e06f50d4936e2e609389be00943e1dc7c1352",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/no.png",
+      "bytes": 1558861,
+      "sha256": "ac54482eab61c174fe6f52cee183a5568f0afa1eab589ce21ebb9a3e41d47a49",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/ok.png",
+      "bytes": 1344555,
+      "sha256": "ac208ae34d8abae9a8fbc6c0d1b51a4f54020114e07044d041644e6ed5b0332d",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/peligro.png",
+      "bytes": 1304341,
+      "sha256": "a300af042251fc4493718cb28270a92b740ec3065a33638470660d20927cdf1f",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/puerta.png",
+      "bytes": 1350607,
+      "sha256": "62cfee6551314a1db98a2de4880b5bf7e152398ebbf303c937a946dfb244c036",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/rapido.png",
+      "bytes": 1358704,
+      "sha256": "19f14fef3b3768badfec78f1fda47c35c466730ce52c43c9b71f831c267b38df",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/retroceder.png",
+      "bytes": 1560882,
+      "sha256": "9aece0da1d1d6c32c71858699c4677ebf35068432eb64d746afb02a9eb7d11e2",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/reunirse.png",
+      "bytes": 1694558,
+      "sha256": "272cb1721348120ce153d7c6995fa1e5f36b08863fc3f43580313ae5049d5049",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/silencio.png",
+      "bytes": 1549860,
+      "sha256": "3784aa5d31ec21a973c8fdbab338d46586e6ad09431b35bd16e664e20375dac8",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/subir.png",
+      "bytes": 1512275,
+      "sha256": "2d1f52bbd701717b7b28ce21977e4ab63c503d06e4b82b97ffaacd93ad63547a",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/telefono.png",
+      "bytes": 1659204,
+      "sha256": "f110dbcd81cd54c3413863118c320d33abaccc32eaef44d91fc292341b3a90aa",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hand-signals-ai/ven.png",
+      "bytes": 1532665,
+      "sha256": "7e8cbc42bcf774e529d778f9c8caa0114c6c78d14d201e4f49592c8e534f345b",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/aves-1.png",
+      "bytes": 1914647,
+      "sha256": "c329f8abdc69cabed87881ad8fe9afe1530dfd6f4ac7385726fb85a92d523a3f",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/aves-2.png",
+      "bytes": 2716191,
+      "sha256": "834d9077d763c547a39450b9e26b5f6ca87ec96ce7d78042b59f86cf2286e596",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/cabra-monte-1.png",
+      "bytes": 2756534,
+      "sha256": "a29368b1090b8be6a64c5318203ed9f487edb58d63774c4f5f34c8b690cd73c1",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/cabra-monte-2.png",
+      "bytes": 2663980,
+      "sha256": "f7013d58c7ac268526b062f6c260880972d4f26f3d3699c0fee1dc442d58caea",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/ciervo-rojo-1.png",
+      "bytes": 2718988,
+      "sha256": "d99277997dd6bec60f083172e32b7c7e0c87588428cf43bf3580b27af15d1ae1",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/ciervo-rojo-2.png",
+      "bytes": 2296294,
+      "sha256": "825ab2767d719a8a54695b8fc1838ca2c7feee9f782b288ce09c09ec1e6ef9bc",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/conejo-1.png",
+      "bytes": 2619838,
+      "sha256": "3aaac7a47b9b08726e0b116ccf9cc8bf56d450a7885c06861bb6b9a237ee9a3b",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/conejo-2.png",
+      "bytes": 2383620,
+      "sha256": "bb4104457135abc81b95a65ad2c1f9f2313fd876a25b15c81343d5ec0e17146d",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/corzo-1.png",
+      "bytes": 2551343,
+      "sha256": "3037bc9ac86bc571e340868efe4aa09925e15105d2de448a9aa23337a82c768d",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/corzo-2.png",
+      "bytes": 2468951,
+      "sha256": "38001d06838bdb87dacd455abd8f36e5c5fdec65f2fc842fc7ecf2663cacb995",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/domesticos-y-ganado-1.png",
+      "bytes": 2166874,
+      "sha256": "b66d63cbce91a907c83895e20ad5ecb5468d5a32f7c34d6634425e58674f48fd",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/domesticos-y-ganado-2.png",
+      "bytes": 2956157,
+      "sha256": "3b72158c559bafa8286d7482ab3e1054107ab279d39225369f725c8861082bd4",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/gamo-1.png",
+      "bytes": 2627637,
+      "sha256": "8ad62a9ed07e8788bc7a981699425921db9934608fef2516aebf2b49a5816c94",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/gamo-2.png",
+      "bytes": 2313645,
+      "sha256": "7791d67608a454f6986468d79326998973a992bce22e7919397e96fab10f415e",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/jabali-1.png",
+      "bytes": 2636011,
+      "sha256": "cb17697eb8022987a2475b2059c2289db8f6708f9c43c25bd6163960dcdfcf41",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/liebre-1.png",
+      "bytes": 2702740,
+      "sha256": "6098f97068e86b4f1a2c344ae456b56d026d1486f5111e15b410885d06ed5814",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/liebre-2.png",
+      "bytes": 2270491,
+      "sha256": "1477f998fdfa8c8ec025a225cecd26cd56c6240f11377fbbce1a7a0dbbbfebd8",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/lince-1.png",
+      "bytes": 2745303,
+      "sha256": "e8a0eadbb050d74623e19d1e433f15234c870133f5373b04fa100127993aaeb9",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/lince-2.png",
+      "bytes": 2240698,
+      "sha256": "5d6f75025eee460525dcd44e2aa6fdecfafa00f1b0a24ab51a7f0002dccddba5",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/lobo-1.png",
+      "bytes": 2613037,
+      "sha256": "4bb51473b90d0c5a9baf69f424be0b70b42c40baf4909802b1be09140cdfc713",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/lobo-2.png",
+      "bytes": 2368296,
+      "sha256": "fdec4c39873467374f26ad12e408d0dca9733f7d5a5cde8a9446d437f941d36a",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/oso-1.png",
+      "bytes": 2797769,
+      "sha256": "c13d2d6d936360bc10c27044792df63ec234921c865544ec5b97e6bb4d50fa06",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/oso-2.png",
+      "bytes": 2794611,
+      "sha256": "9fb6c96302e729622f3b2a0ff546f16c5204fc9e16491a818920e0a37c87c6df",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/zorro-1.png",
+      "bytes": 2951596,
+      "sha256": "da8b6904d1eb79cf93a577ed9bfd7bed23c1ecf909f321b53e681ea256efb023",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/hunting-tracks-ai/zorro-2.png",
+      "bytes": 2571088,
+      "sha256": "9f378fadffe2f21999bb29bfd72e42fb72bcb02dca2eb417e7aa3d1308ba684d",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/images/adaptive-icon.png",
+      "bytes": 644879,
+      "sha256": "36bb0e4861d6b916381700843dc1e15918eaa7df1f2e90a1b96aa8280d990ebe",
+      "image": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/images/favicon.png",
+      "bytes": 678,
+      "sha256": "fcaddee5465ac824825481eef6d434e0f27582468d5d5f429b2f6a2eed8eca0d",
+      "image": {
+        "width": 48,
+        "height": 48,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/images/fishing-anisakis/anisakis-guia.jpg",
+      "bytes": 197338,
+      "sha256": "e0af8ff6dc1ac8eb5d84de986c3e897a62a9dd747fecf0c5abcde2a97c0b0044",
+      "image": {
+        "width": 960,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-dangerous-species/peces-peligrosos-mar.jpg",
+      "bytes": 247594,
+      "sha256": "8fe3009f90d15e09702a3dfbff6d662454172c319778ea4c24c60e747147a337",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-dangerous-species/peces-peligrosos-rio.jpg",
+      "bytes": 237407,
+      "sha256": "a94907d81b6d266a1db3b156ae8ef2351614c902882ec4e4f121ac90610060e3",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-hooks-knots/anzuelos-lineas-recicladas.jpg",
+      "bytes": 236496,
+      "sha256": "6c23336481de970430f191202240d5a2f6d65979473b8292113c047a7a702bf2",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-hooks-knots/anzuelos-reciclados.jpg",
+      "bytes": 199915,
+      "sha256": "ac00529fb4d6fe9ce9f137675752ab6aae7957bec6ac88dd69466f07d1b681f8",
+      "image": {
+        "width": 906,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-hooks-knots/nudos-pesca-faciles.jpg",
+      "bytes": 228634,
+      "sha256": "4163a879c8b67d884d8de9b82ee6267e197d3161dd200e191669e789b4e00d1b",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-preservation/cocinar-conservar-1.jpg",
+      "bytes": 281480,
+      "sha256": "b158c8a83a37f8b45d253f2076ce9eeea644bec27c9746022ba1c31cf8201b71",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-preservation/cocinar-conservar-2.jpg",
+      "bytes": 240595,
+      "sha256": "07751da7d30e2045ba0f4888ab44e6386534ffc3be22b06455b885d358d182d2",
+      "image": {
+        "width": 720,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-read-water/leer-el-agua.jpg",
+      "bytes": 199232,
+      "sha256": "387cfe0d7988a1959c6135e5d35b270ea81b412bba6b0c606075e4ee42d8eb2b",
+      "image": {
+        "width": 853,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-rigs-baits/cebos-supervivencia.jpg",
+      "bytes": 264632,
+      "sha256": "7425caba5c6f213ccee44cb739b91567bfd656f75b1560fee542c1ea0f4ae935",
+      "image": {
+        "width": 906,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-rigs-baits/montar-cebos.jpg",
+      "bytes": 215045,
+      "sha256": "6f2151e9de2162a44ef780c8c335f771fe91382f63d4f45a4a8a11058c889e12",
+      "image": {
+        "width": 906,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-species/peces-espana-1.jpg",
+      "bytes": 150953,
+      "sha256": "dfd60a5b1228d95ee2dad55cba1e7d57e89b06b480307f9ce8c5dd0f62b4e508",
+      "image": {
+        "width": 1280,
+        "height": 853,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-species/peces-espana-2.jpg",
+      "bytes": 198504,
+      "sha256": "7666e8365662598184bf7f5c525b5514d35174b496e8a35f80151622355fa729",
+      "image": {
+        "width": 1280,
+        "height": 960,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-species/peces-espana-3.jpg",
+      "bytes": 177195,
+      "sha256": "eeddf6cffa51079d5b426b729b642a4c02e203afe2fefc17c48ddf53df846c80",
+      "image": {
+        "width": 906,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-species/peces-espana-4.jpg",
+      "bytes": 202114,
+      "sha256": "cf71b81a47406a13cf98d2d18ff13790c83eda5bf33dbf7d86e7cdb4a1c20688",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-traps/trampa-botella-reciclada.jpg",
+      "bytes": 235543,
+      "sha256": "bae8ad88e418d8104df36a0100f33459e99250357592efedb7cf8ae621c08e8c",
+      "image": {
+        "width": 853,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-traps/trampa-cesta-natural.jpg",
+      "bytes": 304655,
+      "sha256": "ede9921aec30b942d5ab3e847485eb385728108aeac24df270222f93e903075f",
+      "image": {
+        "width": 1280,
+        "height": 1136,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-traps/trampa-corral-natural.jpg",
+      "bytes": 280308,
+      "sha256": "f4114bbc72f23bff6e948982a6515660c823df5fe01093bf0a997690bf7530b8",
+      "image": {
+        "width": 1280,
+        "height": 1024,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-traps/trampa-garrafa-malla.jpg",
+      "bytes": 266424,
+      "sha256": "5ef0b62e3e0df660d4147884ab737bebe764a47f706dc6d99aa5023214b61017",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/fishing-traps/trampa-ramas-fibras.jpg",
+      "bytes": 289638,
+      "sha256": "72f33e438ef60e0bf45d706246cc7007065c2e57b9c355c63b077e275db4f2aa",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-field-mechanisms/catalogo-mecanismos.jpg",
+      "bytes": 238904,
+      "sha256": "fb49f9ca52cb0c48d489b9b735d15ae74bc6f535914ad393ef9ce993dc8679c2",
+      "image": {
+        "width": 1280,
+        "height": 906,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-field-mechanisms/gravedad-peso.jpg",
+      "bytes": 214619,
+      "sha256": "d644109d91f96f91b517be595c9f40d0548aab24d0494bd6deaecee2a5490968",
+      "image": {
+        "width": 760,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-field-mechanisms/muescas-liberacion.jpg",
+      "bytes": 249127,
+      "sha256": "8049949508071f6abf403873278e771d929dbcb918dbfadf7dc3f7bc4fcc3904",
+      "image": {
+        "width": 1280,
+        "height": 1128,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-field-mechanisms/sistema-tension-retencion.jpg",
+      "bytes": 198823,
+      "sha256": "c3da4c83cf7b17c4a92e0c55f5cdc3acb9f8c202d431661c5c2503231284f952",
+      "image": {
+        "width": 1280,
+        "height": 896,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-field-mechanisms/soporte-triple-gatillo.jpg",
+      "bytes": 258668,
+      "sha256": "ec2ecf30b79427399b10adf82dbba85d620d7a84223322d6dbd0592ff5c7e5ad",
+      "image": {
+        "width": 1280,
+        "height": 1128,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-guides/prioridades-alimento.jpg",
+      "bytes": 144955,
+      "sha256": "164ad1616929f4b93ad2e0564a50be91f9e6f48f5cd2bb580ef0ccdf2eb02c93",
+      "image": {
+        "width": 720,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-guides/seguir-rastro.jpg",
+      "bytes": 147376,
+      "sha256": "3351581057f55c014ad2c5072f27fc99bc3483a9d7d14ca8bb9f7348a92aeb8f",
+      "image": {
+        "width": 720,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/hunting-guides/triquina-jabali.jpg",
+      "bytes": 156948,
+      "sha256": "64a2edae1dd72829b7d3f910d1201f08e34a307328b18e1756097a4633637c1b",
+      "image": {
+        "width": 720,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/images/icon.png",
+      "bytes": 644879,
+      "sha256": "36bb0e4861d6b916381700843dc1e15918eaa7df1f2e90a1b96aa8280d990ebe",
+      "image": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/images/morse/morse-ai.png",
+      "bytes": 915440,
+      "sha256": "9850ce67d8d950a627ffda4de817d9a9eb6fefea8810a980b8d5197c0ecc2fd3",
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/images/splash-icon.png",
+      "bytes": 644879,
+      "sha256": "36bb0e4861d6b916381700843dc1e15918eaa7df1f2e90a1b96aa8280d990ebe",
+      "image": {
+        "width": 1024,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/amarre-cuadrado-1.png",
+      "bytes": 1805646,
+      "sha256": "dd19b018131cddf5ef11f948d05ef4e52384dfc652cde9f031eed63ddd45989f",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/as-de-guia-1.png",
+      "bytes": 1468000,
+      "sha256": "6f0c311e1812d620f40256112f9c78ba2dcb68e5f2f1fb364937cab783504d9a",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/ballestrinque-1.png",
+      "bytes": 1336965,
+      "sha256": "2e1b7dbc14e7b416b0fe6b6b706d12a3423f12e1164b84c3a4bd764e6defb6d4",
+      "image": {
+        "width": 1672,
+        "height": 941,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/clinch-mejorado-1.png",
+      "bytes": 1590622,
+      "sha256": "eb57f740b24076692456436758ace4d3098aa778ea470cb6049501d14b822b62",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/clinch-mejorado-2.png",
+      "bytes": 1381877,
+      "sha256": "3faccd60f1061966e22b97e90c0c4bc282f7622d97c3c0694aa02f12a5a2ea19",
+      "image": {
+        "width": 1149,
+        "height": 1369,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/clinch-mejorado-3.png",
+      "bytes": 1660112,
+      "sha256": "d25d4deefe0be07562d45687784046a5154fb386e9eb0580d49218b108ed64b6",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/mariposa-alpina-1.png",
+      "bytes": 1526509,
+      "sha256": "29d2aef1bdb0b85243ba20564c799daa256c6f38b7689d3e2650040f1302f8ec",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-camionero-1.png",
+      "bytes": 1988690,
+      "sha256": "1eb405bd7ab4a8e4eecf77f19954a37a90a68e23ea4a3a4a96959a573d4a4f05",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-camionero-2.png",
+      "bytes": 1637082,
+      "sha256": "fdf3605f1c076e2fc2aa385e6a8f210835b82bc99b28685fa64b11349149b765",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-corredizo-1.png",
+      "bytes": 1415568,
+      "sha256": "76c42ec34d61411c916c35365dbfa5e1d67470a852629b875bc987a7f83d8f95",
+      "image": {
+        "width": 1672,
+        "height": 941,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-dinamico-munter-1.png",
+      "bytes": 1895610,
+      "sha256": "e5bbb0fcc5e733f9a340471667cceadca38b0cd35253a0599db9f5ce4451f69c",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-lenador-1.png",
+      "bytes": 1706238,
+      "sha256": "ba50c8710ae4d32883f6cb8508ea1bad38b4d127c744a0d0881b7c521cce8550",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-llano-1.png",
+      "bytes": 1931065,
+      "sha256": "16d93619bd4b9193f3458d839d27061266da4d5ac15cb50ec07e4a1980053d0d",
+      "image": {
+        "width": 1176,
+        "height": 1338,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-ocho-1.png",
+      "bytes": 1837288,
+      "sha256": "7d17b4674b820d7844e99276328e61a116825814f84eb8676fd226f3603c6b56",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-palomar-1.png",
+      "bytes": 1294113,
+      "sha256": "a3cbfea3f5326925c6aad835de952f4daa1475180de57b086d5475e0de58b467",
+      "image": {
+        "width": 1178,
+        "height": 1335,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-simple-tope-1.png",
+      "bytes": 1752812,
+      "sha256": "0ae2d48c63c5d5033542daecdeac7a3ff29fce5cc952967682992910a80b3fa2",
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-tensor-1.png",
+      "bytes": 1749019,
+      "sha256": "1cb223ba50c36fe9bb5f18740832d9ec6417afc35898716517d60ead17cf1d4a",
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/nudo-tensor-2.png",
+      "bytes": 1581561,
+      "sha256": "c7f20586f523f86a306c5676f935aaca3f18b638e99b476706394050b11b4131",
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/pescador-doble-1.png",
+      "bytes": 2114808,
+      "sha256": "e98cd3f6d2516db3e33714cdc5567ec93cef103365e26ce5093d7371136bba13",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/prusik-1.png",
+      "bytes": 1606497,
+      "sha256": "764a90a4e315564fa4f2736f6d2a6380429c393bcc8e78c0d0afcb250919cd9f",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/vuelta-escota-1.png",
+      "bytes": 1790889,
+      "sha256": "709fe080c608d987c3f88d57fa4de7cd8bca5902045822063e9bfa12abf503be",
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/vuelta-redonda-dos-cotes-1.png",
+      "bytes": 2201258,
+      "sha256": "90a1a7289f7e942cb0b6c30c44f778fd7eab903fc8374c17df8fbc0025dd67d5",
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/knots-ai/vuelta-redonda-dos-cotes-2.png",
+      "bytes": 1603729,
+      "sha256": "1a6b6cb4674e3cf0ee916f0d8e1696a3074a8ae73592b76281f44074862e8f26",
+      "image": {
+        "width": 1402,
+        "height": 1122,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/maps/base-spain-light.json",
+      "bytes": 9052,
+      "sha256": "1c428f77c785eb38bd67e73a3dcd6b3920ce74bf4057a5aaf39a660e3602e708"
+    },
+    {
+      "file": "assets/maps/spain.mbtiles",
+      "bytes": 1338245120,
+      "sha256": "59bbb959e13454752322f526149f8145bd5e604a9c8c1cc792829f9295f4cb26"
+    },
+    {
+      "file": "assets/models/README.md",
+      "bytes": 412,
+      "sha256": "dee85c01cfea8eeb7a99a3c0ed69e134d5a9a118c7a4ac8560d733e8b7ca6eb9"
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/abrazar.png",
+      "bytes": 1370855,
+      "sha256": "5a866326c527e1d82de4fa42021b380d73907733a7b968e6973c5a6eac9ef5e4",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/agacharse.png",
+      "bytes": 1586091,
+      "sha256": "27d8e89649164fd6151f837c6f340ff9cb22d60e30e2fd30ab3012ea6c2a4979",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/agua.png",
+      "bytes": 1325570,
+      "sha256": "5af23c8833e253b3bfb1001f506d8e2e86f0b33a2a1db2b59e9ce7dcf3108ae8",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/alto.png",
+      "bytes": 1555333,
+      "sha256": "971a0bd9025c665ee52431a034b4bfa172c9fcfaf79a7399e189d251fd9485cc",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/ayuda.png",
+      "bytes": 1386511,
+      "sha256": "3317323fb369bc3fe11184087c6a04479b92fcc949b9fdc9699d9660cf922a75",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/bajar.png",
+      "bytes": 1541109,
+      "sha256": "eeb0fdc718bf45883fb4fba8cba3737340b585673894d6a59ff515cf8a674a49",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/comida.png",
+      "bytes": 1420375,
+      "sha256": "b3e9ea0bcd3f9c5b820e740b64f400751e9186195a3476a522f5e18e5e8adafb",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/contar.png",
+      "bytes": 1444521,
+      "sha256": "70cef43b5edc296291538eda63fe630bf7e8997d47b26d199b15043e3d778d3f",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/cubrir-boca.png",
+      "bytes": 1534441,
+      "sha256": "d649e99a468650bd400f141a0c8403406a2bf232fa65d8b9e744c880d69e5c63",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/derecha.png",
+      "bytes": 1459597,
+      "sha256": "62a52395b49c67f8a702b1295d1b613a61c59617d9b889f530f600c7b0a93ef6",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/espera.png",
+      "bytes": 1366418,
+      "sha256": "6821accfe84aecd88fe102eef6b261c96072c5824f2d6a2ff86be99bfc755726",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/herido.png",
+      "bytes": 1529323,
+      "sha256": "cb4e3064e50ba1ac1dcd47be68a2ab3724fc9565ec00661a2b3ac3102f1a2a4e",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/izquierda.png",
+      "bytes": 1442941,
+      "sha256": "988f22918b2708a20a2e06e8b26eeb8eca76b03c75c895587b727de49861557c",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/lento.png",
+      "bytes": 1323339,
+      "sha256": "b22264996543ff1073cf628ea72b02b8221002709812b27de8f9361ff8988ba3",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/linterna.png",
+      "bytes": 1659617,
+      "sha256": "bc30d47cd6657ef72c655c16d68ae8186d1df6b9ce4d86e31e64a8cf2b211f2e",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/luz.png",
+      "bytes": 1659617,
+      "sha256": "bc30d47cd6657ef72c655c16d68ae8186d1df6b9ce4d86e31e64a8cf2b211f2e",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/mascara.png",
+      "bytes": 1534441,
+      "sha256": "d649e99a468650bd400f141a0c8403406a2bf232fa65d8b9e744c880d69e5c63",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/mirar.png",
+      "bytes": 1378687,
+      "sha256": "c416c9503fd1672729adea91a79e06f50d4936e2e609389be00943e1dc7c1352",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/no.png",
+      "bytes": 1558861,
+      "sha256": "ac54482eab61c174fe6f52cee183a5568f0afa1eab589ce21ebb9a3e41d47a49",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/ok.png",
+      "bytes": 1344555,
+      "sha256": "ac208ae34d8abae9a8fbc6c0d1b51a4f54020114e07044d041644e6ed5b0332d",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/peligro.png",
+      "bytes": 1304341,
+      "sha256": "a300af042251fc4493718cb28270a92b740ec3065a33638470660d20927cdf1f",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/puerta.png",
+      "bytes": 1350607,
+      "sha256": "62cfee6551314a1db98a2de4880b5bf7e152398ebbf303c937a946dfb244c036",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/rapido.png",
+      "bytes": 1358704,
+      "sha256": "19f14fef3b3768badfec78f1fda47c35c466730ce52c43c9b71f831c267b38df",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/retroceder.png",
+      "bytes": 1560882,
+      "sha256": "9aece0da1d1d6c32c71858699c4677ebf35068432eb64d746afb02a9eb7d11e2",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/reunirse.png",
+      "bytes": 1694558,
+      "sha256": "272cb1721348120ce153d7c6995fa1e5f36b08863fc3f43580313ae5049d5049",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/silencio.png",
+      "bytes": 1549860,
+      "sha256": "3784aa5d31ec21a973c8fdbab338d46586e6ad09431b35bd16e664e20375dac8",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/subir.png",
+      "bytes": 1512275,
+      "sha256": "2d1f52bbd701717b7b28ce21977e4ab63c503d06e4b82b97ffaacd93ad63547a",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/telefono.png",
+      "bytes": 1659204,
+      "sha256": "f110dbcd81cd54c3413863118c320d33abaccc32eaef44d91fc292341b3a90aa",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/hand-signals/ven.png",
+      "bytes": 1532665,
+      "sha256": "7e8cbc42bcf774e529d778f9c8caa0114c6c78d14d201e4f49592c8e534f345b",
+      "image": {
+        "width": 1086,
+        "height": 1448,
+        "format": "png"
+      }
+    },
+    {
+      "file": "assets/reference-photos/README_FOTOS.txt",
+      "bytes": 578,
+      "sha256": "9122e684cbd72dcbcada6471fb295dfbd2783281ae3578f7f1ed6c5628a78d80"
+    },
+    {
+      "file": "assets/routes/example-route.gpx",
+      "bytes": 323,
+      "sha256": "20491b5d1d45f0e5dc85c8e4ff943688566c58d905a0d848db7c0e364e0a6a96"
+    },
+    {
+      "file": "assets/species/animales_peligrosos/abeja_1.jpg",
+      "bytes": 31749,
+      "sha256": "c30b62bc4bde6cb9b5adedeb5dec9e53852b9954f9ccd47a949d93c17a6030f6",
+      "image": {
+        "width": 500,
+        "height": 399,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/abeja_2.jpg",
+      "bytes": 64469,
+      "sha256": "c3401b429e3c2c59c9910ab50227b1670c3f16f5c0211da18ff814228e1450e7",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/abeja_3.jpg",
+      "bytes": 34823,
+      "sha256": "bf26cb3db78cf5f87fe47d2199537588b877d6de506daf3c9e77e633e8623f41",
+      "image": {
+        "width": 500,
+        "height": 342,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_asiatica_1.jpg",
+      "bytes": 68632,
+      "sha256": "1c2dc7015db72661bbc9b42ba3fa1ca9bd7133f83621a2e6eff35889dbfe222e",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_asiatica_2.jpg",
+      "bytes": 63348,
+      "sha256": "ca144d86383f726a1c616d587d6e097a2bb90d215da1df0e6c5d7656f11155c8",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_asiatica_3.jpg",
+      "bytes": 44899,
+      "sha256": "65260bf8e8f97631e09061ba20c11d71d63576bd42b9f26cefa131d5221184e9",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_comun_1.webp",
+      "bytes": 18868,
+      "sha256": "414fc7b801754d9b89513bf7383daf868557491889af7adb2c028e4ec2357180",
+      "image": {
+        "width": 480,
+        "height": 480,
+        "format": "webp"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_comun_2.jpg",
+      "bytes": 7760,
+      "sha256": "48ee757a7ca20988574980c095e3836ad95506dbe88b414ec315580895f4c90b",
+      "image": {
+        "width": 225,
+        "height": 225,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/avispa_comun_3.jpg",
+      "bytes": 29886,
+      "sha256": "d700f13028c74201c6a02af1edd8ad3920ef45dbb37633f04962869edb76b2f0",
+      "image": {
+        "width": 624,
+        "height": 385,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/carabela_portuguesa_1.jpg",
+      "bytes": 72485,
+      "sha256": "f40cd36f820f965d7a05672945857cb60f1141ef5ba7d40919f32bb7d1408dc4",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/carabela_portuguesa_2.jpg",
+      "bytes": 64707,
+      "sha256": "843f387d003f20d85e6716f08cafe2a963fa9bb555774f69df9410a3fa3b6c46",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/carabela_portuguesa_3.jpg",
+      "bytes": 62456,
+      "sha256": "39adc00dd2df1ab92dd5937cd525d7cf91afb4273d7f7a6d6439ccab02ea6bd0",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/erizo_mar_1.jpg",
+      "bytes": 86034,
+      "sha256": "8d43f29d0c5e2cfd32d4ff7fb5d0d66475ba1200a291fd7e78a14914a1d82a21",
+      "image": {
+        "width": 500,
+        "height": 372,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/erizo_mar_2.jpg",
+      "bytes": 99534,
+      "sha256": "0e5855618b0b794a6b08c7584080b36c8a510fc9b5e329b580c169027c8c7c2b",
+      "image": {
+        "width": 500,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/erizo_mar_3.jpg",
+      "bytes": 57306,
+      "sha256": "03f802caecdc05a3fbfe1899d80d003bffbe10a5fee8c83a0ea303dd67b455d7",
+      "image": {
+        "width": 281,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/escolopendra_1.jpg",
+      "bytes": 66479,
+      "sha256": "ae67b7f251074d075f55ac348daa7be8aef58a6a54b0872951e504d64243e9f5",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/escolopendra_2.jpg",
+      "bytes": 48607,
+      "sha256": "53f6876e96b33a1ac3976d7ac55d7c1040696f044de4b6f47bc36593e5fcda85",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/escolopendra_3.jpg",
+      "bytes": 51432,
+      "sha256": "edefe713b627b7e0fb79a154271eeb002c1611217300943c9dddcc376978220c",
+      "image": {
+        "width": 225,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_compas_1.jpg",
+      "bytes": 30749,
+      "sha256": "1a46ca9d2d506215c193bcab7afcd2f0d75cfa2a2f1e39848cfa67b0df04c3f0",
+      "image": {
+        "width": 447,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_compas_2.jpg",
+      "bytes": 15998,
+      "sha256": "acf5712b9b1c1a480be399c6b502f88b0223ea6175174db6ffd14482ff596109",
+      "image": {
+        "width": 446,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_compas_3.jpg",
+      "bytes": 34070,
+      "sha256": "c22b17bc9fee8adee70c140df4599efe9cf7a5c83557f0615bd59276f7350966",
+      "image": {
+        "width": 312,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_huevo_frito_1.jpg",
+      "bytes": 35485,
+      "sha256": "5738915aa720c2cc4d6fb134d51fda662cb6a4c5cf015342007d14c9f08a6067",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_huevo_frito_2.jpg",
+      "bytes": 32844,
+      "sha256": "171041ed4882bcdc3e4698915314c214af507c4badd919e2e8a9b4f8d1ae2fb3",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/medusa_huevo_frito_3.jpg",
+      "bytes": 41323,
+      "sha256": "f70da28dbdc4c38099ac78959e8daff55387f9356ae3123df06218d6bc879a5d",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/mosquito_tigre_1.jpg",
+      "bytes": 27414,
+      "sha256": "e52ac0cc9187de6449a7e2dd57c35ab14808d2c238fed7f01ffda7386d673e5f",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/mosquito_tigre_2.jpg",
+      "bytes": 31440,
+      "sha256": "8f078ade991404ed78436db53abc013df31373e7ad90b8b9d1a1c48c8a39bbcc",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/mosquito_tigre_3.jpg",
+      "bytes": 30634,
+      "sha256": "c90749e45ace49b9aa8a61970d40beeb73fb9f8a1230a63a40ea2f0b1aa10cdd",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/pez_arana_1.jpg",
+      "bytes": 76805,
+      "sha256": "c0caaf8f7ccfd1742b62f238d1b322febcd8859c13824f1758d7ff26289630c9",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/pez_arana_2.jpg",
+      "bytes": 70237,
+      "sha256": "d1258a4145b8652f370d8985bed015e90154c61268c144848079da9c6951bfc0",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/pez_arana_3.jpg",
+      "bytes": 46076,
+      "sha256": "837bbbb5d60b387f8843ed3694a9b62a9f997d8887c3d7fd085171b27a79922d",
+      "image": {
+        "width": 500,
+        "height": 379,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/raya_1.jpg",
+      "bytes": 52036,
+      "sha256": "6504c689025b391a3299963a519c5145e489cba808d6ab2a1a6c1a15b6ebb5c1",
+      "image": {
+        "width": 500,
+        "height": 334,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/raya_2.jpg",
+      "bytes": 48133,
+      "sha256": "f7c43d916b307573da44c58f393b143e6171373f1ea284c9e72dd1373cc80cab",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/animales_peligrosos/raya_3.jpg",
+      "bytes": 32710,
+      "sha256": "e0aa8bcc4aa14ceab836a4b8de1fcb77cb2ef08cbc0982683b310c6ce6844d1f",
+      "image": {
+        "width": 281,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_muscaria_1.jpg",
+      "bytes": 80213,
+      "sha256": "8d4aa5f6de1ad48c2176c6e20e4c5bca90e4f418fe948af5397ca41be3278c49",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_muscaria_2.jpg",
+      "bytes": 74369,
+      "sha256": "9e08fea30b304bfdfc66bd98cdba61300654e77d56216fe037e876af5a4995d3",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_muscaria_3.jpg",
+      "bytes": 97501,
+      "sha256": "b866730a1d94fe44a661858002b14fb3fbadd23fc47a3d917f9976d588ede1c7",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_phalloides_1.jpg",
+      "bytes": 55775,
+      "sha256": "7f1517be5b7aaffeec950d69f096500f6c8d6f57c4024a672a96c23b96410156",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_phalloides_2.jpg",
+      "bytes": 61761,
+      "sha256": "67452c7d18370af804a399c98cbf23e2fe5db644dd46b70b4474fd830524b871",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_phalloides_3.jpg",
+      "bytes": 79708,
+      "sha256": "97eb36c7920ac3a35c344b7559ab03491e903b69ccc7036d75db405a8d133eda",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_verna_1.jpg",
+      "bytes": 48098,
+      "sha256": "d48aa48d52087f922d4faa9cb52694c41170f26b65176fceb6cca759ca7108fc",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_verna_2.jpg",
+      "bytes": 40264,
+      "sha256": "e381427b9881e3da44fb085148511d563c813eb22bf3a9ec557d8964f457e047",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_verna_3.jpg",
+      "bytes": 37729,
+      "sha256": "d11f8db0506140ce2cd0f8fa787ecb71c0a706973ce7bbb66203c2159f8df9c6",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_virosa_1.jpg",
+      "bytes": 81865,
+      "sha256": "65d8c16179f250cd4377be29e968ba2825f5f9df9da90c20891d14b76da456a5",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_virosa_2.jpg",
+      "bytes": 60837,
+      "sha256": "9b7f5d093b3f6bf3d04ed8c36aed5c45cfb6ab2cd3488990d4c987f471f2fb06",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/amanita_virosa_3.jpg",
+      "bytes": 74235,
+      "sha256": "822fbb0dc333bd2aba6a56c2efd34f6569c36ae7caef8b1b6cf103d7474c10ee",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/galerina_marginata_1.jpg",
+      "bytes": 41110,
+      "sha256": "6e2ade50c184f8d14440dd768b4e1bcb7689c0278a99b7727fdae984328c04a7",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/galerina_marginata_2.jpg",
+      "bytes": 46501,
+      "sha256": "7c25b14ca47bf05f98d106a6706769fe3a70e4ed51076a25dacf62c1399592d7",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/galerina_marginata_3.jpg",
+      "bytes": 49705,
+      "sha256": "86267000b9cec1bf9a1ba16c6a16d48c8e9235007077fbefd58e68b06c2b23ca",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/lepiota_brunneoincarnata_1.jpg",
+      "bytes": 60259,
+      "sha256": "3575fc39b48b57816d0d4095ada4f379619ad0da9b9c2c587e463fa4673f27b0",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/lepiota_brunneoincarnata_2.jpg",
+      "bytes": 86333,
+      "sha256": "6a9571bacae4a9382eacbaa039a4d44207f64e07bbd3b541eb9b554f4f85f725",
+      "image": {
+        "width": 376,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/hongos_peligrosos/lepiota_brunneoincarnata_3.jpg",
+      "bytes": 63616,
+      "sha256": "490ae6a9643d674315ee600278e191c32c861b05ecd9fef478232346cb03650f",
+      "image": {
+        "width": 281,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/acedera_1.jpg",
+      "bytes": 45101,
+      "sha256": "4630adfb286cd47b6993324fa627247f913969c6bba97b325155e9bf2c5aac64",
+      "image": {
+        "width": 500,
+        "height": 464,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/acedera_2.jpg",
+      "bytes": 69451,
+      "sha256": "30c415604e4a45ca2d1d04d37e4df02bc2d973eaf9d74378f8b9ba55cf182e25",
+      "image": {
+        "width": 500,
+        "height": 479,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/acedera_3.jpg",
+      "bytes": 100608,
+      "sha256": "86a0c3814b22e33489f8f4ac8ef1283a1ea313d146b1f241b0f7d9a309704445",
+      "image": {
+        "width": 374,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/algarroba_silvestre_custom_1.jpg",
+      "bytes": 168446,
+      "sha256": "eea4f6159b185cefc6790df5e6993e89b2a0c16559838e84ae2d46c396991581",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/algarrobo_1.jpg",
+      "bytes": 83718,
+      "sha256": "6324bbaaab13ea21f4305e6fa5b74197470bfdafcbc32faa58fe5c402014c93f",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/algarrobo_2.jpg",
+      "bytes": 115540,
+      "sha256": "b62fe324e7e65cff77e804c41c3836f057d491dba443d5f9f6bcc1db90466954",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/algarrobo_3.jpg",
+      "bytes": 88495,
+      "sha256": "fa617e1821cb3ed6213fbe1c45cea98b9c0d243098897932151bce77d9419377",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/almez_1.jpg",
+      "bytes": 71089,
+      "sha256": "8e9d53329309c92c19628c3c7e53fd30d99c71834ec6a99e43a40de941f0a04b",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/almez_2.jpg",
+      "bytes": 52900,
+      "sha256": "fd561066eb5550fd89fa1dfc5fe2c0da331b3cda9f3221a6a536327460d1512b",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/almez_3.jpg",
+      "bytes": 41888,
+      "sha256": "fea5c8dac4671379193f3927fe84b6331b6ff1dbaa43c2a031e2bc781b2b419b",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/bellotas_encina_roble_custom_1.jpg",
+      "bytes": 135831,
+      "sha256": "098e75804777a2d0b095209efddd75837c0d128241a3a0fcfdc28ca69694c1e3",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/borraja_1.jpg",
+      "bytes": 92379,
+      "sha256": "913d6ed28a8ac69aabdcb5fcd0e09877bbd0cdc0e321611e05c85e00f9a8849f",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/borraja_2.jpg",
+      "bytes": 24113,
+      "sha256": "5c98c3582c2dbca79be0579ab327c0ea498e7d9ff803e0b88ef93f5ed5b4f69d",
+      "image": {
+        "width": 500,
+        "height": 317,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/borraja_3.jpg",
+      "bytes": 38642,
+      "sha256": "2371acdb643deaef5bbaf779bd0da4cf34ada562658b6229865b8a7bfe0bfc5e",
+      "image": {
+        "width": 500,
+        "height": 324,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/diente_leon_custom_1.jpg",
+      "bytes": 165545,
+      "sha256": "4c3c2e0769e4f96a2ec253a8b0c056aed911cadf87e09aff087688d44f740bc3",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/endrino_1.jpg",
+      "bytes": 51144,
+      "sha256": "b5a631bd19805bab53d25a0ede71aad347dc9ddaf60eabe16f7d2725377c2ac7",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/endrino_2.jpg",
+      "bytes": 55302,
+      "sha256": "68f2574b665cc4def507327eb6214e3a7192638d69ae1587c66f4d756728bb1e",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/endrino_3.jpg",
+      "bytes": 47771,
+      "sha256": "2a96d114ffa7321d616ebdcb6499a1a6651baef94588d08e6d5fcc2163938592",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/esparragos_silvestres_custom_1.jpg",
+      "bytes": 228349,
+      "sha256": "c014d029c72ec1f938b6e861601e0707d9cf30c1755730575b7656bdd8027e42",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/esparrago_silvestre_1.jpg",
+      "bytes": 71240,
+      "sha256": "6659382d6221e9e76c565ba6a71f0c2f714adf5c7975bf1e396528505b1c53eb",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/esparrago_silvestre_2.jpg",
+      "bytes": 104609,
+      "sha256": "40e9597a77879e806263a2fca81024d3a7bd723db1fb313625f3aed8da8fe560",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/esparrago_silvestre_3.jpg",
+      "bytes": 22004,
+      "sha256": "4929d6ce6e1704902b64e58a06fbec1f1c391bdf021ac12f7d485b87c7333699",
+      "image": {
+        "width": 225,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/hinojo_1.jpg",
+      "bytes": 40634,
+      "sha256": "ca452735910e7babee3ce971fe98fe2426182190ae8eb8da33527dc4a92f6813",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/hinojo_2.jpg",
+      "bytes": 101519,
+      "sha256": "729c8b97dcde188b717abe90fb01656348e6def858b9e98bd6a52ea4c9debdce",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/hinojo_3.jpg",
+      "bytes": 55261,
+      "sha256": "eb3f22d5c2b45340246e628d2aa2c022b1dead85bc58f45a76d038bf63015e08",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/llanten_mayor_custom_1.jpg",
+      "bytes": 197863,
+      "sha256": "fa5826a0b69f2a311325700095e0b62e03f838c127ee829e07a5ee869e162143",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/madrono_1.jpg",
+      "bytes": 85782,
+      "sha256": "34079128d3e95a362c131f26e21316b623a502e904a11290c08a2855a20306a8",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/madrono_2.jpg",
+      "bytes": 96693,
+      "sha256": "acb7040e2f4dfdd25d9a3d4ad05022f50b41fb6220409a37095be3eafeb43e8f",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/madrono_3.jpg",
+      "bytes": 40633,
+      "sha256": "6b3ef0b41beaa20e0ff5e08d491f1292d73821c2b2c3436bc52d41c0ef45242d",
+      "image": {
+        "width": 500,
+        "height": 350,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/malva_1.jpg",
+      "bytes": 41005,
+      "sha256": "d7c94299f647c8b2a54036d57d000b6dc270bd34d2f9f1a95f0cdcb87d43e8f9",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/malva_2.jpg",
+      "bytes": 43123,
+      "sha256": "7854316ea0f3e56dcc01030db7c83c83fcb39a307d64951eb75a2fe5458408ad",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/malva_3.jpg",
+      "bytes": 27038,
+      "sha256": "da6047b83f741f3daf185ce45e39f13e8295333922697159712fd3dcece439d2",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/ortiga_mayor_custom_1.jpg",
+      "bytes": 177113,
+      "sha256": "5a129e9b097035510d5ea872463017f34414261bc6d70eac4f4fab86a7a54d93",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/pamplina_1.jpg",
+      "bytes": 558203,
+      "sha256": "22a246caeef19a685a515d6d5e808d393c72dcef2d107bd6efba20c289f4c8cb",
+      "image": {
+        "width": 1024,
+        "height": 683,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/pamplina_2.avif",
+      "bytes": 34649,
+      "sha256": "b8f7435bd573dc52bb4ab6c7a9b262cdb03e6b89d4d615b92d8df1239a49455d",
+      "image": {
+        "width": 427,
+        "height": 335,
+        "format": "heif"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/pamplina_3.webp",
+      "bytes": 111080,
+      "sha256": "dbe3d345da476629dede009652c7215463a827d1cee3e0ebbcbe1d8076f80535",
+      "image": {
+        "width": 1248,
+        "height": 770,
+        "format": "webp"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/pinones_pino_pinonero_custom_1.jpg",
+      "bytes": 164903,
+      "sha256": "c61ae509fb8403b7e061c8048da6f596bdd1d1c2fcccb5617ef4d3746b9000ca",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/verdolaga_1.jpg",
+      "bytes": 105010,
+      "sha256": "e7dded01d07723e2f383a7bd58a4791313ff0a23cf0d14d656dbc18bdf083752",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/verdolaga_2.jpg",
+      "bytes": 82229,
+      "sha256": "f585f787822fed803844166f743b4d330010dee522c10359f655706586f8313a",
+      "image": {
+        "width": 500,
+        "height": 297,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_comestibles/verdolaga_3.jpg",
+      "bytes": 108691,
+      "sha256": "53d366e1fafe61178c2c402e79221cf2093ea24fbaa62de10aff6001fe480fe6",
+      "image": {
+        "width": 500,
+        "height": 310,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/cola_de_caballo_custom_1.jpg",
+      "bytes": 238762,
+      "sha256": "c23e8ccec07a59365c9d3984f271e62b9858fcd796c066c499281225e8294c54",
+      "image": {
+        "width": 1280,
+        "height": 960,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/fumaria_comun_custom_1.jpg",
+      "bytes": 216848,
+      "sha256": "d4bcc1d969399b4de15061e5f14827273fa4f6c2c7a43da41b7bccffe1e36411",
+      "image": {
+        "width": 1146,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/genciana_amarilla_custom_1.jpg",
+      "bytes": 218156,
+      "sha256": "40d75c1fc44c97f2378ba4a548fd5da2d314f6992d474d062bc1c2f3c50fbb4a",
+      "image": {
+        "width": 1280,
+        "height": 960,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/gordolobo_comun_custom_1.jpg",
+      "bytes": 228704,
+      "sha256": "0542d785cb02f892963194aa2788bdca250c23dcf5095dd822958d23c59e610b",
+      "image": {
+        "width": 1280,
+        "height": 960,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/hierbabuena_custom_1.jpg",
+      "bytes": 239216,
+      "sha256": "eb7636fe7fad4f4ba1d4e30ef1a81bc97b5621992161f5b9f35aa10913b37109",
+      "image": {
+        "width": 1168,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/regaliz_de_palo_custom_1.jpg",
+      "bytes": 248846,
+      "sha256": "ce7f6e2e1d3de6a935b5aa45a1648a6ef87e6f669dba61b78515b57b7bba7828",
+      "image": {
+        "width": 1074,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/romero_custom_1.jpg",
+      "bytes": 240093,
+      "sha256": "2f16435b84707e998464532d358dd9099e9582520185efac4ff898fd69d59947",
+      "image": {
+        "width": 1280,
+        "height": 960,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/tila_tilo_custom_1.jpg",
+      "bytes": 243015,
+      "sha256": "c554c06eda4533f1c031129294bf077b7cee7d14fe480b103c51a6896cccae20",
+      "image": {
+        "width": 1165,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_medicinales/tomillo_custom_1.jpg",
+      "bytes": 242784,
+      "sha256": "9ab6335e00d2a6a767e83f049bf8c5c234ff98dc5efc972d6939764093329fc9",
+      "image": {
+        "width": 1280,
+        "height": 1024,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/aconito_1.jpg",
+      "bytes": 67316,
+      "sha256": "53ced5398c7f756788f7869371f09dd8aae444a667bad390187b3cf199312cf4",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/aconito_2.jpg",
+      "bytes": 27612,
+      "sha256": "9bb4f713ed939deabc1b975f810f930bff2b7ce811ecf027544c3ed8cedf5ddb",
+      "image": {
+        "width": 333,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/aconito_3.jpg",
+      "bytes": 103330,
+      "sha256": "7bb85b85dddff255c3ac6d92d715a7397a048f8cab66812a13445afba5c795d0",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/beleno_negro_1.jpg",
+      "bytes": 113960,
+      "sha256": "de8017d8888449d3e07146a3abc116aa6918335944c46f35044941d2642587e0",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/beleno_negro_2.jpg",
+      "bytes": 69518,
+      "sha256": "cdbab837ba7a113187ad9830a18ef5dc9fb48e162b0ee60a4c1175143bef2634",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/beleno_negro_3.jpg",
+      "bytes": 67004,
+      "sha256": "37f2443cd0bfa8b6658e48de7f7b293fc693f3a0b0077277a54a2f753127474d",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/brionia_1.jpg",
+      "bytes": 56642,
+      "sha256": "5280fdeba834d4b36a3897a64d8e2229c31c822b90961f19e28031b6daa42b5e",
+      "image": {
+        "width": 395,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/brionia_2.jpg",
+      "bytes": 59805,
+      "sha256": "557e00cbb7fbb71f525ab711d2156100e14a6a579e1be22fc58631833eaa0cd7",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/brionia_3.jpg",
+      "bytes": 50999,
+      "sha256": "38adf7ff02c807912f078a28bd590eafa2fe279baa7c75beb24b92051cebc8be",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/dulcamara_1.webp",
+      "bytes": 11962,
+      "sha256": "cb225e7027b5748c916fbe9ca94a99c038f31b17baaf43751c201ec0cc250102",
+      "image": {
+        "width": 300,
+        "height": 300,
+        "format": "webp"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/dulcamara_2.jpg",
+      "bytes": 191952,
+      "sha256": "63c8114f70dc3114f2d90d6c29a909cc3dd548e622760ce9e084baea1ab6e4b2",
+      "image": {
+        "width": 800,
+        "height": 800,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/dulcamara_3.webp",
+      "bytes": 23242,
+      "sha256": "ae017b8a2ed4e231a7c1413cdaed6d439f375ba3a60b8fd803e22a2e51daed44",
+      "image": {
+        "width": 440,
+        "height": 566,
+        "format": "webp"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/eleboro_1.jpg",
+      "bytes": 97128,
+      "sha256": "2df93a05dee04b58afec4b930cba183794946d468f14dc736d5e20c33eb16279",
+      "image": {
+        "width": 335,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/eleboro_2.jpg",
+      "bytes": 112845,
+      "sha256": "f440e9df7dc90093f3b4c21fe9a32201dc33c4ad6c092b1a4bfb98e1db205297",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/eleboro_3.jpg",
+      "bytes": 93910,
+      "sha256": "e77ea4ed69a7e7040fb52b794d4635032e91dff69225aad5dcfbb22d51c2deeb",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/estramonio_1.jpg",
+      "bytes": 40764,
+      "sha256": "df7fc2c4f1ec4a9e5bac02365caa5706d306fe724395fad3bf670c344390ec27",
+      "image": {
+        "width": 396,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/estramonio_2.jpg",
+      "bytes": 66592,
+      "sha256": "42c42538136f1797b93f67695e3f3cb9269eb34abbff3587a3f8facdaad49052",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/estramonio_3.jpg",
+      "bytes": 49756,
+      "sha256": "c567b5146b7d6f89a9fd3a088cdfeee431ceee96e20e74383fdcc929452e3982",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/euphorbia_1.jpg",
+      "bytes": 93556,
+      "sha256": "868d31d8681af18072de825dc8cc32bbb78954da37831c31fdee51357f1b0564",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/euphorbia_2.jpg",
+      "bytes": 63165,
+      "sha256": "42b36709fc0d031009b8a3f75c3204d7fbd738c057e336765d7f61619d771bf0",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/euphorbia_3.jpg",
+      "bytes": 60392,
+      "sha256": "c456e04eddf85f06635449d50a39b4013f286bb18915d49c660bd51208b55b04",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/laurel_cerezo_1.jpg",
+      "bytes": 83920,
+      "sha256": "9274ff09666f89cb2a93a2eb8ad68e3e2f544d01886cd490809251626ad19bd3",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/laurel_cerezo_2.jpg",
+      "bytes": 65332,
+      "sha256": "31c153018c68032b73c87d49b3f47f0270d3f8c7f6f842ebe2d92178609d9ad5",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/laurel_cerezo_3.jpg",
+      "bytes": 46616,
+      "sha256": "6b63173a3f73da19675f03bd049d5125271da7dd3e00fb9cd66b1ecf315ddac2",
+      "image": {
+        "width": 253,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/lirio_silvestre_custom_1.jpg",
+      "bytes": 215044,
+      "sha256": "5a573a2a14684a2f9f07f567be9acb98476973893b7772d7a5522684e22156be",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/muerdago_custom_1.jpg",
+      "bytes": 204160,
+      "sha256": "f403c9ebe733977f5f55c9e11bf941541c43c6d31b282fac01b9695a7d4e40ca",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/nueza_negra_custom_1.jpg",
+      "bytes": 214110,
+      "sha256": "399380e5e0390da5a1af61646dac8b279d778630be23e63d2d165613805e5af4",
+      "image": {
+        "width": 1280,
+        "height": 1024,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ranunculo_1.jpg",
+      "bytes": 67609,
+      "sha256": "bb15a36464bf0c4e86af2ca629b91a35f1f517eaf53024cbd81292fc9465bf68",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ranunculo_2.jpg",
+      "bytes": 29129,
+      "sha256": "52d6dc9303b445f05573928981a57c21079787625564ef8272bdb365a3608410",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ranunculo_3.jpg",
+      "bytes": 65905,
+      "sha256": "03873f5b2390aeff3483443b6e1bb475e43af43b56e944dd77310de6cdc9399a",
+      "image": {
+        "width": 500,
+        "height": 375,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ruda_1.jpg",
+      "bytes": 39872,
+      "sha256": "364efde5cb23fbc250a2a5476fb3b9121a4b7b6477b3058a447c5688aac24809",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ruda_2.jpg",
+      "bytes": 31236,
+      "sha256": "56ea29a359dc60e4383f8127a13d16e72ec46708a814ea155ed1ac520d5479da",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/ruda_3.jpg",
+      "bytes": 46183,
+      "sha256": "4ae1187da083a5f007ba7507062a62d11191c551c9973b9c9eff3772ed7a5be0",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/tejo_1.jpg",
+      "bytes": 82632,
+      "sha256": "d6321e34d0920156f30ff530a5dfdcad3a044ad6be7043e791b2de4ffb2cc952",
+      "image": {
+        "width": 500,
+        "height": 333,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/tejo_2.jpg",
+      "bytes": 95362,
+      "sha256": "4030895feb9f943b9742dfbf1e295724baa132b45d779e30e7b517b1380e5afc",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/tejo_3.jpg",
+      "bytes": 54719,
+      "sha256": "df0f5553da29684e45eee31046c16aa359ad3ab70d8d50de26412f05a685f7a1",
+      "image": {
+        "width": 375,
+        "height": 500,
+        "format": "jpeg"
+      }
+    },
+    {
+      "file": "assets/species/plantas_peligrosas/tomatito_diablo_dulcamara_custom_1.jpg",
+      "bytes": 241368,
+      "sha256": "a0685fec98fe7270e2e777c002672c16b0e41c1e0db91c3d6c164648a5890e24",
+      "image": {
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg"
+      }
+    }
+  ]
+}

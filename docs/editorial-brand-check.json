@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/blog",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/comparativas",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/nudos",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/plantas-y-fauna",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/checklists",
+      "width": 320,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/blog",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/comparativas",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/nudos",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/plantas-y-fauna",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/checklists",
+      "width": 390,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/blog",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/comparativas",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/nudos",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/plantas-y-fauna",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/checklists",
+      "width": 768,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/blog",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/comparativas",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/nudos",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/plantas-y-fauna",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/senales-en-grupo",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    },
+    {
+      "route": "/checklists",
+      "width": 1440,
+      "overflow": false,
+      "broken": 0
+    }
+  ],
+  "checklists": "selection, progress, scoped reset and download passed"
+}

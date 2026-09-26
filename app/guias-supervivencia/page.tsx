@@ -24,6 +24,12 @@ export default function GuidesPage() {
           <h1>Guías de supervivencia</h1>
           <p>Explora por necesidad. Cada enlace abre una guía completa disponible en la web.</p>
         </header>
+        <div className="journal-utilities">
+          <Link href="/preparacion-practica">Guías prácticas: hogar, familia y recursos offline</Link>
+          <Link href="/senales-en-grupo">Señales en grupo: láminas y ejercicios de la app</Link>
+          <Link href="/nudos">Nudos: catálogo por función y límites de uso</Link>
+          <Link href="/plantas-y-fauna">Plantas: imágenes de la app y observación botánica</Link>
+        </div>
         <nav className="journal-topics" aria-label="Temas de las guías">
           {topics
             .filter((t) => t !== "Todos")

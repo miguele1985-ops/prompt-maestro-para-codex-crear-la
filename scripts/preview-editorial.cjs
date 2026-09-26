@@ -18,7 +18,7 @@ const { chromium } = require('playwright');
     const result = await page.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth, broken: [...document.images].filter(image => !image.naturalWidth).map(image => image.src) }));
     console.log(name, result);
     if (result.overflow || result.broken.length) throw new Error('Visual validation failed');
-    await page.screenshot({ path: `public/editorial-${name}.png`, fullPage: true });
+    await page.screenshot({ path: `public/${process.argv[4] || 'editorial'}-${name}.png`, fullPage: true });
   }
   await browser.close();
   const document = new JSDOM(await (await fetch(origin)).text()).window.document;

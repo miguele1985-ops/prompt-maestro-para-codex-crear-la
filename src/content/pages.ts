@@ -1415,6 +1415,11 @@ export const legalPages: ContentPage[] = [
         body: "La web o la aplicación pueden incluir enlaces a páginas externas, fuentes oficiales u otros recursos. El responsable no se hace responsable del contenido, disponibilidad o políticas de dichos sitios externos.",
       },
       {
+        title: "Publicidad y enlaces de Amazon",
+        body: "En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.",
+        items: ["Los bloques comerciales se identifican como publicidad", "Los enlaces abren búsquedas en Amazon.es; no implican pruebas propias de los productos", "El contenido puede consultarse sin comprar y sin abrir esos enlaces", "Los precios, disponibilidad y condiciones se consultan en el vendedor"],
+      },
+      {
         title: "Contacto",
         body: "Para cualquier consulta relacionada con esta web o la aplicación, puedes escribir a: migueleclip@gmail.com.",
       },

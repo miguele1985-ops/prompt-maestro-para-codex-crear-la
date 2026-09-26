@@ -1,0 +1,27 @@
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
+import { moreGroupSignals } from "@/content/more-group-signals";
+
+export const metadata = pageMetadata({title:"14 señales para comunicarse en grupo: guía visual",description:"14 láminas de la app para practicar gestos acordados, comprobar que se entienden y preparar la comunicación de una salida en grupo.",slug:"senales-en-grupo"});
+const signals = [
+  ...moreGroupSignals,
+  {id:"alto",name:"Alto",gesture:"Mostrar la palma abierta hacia el grupo.",use:"Acordad una pausa para escuchar una explicación o revisar si falta alguien antes de iniciar una actividad.",exercise:"En un espacio tranquilo, una persona muestra la señal y otra explica lo que ha entendido. Cambiad los papeles.",limit:"No significa que el lugar sea seguro. No sustituyas una advertencia verbal urgente por esperar a que alguien vea tu mano."},
+  {id:"silencio",name:"Silencio",gesture:"Colocar el índice vertical delante de los labios.",use:"Pedir un momento para escuchar a quien está hablando o atender a un sonido durante una actividad.",exercise:"Comprobad que todos distinguen esta señal de la petición de detenerse. Confirmad su significado con palabras al aprenderla.",limit:"No debe impedir pedir ayuda, avisar de un peligro o expresar una necesidad. No exijas silencio a quien necesita comunicarse."},
+  {id:"mirar",name:"Mira / observa",gesture:"Señalar los propios ojos y después la zona que quieres mostrar.",use:"Compartir un punto de interés visible sin separarse del grupo: una referencia del camino o un cartel.",exercise:"Elegid un objeto cercano. Después de la señal, la otra persona lo describe para comprobar que miráis al mismo sitio.",limit:"Señalar una dirección no autoriza a avanzar hacia ella. La imagen es estática: explicad también el orden de los movimientos."},
+  {id:"espera",name:"Espera",gesture:"Acordar una palma baja con un movimiento suave hacia abajo.",use:"Pedir una pausa breve mientras se termina una tarea, por ejemplo guardar el mapa o ajustar la mochila.",exercise:"Comparad esta lámina con Alto. Si el grupo las confunde, utilizad solo una señal de pausa y aclarad el resto con palabras.",limit:"El parecido entre gestos puede causar ambigüedad. No deduzcas que puedes cruzar, abrir una puerta o continuar solo porque terminó la pausa."},
+];
+export default function GroupSignalsPage() {
+  return <div className="editorial-library"><div className="journal-section">
+    <Breadcrumbs items={[{label:"Inicio",href:"/"},{label:"Guías",href:"/guias-supervivencia"},{label:"Señales en grupo",href:"/senales-en-grupo"}]} />
+    <header className="editorial-library-heading"><p className="journal-kicker">Comunicación y preparación</p><h1>Entenderse antes de salir</h1><p>14 gestos de la aplicación para practicar con tu grupo. Lo importante no es memorizar muchos: es comprobar que todos entienden lo mismo.</p></header>
+    <p className="field-safety">Son propuestas para acordar dentro de tu grupo, no señales universales, una lengua de signos ni un protocolo de rescate. Adapta la comunicación a las capacidades de cada persona. Si alguien no puede ver el gesto, utiliza otro medio acordado.</p>
+    <nav className="journal-topics" aria-label="Gestos de la guía">{signals.map(signal=><a key={signal.id} href={`#${signal.id}`}>{signal.name}</a>)}</nav>
+    <section className="guide-topic"><h2>Un acuerdo que puedas comprobar</h2><ol><li>Elegid uno o dos gestos, su significado y una forma de confirmar que se han entendido.</li><li>Practicad cerca, con buena visibilidad y sin riesgos. No hagáis el ejercicio mientras cruzáis una vía o realizáis una maniobra.</li><li>Intercambiad quién emite y quién interpreta. Una interpretación distinta indica que hay que aclarar el acuerdo.</li><li>Decidid qué haréis si no os veis: el gesto no resuelve una separación ni sustituye vuestro plan de contacto.</li></ol></section>
+    {signals.map(signal=><section key={signal.id} id={signal.id} className="app-signal-section">
+      <figure><a href={`/images/from-app/senal-${signal.id}.jpg`} aria-label={`Abrir lámina completa: ${signal.name}`}><picture><source type="image/webp" srcSet={[360,576,960].map(width=>`/images/from-app/senal-${signal.id}-${width}.webp ${width}w`).join(', ')} sizes="(max-width:700px) 90vw, 440px" /><img src={`/images/from-app/senal-${signal.id}.jpg`} alt={`Lámina de la app: ${signal.name}. ${signal.gesture}`} width={1086} height={1448} loading="lazy" /></picture></a><figcaption>Lámina incluida en Modo Crisis Survival. <a href={`/images/from-app/senal-${signal.id}.jpg`} download>Descargar imagen</a></figcaption></figure>
+      <div><h2>{signal.name}</h2><p>{signal.gesture}</p><h3>Para acordar en el grupo</h3><p>{signal.use}</p><h3>Práctica breve</h3><p>{signal.exercise}</p><h3>Lo que no debes dar por hecho</h3><p>{signal.limit}</p></div>
+    </section>)}
+    <section className="guide-topic"><h2>Completa el plan</h2><p>Elegid un punto de encuentro y un contacto fuera de la zona. Revisad quién necesita apoyo y cómo se comunicará cada persona si el teléfono no está disponible.</p><div className="journal-utilities"><Link href="/checklists">Preparar el plan familiar</Link><Link href="/nudos">Practicar nudos: usos y límites</Link><Link href="/aplicacion-supervivencia-offline">Consultar las funciones de la app</Link></div></section>
+  </div></div>;
+}

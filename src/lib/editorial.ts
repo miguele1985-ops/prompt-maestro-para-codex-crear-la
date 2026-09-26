@@ -1,5 +1,6 @@
 import type { BlogPost } from "@/content/blog";
 import originalIndex from "@/content/editorial-index.json";
+import { batchTwoRevisions } from "@/content/batch-two";
 export type EditorialIndex = {
   toc: { id: string; title: string }[];
   words: number;
@@ -32,7 +33,7 @@ export function articleTopic(post: Pick<BlogPost, "slug" | "category" | "title">
 }
 export function readingMinutes(post: BlogPost) {
   return (
-    articleIndex[post.slug]?.readingMinutes ??
+    (batchTwoRevisions[post.slug] ? undefined : articleIndex[post.slug]?.readingMinutes) ??
     Math.max(
       2,
       Math.ceil(

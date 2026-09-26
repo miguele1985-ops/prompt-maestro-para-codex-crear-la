@@ -9,7 +9,7 @@ import {
   Download,
 } from "lucide-react";
 import { blogPosts, type BlogPost } from "@/content/blog";
-import { affiliateDisclosure, amazonSearchUrl } from "@/content/affiliate";
+import { amazonSearchUrl } from "@/content/affiliate";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { pageMetadata } from "@/lib/seo";
 import { readingMinutes } from "@/lib/editorial";
@@ -167,6 +167,10 @@ export default function HomePage() {
           </div>
         </div>
         <div className="journal-utilities">
+          <Link href="/nudos">Explora los 19 nudos por función <ArrowRight size={18} aria-hidden /></Link>
+          <Link href="/preparacion-practica">Guías para poner tu preparación en práctica <ArrowRight size={18} aria-hidden /></Link>
+          <Link href="/senales-en-grupo">Practica las señales del grupo con las láminas de la app <ArrowRight size={18} aria-hidden /></Link>
+          <Link href="/plantas-y-fauna">Observa las plantas con imágenes de la app <ArrowRight size={18} aria-hidden /></Link>
           {[
             [
               "/blog/calculadora-gestion-agua-supervivencia#calculadora",
@@ -200,7 +204,6 @@ export default function HomePage() {
           <p className="journal-intro">
             Capacidad, autonomía, peso y mantenimiento: conoce qué revisar antes de comprar.
           </p>
-          <p className="journal-disclosure">{affiliateDisclosure}</p>
           <div className="journal-products">
             {[
               {
@@ -249,7 +252,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="journal-disclosure">
-            {affiliateDisclosure} Las imágenes son ilustrativas; no representan pruebas propias ni
+            Las imágenes son ilustrativas; no representan pruebas propias ni
             modelos concretos.
           </p>
         </div>
@@ -310,7 +313,7 @@ export default function HomePage() {
         <h2>Información útil, decisiones informadas</h2>
         <p>
           Conservamos las fuentes de los artículos, distinguimos comparativas documentales de
-          pruebas propias y señalamos los enlaces de afiliado. Las imágenes generadas son
+          pruebas propias. Consulta la información comercial en el aviso legal. Las imágenes generadas son
           ilustrativas; no certifican productos ni identifican especies.
         </p>
         <div className="journal-utilities">

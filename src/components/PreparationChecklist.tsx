@@ -1,52 +1,50 @@
 "use client";
 import { useState } from "react";
 import { Download, Printer, RotateCcw } from "lucide-react";
-const items = [
-  "Acordar un punto de encuentro y un contacto fuera de la zona",
-  "Anotar teléfonos importantes en papel",
-  "Localizar documentación y copias necesarias",
-  "Revisar medicación personal y necesidades de cada miembro",
-  "Comprobar linternas, pilas y cargadores",
-  "Preparar agua potable y recipientes adecuados a tu plan",
-  "Revisar alimentos habituales listos para consumir y caducidades",
-  "Comprobar el botiquín y reponer lo utilizado",
-  "Preparar abrigo y calzado adecuados a la estación",
-  "Incluir las necesidades de menores, dependientes y mascotas",
-  "Probar el peso de la mochila en un recorrido seguro",
-  "Revisar mapas descargados y acordar cuándo repetir la revisión",
-];
+import lists from "@/content/mobile-checklists.json";
 export function PreparationChecklist() {
+  const [selected, setSelected] = useState("family-plan");
   const [checked, setChecked] = useState<string[]>([]);
+  const list = lists.find((entry) => entry.id === selected)!;
+  const items = list.items;
+  const completed = items.filter((item) => checked.includes(item.id)).length;
   function download() {
     const text =
-      "Plan básico de preparación\n\n" +
-      items.map((t) => `${checked.includes(t) ? "[x]" : "[ ]"} ${t}`).join("\n");
+      list.title + "\nPreparación previa: adapta la lista a tus necesidades.\n\n" +
+      items.map((t) => `${checked.includes(t.id) ? "[x]" : "[ ]"} ${t.text}`).join("\n");
     const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
     const a = document.createElement("a");
     a.href = url;
-    a.download = "checklist-preparacion.txt";
+    a.download = `checklist-${list.id}.txt`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   return (
     <section className="preparation-checklist">
+      <label className="checklist-select">Lista de preparación
+        <select value={selected} onChange={(event) => setSelected(event.target.value)}>
+          {lists.map((entry) => <option key={entry.id} value={entry.id}>{entry.title}</option>)}
+        </select>
+      </label>
+      <h2>{list.title}</h2>
       <p role="status">
-        {checked.length} de {items.length} tareas revisadas
+        {completed} de {items.length} tareas revisadas
       </p>
+      <progress className="checklist-progress" value={completed} max={items.length} aria-label="Tareas revisadas" />
       <ul>
         {items.map((item) => (
-          <li key={item}>
+          <li key={item.id}>
             <label>
               <input
                 type="checkbox"
-                checked={checked.includes(item)}
+                checked={checked.includes(item.id)}
                 onChange={(e) =>
                   setChecked(
-                    e.target.checked ? [...checked, item] : checked.filter((t) => t !== item),
+                    e.target.checked ? [...checked, item.id] : checked.filter((t) => t !== item.id),
                   )
                 }
               />
-              {item}
+              {item.text}
             </label>
           </li>
         ))}
@@ -58,7 +56,7 @@ export function PreparationChecklist() {
         <button onClick={() => window.print()}>
           <Printer size={18} aria-hidden /> Imprimir
         </button>
-        <button onClick={() => setChecked([])}>
+        <button onClick={() => setChecked(checked.filter((id) => !items.some((item) => item.id === id)))}>
           <RotateCcw size={18} aria-hidden /> Desmarcar
         </button>
       </div>

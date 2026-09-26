@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/content/blog";
 import { allContentPages } from "@/content/pages";
 import { siteConfig } from "@/content/site-config";
+import { practicalGuides } from "@/content/practical-guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.siteUrl.replace(/\/$/, "");
@@ -10,6 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.75 },
     { url: `${base}/comparativas`, changeFrequency: "monthly", priority: 0.72 },
     { url: `${base}/checklists`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/nudos`, changeFrequency: "monthly", priority: 0.65 },
+    { url: `${base}/senales-en-grupo`, changeFrequency: "monthly", priority: 0.65 },
+    { url: `${base}/preparacion-practica`, changeFrequency: "monthly", priority: 0.7 },
+    ...practicalGuides.map(guide=>({url:`${base}/preparacion-practica/${guide.slug}`,changeFrequency:"monthly" as const,priority:0.65})),
     ...allContentPages.map((page) => ({
       url: `${base}/${page.slug}`,
       changeFrequency: "monthly" as const,

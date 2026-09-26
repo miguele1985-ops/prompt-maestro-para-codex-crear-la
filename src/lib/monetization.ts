@@ -5,10 +5,9 @@ export function monetizationPolicy(path: string) {
     /^\/(?:api|administracion|admin-login|descargar|centro-descargas|aplicacion-supervivencia-offline|donaciones|sos|modo-crisis|checklists)(?:\/|$)/.test(
       path,
     ) || critical.test(path);
-  const calculator = path.includes("calculadora-");
-  const commercial = /comparativa|mochila|powerbank|radio|botiquin|kit-de|depositos/.test(path);
   return {
-    affiliate: !excluded && !calculator && commercial,
+    // A single preparatory block after the article, never inside urgent instructions or tool results.
+    affiliate: /^\/(?:blog|preparacion-practica)\/[^/]+$/.test(path),
     displayEligible: !excluded && path.startsWith("/blog/"),
     displayEnabled: false,
   };

@@ -7,12 +7,14 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPost } from "@/content/blog";
-import { affiliateDisclosure } from "@/content/affiliate";
+import { batchTwoRevisions } from "@/content/batch-two";
 import originals from "@/content/editorial-articles.json";
 import { articleIndex, articleTopic, readingMinutes, relatedArticles } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
+import { ArticleEquipment } from "@/components/ArticleEquipment";
 import { monetizationPolicy } from "@/lib/monetization";
 import { SurvivalCalculator } from "@/components/SurvivalCalculator";
+import { PlantPhotoGallery } from "@/components/PlantPhotoGallery";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -46,12 +48,12 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const post = getBlogPost((await params).slug);
   if (!post) notFound();
-  const original = (originals as Record<string, string>)[post.slug];
-  const info = articleIndex[post.slug];
-  const policy = monetizationPolicy(`/blog/${post.slug}`);
+  const revised = Boolean(batchTwoRevisions[post.slug]);
+  const original = revised ? undefined : (originals as Record<string, string>)[post.slug];
+  const info = revised ? undefined : articleIndex[post.slug];
   const sections = original
-    ? post.sections.filter((s) => s.links?.some((l) => l.sponsored))
-    : post.sections;
+    ? []
+    : post.sections.filter((section) => section.heading !== "Transparencia comercial");
   const toc = info?.toc ?? sections.map((s, i) => ({ id: `seccion-${i + 1}`, title: s.heading }));
   const related = relatedArticles(post, blogPosts);
   return (
@@ -127,7 +129,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <div className="article-original" dangerouslySetInnerHTML={{ __html: original }} />
             ) : null}
             {sections.map((section, i) => {
-              const links = section.links?.filter((l) => !l.sponsored || policy.affiliate);
+              const links = section.links?.filter((l) => !l.sponsored);
               if (original && !links?.length) return null;
               return (
                 <section
@@ -135,17 +137,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   key={section.heading}
                   id={original ? undefined : `seccion-${i + 1}`}
                 >
-                  <h2>{section.heading}</h2>
-                  <p>{section.body}</p>
+                   <h2>{section.heading === "Transparencia comercial" ? "Consultar en Amazon" : section.heading}</h2>
+                  {section.heading !== "Transparencia comercial" ? <p>{section.body}</p> : null}
                   {section.bullets ? (
                     <ul>
                       {section.bullets.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
-                  ) : null}
-                  {links?.some((l) => l.sponsored) ? (
-                    <p className="editorial-affiliate-notice">{affiliateDisclosure}</p>
                   ) : null}
                   {links?.length ? (
                     <div className="blog-section-links">
@@ -161,8 +160,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                             }
                             target="_blank"
                           >
-                            {link.label}
-                            {link.sponsored ? " · enlace de afiliado" : ""}
+                            {link.sponsored ? "Ver en Amazon" : link.label}
                           </a>
                         ) : (
                           <Link key={link.href} href={link.href}>
@@ -175,6 +173,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </section>
               );
             })}
+            {post.slug === "plantas-comestibles-y-peligrosas-que-se-pueden-confundir" ? <PlantPhotoGallery /> : null}
+            {post.slug === "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar" ? <p><Link href="/nudos">Consultar las 19 fichas de nudos de la aplicación, adaptadas para la web</Link></p> : null}
             {post.relatedLinks?.length ? (
               <nav className="editorial-resource-links" aria-label="Recursos relacionados con este artículo">
                 <h2>Recursos para ponerlo en práctica</h2>
@@ -212,6 +212,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               )}
               <Link href="/sobre-nosotros">Cómo trabajamos y cómo se financia la web</Link>
             </section>
+            {monetizationPolicy(`/blog/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
             <section className="editorial-app-cta">
               <Smartphone size={26} aria-hidden />
               <div>

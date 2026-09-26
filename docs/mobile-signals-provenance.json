@@ -1,0 +1,91 @@
+{
+  "mobileReadOnly": true,
+  "assets": [
+    {
+      "id": "alto",
+      "source": "assets/reference-photos/hand-signals/alto.png",
+      "destination": "/images/from-app/senal-alto.jpg",
+      "sha256": "971a0bd9025c665ee52431a034b4bfa172c9fcfaf79a7399e189d251fd9485cc"
+    },
+    {
+      "id": "silencio",
+      "source": "assets/reference-photos/hand-signals/silencio.png",
+      "destination": "/images/from-app/senal-silencio.jpg",
+      "sha256": "3784aa5d31ec21a973c8fdbab338d46586e6ad09431b35bd16e664e20375dac8"
+    },
+    {
+      "id": "mirar",
+      "source": "assets/reference-photos/hand-signals/mirar.png",
+      "destination": "/images/from-app/senal-mirar.jpg",
+      "sha256": "c416c9503fd1672729adea91a79e06f50d4936e2e609389be00943e1dc7c1352"
+    },
+    {
+      "id": "espera",
+      "source": "assets/reference-photos/hand-signals/espera.png",
+      "destination": "/images/from-app/senal-espera.jpg",
+      "sha256": "6821accfe84aecd88fe102eef6b261c96072c5824f2d6a2ff86be99bfc755726"
+    },
+    {
+      "id": "ven",
+      "source": "assets/reference-photos/hand-signals/ven.png",
+      "destination": "/images/from-app/senal-ven.jpg",
+      "sha256": "7e8cbc42bcf774e529d778f9c8caa0114c6c78d14d201e4f49592c8e534f345b"
+    },
+    {
+      "id": "reunirse",
+      "source": "assets/reference-photos/hand-signals/reunirse.png",
+      "destination": "/images/from-app/senal-reunirse.jpg",
+      "sha256": "272cb1721348120ce153d7c6995fa1e5f36b08863fc3f43580313ae5049d5049"
+    },
+    {
+      "id": "agua",
+      "source": "assets/reference-photos/hand-signals/agua.png",
+      "destination": "/images/from-app/senal-agua.jpg",
+      "sha256": "5af23c8833e253b3bfb1001f506d8e2e86f0b33a2a1db2b59e9ce7dcf3108ae8"
+    },
+    {
+      "id": "comida",
+      "source": "assets/reference-photos/hand-signals/comida.png",
+      "destination": "/images/from-app/senal-comida.jpg",
+      "sha256": "b3e9ea0bcd3f9c5b820e740b64f400751e9186195a3476a522f5e18e5e8adafb"
+    },
+    {
+      "id": "contar",
+      "source": "assets/reference-photos/hand-signals/contar.png",
+      "destination": "/images/from-app/senal-contar.jpg",
+      "sha256": "70cef43b5edc296291538eda63fe630bf7e8997d47b26d199b15043e3d778d3f"
+    },
+    {
+      "id": "telefono",
+      "source": "assets/reference-photos/hand-signals/telefono.png",
+      "destination": "/images/from-app/senal-telefono.jpg",
+      "sha256": "f110dbcd81cd54c3413863118c320d33abaccc32eaef44d91fc292341b3a90aa"
+    },
+    {
+      "id": "linterna",
+      "source": "assets/reference-photos/hand-signals/linterna.png",
+      "destination": "/images/from-app/senal-linterna.jpg",
+      "sha256": "bc30d47cd6657ef72c655c16d68ae8186d1df6b9ce4d86e31e64a8cf2b211f2e"
+    },
+    {
+      "id": "no",
+      "source": "assets/reference-photos/hand-signals/no.png",
+      "destination": "/images/from-app/senal-no.jpg",
+      "sha256": "ac54482eab61c174fe6f52cee183a5568f0afa1eab589ce21ebb9a3e41d47a49"
+    },
+    {
+      "id": "ok",
+      "source": "assets/reference-photos/hand-signals/ok.png",
+      "destination": "/images/from-app/senal-ok.jpg",
+      "sha256": "ac208ae34d8abae9a8fbc6c0d1b51a4f54020114e07044d041644e6ed5b0332d"
+    },
+    {
+      "id": "lento",
+      "source": "assets/reference-photos/hand-signals/lento.png",
+      "destination": "/images/from-app/senal-lento.jpg",
+      "sha256": "b22264996543ff1073cf628ea72b02b8221002709812b27de8f9361ff8988ba3"
+    }
+  ],
+  "contentSource": "src/app/tools/hand-signals.jsx",
+  "review": "14 láminas inspeccionadas. Adaptación para práctica acordada, no protocolo de rescate ni lengua de signos. Se conservan completas, sin recortar. Procedencia facilitada por el responsable de la app; no se declara dominio público."
+}

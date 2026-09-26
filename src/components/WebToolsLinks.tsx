@@ -20,6 +20,7 @@ export function WebToolsLinks() {
       <p>
         <Link href="/checklists">Lista de preparación imprimible</Link>
       </p>
+      <p><Link href="/preparacion-practica">Guías de preparación práctica</Link> · <Link href="/nudos">Nudos útiles</Link> · <Link href="/plantas-y-fauna">Plantas y observación del entorno</Link> · <Link href="/senales-en-grupo">Señales en grupo</Link></p>
     </section>
   );
 }

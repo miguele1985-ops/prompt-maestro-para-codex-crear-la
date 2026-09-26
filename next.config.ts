@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { batchTwoAliases } from "./src/content/batch-two";
 
 const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = isDev
@@ -79,6 +80,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...Object.entries(batchTwoAliases).map(([source,destination])=>({source:`/blog/${source}`,destination:`/blog/${destination}`,permanent:true})),
       { source: "/supervivencia-offline", destination: "/aplicacion-supervivencia-offline", permanent: true },
       { source: "/herramientas", destination: "/herramientas-supervivencia", permanent: true },
       { source: "/aprendizaje", destination: "/aprendizaje-supervivencia", permanent: true }

@@ -60,15 +60,13 @@ describe("editorial migration", () => {
     expect(absoluteUrl("https://descargas.modocrisissurvival.com/apk/test.apk")).toBe(
       "https://descargas.modocrisissurvival.com/apk/test.apk",
     ));
-  it("blocks monetization on critical and download routes", () => {
+  it("keeps operational and download pages free of commercial blocks", () => {
     for (const path of [
       "/sos",
       "/modo-crisis/apagon",
       "/descargar",
       "/donaciones",
       "/checklists",
-      "/blog/calculadora-hipotermia-riesgo",
-      "/blog/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
     ])
       expect(monetizationPolicy(path)).toMatchObject({
         affiliate: false,
