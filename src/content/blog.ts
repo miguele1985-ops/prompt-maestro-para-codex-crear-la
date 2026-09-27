@@ -2,6 +2,8 @@ import { affiliateDisclosure, amazonSearchUrl } from "@/content/affiliate";
 import upgrades from "@/content/article-upgrades.json";
 import { editorialPhoto } from "@/content/editorial-photos";
 import { batchTwoRevisions } from "./batch-two";
+import { resilienceArticles } from "./resilience-articles";
+import { continuityArticles, continuityUpdates } from "./continuity-articles";
 
 export interface BlogSection {
   heading: string;
@@ -14,6 +16,8 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  seoTitle?: string;
+  sources?: Array<{ title: string; url: string }>;
   category: string;
   image: string;
   imageAlt: string;
@@ -34,6 +38,8 @@ export interface BlogAppUseGuide {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...resilienceArticles.slice(1),
+  ...continuityArticles.filter(post => !continuityUpdates.has(post.slug)),
   {
     slug: "lluvia-autoconsumo-generadores-normativa",
     title: "Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar",
@@ -1697,6 +1703,29 @@ for (const [slug, revision] of Object.entries(batchTwoRevisions)) {
   if(!post)throw new Error(`Missing batch two canonical article: ${slug}`);
   Object.assign(post,revision,{updatedAt:"2026-09-26"});
   const photo=editorialPhoto(slug);post.image=photo.image;post.imageAlt=photo.alt;
+}
+
+// Expand the existing blackout guide instead of publishing a competing URL.
+const blackoutGuide = blogPosts.find(post => post.slug === resilienceArticles[0].slug);
+if (blackoutGuide) {
+  const revision = resilienceArticles[0];
+  const appSection = blackoutGuide.sections.find(section => section.heading === "Qué usar dentro de la app");
+  Object.assign(blackoutGuide, {
+    seoTitle: revision.seoTitle,
+    excerpt: revision.excerpt,
+    keywords: [...new Set([...blackoutGuide.keywords, ...revision.keywords])],
+    sections: [...revision.sections, ...(appSection ? [appSection] : [])],
+    sources: revision.sources,
+    warning: revision.warning,
+    updatedAt: revision.publishedAt,
+    relatedLinks: [...revision.relatedLinks!, ...(blackoutGuide.relatedLinks ?? [])],
+  });
+}
+
+for (const revision of continuityArticles.filter(post => continuityUpdates.has(post.slug))) {
+  const existing = blogPosts.find(post => post.slug === revision.slug);
+  if (!existing) throw new Error(`Missing canonical guide: ${revision.slug}`);
+  Object.assign(existing, revision, { publishedAt: existing.publishedAt, date: existing.date, title: existing.title, category: existing.category, updatedAt: revision.publishedAt });
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

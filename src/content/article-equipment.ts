@@ -19,6 +19,10 @@ const options = {
 } satisfies Record<string,EquipmentOption>;
 
 export function equipmentForArticle(slug:string):EquipmentOption[] {
+  if(/ciberataque/.test(slug))return [options.folder,options.notebook];
+  if(/desinformacion/.test(slug))return [options.radio,options.notebook];
+  if(/cadena-suministro/.test(slug))return [options.labels,options.storage];
+  if(/espana-2030/.test(slug))return [options.containers,options.folder];
   // Preparatory accessories only, including on health and calculator articles.
   if(/primeros-auxilios|botiquin|hipotermia|salud|herida/.test(slug))return [options.firstaid,options.notebook];
   if(/plantas|setas|fauna|animales|naturaleza/.test(slug))return [options.guide,options.notebook];

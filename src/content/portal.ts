@@ -79,6 +79,9 @@ export const portalTopics = [
 ] as const;
 export function portalTopic(slug: string): string {
   const s = normalize(slug);
+  if (/ciberataque|desinformacion/.test(s)) return "comunicacion";
+  if (/cadena-suministro/.test(s)) return "alimentacion";
+  if (/espana-2030/.test(s)) return "desastres";
   if (/nudo/.test(s)) return "nudos";
   if (/dana|inundacion|incendio|alert|eclipse|verano|calor-extremo/.test(s)) return "desastres";
   if (/agua|lluvia|potabiliza|destilacion/.test(s)) return "agua";

@@ -30,7 +30,7 @@ export async function generateMetadata({
   const post = getBlogPost((await params).slug);
   if (!post) return {};
   const metadata = pageMetadata({
-    title: post.title,
+    title: post.seoTitle || post.title,
     description: post.excerpt,
     slug: `blog/${post.slug}`,
     keywords: post.keywords,
@@ -58,6 +58,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     : post.sections.filter((section) => section.heading !== "Transparencia comercial");
   const toc = info?.toc ?? sections.map((s, i) => ({ id: `seccion-${i + 1}`, title: s.heading }));
   const related = relatedArticles(post, blogPosts);
+  const sources = post.sources ?? info?.sources ?? [];
   const kind=contentKind(post.slug,post.category);
   const parent=kind==='Comparativa'?{label:'Comparativas',href:'/comparativas'}:kind==='Calculadora'?{label:'Herramientas',href:'/herramientas-supervivencia'}:kind==='App'?{label:'App',href:'/aplicacion-supervivencia-offline'}:kind==='Guía'?{label:'Guías',href:'/guias-supervivencia'}:{label:'Artículos',href:'/blog'};
   const topic=portalTopics.find(t=>t[0]===portalTopic(post.slug))!;
@@ -201,9 +202,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 producto; los precios o especificaciones fechados pueden cambiar. Comprueba el
                 manual y la fuente original antes de decidir.
               </p>
-              {info?.sources.length ? (
+              {sources.length ? (
                 <ul>
-                  {info.sources.map((source) => (
+                  {sources.map((source) => (
                     <li key={source.url}>
                       <a href={source.url} rel="noopener noreferrer">
                         {source.title || new URL(source.url).hostname}

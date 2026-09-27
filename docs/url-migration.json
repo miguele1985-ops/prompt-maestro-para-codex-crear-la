@@ -21,15 +21,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/guias-supervivencia/primeros-auxilios",
-      "newUrl": "/guias-supervivencia/primeros-auxilios",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/primeros-auxilios",
-      "title": "Guías de primeros auxilios | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/guias-supervivencia/agua",
       "newUrl": "/guias-supervivencia/agua",
       "status": 200,
@@ -45,6 +36,15 @@
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/refugio",
       "title": "Guías de refugio y hogar | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/guias-supervivencia/primeros-auxilios",
+      "newUrl": "/guias-supervivencia/primeros-auxilios",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/primeros-auxilios",
+      "title": "Guías de primeros auxilios | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -75,6 +75,15 @@
       "h1": 1
     },
     {
+      "oldUrl": "/guias-supervivencia/vehiculo",
+      "newUrl": "/guias-supervivencia/vehiculo",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/vehiculo",
+      "title": "Guías de vehículo | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/guias-supervivencia/equipo",
       "newUrl": "/guias-supervivencia/equipo",
       "status": 200,
@@ -84,12 +93,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/guias-supervivencia/vehiculo",
-      "newUrl": "/guias-supervivencia/vehiculo",
+      "oldUrl": "/guias-supervivencia/familia",
+      "newUrl": "/guias-supervivencia/familia",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/vehiculo",
-      "title": "Guías de vehículo | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/familia",
+      "title": "Guías de preparación familiar | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -111,15 +120,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/guias-supervivencia/familia",
-      "newUrl": "/guias-supervivencia/familia",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/guias-supervivencia/familia",
-      "title": "Guías de preparación familiar | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/guias-supervivencia/naturaleza",
       "newUrl": "/guias-supervivencia/naturaleza",
       "status": 200,
@@ -138,12 +138,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/nudos",
-      "newUrl": "/nudos",
+      "oldUrl": "/checklists",
+      "newUrl": "/checklists",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/nudos",
-      "title": "Nudos útiles: 19 fichas por función y límites de uso | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/checklists",
+      "title": "16 listas de preparación y emergencia para imprimir | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -165,12 +165,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/checklists",
-      "newUrl": "/checklists",
+      "oldUrl": "/nudos",
+      "newUrl": "/nudos",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/checklists",
-      "title": "16 listas de preparación y emergencia para imprimir | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/nudos",
+      "title": "Nudos útiles: 19 fichas por función y límites de uso | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -183,15 +183,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/preparacion-practica/comparar-equipo-antes-comprar",
-      "newUrl": "/preparacion-practica/comparar-equipo-antes-comprar",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/comparar-equipo-antes-comprar",
-      "title": "Compara el equipo por su uso, no por sus promesas | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/preparacion-practica",
       "newUrl": "/preparacion-practica",
       "status": 200,
@@ -201,12 +192,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/preparacion-practica/contactos-familiares-claros",
-      "newUrl": "/preparacion-practica/contactos-familiares-claros",
+      "oldUrl": "/preparacion-practica/comparar-equipo-antes-comprar",
+      "newUrl": "/preparacion-practica/comparar-equipo-antes-comprar",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/contactos-familiares-claros",
-      "title": "Contactos familiares que se entiendan a la primera | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/comparar-equipo-antes-comprar",
+      "title": "Compara el equipo por su uso, no por sus promesas | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -216,6 +207,15 @@
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/preparacion-practica/objetos-casa-sin-improvisaciones",
       "title": "Objetos de casa: aprovecharlos sin improvisaciones peligrosas | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/preparacion-practica/contactos-familiares-claros",
+      "newUrl": "/preparacion-practica/contactos-familiares-claros",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/contactos-familiares-claros",
+      "title": "Contactos familiares que se entiendan a la primera | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -246,12 +246,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/preparacion-practica/ocho-retos-de-preparacion",
-      "newUrl": "/preparacion-practica/ocho-retos-de-preparacion",
+      "oldUrl": "/preparacion-practica/luz-y-bateria",
+      "newUrl": "/preparacion-practica/luz-y-bateria",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/ocho-retos-de-preparacion",
-      "title": "Ocho pequeños retos para poner el plan en marcha | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/luz-y-bateria",
+      "title": "Luz y batería: preparar las tareas esenciales | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -264,12 +264,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/preparacion-practica/luz-y-bateria",
-      "newUrl": "/preparacion-practica/luz-y-bateria",
+      "oldUrl": "/preparacion-practica/ocho-retos-de-preparacion",
+      "newUrl": "/preparacion-practica/ocho-retos-de-preparacion",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/luz-y-bateria",
-      "title": "Luz y batería: preparar las tareas esenciales | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/preparacion-practica/ocho-retos-de-preparacion",
+      "title": "Ocho pequeños retos para poner el plan en marcha | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -525,30 +525,75 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/peso-reserva-familiar-emergencias",
-      "newUrl": "/blog/peso-reserva-familiar-emergencias",
+      "oldUrl": "/blog/ciberataque-masivo-servicios-esenciales",
+      "newUrl": "/blog/ciberataque-masivo-servicios-esenciales",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/peso-reserva-familiar-emergencias",
-      "title": "Cuánto pesa una reserva familiar de emergencia y cómo organizarla | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/ciberataque-masivo-servicios-esenciales",
+      "title": "Ciberataque masivo: cómo prepararse si fallan servicios esenciales | Modo Crisis Survival",
       "h1": 1
     },
     {
-      "oldUrl": "/blog/lluvia-autoconsumo-generadores-normativa",
-      "newUrl": "/blog/lluvia-autoconsumo-generadores-normativa",
+      "oldUrl": "/blog/crisis-cadena-suministro-supermercados-vacios",
+      "newUrl": "/blog/crisis-cadena-suministro-supermercados-vacios",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/lluvia-autoconsumo-generadores-normativa",
-      "title": "Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/crisis-cadena-suministro-supermercados-vacios",
+      "title": "Supermercados vacíos: cómo prepararse ante una crisis de suministro | Modo Crisis Survival",
       "h1": 1
     },
     {
-      "oldUrl": "/blog/que-guardar-mochila-72-horas",
-      "newUrl": "/blog/que-guardar-mochila-72-horas",
+      "oldUrl": "/blog/7-dias-sin-internet",
+      "newUrl": "/blog/7-dias-sin-internet",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/que-guardar-mochila-72-horas",
-      "title": "Qué guardar en una mochila de 72 horas | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/7-dias-sin-internet",
+      "title": "7 días sin Internet: cómo prepararse para una caída prolongada | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/espana-2030-calor-sequia-inundaciones",
+      "newUrl": "/blog/espana-2030-calor-sequia-inundaciones",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/espana-2030-calor-sequia-inundaciones",
+      "title": "España 2030: cómo prepararse para calor, sequía e inundaciones | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "newUrl": "/blog/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "title": "Desinformación en emergencias: detectar alertas falsas y deepfakes | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/tarjetas-cajeros-pagos-no-funcionan",
+      "newUrl": "/blog/tarjetas-cajeros-pagos-no-funcionan",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/tarjetas-cajeros-pagos-no-funcionan",
+      "title": "¿Qué hacer si tarjetas y cajeros dejan de funcionar? | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/primeras-24-horas-gran-emergencia",
+      "newUrl": "/blog/primeras-24-horas-gran-emergencia",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/primeras-24-horas-gran-emergencia",
+      "title": "Primeras 24 horas de una emergencia: prioridades para actuar | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/como-prepararse-para-un-apagon",
+      "newUrl": "/blog/como-prepararse-para-un-apagon",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/como-prepararse-para-un-apagon",
+      "title": "Apagón total: cómo prepararse para 72 horas sin luz ni Internet | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -561,6 +606,15 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/lluvia-autoconsumo-generadores-normativa",
+      "newUrl": "/blog/lluvia-autoconsumo-generadores-normativa",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/lluvia-autoconsumo-generadores-normativa",
+      "title": "Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/que-debe-incluir-aplicacion-supervivencia-offline",
       "newUrl": "/blog/que-debe-incluir-aplicacion-supervivencia-offline",
       "status": 200,
@@ -570,12 +624,21 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/como-prepararse-para-un-apagon",
-      "newUrl": "/blog/como-prepararse-para-un-apagon",
+      "oldUrl": "/blog/peso-reserva-familiar-emergencias",
+      "newUrl": "/blog/peso-reserva-familiar-emergencias",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/como-prepararse-para-un-apagon",
-      "title": "Cómo prepararse para un apagón prolongado | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/peso-reserva-familiar-emergencias",
+      "title": "Cuánto pesa una reserva familiar de emergencia y cómo organizarla | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/que-guardar-mochila-72-horas",
+      "newUrl": "/blog/que-guardar-mochila-72-horas",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/que-guardar-mochila-72-horas",
+      "title": "Qué guardar en una mochila de 72 horas | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -597,15 +660,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/que-hacer-cuando-no-hay-cobertura",
-      "newUrl": "/blog/que-hacer-cuando-no-hay-cobertura",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/que-hacer-cuando-no-hay-cobertura",
-      "title": "Qué hacer cuando no hay cobertura | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/blog/como-ahorrar-bateria-emergencia",
       "newUrl": "/blog/como-ahorrar-bateria-emergencia",
       "status": 200,
@@ -615,12 +669,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/como-guardar-agua-emergencias",
-      "newUrl": "/blog/como-guardar-agua-emergencias",
+      "oldUrl": "/blog/que-hacer-cuando-no-hay-cobertura",
+      "newUrl": "/blog/que-hacer-cuando-no-hay-cobertura",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/como-guardar-agua-emergencias",
-      "title": "Cómo guardar agua para emergencias | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/que-hacer-cuando-no-hay-cobertura",
+      "title": "Qué hacer cuando no hay cobertura | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -633,15 +687,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/que-hacer-durante-dana",
-      "newUrl": "/blog/que-hacer-durante-dana",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/que-hacer-durante-dana",
-      "title": "Qué hacer durante una DANA o inundación | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/blog/diferencias-alertas-oficiales-avisos-meteorologicos",
       "newUrl": "/blog/diferencias-alertas-oficiales-avisos-meteorologicos",
       "status": 200,
@@ -651,12 +696,21 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/como-revisar-kit-emergencia",
-      "newUrl": "/blog/como-revisar-kit-emergencia",
+      "oldUrl": "/blog/como-guardar-agua-emergencias",
+      "newUrl": "/blog/como-guardar-agua-emergencias",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/como-revisar-kit-emergencia",
-      "title": "Cómo revisar un kit de emergencia | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/como-guardar-agua-emergencias",
+      "title": "Corte de agua prolongado: cómo preparar una reserva para 7 días | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/que-hacer-durante-dana",
+      "newUrl": "/blog/que-hacer-durante-dana",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/que-hacer-durante-dana",
+      "title": "DANA: cómo prepararte si quedas aislado durante 72 horas | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -678,6 +732,15 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/como-revisar-kit-emergencia",
+      "newUrl": "/blog/como-revisar-kit-emergencia",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/como-revisar-kit-emergencia",
+      "title": "Cómo revisar un kit de emergencia | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/app-supervivencia-android-sin-internet",
       "newUrl": "/blog/app-supervivencia-android-sin-internet",
       "status": 200,
@@ -696,15 +759,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/checklist-evacuacion-incendio-vivienda",
-      "newUrl": "/blog/checklist-evacuacion-incendio-vivienda",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/checklist-evacuacion-incendio-vivienda",
-      "title": "Checklist de evacuación por incendio en vivienda | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/blog/kit-emergencia-personas-mayores",
       "newUrl": "/blog/kit-emergencia-personas-mayores",
       "status": 200,
@@ -714,21 +768,21 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/checklist-evacuacion-incendio-vivienda",
+      "newUrl": "/blog/checklist-evacuacion-incendio-vivienda",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/checklist-evacuacion-incendio-vivienda",
+      "title": "Checklist de evacuación por incendio en vivienda | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/radio-frecuencias-emergencia-sin-cobertura",
       "newUrl": "/blog/radio-frecuencias-emergencia-sin-cobertura",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/radio-frecuencias-emergencia-sin-cobertura",
       "title": "Radio y frecuencias de emergencia cuando no hay cobertura | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/potabilizar-agua-emergencia-metodos-seguros",
-      "newUrl": "/blog/potabilizar-agua-emergencia-metodos-seguros",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/potabilizar-agua-emergencia-metodos-seguros",
-      "title": "Potabilizar agua en una emergencia: métodos y límites importantes | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -747,6 +801,15 @@
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/preparar-mascotas-emergencia",
       "title": "Cómo preparar a tus mascotas para una emergencia o evacuación | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/potabilizar-agua-emergencia-metodos-seguros",
+      "newUrl": "/blog/potabilizar-agua-emergencia-metodos-seguros",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/potabilizar-agua-emergencia-metodos-seguros",
+      "title": "Potabilizar agua en una emergencia: métodos y límites importantes | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -813,39 +876,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calculadora-potabilizacion-quimica-agua",
-      "newUrl": "/blog/calculadora-potabilizacion-quimica-agua",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-potabilizacion-quimica-agua",
-      "title": "Calculadora de potabilización química: dosis orientativas y límites | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/calculadora-gestion-agua-supervivencia",
-      "newUrl": "/blog/calculadora-gestion-agua-supervivencia",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-gestion-agua-supervivencia",
-      "title": "Calculadora de gestión de agua para emergencias: qué hace y cómo usarla | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/blog/calculadora-captacion-lluvia-supervivencia",
       "newUrl": "/blog/calculadora-captacion-lluvia-supervivencia",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/calculadora-captacion-lluvia-supervivencia",
       "title": "Calculadora de captación de lluvia: litros, superficie y autonomía | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/calculadora-destilacion-solar-agua",
-      "newUrl": "/blog/calculadora-destilacion-solar-agua",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-destilacion-solar-agua",
-      "title": "Calculadora de destilación solar: rendimiento aproximado sin electricidad | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -858,30 +894,21 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calculadora-cruce-rios-seguridad",
-      "newUrl": "/blog/calculadora-cruce-rios-seguridad",
+      "oldUrl": "/blog/calculadora-gestion-agua-supervivencia",
+      "newUrl": "/blog/calculadora-gestion-agua-supervivencia",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-cruce-rios-seguridad",
-      "title": "Calculadora de cruce de ríos: evaluar riesgo antes de decidir | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-gestion-agua-supervivencia",
+      "title": "Calculadora de gestión de agua para emergencias: qué hace y cómo usarla | Modo Crisis Survival",
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calculadora-horas-luz-ruta",
-      "newUrl": "/blog/calculadora-horas-luz-ruta",
+      "oldUrl": "/blog/calculadora-potabilizacion-quimica-agua",
+      "newUrl": "/blog/calculadora-potabilizacion-quimica-agua",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-horas-luz-ruta",
-      "title": "Calculadora de horas de luz: cuánto margen queda antes del anochecer | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/calculadora-sensacion-termica-frio-calor",
-      "newUrl": "/blog/calculadora-sensacion-termica-frio-calor",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-sensacion-termica-frio-calor",
-      "title": "Calculadora de sensación térmica: frío, calor, viento y humedad | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-potabilizacion-quimica-agua",
+      "title": "Calculadora de potabilización química: dosis orientativas y límites | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -894,12 +921,30 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calculadora-conversor-survival-unidades",
-      "newUrl": "/blog/calculadora-conversor-survival-unidades",
+      "oldUrl": "/blog/calculadora-cruce-rios-seguridad",
+      "newUrl": "/blog/calculadora-cruce-rios-seguridad",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-conversor-survival-unidades",
-      "title": "Conversor survival: unidades útiles para emergencias y guías offline | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-cruce-rios-seguridad",
+      "title": "Calculadora de cruce de ríos: evaluar riesgo antes de decidir | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/calculadora-sensacion-termica-frio-calor",
+      "newUrl": "/blog/calculadora-sensacion-termica-frio-calor",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-sensacion-termica-frio-calor",
+      "title": "Calculadora de sensación térmica: frío, calor, viento y humedad | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/calculadora-destilacion-solar-agua",
+      "newUrl": "/blog/calculadora-destilacion-solar-agua",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-destilacion-solar-agua",
+      "title": "Calculadora de destilación solar: rendimiento aproximado sin electricidad | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -912,12 +957,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calculadora-hipotermia-riesgo",
-      "newUrl": "/blog/calculadora-hipotermia-riesgo",
+      "oldUrl": "/blog/calculadora-horas-luz-ruta",
+      "newUrl": "/blog/calculadora-horas-luz-ruta",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-hipotermia-riesgo",
-      "title": "Calculadora de hipotermia: señales de alerta y prioridad de ayuda | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-horas-luz-ruta",
+      "title": "Calculadora de horas de luz: cuánto margen queda antes del anochecer | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -930,30 +975,21 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/mochila-emergencia-72-horas-peso-realista",
-      "newUrl": "/blog/mochila-emergencia-72-horas-peso-realista",
+      "oldUrl": "/blog/calculadora-conversor-survival-unidades",
+      "newUrl": "/blog/calculadora-conversor-survival-unidades",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/mochila-emergencia-72-horas-peso-realista",
-      "title": "Mochila de emergencia de 72 horas con peso realista | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-conversor-survival-unidades",
+      "title": "Conversor survival: unidades útiles para emergencias y guías offline | Modo Crisis Survival",
       "h1": 1
     },
     {
-      "oldUrl": "/blog/apagon-general-espana-pasos",
-      "newUrl": "/blog/apagon-general-espana-pasos",
+      "oldUrl": "/blog/calculadora-hipotermia-riesgo",
+      "newUrl": "/blog/calculadora-hipotermia-riesgo",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/apagon-general-espana-pasos",
-      "title": "Qué hacer en un apagón general en España paso a paso | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/gps-movil-sin-internet-mapas-offline",
-      "newUrl": "/blog/gps-movil-sin-internet-mapas-offline",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/gps-movil-sin-internet-mapas-offline",
-      "title": "Tu móvil puede saber dónde estás aunque no tenga Internet | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/calculadora-hipotermia-riesgo",
+      "title": "Calculadora de hipotermia: señales de alerta y prioridad de ayuda | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -966,12 +1002,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
-      "newUrl": "/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "oldUrl": "/blog/apagon-general-espana-pasos",
+      "newUrl": "/blog/apagon-general-espana-pasos",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
-      "title": "Botiquín para casa: comprarlo hecho o montarlo tú | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/apagon-general-espana-pasos",
+      "title": "Qué hacer en un apagón general en España paso a paso | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -984,30 +1020,30 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/gps-movil-sin-internet-mapas-offline",
+      "newUrl": "/blog/gps-movil-sin-internet-mapas-offline",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/gps-movil-sin-internet-mapas-offline",
+      "title": "Tu móvil puede saber dónde estás aunque no tenga Internet | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/mochila-emergencia-72-horas-peso-realista",
+      "newUrl": "/blog/mochila-emergencia-72-horas-peso-realista",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/mochila-emergencia-72-horas-peso-realista",
+      "title": "Mochila de emergencia de 72 horas con peso realista | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/filtros-agua-portatiles-comparativa-riesgo",
       "newUrl": "/blog/filtros-agua-portatiles-comparativa-riesgo",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/filtros-agua-portatiles-comparativa-riesgo",
       "title": "Filtros de agua portátiles: qué comprar según el riesgo | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/linterna-frontal-vs-de-mano-para-un-apagon",
-      "newUrl": "/blog/linterna-frontal-vs-de-mano-para-un-apagon",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/linterna-frontal-vs-de-mano-para-un-apagon",
-      "title": "Linterna frontal vs de mano para un apagón | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
-      "newUrl": "/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
-      "title": "Kit de emergencia para el coche: qué llevar en 2026 | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1020,48 +1056,39 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "newUrl": "/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "title": "Kit de emergencia para el coche: qué llevar en 2026 | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/linterna-frontal-vs-de-mano-para-un-apagon",
+      "newUrl": "/blog/linterna-frontal-vs-de-mano-para-un-apagon",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/linterna-frontal-vs-de-mano-para-un-apagon",
+      "title": "Linterna frontal vs de mano para un apagón | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "newUrl": "/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "title": "Botiquín para casa: comprarlo hecho o montarlo tú | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
       "newUrl": "/blog/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
       "title": "Apagón de España de 2025: qué ha cambiado desde entonces | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
-      "newUrl": "/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
-      "title": "Mejores mochilas de emergencia 72h en España (2026) | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/powerbanks-solares-aguantan-un-apagon-largo",
-      "newUrl": "/blog/powerbanks-solares-aguantan-un-apagon-largo",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/powerbanks-solares-aguantan-un-apagon-largo",
-      "title": "Powerbanks solares: ¿aguantan un apagón largo? | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
-      "newUrl": "/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
-      "title": "DANA: aviso naranja o rojo, ¿qué debes hacer? | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
-      "newUrl": "/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
-      "title": "Filtros de agua portátiles: cuáles funcionan de verdad | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1074,12 +1101,57 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "newUrl": "/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "title": "Filtros de agua portátiles: cuáles funcionan de verdad | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "newUrl": "/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "title": "Mejores mochilas de emergencia 72h en España (2026) | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/radios-de-manivela-y-a-pilas-para-emergencias",
       "newUrl": "/blog/radios-de-manivela-y-a-pilas-para-emergencias",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/radios-de-manivela-y-a-pilas-para-emergencias",
       "title": "Radios de manivela y a pilas para emergencias | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "newUrl": "/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "title": "DANA: aviso naranja o rojo, ¿qué debes hacer? | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/powerbanks-solares-aguantan-un-apagon-largo",
+      "newUrl": "/blog/powerbanks-solares-aguantan-un-apagon-largo",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/powerbanks-solares-aguantan-un-apagon-largo",
+      "title": "Powerbanks solares: ¿aguantan un apagón largo? | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "newUrl": "/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "title": "Calor extremo de 2026: 61 días bajo ola de calor | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1092,12 +1164,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
-      "newUrl": "/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "oldUrl": "/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "newUrl": "/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
-      "title": "Calor extremo de 2026: 61 días bajo ola de calor | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "title": "Viviendas y riesgo de incendio forestal: ley en 2026 | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1119,12 +1191,12 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
-      "newUrl": "/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "oldUrl": "/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "newUrl": "/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
       "status": 200,
       "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
-      "title": "Viviendas y riesgo de incendio forestal: ley en 2026 | Modo Crisis Survival",
+      "canonical": "https://www.modocrisissurvival.com/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "title": "Sin cobertura móvil: cómo comunicarte de verdad | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1137,33 +1209,6 @@
       "h1": 1
     },
     {
-      "oldUrl": "/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
-      "newUrl": "/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
-      "title": "Eclipse del 12 de agosto de 2026: por qué hubo avisos | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
-      "newUrl": "/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/sin-cobertura-movil-como-comunicarte-de-verdad",
-      "title": "Sin cobertura móvil: cómo comunicarte de verdad | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
-      "newUrl": "/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
-      "title": "¿Estaban preparados los hogares españoles para el apagón? | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
       "oldUrl": "/blog/preppers-espanoles-que-aprendieron-del-gran-apagon",
       "newUrl": "/blog/preppers-espanoles-que-aprendieron-del-gran-apagon",
       "status": 200,
@@ -1173,12 +1218,30 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "newUrl": "/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "title": "Eclipse del 12 de agosto de 2026: por qué hubo avisos | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
       "newUrl": "/blog/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
       "status": 200,
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
       "title": "5 mitos de supervivencia que pueden ponerte en peligro | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
+      "oldUrl": "/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "newUrl": "/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "title": "¿Estaban preparados los hogares españoles para el apagón? | Modo Crisis Survival",
       "h1": 1
     },
     {
@@ -1218,6 +1281,15 @@
       "h1": 1
     },
     {
+      "oldUrl": "/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "newUrl": "/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "status": 200,
+      "action": "preserve",
+      "canonical": "https://www.modocrisissurvival.com/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "title": "Cómo hacer más segura el agua sin filtro ni pastillas | Modo Crisis Survival",
+      "h1": 1
+    },
+    {
       "oldUrl": "/blog/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
       "newUrl": "/blog/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
       "status": 200,
@@ -1242,15 +1314,6 @@
       "action": "preserve",
       "canonical": "https://www.modocrisissurvival.com/blog/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
       "title": "Setas comestibles vs tóxicas: identificación sin falsas reglas | Modo Crisis Survival",
-      "h1": 1
-    },
-    {
-      "oldUrl": "/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
-      "newUrl": "/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
-      "status": 200,
-      "action": "preserve",
-      "canonical": "https://www.modocrisissurvival.com/blog/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
-      "title": "Cómo hacer más segura el agua sin filtro ni pastillas | Modo Crisis Survival",
       "h1": 1
     }
   ],
