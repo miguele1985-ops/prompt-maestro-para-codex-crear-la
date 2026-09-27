@@ -2,7 +2,7 @@ import { orderedBlogPosts } from "./blog";
 import { practicalGuides } from "./practical-guides";
 import { readingMinutes } from "@/lib/editorial";
 
-export type ContentKind = "Guía" | "Artículo" | "Comparativa" | "Calculadora" | "Checklist" | "App";
+export type ContentKind = "Guía" | "Artículo" | "Comparativa" | "Calculadora" | "Checklist" | "App" | "Herramienta";
 export type PortalItem = {
   href: string;
   title: string;
@@ -79,6 +79,9 @@ export const portalTopics = [
 ] as const;
 export function portalTopic(slug: string): string {
   const s = normalize(slug);
+  if (/tormenta-solar/.test(s)) return "energia";
+  if (/confinamiento-emergencia/.test(s)) return "refugio";
+  if (/medicamentos-tratamientos/.test(s)) return "primeros-auxilios";
   if (/ciberataque|desinformacion/.test(s)) return "comunicacion";
   if (/cadena-suministro/.test(s)) return "alimentacion";
   if (/espana-2030/.test(s)) return "desastres";
@@ -119,6 +122,7 @@ export function contentKind(slug: string, category: string): ContentKind {
   return "Guía";
 }
 export const portalContent: PortalItem[] = [
+  { href: "/codigo-morse", title: "Código Morse", excerpt: "Traductor de texto, puntos y rayas con alfabeto de consulta.", kind: "Herramienta", topic: "comunicacion" },
   ...orderedBlogPosts.map((p) => ({
     href: `/blog/${p.slug}`,
     title: p.title,
@@ -172,7 +176,7 @@ export const portalContent: PortalItem[] = [
   },
 ];
 export const webTools = portalContent
-  .filter((p) => p.kind === "Calculadora" || p.kind === "Checklist")
+  .filter((p) => p.kind === "Calculadora" || p.kind === "Checklist" || p.kind === "Herramienta")
   .map((p) => ({
     ...p,
     href: p.kind === "Calculadora" ? `${p.href}#calculadora` : p.href,

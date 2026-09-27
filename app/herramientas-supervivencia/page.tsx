@@ -34,6 +34,8 @@ export default function ToolsPage() {
               <ContentCard key={item.href} item={item} />
             ))}
         </div>
+        <h2>Comunicación</h2>
+        <div className="portal-grid">{webTools.filter(p => p.kind === "Herramienta").map(item => <ContentCard key={item.href} item={item} />)}</div>
         <h2>Planificación</h2>
         <div className="portal-grid">
           {webTools

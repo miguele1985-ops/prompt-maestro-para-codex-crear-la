@@ -7,7 +7,7 @@ import { contentKind } from "../src/content/portal";
 describe("Resilience article batch", () => {
   it("updates the existing blackout guide and adds four unique articles", () => {
     expect(resilienceArticles).toHaveLength(5);
-    expect(blogPosts).toHaveLength(88);
+    expect(blogPosts).toHaveLength(93);
     expect(getBlogPost("apagon-total-72-horas-sin-luz-internet")).toBeUndefined();
     for (const entry of resilienceArticles) {
       const matches = blogPosts.filter((p) => p.slug === entry.slug);

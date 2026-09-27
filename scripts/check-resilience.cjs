@@ -2,6 +2,7 @@ const {chromium}=require('playwright');
 const fs=require('node:fs');
 const slugs=['como-prepararse-para-un-apagon','ciberataque-masivo-servicios-esenciales','crisis-cadena-suministro-supermercados-vacios','espana-2030-calor-sequia-inundaciones','desinformacion-emergencias-deepfakes-alertas-falsas'];
 slugs.push('como-guardar-agua-emergencias','7-dias-sin-internet','tarjetas-cajeros-pagos-no-funcionan','que-hacer-durante-dana','primeras-24-horas-gran-emergencia');
+slugs.push('tormenta-solar-extrema-como-prepararse','confinamiento-emergencia-casa-que-hacer','medicamentos-tratamientos-emergencias','emergencia-trabajo-volver-casa','evacuacion-10-minutos-que-coger');
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',headless:true});
  const origin=process.argv[2]||'http://localhost:3004';const results=[];

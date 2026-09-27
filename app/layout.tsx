@@ -32,6 +32,10 @@ metadata.verification = {
   google: "wq8LI-PjzqCnIREw5ac1-sYX5tpdGVYKWeOuU9dBh78",
 };
 
+// AdSense ownership verification without loading advertising before a certified CMP is configured.
+metadata.other ??= {};
+metadata.other["google-adsense-account"] = "ca-pub-7330652876943268";
+
 export const viewport: Viewport = {
   themeColor: siteConfig.colors.background,
   colorScheme: "dark",

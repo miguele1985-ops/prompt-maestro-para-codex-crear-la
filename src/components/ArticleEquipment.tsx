@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 import { amazonSearchUrl } from "@/content/affiliate";
 import { equipmentForArticle } from "@/content/article-equipment";
 export function ArticleEquipment({slug}:{slug:string}) {
-  return <aside className="article-equipment" aria-label="Opciones de equipo en Amazon">
+  return <aside id="equipo-articulo" className="article-equipment" aria-label="Opciones de equipo en Amazon">
     <p className="equipment-disclosure">Publicidad · Enlaces de Amazon. <Link href="/aviso-legal">Información comercial</Link></p>
     <h2>Si necesitas completar tu equipo</h2>
     <p>Revisa primero lo que ya tienes. Estos enlaces abren búsquedas, no modelos probados ni compras necesarias para seguir la guía.</p>

@@ -17,7 +17,8 @@ describe("Arquitectura del portal", () => {
   });
   it("solo publica calculadoras implementadas y listas reales", () => {
     expect(Object.keys(webCalculators).sort()).toEqual(Object.keys(calculatorKinds).sort());
-    expect(webTools).toHaveLength(7);
+    expect(webTools).toHaveLength(8);
+    expect(webTools.find(p => p.href === "/codigo-morse")?.kind).toBe("Herramienta");
     expect(contentKind("calculadora-cruce-rios-seguridad", "Calculadoras offline")).toBe("App");
   });
   it("usa imágenes existentes y temas conocidos", () => {

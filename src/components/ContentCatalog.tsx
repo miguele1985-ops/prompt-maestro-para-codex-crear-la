@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Calculator, ClipboardCheck, Search } from "lucide-react";
+import { ArrowRight, Calculator, ClipboardCheck, Search, Radio } from "lucide-react";
 import type { PortalItem } from "@/content/portal";
 import { ResponsiveImage } from "./ResponsiveImage";
 
@@ -20,7 +20,7 @@ export function ContentCard({ item }: { item: PortalItem }) {
           />
         ) : (
           <span className="portal-tool-icon">
-            {item.kind === "Checklist" ? (
+            {item.kind === "Herramienta" ? <Radio size={36} aria-hidden /> : item.kind === "Checklist" ? (
               <ClipboardCheck size={36} aria-hidden />
             ) : (
               <Calculator size={36} aria-hidden />
@@ -40,7 +40,7 @@ export function ContentCard({ item }: { item: PortalItem }) {
             </time>
           ) : null}
           <span className="portal-read">
-            {item.kind === "Calculadora"
+            {item.kind === "Herramienta" ? "Abrir herramienta" : item.kind === "Calculadora"
               ? "Abrir calculadora"
               : item.kind === "Checklist"
                 ? "Usar checklist"

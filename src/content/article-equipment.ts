@@ -19,6 +19,11 @@ const options = {
 } satisfies Record<string,EquipmentOption>;
 
 export function equipmentForArticle(slug:string):EquipmentOption[] {
+  if(/tormenta-solar/.test(slug))return [options.radio,options.power];
+  if(/confinamiento-emergencia/.test(slug))return [options.radio,options.light];
+  if(/medicamentos-tratamientos/.test(slug))return [options.firstaid,options.folder];
+  if(/emergencia-trabajo-volver/.test(slug))return [options.power,options.pouches];
+  if(/evacuacion-10-minutos/.test(slug))return [options.bag,options.folder];
   if(/ciberataque/.test(slug))return [options.folder,options.notebook];
   if(/desinformacion/.test(slug))return [options.radio,options.notebook];
   if(/cadena-suministro/.test(slug))return [options.labels,options.storage];

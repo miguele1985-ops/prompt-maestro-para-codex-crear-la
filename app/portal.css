@@ -262,3 +262,18 @@
 .app-download-actions>a:focus-visible{outline:3px solid #1482a3;outline-offset:4px}
 .editorial-app-cta>div{min-width:0;width:100%}
 @media(max-width:600px){.app-download-actions{flex-direction:column;align-items:stretch}.app-download-actions>.app-download-primary,.app-download-actions>.app-download-secondary{width:100%}.app-download-actions>.app-download-help{align-self:center}.editorial-app-cta{padding:22px 16px}}
+.morse-workbench { max-width: 850px; margin: 24px auto; padding: 24px; background: var(--forest, #1e2a18); color: #f7f2e6; border-radius: 6px; }
+.morse-workbench h2 { color: #f7f2e6; font-size: 22px; }
+.morse-workbench label { display: block; margin: 20px 0 8px; }
+.morse-workbench textarea { display: block; width: 100%; max-width: 100%; min-height: 120px; box-sizing: border-box; resize: vertical; background: #f7f2e6; color: #201c15; padding: 12px; border: 1px solid #88927f; border-radius: 4px; font: inherit; }
+.morse-modes, .morse-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.morse-workbench button { min-height: 44px; min-width: 44px; background: #30402a; border: 1px solid #a5af97; color: #fff; padding: 10px; border-radius: 4px; cursor: pointer; }
+.morse-workbench button[aria-pressed="true"] { background: #b93f14; border-color: #ffb38b; }
+.morse-workbench button:disabled { opacity: .5; cursor: default; }
+.morse-output { display: block; min-height: 80px; padding: 16px; background: #0e190e; color: #fff; white-space: pre-wrap; overflow-wrap: anywhere; font: 22px/1.6 monospace; margin-bottom: 16px; }
+.morse-alphabet { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.morse-alphabet div { border-bottom: 1px solid #7b896c; padding: 8px; }
+.morse-alphabet dt { color: #ffd099; font-weight: bold; }
+.morse-alphabet dd { margin: 4px 0; color: #fff; font: 20px monospace; }
+.morse-notes { max-width: 850px; margin: 32px auto; }
+@media(max-width: 600px) { .morse-workbench { padding: 16px; } .morse-alphabet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

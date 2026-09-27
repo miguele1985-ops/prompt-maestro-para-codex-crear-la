@@ -1,9 +1,11 @@
 import { affiliateDisclosure, amazonSearchUrl } from "@/content/affiliate";
 import upgrades from "@/content/article-upgrades.json";
 import { editorialPhoto } from "@/content/editorial-photos";
+import { suppliedPhoto } from "@/content/supplied-photos";
 import { batchTwoRevisions } from "./batch-two";
 import { resilienceArticles } from "./resilience-articles";
 import { continuityArticles, continuityUpdates } from "./continuity-articles";
+import { preparednessScenarios } from "./preparedness-scenarios";
 
 export interface BlogSection {
   heading: string;
@@ -38,6 +40,7 @@ export interface BlogAppUseGuide {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...preparednessScenarios,
   ...resilienceArticles.slice(1),
   ...continuityArticles.filter(post => !continuityUpdates.has(post.slug)),
   {
@@ -1726,6 +1729,11 @@ for (const revision of continuityArticles.filter(post => continuityUpdates.has(p
   const existing = blogPosts.find(post => post.slug === revision.slug);
   if (!existing) throw new Error(`Missing canonical guide: ${revision.slug}`);
   Object.assign(existing, revision, { publishedAt: existing.publishedAt, date: existing.date, title: existing.title, category: existing.category, updatedAt: revision.publishedAt });
+}
+
+for (const post of blogPosts) {
+  const photo = suppliedPhoto(post.slug);
+  if (photo) { post.image = photo.image; post.imageAlt = photo.alt; }
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));
