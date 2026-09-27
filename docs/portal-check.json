@@ -1,0 +1,257 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/guias-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/guias-supervivencia/agua",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/blog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/comparativas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/herramientas-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/buscar",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/preparacion-practica",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "/aplicacion-supervivencia-offline/herramientas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/guias-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/guias-supervivencia/agua",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/blog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/comparativas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/herramientas-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/buscar",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/preparacion-practica",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "/aplicacion-supervivencia-offline/herramientas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/guias-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/guias-supervivencia/agua",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/blog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/comparativas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/herramientas-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/buscar",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/preparacion-practica",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "/aplicacion-supervivencia-offline/herramientas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/guias-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/guias-supervivencia/agua",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/blog",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/comparativas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/herramientas-supervivencia",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/buscar",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/preparacion-practica",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "/aplicacion-supervivencia-offline/herramientas",
+      "status": 200,
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "interactions": "search, accents, filters, pagination, mobile navigation, six calculator results, 404 passed"
+}

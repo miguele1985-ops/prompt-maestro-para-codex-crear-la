@@ -532,6 +532,9 @@ export default async function HomePage() {
   return (
     <>
       <SeoJsonLd data={appJsonLd()} />
+      <nav className="content-band portal-app-nav" aria-label="Secciones de la aplicación">
+        <Link href="/funciones">Funciones Android</Link><Link href="/aplicacion-supervivencia-offline/herramientas">Herramientas personales</Link><Link href="/recursos-avanzados">Calculadoras y recursos offline</Link><Link href="/aprendizaje-supervivencia">Biblioteca y aprendizaje</Link><Link href="/ia-enciclopedia">IA offline</Link><Link href="/centro-descargas">Mapas y recursos</Link><Link href="/descargar">Descarga e instalación</Link><Link href="/preguntas-frecuentes">Preguntas frecuentes</Link>
+      </nav>
       <section className="hero">
         <div className="hero-copy">
           <p className="hero-badge"><span className="pulse-dot" aria-hidden />Modo offline activo · Preparación, crisis y supervivencia</p>

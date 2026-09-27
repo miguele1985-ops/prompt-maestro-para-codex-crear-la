@@ -1,45 +1,29 @@
-import { orderedBlogPosts } from "@/content/blog";
+import { PortalLibrary } from "@/components/PortalLibrary";
+import { portalContent } from "@/content/portal";
+import { ContentCard } from "@/components/ContentCatalog";
 import { pageMetadata } from "@/lib/seo";
-import { articleTopic, readingMinutes, topics } from "@/lib/editorial";
-import { ArticleExplorer } from "@/components/ArticleExplorer";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata = pageMetadata({
-  title: "Guías y artículos de supervivencia y preparación",
+  title: "Artículos de supervivencia y preparación",
   description:
-    "Aprende a preparar tu hogar, elegir equipo y organizar una salida. Artículos completos sobre agua, energía, naturaleza y planes familiares.",
+    "Actualidad, explicaciones y análisis para entender mejor la preparación y las emergencias.",
   slug: "blog",
 });
 export default function BlogPage() {
+  const items = portalContent.filter((p) => p.kind === "Artículo");
   return (
-    <div className="editorial-library">
-      <div className="journal-section">
-        <Breadcrumbs
-          items={[
-            { label: "Inicio", href: "/" },
-            { label: "Artículos", href: "/blog" },
-          ]}
-        />
-        <header className="editorial-library-heading">
-          <p className="journal-kicker">La biblioteca de Modo Crisis Survival</p>
-          <h1>Conocimiento para estar mejor preparado</h1>
-          <p>
-            Consejos prácticos, explicaciones completas y criterios para elegir tu equipo. Encuentra
-            lo que necesitas por tema.
-          </p>
-        </header>
-        <ArticleExplorer
-          topics={topics}
-          posts={orderedBlogPosts.map((p) => ({
-            slug: p.slug,
-            title: p.title,
-            excerpt: p.excerpt,
-            image: p.image,
-            imageAlt: p.imageAlt,
-            topic: articleTopic(p),
-            minutes: readingMinutes(p),
-          }))}
-        />
+    <PortalLibrary
+      title="Artículos de supervivencia y preparación"
+      description="Explicaciones, actualidad y análisis para tomar decisiones con más contexto."
+      href="/blog"
+      items={items}
+    >
+      <h2>Lecturas destacadas</h2>
+      <div className="portal-grid">
+        {items.slice(0, 3).map((item) => (
+          <ContentCard key={item.href} item={item} />
+        ))}
       </div>
-    </div>
+      <h2>Últimos artículos</h2>
+    </PortalLibrary>
   );
 }

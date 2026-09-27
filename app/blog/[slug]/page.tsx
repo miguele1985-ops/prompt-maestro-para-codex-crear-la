@@ -15,6 +15,8 @@ import { ArticleEquipment } from "@/components/ArticleEquipment";
 import { monetizationPolicy } from "@/lib/monetization";
 import { SurvivalCalculator } from "@/components/SurvivalCalculator";
 import { PlantPhotoGallery } from "@/components/PlantPhotoGallery";
+import { AppDownloadActions } from "@/components/AppDownloadActions";
+import { contentKind, portalTopic, portalTopics, editorialCover } from "@/content/portal";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -56,18 +58,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     : post.sections.filter((section) => section.heading !== "Transparencia comercial");
   const toc = info?.toc ?? sections.map((s, i) => ({ id: `seccion-${i + 1}`, title: s.heading }));
   const related = relatedArticles(post, blogPosts);
+  const kind=contentKind(post.slug,post.category);
+  const parent=kind==='Comparativa'?{label:'Comparativas',href:'/comparativas'}:kind==='Calculadora'?{label:'Herramientas',href:'/herramientas-supervivencia'}:kind==='App'?{label:'App',href:'/aplicacion-supervivencia-offline'}:kind==='Guía'?{label:'Guías',href:'/guias-supervivencia'}:{label:'Artículos',href:'/blog'};
+  const topic=portalTopics.find(t=>t[0]===portalTopic(post.slug))!;
+  const cover=post.image.startsWith('/screenshots/')&&kind!=='App'?editorialCover(post.slug):{image:post.image,alt:post.imageAlt};
   return (
     <div className="editorial-article-page">
       <div className="editorial-article-shell">
         <Breadcrumbs
           items={[
             { label: "Inicio", href: "/" },
-            { label: "Artículos", href: "/blog" },
+            parent,
+            ...(kind==='Guía'?[{label:topic[1],href:`/guias-supervivencia/${topic[0]}`}]:[]),
             { label: post.title, href: `/blog/${post.slug}` },
           ]}
         />
         <header className="editorial-article-heading">
-          <p className="journal-kicker">{articleTopic(post)}</p>
+          <p className="journal-kicker">{kind} · {articleTopic(post)}</p>
+          {kind==='App'?<p className="portal-app-notice">Esta guía explica una función de Android. No es una calculadora web. <Link href="/herramientas-supervivencia">Ver herramientas web disponibles</Link></p>:null}
           <h1>{post.title}</h1>
           <p className="editorial-standfirst">{post.excerpt}</p>
           <div className="editorial-byline">
@@ -86,10 +94,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ) : null}
           </div>
         </header>
-        <figure className="editorial-article-photo">
+        {kind!=='Calculadora'?<figure className="editorial-article-photo">
           <ResponsiveImage
-            src={post.image}
-            alt={post.imageAlt}
+            src={cover.image}
+            alt={cover.alt}
             width={1200}
             height={750}
             widths={[360, 576, 960, 1200]}
@@ -101,7 +109,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             Imagen ilustrativa. Consulta las fuentes del artículo para contrastar los datos; una
             imagen no permite identificar especies ni verificar un producto.
           </figcaption>
-        </figure>
+        </figure>:<SurvivalCalculator slug={post.slug} />}
         <div className="editorial-reading-layout">
           <aside className="editorial-toc">
             <details open>
@@ -121,7 +129,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </Link>
           </aside>
           <article className="editorial-prose">
-            <SurvivalCalculator slug={post.slug} />
             {post.warning ? (
               <SafetyWarning title="Antes de empezar">{post.warning}</SafetyWarning>
             ) : null}
@@ -218,9 +225,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <div>
                 <h2>Prepara también tu móvil</h2>
                 <p>Lleva guías y recursos offline con Modo Crisis Survival.</p>
-                <Link href="/aplicacion-supervivencia-offline">
-                  Conocer la aplicación <ArrowRight size={16} aria-hidden />
-                </Link>
+                <AppDownloadActions />
               </div>
             </section>
           </article>

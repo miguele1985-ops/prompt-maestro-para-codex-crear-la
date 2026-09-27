@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { blogPosts } from "@/content/blog";
-import { articleTopic, topics } from "@/lib/editorial";
-import { pageMetadata } from "@/lib/seo";
+import { portalContent, portalTopics } from "@/content/portal";
+import { ContentCatalog } from "@/components/ContentCatalog";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Guías de supervivencia por temas",
   description:
-    "Biblioteca de guías prácticas de agua, energía, hogar, naturaleza y equipamiento. Consulta los artículos completos sin instalar la aplicación.",
+    "Aprende a prepararte antes de una emergencia. Biblioteca de guías de agua, energía, orientación, hogar y familia.",
   slug: "guias-supervivencia",
 });
 export default function GuidesPage() {
+  const guides = portalContent.filter((p) => p.kind === "Guía");
   return (
     <div className="editorial-library">
       <div className="journal-section">
@@ -20,47 +22,39 @@ export default function GuidesPage() {
           ]}
         />
         <header className="editorial-library-heading">
-          <p className="journal-kicker">De la duda al plan</p>
           <h1>Guías de supervivencia</h1>
-          <p>Explora por necesidad. Cada enlace abre una guía completa disponible en la web.</p>
+          <p>
+            Aprende a prepararte antes de una emergencia y consulta rápidamente qué hacer cuando
+            algo ocurre.
+          </p>
         </header>
-        <div className="journal-utilities">
-          <Link href="/preparacion-practica">Guías prácticas: hogar, familia y recursos offline</Link>
-          <Link href="/senales-en-grupo">Señales en grupo: láminas y ejercicios de la app</Link>
-          <Link href="/nudos">Nudos: catálogo por función y límites de uso</Link>
-          <Link href="/plantas-y-fauna">Plantas: imágenes de la app y observación botánica</Link>
-        </div>
-        <nav className="journal-topics" aria-label="Temas de las guías">
-          {topics
-            .filter((t) => t !== "Todos")
-            .map((t, i) => (
-              <a href={`#tema-${i}`} key={t}>
-                {t}
-              </a>
-            ))}
-        </nav>
-        {topics
-          .filter((t) => t !== "Todos")
-          .map((topic, i) => (
-            <section className="guide-topic" id={`tema-${i}`} key={topic}>
-              <h2>{topic}</h2>
-              <ul>
-                {blogPosts
-                  .filter((p) => articleTopic(p) === topic)
-                  .map((p) => (
-                    <li key={p.slug}>
-                      <Link href={`/blog/${p.slug}`}>{p.title}</Link>
-                      <p>{p.excerpt}</p>
-                    </li>
-                  ))}
-              </ul>
-            </section>
-          ))}
-        <p>
-          <Link href="/aplicacion-supervivencia-offline">
-            Conoce también las guías y funciones offline de la aplicación.
-          </Link>
-        </p>
+        <ContentCatalog
+          items={guides}
+          topics={portalTopics}
+          placeholder="Buscar una guía: agua, apagón, refugio, orientación..."
+        >
+          <h2>Categorías</h2>
+          <div className="portal-categories">
+            {portalTopics
+              .filter((t) => guides.some((p) => p.topic === t[0]))
+              .map((t) => (
+                <Link key={t[0]} href={`/guias-supervivencia/${t[0]}`}>
+                  <ResponsiveImage
+                    src={`/images/blog/${t[3]}.jpg`}
+                    alt={`${t[1]}. Imagen editorial ilustrativa.`}
+                    width={360}
+                    height={180}
+                    sizes="(max-width:700px) 90vw, 260px"
+                    loading="lazy"
+                  />
+                  <strong>{t[1]}</strong>
+                  <span>{t[2]}</span>
+                  <small>{guides.filter((p) => p.topic === t[0]).length} guías · Ver guías</small>
+                </Link>
+              ))}
+          </div>
+          <h2>Todas las guías</h2>
+        </ContentCatalog>
       </div>
     </div>
   );

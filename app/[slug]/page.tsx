@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -537,6 +537,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const isDownloadPage = slug === "descargar" || page.slug === "descargar";
   const isResourcesPage = slug === "recursos-avanzados" || page.slug === "recursos-avanzados";
   const showPageHero = !isDownloadPage;
+  const isAppManual = ['funciones','recursos-avanzados','aprendizaje-supervivencia','ia-enciclopedia','con-uso-de-internet','modo-crisis'].includes(slug);
+  const SectionContainer = isAppManual ? 'details' : 'div';
   const showPageContent = page.slug !== "donaciones" && page.slug !== "centro-descargas" && !isDownloadPage;
   const sectionsToRender = isResourcesPage
     ? page.sections?.filter((section) => section.title !== "Calculadoras")
@@ -546,6 +548,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     <>
       {showPageHero ? (
         <section className="page-hero">
+          {isAppManual ? <><Breadcrumbs items={[{label:'Inicio',href:'/'},{label:'App',href:'/aplicacion-supervivencia-offline'},{label:page.title,href:`/${slug}`}]} /><p className="portal-app-notice">Disponible en la aplicación Android. <Link href="/herramientas-supervivencia">Ir a herramientas web</Link></p></> : null}
           <p className="eyebrow">{page.eyebrow || "Modo Crisis Survival"}</p>
           <h1>{page.title}</h1>
           <p>{page.description}</p>
@@ -561,7 +564,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       {showPageContent ? (
         <>
         {isResourcesPage || page.slug === "herramientas-supervivencia" ? <WebToolsLinks /> : null}
-        <section className="content-band page-content">
+        <section className={`content-band page-content${isAppManual ? ' portal-manual' : ''}`}>
           {page.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -575,7 +578,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
           {sectionsToRender?.map((section) => {
             const hasShowcase = Boolean(section.image || section.steps || section.tips);
             return (
-              <Fragment key={section.title}>
+              <SectionContainer key={section.title}>
+                {isAppManual ? <summary>{section.title}</summary> : null}
                 <article className={hasShowcase ? "option-showcase" : "mini-card"}>
                   {section.image ? (
                     <div className="option-screen">
@@ -616,7 +620,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                     ) : null}
                   </div>
                 </article>
-              </Fragment>
+              </SectionContainer>
             );
           })}
           {isResourcesPage ? (

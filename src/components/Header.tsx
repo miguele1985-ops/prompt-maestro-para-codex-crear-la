@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Download, HeartHandshake, Menu, X } from "lucide-react";
+import { Download, HeartHandshake, Menu, Search, X } from "lucide-react";
 import { TrackedDonationLink } from "@/components/TrackedDonationLink";
 import { navigation, siteConfig } from "@/content/site-config";
 
@@ -56,6 +56,7 @@ export function Header() {
         {navLinks}
       </nav>
       <div className="header-actions">
+        <Link href="/buscar" className="portal-header-search" aria-label="Buscar en la web" title="Buscar"><Search size={20} aria-hidden /></Link>
         <TrackedDonationLink className="header-donate" href="/donaciones">
           <HeartHandshake size={16} aria-hidden /> Donar
         </TrackedDonationLink>
@@ -75,6 +76,7 @@ export function Header() {
       {open ? (
         <nav className="mobile-nav" aria-label="Navegación móvil">
           {navLinks}
+          <Link href="/buscar" onClick={() => setOpen(false)}>Buscar en la web</Link>
           <TrackedDonationLink className="mobile-donate" href="/donaciones" onClick={() => setOpen(false)}>
             <HeartHandshake size={16} aria-hidden /> Donar
           </TrackedDonationLink>

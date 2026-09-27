@@ -1,0 +1,264 @@
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+.portal-card {
+  min-width: 0;
+  background: var(--paper-soft);
+  border: 1px solid #bcb7a6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.portal-card > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: var(--ink);
+}
+.portal-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8/5;
+  object-fit: cover;
+  display: block;
+}
+.portal-card-copy {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+.portal-card h3 {
+  font:
+    700 21px/1.25 Arial,
+    sans-serif;
+  margin: 0;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+}
+.portal-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink-soft);
+}
+.portal-kind {
+  font:
+    700 13px/1.4 Arial,
+    sans-serif;
+  color: var(--orange-dark);
+}
+.portal-read {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-weight: 700;
+  color: var(--forest);
+}
+.portal-card time {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.editorial-library-heading {
+  padding: 12px 0 20px;
+}
+.editorial-library-heading p {
+  margin-bottom: 0;
+}
+.editorial-library-heading h1 {
+  font-size: 36px;
+}
+.portal-tool-icon {
+  padding: 24px;
+  color: var(--forest);
+}
+.portal-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 28px 0 16px;
+}
+.portal-filters label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 700;
+  min-width: 0;
+}
+.portal-filters .portal-search {
+  flex: 1 1 300px;
+}
+.portal-search span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.portal-filters input,
+.portal-filters select {
+  width: 100%;
+  min-height: 48px;
+  background: var(--paper-soft);
+  color: var(--ink);
+  border: 1px solid #8b897c;
+  border-radius: 4px;
+  padding: 10px;
+  font:
+    400 16px Arial,
+    sans-serif;
+}
+.portal-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 32px 0;
+}
+.portal-pagination button {
+  padding: 12px 16px;
+  background: var(--forest);
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  min-height: 44px;
+}
+.portal-pagination button:disabled {
+  opacity: 0.45;
+}
+.portal-categories {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 40px;
+}
+.portal-categories a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--paper-soft);
+  border: 1px solid #bcb7a6;
+  border-radius: 6px;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--forest);
+  min-width: 0;
+}
+.portal-categories img {
+  width: 100%;
+  aspect-ratio: 2;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.portal-categories small {
+  font-size: 14px;
+}
+.portal-categories strong {
+  font-size: 19px;
+}
+.portal-app-notice {
+  padding: 20px;
+  border-left: 4px solid var(--orange);
+  background: var(--forest);
+  color: var(--paper-soft);
+  margin: 20px 0;
+}
+.portal-app-notice a {
+  color: inherit;
+}
+.portal-manual details {
+  border-bottom: 1px solid #bcb7a6;
+  padding: 18px 0;
+}
+.portal-manual summary {
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.portal-manual img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+.portal-header-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: inherit;
+}
+.portal-app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.portal-app-nav a {
+  padding: 12px;
+  border: 1px solid currentColor;
+  color: inherit;
+}
+.practical-introduction figure img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  aspect-ratio: 8/5;
+  object-fit: cover;
+}
+.footer-columns {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1050px) {
+  .portal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .portal-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .editorial-library-heading h1 {
+    font-size: 30px;
+  }
+  .portal-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portal-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portal-categories {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portal-pagination {
+    gap: 10px;
+    font-size: 14px;
+  }
+  .portal-card h3 {
+    font-size: 21px;
+  }
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+}
+.app-download-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px;max-width:100%}
+.app-download-actions>a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:14px 20px;border-radius:6px;text-decoration:none;font:700 16px/1.35 Arial,sans-serif;letter-spacing:0;max-width:100%;box-sizing:border-box;white-space:normal}
+.app-download-actions>.app-download-primary{background:#f97918;color:#171e12;border:2px solid #f97918;box-shadow:0 4px 0 #ad3c12}
+.app-download-primary span{display:grid;gap:4px;text-align:left;min-width:0}.app-download-primary svg{flex-shrink:0}.app-download-primary strong{font-size:17px}.app-download-primary small{font-size:13px;font-weight:400}
+.app-download-actions>.app-download-secondary{background:var(--paper-soft);color:var(--forest);border:1px solid #829077}
+.app-download-actions>.app-download-help{color:inherit;padding:8px 0;font-size:14px;text-decoration:underline;min-height:44px}
+.app-download-actions>.app-download-primary:hover{background:#ff9b43;border-color:#ff9b43}.app-download-actions>.app-download-secondary:hover{background:#e1e9d8}
+.app-download-actions>a:focus-visible{outline:3px solid #1482a3;outline-offset:4px}
+.editorial-app-cta>div{min-width:0;width:100%}
+@media(max-width:600px){.app-download-actions{flex-direction:column;align-items:stretch}.app-download-actions>.app-download-primary,.app-download-actions>.app-download-secondary{width:100%}.app-download-actions>.app-download-help{align-self:center}.editorial-app-cta{padding:22px 16px}}

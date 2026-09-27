@@ -106,6 +106,5 @@ export const navigation = [
   { label: "Comparativas", href: "/comparativas" },
   { label: "Herramientas", href: "/herramientas-supervivencia" },
   { label: "App", href: "/aplicacion-supervivencia-offline" },
-  { label: "Sobre nosotros", href: "/sobre-nosotros" },
   { label: "Donar", href: "/donaciones" },
 ];

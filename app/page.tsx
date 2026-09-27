@@ -6,13 +6,15 @@ import {
   Droplets,
   Backpack,
   Smartphone,
-  Download,
 } from "lucide-react";
 import { blogPosts, type BlogPost } from "@/content/blog";
 import { amazonSearchUrl } from "@/content/affiliate";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { pageMetadata } from "@/lib/seo";
 import { readingMinutes } from "@/lib/editorial";
+import { portalContent, contentKind } from "@/content/portal";
+import { ContentCard } from "@/components/ContentCatalog";
+import { AppDownloadActions } from "@/components/AppDownloadActions";
 
 export const metadata = pageMetadata({
   title: "Modo Crisis Survival | Supervivencia, guías y equipo",
@@ -60,12 +62,12 @@ function ArticleCard({ post }: { post: BlogPost }) {
         />
         <div className="journal-story-copy">
           <span className="journal-kicker">
-            {post.category} · {readingMinutes(post)} min
+            {contentKind(post.slug,post.category)} · {readingMinutes(post)} min
           </span>
           <h3>{post.title}</h3>
           <p>{post.excerpt}</p>
           <span className="journal-read">
-            Leer artículo <ArrowRight size={16} aria-hidden />
+            Leer contenido <ArrowRight size={16} aria-hidden />
           </span>
         </div>
       </Link>
@@ -118,17 +120,17 @@ export default function HomePage() {
         </Link>
       </div>
       <nav className="journal-topics" aria-label="Explorar por necesidad">
-        <Link href="/blog/como-prepararse-para-un-apagon">
-          <BookOpen aria-hidden /> Preparar tu hogar
+        <Link href="/guias-supervivencia">
+          <BookOpen aria-hidden /> Aprender: guías paso a paso
         </Link>
-        <Link href="/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad">
-          <Droplets aria-hidden /> Agua y suministros
+        <Link href="/checklists">
+          <Droplets aria-hidden /> Prepararte: listas y planificación
         </Link>
-        <Link href="/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026">
-          <Backpack aria-hidden /> Mochila y equipo
+        <Link href="/comparativas">
+          <Backpack aria-hidden /> Elegir equipo: comparativas
         </Link>
-        <Link href="/recursos-avanzados">
-          <Compass aria-hidden /> Orientación y recursos
+        <Link href="/herramientas-supervivencia">
+          <Compass aria-hidden /> Calcular: herramientas web
         </Link>
       </nav>
       <section className="journal-section" id="lecturas">
@@ -273,6 +275,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      <section className="journal-section"><div className="journal-heading"><h2>Últimos artículos</h2><Link href="/blog">Todos los artículos</Link></div><div className="portal-grid">{portalContent.filter(p=>p.kind==='Artículo').slice(0,3).map(item=><ContentCard key={item.href} item={item} />)}</div></section>
       <section className="journal-app">
         <div className="journal-section journal-app-inner">
           <img
@@ -292,14 +295,7 @@ export default function HomePage() {
               familiares. Prepara tus recursos antes de salir y consúltalos cuando no tengas
               Internet.
             </p>
-            <div className="journal-actions">
-              <Link className="journal-primary" href="/aplicacion-supervivencia-offline">
-                Conocer la aplicación <ArrowRight size={18} aria-hidden />
-              </Link>
-              <Link className="journal-light" href="/descargar">
-                <Download size={18} aria-hidden /> Descargar para Android
-              </Link>
-            </div>
+            <AppDownloadActions />
             <nav aria-label="Recursos de la aplicación">
               <Link href="/actualizaciones">Actualizaciones</Link>
               <Link href="/centro-descargas">Mapas y descargas</Link>

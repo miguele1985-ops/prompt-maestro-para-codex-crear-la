@@ -1,32 +1,25 @@
-import Link from 'next/link';
-import { blogPosts } from '@/content/blog';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { ResponsiveImage } from '@/components/ResponsiveImage';
-import { pageMetadata } from '@/lib/seo';
-import { readingMinutes } from '@/lib/editorial';
-
-export const metadata = pageMetadata({title:'Comparativas de equipo de supervivencia y emergencia',description:'Elige mochilas, radios, filtros de agua y baterías con criterios de capacidad, mantenimiento y límites. Comparativas documentales con fuentes.',slug:'comparativas'});
-export default function ComparativasPage() {
-  const posts = blogPosts.filter(post => post.category === 'Comparativas');
-  return <div className="editorial-library"><div className="journal-section">
-    <Breadcrumbs items={[{label:'Inicio',href:'/'},{label:'Comparativas',href:'/comparativas'}]} />
-    <header className="editorial-library-heading">
-      <p className="journal-kicker">Equipo que encaja con tu plan</p>
-      <h1>Compara antes de comprar</h1>
-      <p>Qué mirar, qué limitaciones importan y qué mantenimiento necesita cada equipo. Análisis documentales con fuentes, sin puntuaciones ni pruebas de uso inventadas.</p>
-    </header>
-    <div className="editorial-library-grid">{posts.map(post => <article key={post.slug}>
-      <Link href={`/blog/${post.slug}`}>
-        <ResponsiveImage src={post.image} alt={post.imageAlt} width={576} height={360} sizes="(max-width:700px) 90vw, 360px" loading="lazy" />
-        <div><span className="journal-kicker">Comparativa documental · {readingMinutes(post)} min</span>
-          <h2>{post.title}</h2><p>{post.excerpt}</p><span className="journal-read">Ver criterios y alternativas</span></div>
-      </Link>
-    </article>)}</div>
-    <section className="journal-editorial-method">
-      <h2>Cómo leer estas comparativas</h2>
-      <p>Las fotografías son ilustrativas y no demuestran que hayamos probado el producto. Contrasta la ficha del modelo exacto, los recambios y las condiciones del vendedor. Reutilizar material que ya tienes puede ser la opción más adecuada.</p>
-      <Link href="/sobre-nosotros">Criterio editorial</Link>
-      <p className="commercial-info"><Link href="/aviso-legal">Información comercial y aviso legal</Link></p>
-    </section>
-  </div></div>;
+import { PortalLibrary } from "@/components/PortalLibrary";
+import { portalContent } from "@/content/portal";
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata({
+  title: "Comparativas de equipo de supervivencia y emergencia",
+  description:
+    "Compara características, ventajas, limitaciones y criterios importantes antes de comprar.",
+  slug: "comparativas",
+});
+export default function ComparisonPage() {
+  return (
+    <PortalLibrary
+      title="Comparativas de equipo"
+      description="Compara características, ventajas, limitaciones y criterios importantes antes de comprar."
+      href="/comparativas"
+      items={portalContent.filter((p) => p.kind === "Comparativa")}
+    >
+      <p>
+        Análisis documentales, no pruebas propias de productos. Las imágenes son ilustrativas.
+        Revisa la ficha y los recambios del modelo exacto; reutilizar lo que ya tienes también es
+        una opción.
+      </p>
+    </PortalLibrary>
+  );
 }

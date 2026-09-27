@@ -3,34 +3,32 @@ import { siteConfig } from "@/content/site-config";
 
 const footerColumns = [
   {
-    title: "Funciones",
+    title: "Explorar",
     links: [
-      ["/funciones", "Funciones"],
+      ["/blog", "Artículos"],
       ["/guias-supervivencia", "Guías"],
       ["/herramientas-supervivencia", "Herramientas"],
-      ["/recursos-avanzados", "Recursos avanzados"],
       ["/comparativas", "Comparativas"],
-      ["/con-uso-de-internet", "Con uso de Internet"],
     ],
   },
   {
     title: "App",
     links: [
-      ["/aprendizaje-supervivencia", "Aprendizaje"],
-      ["/plantas-y-fauna", "Plantas y Fauna"],
-      ["/ia-enciclopedia", "IA y enciclopedia"],
+      ["/aplicacion-supervivencia-offline", "Conocer la app"],
       ["/centro-descargas", "Centro de descargas"],
       ["/descargar", "Descarga"],
-      ["/donaciones", "Donaciones"],
+      ["/preguntas-frecuentes", "Preguntas frecuentes"],
     ],
   },
   {
-    title: "Legal y contacto",
+    title: "Proyecto",
+    links: [["/sobre-nosotros", "Sobre nosotros"], ["/donaciones", "Donaciones"], ["/contacto", "Contacto"]],
+  },
+  {
+    title: "Legal",
     links: [
       ["/aviso-legal", "Aviso legal"],
-      ["/sobre-nosotros", "Sobre nosotros"],
       ["/privacidad", "Privacidad"],
-      ["/contacto", "Contacto"],
       ["/condiciones", "Condiciones"],
       ["/cookies", "Cookies"],
     ],
