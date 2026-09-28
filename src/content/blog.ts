@@ -9,6 +9,7 @@ import { preparednessScenarios } from "./preparedness-scenarios";
 import { outdoorArticles } from "./outdoor-articles";
 import { everydayArticles, everydayUpdates } from "./everyday-survival";
 import { calculatorWebNotes } from './calculator-web-notes';
+import articleCovers from './article-covers.json';
 
 export interface BlogSection {
   image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
@@ -1760,6 +1761,12 @@ for (const revision of everydayArticles.filter(post => everydayUpdates.has(post.
 for (const [slug, revision] of Object.entries(calculatorWebNotes)) {
   const post = blogPosts.find(p => p.slug === slug);
   if (post) Object.assign(post, revision, { updatedAt: '2026-09-28' });
+}
+
+// Final per-article selection takes precedence over legacy topic-based images.
+for (const post of blogPosts) {
+  const cover = articleCovers[post.slug as keyof typeof articleCovers];
+  if (cover) Object.assign(post, cover);
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

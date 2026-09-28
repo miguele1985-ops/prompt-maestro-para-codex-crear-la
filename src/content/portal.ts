@@ -109,6 +109,14 @@ export function portalTopic(slug: string): string {
   return "familia";
 }
 export function editorialCover(slug: string) {
+  const guide = practicalGuides.find(item => item.slug === slug);
+  if (guide) return { image: `/screenshots/app/${guide.image}.jpg`, alt: `Pantalla de la app: ${guide.title}.` };
+  const specific: Record<string, {image: string; alt: string}> = {
+    nudos: { image: '/images/blog/nudos-basicos-supervivencia-practica.jpg', alt: 'Cuerda preparada para practicar nudos sin carga. Imagen ilustrativa.' },
+    plantas: { image: '/screenshots/app/encyclopedia-plants-animals.jpg', alt: 'Biblioteca de plantas y animales de la app.' },
+    senales: { image: '/screenshots/app/advanced-hand-signals.jpg', alt: 'Guía de señales con las manos de la app.' },
+  };
+  if (specific[slug]) return specific[slug];
   const topic = portalTopics.find((t) => t[0] === portalTopic(slug))!;
   return {
     image: `/images/blog/${topic[3]}.jpg`,

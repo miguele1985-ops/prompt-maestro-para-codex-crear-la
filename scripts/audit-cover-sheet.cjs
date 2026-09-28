@@ -1,7 +1,7 @@
 const sharp=require('sharp'),fs=require('fs');
 (async()=>{
  const folder=process.argv[2]||'public/images/blog';
- const files=fs.readdirSync(folder).filter(f=>f.endsWith('.jpg')&&!f.startsWith('calculadora-')&&!f.startsWith('aportada-'));
+ const files=process.argv.includes('--assigned') ? Object.values(require('../src/content/article-covers.json')).map(c=>c.image.split('/').pop()) : fs.readdirSync(folder).filter(f=>f.endsWith('.jpg')&&!f.startsWith('calculadora-')&&!f.startsWith('aportada-'));
  const cells=[];
  for(let i=0;i<files.length;i++){
   const b=await sharp(folder+'/'+files[i]).resize(180,112,{fit:'contain',background:'#fff'}).toBuffer();

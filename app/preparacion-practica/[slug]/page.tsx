@@ -23,7 +23,7 @@ export default async function PracticalGuidePage({params}:{params:Promise<{slug:
     <SeoJsonLd data={{'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.summary,image:absoluteUrl(editorialCover(slug).image),mainEntityOfPage:absoluteUrl(`/preparacion-practica/${slug}`),author:{'@type':'Organization',name:'Modo Crisis Survival',url:absoluteUrl('/sobre-nosotros')}}} />
     <Breadcrumbs items={[{label:"Inicio",href:"/"},{label:"Guías",href:"/guias-supervivencia"},{label:"Preparación práctica",href:"/preparacion-practica"},{label:guide.title,href:`/preparacion-practica/${slug}`}]} />
     <header className="editorial-library-heading"><p className="journal-kicker">{guide.category}</p><h1>{guide.title}</h1><p>{guide.summary}</p></header>
-    <div className="practical-introduction"><p>{guide.introduction}</p><figure><ResponsiveImage src={editorialCover(slug).image} alt={editorialCover(slug).alt} width={576} height={360} sizes="(max-width:700px) 90vw, 360px" loading="eager" /><figcaption>Escena editorial ilustrativa.</figcaption></figure></div>
+    <div className="practical-introduction"><p>{guide.introduction}</p><figure><ResponsiveImage src={editorialCover(slug).image} alt={editorialCover(slug).alt} width={576} height={360} sizes="(max-width:700px) 90vw, 360px" loading="eager" /><figcaption>Captura del módulo correspondiente de Modo Crisis Survival.</figcaption></figure></div>
     <div className="editorial-prose">{guide.sections.map(section=><section key={section.title}><h2>{section.title}</h2><p>{section.text}</p></section>)}</div>
     <p className="field-safety">{guide.mistake}</p>
     <PracticeActions title={guide.title} tasks={guide.tasks} slug={slug} />

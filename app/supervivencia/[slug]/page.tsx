@@ -108,6 +108,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             fetchPriority="high"
           />
           <figcaption>
+            {post.slug === 'eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos' && <>Foto de archivo de 2017, no del eclipse de 2026: NASA/Aubrey Gemignani, dominio público. </>}
             Imagen ilustrativa. Consulta las fuentes del artículo para contrastar los datos; una
             imagen no permite identificar especies ni verificar un producto.
           </figcaption>
