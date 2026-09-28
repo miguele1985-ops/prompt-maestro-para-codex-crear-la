@@ -8,6 +8,7 @@ import { continuityArticles, continuityUpdates } from "./continuity-articles";
 import { preparednessScenarios } from "./preparedness-scenarios";
 import { outdoorArticles } from "./outdoor-articles";
 import { everydayArticles, everydayUpdates } from "./everyday-survival";
+import { calculatorWebNotes } from './calculator-web-notes';
 
 export interface BlogSection {
   image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
@@ -1754,6 +1755,11 @@ for (const revision of everydayArticles.filter(post => everydayUpdates.has(post.
   const existing = blogPosts.find(post => post.slug === revision.slug);
   if (!existing) throw new Error(`Missing article: ${revision.slug}`);
   Object.assign(existing, revision, { publishedAt: existing.publishedAt, date: existing.date, updatedAt: revision.publishedAt });
+}
+
+for (const [slug, revision] of Object.entries(calculatorWebNotes)) {
+  const post = blogPosts.find(p => p.slug === slug);
+  if (post) Object.assign(post, revision, { updatedAt: '2026-09-28' });
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

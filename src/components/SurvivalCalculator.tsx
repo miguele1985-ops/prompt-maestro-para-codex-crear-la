@@ -1,6 +1,8 @@
 "use client";
 import { useState, type FormEvent } from "react";
 import { Calculator, RotateCcw } from "lucide-react";
+import { ExtraSurvivalCalculator } from './ExtraSurvivalCalculator';
+import { extraCalculatorKinds } from '@/lib/extra-calculators';
 import {
   automaticSunset,
   daylight,
@@ -14,6 +16,7 @@ import {
 } from "@/lib/calculators";
 
 export const calculatorKinds: Record<string, string> = {
+  ...extraCalculatorKinds,
   "calculadora-captacion-lluvia-supervivencia": "rain",
   "calculadora-gestion-agua-supervivencia": "water",
   "calculadora-energia-powerbank-emergencia": "energy",
@@ -44,6 +47,7 @@ export function SurvivalCalculator({ slug }: { slug: string }) {
   const [mode, setMode] = useState("");
   const [result, setResult] = useState<string[]>([]);
   const [error, setError] = useState("");
+  if (extraCalculatorKinds[slug]) return <ExtraSurvivalCalculator kind={kind} />;
   if (!kind) return null;
   const options: Record<string, string> =
     kind === "rain"

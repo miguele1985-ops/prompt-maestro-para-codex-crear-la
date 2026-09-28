@@ -17,9 +17,9 @@ describe("Arquitectura del portal", () => {
   });
   it("solo publica calculadoras implementadas y listas reales", () => {
     expect(Object.keys(webCalculators).sort()).toEqual(Object.keys(calculatorKinds).sort());
-    expect(webTools).toHaveLength(9);
+    expect(webTools).toHaveLength(16);
     expect(webTools.find(p => p.href === "/codigo-morse")?.kind).toBe("Herramienta");
-    expect(contentKind("calculadora-cruce-rios-seguridad", "Calculadoras offline")).toBe("App");
+    expect(contentKind("calculadora-cruce-rios-seguridad", "Calculadoras offline")).toBe("Calculadora");
   });
   it("usa imágenes existentes y temas conocidos", () => {
     for (const item of portalContent) {

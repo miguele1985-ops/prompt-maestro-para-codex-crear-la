@@ -27,7 +27,7 @@ const assert = require('node:assert/strict');
           await page.getByRole('button',{name:'Mes siguiente',exact:true}).click();
           assert.equal(await page.locator('.lunar-days button').count(),31);
           await page.locator('.lunar-days button').nth(14).click();
-          assert((await page.locator('.lunar-tool [role="status"]').textContent()).includes('Día 15'));
+          assert((await page.locator('.lunar-detail time').textContent()).includes('15'));
           await page.locator('.site-page').evaluate(el=>el.scrollTo(0,0));
           await page.screenshot({path:`docs/lunar-${width}.png`});
         }

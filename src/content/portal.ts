@@ -21,6 +21,13 @@ export const webCalculators: Record<string, string> = {
   "calculadora-velocidad-necesaria-ruta": "Velocidad necesaria",
   "calculadora-sensacion-termica-frio-calor": "Sensación térmica",
   "calculadora-horas-luz-ruta": "Horas de luz",
+  "calculadora-potabilizacion-quimica-agua": "Potabilización química: pauta de etiqueta",
+  "calculadora-destilacion-solar-agua": "Destilación solar",
+  "calculadora-cruce-rios-seguridad": "Cruce de ríos: límites y corriente",
+  "calculadora-conversor-survival-unidades": "Conversor survival",
+  "calculadora-silbato-emergencia-senales": "Silbatos de emergencia",
+  "calculadora-senales-humo-supervivencia": "Señales de humo",
+  "calculadora-hipotermia-riesgo": "Hipotermia: signos observables",
 };
 const normalize = (s: string) =>
   s

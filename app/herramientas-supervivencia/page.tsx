@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Herramientas y calculadoras de supervivencia",
   description:
-    "Calculadoras web de agua, lluvia, energía, velocidad, sensación térmica y horas de luz. Listas de preparación descargables.",
+    "13 calculadoras y utilidades: agua, energía, rutas, conversión, señales y listas de observación. También calendario lunar y traductor Morse.",
   slug: "herramientas-supervivencia",
 });
 export default function ToolsPage() {
@@ -27,7 +27,7 @@ export default function ToolsPage() {
           </p>
         </header>
         <h2>Calculadoras de supervivencia</h2>
-        <div className="portal-grid">
+        <div className="portal-grid calculator-catalog">
           {webTools
             .filter((p) => p.kind === "Calculadora")
             .map((item) => (

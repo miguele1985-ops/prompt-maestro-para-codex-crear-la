@@ -111,7 +111,7 @@ export default function HomePage() {
           </div>
           <div className="journal-hero-app">
             <p>Guías y recursos también sin cobertura con nuestra aplicación para Android.</p>
-            <Link href="/aplicacion-supervivencia-offline">Conocer la app <ArrowRight size={16} aria-hidden /></Link>
+            <Link className="journal-app-button" href="/aplicacion-supervivencia-offline"><Smartphone size={18} aria-hidden /> Conocer la app <ArrowRight size={16} aria-hidden /></Link>
           </div>
         </div>
         <span className="journal-photo-credit">Imagen ilustrativa generada con IA</span>

@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { lunarMonth } from '@/lib/lunar';
+import { lunarMonth, nextLunarPhases } from '@/lib/lunar';
+import { MoonDisc } from './MoonDisc';
 export function LunarCalendar() {
   const [month, setMonth] = useState('');
   const [selected, setSelected] = useState(1);
@@ -17,6 +18,11 @@ export function LunarCalendar() {
     <div className="lunar-days">{['L','M','X','J','V','S','D'].map(d=><span key={d} aria-hidden>{d}</span>)}
       {days.map(d=><button type="button" key={d.day} style={d.day===1?{gridColumnStart:d.weekday+1}:undefined} aria-pressed={active?.day===d.day} aria-label={`${d.day}: ${d.phase}, ${d.illumination}% iluminada`} onClick={()=>setSelected(d.day)}><strong>{d.day}</strong><span>{d.illumination}%</span></button>)}
     </div>
-    <p role="status">{active ? `Día ${active.day}: ${active.phase}. Fracción iluminada: ${active.illumination}%.` : 'Preparando calendario…'}</p>
+    {active ? <div className="lunar-detail" aria-live="polite">
+      <div className="lunar-phase-heading"><MoonDisc fraction={active.fraction} waning={active.phaseValue > .5} label={`Luna ${active.phase.toLowerCase()}, ${active.illumination}% iluminada`} /><div><time dateTime={active.date}>{new Date(active.date).toLocaleDateString('es-ES', {dateStyle:'long',timeZone:'UTC'})}</time><h2>Luna {active.phase.toLowerCase()}</h2><p>{active.phaseValue < .5 ? 'En fase creciente' : 'En fase menguante'}</p></div></div>
+      <dl className="lunar-facts"><div><dt>Iluminación</dt><dd>{active.illumination}%</dd></div><div><dt>Edad lunar aproximada</dt><dd>{active.age.toFixed(1).replace('.',',')} días</dd></div></dl>
+      <div className="lunar-next">{nextLunarPhases(active.date).map(p=><div key={p.name}><h3>Próxima {p.name.toLowerCase()}</h3><strong>En unos {p.days} días</strong><p>{new Date(p.date).toLocaleDateString('es-ES',{day:'numeric',month:'long',timeZone:'UTC'})}</p></div>)}</div>
+      <p className="lunar-caveat">Esquema orientado al hemisferio norte, no una fotografía. Datos aproximados a las 12:00 UTC. No indican horas de luz nocturna ni salida de la Luna: dependen del lugar, el horizonte y el tiempo.</p>
+    </div> : <p role="status">Preparando calendario…</p>}
   </section>;
 }

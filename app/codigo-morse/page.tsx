@@ -8,6 +8,7 @@ export default function MorsePage() {
     <Breadcrumbs items={[{label: "Inicio", href: "/"}, {label: "Herramientas", href: "/herramientas-supervivencia"}, {label: "Código Morse", href: "/codigo-morse"}]} />
     <header className="editorial-library-heading"><h1>Código Morse</h1><p>Puntos, rayas y mensajes para practicar la comunicación.</p></header>
     <MorseTranslator />
+    <figure className="morse-reference"><a href="/images/morse-app.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar lámina Morse de la app"><img src="/images/morse-app.png" width={1448} height={1086} alt="Lámina de letras y números en Morse procedente de la app" loading="lazy" /></a><figcaption>Lámina de la app. Está incompleta: falta la W (.--). Para consultar el alfabeto completo utiliza la tabla del traductor.</figcaption></figure>
     <section className="morse-notes"><h2>Aprender el ritmo</h2><p>Una raya dura tres puntos. La separación dentro de una letra dura un punto; entre letras, tres; entre palabras, siete. En la escritura usamos espacios entre letras y / entre palabras.</p>
       <h2>Práctica en pareja</h2><p>Empieza con tres letras y acuerda el mensaje con otra persona. Alternad quién escribe y quién interpreta. Comprueba el resultado antes de aumentar la longitud. Las letras acentuadas, la ñ y la puntuación no se convierten en esta versión.</p>
       <h2>No es una llamada de emergencia</h2><p>Este traductor no transmite mensajes, no emite alertas y no contacta con rescate. No hagas pruebas de socorro que puedan confundirse con una emergencia real.</p>

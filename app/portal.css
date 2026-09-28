@@ -292,6 +292,10 @@
 .journal-hero-app { margin-top: 18px; max-width: 525px; }
 .journal-cover .journal-hero-app p { font-size: 13px; line-height: 1.45; margin: 0; color: #edf2ec; }
 .journal-hero-app a { color: #edf2ec; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
+.journal-hero-app .journal-app-button { min-height: 44px; margin-top: 8px; padding: 8px 14px; border: 2px solid #ffad66; border-radius: 6px; background: #17291c; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; max-width: 100%; }
+.journal-hero-app .journal-app-button:hover { background: #29412c; border-color: #ffd0a6; }
+.journal-hero-app .journal-app-button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.journal-app-button svg { flex-shrink: 0; }
 .journal-explore-all { background: var(--forest); padding: 0 24px 16px; text-align: center; }
 .journal-explore-all a { color: #ffd099; font-size: 13px; display: inline-flex; gap: 8px; align-items: center; min-height: 32px; text-decoration: underline; text-underline-offset: 4px; }
 .cookie-banner, .cookie-dock-closed { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; box-sizing: border-box; z-index: 100; border-radius: 0; background: #182315; color: #f7f2e6; border: 0; border-top: 1px solid #899779; padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); }
@@ -329,7 +333,7 @@
 .article-app-reference img { display: block; width: 100%; height: auto; object-fit: contain; }
 .article-app-reference figcaption { font-size: 12px; margin-top: 8px; }
 .lunar-tool { max-width: 700px; margin: 24px auto; background: #1e2a18; color: #f7f2e6; padding: 16px; border-radius: 6px; }
-.lunar-toolbar { display: flex; align-items: end; gap: 12px; justify-content: space-between; margin-bottom: 20px; }
+.lunar-toolbar { display: flex; align-items: flex-end; gap: 12px; justify-content: space-between; margin-bottom: 20px; }
 .lunar-toolbar label { display: grid; gap: 6px; min-width: 0; }
 .lunar-toolbar input { max-width: 100%; min-width: 0; width: 180px; background: #f7f2e6; color: #201c15; font: inherit; padding: 8px; }
 .lunar-tool button { min-height: 44px; border: 1px solid #819174; background: #30402a; color: #fff; border-radius: 4px; cursor: pointer; }
@@ -340,6 +344,30 @@
 .lunar-days button span { font-size: 11px; color: #f7f2e6; }
 .lunar-days button[aria-pressed="true"] { background: #a83610; border-color: #ffd099; }
 .lunar-tool p { color: #f7f2e6; }
+.lunar-detail { margin-top: 24px; border-top: 1px solid #819174; padding-top: 24px; }
+.lunar-phase-heading { display: flex; align-items: center; gap: 20px; }
+.moon-disc { width: 112px; height: 112px; flex: 0 0 112px; border-radius: 50%; border: 1px solid #8c9c86; }
+.lunar-phase-heading h2 { color: #fff; font-size: 24px; margin: 8px 0; }
+.lunar-phase-heading time { font-size: 14px; }
+.lunar-facts, .lunar-next { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 24px 0; }
+.lunar-facts dd { margin: 6px 0 0; color: #ffd099; font-size: 24px; font-weight: 700; }
+.lunar-facts dt { color: #edf2ec; }
+.lunar-next > div { border-top: 1px solid #819174; padding-top: 12px; }
+.lunar-next h3 { font-size: 16px; color: #fff; }
+.lunar-caveat { font-size: 13px; }
+.morse-reference { margin: 28px 0; }
+.morse-reference img { display: block; width: 100%; max-width: 1000px; height: auto; }
+.morse-reference figcaption { margin-top: 10px; font-size: 14px; }
+.extra-tool .tool-check { display: flex; align-items: flex-start; gap: 12px; margin: 16px 0; }
+.extra-tool .tool-check input { width: 22px; height: 22px; min-height: 22px; flex: 0 0 22px; margin: 0; }
+.extra-tool select { max-width: 100%; }
+.pulse-output { display: block; min-height: 56px; font-size: 24px; letter-spacing: 0; overflow-wrap: anywhere; padding: 12px 0; }
+.smoke-practice { display: flex; align-items: center; justify-content: space-evenly; gap: 8px; min-height: 160px; background: #132218; color: #e6e8e4; margin: 20px 0; border-radius: 6px; overflow: hidden; }
+.smoke-practice svg { width: 18%; max-width: 64px; }
+.calculator-catalog { grid-template-columns: repeat(2,minmax(0,1fr)); }
+@media(min-width:1050px) { .calculator-catalog { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:600px) { .calculator-catalog .portal-card-copy { padding: 12px; } .calculator-catalog h3 { font-size: 17px; overflow-wrap: anywhere; } .calculator-catalog p { font-size: 13px; } .calculator-catalog .portal-tool-icon { padding: 14px; } }
+@media(max-width:400px) { .lunar-phase-heading { gap: 12px; } .moon-disc { width: 88px; height: 88px; flex-basis: 88px; } .lunar-phase-heading h2 { font-size: 20px; } }
 @media(max-width:400px) { .lunar-tool { padding: 10px; } .lunar-days { gap: 3px; } .lunar-toolbar { gap: 6px; } }
 .article-field-reference { margin: 24px 0; width: 100%; }
 .article-field-reference img { width: 100%; height: auto; display: block; object-fit: contain; }
