@@ -29,14 +29,14 @@ describe("editorial migration", () => {
       expect(revision.keys).toHaveLength(3);
       expect(blogPosts.some((p) => p.slug === revision.next)).toBe(true);
       const post = blogPosts.find((p) => p.slug === slug)!;
-      expect(post.updatedAt).toBe("2026-09-26");
+      expect(post.updatedAt).toBe(['objetos-de-casa-que-pueden-ayudarte-en-una-emergencia', '5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro'].includes(slug) ? "2026-09-28" : "2026-09-26");
       expect(existsSync(`public${post.image}`)).toBe(true);
       for (const width of [240, 360, 576, 960, 1200]) expect(existsSync(`public${post.image.replace('.jpg', `-${width}.webp`)}`)).toBe(true);
     }
   });
   it("prioritizes explicit related articles without mutating the library", () => {
     const base = blogPosts[0];
-    const current = { ...base, slug: "test-current", relatedLinks: [{ label: "Elegido", href: "/blog/test-explicit" }] };
+    const current = { ...base, slug: "test-current", relatedLinks: [{ label: "Elegido", href: "/supervivencia/test-explicit" }] };
     const candidates = [current, { ...base, slug: "test-other" }, { ...base, slug: "test-explicit" }];
     const order = candidates.map((post) => post.slug);
     expect(relatedArticles(current, candidates)[0].slug).toBe("test-explicit");
@@ -74,7 +74,7 @@ describe("editorial migration", () => {
         displayEnabled: false,
       });
     expect(
-      monetizationPolicy("/blog/mejores-mochilas-de-emergencia-72h-en-espana-2026").affiliate,
+      monetizationPolicy("/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026").affiliate,
     ).toBe(true);
   });
 });

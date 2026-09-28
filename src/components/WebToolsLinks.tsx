@@ -12,7 +12,7 @@ export function WebToolsLinks() {
           ["calculadora-gestion-agua-supervivencia", "Reserva de agua"],
           ["calculadora-energia-powerbank-emergencia", "Autonomía de energía"],
         ].map(([slug, title]) => (
-          <Link key={slug} href={`/blog/${slug}#calculadora`}>
+          <Link key={slug} href={`/supervivencia/${slug}#calculadora`}>
             {title}
           </Link>
         ))}

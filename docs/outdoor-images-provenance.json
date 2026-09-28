@@ -1,0 +1,18 @@
+[
+  {
+    "source": "C:/Users/Valeria/.codex/generated_images/01a035c4-c371-7aa1-ba2b-b2bfc2041af3/exec-dba79b00-b99f-4d79-b2c2-7d60a4df3f19.png",
+    "destination": "public/images/blog/caza-observacion-editorial.jpg"
+  },
+  {
+    "source": "C:/Users/Valeria/.codex/generated_images/01a035c4-c371-7aa1-ba2b-b2bfc2041af3/exec-c609c845-4f72-440a-9e4b-abaca8e6ad17.png",
+    "destination": "public/images/blog/pesca-ribera-editorial.jpg"
+  },
+  {
+    "source": "C:/Users/Valeria/Documents/Codex/SV/mobile/assets/hunting-tracks-ai/jabali-1.png",
+    "destination": "public/images/blog/lamina-huella-jabali-app.jpg"
+  },
+  {
+    "source": "C:/Users/Valeria/Documents/Codex/SV/mobile/assets/images/fishing-species/peces-espana-1.jpg",
+    "destination": "public/images/blog/lamina-peces-espana-app.jpg"
+  }
+]

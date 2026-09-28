@@ -687,7 +687,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
               <h2>Articulos del blog</h2>
               <p>Contenido practico para ampliar las guias de supervivencia y aprender a usar mejor las funciones de la app.</p>
               {orderedBlogPosts.map((article) => (
-                <Link href={`/blog/${article.slug}`} key={article.slug}>
+                <Link href={`/supervivencia/${article.slug}`} key={article.slug}>
                   <span>{article.category}</span>
                   <strong>{article.title}</strong>
                 </Link>

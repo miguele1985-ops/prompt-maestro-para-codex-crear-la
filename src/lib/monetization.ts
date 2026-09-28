@@ -7,8 +7,8 @@ export function monetizationPolicy(path: string) {
     ) || critical.test(path);
   return {
     // A single preparatory block after the article, never inside urgent instructions or tool results.
-    affiliate: /^\/(?:blog|preparacion-practica)\/[^/]+$/.test(path),
-    displayEligible: !excluded && path.startsWith("/blog/"),
+    affiliate: /^\/(?:supervivencia|preparacion-practica)\/[^/]+$/.test(path),
+    displayEligible: !excluded && path.startsWith("/supervivencia/"),
     displayEnabled: false,
   };
 }

@@ -5,7 +5,8 @@ const footerColumns = [
   {
     title: "Explorar",
     links: [
-      ["/blog", "Artículos"],
+      ["/temas", "Todos los temas"],
+      ["/supervivencia", "Artículos"],
       ["/guias-supervivencia", "Guías"],
       ["/herramientas-supervivencia", "Herramientas"],
       ["/comparativas", "Comparativas"],

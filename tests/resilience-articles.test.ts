@@ -7,7 +7,7 @@ import { contentKind } from "../src/content/portal";
 describe("Resilience article batch", () => {
   it("updates the existing blackout guide and adds four unique articles", () => {
     expect(resilienceArticles).toHaveLength(5);
-    expect(blogPosts).toHaveLength(93);
+    expect(blogPosts).toHaveLength(98);
     expect(getBlogPost("apagon-total-72-horas-sin-luz-internet")).toBeUndefined();
     for (const entry of resilienceArticles) {
       const matches = blogPosts.filter((p) => p.slug === entry.slug);
@@ -20,7 +20,7 @@ describe("Resilience article batch", () => {
       for (const width of [360, 576, 960, 1200])
         expect(existsSync(`public${post.image.replace(".jpg", `-${width}.webp`)}`)).toBe(true);
       for (const link of post.relatedLinks || [])
-        if (link.href.startsWith("/blog/")) expect(getBlogPost(link.href.slice(6))).toBeDefined();
+        if (link.href.startsWith("/supervivencia/")) expect(getBlogPost(link.href.slice('/supervivencia/'.length))).toBeDefined();
     }
     for (const entry of resilienceArticles.slice(1))
       expect(contentKind(entry.slug, entry.category)).toBe("Artículo");

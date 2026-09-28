@@ -2,7 +2,7 @@ const fs=require('node:fs');
 const {chromium}=require('playwright');
 (async()=>{
   const origin=process.argv[2]||'http://localhost:3001';
-  const redirects=JSON.parse(fs.readFileSync('.next/routes-manifest.json','utf8')).redirects.filter(item=>item.source.startsWith('/blog/'));
+  const redirects=JSON.parse(fs.readFileSync('.next/routes-manifest.json','utf8')).redirects.filter(item=>item.source.startsWith('/supervivencia/'));
   if(redirects.length!==5)throw Error('Missing redirects');
   const browser=await chromium.launch({channel:'msedge',headless:true});
   try{

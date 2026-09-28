@@ -15,7 +15,7 @@ const assert = require('node:assert/strict');
       assert.equal(await page.locator('.morse-output').textContent(), 'HOLA');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await page.screenshot({ path: `docs/morse-${width}.png`, fullPage: true });
-      await page.goto(`${process.argv[2]}/blog/como-guardar-agua-emergencias`);
+      await page.goto(`${process.argv[2]}/supervivencia/como-guardar-agua-emergencias`);
       await page.locator('img[src*="aportada-"]').first().scrollIntoViewIfNeeded();
       await page.waitForFunction(() => [...document.querySelectorAll('img[src*="aportada-"]')].every(img => img.complete && img.naturalWidth > 0));
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

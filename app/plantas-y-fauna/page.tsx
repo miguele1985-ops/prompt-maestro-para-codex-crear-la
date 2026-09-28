@@ -17,9 +17,9 @@ export default function NaturePage() {
       <div><p className="journal-kicker">Observación, no recolección</p><h2>{plant.name}</h2><p><em>{plant.scientificName}</em></p><h3>Qué observar</h3><p>{plant.observation}</p><h3>Límites de esta ficha</h3><p>{plant.limit}</p><h3>Ejercicio de campo</h3><p>{plant.exercise}</p><a href={plant.source} target="_blank" rel="noopener noreferrer">{plant.sourceLabel}</a><p className="app-media-credit">Imagen incluida en la aplicación y facilitada para esta web. La fuente botánica enlazada no certifica la identidad de esta imagen.</p></div>
     </section>)}
     <section className="guide-topic"><h2>Antes de acercarte, recolectar o consumir</h2><ul>
-      <li><Link href="/blog/plantas-comestibles-y-peligrosas-que-se-pueden-confundir">Plantas que pueden confundirse</Link><p>Por qué un parecido no resuelve una identificación.</p></li>
-      <li><Link href="/blog/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas">Setas: descarta las falsas reglas</Link><p>Los límites de fotografías y aplicaciones.</p></li>
-      <li><Link href="/blog/animales-venenosos-de-espana-cuales-hay-y-que-hacer">Fauna: distancia y prevención</Link><p>No captures un animal para identificarlo.</p></li>
+      <li><Link href="/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir">Plantas que pueden confundirse</Link><p>Por qué un parecido no resuelve una identificación.</p></li>
+      <li><Link href="/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas">Setas: descarta las falsas reglas</Link><p>Los límites de fotografías y aplicaciones.</p></li>
+      <li><Link href="/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer">Fauna: distancia y prevención</Link><p>No captures un animal para identificarlo.</p></li>
       <li><Link href="/nudos">Catálogo de nudos útiles</Link><p>Otra forma de aprender del material de la app.</p></li>
     </ul></section>
     <p><Link href="/aplicacion-supervivencia-offline">Conoce las funciones de consulta offline de Modo Crisis Survival</Link></p>

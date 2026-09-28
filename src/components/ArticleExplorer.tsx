@@ -63,7 +63,7 @@ export function ArticleExplorer({
       <div className="editorial-library-grid">
         {visible.map((post) => (
           <article key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/supervivencia/${post.slug}`}>
               <ResponsiveImage
                 src={post.image}
                 alt={post.imageAlt}

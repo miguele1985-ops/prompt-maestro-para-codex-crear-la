@@ -19,6 +19,10 @@ const options = {
 } satisfies Record<string,EquipmentOption>;
 
 export function equipmentForArticle(slug:string):EquipmentOption[] {
+  if(/psicologia-emergencia|mitos-de-supervivencia/.test(slug))return [options.notebook,options.folder];
+  if(/que-hacer-si-te-pierdes/.test(slug))return [options.light,options.power];
+  if(/sin-mochila-sin-equipo/.test(slug))return [options.notebook,options.power];
+  if(/caza|pesca/.test(slug))return [options.notebook,options.pouches];
   if(/tormenta-solar/.test(slug))return [options.radio,options.power];
   if(/confinamiento-emergencia/.test(slug))return [options.radio,options.light];
   if(/medicamentos-tratamientos/.test(slug))return [options.firstaid,options.folder];

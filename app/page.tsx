@@ -51,7 +51,7 @@ function posts(slugs: string[]) {
 function ArticleCard({ post }: { post: BlogPost }) {
   return (
     <article className="journal-story">
-      <Link href={`/blog/${post.slug}`}>
+      <Link href={`/supervivencia/${post.slug}`}>
         <ResponsiveImage
           src={post.image}
           alt={post.imageAlt}
@@ -105,20 +105,17 @@ export default function HomePage() {
             <Link className="journal-primary" href="#lecturas">
               <BookOpen size={18} aria-hidden /> Por dónde empezar
             </Link>
-            <Link className="journal-light" href="/comparativas">
+            <Link className="journal-secondary-link" href="/comparativas">
               Elegir equipo <ArrowRight size={18} aria-hidden />
             </Link>
+          </div>
+          <div className="journal-hero-app">
+            <p>Guías y recursos también sin cobertura con nuestra aplicación para Android.</p>
+            <Link href="/aplicacion-supervivencia-offline">Conocer la app <ArrowRight size={16} aria-hidden /></Link>
           </div>
         </div>
         <span className="journal-photo-credit">Imagen ilustrativa generada con IA</span>
       </section>
-      <div className="journal-app-strip">
-        <Smartphone size={20} aria-hidden />
-        <p>Guías y recursos también sin cobertura con nuestra aplicación para Android.</p>
-        <Link href="/aplicacion-supervivencia-offline">
-          Conocer la app <ArrowRight size={16} aria-hidden />
-        </Link>
-      </div>
       <nav className="journal-topics" aria-label="Explorar por necesidad">
         <Link href="/guias-supervivencia">
           <BookOpen aria-hidden /> Aprender: guías paso a paso
@@ -133,13 +130,14 @@ export default function HomePage() {
           <Compass aria-hidden /> Calcular: herramientas web
         </Link>
       </nav>
+      <div className="journal-explore-all"><Link href="/temas">Explorar todas las guías y herramientas <ArrowRight size={16} aria-hidden /></Link></div>
       <section className="journal-section" id="lecturas">
         <div className="journal-heading">
           <div>
             <p className="journal-kicker">Empieza por lo importante</p>
             <h2>¿Qué podrías dejar resuelto hoy?</h2>
           </div>
-          <Link href="/blog">
+          <Link href="/supervivencia">
             Todos los artículos <ArrowRight size={18} aria-hidden />
           </Link>
         </div>
@@ -151,12 +149,12 @@ export default function HomePage() {
       </section>
       <section className="journal-paths-band" aria-labelledby="reading-paths-heading">
         <div className="journal-section">
-          <div className="journal-heading"><div><p className="journal-kicker">Una lectura lleva a la siguiente</p><h2 id="reading-paths-heading">Elige tu punto de partida</h2></div><Link href="/blog">Explorar las 30 guías y más <ArrowRight size={18} aria-hidden /></Link></div>
+          <div className="journal-heading"><div><p className="journal-kicker">Una lectura lleva a la siguiente</p><h2 id="reading-paths-heading">Elige tu punto de partida</h2></div><Link href="/supervivencia">Explorar las 30 guías y más <ArrowRight size={18} aria-hidden /></Link></div>
           <div className="journal-paths">
             {readingPaths.map((path) => <article key={path.title}>
               <ResponsiveImage src={`/images/blog/${path.image}.jpg`} alt={`${path.title}. Escena ilustrativa generada con IA.`} width={576} height={384} loading="lazy" sizes="(max-width:700px) 90vw, 380px" />
               <h3>{path.title}</h3><p>{path.description}</p>
-              <ol>{posts(path.slugs).map((post) => <li key={post.slug}><Link href={`/blog/${post.slug}`}><span>{post.title}</span><ArrowRight size={17} aria-hidden /></Link></li>)}</ol>
+              <ol>{posts(path.slugs).map((post) => <li key={post.slug}><Link href={`/supervivencia/${post.slug}`}><span>{post.title}</span><ArrowRight size={17} aria-hidden /></Link></li>)}</ol>
             </article>)}
           </div>
         </div>
@@ -175,14 +173,14 @@ export default function HomePage() {
           <Link href="/plantas-y-fauna">Observa las plantas con imágenes de la app <ArrowRight size={18} aria-hidden /></Link>
           {[
             [
-              "/blog/calculadora-gestion-agua-supervivencia#calculadora",
+              "/supervivencia/calculadora-gestion-agua-supervivencia#calculadora",
               "¿Cuánto dura tu reserva de agua?",
             ],
             [
-              "/blog/calculadora-captacion-lluvia-supervivencia#calculadora",
+              "/supervivencia/calculadora-captacion-lluvia-supervivencia#calculadora",
               "Calcula la captación de lluvia",
             ],
-            ["/blog/calculadora-horas-luz-ruta#calculadora", "Consulta cuánta luz te queda"],
+            ["/supervivencia/calculadora-horas-luz-ruta#calculadora", "Consulta cuánta luz te queda"],
             ["/checklists", "Prepara tu lista familiar"],
           ].map(([href, title]) => (
             <Link href={href} key={href}>
@@ -240,7 +238,7 @@ export default function HomePage() {
                 />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <Link href={`/blog/${item.slug}`}>
+                <Link href={`/supervivencia/${item.slug}`}>
                   Leer la comparativa <ArrowRight size={16} aria-hidden />
                 </Link>
                 <a
@@ -275,7 +273,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="journal-section"><div className="journal-heading"><h2>Últimos artículos</h2><Link href="/blog">Todos los artículos</Link></div><div className="portal-grid">{portalContent.filter(p=>p.kind==='Artículo').slice(0,3).map(item=><ContentCard key={item.href} item={item} />)}</div></section>
+      <section className="journal-section"><div className="journal-heading"><h2>Últimos artículos</h2><Link href="/supervivencia">Todos los artículos</Link></div><div className="portal-grid">{portalContent.filter(p=>p.kind==='Artículo').slice(0,3).map(item=><ContentCard key={item.href} item={item} />)}</div></section>
       <section className="journal-app">
         <div className="journal-section journal-app-inner">
           <img

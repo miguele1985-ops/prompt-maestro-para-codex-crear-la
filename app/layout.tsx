@@ -47,10 +47,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
+        <div className="site-page">
         <a className="skip-link" href="#main">Saltar al contenido</a>
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        </div>
         <CookieBanner />
         <StatsTracker />
         <SeoJsonLd data={[organizationJsonLd(), websiteJsonLd()]} />

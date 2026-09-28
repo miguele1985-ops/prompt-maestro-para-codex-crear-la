@@ -9,13 +9,13 @@ const fs = require('node:fs');
     const results = [];
     for (const width of [320,390,768,1440]) {
       await page.setViewportSize({width,height:900});
-      for (const route of ['/', '/blog','/comparativas','/nudos','/plantas-y-fauna','/senales-en-grupo','/checklists']) {
+      for (const route of ['/', '/supervivencia','/comparativas','/nudos','/plantas-y-fauna','/senales-en-grupo','/checklists']) {
         await page.goto(origin+route,{waitUntil:'networkidle'});
         await page.evaluate(async () => {for (const img of document.images) img.loading='eager'; await Promise.all([...document.images].map(img=>img.decode().catch(()=>{})));});
         const result = await page.evaluate(() => ({overflow:document.documentElement.scrollWidth>innerWidth,broken:[...document.images].filter(img=>!img.naturalWidth).length}));
         results.push({route,width,...result});
         if(result.overflow || result.broken) throw Error(JSON.stringify(results.at(-1)));
-        if(width===390 && ['/','/blog','/checklists'].includes(route)) await page.screenshot({path:`public/revision-${route==='/'?'inicio':route.slice(1)}-movil.png`,fullPage:true});
+        if(width===390 && ['/','/supervivencia','/checklists'].includes(route)) await page.screenshot({path:`public/revision-${route==='/'?'inicio':route.slice(1)}-movil.png`,fullPage:true});
       }
     }
     const select = page.getByLabel('Lista de preparación');

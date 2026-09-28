@@ -13,11 +13,11 @@ describe("Arquitectura del portal", () => {
   it("conserva todos los destinos de artículos sin duplicarlos", () => {
     expect(new Set(portalContent.map((p) => p.href)).size).toBe(portalContent.length);
     for (const post of blogPosts)
-      expect(portalContent.some((p) => p.href === `/blog/${post.slug}`)).toBe(true);
+      expect(portalContent.some((p) => p.href === `/supervivencia/${post.slug}`)).toBe(true);
   });
   it("solo publica calculadoras implementadas y listas reales", () => {
     expect(Object.keys(webCalculators).sort()).toEqual(Object.keys(calculatorKinds).sort());
-    expect(webTools).toHaveLength(8);
+    expect(webTools).toHaveLength(9);
     expect(webTools.find(p => p.href === "/codigo-morse")?.kind).toBe("Herramienta");
     expect(contentKind("calculadora-cruce-rios-seguridad", "Calculadoras offline")).toBe("App");
   });

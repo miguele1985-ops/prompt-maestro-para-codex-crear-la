@@ -55,8 +55,8 @@ export function Header() {
       <nav className="desktop-nav" aria-label="Navegación principal">
         {navLinks}
       </nav>
+      <Link href="/buscar" className="portal-header-search" aria-label="Buscar en la web" title="Buscar" onClick={() => setOpen(false)}><Search size={20} aria-hidden /></Link>
       <div className="header-actions">
-        <Link href="/buscar" className="portal-header-search" aria-label="Buscar en la web" title="Buscar"><Search size={20} aria-hidden /></Link>
         <TrackedDonationLink className="header-donate" href="/donaciones">
           <HeartHandshake size={16} aria-hidden /> Donar
         </TrackedDonationLink>

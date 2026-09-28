@@ -8,6 +8,7 @@ import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPost } from "@/content/blog";
 import { batchTwoRevisions } from "@/content/batch-two";
+import { everydayUpdates } from "@/content/everyday-survival";
 import originals from "@/content/editorial-articles.json";
 import { articleIndex, articleTopic, readingMinutes, relatedArticles } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
@@ -32,7 +33,7 @@ export async function generateMetadata({
   const metadata = pageMetadata({
     title: post.seoTitle || post.title,
     description: post.excerpt,
-    slug: `blog/${post.slug}`,
+    slug: `supervivencia/${post.slug}`,
     keywords: post.keywords,
     image: post.image,
     imageAlt: post.imageAlt,
@@ -50,7 +51,7 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const post = getBlogPost((await params).slug);
   if (!post) notFound();
-  const revised = Boolean(batchTwoRevisions[post.slug]);
+  const revised = Boolean(batchTwoRevisions[post.slug]) || everydayUpdates.has(post.slug);
   const original = revised ? undefined : (originals as Record<string, string>)[post.slug];
   const info = revised ? undefined : articleIndex[post.slug];
   const sections = original
@@ -60,7 +61,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const related = relatedArticles(post, blogPosts);
   const sources = post.sources ?? info?.sources ?? [];
   const kind=contentKind(post.slug,post.category);
-  const parent=kind==='Comparativa'?{label:'Comparativas',href:'/comparativas'}:kind==='Calculadora'?{label:'Herramientas',href:'/herramientas-supervivencia'}:kind==='App'?{label:'App',href:'/aplicacion-supervivencia-offline'}:kind==='Guía'?{label:'Guías',href:'/guias-supervivencia'}:{label:'Artículos',href:'/blog'};
+  const parent=kind==='Comparativa'?{label:'Comparativas',href:'/comparativas'}:kind==='Calculadora'?{label:'Herramientas',href:'/herramientas-supervivencia'}:kind==='App'?{label:'App',href:'/aplicacion-supervivencia-offline'}:kind==='Guía'?{label:'Guías',href:'/guias-supervivencia'}:{label:'Artículos',href:'/supervivencia'};
   const topic=portalTopics.find(t=>t[0]===portalTopic(post.slug))!;
   const cover=post.image.startsWith('/screenshots/')&&kind!=='App'?editorialCover(post.slug):{image:post.image,alt:post.imageAlt};
   return (
@@ -71,7 +72,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             { label: "Inicio", href: "/" },
             parent,
             ...(kind==='Guía'?[{label:topic[1],href:`/guias-supervivencia/${topic[0]}`}]:[]),
-            { label: post.title, href: `/blog/${post.slug}` },
+            { label: post.title, href: `/supervivencia/${post.slug}` },
           ]}
         />
         <header className="editorial-article-heading">
@@ -125,7 +126,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 ))}
               </ol>
             </details>
-            <Link href="/blog">
+            <Link href="/supervivencia">
               Explorar la biblioteca <ArrowRight size={16} aria-hidden />
             </Link>
           </aside>
@@ -147,6 +148,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 >
                    <h2>{section.heading === "Transparencia comercial" ? "Consultar en Amazon" : section.heading}</h2>
                   {section.heading !== "Transparencia comercial" ? <p>{section.body}</p> : null}
+                  {section.image ? <figure className={section.image.fullWidth ? "article-field-reference" : "article-app-reference"}>
+                    <a href={section.image.src} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar: ${section.image.alt}`}><ResponsiveImage src={section.image.src} alt={section.image.alt} width={section.image.fullWidth ? 1200 : 360} height={section.image.fullWidth ? 900 : 720} loading="lazy" widths={section.image.fullWidth ? [360,576,960,1200] : undefined} sizes={section.image.fullWidth ? "(max-width:760px) 90vw, 760px" : "(max-width:400px) 85vw, 320px"} /></a>
+                    <figcaption>{section.image.caption || 'Captura de la aplicación Modo Crisis Survival.'}</figcaption>
+                  </figure> : null}
                   {section.bullets ? (
                     <ul>
                       {section.bullets.map((item) => (
@@ -220,7 +225,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               )}
               <Link href="/sobre-nosotros">Cómo trabajamos y cómo se financia la web</Link>
             </section>
-            {monetizationPolicy(`/blog/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
+            {monetizationPolicy(`/supervivencia/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
             <section className="editorial-app-cta">
               <Smartphone size={26} aria-hidden />
               <div>
@@ -236,7 +241,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="editorial-library-grid">
             {related.map((item) => (
               <article key={item.slug}>
-                <Link href={`/blog/${item.slug}`}>
+                <Link href={`/supervivencia/${item.slug}`}>
                   <ResponsiveImage
                     src={item.image}
                     alt={item.imageAlt}
@@ -261,7 +266,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             headline: post.title,
             description: post.excerpt,
             image: absoluteUrl(post.image),
-            mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+            mainEntityOfPage: absoluteUrl(`/supervivencia/${post.slug}`),
             author: {
               "@type": "Organization",
               name: "Modo Crisis Survival",

@@ -20,7 +20,7 @@ const photo = (name: string, description: string) => ({
 const related = (current: number) => [
   {
     label: `Siguiente escenario: ${series[(current + 1) % 5][1]}`,
-    href: `/blog/${series[(current + 1) % 5][0]}`,
+    href: `/supervivencia/${series[(current + 1) % 5][0]}`,
   },
   { label: "Prepara tu lista familiar", href: "/checklists" },
   { label: "Herramientas y calculadoras web", href: "/herramientas-supervivencia" },
@@ -246,7 +246,7 @@ export const resilienceArticles: BlogPost[] = [
         links: [
           {
             label: "Calcular la autonomía de tu reserva de agua",
-            href: "/blog/calculadora-gestion-agua-supervivencia#calculadora",
+            href: "/supervivencia/calculadora-gestion-agua-supervivencia#calculadora",
           },
         ],
       },
@@ -269,7 +269,7 @@ export const resilienceArticles: BlogPost[] = [
         url: "https://commission.europa.eu/topics/preparedness_es",
       },
     ],
-    relatedLinks: [...related(2), {label:'Conservar los alimentos durante un apagón',href:'/blog/gestion-alimentos-sin-electricidad'}],
+    relatedLinks: [...related(2), {label:'Conservar los alimentos durante un apagón',href:'/supervivencia/gestion-alimentos-sin-electricidad'}],
   },
   {
     ...common,
@@ -362,7 +362,7 @@ export const resilienceArticles: BlogPost[] = [
         url: "https://www.aemet.es/es/eltiempo/prediccion/avisos",
       },
     ],
-    relatedLinks: [...related(3), {label:'Qué hacer durante una DANA',href:'/blog/que-hacer-durante-dana'}, {label:'Preparar la vivienda ante frío o calor',href:'/blog/refugio-temporal-casa-frio-calor'}],
+    relatedLinks: [...related(3), {label:'Qué hacer durante una DANA',href:'/supervivencia/que-hacer-durante-dana'}, {label:'Preparar la vivienda ante frío o calor',href:'/supervivencia/refugio-temporal-casa-frio-calor'}],
   },
   {
     ...common,

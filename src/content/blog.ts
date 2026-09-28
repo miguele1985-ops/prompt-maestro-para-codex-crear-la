@@ -6,8 +6,11 @@ import { batchTwoRevisions } from "./batch-two";
 import { resilienceArticles } from "./resilience-articles";
 import { continuityArticles, continuityUpdates } from "./continuity-articles";
 import { preparednessScenarios } from "./preparedness-scenarios";
+import { outdoorArticles } from "./outdoor-articles";
+import { everydayArticles, everydayUpdates } from "./everyday-survival";
 
 export interface BlogSection {
+  image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
   heading: string;
   body: string;
   bullets?: string[];
@@ -40,6 +43,8 @@ export interface BlogAppUseGuide {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...everydayArticles.filter(post => !everydayUpdates.has(post.slug)),
+  ...outdoorArticles,
   ...preparednessScenarios,
   ...resilienceArticles.slice(1),
   ...continuityArticles.filter(post => !continuityUpdates.has(post.slug)),
@@ -50,7 +55,7 @@ export const blogPosts: BlogPost[] = [
     category: "Preparación del hogar", image: "/images/blog/generador-electrico-casa-seguro.jpg", imageAlt: "Equipo de respaldo eléctrico en exterior, imagen ilustrativa",
     date: "25 septiembre 2026", publishedAt: "2026-09-25", readingTime: "8 min", keywords: ["recoger agua lluvia", "generador casa", "autoconsumo"], sections: [],
     warning: "Consulta las ordenanzas y los requisitos de tu instalación con el organismo competente antes de realizar obras o conexiones.",
-    relatedLinks: [{ label: "Captación de lluvia", href: "/blog/calculadora-captacion-lluvia-supervivencia" }],
+    relatedLinks: [{ label: "Captación de lluvia", href: "/supervivencia/calculadora-captacion-lluvia-supervivencia" }],
   },
   {
     slug: "peso-reserva-familiar-emergencias",
@@ -58,7 +63,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "El agua cambia el peso de cualquier kit. Separa lo que guardas en casa de lo que puedes transportar y prepara una prueba familiar sencilla.",
     category: "Preparación familiar", image: "/images/blog/mochila-emergencia-72h-comparativa.jpg", imageAlt: "Mochila y suministros de preparación familiar, imagen ilustrativa",
     date: "25 septiembre 2026", publishedAt: "2026-09-25", readingTime: "4 min", keywords: ["reserva familiar", "peso mochila emergencia", "agua emergencia"], sections: [],
-    relatedLinks: [{ label: "Plan familiar", href: "/preparacion-familiar" }, { label: "Calculadora de agua", href: "/blog/calculadora-gestion-agua-supervivencia" }],
+    relatedLinks: [{ label: "Plan familiar", href: "/preparacion-familiar" }, { label: "Calculadora de agua", href: "/supervivencia/calculadora-gestion-agua-supervivencia" }],
   },
   {
     slug: "que-debe-incluir-aplicacion-supervivencia-offline",
@@ -369,7 +374,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Material adaptado", body: "Además de agua, luz y comida, revisa gafas, audífonos, pilas, cargadores, bastón, copias de recetas, ropa de abrigo y teléfonos escritos en papel.", bullets: ["Medicación suficiente y revisada", "Lista de dosis", "Contactos prioritarios", "Ayudas de movilidad", "Documentación sanitaria"] },
       { heading: "Plan de apoyo", body: "El plan familiar debe indicar quién llama, quién acompaña, dónde reunirse y cómo actuar si no hay cobertura. En Modo Crisis Survival puedes guardar esos datos para consultarlos sin Internet." },
     ],
-    relatedLinks: [{ label: "Documentos offline", href: "/blog/documentacion-conviene-tener-disponible" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
+    relatedLinks: [{ label: "Documentos offline", href: "/supervivencia/documentacion-conviene-tener-disponible" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
   },
   {
     slug: "checklist-evacuacion-incendio-vivienda",
@@ -461,7 +466,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Privacidad primero", body: "La información médica es sensible. Protege el teléfono con bloqueo seguro y revisa qué documentos realmente necesitas llevar en el dispositivo." },
       { heading: "Organización dentro de la app", body: "Modo Crisis Survival permite preparar documentos, notas y contactos para que la información importante no dependa de encontrar correos o archivos en la nube." },
     ],
-    relatedLinks: [{ label: "Documentos offline", href: "/blog/documentacion-conviene-tener-disponible" }, { label: "Herramientas personales", href: "/herramientas-supervivencia" }],
+    relatedLinks: [{ label: "Documentos offline", href: "/supervivencia/documentacion-conviene-tener-disponible" }, { label: "Herramientas personales", href: "/herramientas-supervivencia" }],
   },
   {
     slug: "rutas-evacuacion-mapas-offline",
@@ -497,7 +502,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "No invadas tu espacio", body: "Debe ser compacto y discreto. Un kit demasiado grande puede terminar abandonado. Prioriza lo que realmente usarías durante unas horas de espera o un regreso complicado." },
       { heading: "Sincroniza con el plan familiar", body: "Guarda rutas, puntos de encuentro y contactos en Modo Crisis Survival para que el plan no dependa de recordar direcciones bajo presión." },
     ],
-    relatedLinks: [{ label: "Mochila 72 horas", href: "/blog/que-guardar-mochila-72-horas" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
+    relatedLinks: [{ label: "Mochila 72 horas", href: "/supervivencia/que-guardar-mochila-72-horas" }, { label: "Preparación familiar", href: "/preparacion-familiar" }],
   },
   {
     slug: "senales-sos-comunicacion-visual",
@@ -534,7 +539,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Inventario útil", body: "La app permite registrar comida, caducidades y cantidades orientativas para saber qué tienes antes de comprar de más o descubrir que falta lo básico." },
     ],
     warning: "Ante dudas sobre seguridad alimentaria, descarta el alimento y sigue recomendaciones sanitarias oficiales.",
-    relatedLinks: [{ label: "Inventario", href: "/herramientas-supervivencia" }, { label: "Apagones", href: "/blog/como-prepararse-para-un-apagon" }],
+    relatedLinks: [{ label: "Inventario", href: "/herramientas-supervivencia" }, { label: "Apagones", href: "/supervivencia/como-prepararse-para-un-apagon" }],
   },
   {
     slug: "botiquin-emergencia-casa",
@@ -553,7 +558,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Registro en la app", body: "Añade elementos del botiquín al inventario de Modo Crisis Survival y programa revisiones para detectar caducidades o faltantes antes de una emergencia." },
     ],
     warning: "La app y este artículo no sustituyen formación sanitaria ni atención médica profesional.",
-    relatedLinks: [{ label: "Revisar kit", href: "/blog/como-revisar-kit-emergencia" }, { label: "Documentos médicos", href: "/blog/documentos-medicos-offline-emergencias" }],
+    relatedLinks: [{ label: "Revisar kit", href: "/supervivencia/como-revisar-kit-emergencia" }, { label: "Documentos médicos", href: "/supervivencia/documentos-medicos-offline-emergencias" }],
   },
   {
     slug: "refugio-temporal-casa-frio-calor",
@@ -630,7 +635,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Consejo práctico", body: "Úsala junto con la calculadora de gestión de agua. Captar 100 litros no significa disponer de 100 litros útiles si no tienes depósito suficiente, recipientes limpios o un método de tratamiento adecuado." },
     ],
     warning: "El agua de lluvia recogida puede contaminarse por tejados, lonas, canalones o recipientes. No debe beberse sin tratamiento y verificación adecuados.",
-    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Gestión de agua", href: "/blog/calculadora-gestion-agua-supervivencia" }],
+    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Gestión de agua", href: "/supervivencia/calculadora-gestion-agua-supervivencia" }],
   },
   {
     slug: "calculadora-energia-powerbank-emergencia",
@@ -650,7 +655,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Uso dentro de la app", body: "Modo Crisis Survival combina esta estimación con control de batería, guías de apagón, contactos y recursos offline para evitar gastar energía buscando información en Internet durante una crisis." },
     ],
     warning: "La autonomía real puede cambiar mucho según temperatura, cobertura, edad de la batería, brillo, uso de pantalla y calidad del cable.",
-    relatedLinks: [{ label: "Ahorrar batería", href: "/blog/como-ahorrar-bateria-emergencia" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
+    relatedLinks: [{ label: "Ahorrar batería", href: "/supervivencia/como-ahorrar-bateria-emergencia" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
   },
   {
     slug: "calculadora-potabilizacion-quimica-agua",
@@ -670,7 +675,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Por qué es útil offline", body: "En una emergencia puedes no tener cobertura para buscar equivalencias. Tener una guía orientativa dentro de la app reduce errores de lectura, sobre todo cuando hay estrés, poca luz o varias personas usando distintos recipientes." },
     ],
     warning: "Utiliza solo productos aptos, sin perfumes, detergentes ni aditivos. Ante avisos sanitarios, sigue siempre las instrucciones oficiales.",
-    relatedLinks: [{ label: "Potabilizar agua", href: "/blog/potabilizar-agua-emergencia-metodos-seguros" }, { label: "Guías de supervivencia", href: "/guias-supervivencia" }],
+    relatedLinks: [{ label: "Potabilizar agua", href: "/supervivencia/potabilizar-agua-emergencia-metodos-seguros" }, { label: "Guías de supervivencia", href: "/guias-supervivencia" }],
   },
   {
     slug: "calculadora-destilacion-solar-agua",
@@ -690,7 +695,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Cuándo puede ayudar", body: "Puede servir como apoyo en preparación, aprendizaje o situaciones donde hay tiempo, sol y materiales. En la app se complementa con gestión de agua, captación de lluvia y guías de potabilización." },
     ],
     warning: "No garantiza agua potable ni elimina todos los riesgos. El resultado depende del montaje, contaminación inicial y condiciones ambientales.",
-    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Captación de lluvia", href: "/blog/calculadora-captacion-lluvia-supervivencia" }],
+    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Captación de lluvia", href: "/supervivencia/calculadora-captacion-lluvia-supervivencia" }],
   },
   {
     slug: "calculadora-cruce-rios-seguridad",
@@ -710,7 +715,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Uso con mapas offline", body: "Combínala con mapas, brújula y horas de luz para valorar rutas alternativas. A veces retroceder o esperar es mejor que asumir una corriente que no puedes controlar." },
     ],
     warning: "Una calculadora nunca puede garantizar que un río sea seguro. Si existe duda o riesgo, no debe cruzarse.",
-    relatedLinks: [{ label: "Mapas offline", href: "/mapas-offline" }, { label: "Horas de luz", href: "/blog/calculadora-horas-luz-ruta" }],
+    relatedLinks: [{ label: "Mapas offline", href: "/mapas-offline" }, { label: "Horas de luz", href: "/supervivencia/calculadora-horas-luz-ruta" }],
   },
   {
     slug: "calculadora-velocidad-necesaria-ruta",
@@ -730,7 +735,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Uso recomendado", body: "Es especialmente útil al combinarla con la calculadora de horas de luz. Así puedes comparar tiempo de ruta, puesta de sol y margen de seguridad antes de seguir caminando." },
     ],
     warning: "No sustituye planificación real, meteorología, estado físico, permisos, luz disponible ni criterio sobre el terreno.",
-    relatedLinks: [{ label: "Horas de luz", href: "/blog/calculadora-horas-luz-ruta" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
+    relatedLinks: [{ label: "Horas de luz", href: "/supervivencia/calculadora-horas-luz-ruta" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
   },
   {
     slug: "calculadora-sensacion-termica-frio-calor",
@@ -750,7 +755,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Por qué aporta valor", body: "Sirve para decidir ropa, pausas, refugio, hidratación y duración de exposición. Al estar en Modo Crisis Survival, puedes consultarla sin conexión junto a guías de frío, calor, botiquín y preparación familiar." },
     ],
     warning: "No sustituye avisos meteorológicos ni valoración médica. Ante síntomas graves por frío o calor, llama al 112.",
-    relatedLinks: [{ label: "Refugio ante frío o calor", href: "/blog/refugio-temporal-casa-frio-calor" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
+    relatedLinks: [{ label: "Refugio ante frío o calor", href: "/supervivencia/refugio-temporal-casa-frio-calor" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
   },
   {
     slug: "calculadora-horas-luz-ruta",
@@ -770,7 +775,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Cómo usar el margen", body: "No uses el resultado para apurar. Nubes, bosque, relieve, edificios, lluvia, cansancio o una lesión pueden reducir la luz útil antes de la puesta oficial." },
     ],
     warning: "La luz útil puede variar por nubes, relieve, bosque, edificios, latitud, estación y precisión de la ubicación.",
-    relatedLinks: [{ label: "Velocidad necesaria", href: "/blog/calculadora-velocidad-necesaria-ruta" }, { label: "Mapas offline", href: "/mapas-offline" }],
+    relatedLinks: [{ label: "Velocidad necesaria", href: "/supervivencia/calculadora-velocidad-necesaria-ruta" }, { label: "Mapas offline", href: "/mapas-offline" }],
   },
   {
     slug: "calculadora-conversor-survival-unidades",
@@ -790,7 +795,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Dónde encaja en la app", body: "Funciona como apoyo para potabilización, lluvia, energía, rutas y guías. Es una herramienta pequeña, pero muy práctica cuando tienes poco tiempo y poca conexión." },
     ],
     warning: "Comprueba siempre las unidades antes de dosificar productos, calcular agua o aplicar instrucciones técnicas.",
-    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Potabilización química", href: "/blog/calculadora-potabilizacion-quimica-agua" }],
+    relatedLinks: [{ label: "Recursos avanzados", href: "/recursos-avanzados" }, { label: "Potabilización química", href: "/supervivencia/calculadora-potabilizacion-quimica-agua" }],
   },
   {
     slug: "calculadora-silbato-emergencia-senales",
@@ -810,7 +815,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Preparación previa", body: "Guarda un silbato físico en mochila, coche o kit doméstico y practica señales básicas antes. La app te ayuda a recordarlas, pero la herramienta real debe estar a mano." },
     ],
     warning: "Las señales no garantizan que alguien las reciba. Úsalas como apoyo y llama al 112 siempre que sea posible.",
-    relatedLinks: [{ label: "Señales de humo", href: "/blog/calculadora-senales-humo-supervivencia" }, { label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }],
+    relatedLinks: [{ label: "Señales de humo", href: "/supervivencia/calculadora-senales-humo-supervivencia" }, { label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }],
   },
   {
     slug: "calculadora-senales-humo-supervivencia",
@@ -830,7 +835,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Alternativas", body: "Antes de usar humo, considera llamada al 112, linterna SOS, silbato, espejo de señales, ubicación compartida si vuelve la red o permanecer en zona visible y segura." },
     ],
     warning: "No enciendas fuego si hay riesgo de incendio, viento, sequía, prohibición o normativa que lo impida.",
-    relatedLinks: [{ label: "SOS visual", href: "/blog/senales-sos-comunicacion-visual" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
+    relatedLinks: [{ label: "SOS visual", href: "/supervivencia/senales-sos-comunicacion-visual" }, { label: "Recursos avanzados", href: "/recursos-avanzados" }],
   },
   {
     slug: "calculadora-hipotermia-riesgo",
@@ -850,7 +855,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Uso con otras calculadoras", body: "Combínala con sensación térmica, horas de luz y gestión de energía. El frío, la oscuridad y la batería baja suelen aparecer juntos en emergencias al aire libre." },
     ],
     warning: "No realiza diagnósticos médicos. Ante síntomas graves, pérdida de conciencia, confusión intensa o exposición prolongada al frío, llama al 112.",
-    relatedLinks: [{ label: "Sensación térmica", href: "/blog/calculadora-sensacion-termica-frio-calor" }, { label: "Refugio frío/calor", href: "/blog/refugio-temporal-casa-frio-calor" }],
+    relatedLinks: [{ label: "Sensación térmica", href: "/supervivencia/calculadora-sensacion-termica-frio-calor" }, { label: "Refugio frío/calor", href: "/supervivencia/refugio-temporal-casa-frio-calor" }],
   },
   {
     slug: "apagon-general-espana-pasos",
@@ -907,12 +912,12 @@ export const blogPosts: BlogPost[] = [
     sections: [
       { heading: "Primero identifica el problema", body: "El agua puede contener microorganismos, sustancias químicas o ambos. Un filtro pensado para ruta puede no servir para agua de inundación, combustible, vertidos o contaminación química. Si el origen es dudoso, busca fuente segura antes que confiar en un método casero." },
       { heading: "Hervir no resuelve todo", body: "El hervido ayuda frente a muchos riesgos microbiológicos si se aplica correctamente, pero no elimina contaminantes químicos. Además, necesita recipiente, calor, tiempo y combustible seguro. No uses sistemas de combustión en interiores sin ventilación adecuada." },
-      { heading: "Filtros y purificadores", body: "Comprueba qué declara el fabricante: bacterias, protozoos, sedimentos, virus o ciertos compuestos. No traslades la capacidad de un modelo avanzado a otro más barato de la misma marca.", links: [{ label: "Ver comparativa de filtros", href: "/blog/filtros-agua-portatiles-comparativa-riesgo" }] },
+      { heading: "Filtros y purificadores", body: "Comprueba qué declara el fabricante: bacterias, protozoos, sedimentos, virus o ciertos compuestos. No traslades la capacidad de un modelo avanzado a otro más barato de la misma marca.", links: [{ label: "Ver comparativa de filtros", href: "/supervivencia/filtros-agua-portatiles-comparativa-riesgo" }] },
       { heading: "Desinfección química", body: "Solo debe hacerse con productos adecuados y siguiendo instrucciones oficiales o del fabricante. Concentración, turbidez, temperatura y tiempo de contacto cambian el resultado. Evita productos perfumados, con detergentes o mezclas improvisadas." },
       { heading: "Cuándo no basta", body: "Agua salada, vertidos industriales, inundaciones contaminadas, sustancias desconocidas o recipientes sucios pueden exigir alternativa externa. Ninguna app ni calculadora convierte una fuente peligrosa en segura por sí sola." },
     ],
     warning: "Si las autoridades declaran agua no apta o hay sospecha de contaminación química, sigue sus instrucciones y no confíes solo en métodos domésticos.",
-    relatedLinks: [{ label: "Gestión de agua", href: "/blog/calculadora-gestion-agua-supervivencia" }, { label: "Captación de lluvia", href: "/blog/calculadora-captacion-lluvia-supervivencia" }],
+    relatedLinks: [{ label: "Gestión de agua", href: "/supervivencia/calculadora-gestion-agua-supervivencia" }, { label: "Captación de lluvia", href: "/supervivencia/calculadora-captacion-lluvia-supervivencia" }],
   },
   {
     slug: "gps-movil-sin-internet-mapas-offline",
@@ -931,7 +936,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Guarda puntos importantes", body: "Marca inicio de ruta, vehículo, casa, punto de encuentro, refugio o coordenadas útiles. Comprueba también si el mapa sigue disponible tras cerrar y abrir la app." },
       { heading: "Lo que la ubicación no hace", body: "Ver un punto en pantalla no comunica tu posición a emergencias. Para pedir ayuda necesitas una vía de comunicación disponible y una función compatible." },
     ],
-    relatedLinks: [{ label: "Mapas offline", href: "/mapas-offline" }, { label: "Centro de descargas", href: "/centro-descargas" }, { label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }],
+    relatedLinks: [{ label: "Mapas offline", href: "/mapas-offline" }, { label: "Centro de descargas", href: "/centro-descargas" }, { label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }],
   },
   {
     slug: "bateria-10000-mah-cargas-reales",
@@ -950,7 +955,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Haz una prueba doméstica", body: "Carga la powerbank completa, usa el mismo móvil y anota porcentaje inicial, final, cable, aplicaciones abiertas y tiempo de pantalla. No necesitas llegar al 0 %, solo saber cuánta energía útil te aporta en tu uso real." },
       { heading: "Compra con criterio", body: "Más grande no siempre es mejor si pesa demasiado, no tiene el cable adecuado o tarda demasiado en recargarse. Elige según móvil, linterna, radio, mapa y número de personas.", links: [{ label: "Ver opciones de powerbank en Amazon", href: amazonSearchUrl("powerbank 20000mah carga rapida"), sponsored: true }] },
     ],
-    relatedLinks: [{ label: "Calculadora de energía", href: "/blog/calculadora-energia-powerbank-emergencia" }, { label: "Comparativas", href: "/comparativas" }],
+    relatedLinks: [{ label: "Calculadora de energía", href: "/supervivencia/calculadora-energia-powerbank-emergencia" }, { label: "Comparativas", href: "/comparativas" }],
   },
   {
     slug: "filtros-agua-portatiles-comparativa-riesgo",
@@ -971,7 +976,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Lo que ningún filtro promete", body: "Agua de mar, vertidos industriales, combustible, pesticidas o agua de inundación desconocida pueden quedar fuera del alcance doméstico. Si hay alternativa potable segura, no busques una fuente peor para justificar el equipo." },
     ],
     warning: "Las afirmaciones de eficacia pertenecen a cada fabricante y dependen de uso correcto, mantenimiento y condiciones del agua. Revisa instrucciones actuales antes de comprar o usar.",
-    relatedLinks: [{ label: "Comparativas", href: "/comparativas" }, { label: "Agua sin electricidad", href: "/blog/agua-sin-electricidad-metodos-limites" }, { label: "Guías de agua", href: "/guias-supervivencia" }],
+    relatedLinks: [{ label: "Comparativas", href: "/comparativas" }, { label: "Agua sin electricidad", href: "/supervivencia/agua-sin-electricidad-metodos-limites" }, { label: "Guías de agua", href: "/guias-supervivencia" }],
   },
   {
     slug: "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
@@ -1179,7 +1184,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Compra solo si encaja con tu plan", body: "Antes de comprar, revisa si ese equipo responde a tu riesgo real, si sabes usarlo y si puedes mantenerlo. La preparación urgente no depende de comprar durante una emergencia.", links: [{ label: "Ver radios de emergencia en Amazon", href: amazonSearchUrl("radio emergencia manivela solar"), sponsored: true }] }
     ],
     warning: "Revisa el equipo antes de necesitarlo y no tomes decisiones críticas basándote en una sola fuente.",
-    relatedLinks: [{ label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
+    relatedLinks: [{ label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
   },
   {
     slug: "powerbanks-solares-aguantan-un-apagon-largo",
@@ -1293,7 +1298,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Fuente", body: "Protección Civil — Public Warning System / ES-Alert .", bullets: ["Protección Civil — Public Warning System / ES-Alert ."] }
     ],
     warning: "Sigue siempre fuentes oficiales, instrucciones de emergencias y normativa vigente. Este contenido es educativo y de preparación previa.",
-    relatedLinks: [{ label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
+    relatedLinks: [{ label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
   },
   {
     slug: "semaforos-sin-luz-como-moverte-durante-un-apagon",
@@ -1316,7 +1321,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "FAQ", body: "Si el desplazamiento no es necesario, las experiencias de 2025 respaldan reducir viajes: la DGT pidió evitar los innecesarios. Si debes conducir, extrema precaución en cruces y sigue a agentes y señalización. Reduce velocidad, identifica señalización fija y usuarios vulnerables, y sigue las órdenes de agentes. No presupongas que los demás conductores conocen o respetarán la prioridad aplicable. El receptor GPS del móvil no necesita Internet para recibir satélites, pero la aplicación puede necesitar datos para mapas, tráfico o cálculo. Descargar mapas previamente mejora la utilidad offline. No debes acceder a vías o túneles sin autorización. Sigue las instrucciones del operador y personal de emergencia; puede haber riesgos eléctricos." }
     ],
     warning: "Sigue siempre fuentes oficiales, instrucciones de emergencias y normativa vigente. Este contenido es educativo y de preparación previa.",
-    relatedLinks: [{ label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
+    relatedLinks: [{ label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
   },
   {
     slug: "generador-en-casa-normativa-y-peligros-que-debes-evitar",
@@ -1386,7 +1391,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "Compra solo si encaja con tu plan", body: "Antes de comprar, revisa si ese equipo responde a tu riesgo real, si sabes usarlo y si puedes mantenerlo. La preparación urgente no depende de comprar durante una emergencia.", links: [{ label: "Ver radios y silbatos de emergencia en Amazon", href: amazonSearchUrl("radio emergencia silbato"), sponsored: true }] }
     ],
     warning: "Revisa el equipo antes de necesitarlo y no tomes decisiones críticas basándote en una sola fuente.",
-    relatedLinks: [{ label: "Sin cobertura", href: "/blog/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
+    relatedLinks: [{ label: "Sin cobertura", href: "/supervivencia/que-hacer-cuando-no-hay-cobertura" }, { label: "Descargar la app", href: "/descargar" }],
   },
   {
     slug: "preppers-espanoles-que-aprendieron-del-gran-apagon",
@@ -1642,7 +1647,7 @@ export const blogPosts: BlogPost[] = [
       { heading: "FAQ", body: "Hervir puede inactivar microorganismos si se hace correctamente, pero no elimina combustibles, metales pesados, sales ni la mayoría de contaminantes químicos. Un filtro de café solo retira sedimentos; no debe considerarse barrera suficiente frente a microorganismos." }
     ],
     warning: "No uses agua con olor a combustible, contaminación química sospechosa o procedencia peligrosa intentando arreglarla con hervor. Busca otra fuente segura.",
-    relatedLinks: [{ label: "Guías de agua", href: "/guias-supervivencia" }, { label: "Filtros de agua", href: "/blog/filtros-de-agua-portatiles-cuales-funcionan-de-verdad" }, { label: "Descargar la app", href: "/descargar" }],
+    relatedLinks: [{ label: "Guías de agua", href: "/guias-supervivencia" }, { label: "Filtros de agua", href: "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad" }, { label: "Descargar la app", href: "/descargar" }],
   },
   {
     slug: "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
@@ -1691,8 +1696,8 @@ for (const post of blogPosts) {
     post.excerpt = revision.keys.slice(0, 2).join(" ");
     post.updatedAt = "2026-09-26";
     const next = blogPosts.find((item) => item.slug === revision.next);
-    if (next && !post.relatedLinks?.some((link) => link.href === `/blog/${next.slug}`)) {
-      post.relatedLinks = [{ label: next.title, href: `/blog/${next.slug}` }, ...(post.relatedLinks ?? [])];
+    if (next && !post.relatedLinks?.some((link) => link.href === `/supervivencia/${next.slug}`)) {
+      post.relatedLinks = [{ label: next.title, href: `/supervivencia/${next.slug}` }, ...(post.relatedLinks ?? [])];
     }
   }
 }
@@ -1731,9 +1736,24 @@ for (const revision of continuityArticles.filter(post => continuityUpdates.has(p
   Object.assign(existing, revision, { publishedAt: existing.publishedAt, date: existing.date, title: existing.title, category: existing.category, updatedAt: revision.publishedAt });
 }
 
+const frequencyGuide = blogPosts.find(p=>p.slug==='radio-frecuencias-emergencia-sin-cobertura');
+if (frequencyGuide) {
+  frequencyGuide.sections.push(
+    {heading:'Prepara una ficha de escucha',body:'Anota la emisora, banda, frecuencia, zona y fecha de comprobación. Prueba el receptor siguiendo su manual en condiciones normales y registra una alternativa. Una frecuencia anotada no garantiza cobertura ni atención de emergencias.'},
+    {heading:'Recibir no es transmitir',body:'Un receptor de radio y un equipo transmisor cumplen funciones distintas. No programes un canal profesional ni supongas que una frecuencia de una tabla autoriza a transmitir. Comprueba el equipo, su manual y la normativa aplicable antes de usarlo. No hagas llamadas de socorro de prueba.'},
+    {heading:'Guía de frecuencia en la app',body:'La app agrupa recursos de radio por bandas. Conserva una copia de tu plan de comunicación, pero revisa los datos cambiantes y los requisitos en fuentes oficiales antes de transmitir.',image:{src:'/screenshots/app/advanced-frequencies.jpg',alt:'Pantalla de la guía de frecuencias de la app.'},links:[{label:'Todos los recursos de comunicación',href:'/temas/comunicacion'},{label:'Traductor Morse',href:'/codigo-morse'}]}
+  );
+}
+
 for (const post of blogPosts) {
   const photo = suppliedPhoto(post.slug);
   if (photo) { post.image = photo.image; post.imageAlt = photo.alt; }
+}
+
+for (const revision of everydayArticles.filter(post => everydayUpdates.has(post.slug))) {
+  const existing = blogPosts.find(post => post.slug === revision.slug);
+  if (!existing) throw new Error(`Missing article: ${revision.slug}`);
+  Object.assign(existing, revision, { publishedAt: existing.publishedAt, date: existing.date, updatedAt: revision.publishedAt });
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

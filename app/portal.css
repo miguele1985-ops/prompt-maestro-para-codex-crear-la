@@ -277,3 +277,70 @@
 .morse-alphabet dd { margin: 4px 0; color: #fff; font: 20px monospace; }
 .morse-notes { max-width: 850px; margin: 32px auto; }
 @media(max-width: 600px) { .morse-workbench { padding: 16px; } .morse-alphabet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.site-page { height: calc(100dvh - var(--cookie-dock-height, 44px)); overflow-y: auto; scroll-padding-top: 90px; }
+.site-header { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+.site-header > .portal-header-search { color: #f7f2e6; justify-self: end; border-radius: 4px; }
+.portal-header-search:hover, .portal-header-search:focus-visible { background: #40533a; }
+.journal-cover { min-height: 480px; }
+.journal-cover::after { background: linear-gradient(180deg, rgba(0,0,0,.68), rgba(0,0,0,.82)); }
+.journal-cover-copy { padding: 36px 28px 40px; }
+.journal-cover .journal-kicker { color: #e0efca; font-size: 12px; line-height: 1.4; }
+.journal-cover .journal-deck { margin: 12px 0; }
+.journal-cover-copy > p:not(.journal-kicker):not(.journal-deck) { margin: 12px 0; }
+.journal-actions { margin-top: 18px; align-items: center; }
+.journal-actions .journal-secondary-link { padding: 8px 0; color: #fff; background: none; border: 0; text-decoration: underline; text-underline-offset: 4px; }
+.journal-hero-app { margin-top: 18px; max-width: 525px; }
+.journal-cover .journal-hero-app p { font-size: 13px; line-height: 1.45; margin: 0; color: #edf2ec; }
+.journal-hero-app a { color: #edf2ec; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
+.journal-explore-all { background: var(--forest); padding: 0 24px 16px; text-align: center; }
+.journal-explore-all a { color: #ffd099; font-size: 13px; display: inline-flex; gap: 8px; align-items: center; min-height: 32px; text-decoration: underline; text-underline-offset: 4px; }
+.cookie-banner, .cookie-dock-closed { position: fixed; bottom: 0; left: 0; right: 0; width: 100%; box-sizing: border-box; z-index: 100; border-radius: 0; background: #182315; color: #f7f2e6; border: 0; border-top: 1px solid #899779; padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); }
+.cookie-banner { max-height: 55dvh; overflow-y: auto; gap: 12px; align-items: center; }
+.cookie-banner p { font-size: 13px; line-height: 1.4; margin: 4px 0 0; }
+.cookie-banner strong { font-size: 14px; }
+.cookie-banner strong, .cookie-banner p, .cookie-banner legend, .cookie-banner label { color: #f7f2e6; }
+.cookie-banner fieldset { background: #30402a; border-color: #899779; }
+@media print { .site-page { height: auto; overflow: visible; } .cookie-dock-closed { display: none; } }
+.cookie-actions { gap: 8px; }
+.cookie-actions a.cookie-info, .cookie-actions button.cookie-secondary, .cookie-actions button.cookie-primary { min-height: 40px; padding: 8px 12px; font-size: 13px; }
+.cookie-dock-closed { padding: 0 16px env(safe-area-inset-bottom); text-align: center; }
+.cookie-dock-closed .cookie-reopen { position: static; border: 0; box-shadow: none; background: none; color: #f7f2e6; border-radius: 0; font-size: 12px; font-weight: 400; min-height: 36px; text-decoration: underline; }
+@media(max-width:1080px) { .site-header { grid-template-columns: minmax(0,1fr) 44px 44px; } .site-header .brand span:last-child { max-width: none; white-space: normal; font-size: 12px; line-height: 1.3; } }
+@media(max-width:767px) {
+  .site-header { padding: 8px 12px; gap: 6px; }
+  .journal-cover { min-height: 0; }
+  .journal-cover-copy { padding: 18px 18px 30px; }
+  .journal-cover h1 { font-size: 34px; line-height: 1.08; margin: 10px 0; max-width: 360px; }
+  .journal-cover .journal-kicker { font-size: 10px; margin: 0; }
+  .journal-cover .journal-deck { font-size: 20px; line-height: 1.3; margin: 10px 0; }
+  .journal-cover-copy > p:not(.journal-kicker):not(.journal-deck) { font-size: 14px; line-height: 1.5; margin: 10px 0; }
+  .journal-actions { margin-top: 12px; gap: 4px 18px; }
+  .journal-actions a { font-size: 13px; min-height: 44px; padding: 10px 12px; }
+  .journal-hero-app { margin-top: 10px; }
+  .journal-cover .journal-hero-app p { font-size: 12px; }
+  .journal-photo-credit { font-size: 9px; bottom: 4px; }
+  .journal-topics { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 6px 12px; }
+  .journal-topics a { padding: 12px 6px; font-size: 12px; line-height: 1.4; gap: 8px; }
+  .cookie-banner { padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); align-items: stretch; gap: 8px; }
+  .cookie-actions { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); width: 100%; gap: 4px; }
+  .cookie-actions a.cookie-info, .cookie-actions button.cookie-secondary, .cookie-actions button.cookie-primary { padding: 6px 3px; font-size: 11px; text-align: center; justify-content: center; }
+}
+.article-app-reference { max-width: 320px; margin: 24px auto; }
+.article-app-reference img { display: block; width: 100%; height: auto; object-fit: contain; }
+.article-app-reference figcaption { font-size: 12px; margin-top: 8px; }
+.lunar-tool { max-width: 700px; margin: 24px auto; background: #1e2a18; color: #f7f2e6; padding: 16px; border-radius: 6px; }
+.lunar-toolbar { display: flex; align-items: end; gap: 12px; justify-content: space-between; margin-bottom: 20px; }
+.lunar-toolbar label { display: grid; gap: 6px; min-width: 0; }
+.lunar-toolbar input { max-width: 100%; min-width: 0; width: 180px; background: #f7f2e6; color: #201c15; font: inherit; padding: 8px; }
+.lunar-tool button { min-height: 44px; border: 1px solid #819174; background: #30402a; color: #fff; border-radius: 4px; cursor: pointer; }
+.lunar-toolbar button { width: 44px; flex-shrink: 0; display: grid; place-items: center; }
+.lunar-tool button:disabled { opacity: .4; cursor: default; }
+.lunar-days { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 5px; text-align: center; }
+.lunar-days button { height: 64px; padding: 4px 0; display: grid; place-items: center; }
+.lunar-days button span { font-size: 11px; color: #f7f2e6; }
+.lunar-days button[aria-pressed="true"] { background: #a83610; border-color: #ffd099; }
+.lunar-tool p { color: #f7f2e6; }
+@media(max-width:400px) { .lunar-tool { padding: 10px; } .lunar-days { gap: 3px; } .lunar-toolbar { gap: 6px; } }
+.article-field-reference { margin: 24px 0; width: 100%; }
+.article-field-reference img { width: 100%; height: auto; display: block; object-fit: contain; }
+.article-field-reference figcaption { font-size: 13px; line-height: 1.5; margin-top: 10px; }

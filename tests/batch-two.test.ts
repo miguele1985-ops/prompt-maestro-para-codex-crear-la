@@ -13,7 +13,7 @@ describe("second article batch",()=>{
       expect(post.sections.length).toBeGreaterThanOrEqual(5);
       expect(post.sections.some(section=>section.links?.some(link=>link.href.startsWith('https://')))).toBe(true);
       expect(existsSync(`public${post.image}`)).toBe(true);
-      for(const link of post.relatedLinks||[])if(link.href.startsWith('/blog/'))expect(getBlogPost(link.href.slice(6))).toBeDefined();
+      for(const link of post.relatedLinks||[])if(link.href.startsWith('/supervivencia/'))expect(getBlogPost(link.href.slice('/supervivencia/'.length))).toBeDefined();
     }
   });
   it("corrects the outdated generator, traffic and blackout claims",()=>{

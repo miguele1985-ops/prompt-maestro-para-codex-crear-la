@@ -9,7 +9,7 @@ const fs=require('node:fs');
   await page.addInitScript(()=>localStorage.setItem('mcs-cookie-consent','rejected'));
   for(const width of [320,390,768,1440]){
    await page.setViewportSize({width,height:900});
-   for(const route of ['/','/guias-supervivencia','/guias-supervivencia/agua','/blog','/comparativas','/herramientas-supervivencia','/buscar','/preparacion-practica','/aplicacion-supervivencia-offline/herramientas']){
+   for(const route of ['/','/guias-supervivencia','/guias-supervivencia/agua','/supervivencia','/comparativas','/herramientas-supervivencia','/buscar','/preparacion-practica','/aplicacion-supervivencia-offline/herramientas']){
     const response=await page.goto(origin+route,{waitUntil:'networkidle'});
     await page.evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(img=>img.decode().catch(()=>{})));});
     const result=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,broken:[...document.images].filter(img=>!img.naturalWidth).map(img=>img.src)}));

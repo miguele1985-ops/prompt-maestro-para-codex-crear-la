@@ -24,7 +24,7 @@ describe("quiet article monetization",()=>{
     expect(equipmentForArticle('5-nudos-basicos')[0].check).toContain('No comprarlo como cuerda para escalada');
   });
   it("allows end-of-article links but leaves automatic ads disabled",()=>{
-    for(const post of blogPosts)expect(monetizationPolicy(`/blog/${post.slug}`)).toMatchObject({affiliate:true,displayEnabled:false});
+    for(const post of blogPosts)expect(monetizationPolicy(`/supervivencia/${post.slug}`)).toMatchObject({affiliate:true,displayEnabled:false});
     expect(monetizationPolicy('/api/admin/config').affiliate).toBe(false);
     expect(monetizationPolicy('/descargar').affiliate).toBe(false);
   });

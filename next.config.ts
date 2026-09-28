@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { batchTwoAliases } from "./src/content/batch-two";
+import { everydayAliases } from "./src/content/everyday-survival";
 
 const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = isDev
@@ -80,7 +81,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      ...Object.entries(batchTwoAliases).map(([source,destination])=>({source:`/blog/${source}`,destination:`/blog/${destination}`,permanent:true})),
+      ...Object.entries({ ...batchTwoAliases, ...everydayAliases }).flatMap(([source,destination]) => [
+        { source: `/blog/${source}`, destination: `/supervivencia/${destination}`, permanent: true },
+        { source: `/supervivencia/${source}`, destination: `/supervivencia/${destination}`, permanent: true },
+      ]),
+      { source: "/blog", destination: "/supervivencia", permanent: true },
+      { source: "/blog/:slug", destination: "/supervivencia/:slug", permanent: true },
       { source: "/supervivencia-offline", destination: "/aplicacion-supervivencia-offline", permanent: true },
       { source: "/herramientas", destination: "/herramientas-supervivencia", permanent: true },
       { source: "/aprendizaje", destination: "/aprendizaje-supervivencia", permanent: true }

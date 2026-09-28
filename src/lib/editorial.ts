@@ -1,6 +1,7 @@
 import type { BlogPost } from "@/content/blog";
 import originalIndex from "@/content/editorial-index.json";
 import { batchTwoRevisions } from "@/content/batch-two";
+import { everydayUpdates } from "@/content/everyday-survival";
 export type EditorialIndex = {
   toc: { id: string; title: string }[];
   words: number;
@@ -33,7 +34,7 @@ export function articleTopic(post: Pick<BlogPost, "slug" | "category" | "title">
 }
 export function readingMinutes(post: BlogPost) {
   return (
-    (batchTwoRevisions[post.slug] ? undefined : articleIndex[post.slug]?.readingMinutes) ??
+    (batchTwoRevisions[post.slug] || everydayUpdates.has(post.slug) ? undefined : articleIndex[post.slug]?.readingMinutes) ??
     Math.max(
       2,
       Math.ceil(
@@ -51,7 +52,7 @@ export function relatedArticles(post: BlogPost, posts: BlogPost[]) {
   const terms = new Set(tokens([post.title, ...post.keywords].join(" ")));
   const score = (candidate: BlogPost) => {
     const overlap = new Set(tokens([candidate.title, ...candidate.keywords].join(" ")).filter((word) => terms.has(word))).size;
-    return (explicit.has(`/blog/${candidate.slug}`) ? 100 : 0) +
+    return (explicit.has(`/supervivencia/${candidate.slug}`) ? 100 : 0) +
       (articleTopic(candidate) === articleTopic(post) ? 10 : 0) + Math.min(overlap, 20);
   };
   return posts

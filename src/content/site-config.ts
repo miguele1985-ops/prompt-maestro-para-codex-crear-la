@@ -100,9 +100,10 @@ export const siteConfig = {
 };
 
 export const navigation = [
+  { label: "Temas", href: "/temas" },
   { label: "Inicio", href: "/" },
   { label: "Guías", href: "/guias-supervivencia" },
-  { label: "Artículos", href: "/blog" },
+  { label: "Artículos", href: "/supervivencia" },
   { label: "Comparativas", href: "/comparativas" },
   { label: "Herramientas", href: "/herramientas-supervivencia" },
   { label: "App", href: "/aplicacion-supervivencia-offline" },

@@ -79,9 +79,11 @@ export const portalTopics = [
 ] as const;
 export function portalTopic(slug: string): string {
   const s = normalize(slug);
+  if (/que-hacer-si-te-pierdes/.test(s)) return "orientacion";
   if (/tormenta-solar/.test(s)) return "energia";
   if (/confinamiento-emergencia/.test(s)) return "refugio";
   if (/medicamentos-tratamientos/.test(s)) return "primeros-auxilios";
+  if (/caza|pesca/.test(s)) return "naturaleza";
   if (/ciberataque|desinformacion/.test(s)) return "comunicacion";
   if (/cadena-suministro/.test(s)) return "alimentacion";
   if (/espana-2030/.test(s)) return "desastres";
@@ -117,14 +119,15 @@ export function contentKind(slug: string, category: string): ContentKind {
     return "Artículo";
   if (slug === "kit-de-emergencia-para-el-coche-que-llevar-en-2026") return "Guía";
   if (category === "Comparativas") return "Comparativa";
-  if (/Actualidad|Aprendizaje/.test(category) || /mitos|que-ha-cambiado|que-es-/.test(slug))
+  if (/Actualidad|Aprendizaje|Supervivencia práctica/.test(category) || /mitos|que-ha-cambiado|que-es-/.test(slug))
     return "Artículo";
   return "Guía";
 }
 export const portalContent: PortalItem[] = [
+  {href:'/calendario-lunar',title:'Calendario lunar',excerpt:'Fases aproximadas y fracción iluminada por día. No equivale a visibilidad nocturna.',kind:'Herramienta',topic:'orientacion'},
   { href: "/codigo-morse", title: "Código Morse", excerpt: "Traductor de texto, puntos y rayas con alfabeto de consulta.", kind: "Herramienta", topic: "comunicacion" },
   ...orderedBlogPosts.map((p) => ({
-    href: `/blog/${p.slug}`,
+    href: `/supervivencia/${p.slug}`,
     title: p.title,
     excerpt: p.excerpt,
     kind: contentKind(p.slug, p.category),

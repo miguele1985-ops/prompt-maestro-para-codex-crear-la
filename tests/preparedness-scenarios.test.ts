@@ -14,7 +14,7 @@ describe('Five preparedness scenarios', () => {
       expect(existsSync(`public${post.image}`)).toBe(true);
       for (const width of [240,360,576,960,1200]) expect(existsSync(`public${post.image.replace('.jpg', `-${width}.webp`)}`)).toBe(true);
       for (const link of [...(post.relatedLinks || []), ...post.sections.flatMap(s => s.links || [])]) {
-        if (link.href.startsWith('/blog/')) expect(getBlogPost(link.href.slice(6).split('#')[0])).toBeDefined();
+        if (link.href.startsWith('/supervivencia/')) expect(getBlogPost(link.href.slice('/supervivencia/'.length).split('#')[0])).toBeDefined();
       }
       expect(post.sections.some(s => s.links?.some(l => l.href === '#equipo-articulo'))).toBe(true);
       expect(equipmentForArticle(post.slug)).toHaveLength(2);

@@ -6,7 +6,7 @@ export const metadata = pageMetadata({
   title: "Artículos de supervivencia y preparación",
   description:
     "Actualidad, explicaciones y análisis para entender mejor la preparación y las emergencias.",
-  slug: "blog",
+  slug: "supervivencia",
 });
 export default function BlogPage() {
   const items = portalContent.filter((p) => p.kind === "Artículo");
@@ -14,7 +14,7 @@ export default function BlogPage() {
     <PortalLibrary
       title="Artículos de supervivencia y preparación"
       description="Explicaciones, actualidad y análisis para tomar decisiones con más contexto."
-      href="/blog"
+      href="/supervivencia"
       items={items}
     >
       <h2>Lecturas destacadas</h2>
