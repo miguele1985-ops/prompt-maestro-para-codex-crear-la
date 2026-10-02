@@ -29,6 +29,8 @@ export default function GuidesPage() {
           </p>
         </header>
         <ContentCatalog
+          catalogKey="guias"
+          catalogHref="/guias-supervivencia"
           items={guides}
           topics={portalTopics}
           placeholder="Buscar una guía: agua, apagón, refugio, orientación..."

@@ -12,6 +12,7 @@ export default function TopicsPage() {
       <ResponsiveImage src={`/images/blog/${topic.image}.jpg`} alt={topic.title + '. Imagen ilustrativa.'} width={360} height={180} loading="lazy" sizes="(max-width:700px) 90vw, 260px" />
       <strong>{topic.title}</strong><span>{topic.description}</span><small>{contentsForTopic(topic.slug).length} contenidos</small>
     </Link>)}</div>
-    <h2>Todo el contenido</h2><ContentCatalog items={portalContent} topics={portalTopics} />
+    <p><Link href="/mapa-web">Ver el mapa completo de contenidos</Link></p>
+    <h2>Todo el contenido</h2><ContentCatalog items={portalContent} topics={portalTopics} catalogKey="temas" catalogHref="/temas" />
   </div></div>;
 }

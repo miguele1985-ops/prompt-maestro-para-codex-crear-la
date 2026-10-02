@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           ))}
         </div>
         <h2>Todas las guías de {t[1].toLowerCase()}</h2>
-        <ContentCatalog items={items} topics={portalTopics} />
+        <ContentCatalog items={items} topics={portalTopics} catalogKey={`guias/${categoria}`} catalogHref={`/guias-supervivencia/${categoria}`} />
       </div>
     </div>
   );

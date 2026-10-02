@@ -15,6 +15,6 @@ export default async function TopicPage({params}:{params:Promise<{tema:string}>}
   return <div className="editorial-library"><div className="journal-section">
     <Breadcrumbs items={[{label:'Inicio',href:'/'},{label:'Todos los temas',href:'/temas'},{label:t.title,href:`/temas/${tema}`}]} />
     <header className="editorial-library-heading"><h1>{t.title}</h1><p>{t.description}</p></header>
-    <ContentCatalog items={contentsForTopic(tema)} topics={portalTopics} />
+    <ContentCatalog items={contentsForTopic(tema)} topics={portalTopics} catalogKey={`temas/${tema}`} catalogHref={`/temas/${tema}`} />
   </div></div>;
 }

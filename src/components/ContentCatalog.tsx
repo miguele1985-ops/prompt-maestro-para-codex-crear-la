@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Calculator, ClipboardCheck, Search, Radio } from "lucide-react";
 import type { PortalItem } from "@/content/portal";
 import { ResponsiveImage } from "./ResponsiveImage";
+import { catalogPageHref, catalogPageSize } from '@/lib/catalog-pagination';
 
 export function ContentCard({ item }: { item: PortalItem }) {
   return (
@@ -65,17 +66,23 @@ export function ContentCatalog({
   placeholder = "Buscar por tema o título...",
   id = "catalogo",
   children,
+  catalogKey,
+  catalogHref,
+  currentPage = 1,
 }: {
   items: PortalItem[];
   topics: readonly (readonly string[])[];
   placeholder?: string;
   id?: string;
   children?: React.ReactNode;
+  catalogKey?: string;
+  catalogHref?: string;
+  currentPage?: number;
 }) {
   const [query, setQuery] = useState("");
   const [topic, setTopic] = useState("");
   const [kind, setKind] = useState("");
-  const [page, setPage] = useState(1);
+  const [filterPage, setPage] = useState(1);
   const filtered = items.filter(
     (p) =>
       (!topic || p.topic === topic) &&
@@ -83,7 +90,10 @@ export function ContentCatalog({
       normalize(`${p.title} ${p.excerpt} ${p.kind}`).includes(normalize(query.trim())),
   );
   const kinds = [...new Set(items.map((p) => p.kind))];
-  const total = Math.max(1, Math.ceil(filtered.length / 12));
+  const total = Math.max(1, Math.ceil(filtered.length / catalogPageSize));
+  const linkedPagination = Boolean(catalogKey && catalogHref && !query.trim() && !topic && !kind);
+  const page = linkedPagination ? currentPage : Math.min(filterPage, total);
+  const pageHref = (number: number) => catalogPageHref({ key: catalogKey!, href: catalogHref! }, number);
   return (
     <section className="portal-catalog" id={id} aria-label="Catálogo de contenidos">
       <div className="portal-filters">
@@ -143,7 +153,7 @@ export function ContentCatalog({
       {!query && !topic && !kind && page === 1 ? children : null}
       <p role="status">{filtered.length} contenidos encontrados</p>
       <div className="portal-grid">
-        {filtered.slice((page - 1) * 12, page * 12).map((item) => (
+        {filtered.slice((page - 1) * catalogPageSize, page * catalogPageSize).map((item) => (
           <ContentCard key={item.href} item={item} />
         ))}
       </div>
@@ -152,15 +162,15 @@ export function ContentCatalog({
       ) : null}
       {total > 1 ? (
         <nav className="portal-pagination" aria-label="Páginas del catálogo">
-          <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+          {linkedPagination ? (page > 1 ? <Link href={pageHref(page - 1)} aria-label={`Página anterior: ${page - 1}`}>Anterior</Link> : <span aria-disabled="true">Anterior</span>) : <button disabled={page === 1} onClick={() => setPage(page - 1)}>
             Anterior
-          </button>
+          </button>}
           <span>
             Página {page} de {total}
           </span>
-          <button disabled={page === total} onClick={() => setPage(page + 1)}>
+          {linkedPagination ? (page < total ? <Link href={pageHref(page + 1)} aria-label={`Página siguiente: ${page + 1}`}>Siguiente</Link> : <span aria-disabled="true">Siguiente</span>) : <button disabled={page === total} onClick={() => setPage(page + 1)}>
             Siguiente
-          </button>
+          </button>}
         </nav>
       ) : null}
     </section>

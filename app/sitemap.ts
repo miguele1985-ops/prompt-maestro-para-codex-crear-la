@@ -5,10 +5,13 @@ import { siteConfig } from "@/content/site-config";
 import { practicalGuides } from "@/content/practical-guides";
 import { portalTopics, portalContent } from "@/content/portal";
 import { topicDirectory } from "@/content/topic-directory";
+import { catalogPageHref, paginatedCatalogs } from '@/content/catalogs';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.siteUrl.replace(/\/$/, "");
-  return [
+  const entries: MetadataRoute.Sitemap = [
+    { url: `${base}/mapa-web`, changeFrequency: 'weekly', priority: 0.8 },
+    ...paginatedCatalogs().map(({catalog, page}) => ({ url: `${base}${catalogPageHref(catalog, page)}`, changeFrequency: 'weekly' as const, priority: 0.5 })),
     { url: `${base}/temas`, changeFrequency: "weekly", priority: 0.8 },
     ...topicDirectory.map(t => ({ url: `${base}/temas/${t.slug}`, changeFrequency: "weekly" as const, priority: 0.7 })),
     { url: `${base}/calendario-lunar`, changeFrequency: "monthly", priority: 0.65 },
@@ -30,9 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...blogPosts.map((post) => ({
       url: `${base}/supervivencia/${post.slug}`,
+      images: [`${base}${post.image}`],
       ...(post.updatedAt || post.publishedAt ? { lastModified: new Date((post.updatedAt ?? post.publishedAt)!) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.65,
     })),
   ];
+  return [...new Map(entries.map(entry => [entry.url, entry])).values()];
 }

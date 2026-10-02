@@ -6,6 +6,7 @@ const footerColumns = [
     title: "Explorar",
     links: [
       ["/temas", "Todos los temas"],
+      ["/mapa-web", "Mapa de contenidos"],
       ["/supervivencia", "Artículos"],
       ["/guias-supervivencia", "Guías"],
       ["/herramientas-supervivencia", "Herramientas"],
