@@ -1,0 +1,25 @@
+import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+import styles from "../privacidad/page.module.css";
+
+export const metadata = pageMetadata({
+  title: "Política editorial y responsable | Modo Crisis Survival",
+  description: "Quién es responsable de Modo Crisis Survival, criterios de fuentes, límites de comparativas, uso de IA, financiación y cómo comunicar correcciones.",
+  slug: "politica-editorial",
+});
+
+export default function EditorialPolicyPage() {
+  return <>
+    <header className="page-hero"><p className="eyebrow">Proyecto independiente</p><h1>Política editorial</h1><p>Responsabilidad, fuentes y límites del contenido de Modo Crisis Survival.</p></header>
+    <article className={`content-band ${styles.policy}`}>
+      <section id="responsable"><h2>Responsable del proyecto</h2><p>Miguel Ángel es el responsable de Modo Crisis Survival. Puedes contactar con él en <a href="mailto:migueleclip@gmail.com">migueleclip@gmail.com</a>. La firma «Redacción Modo Crisis Survival» identifica contenidos del proyecto; no implica un equipo de especialistas acreditados ni una revisión médica o técnica externa.</p></section>
+      <section className={styles.section}><h2>Para qué publicamos</h2><p>La web reúne recursos educativos para organizar la preparación doméstica y las salidas al aire libre. Una guía debe ayudarte a completar una tarea, comparar opciones con sus límites o reconocer cuándo necesitas una fuente oficial. La aplicación Android es un recurso complementario; no hace falta descargarla ni comprar material para leer los artículos.</p></section>
+      <section className={styles.section}><h2>Fuentes y ejercicios propios</h2><p>Cuando una página incluye fuentes, aparecen al final para que puedas consultar el documento original. Los ejemplos hipotéticos, fichas y ejercicios propuestos por el proyecto no son experiencias de rescate ni instrucciones de una autoridad. La presencia de una fuente no significa que ese organismo respalde toda la página. Ante una emergencia, sigue los servicios responsables de tu zona.</p><p>Las fechas de publicación y modificación se muestran cuando están registradas. Una fecha nueva se utiliza al cambiar el contenido, no como garantía de que toda la información siga vigente.</p></section>
+      <section className={styles.section}><h2>Comparativas sin pruebas inventadas</h2><p>Las comparativas documentales no son ensayos propios ni certificaciones de seguridad. Distinguimos datos publicados por fabricantes de cálculos ilustrativos. Los precios, disponibilidades y especificaciones pueden cambiar: consulta la ficha del modelo y su manual. Un enlace de búsqueda en Amazon no identifica un producto probado ni demuestra que sea el mejor para tu situación.</p></section>
+      <section className={styles.section}><h2>Contenido asistido e imágenes</h2><p>Se utiliza asistencia de inteligencia artificial para preparar textos e ilustraciones. No equivale a una verificación experta y puede contener errores. Las imágenes ilustrativas no documentan necesariamente un hecho real. Las fotografías de archivo o de la app se distinguen cuando se conocen su origen y contexto. Una fotografía, un dibujo o una respuesta automática nunca bastan para decidir si una planta, seta o animal es seguro.</p></section>
+      <section className={styles.section}><h2>Salud y seguridad</h2><p>No ofrecemos diagnóstico, tratamiento ni asesoramiento profesional personalizado. Los cálculos tienen supuestos y limitaciones; un resultado no autoriza a cruzar un río, consumir agua dudosa o realizar una instalación. La información urgente no debe depender de una compra. Consulta a profesionales y autoridades para decisiones que puedan afectar a la salud, a la seguridad o a obligaciones legales.</p></section>
+      <section className={styles.section}><h2>Financiación y decisiones de compra</h2><p>El proyecto puede financiarse con donaciones voluntarias y enlaces comerciales identificados. En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Consultar los contenidos no obliga a abrir esos enlaces. No hay anuncios de Google activados actualmente; su eventual incorporación requiere la configuración y el consentimiento correspondientes.</p><p><Link href="/aviso-legal">Información legal y comercial</Link> · <Link href="/privacidad">Privacidad</Link> · <Link href="/cookies">Cookies</Link></p></section>
+      <section className={styles.section}><h2>Cómo comunicar una corrección</h2><p>Escribe a <a href="mailto:migueleclip@gmail.com">migueleclip@gmail.com</a> o utiliza <Link href="/contacto">el formulario de contacto</Link>. Incluye la URL, el fragmento que consideras incorrecto y, si la tienes, la fuente que permite comprobarlo. No envíes documentos personales o información médica innecesaria. Los avisos recibidos sirven para revisar el contenido; no son un canal de emergencias. Si existe peligro inmediato, llama al 112.</p></section>
+    </article>
+  </>;
+}

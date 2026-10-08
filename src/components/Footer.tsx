@@ -24,7 +24,7 @@ const footerColumns = [
   },
   {
     title: "Proyecto",
-    links: [["/sobre-nosotros", "Sobre nosotros"], ["/donaciones", "Donaciones"], ["/contacto", "Contacto"]],
+    links: [["/sobre-nosotros", "Sobre nosotros"], ["/politica-editorial", "Política editorial"], ["/donaciones", "Donaciones"], ["/contacto", "Contacto"]],
   },
   {
     title: "Legal",

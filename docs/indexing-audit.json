@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-02T22:11:07.678Z",
-  "environment": "http://127.0.0.1:3021",
-  "sitemapURLs": 200,
+  "checkedAt": "2026-10-08T12:14:09.161Z",
+  "environment": "http://127.0.0.1:3023",
+  "sitemapURLs": 201,
   "articleURLs": 98,
   "paginatedURLs": 18,
   "unreachable": [],
@@ -301,6 +301,11 @@
       "path": "/plantas-y-fauna",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/plantas-y-fauna"
+    },
+    {
+      "path": "/politica-editorial",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/politica-editorial"
     },
     {
       "path": "/preguntas-frecuentes",

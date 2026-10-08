@@ -35,6 +35,10 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
+      ...["/vista-previa-web.html", "/inicio-editorial-revisado.html", "/inicio-remoto.html"].map(source => ({
+        source,
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      })),
       {
         source: "/administracion/:path*",
         headers: [

@@ -10,6 +10,7 @@ import { outdoorArticles } from "./outdoor-articles";
 import { everydayArticles, everydayUpdates } from "./everyday-survival";
 import { calculatorWebNotes } from './calculator-web-notes';
 import articleCovers from './article-covers.json';
+import { articleQualityRevisions } from './article-quality-revisions';
 
 export interface BlogSection {
   image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
@@ -1761,6 +1762,12 @@ for (const revision of everydayArticles.filter(post => everydayUpdates.has(post.
 for (const [slug, revision] of Object.entries(calculatorWebNotes)) {
   const post = blogPosts.find(p => p.slug === slug);
   if (post) Object.assign(post, revision, { updatedAt: '2026-09-28' });
+}
+
+for (const [slug, revision] of Object.entries(articleQualityRevisions)) {
+  const post = blogPosts.find(item => item.slug === slug);
+  if (!post) throw new Error(`Missing revised guide: ${slug}`);
+  Object.assign(post, revision, { updatedAt: '2026-10-08' });
 }
 
 // Final per-article selection takes precedence over legacy topic-based images.

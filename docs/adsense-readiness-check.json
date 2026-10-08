@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-08T12:18:40.337Z",
+  "origin": "http://127.0.0.1:3023",
+  "adsTxt": {
+    "status": 200,
+    "publisher": "pub-7330652876943268"
+  },
+  "viewports": [
+    360,
+    414,
+    768,
+    1440
+  ],
+  "paths": [
+    "/politica-editorial",
+    "/supervivencia/como-crear-plan-familiar-emergencia",
+    "/supervivencia/como-revisar-kit-emergencia",
+    "/supervivencia/documentacion-conviene-tener-disponible",
+    "/supervivencia/como-preparar-ninos-sin-asustarlos",
+    "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon"
+  ],
+  "previewsNoindex": true,
+  "organizationalGuidesWithoutShoppingBlocks": true
+}

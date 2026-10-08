@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPost } from "@/content/blog";
 import { batchTwoRevisions } from "@/content/batch-two";
 import { everydayUpdates } from "@/content/everyday-survival";
+import { articleQualityRevisions } from "@/content/article-quality-revisions";
 import originals from "@/content/editorial-articles.json";
 import { articleIndex, articleTopic, readingMinutes, relatedArticles } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
@@ -81,7 +82,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <h1>{post.title}</h1>
           <p className="editorial-standfirst">{post.excerpt}</p>
           <div className="editorial-byline">
-            <span>Redacción Modo Crisis Survival</span>
+            <Link href="/politica-editorial#responsable">Redacción Modo Crisis Survival</Link>
             <span>
               <Clock size={15} aria-hidden /> {readingMinutes(post)} min de lectura
             </span>
@@ -94,6 +95,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 })}
               </time>
             ) : null}
+            {post.updatedAt ? <span>Actualizado: <time dateTime={post.updatedAt}>{new Date(`${post.updatedAt}T12:00:00`).toLocaleDateString("es-ES")}</time></span> : null}
           </div>
         </header>
         {kind!=='Calculadora'?<figure className="editorial-article-photo">
@@ -224,9 +226,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   equipo. Puedes <Link href="/contacto">comunicar una corrección</Link>.
                 </p>
               )}
-              <Link href="/sobre-nosotros">Cómo trabajamos y cómo se financia la web</Link>
+              <Link href="/politica-editorial">Cómo trabajamos y cómo se financia la web</Link>
             </section>
-            {monetizationPolicy(`/supervivencia/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
+            {!articleQualityRevisions[post.slug] && monetizationPolicy(`/supervivencia/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
             <section className="editorial-app-cta">
               <Smartphone size={26} aria-hidden />
               <div>
@@ -271,7 +273,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             author: {
               "@type": "Organization",
               name: "Modo Crisis Survival",
-              url: absoluteUrl("/sobre-nosotros"),
+              url: absoluteUrl("/politica-editorial#responsable"),
             },
             publisher: {
               "@type": "Organization",

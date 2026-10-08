@@ -1,0 +1,12 @@
+/ads.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/vista-previa-web.html
+  X-Robots-Tag: noindex
+
+/inicio-editorial-revisado.html
+  X-Robots-Tag: noindex
+
+/inicio-remoto.html
+  X-Robots-Tag: noindex
