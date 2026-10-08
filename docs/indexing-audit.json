@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-08T12:14:09.161Z",
+  "checkedAt": "2026-10-08T13:38:44.724Z",
   "environment": "http://127.0.0.1:3023",
-  "sitemapURLs": 201,
-  "articleURLs": 98,
-  "paginatedURLs": 18,
+  "sitemapURLs": 185,
+  "articleURLs": 86,
+  "paginatedURLs": 14,
   "unreachable": [],
   "viewports": [
     360,
@@ -73,16 +73,6 @@
       "canonical": "https://www.modocrisissurvival.com/catalogo/guias/4"
     },
     {
-      "path": "/catalogo/guias/5",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/catalogo/guias/5"
-    },
-    {
-      "path": "/catalogo/temas/10",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/10"
-    },
-    {
       "path": "/catalogo/temas/2",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/catalogo/temas/2"
@@ -121,16 +111,6 @@
       "path": "/catalogo/temas/9",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/catalogo/temas/9"
-    },
-    {
-      "path": "/catalogo/temas/agua/2",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/agua/2"
-    },
-    {
-      "path": "/catalogo/temas/comunicacion/2",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/comunicacion/2"
     },
     {
       "path": "/catalogo/temas/familia/2",
@@ -448,19 +428,9 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/apagon-general-espana-pasos"
     },
     {
-      "path": "/supervivencia/app-supervivencia-android-sin-internet",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/app-supervivencia-android-sin-internet"
-    },
-    {
       "path": "/supervivencia/bateria-10000-mah-cargas-reales",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/bateria-10000-mah-cargas-reales"
-    },
-    {
-      "path": "/supervivencia/botiquin-emergencia-casa",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/botiquin-emergencia-casa"
     },
     {
       "path": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
@@ -543,11 +513,6 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/caza-observacion-fauna-preparacion"
     },
     {
-      "path": "/supervivencia/checklist-evacuacion-incendio-vivienda",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/checklist-evacuacion-incendio-vivienda"
-    },
-    {
       "path": "/supervivencia/ciberataque-masivo-servicios-esenciales",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/ciberataque-masivo-servicios-esenciales"
@@ -573,11 +538,6 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas"
     },
     {
-      "path": "/supervivencia/como-preparar-coche-averia",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/como-preparar-coche-averia"
-    },
-    {
       "path": "/supervivencia/como-preparar-ninos-sin-asustarlos",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/como-preparar-ninos-sin-asustarlos"
@@ -591,11 +551,6 @@
       "path": "/supervivencia/como-revisar-kit-emergencia",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/como-revisar-kit-emergencia"
-    },
-    {
-      "path": "/supervivencia/como-utilizar-mapas-offline",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/como-utilizar-mapas-offline"
     },
     {
       "path": "/supervivencia/confinamiento-emergencia-casa-que-hacer",
@@ -623,19 +578,9 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/desinformacion-emergencias-deepfakes-alertas-falsas"
     },
     {
-      "path": "/supervivencia/diferencias-alertas-oficiales-avisos-meteorologicos",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/diferencias-alertas-oficiales-avisos-meteorologicos"
-    },
-    {
       "path": "/supervivencia/documentacion-conviene-tener-disponible",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/documentacion-conviene-tener-disponible"
-    },
-    {
-      "path": "/supervivencia/documentos-medicos-offline-emergencias",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/documentos-medicos-offline-emergencias"
     },
     {
       "path": "/supervivencia/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
@@ -743,11 +688,6 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/mochila-emergencia-72-horas-peso-realista"
     },
     {
-      "path": "/supervivencia/mochila-emergencia-trabajo-oficina",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/mochila-emergencia-trabajo-oficina"
-    },
-    {
       "path": "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
@@ -768,11 +708,6 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir"
     },
     {
-      "path": "/supervivencia/potabilizar-agua-emergencia-metodos-seguros",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/potabilizar-agua-emergencia-metodos-seguros"
-    },
-    {
       "path": "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/powerbanks-solares-aguantan-un-apagon-largo"
@@ -781,11 +716,6 @@
       "path": "/supervivencia/preparacion-emergencias-casa-principiantes",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/preparacion-emergencias-casa-principiantes"
-    },
-    {
-      "path": "/supervivencia/preparar-mascotas-emergencia",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/preparar-mascotas-emergencia"
     },
     {
       "path": "/supervivencia/preppers-espanoles-que-aprendieron-del-gran-apagon",
@@ -811,16 +741,6 @@
       "path": "/supervivencia/que-es-archivo-mbtiles",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/que-es-archivo-mbtiles"
-    },
-    {
-      "path": "/supervivencia/que-guardar-mochila-72-horas",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/que-guardar-mochila-72-horas"
-    },
-    {
-      "path": "/supervivencia/que-hacer-cuando-no-hay-cobertura",
-      "status": 200,
-      "canonical": "https://www.modocrisissurvival.com/supervivencia/que-hacer-cuando-no-hay-cobertura"
     },
     {
       "path": "/supervivencia/que-hacer-durante-dana",

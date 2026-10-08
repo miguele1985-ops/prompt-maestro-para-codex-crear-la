@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "error" | "sent">("idle");
@@ -67,9 +68,10 @@ export function ContactForm() {
       <label>Correo <input name="email" type="email" required autoComplete="email" /></label>
       <label>Asunto <input name="subject" required /></label>
       <label>Mensaje <textarea name="message" required rows={6} /></label>
-      <label className="check"><input type="checkbox" name="privacy" required /> Acepto la política de privacidad.</label>
+      <label className="check"><input type="checkbox" name="privacy" required /> He leído la <Link href="/privacidad#web-privacy-title">política de privacidad</Link> y autorizo el uso de mis datos para atender esta consulta.</label>
       <button className="button primary" type="submit">Enviar mensaje</button>
       {status === "error" ? <p role="alert" className="warning-text">{feedback}</p> : null}
+      {status === "error" ? <p>También puedes escribir a <a href="mailto:migueleclip@gmail.com">migueleclip@gmail.com</a>.</p> : null}
       {status === "sent" ? <p role="status" className="admin-status">{feedback}</p> : null}
     </form>
   );

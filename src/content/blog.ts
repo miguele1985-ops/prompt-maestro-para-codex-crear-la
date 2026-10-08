@@ -11,6 +11,9 @@ import { everydayArticles, everydayUpdates } from "./everyday-survival";
 import { calculatorWebNotes } from './calculator-web-notes';
 import articleCovers from './article-covers.json';
 import { articleQualityRevisions } from './article-quality-revisions';
+import { distinctGuideRevisions } from './distinct-guide-revisions';
+import { articleAliases, canonicalArticleHref } from './article-consolidation';
+import { articleSourceAdditions } from './article-source-additions';
 
 export interface BlogSection {
   image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
@@ -1764,7 +1767,7 @@ for (const [slug, revision] of Object.entries(calculatorWebNotes)) {
   if (post) Object.assign(post, revision, { updatedAt: '2026-09-28' });
 }
 
-for (const [slug, revision] of Object.entries(articleQualityRevisions)) {
+for (const [slug, revision] of Object.entries({ ...articleQualityRevisions, ...distinctGuideRevisions })) {
   const post = blogPosts.find(item => item.slug === slug);
   if (!post) throw new Error(`Missing revised guide: ${slug}`);
   Object.assign(post, revision, { updatedAt: '2026-10-08' });
@@ -1776,12 +1779,30 @@ for (const post of blogPosts) {
   if (cover) Object.assign(post, cover);
 }
 
+for (const [slug, sources] of Object.entries(articleSourceAdditions)) {
+  const post = blogPosts.find(item => item.slug === slug);
+  if (!post) throw new Error(`Missing source destination: ${slug}`);
+  post.sources = sources;
+  post.updatedAt = '2026-10-08';
+}
+
+for (const [alias, destination] of Object.entries(articleAliases)) {
+  if (!blogPosts.some(post => post.slug === destination)) throw new Error(`Missing consolidation destination: ${destination}`);
+  const index = blogPosts.findIndex(post => post.slug === alias);
+  if (index < 0) throw new Error(`Missing consolidation source: ${alias}`);
+  blogPosts.splice(index, 1);
+}
+for (const post of blogPosts) {
+  post.relatedLinks = post.relatedLinks?.map(link => ({ ...link, href: canonicalArticleHref(link.href) }));
+  post.sections = post.sections.map(section => ({ ...section, links: section.links?.map(link => ({ ...link, href: canonicalArticleHref(link.href) })) }));
+}
+
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));
 
 export const blogArticles = orderedBlogPosts.map((post) => post.title);
 
 export function getBlogPost(slug: string) {
-  return blogPosts.find((post) => post.slug === slug);
+  return blogPosts.find((post) => post.slug === (articleAliases[slug] ?? slug));
 }
 
 export const blogAppUseGuides: Record<string, BlogAppUseGuide> = {

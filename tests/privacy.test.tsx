@@ -25,7 +25,9 @@ describe("Google Play privacy policy", () => {
     }
     const web = document.querySelector('section[aria-labelledby="web-privacy-title"]')!;
     expect(web.textContent).toContain("Privacidad de la web");
-    expect(web.textContent).toContain("Datos que se pueden recoger");
+    expect(web.textContent).toContain("Contacto y soporte");
+    expect(web.textContent).toContain("Estadísticas opcionales");
+    expect(web.querySelector('a[href="https://www.cloudflare.com/privacypolicy/"]')).not.toBeNull();
     expect(web.querySelectorAll("h3").length).toBeGreaterThan(0);
     expect(metadata.alternates?.canonical).toBe("https://www.modocrisissurvival.com/privacidad");
   });

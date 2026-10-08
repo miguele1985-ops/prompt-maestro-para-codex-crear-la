@@ -23,6 +23,7 @@ import { officialApkUrl, siteConfig } from "@/content/site-config";
 import { orderedBlogPosts } from "@/content/blog";
 import { guideCategories } from "@/content/guides";
 import { allContentPages, calculators, crisisScenarios } from "@/content/pages";
+import { webPolicyPages } from "@/content/web-policies";
 import { readAdminContent } from "@/lib/admin-content";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
@@ -456,7 +457,7 @@ async function getVisibleContent() {
   const savedPages = savedContent?.pages?.length ? savedContent.pages : allContentPages;
   const savedDownload = savedContent?.download as Partial<typeof downloadInfo> | undefined;
   return {
-    pages: savedPages.map((page) =>
+    pages: [...savedPages.filter(page => !webPolicyPages.some(policy => policy.slug === page.slug)), ...webPolicyPages].map((page) =>
       page.slug === "descargar"
         ? { ...page, body: [], highlights: [], sections: [] }
         : resourcesPageWithRequiredCalculators(page),

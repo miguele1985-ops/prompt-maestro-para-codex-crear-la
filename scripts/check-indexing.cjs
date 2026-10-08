@@ -43,7 +43,7 @@ const canonical = 'https://www.modocrisissurvival.com';
  const browser=await chromium.launch({channel:'msedge',headless:true});
  try {
   const page=await browser.newPage();
-  await page.addInitScript(()=>localStorage.setItem('mcs-cookie-consent','rejected'));
+  await page.addInitScript(()=>localStorage.setItem('mcs-cookie-consent',JSON.stringify({version:1,analytics:false})));
   for(const width of [360,414,768,1440]){
    await page.setViewportSize({width,height:900});
    await page.goto(origin+'/supervivencia');

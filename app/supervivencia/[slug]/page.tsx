@@ -10,6 +10,7 @@ import { blogPosts, getBlogPost } from "@/content/blog";
 import { batchTwoRevisions } from "@/content/batch-two";
 import { everydayUpdates } from "@/content/everyday-survival";
 import { articleQualityRevisions } from "@/content/article-quality-revisions";
+import { distinctGuideRevisions } from "@/content/distinct-guide-revisions";
 import originals from "@/content/editorial-articles.json";
 import { articleIndex, articleTopic, readingMinutes, relatedArticles } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
@@ -52,7 +53,7 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const post = getBlogPost((await params).slug);
   if (!post) notFound();
-  const revised = Boolean(batchTwoRevisions[post.slug]) || everydayUpdates.has(post.slug);
+  const revised = Boolean(batchTwoRevisions[post.slug] || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug]) || everydayUpdates.has(post.slug);
   const original = revised ? undefined : (originals as Record<string, string>)[post.slug];
   const info = revised ? undefined : articleIndex[post.slug];
   const sections = original
@@ -228,7 +229,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               )}
               <Link href="/politica-editorial">Cómo trabajamos y cómo se financia la web</Link>
             </section>
-            {!articleQualityRevisions[post.slug] && monetizationPolicy(`/supervivencia/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
+            {!articleQualityRevisions[post.slug] && !distinctGuideRevisions[post.slug] && monetizationPolicy(`/supervivencia/${post.slug}`).affiliate ? <ArticleEquipment slug={post.slug} /> : null}
             <section className="editorial-app-cta">
               <Smartphone size={26} aria-hidden />
               <div>

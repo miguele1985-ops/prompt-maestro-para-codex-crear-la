@@ -1,407 +1,87 @@
 {
-  "checkedAt": "2026-10-08T12:08:58.943Z",
+  "checkedAt": "2026-10-08T13:45:38.057Z",
   "note": "Content-data audit; excludes common navigation, commerce and interactive UI. Length alone does not determine quality or AdSense acceptance.",
-  "totalArticles": 98,
-  "briefGuides": [
-    {
-      "slug": "diferencias-alertas-oficiales-avisos-meteorologicos",
-      "words": 74,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-preparar-coche-averia",
-      "words": 75,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "botiquin-emergencia-casa",
-      "words": 75,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "preparar-mascotas-emergencia",
-      "words": 78,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "senales-sos-comunicacion-visual",
-      "words": 78,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "documentos-medicos-offline-emergencias",
-      "words": 81,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-es-archivo-mbtiles",
-      "words": 82,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "gestion-alimentos-sin-electricidad",
-      "words": 83,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-ahorrar-bateria-emergencia",
-      "words": 84,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-hacer-cuando-no-hay-cobertura",
-      "words": 84,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "refugio-temporal-casa-frio-calor",
-      "words": 85,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-utilizar-mapas-offline",
-      "words": 86,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "mochila-emergencia-trabajo-oficina",
-      "words": 87,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "rutas-evacuacion-mapas-offline",
-      "words": 88,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-guardar-mochila-72-horas",
-      "words": 89,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "simulacro-familiar-emergencia-30-minutos",
-      "words": 90,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "kit-emergencia-personas-mayores",
-      "words": 99,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "checklist-evacuacion-incendio-vivienda",
-      "words": 101,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "preparacion-emergencias-casa-principiantes",
-      "words": 106,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "potabilizar-agua-emergencia-metodos-seguros",
-      "words": 107,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "app-supervivencia-android-sin-internet",
-      "words": 126,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
-      "words": 150,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "radio-frecuencias-emergencia-sin-cobertura",
-      "words": 214,
-      "interactive": false,
-      "sources": 0
-    }
-  ],
-  "withoutExplicitSources": [
-    "calculadora-senales-humo-supervivencia",
-    "calculadora-hipotermia-riesgo",
-    "calculadora-conversor-survival-unidades",
-    "diferencias-alertas-oficiales-avisos-meteorologicos",
-    "como-preparar-coche-averia",
-    "botiquin-emergencia-casa",
-    "calculadora-cruce-rios-seguridad",
-    "preparar-mascotas-emergencia",
-    "senales-sos-comunicacion-visual",
-    "calculadora-silbato-emergencia-senales",
-    "documentos-medicos-offline-emergencias",
-    "que-es-archivo-mbtiles",
-    "calculadora-potabilizacion-quimica-agua",
-    "calculadora-destilacion-solar-agua",
-    "gestion-alimentos-sin-electricidad",
-    "como-ahorrar-bateria-emergencia",
-    "que-hacer-cuando-no-hay-cobertura",
-    "refugio-temporal-casa-frio-calor",
-    "como-utilizar-mapas-offline",
-    "mochila-emergencia-trabajo-oficina",
-    "rutas-evacuacion-mapas-offline",
-    "que-guardar-mochila-72-horas",
-    "simulacro-familiar-emergencia-30-minutos",
-    "kit-emergencia-personas-mayores",
-    "checklist-evacuacion-incendio-vivienda",
-    "preparacion-emergencias-casa-principiantes",
-    "potabilizar-agua-emergencia-metodos-seguros",
-    "app-supervivencia-android-sin-internet",
-    "calculadora-horas-luz-ruta",
-    "que-debe-incluir-aplicacion-supervivencia-offline",
-    "calculadora-sensacion-termica-frio-calor",
-    "calculadora-velocidad-necesaria-ruta",
-    "calculadora-energia-powerbank-emergencia",
-    "calculadora-captacion-lluvia-supervivencia",
-    "calculadora-gestion-agua-supervivencia",
-    "radio-frecuencias-emergencia-sin-cobertura",
-    "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
-    "sin-mochila-sin-equipo",
-    "mascotas-en-emergencias-apagon-calor-y-evacuacion",
-    "psicologia-emergencia-errores-mentales",
-    "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
-    "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia"
-  ],
+  "totalArticles": 86,
+  "briefGuides": [],
+  "withoutExplicitSources": [],
   "articles": [
     {
       "slug": "calculadora-senales-humo-supervivencia",
       "words": 57,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-hipotermia-riesgo",
       "words": 70,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-conversor-survival-unidades",
       "words": 71,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "diferencias-alertas-oficiales-avisos-meteorologicos",
-      "words": 74,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-preparar-coche-averia",
-      "words": 75,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "botiquin-emergencia-casa",
-      "words": 75,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-cruce-rios-seguridad",
       "words": 75,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "preparar-mascotas-emergencia",
-      "words": 78,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "senales-sos-comunicacion-visual",
-      "words": 78,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-silbato-emergencia-senales",
       "words": 80,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "documentos-medicos-offline-emergencias",
-      "words": 81,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-es-archivo-mbtiles",
-      "words": 82,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-potabilizacion-quimica-agua",
       "words": 82,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-destilacion-solar-agua",
       "words": 82,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "gestion-alimentos-sin-electricidad",
-      "words": 83,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-ahorrar-bateria-emergencia",
-      "words": 84,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-hacer-cuando-no-hay-cobertura",
-      "words": 84,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "refugio-temporal-casa-frio-calor",
-      "words": 85,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "como-utilizar-mapas-offline",
-      "words": 86,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "mochila-emergencia-trabajo-oficina",
-      "words": 87,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "rutas-evacuacion-mapas-offline",
-      "words": 88,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "que-guardar-mochila-72-horas",
-      "words": 89,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "simulacro-familiar-emergencia-30-minutos",
-      "words": 90,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "kit-emergencia-personas-mayores",
-      "words": 99,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "checklist-evacuacion-incendio-vivienda",
-      "words": 101,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "preparacion-emergencias-casa-principiantes",
-      "words": 106,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "potabilizar-agua-emergencia-metodos-seguros",
-      "words": 107,
-      "interactive": false,
-      "sources": 0
-    },
-    {
-      "slug": "app-supervivencia-android-sin-internet",
-      "words": 126,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-horas-luz-ruta",
       "words": 149,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
-      "words": 150,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-sensacion-termica-frio-calor",
       "words": 155,
       "interactive": true,
-      "sources": 0
+      "sources": 2
     },
     {
       "slug": "calculadora-velocidad-necesaria-ruta",
       "words": 158,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-energia-powerbank-emergencia",
       "words": 161,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-captacion-lluvia-supervivencia",
       "words": 180,
       "interactive": true,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "calculadora-gestion-agua-supervivencia",
       "words": 200,
       "interactive": true,
-      "sources": 0
-    },
-    {
-      "slug": "radio-frecuencias-emergencia-sin-cobertura",
-      "words": 214,
-      "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
@@ -431,7 +111,7 @@
       "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
       "words": 337,
       "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "pesca-preparar-salida-responsable",
@@ -458,10 +138,76 @@
       "sources": 1
     },
     {
+      "slug": "refugio-temporal-casa-frio-calor",
+      "words": 383,
+      "interactive": false,
+      "sources": 2
+    },
+    {
+      "slug": "senales-sos-comunicacion-visual",
+      "words": 393,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "preparacion-emergencias-casa-principiantes",
+      "words": 394,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "gestion-alimentos-sin-electricidad",
+      "words": 399,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "kit-emergencia-personas-mayores",
+      "words": 401,
+      "interactive": false,
+      "sources": 1
+    },
+    {
       "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
       "words": 409,
       "interactive": false,
       "sources": 4
+    },
+    {
+      "slug": "simulacro-familiar-emergencia-30-minutos",
+      "words": 411,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "rutas-evacuacion-mapas-offline",
+      "words": 415,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "como-ahorrar-bateria-emergencia",
+      "words": 420,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
+      "words": 427,
+      "interactive": false,
+      "sources": 2
+    },
+    {
+      "slug": "que-es-archivo-mbtiles",
+      "words": 437,
+      "interactive": false,
+      "sources": 1
+    },
+    {
+      "slug": "radio-frecuencias-emergencia-sin-cobertura",
+      "words": 439,
+      "interactive": false,
+      "sources": 2
     },
     {
       "slug": "documentacion-conviene-tener-disponible",
@@ -497,7 +243,7 @@
       "slug": "sin-mochila-sin-equipo",
       "words": 509,
       "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "como-crear-plan-familiar-emergencia",
@@ -539,7 +285,7 @@
       "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
       "words": 562,
       "interactive": false,
-      "sources": 0
+      "sources": 2
     },
     {
       "slug": "tormenta-solar-extrema-como-prepararse",
@@ -557,13 +303,13 @@
       "slug": "psicologia-emergencia-errores-mentales",
       "words": 574,
       "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
       "words": 604,
       "interactive": false,
-      "sources": 0
+      "sources": 2
     },
     {
       "slug": "crisis-cadena-suministro-supermercados-vacios",
@@ -582,6 +328,12 @@
       "words": 677,
       "interactive": false,
       "sources": 1
+    },
+    {
+      "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "words": 702,
+      "interactive": false,
+      "sources": 2
     },
     {
       "slug": "depositos-de-agua-para-emergencias-que-capacidad-elegir",
@@ -620,12 +372,6 @@
       "sources": 2
     },
     {
-      "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
-      "words": 717,
-      "interactive": false,
-      "sources": 2
-    },
-    {
       "slug": "ciberataque-masivo-servicios-esenciales",
       "words": 721,
       "interactive": false,
@@ -650,6 +396,12 @@
       "sources": 4
     },
     {
+      "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "words": 759,
+      "interactive": false,
+      "sources": 4
+    },
+    {
       "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
       "words": 768,
       "interactive": false,
@@ -658,12 +410,6 @@
     {
       "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
       "words": 775,
-      "interactive": false,
-      "sources": 4
-    },
-    {
-      "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
-      "words": 779,
       "interactive": false,
       "sources": 4
     },
@@ -713,7 +459,7 @@
       "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
       "words": 895,
       "interactive": false,
-      "sources": 0
+      "sources": 1
     },
     {
       "slug": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",

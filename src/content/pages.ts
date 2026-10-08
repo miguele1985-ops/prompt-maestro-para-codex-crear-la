@@ -1,5 +1,6 @@
 import type { Calculator, ContentPage, Scenario } from "@/types/content";
 import adminOverrides from "./admin-overrides.json";
+import { webPolicyPages } from "./web-policies";
 
 export const crisisScenarios: Scenario[] = [
   {
@@ -1338,7 +1339,7 @@ export const pages: ContentPage[] = [
     eyebrow: "Proyecto independiente",
     description: "Quién está detrás del proyecto, cómo se revisa el contenido y cómo se financia la web y la app.",
     body: [
-      "Modo Crisis Survival es un proyecto independiente creado para reunir guías, herramientas, checklists, mapas offline y recursos de preparación en una app Android y una web pública.",
+      "Modo Crisis Survival es un proyecto independiente de Miguel Ángel. Reúne guías, herramientas y recursos de preparación en una web pública y una app Android. Contacto: migueleclip@gmail.com.",
       "El objetivo no es sustituir a servicios de emergencia, autoridades ni profesionales, sino ayudar a organizar información útil antes de una situación difícil.",
     ],
     highlights: ["Proyecto independiente", "App gratuita", "Revisión continua", "Fuentes oficiales", "Donaciones", "Afiliación transparente"],
@@ -1347,6 +1348,8 @@ export const pages: ContentPage[] = [
         title: "Cómo se revisa el contenido",
         body: "Las páginas combinan preparación práctica, avisos de seguridad y enlaces a fuentes oficiales cuando procede. Los contenidos de salud, plantas, agua, meteorología y emergencias se tratan como apoyo educativo, no como orden profesional.",
         items: ["Fuentes oficiales cuando proceden", "Avisos visibles", "Sin promesas de seguridad absoluta", "Correcciones mediante formulario"],
+        buttonLabel: "Autoría, fuentes y criterios editoriales",
+        buttonHref: "/politica-editorial",
       },
       {
         title: "Cómo se financia",
@@ -1613,4 +1616,4 @@ function mergeContentPages(basePages: ContentPage[], editablePages: ContentPage[
 }
 
 export const adminContentPages = adminOverrides.pages as ContentPage[];
-export const allContentPages = mergeContentPages([...pages, ...legalPages], adminContentPages);
+export const allContentPages = mergeContentPages(mergeContentPages([...pages, ...legalPages], adminContentPages), webPolicyPages);

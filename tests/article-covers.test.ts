@@ -5,6 +5,7 @@ import sharp from 'sharp';
 import { blogPosts } from '../src/content/blog';
 import { portalContent } from '../src/content/portal';
 import covers from '../src/content/article-covers.json';
+import { articleAliases } from '../src/content/article-consolidation';
 
 describe('unique article covers', () => {
   it('assigns a different cover to every article, including renamed copies', async () => {
@@ -36,6 +37,6 @@ describe('unique article covers', () => {
       expect(item, post.slug).toBeDefined();
       if (item?.image) expect(item.image).toBe(post.image);
     }
-    for (const slug of Object.keys(covers)) expect(blogPosts.some(post => post.slug === slug), slug).toBe(true);
+    for (const slug of Object.keys(covers)) expect(blogPosts.some(post => post.slug === (articleAliases[slug] ?? slug)), slug).toBe(true);
   });
 });

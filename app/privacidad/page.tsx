@@ -14,7 +14,11 @@ const policyLinks = [
   "https://open-meteo.com/en/terms",
   "https://developers.google.com/ml-kit/android-data-disclosure",
   "https://policies.google.com/privacy",
+  "https://www.aepd.es/",
   "www.aepd.es",
+  "https://www.cloudflare.com/privacypolicy/",
+  "https://policies.google.com/technologies/partner-sites",
+  "https://myadcenter.google.com/",
 ];
 function PolicyText({ text }: { text: string }) {
   const link = policyLinks.find((url) => text.includes(url));
@@ -52,7 +56,7 @@ export default function PrivacyPage() {
         {webPrivacy.sections?.map((section) => (
           <section key={section.title} className={styles.section}>
             <h3>{section.title}</h3>
-            <p>{section.body}</p>
+            <p><PolicyText text={section.body} /></p>
             {section.items ? <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul> : null}
             {section.warning ? <p>{section.warning}</p> : null}
           </section>

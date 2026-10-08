@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-08T12:18:40.337Z",
+  "checkedAt": "2026-10-08T13:38:05.577Z",
   "origin": "http://127.0.0.1:3023",
   "adsTxt": {
     "status": 200,
@@ -17,7 +17,16 @@
     "/supervivencia/como-revisar-kit-emergencia",
     "/supervivencia/documentacion-conviene-tener-disponible",
     "/supervivencia/como-preparar-ninos-sin-asustarlos",
-    "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon"
+    "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon",
+    "/",
+    "/contacto",
+    "/cookies",
+    "/privacidad",
+    "/donaciones",
+    "/supervivencia/que-es-archivo-mbtiles",
+    "/supervivencia/gestion-alimentos-sin-electricidad",
+    "/supervivencia/kit-emergencia-personas-mayores",
+    "/supervivencia/radio-frecuencias-emergencia-sin-cobertura"
   ],
   "previewsNoindex": true,
   "organizationalGuidesWithoutShoppingBlocks": true

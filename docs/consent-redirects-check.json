@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-08T13:37:00.140Z",
+  "origin": "http://127.0.0.1:3023",
+  "permanentRedirects": 24,
+  "rejectionRespected": true,
+  "revocationRespected": true,
+  "paypalNotPreloaded": true,
+  "advertisingNotLoaded": true
+}

@@ -62,6 +62,7 @@ function isConfiguredUrl(value?: string) {
 
 export function PayPalDonationBlock({ donations }: { donations?: DonationSettings }) {
   const [paypalReady, setPaypalReady] = useState(false);
+  const [paypalEnabled, setPaypalEnabled] = useState(false);
   const [qrVisible, setQrVisible] = useState(true);
   const hostedButtonId = donations?.paypalHostedButtonId?.trim() || "9TZTUQQTQ8J7Q";
   const qrImage = donations?.qrImage?.trim() || "/assets/img/paypal-donacion-qr.png";
@@ -133,10 +134,11 @@ export function PayPalDonationBlock({ donations }: { donations?: DonationSetting
           <h2>Donar con PayPal</h2>
           <p>Aportación voluntaria para apoyar el mantenimiento y la mejora de Supervivencia Offline.</p>
           <div id="donate-button-container" className="paypal-button-shell">
+            {!paypalEnabled ? <button className="button secondary" type="button" onClick={() => setPaypalEnabled(true)}><HeartHandshake size={18} aria-hidden /> Activar botón de PayPal</button> : null}
             <div id="donate-button" aria-live="polite" />
           </div>
           <p className="paypal-fallback">
-            {!paypalReady
+            {!paypalEnabled ? "Activarlo conecta con PayPal, que aplica su política de privacidad." : !paypalReady
               ? "Si el botón no aparece correctamente, puedes escanear el código QR de PayPal o intentarlo de nuevo desde un navegador actualizado."
               : "Donación voluntaria gestionada mediante PayPal."}
           </p>
@@ -262,14 +264,14 @@ export function PayPalDonationBlock({ donations }: { donations?: DonationSetting
         </p>
       </article>
 
-      <Script
+      {paypalEnabled ? <Script
         id="paypal-donate-sdk"
         src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
         strategy="afterInteractive"
         charSet="UTF-8"
         onLoad={renderPayPal}
         onReady={renderPayPal}
-      />
+      /> : null}
     </section>
   );
 }

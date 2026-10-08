@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { batchTwoAliases } from "./src/content/batch-two";
 import { everydayAliases } from "./src/content/everyday-survival";
+import { articleAliases } from "./src/content/article-consolidation";
 
 const isDev = process.env.NODE_ENV !== "production";
 const scriptSrc = isDev
@@ -85,7 +86,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      ...Object.entries({ ...batchTwoAliases, ...everydayAliases }).flatMap(([source,destination]) => [
+      ...Object.entries({ ...batchTwoAliases, ...everydayAliases, ...articleAliases }).flatMap(([source,destination]) => [
         { source: `/blog/${source}`, destination: `/supervivencia/${destination}`, permanent: true },
         { source: `/supervivencia/${source}`, destination: `/supervivencia/${destination}`, permanent: true },
       ]),

@@ -2,8 +2,10 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { analyticsAllowed, privacyPreferenceEvent } from "@/lib/privacy-preferences";
 
 function sendCounterEvent(type: "visit" | "download" | "donation", path?: string) {
+  if (!analyticsAllowed()) return;
   const payload = JSON.stringify({ type, path });
 
   if (typeof navigator !== "undefined" && "sendBeacon" in navigator) {
@@ -26,19 +28,26 @@ export function StatsTracker() {
   useEffect(() => {
     if (!pathname || pathname.startsWith("/administracion") || pathname.startsWith("/admin-login")) return;
 
-    const today = new Date().toISOString().slice(0, 10);
-    const storageKey = `mcs-visit:${today}:${pathname}`;
-    if (sessionStorage.getItem(storageKey)) return;
-
-    sessionStorage.setItem(storageKey, "1");
-    const trackVisit = () => sendCounterEvent("visit", pathname);
-    if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(trackVisit, { timeout: 3000 });
-      return () => window.cancelIdleCallback(idleId);
-    }
-
-    const timeoutId = globalThis.setTimeout(trackVisit, 1200);
-    return () => globalThis.clearTimeout(timeoutId);
+    const trackVisit = () => {
+      if (!analyticsAllowed()) return;
+      const today = new Date().toISOString().slice(0, 10);
+      const storageKey = `mcs-visit:${today}:${pathname}`;
+      try {
+        if (sessionStorage.getItem(storageKey)) return;
+        sessionStorage.setItem(storageKey, "1");
+      } catch {
+        return;
+      }
+      sendCounterEvent("visit", pathname);
+    };
+    const timer = globalThis.setTimeout(trackVisit, 1200);
+    window.addEventListener(privacyPreferenceEvent, trackVisit);
+    window.addEventListener("storage", trackVisit);
+    return () => {
+      globalThis.clearTimeout(timer);
+      window.removeEventListener(privacyPreferenceEvent, trackVisit);
+      window.removeEventListener("storage", trackVisit);
+    };
   }, [pathname]);
 
   return null;

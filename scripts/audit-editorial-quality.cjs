@@ -5,9 +5,11 @@ const originals = require('../src/content/editorial-articles.json');
 const { batchTwoRevisions } = require('../src/content/batch-two.ts');
 const { everydayUpdates } = require('../src/content/everyday-survival.ts');
 const { articleIndex } = require('../src/lib/editorial.ts');
+const { articleQualityRevisions } = require('../src/content/article-quality-revisions.ts');
+const { distinctGuideRevisions } = require('../src/content/distinct-guide-revisions.ts');
 
 const rows = posts.map(post => {
-  const original = !batchTwoRevisions[post.slug] && !everydayUpdates.has(post.slug) && originals[post.slug];
+  const original = !batchTwoRevisions[post.slug] && !everydayUpdates.has(post.slug) && !articleQualityRevisions[post.slug] && !distinctGuideRevisions[post.slug] && originals[post.slug];
   const text = original
     ? new JSDOM(original).window.document.body.textContent
     : post.sections.map(section => [section.heading, section.body, ...(section.bullets || [])].join(' ')).join(' ');

@@ -10,8 +10,8 @@ describe('five everyday survival articles and URL migration', () => {
   it('adds three and expands two without duplicate slugs', () => {
     expect(everydayArticles).toHaveLength(5);
     expect(everydayUpdates.size).toBe(2);
-    expect(blogPosts).toHaveLength(98);
-    expect(new Set(blogPosts.map(p => p.slug)).size).toBe(98);
+    expect(blogPosts).toHaveLength(86);
+    expect(new Set(blogPosts.map(p => p.slug)).size).toBe(86);
     for (const entry of everydayArticles) {
       const post = getBlogPost(entry.slug)!;
       expect(post.sections).toEqual(entry.sections);

@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
-type Consent = "accepted" | "rejected" | "custom";
-const key = "mcs-cookie-consent";
+import { readPrivacyPreferences, savePrivacyPreferences } from "@/lib/privacy-preferences";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const [settings, setSettings] = useState(false);
+  const [analytics, setAnalytics] = useState(false);
   const dock = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -28,12 +27,17 @@ export function CookieBanner() {
   }, [visible]);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setVisible(!localStorage.getItem(key)), 0);
+    const timer = window.setTimeout(() => {
+      const saved = readPrivacyPreferences();
+      setVisible(!saved);
+      setAnalytics(saved?.analytics ?? false);
+    }, 0);
     return () => window.clearTimeout(timer);
   }, []);
 
-  function save(value: Consent) {
-    localStorage.setItem(key, value);
+  function save(value: boolean) {
+    savePrivacyPreferences(value);
+    setAnalytics(value);
     setVisible(false);
   }
 
@@ -45,22 +49,20 @@ export function CookieBanner() {
     <section className="cookie-banner" ref={dock} aria-label="Consentimiento de cookies">
       <div>
         <strong>Preferencias de privacidad</strong>
-        <p>Solo las cookies necesarias están activas por defecto.</p>
+        <p>El almacenamiento necesario está activo. Los contadores opcionales de visitas y clics solo se activan con tu permiso. No hay anuncios de Google activos.</p>
         {settings ? (
           <fieldset>
-            <legend>Configurar categorias</legend>
+            <legend>Configurar preferencias</legend>
             <label><input type="checkbox" checked readOnly /> Necesarias</label>
-            <label><input type="checkbox" /> Analiticas</label>
-            <label><input type="checkbox" /> Preferencias</label>
-            <label><input type="checkbox" /> Marketing, solo si se utiliza</label>
+            <label><input type="checkbox" checked={analytics} onChange={event => setAnalytics(event.target.checked)} /> Contadores estadísticos</label>
           </fieldset>
         ) : null}
       </div>
       <div className="cookie-actions">
-        <Link className="cookie-info" href="/cookies">Mas informacion</Link>
-        <button className="cookie-primary" type="button" onClick={() => save("accepted")}>Aceptar</button>
-        <button className="cookie-secondary" type="button" onClick={() => save("rejected")}>Rechazar</button>
-        <button className="cookie-secondary" type="button" onClick={() => (settings ? save("custom") : setSettings(true))}>Configurar</button>
+        <Link className="cookie-info" href="/cookies">Más información</Link>
+        <button className="cookie-primary" type="button" onClick={() => save(true)}>Aceptar</button>
+        <button className="cookie-secondary" type="button" onClick={() => save(false)}>Rechazar</button>
+        <button className="cookie-secondary" type="button" onClick={() => (settings ? save(analytics) : setSettings(true))}>{settings ? "Guardar preferencias" : "Configurar"}</button>
       </div>
     </section>
   );

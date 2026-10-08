@@ -24,6 +24,6 @@ describe("interactive components", () => {
     localStorage.clear();
     render(React.createElement(CookieBanner));
     await userEvent.click(await screen.findByRole("button", { name: /rechazar/i }));
-    expect(localStorage.getItem("mcs-cookie-consent")).toBe("rejected");
+    expect(JSON.parse(localStorage.getItem("mcs-cookie-consent")!)).toEqual({ version: 1, analytics: false });
   });
 });

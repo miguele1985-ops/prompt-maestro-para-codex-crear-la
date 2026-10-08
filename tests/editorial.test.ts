@@ -18,6 +18,7 @@ import { blogPosts } from "../src/content/blog";
 import { relatedArticles } from "../src/lib/editorial";
 import upgrades from "../src/content/article-upgrades.json";
 import { existsSync } from "node:fs";
+import { articleSourceAdditions } from "../src/content/article-source-additions";
 describe("editorial migration", () => {
   it("publishes all 30 authored revisions with images, takeaways and valid next reads", () => {
     expect(Object.keys(upgrades)).toHaveLength(30);
@@ -29,7 +30,7 @@ describe("editorial migration", () => {
       expect(revision.keys).toHaveLength(3);
       expect(blogPosts.some((p) => p.slug === revision.next)).toBe(true);
       const post = blogPosts.find((p) => p.slug === slug)!;
-      expect(post.updatedAt).toBe(['objetos-de-casa-que-pueden-ayudarte-en-una-emergencia', '5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro'].includes(slug) ? "2026-09-28" : "2026-09-26");
+      expect(post.updatedAt).toBe(articleSourceAdditions[slug] ? "2026-10-08" : ['objetos-de-casa-que-pueden-ayudarte-en-una-emergencia', '5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro'].includes(slug) ? "2026-09-28" : "2026-09-26");
       expect(existsSync(`public${post.image}`)).toBe(true);
       for (const width of [240, 360, 576, 960, 1200]) expect(existsSync(`public${post.image.replace('.jpg', `-${width}.webp`)}`)).toBe(true);
     }

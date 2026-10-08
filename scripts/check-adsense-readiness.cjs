@@ -21,10 +21,15 @@ const base = process.argv[2] || 'http://127.0.0.1:3023';
     '/supervivencia/documentacion-conviene-tener-disponible',
     '/supervivencia/como-preparar-ninos-sin-asustarlos',
     '/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon',
+    '/', '/contacto', '/cookies', '/privacidad', '/donaciones',
+    '/supervivencia/que-es-archivo-mbtiles',
+    '/supervivencia/gestion-alimentos-sin-electricidad',
+    '/supervivencia/kit-emergencia-personas-mayores',
+    '/supervivencia/radio-frecuencias-emergencia-sin-cobertura',
   ];
   try {
     const page = await browser.newPage();
-    await page.addInitScript(() => localStorage.setItem('mcs-cookie-consent', 'rejected'));
+    await page.addInitScript(() => localStorage.setItem('mcs-cookie-consent', JSON.stringify({version:1,analytics:false})));
     for (const width of [360, 414, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       for (const path of paths) {
