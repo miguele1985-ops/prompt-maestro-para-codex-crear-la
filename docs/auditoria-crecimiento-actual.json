@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T20:31:50.997Z",
+  "checkedAt": "2026-10-14T21:16:07.810Z",
   "note": "Length is a triage signal, not a quality certification or ranking prediction. Source verification, originality and practical usefulness also need review. No Search Console query or traffic data available.",
   "articles": [
     {
@@ -642,14 +642,14 @@
       "slug": "caza-observacion-fauna-preparacion",
       "title": "Caza y fauna: qué preparar antes de salir al campo",
       "topic": "Naturaleza y preparación",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 356,
+      "classification": "MANTENER",
+      "words": 1217,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/caza-observacion-fauna-preparacion.webp",
       "alt": "Diagrama editorial de Caza y fauna: qué preparar antes de salir al campo. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Adapta las fichas de la app a una salida responsable: documentación, observación de rastros, regreso y límites que no conviene improvisar.",
+      "metaDescription": "Caza y observación de fauna: prepara permisos, recorrido, regreso y un cuaderno de rastros sin perseguir animales ni depender de capturas.",
       "metaLength": 138,
       "keywords": [
         "caza preparación",
@@ -658,33 +658,39 @@
       ],
       "sources": [
         {
-          "title": "MAPA: competencias y coordinación en caza",
-          "url": "https://www.mapa.gob.es/es/ganaderia/temas/gestion-cinegetica/comite_de_caza"
+          "title": "BOE: coordinación de caza y autoridades territoriales",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-4781"
+        },
+        {
+          "title": "BOE: convenio de licencias interautonómicas",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-5597"
         }
       ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/plantas-y-fauna",
         "/preparacion-practica/mapas-antes-de-salir",
-        "/aplicacion-supervivencia-offline"
+        "/aplicacion-supervivencia-offline",
+        "/supervivencia/senderismo-principiantes-planificar-ruta",
+        "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "pesca-preparar-salida-responsable",
       "title": "Pesca: prepara la salida antes de acercarte al agua",
       "topic": "Naturaleza y preparación",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 341,
+      "classification": "MANTENER",
+      "words": 1270,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/pesca-preparar-salida-responsable.webp",
       "alt": "Diagrama editorial de Pesca: prepara la salida antes de acercarte al agua. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Lugar, permisos, tiempo, material y regreso: una lista útil adaptada de la app, sin prometer capturas ni improvisar conservación.",
-      "metaLength": 129,
+      "metaDescription": "Pesca responsable: revisa lugar, permisos, tiempo, material y regreso. Organiza la jornada sin entrar al agua por equipo ni garantizar capturas.",
+      "metaLength": 144,
       "keywords": [
         "pesca preparación",
         "pesca responsable",
@@ -694,6 +700,10 @@
         {
           "title": "MAPA: pesca marítima de recreo y preguntas frecuentes",
           "url": "https://www.mapa.gob.es/es/pesca/temas/pesca-maritima-de-recreo/preguntas-frecuentes"
+        },
+        {
+          "title": "BOE: convenio de licencias en aguas continentales",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-5597"
         }
       ],
       "sourceLinksInBody": [],
@@ -701,11 +711,12 @@
         "/calendario-lunar",
         "/supervivencia/calculadora-horas-luz-ruta",
         "/nudos",
-        "/aplicacion-supervivencia-offline"
+        "/aplicacion-supervivencia-offline",
+        "/supervivencia/senderismo-principiantes-planificar-ruta"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 15,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "tormenta-solar-extrema-como-prepararse",
@@ -871,15 +882,15 @@
       "slug": "evacuacion-10-minutos-que-coger",
       "title": "Evacuación en 10 minutos: ensaya hoy lo que no debes improvisar",
       "topic": "Actualidad y preparación",
-      "classification": "MEJORAR",
-      "words": 528,
+      "classification": "MANTENER",
+      "words": 1255,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/evacuacion-10-minutos-que-coger.webp",
       "alt": "Diagrama editorial de Evacuación en 10 minutos: ensaya hoy lo que no debes improvisar. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Los diez minutos son un ejercicio, no un tiempo garantizado para salir. Organiza personas, necesidades críticas y documentación sin anteponer objetos...",
-      "metaLength": 152,
+      "metaDescription": "Evacuación rápida: ensaya decisiones y acceso al material sin correr, cortar servicios ni retrasar una salida real. Personas antes que objetos.",
+      "metaLength": 143,
       "keywords": [
         "evacuación de emergencia",
         "qué coger evacuación",
@@ -901,11 +912,12 @@
         "/supervivencia/como-revisar-kit-emergencia",
         "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
         "/aplicacion-supervivencia-offline",
-        "/checklists"
+        "/checklists",
+        "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 16,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "ciberataque-masivo-servicios-esenciales",
@@ -1304,15 +1316,15 @@
       "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
       "title": "Qué debe incluir una aplicación de supervivencia offline",
       "topic": "Supervivencia offline",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 427,
+      "classification": "MANTENER",
+      "words": 1204,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/que-debe-incluir-aplicacion-supervivencia-offline.webp",
       "alt": "Diagrama editorial de Qué debe incluir una aplicación de supervivencia offline. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "No basta con instalar una app: prueba qué información abre sin Internet, qué necesita permisos y qué alternativa tendrás sin batería.",
-      "metaLength": 133,
+      "metaDescription": "App de supervivencia offline: comprueba mapas, documentos, permisos y privacidad con tareas reales antes de depender del teléfono en una emergencia.",
+      "metaLength": 148,
       "keywords": [
         "aplicación de supervivencia offline",
         "app sin Internet",
@@ -1331,11 +1343,13 @@
       "sourceLinksInBody": [],
       "internalLinks": [
         "/aplicacion-supervivencia-offline",
-        "/herramientas-supervivencia"
+        "/herramientas-supervivencia",
+        "/privacidad",
+        "/supervivencia/gps-movil-sin-internet-mapas-offline"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "como-prepararse-para-un-apagon",
@@ -1448,15 +1462,15 @@
       "slug": "como-ahorrar-bateria-emergencia",
       "title": "Cómo ahorrar batería durante una emergencia",
       "topic": "Batería",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 420,
+      "classification": "MANTENER",
+      "words": 1272,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/como-ahorrar-bateria-emergencia.webp",
       "alt": "Diagrama editorial de Cómo ahorrar batería durante una emergencia. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Prepara una reserva de batería sin perder llamadas importantes: ajustes, cable compatible, registro de consumo y límites del modo avión.",
-      "metaLength": 136,
+      "metaDescription": "Ahorrar batería en una emergencia sin perder contactos: prioridades, ajustes comprobados, cadena de carga y registro de consumo con límites claros.",
+      "metaLength": 147,
       "keywords": [
         "ahorrar batería emergencia",
         "modo ultra emergencia",
@@ -1471,11 +1485,12 @@
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/calculadora-energia-powerbank-emergencia",
-        "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad"
+        "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
+        "/supervivencia/bateria-10000-mah-cargas-reales"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "como-guardar-agua-emergencias",
@@ -1520,15 +1535,15 @@
       "slug": "que-hacer-durante-dana",
       "title": "Qué hacer durante una DANA o inundación",
       "topic": "Desastres naturales",
-      "classification": "MEJORAR",
-      "words": 557,
+      "classification": "MANTENER",
+      "words": 1289,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/que-hacer-durante-dana.webp",
       "alt": "Diagrama editorial de Qué hacer durante una DANA o inundación. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Una inundación puede cortar carreteras, electricidad y comunicaciones. Prepara tu vivienda y conoce las prioridades si quedas temporalmente aislado.",
-      "metaLength": 148,
+      "metaDescription": "DANA e inundación: prepara información, apoyos y recursos antes del aviso. No cruces agua ni recuperes objetos en garajes amenazados.",
+      "metaLength": 133,
       "keywords": [
         "qué hacer durante una DANA",
         "DANA emergencia",
@@ -1551,11 +1566,12 @@
         "/checklists",
         "/herramientas-supervivencia",
         "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
-        "/supervivencia/espana-2030-calor-sequia-inundaciones"
+        "/supervivencia/espana-2030-calor-sequia-inundaciones",
+        "/supervivencia/rutas-evacuacion-mapas-offline"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 16,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "como-preparar-ninos-sin-asustarlos",
@@ -1730,15 +1746,15 @@
       "slug": "radio-frecuencias-emergencia-sin-cobertura",
       "title": "Radio y frecuencias de emergencia cuando no hay cobertura",
       "topic": "Comunicaciones",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 439,
+      "classification": "MANTENER",
+      "words": 1229,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/radio-frecuencias-emergencia-sin-cobertura.webp",
       "alt": "Diagrama editorial de Radio y frecuencias de emergencia cuando no hay cobertura. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Prepara una ficha de escucha comprobada y distingue receptor, radio por Internet y transmisor. Ninguna tabla garantiza cobertura ni atención de rescate.",
-      "metaLength": 152,
+      "metaDescription": "Radio sin cobertura: crea una ficha de escucha, comprueba alimentación y distingue AM/FM, Internet y transmisión legal sin frecuencias universales.",
+      "metaLength": 147,
       "keywords": [
         "radio emergencia sin cobertura",
         "frecuencias emergencia",
@@ -1757,25 +1773,27 @@
       "sourceLinksInBody": [],
       "internalLinks": [
         "/temas/comunicacion",
-        "/codigo-morse"
+        "/codigo-morse",
+        "/comparativas",
+        "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "rutas-evacuacion-mapas-offline",
       "title": "Cómo preparar rutas de evacuación con mapas offline",
       "topic": "Mapas offline",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 415,
+      "classification": "MANTENER",
+      "words": 1244,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/rutas-evacuacion-mapas-offline.webp",
       "alt": "Diagrama editorial de Cómo preparar rutas de evacuación con mapas offline. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Prepara un mapa con alternativas y límites conocidos, sin confundir una ruta dibujada con una salida segura durante una emergencia.",
-      "metaLength": 131,
+      "metaDescription": "Rutas de evacuación y mapas offline: revisa pasos compartidos, accesibilidad, fecha y alternativas sin confundir cartografía con seguridad actual.",
+      "metaLength": 146,
       "keywords": [
         "rutas evacuación mapas offline",
         "mapas offline emergencia",
@@ -1790,25 +1808,26 @@
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/que-es-archivo-mbtiles",
-        "/supervivencia/como-crear-plan-familiar-emergencia"
+        "/supervivencia/como-crear-plan-familiar-emergencia",
+        "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "senales-sos-comunicacion-visual",
       "title": "Señales SOS y comunicación visual en emergencias",
       "topic": "SOS",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 393,
+      "classification": "MANTENER",
+      "words": 1242,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/senales-sos-comunicacion-visual.webp",
       "alt": "Diagrama editorial de Señales SOS y comunicación visual en emergencias. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Distingue una señal para llamar la atención de una comunicación confirmada. Practica Morse sin falsas alarmas ni fuego y conserva una vía de ayuda real.",
-      "metaLength": 152,
+      "metaDescription": "Señales SOS y comunicación visual: prepara ubicación, visibilidad y un ensayo de Morse sin falsas alarmas, fuego ni promesas de rescate.",
+      "metaLength": 136,
       "keywords": [
         "señales SOS",
         "comunicación visual emergencia",
@@ -1823,11 +1842,12 @@
       "sourceLinksInBody": [],
       "internalLinks": [
         "/codigo-morse",
-        "/supervivencia/radio-frecuencias-emergencia-sin-cobertura"
+        "/supervivencia/radio-frecuencias-emergencia-sin-cobertura",
+        "/supervivencia/que-hacer-si-te-pierdes-24-horas"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "gestion-alimentos-sin-electricidad",
@@ -2664,15 +2684,15 @@
       "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
       "title": "Botiquín para casa: comprarlo hecho o montarlo tú",
       "topic": "Comparativas",
-      "classification": "MEJORAR",
-      "words": 722,
+      "classification": "MANTENER",
+      "words": 1250,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu.webp",
       "alt": "Diagrama editorial de Botiquín para casa: comprarlo hecho o montarlo tú. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Compara contenido útil, no el número de piezas. Revisa embalajes, caducidades y accesibilidad.",
-      "metaLength": 94,
+      "metaDescription": "Botiquín para casa: compara contenido útil, envases y reposición antes de comprar un kit. Organiza por funciones sin sustituir formación sanitaria.",
+      "metaLength": 147,
       "keywords": [
         "botiquín primeros auxilios casa",
         "qué llevar botiquín casa",
@@ -2685,11 +2705,13 @@
         "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
         "/comparativas",
         "/herramientas-supervivencia",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/medicamentos-tratamientos-emergencias",
+        "/supervivencia/como-revisar-kit-emergencia"
       ],
       "bodyImages": [],
-      "headings": 8,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "depositos-de-agua-para-emergencias-que-capacidad-elegir",
@@ -2726,15 +2748,15 @@
       "slug": "linterna-frontal-vs-de-mano-para-un-apagon",
       "title": "Linterna frontal vs de mano para un apagón",
       "topic": "Comparativas",
-      "classification": "MEJORAR",
-      "words": 736,
+      "classification": "MANTENER",
+      "words": 1271,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/linterna-frontal-vs-de-mano-para-un-apagon.webp",
       "alt": "Diagrama editorial de Linterna frontal vs de mano para un apagón. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "La frontal libera las manos; la de mano permite orientar el haz por separado. Compara la autonomía en el modo que realmente usarás.",
-      "metaLength": 131,
+      "metaDescription": "Frontal o linterna de mano para un apagón: compara tarea, alimentación, controles y autonomía por modo sin elegir solo por lúmenes máximos.",
+      "metaLength": 139,
       "keywords": [
         "linterna emergencia apagón",
         "linterna frontal apagón",
@@ -2746,70 +2768,94 @@
       "internalLinks": [
         "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
         "/comparativas",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/como-ahorrar-bateria-emergencia",
+        "/supervivencia/como-prepararse-para-un-apagon"
       ],
       "bodyImages": [],
-      "headings": 8,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
       "title": "Kit de emergencia para el coche: qué llevar en 2026",
       "topic": "Comparativas",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 409,
+      "classification": "MANTENER",
+      "words": 1316,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/kit-de-emergencia-para-el-coche-que-llevar-en-2026.webp",
       "alt": "Diagrama editorial de Kit de emergencia para el coche: qué llevar en 2026. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Separa la señalización exigible del material de preparación y compara un kit premontado con uno adaptado a tus ocupantes y trayectos.",
-      "metaLength": 133,
+      "metaDescription": "Kit de emergencia para el coche en 2026: distingue V16 y equipamiento aplicable de recursos personales. Revisa acceso y estado antes del viaje.",
+      "metaLength": 143,
       "keywords": [
         "kit emergencia coche",
         "qué llevar coche emergencia",
         "V16 2026",
         "kit avería coche"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "DGT: dispositivos V16 y modelos certificados",
+          "url": "https://www.dgt.es/muevete-con-seguridad/tecnologia-e-innovacion-en-carretera/Dispositivos-de-presenalizacion-V16/"
+        },
+        {
+          "title": "DGT: actuación ante una avería",
+          "url": "https://www.dgt.es/muevete-con-seguridad/viaja-seguro/consejos-extranjeros/en-caso-de-emergencia/index.html"
+        }
+      ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
         "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
-        "/checklists"
+        "/checklists",
+        "/supervivencia/semaforos-sin-luz-como-moverte-durante-un-apagon",
+        "/preparacion-familiar"
       ],
       "bodyImages": [],
-      "headings": 6,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
       "title": "Apagón de España de 2025: qué ha cambiado desde entonces",
       "topic": "Preparación",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 349,
+      "classification": "MANTENER",
+      "words": 1261,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces.webp",
       "alt": "Diagrama editorial de Apagón de España de 2025: qué ha cambiado desde entonces. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Más de un año después del apagón de abril de 2025: qué aporta el informe final, qué no demuestra una jornada institucional y cómo revisar lo aprendido...",
-      "metaLength": 153,
+      "metaDescription": "Apagón de 2025: distingue informe final, normativa y tareas domésticas. Lo aprendido no predice otro corte ni garantiza riesgo cero.",
+      "metaLength": 132,
       "keywords": [
         "apagón España 2025 qué cambió",
         "causas apagón 28 abril",
         "informe apagón España",
         "medidas apagón 2026"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "ENTSO-E: informe final del apagón ibérico",
+          "url": "https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/"
+        },
+        {
+          "title": "BOE: Real Decreto 997/2025",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-22434"
+        }
+      ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/como-prepararse-para-un-apagon",
-        "/checklists"
+        "/checklists",
+        "/supervivencia/como-revisar-kit-emergencia",
+        "/supervivencia/estaban-preparados-los-hogares-espanoles-para-el-apagon"
       ],
       "bodyImages": [],
-      "headings": 5,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 12,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "mejores-mochilas-de-emergencia-72h-en-espana-2026",
@@ -2878,15 +2924,15 @@
       "slug": "generador-electrico-para-casa-cual-comprar-sin-riesgos",
       "title": "Generador eléctrico para casa: cuál comprar sin riesgos",
       "topic": "Comparativas",
-      "classification": "MEJORAR",
-      "words": 949,
+      "classification": "MANTENER",
+      "words": 1348,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/generador-electrico-para-casa-cual-comprar-sin-riesgos.webp",
       "alt": "Diagrama editorial de Generador eléctrico para casa: cuál comprar sin riesgos. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Distingue un generador de combustible de una batería portátil. Comprueba potencia continua y arranque de los aparatos.",
-      "metaLength": 118,
+      "metaDescription": "Generador para casa: selecciona cargas y verifica emplazamiento, potencia continua y conexión profesional antes de comparar combustión y batería.",
+      "metaLength": 145,
       "keywords": [
         "generador eléctrico para apagones",
         "generador para casa",
@@ -2898,11 +2944,12 @@
       "internalLinks": [
         "/supervivencia/generador-en-casa-normativa-y-peligros-que-debes-evitar",
         "/comparativas",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/calculadora-energia-powerbank-emergencia"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "radios-de-manivela-y-a-pilas-para-emergencias",
@@ -2971,74 +3018,103 @@
       "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
       "title": "DANA: aviso naranja o rojo, ¿qué debes hacer?",
       "topic": "Actualidad y alertas",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 324,
+      "classification": "MANTENER",
+      "words": 1267,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/dana-aviso-naranja-o-rojo-que-debes-hacer.webp",
       "alt": "Diagrama editorial de DANA: aviso naranja o rojo, ¿qué debes hacer?. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Cómo interpretar el color, la zona y las horas de un aviso de AEMET, y por qué las instrucciones de Protección Civil no se sustituyen por una tabla de...",
-      "metaLength": 153,
+      "metaDescription": "Aviso naranja o rojo por lluvias: lee fenómeno, zona y vigencia. Distingue el aviso meteorológico de una instrucción de evacuación o confinamiento.",
+      "metaLength": 147,
       "keywords": [
         "aviso naranja rojo DANA qué hacer",
         "aviso rojo AEMET",
         "aviso naranja lluvias",
         "qué hacer DANA"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "AEMET: Plan Meteoalerta",
+          "url": "https://www.aemet.es/documentos/es/eltiempo/prediccion/avisos/plan_meteoalerta/plan_meteoalerta.pdf"
+        },
+        {
+          "title": "BOE: directriz de fenómenos meteorológicos adversos",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-9158"
+        },
+        {
+          "title": "Protección Civil: inundaciones",
+          "url": "https://www.proteccioncivil.es/es/coordinacion/gestion-de-riesgos/hidrologicos/inundaciones"
+        }
+      ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/checklists",
-        "/supervivencia/que-hacer-durante-dana"
+        "/supervivencia/que-hacer-durante-dana",
+        "/supervivencia/es-alert-por-que-a-veces-no-llega-a-tu-movil"
       ],
       "bodyImages": [],
-      "headings": 5,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
       "title": "Calor extremo de 2026: 61 días bajo ola de calor",
       "topic": "Actualidad y alertas",
-      "classification": "MEJORAR",
-      "words": 781,
+      "classification": "MANTENER",
+      "words": 1249,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/calor-extremo-de-2026-61-dias-bajo-ola-de-calor.webp",
       "alt": "Diagrama editorial de Calor extremo de 2026: 61 días bajo ola de calor. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Una cifra anual no describe la exposición de cada municipio. Consulta previsiones y avisos de tu zona.",
-      "metaLength": 102,
+      "metaDescription": "Olas de calor de 2026: entiende el cómputo de 61 días y prepara vivienda, horarios y apoyos. El balance no sustituye avisos ni atención sanitaria.",
+      "metaLength": 146,
       "keywords": [
         "ola de calor 2026 España",
         "61 días ola calor 2026",
         "verano 2026 AEMET",
         "calor extremo España"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "AEMET: olas de calor de 2026",
+          "url": "https://www.aemet.es/es/noticias/2026/09/olas_de_calor_2026"
+        },
+        {
+          "title": "AEMET: balance del verano",
+          "url": "https://www.aemet.es/es/noticias/2026/09/resumen_verano2026"
+        },
+        {
+          "title": "Ministerio de Sanidad: consejos ante el calor",
+          "url": "https://www.sanidad.gob.es/campannas/campanas10/calor/consejos1.html"
+        }
+      ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
         "/modo-crisis",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/refugio-temporal-casa-frio-calor",
+        "/supervivencia/medicamentos-tratamientos-emergencias"
       ],
       "bodyImages": [],
-      "headings": 8,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
       "title": "Viviendas y riesgo de incendio forestal: ley en 2026",
       "topic": "Actualidad y alertas",
-      "classification": "MEJORAR",
-      "words": 783,
+      "classification": "MANTENER",
+      "words": 1250,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026.webp",
       "alt": "Diagrama editorial de Viviendas y riesgo de incendio forestal: ley en 2026. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "No todas las obligaciones son iguales en cada territorio. Revisa accesos y el plan familiar antes de la temporada de riesgo.",
-      "metaLength": 124,
+      "metaDescription": "Vivienda e incendio forestal: consulta obligaciones locales, accesos y apoyos antes de actuar en la parcela. No existe una distancia universal.",
+      "metaLength": 143,
       "keywords": [
         "normativa incendios forestales vivienda",
         "interfaz urbano forestal vivienda",
@@ -3050,11 +3126,12 @@
       "internalLinks": [
         "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
         "/modo-crisis",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/rutas-evacuacion-mapas-offline"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "es-alert-por-que-a-veces-no-llega-a-tu-movil",
@@ -3096,15 +3173,15 @@
       "slug": "semaforos-sin-luz-como-moverte-durante-un-apagon",
       "title": "Semáforos sin luz: cómo moverte durante un apagón",
       "topic": "Guías",
-      "classification": "MEJORAR",
-      "words": 812,
+      "classification": "MANTENER",
+      "words": 1300,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/semaforos-sin-luz-como-moverte-durante-un-apagon.webp",
       "alt": "Diagrama editorial de Semáforos sin luz: cómo moverte durante un apagón. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Un trayecto habitual puede dejar de ser previsible. Sigue las indicaciones de agentes y la señalización aplicable.",
-      "metaLength": 114,
+      "metaDescription": "Moverte con semáforos apagados: revisa necesidad del viaje, instrucciones y alternativas. No presupongas prioridad ni salgas a vías de un tren.",
+      "metaLength": 143,
       "keywords": [
         "moverse sin luz apagón ciudad",
         "semáforos apagón",
@@ -3116,40 +3193,52 @@
       "internalLinks": [
         "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
         "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/emergencia-trabajo-volver-casa"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "generador-en-casa-normativa-y-peligros-que-debes-evitar",
       "title": "Generador en casa: normativa y peligros que debes evitar",
       "topic": "Comparativas",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 350,
+      "classification": "MANTENER",
+      "words": 1261,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/generador-en-casa-normativa-y-peligros-que-debes-evitar.webp",
       "alt": "Diagrama editorial de Generador en casa: normativa y peligros que debes evitar. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Monóxido de carbono, conexiones eléctricas y combustible: qué revisar con profesionales antes de plantearte un generador doméstico.",
-      "metaLength": 131,
+      "metaDescription": "Generador en casa: riesgos de CO, retroalimentación y conexión fija. Prepara una consulta técnica sin cables improvisados ni uso en garajes.",
+      "metaLength": 140,
       "keywords": [
         "generador casero peligros normativa",
         "conectar generador casa normativa",
         "generador apagón seguridad",
         "ITC-BT-40 generador"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "BOE: Reglamento electrotécnico para baja tensión",
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099"
+        },
+        {
+          "title": "CDC: protección durante un apagón",
+          "url": "https://www.cdc.gov/natural-disasters/es/response/que-hacer-para-protegerse-durante-un-apagon.html"
+        }
+      ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
-        "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces"
+        "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+        "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
+        "/supervivencia/calculadora-energia-powerbank-emergencia"
       ],
       "bodyImages": [],
-      "headings": 5,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 13,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "evacuacion-de-vivienda-checklist-paso-a-paso",
@@ -3187,15 +3276,15 @@
       "slug": "sin-cobertura-movil-como-comunicarte-de-verdad",
       "title": "Sin cobertura móvil: cómo comunicarte de verdad",
       "topic": "Guías",
-      "classification": "MEJORAR",
-      "words": 735,
+      "classification": "MANTENER",
+      "words": 1263,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/sin-cobertura-movil-como-comunicarte-de-verdad.webp",
       "alt": "Diagrama editorial de Sin cobertura móvil: cómo comunicarte de verdad. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Una app offline no transmite mensajes por sí sola a distancia. Prueba cualquier sistema local con los dispositivos que usarás.",
-      "metaLength": 126,
+      "metaDescription": "Sin cobertura móvil: compara comunicación local, mensajes pendientes y plan familiar. Pruebas seguras sin prometer alcance ni conexión satelital.",
+      "metaLength": 145,
       "keywords": [
         "comunicarme sin cobertura móvil",
         "qué hacer sin cobertura",
@@ -3207,11 +3296,13 @@
       "internalLinks": [
         "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
         "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/como-crear-plan-familiar-emergencia",
+        "/supervivencia/radio-frecuencias-emergencia-sin-cobertura"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
@@ -3279,36 +3370,37 @@
       "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
       "title": "Eclipse del 12 de agosto de 2026: por qué hubo avisos",
       "topic": "Actualidad y alertas",
-      "classification": "MEJORAR",
-      "words": 631,
+      "classification": "MANTENER",
+      "words": 1305,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos.webp",
       "alt": "Diagrama editorial de Eclipse del 12 de agosto de 2026: por qué hubo avisos. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Separa el fenómeno astronómico de los riesgos del desplazamiento. Las instrucciones de observación no se sustituyen por trucos caseros.",
-      "metaLength": 135,
+      "metaDescription": "Eclipse de agosto de 2026: aprende a preparar viajes y concentraciones con información oficial, regreso y alternativas sin filtros solares caseros.",
+      "metaLength": 147,
       "keywords": [
         "eclipse agosto 2026 España avisos"
       ],
       "sources": [
         {
-          "title": "Ministerio de Ciencia: recomendaciones para observar el eclipse",
-          "url": "https://www.ciencia.gob.es/Noticias/2026/mayo/recomendaciones-observacion-segura-eclipse.html"
+          "title": "Protección Civil: preemergencia ante los riesgos asociados al eclipse",
+          "url": "https://entornosnucleares.proteccioncivil.es/web/guest/-/protecci%C3%B3n-civil-activa-la-fase-de-preemergencia-en-situaci%C3%B3n-operativa-1-del-plan-estatal-general-de-emergencias-ante-los-riesgos-potenciales-asociados-al-eclipse-1"
         },
         {
-          "title": "Ministerio de Consumo: protección ocular certificada",
-          "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/consumo-recuerda-que-eclipse-debe-verse-gafas-certificadas-recomienda"
+          "title": "Protección Civil: Plan Familia Preparada",
+          "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
         }
       ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/documentacion-conviene-tener-disponible"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 16,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
@@ -3358,46 +3450,52 @@
       "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
       "title": "Verano de 2026: el más cálido de la serie en España",
       "topic": "Actualidad y alertas",
-      "classification": "REESCRIBIR POR COMPLETO",
-      "words": 337,
+      "classification": "MANTENER",
+      "words": 1240,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/verano-de-2026-el-mas-calido-de-la-serie-en-espana.webp",
       "alt": "Diagrama editorial de Verano de 2026: el más cálido de la serie en España. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Qué mide el balance de AEMET del verano de 2026 y cómo distinguir una media estacional, un máximo local y los días acumulados de ola de calor.",
-      "metaLength": 142,
+      "metaDescription": "Verano de 2026 en España: interpreta medias, episodios y balance de AEMET. Prepara información local y apoyos sin confundir pasado y previsión.",
+      "metaLength": 143,
       "keywords": [
         "verano más caluroso España AEMET"
       ],
       "sources": [
         {
-          "title": "AEMET: balance de olas de calor de 2026 y ámbito del recuento",
+          "title": "AEMET: balance del verano de 2026",
+          "url": "https://www.aemet.es/es/noticias/2026/09/resumen_verano2026"
+        },
+        {
+          "title": "AEMET: episodios de ola de calor de 2026",
           "url": "https://www.aemet.es/es/noticias/2026/09/olas_de_calor_2026"
         }
       ],
       "sourceLinksInBody": [],
       "internalLinks": [
         "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
-        "/preparacion-practica/revision-por-temporadas"
+        "/preparacion-practica/revision-por-temporadas",
+        "/supervivencia/refugio-temporal-casa-frio-calor",
+        "/supervivencia/kit-emergencia-personas-mayores"
       ],
       "bodyImages": [],
-      "headings": 5,
-      "reason": "Falta desarrollo para resolver la tarea de forma completa."
+      "headings": 16,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
       "title": "Mascotas en emergencias: apagón, calor y evacuación",
       "topic": "Actualidad y alertas",
-      "classification": "MEJORAR",
-      "words": 592,
+      "classification": "MANTENER",
+      "words": 1234,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/mascotas-en-emergencias-apagon-calor-y-evacuacion.webp",
       "alt": "Diagrama editorial de Mascotas en emergencias: apagón, calor y evacuación. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "Prepara transporte e identificación adecuados al animal. Comprueba con antelación qué destinos admiten mascotas.",
-      "metaLength": 112,
+      "metaDescription": "Mascotas en emergencias: organiza transporte, documentos, tratamientos y destino antes del aviso. Consulta necesidades concretas con el veterinario.",
+      "metaLength": 148,
       "keywords": [
         "mascotas emergencia calor apagón"
       ],
@@ -3407,8 +3505,8 @@
           "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
         },
         {
-          "title": "CDC: monóxido de carbono y protección de personas y animales",
-          "url": "https://www.cdc.gov/carbon-monoxide/about/index.html"
+          "title": "CDC: protección durante apagones",
+          "url": "https://www.cdc.gov/natural-disasters/es/response/que-hacer-para-protegerse-durante-un-apagon.html"
         }
       ],
       "sourceLinksInBody": [],
@@ -3416,11 +3514,12 @@
         "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
         "/modo-crisis",
         "/herramientas-supervivencia",
-        "/descargar"
+        "/descargar",
+        "/supervivencia/como-crear-plan-familiar-emergencia"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 16,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
@@ -3544,15 +3643,15 @@
       "slug": "animales-venenosos-de-espana-cuales-hay-y-que-hacer",
       "title": "Animales venenosos de España: cuáles hay y qué hacer",
       "topic": "Plantas y fauna",
-      "classification": "MEJORAR",
-      "words": 726,
+      "classification": "MANTENER",
+      "words": 1213,
       "interactive": false,
-      "status": "PENDIENTE DE REVISION",
+      "status": "AMPLIADO",
       "image": "/images/editorial/animales-venenosos-de-espana-cuales-hay-y-que-hacer.webp",
       "alt": "Diagrama editorial de Animales venenosos de España: cuáles hay y qué hacer. No representa una situación real.",
       "imageExists": true,
-      "metaDescription": "No captures ni manipules al animal para identificarlo. Una guía general no permite valorar una lesión individual.",
-      "metaLength": 113,
+      "metaDescription": "Animales venenosos en España: prevención y asistencia sin capturar ni identificar por una foto. Prepara ubicación y sigue instrucciones sanitarias.",
+      "metaLength": 147,
       "keywords": [
         "animales venenosos España picadura",
         "víboras España",
@@ -3564,11 +3663,12 @@
       "internalLinks": [
         "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
         "/plantas-y-fauna",
-        "/guias-supervivencia"
+        "/guias-supervivencia",
+        "/supervivencia/senderismo-principiantes-planificar-ruta"
       ],
       "bodyImages": [],
-      "headings": 9,
-      "reason": "Añadir casos, práctica y respuestas específicas, conservando el núcleo útil."
+      "headings": 14,
+      "reason": "Conservar profundidad y contrastar vigencia."
     },
     {
       "slug": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
@@ -3597,7 +3697,7 @@
         "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
         "/descargar",
         "/supervivencia/como-guardar-agua-emergencias",
-        "/supervivencia/espana-sin-agua-7-dias"
+        "/supervivencia/higiene-sin-agua-vivienda"
       ],
       "bodyImages": [],
       "headings": 15,
@@ -3628,7 +3728,7 @@
         "/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
         "/plantas-y-fauna",
         "/descargar",
-        "/supervivencia/mitos-supervivencia-cine",
+        "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
         "/guias-supervivencia"
       ],
       "bodyImages": [],
