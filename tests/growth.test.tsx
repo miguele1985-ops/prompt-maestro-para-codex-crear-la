@@ -74,6 +74,24 @@ describe('original growth content', () => {
       const metadata = await generateMetadata({ params: Promise.resolve({ slug: post.slug }) });
       expect(metadata.description!.length, post.slug).toBeLessThanOrEqual(155);
     }
+  }, 15000);
+  it('publishes each step-two FAQ with matching answers, headings and unchanged canonical paths', async () => {
+    for (const slug of Object.keys(stepTwoRevisions)) {
+      const post = getBlogPost(slug)!;
+      const doc = new DOMParser().parseFromString(renderToStaticMarkup(await ArticlePage({ params: Promise.resolve({ slug }) })), 'text/html');
+      const schema = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(node => JSON.parse(node.textContent!));
+      const faq = schema.find(item => item['@type'] === 'FAQPage');
+      expect(faq.mainEntity.map((item: { name: string; acceptedAnswer: { text: string } }) => ({ question: item.name, answer: item.acceptedAnswer.text })), slug).toEqual(post.faq);
+      expect([...doc.querySelectorAll('.article-faq summary h3')].map(node => node.textContent), slug).toEqual(post.faq!.map(item => item.question));
+      for (const item of post.faq!) expect(doc.querySelector('.article-faq')!.textContent, slug).toContain(item.answer);
+      const metadata = await generateMetadata({ params: Promise.resolve({ slug }) });
+      expect(metadata.alternates?.canonical, slug).toBe(`https://www.modocrisissurvival.com/supervivencia/${slug}`);
+      for (const section of stepTwoRevisions[slug].sections) {
+        for (const link of section.links || []) {
+          if (link.href.startsWith('/supervivencia/')) expect(getBlogPost(link.href.split('/').at(-1)!), `${slug}: ${link.href}`).toBeDefined();
+        }
+      }
+    }
   });
   it('renders visible FAQ, matching schema, Article, Breadcrumb and licensed responsive images', async () => {
     for (const data of growthArticles) {
