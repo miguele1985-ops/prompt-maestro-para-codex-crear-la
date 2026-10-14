@@ -83,6 +83,10 @@ describe('original growth content', () => {
       const faq = schema.find(item => item['@type'] === 'FAQPage');
       expect(faq.mainEntity.map((item: { name: string; acceptedAnswer: { text: string } }) => ({ question: item.name, answer: item.acceptedAnswer.text })), slug).toEqual(post.faq);
       expect([...doc.querySelectorAll('.article-faq summary h3')].map(node => node.textContent), slug).toEqual(post.faq!.map(item => item.question));
+      if (stepTwoRevisions[slug].preferOriginal) {
+        expect(doc.querySelector('.article-original'), slug).not.toBeNull();
+        expect(doc.querySelectorAll('.editorial-text-section'), slug).toHaveLength(stepTwoRevisions[slug].sections.length);
+      }
       for (const item of post.faq!) expect(doc.querySelector('.article-faq')!.textContent, slug).toContain(item.answer);
       const metadata = await generateMetadata({ params: Promise.resolve({ slug }) });
       expect(metadata.alternates?.canonical, slug).toBe(`https://www.modocrisissurvival.com/supervivencia/${slug}`);
