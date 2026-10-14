@@ -94,4 +94,4 @@ La compilación Next.js y ESLint terminan correctamente; pasan 106 pruebas en 30
 
 El rastreo local actualizado de `http://127.0.0.1:3026` valida 208 URLs del sitemap y 319 destinos internos sin enlaces rotos. El informe de indexación no encuentra URLs inaccesibles. Esto no equivale a rastreo o indexación por Google.
 
-No se ha publicado esta rama ni se ha verificado un despliegue nuevo de Cloudflare. La vista local no equivale a producción. La aceptación de AdSense y la indexación las decide Google: estos cambios no pueden garantizarlas.
+La rama ya estaba publicada hasta `ccd62f1`. La subida del cierre se intentó, pero la autenticación de Git de este entorno no permite obtener credenciales sin interacción. Los nuevos commits permanecen locales; no se ha modificado `master` ni se ha verificado un despliegue nuevo de Cloudflare. GitHub Desktop puede utilizar una sesión distinta: revisar y usar Push origin allí permite subirlos con la cuenta del titular. La vista local no equivale a producción. La aceptación de AdSense y la indexación las decide Google: estos cambios no pueden garantizarlas.
