@@ -47,6 +47,7 @@ export async function buildAppVersionPayload() {
   return {
     enabled,
     updateEnabled: enabled,
+    showWebUpdateNotice: download.showWebUpdateNotice === true,
     latestVersion: version,
     latestVersionLabel: String(
       download.latestVersionLabel || download.currentVersion || download.version || site.currentVersion || `V ${version}`,
@@ -64,7 +65,9 @@ export async function buildAppVersionPayload() {
     downloadUrl,
     releaseNotesUrl: absoluteUrl(download.releaseNotesUrl || "/actualizaciones", "/actualizaciones"),
     apkUrl: officialApkUrl,
-    apkSize: String(download.apkSize || site.apkSize || siteConfig.apkSize),
-    publishedAt: String(download.lastUpdated || site.lastUpdated || siteConfig.lastUpdated),
+    apkSize: String(download.apkSize || download.size || site.apkSize || siteConfig.apkSize),
+    publishedAt: String(download.lastUpdated || download.date || site.lastUpdated || siteConfig.lastUpdated),
+    apkSha256: String(download.sha256 || site.apkSha256 || siteConfig.apkSha256),
+    minimumAndroidVersion: String(download.minimumAndroidVersion || site.minimumAndroidVersion || siteConfig.minimumAndroidVersion),
   };
 }

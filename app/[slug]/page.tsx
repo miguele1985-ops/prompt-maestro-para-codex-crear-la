@@ -23,7 +23,7 @@ import { officialApkUrl, siteConfig } from "@/content/site-config";
 import { orderedBlogPosts } from "@/content/blog";
 import { guideCategories } from "@/content/guides";
 import { allContentPages, calculators, crisisScenarios } from "@/content/pages";
-import { webPolicyPages } from "@/content/web-policies";
+import { visibleContentPages } from "@/lib/visible-content-pages";
 import { readAdminContent } from "@/lib/admin-content";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
@@ -454,10 +454,10 @@ function ResourceDownloadsPanel({
 
 async function getVisibleContent() {
   const savedContent = await readAdminContent().catch(() => null);
-  const savedPages = savedContent?.pages?.length ? savedContent.pages : allContentPages;
+  const savedPages = visibleContentPages(savedContent?.pages);
   const savedDownload = savedContent?.download as Partial<typeof downloadInfo> | undefined;
   return {
-    pages: [...savedPages.filter(page => !webPolicyPages.some(policy => policy.slug === page.slug)), ...webPolicyPages].map((page) =>
+    pages: savedPages.map((page) =>
       page.slug === "descargar"
         ? { ...page, body: [], highlights: [], sections: [] }
         : resourcesPageWithRequiredCalculators(page),

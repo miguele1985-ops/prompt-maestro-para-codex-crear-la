@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-14T16:09:39.173Z",
+  "environment": "http://127.0.0.1:3024",
+  "appStatus": 200,
+  "aboutStatus": 200,
+  "viewports": [
+    360,
+    414,
+    768,
+    1440
+  ],
+  "liveVersion": true,
+  "manualNoticeRespected": true,
+  "note": "The release API was mocked in the browser. These results do not confirm the Cloudflare deployment."
+}

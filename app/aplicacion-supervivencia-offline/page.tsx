@@ -2,8 +2,7 @@ import Link from "next/link";
 import { Bug, CheckCircle2, Database, HardDriveDownload, HeartHandshake, Map, ShieldCheck } from "lucide-react";
 import { SafetyWarning } from "@/components/Badges";
 import { DeferredScreenshotGallery } from "@/components/DeferredScreenshotGallery";
-import { DownloadCard } from "@/components/DownloadCard";
-import { DownloadDonationGate } from "@/components/DownloadDonationGate";
+import { AppReleaseProvider, AppReleaseDownloadButton, AppReleaseUpdateNotice, AppReleaseVersion, AppReleaseDownloadCard } from "@/components/AppRelease";
 import { FeatureGrid } from "@/components/FeatureCard";
 import { PublicHomeCounters } from "@/components/PublicHomeCounters";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
@@ -13,13 +12,10 @@ import { appStats, moduleGroups, permissionGroups, realFlows, resourceDetails } 
 import { comparisonCategories } from "@/content/affiliate";
 import { pageMetadata, appJsonLd } from "@/lib/seo";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
-import { downloadInfo } from "@/content/downloads";
 import { features } from "@/content/features";
-import { officialApkUrl, siteConfig } from "@/content/site-config";
-import { readAdminContent } from "@/lib/admin-content";
+import { siteConfig } from "@/content/site-config";
 
-export const dynamic = "force-dynamic";
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 const trustItems = [
   "Modo offline activo",
@@ -525,12 +521,9 @@ function isConfiguredDonationUrl(value: string) {
   return Boolean(value && !/configurar|pendiente|añadir/i.test(value));
 }
 
-export default async function HomePage() {
-  const savedContent = await readAdminContent().catch(() => null);
-  const visibleDownloadInfo = { ...downloadInfo, ...(savedContent?.download || {}), apkUrl: officialApkUrl, alternativeUrl: officialApkUrl };
-
+export default function HomePage() {
   return (
-    <>
+    <AppReleaseProvider>
       <SeoJsonLd data={appJsonLd()} />
       <section className="hero">
         <div className="hero-copy">
@@ -543,11 +536,7 @@ export default async function HomePage() {
             En un apagón, una catástrofe natural, una avería en una zona aislada o una pérdida de cobertura, muchas funciones habituales del teléfono dejan de estar disponibles. Esta app está pensada para que la información y las herramientas importantes sigan contigo.
           </p>
           <div className="actions">
-            <DownloadDonationGate
-              apkUrl={visibleDownloadInfo.apkUrl}
-              label="Descargar aplicacion para Android"
-              version={visibleDownloadInfo.version}
-            />
+            <AppReleaseDownloadButton />
             <TrackedDonationLink className="hero-donate-button" href="/donaciones">
               <HeartHandshake size={20} aria-hidden />
               <span>
@@ -569,12 +558,7 @@ export default async function HomePage() {
                 <small>Avisa de errores facilmente</small>
               </span>
             </Link>
-            {visibleDownloadInfo.showWebUpdateNotice ? (
-              <Link className="update-notice-button update-notice-button-new" href="/actualizaciones" aria-label="Ver nueva actualización de Modo Crisis Survival">
-                <span>Nueva actualización</span>
-                <strong>{visibleDownloadInfo.version}</strong>
-              </Link>
-            ) : null}
+            <AppReleaseUpdateNotice />
           </div>
           <p className="hero-donation-note">
             Supervivencia Offline es gratuita y completa. Las aportaciones son voluntarias y ayudan a mantener la web, mejorar la app, corregir errores y preparar nuevos recursos offline.
@@ -602,7 +586,7 @@ export default async function HomePage() {
               height={512}
               decoding="async"
             />
-            <span>{visibleDownloadInfo.version}</span>
+            <AppReleaseVersion />
           </div>
           <div className="phone-mockup real-screen">
             <ResponsiveImage
@@ -852,12 +836,11 @@ export default async function HomePage() {
         </div>
       </section> : null}
 
-      <DownloadCard />
+      <AppReleaseDownloadCard />
       <SafetyWarning>
         Modo Crisis Survival ofrece información educativa y herramientas de apoyo. No garantiza la seguridad ni sustituye formación profesional, instrucciones de autoridades, servicios de emergencia, médicos o sanitarios.
       </SafetyWarning>
       <Link className="mobile-download-bar" href="/descargar"><Map aria-hidden /> Descargar la app</Link>
-    </>
+    </AppReleaseProvider>
   );
 }
-
