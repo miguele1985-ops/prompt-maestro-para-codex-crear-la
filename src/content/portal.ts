@@ -86,6 +86,11 @@ export const portalTopics = [
 ] as const;
 export function portalTopic(slug: string): string {
   const s = normalize(slug);
+  if (/ampollas/.test(s)) return 'primeros-auxilios';
+  if (/hora-retorno/.test(s)) return 'orientacion';
+  if (/vivac/.test(s)) return 'refugio';
+  if (/cuchillo/.test(s)) return 'equipo';
+  if (/hornillo/.test(s)) return 'energia';
   if (/que-hacer-si-te-pierdes/.test(s)) return "orientacion";
   if (/tormenta-solar/.test(s)) return "energia";
   if (/confinamiento-emergencia/.test(s)) return "refugio";
@@ -95,7 +100,7 @@ export function portalTopic(slug: string): string {
   if (/cadena-suministro/.test(s)) return "alimentacion";
   if (/espana-2030/.test(s)) return "desastres";
   if (/nudo/.test(s)) return "nudos";
-  if (/dana|inundacion|incendio|alert|eclipse|verano|calor-extremo/.test(s)) return "desastres";
+  if (/dana|inundacion|incendio|alert|eclipse|verano|calor-extremo|tormenta-electrica|terremoto/.test(s)) return "desastres";
   if (/agua|lluvia|potabiliza|destilacion/.test(s)) return "agua";
   if (/alimento|comida/.test(s)) return "alimentacion";
   if (/botiquin|medic|mayores/.test(s)) return "primeros-auxilios";
@@ -106,6 +111,7 @@ export function portalTopic(slug: string): string {
   if (/apagon|energia|bateria|powerbank|generador|linterna|luz-y/.test(s)) return "energia";
   if (/mochila|equipo|kit|conversor/.test(s)) return "equipo";
   if (/refugio|casa|hogar|vivienda/.test(s)) return "refugio";
+  if (/senderismo|bushcraft/.test(s)) return 'naturaleza';
   return "familia";
 }
 export function editorialCover(slug: string) {

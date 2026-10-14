@@ -14,6 +14,9 @@ import { articleQualityRevisions } from './article-quality-revisions';
 import { distinctGuideRevisions } from './distinct-guide-revisions';
 import { articleAliases, canonicalArticleHref } from './article-consolidation';
 import { articleSourceAdditions } from './article-source-additions';
+import { growthArticles } from './growth-articles';
+import growthImageCredits from './growth-image-credits.json';
+import { growthRevisions } from './growth-revisions';
 
 export interface BlogSection {
   image?: { src: string; alt: string; caption?: string; fullWidth?: boolean };
@@ -21,6 +24,8 @@ export interface BlogSection {
   body: string;
   bullets?: string[];
   links?: Array<{ label: string; href: string; sponsored?: boolean }>;
+  steps?: string[];
+  table?: { headers: string[]; rows: string[][]; caption: string };
 }
 
 export interface BlogPost {
@@ -28,6 +33,9 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   seoTitle?: string;
+  metaDescription?: string;
+  faq?: Array<{ question: string; answer: string }>;
+  imageCredit?: { author: string; license: string; source: string; licenseUrl: string };
   sources?: Array<{ title: string; url: string }>;
   category: string;
   image: string;
@@ -49,6 +57,7 @@ export interface BlogAppUseGuide {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...growthArticles,
   ...everydayArticles.filter(post => !everydayUpdates.has(post.slug)),
   ...outdoorArticles,
   ...preparednessScenarios,
@@ -1792,9 +1801,17 @@ for (const [alias, destination] of Object.entries(articleAliases)) {
   if (index < 0) throw new Error(`Missing consolidation source: ${alias}`);
   blogPosts.splice(index, 1);
 }
+for (const [slug, revision] of Object.entries(growthRevisions)) {
+  const post = blogPosts.find(item => item.slug === slug);
+  if (!post) throw new Error(`Missing growth revision: ${slug}`);
+  Object.assign(post, { sections: [...post.sections, ...revision.sections], faq: revision.faq, metaDescription: revision.description, updatedAt: '2026-10-14' });
+}
+
 for (const post of blogPosts) {
   post.relatedLinks = post.relatedLinks?.map(link => ({ ...link, href: canonicalArticleHref(link.href) }));
   post.sections = post.sections.map(section => ({ ...section, links: section.links?.map(link => ({ ...link, href: canonicalArticleHref(link.href) })) }));
+  const image = (growthImageCredits as Record<string, Pick<BlogPost, 'image' | 'imageAlt' | 'imageCredit'>>)[post.slug];
+  if (image) Object.assign(post, image);
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));

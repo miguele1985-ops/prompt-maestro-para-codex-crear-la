@@ -1,8 +1,8 @@
 import type { ImgHTMLAttributes } from "react";
 
 const DEFAULT_WIDTHS = [240, 360, 576] as const;
-const OPTIMIZABLE_LOCAL_IMAGE = /\.(jpe?g|png)$/i;
-const OPTIMIZED_IMAGE_PATH = /^\/(?:screenshots\/app|images\/blog)\//;
+const OPTIMIZABLE_LOCAL_IMAGE = /\.(jpe?g|png|webp)$/i;
+const OPTIMIZED_IMAGE_PATH = /^\/(?:screenshots\/app|images\/(?:blog|editorial))\//;
 
 type ResponsiveImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "alt" | "sizes" | "src" | "srcSet"> & {
   alt: string;

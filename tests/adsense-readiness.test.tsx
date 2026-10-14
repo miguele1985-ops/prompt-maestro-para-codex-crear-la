@@ -21,10 +21,10 @@ describe("AdSense technical and editorial improvements", () => {
     expect(Object.keys(articleQualityRevisions)).toHaveLength(4);
     for (const [slug, revision] of Object.entries(articleQualityRevisions)) {
       const post = blogPosts.find(item => item.slug === slug)!;
-      expect(post.sections).toEqual(revision.sections);
+      expect(post.sections.slice(0, revision.sections.length)).toEqual(revision.sections);
       expect(post.sources?.length).toBeGreaterThan(0);
-      expect(post.updatedAt).toBe("2026-10-08");
-      expect(post.sections).toHaveLength(6);
+      expect(post.updatedAt).toBe("2026-10-14");
+      expect(post.sections.length).toBeGreaterThan(6);
       // Regression check for the specific new material, not an AdSense word-count requirement.
       expect(post.sections.map(section => section.body).join(" ").split(/\s+/).length).toBeGreaterThan(300);
       expect(post.relatedLinks?.every(link => link.href.startsWith("/"))).toBe(true);

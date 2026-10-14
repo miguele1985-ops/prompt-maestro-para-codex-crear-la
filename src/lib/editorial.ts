@@ -13,6 +13,10 @@ export type EditorialIndex = {
   sources: { title: string; url: string }[];
 };
 export const articleIndex = originalIndex as Record<string, EditorialIndex>;
+export function articleDescription(post: BlogPost) {
+  const text = post.metaDescription || post.excerpt;
+  return text.length <= 155 ? text : `${text.slice(0, 151).replace(/\s+\S*$/, '').trim()}...`;
+}
 export const topics = [
   "Todos",
   "Agua",
@@ -28,7 +32,7 @@ export function articleTopic(post: Pick<BlogPost, "slug" | "category" | "title">
   if (value.includes("calculadora")) return "Calculadoras";
   if (/comparativa|comprar|mochila|botiquin|kit-/.test(value)) return "Equipo";
   if (/agua|lluvia|potabiliza/.test(value)) return "Agua";
-  if (/plantas|setas|animales|nudos|naturaleza/.test(value)) return "Naturaleza";
+  if (/plantas|setas|animales|nudos|naturaleza|senderismo|montana|bushcraft|vivac/.test(value)) return "Naturaleza";
   if (/bateria|powerbank|radio|apagon|cobertura|energia|comunicacion/.test(value))
     return "Energía y comunicación";
   if (/aplicacion|app-|mbtiles|mapas-offline/.test(value)) return "Aplicación";
@@ -40,8 +44,8 @@ export function readingMinutes(post: BlogPost) {
     Math.max(
       2,
       Math.ceil(
-        post.sections
-          .map((s) => s.body + " " + (s.bullets || []).join(" "))
+        [...post.sections
+          .map((s) => [s.body, ...(s.bullets || []), ...(s.steps || []), ...(s.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)]
           .join(" ")
           .split(/\s+/).length / 200,
       ),

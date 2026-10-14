@@ -1,0 +1,1012 @@
+{
+  "senderismo-principiantes-planificar-ruta": {
+    "image": "/images/editorial/senderismo-principiantes-planificar-ruta.webp",
+    "imageAlt": "Diagrama editorial de Senderismo para principiantes: prepara una ruta que puedas terminar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/senderismo-principiantes-planificar-ruta.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "hora-retorno-montana": {
+    "image": "/images/editorial/hora-retorno-montana.webp",
+    "imageAlt": "Diagrama editorial de Hora de retorno en montaña: cuándo dar la vuelta sin improvisar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/hora-retorno-montana.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "capas-ropa-senderismo-frio-lluvia": {
+    "image": "/images/editorial/capas-ropa-senderismo-frio-lluvia.webp",
+    "imageAlt": "Diagrama editorial de Ropa por capas para senderismo: prepara frío, viento y lluvia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/capas-ropa-senderismo-frio-lluvia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "mochila-dia-senderismo-lista": {
+    "image": "/images/editorial/mochila-dia-senderismo-lista.webp",
+    "imageAlt": "Diagrama editorial de Mochila de senderismo de un día: lista por funciones y prueba real. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/mochila-dia-senderismo-lista.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "brujula-mapa-orientacion-basica": {
+    "image": "/images/editorial/brujula-mapa-orientacion-basica.webp",
+    "imageAlt": "Diagrama editorial de Mapa y brújula para principiantes: aprende a orientarte sin improvisar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/brujula-mapa-orientacion-basica.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "comida-senderismo-sin-cocinar": {
+    "image": "/images/editorial/comida-senderismo-sin-cocinar.webp",
+    "imageAlt": "Diagrama editorial de Comida para senderismo sin cocinar: organiza una jornada sin hornillo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/comida-senderismo-sin-cocinar.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "revision-mensual-preparacion-familiar": {
+    "image": "/images/editorial/revision-mensual-preparacion-familiar.webp",
+    "imageAlt": "Diagrama editorial de Revisión mensual de preparación familiar: qué comprobar sin comprar más. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/revision-mensual-preparacion-familiar.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "terremoto-plan-familiar": {
+    "image": "/images/editorial/terremoto-plan-familiar.webp",
+    "imageAlt": "Diagrama editorial de Prepararse para un terremoto: vivienda, contactos y plan familiar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/terremoto-plan-familiar.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "tormenta-electrica-montana": {
+    "image": "/images/editorial/tormenta-electrica-montana.webp",
+    "imageAlt": "Diagrama editorial de Tormenta eléctrica en montaña: prepara la salida y aprende a cancelar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/tormenta-electrica-montana.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "fuego-bushcraft-seguro-permisos-yesca": {
+    "image": "/images/editorial/fuego-bushcraft-seguro-permisos-yesca.webp",
+    "imageAlt": "Diagrama editorial de Fuego en bushcraft: permisos, yesca y práctica sin promesas peligrosas. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/fuego-bushcraft-seguro-permisos-yesca.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "hornillo-camping-monoxido-carbono": {
+    "image": "/images/editorial/hornillo-camping-monoxido-carbono.webp",
+    "imageAlt": "Diagrama editorial de Hornillo de camping: errores de uso y riesgo de monóxido de carbono. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/hornillo-camping-monoxido-carbono.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "vivac-emergencia-manta-termica": {
+    "image": "/images/editorial/vivac-emergencia-manta-termica.webp",
+    "imageAlt": "Diagrama editorial de Vivac de emergencia y manta térmica: preparación, uso y límites. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/vivac-emergencia-manta-termica.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "higiene-sin-agua-vivienda": {
+    "image": "/images/editorial/higiene-sin-agua-vivienda.webp",
+    "imageAlt": "Diagrama editorial de Higiene durante un corte de agua: organiza usos y evita contaminación. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/higiene-sin-agua-vivienda.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "cuchillo-bushcraft-uso-seguro": {
+    "image": "/images/editorial/cuchillo-bushcraft-uso-seguro.webp",
+    "imageAlt": "Diagrama editorial de Cuchillo de bushcraft: aprende límites, manejo y preparación responsable. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/cuchillo-bushcraft-uso-seguro.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "ampollas-senderismo-prevencion": {
+    "image": "/images/editorial/ampollas-senderismo-prevencion.webp",
+    "imageAlt": "Diagrama editorial de Ampollas en senderismo: prevención, calzado y cuándo consultar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/ampollas-senderismo-prevencion.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "psicologia-emergencia-errores-mentales": {
+    "image": "/images/editorial/psicologia-emergencia-errores-mentales.webp",
+    "imageAlt": "Diagrama editorial de Tu cerebro bajo presión: 7 trampas mentales durante una emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/psicologia-emergencia-errores-mentales.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "que-hacer-si-te-pierdes-24-horas": {
+    "image": "/images/editorial/que-hacer-si-te-pierdes-24-horas.webp",
+    "imageAlt": "Diagrama editorial de 24 horas perdido: qué hacer para facilitar tu localización. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/que-hacer-si-te-pierdes-24-horas.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "sin-mochila-sin-equipo": {
+    "image": "/images/editorial/sin-mochila-sin-equipo.webp",
+    "imageAlt": "Diagrama editorial de Supervivencia sin mochila: qué puedes hacer con lo que llevas encima. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/sin-mochila-sin-equipo.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "caza-observacion-fauna-preparacion": {
+    "image": "/images/editorial/caza-observacion-fauna-preparacion.webp",
+    "imageAlt": "Diagrama editorial de Caza y fauna: qué preparar antes de salir al campo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/caza-observacion-fauna-preparacion.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "pesca-preparar-salida-responsable": {
+    "image": "/images/editorial/pesca-preparar-salida-responsable.webp",
+    "imageAlt": "Diagrama editorial de Pesca: prepara la salida antes de acercarte al agua. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/pesca-preparar-salida-responsable.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "tormenta-solar-extrema-como-prepararse": {
+    "image": "/images/editorial/tormenta-solar-extrema-como-prepararse.webp",
+    "imageAlt": "Diagrama editorial de Tormenta solar extrema: qué podría fallar y qué puedes preparar hoy. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/tormenta-solar-extrema-como-prepararse.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "confinamiento-emergencia-casa-que-hacer": {
+    "image": "/images/editorial/confinamiento-emergencia-casa-que-hacer.webp",
+    "imageAlt": "Diagrama editorial de Te ordenan confinarte: cuando protegerse significa no salir de casa. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/confinamiento-emergencia-casa-que-hacer.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "medicamentos-tratamientos-emergencias": {
+    "image": "/images/editorial/medicamentos-tratamientos-emergencias.webp",
+    "imageAlt": "Diagrama editorial de Medicamentos en emergencias: el tratamiento que tu plan no puede olvidar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/medicamentos-tratamientos-emergencias.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "emergencia-trabajo-volver-casa": {
+    "image": "/images/editorial/emergencia-trabajo-volver-casa.webp",
+    "imageAlt": "Diagrama editorial de La emergencia te pilla trabajando: ¿volver a casa o esperar?. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/emergencia-trabajo-volver-casa.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "evacuacion-10-minutos-que-coger": {
+    "image": "/images/editorial/evacuacion-10-minutos-que-coger.webp",
+    "imageAlt": "Diagrama editorial de Evacuación en 10 minutos: ensaya hoy lo que no debes improvisar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/evacuacion-10-minutos-que-coger.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "ciberataque-masivo-servicios-esenciales": {
+    "image": "/images/editorial/ciberataque-masivo-servicios-esenciales.webp",
+    "imageAlt": "Diagrama editorial de El ciberataque que no ves venir: qué pasaría si durante varios días fallaran bancos, Internet o servicios esenciales. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/ciberataque-masivo-servicios-esenciales.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "crisis-cadena-suministro-supermercados-vacios": {
+    "image": "/images/editorial/crisis-cadena-suministro-supermercados-vacios.webp",
+    "imageAlt": "Diagrama editorial de Supermercados vacíos en 48 horas: qué pasaría si se rompe temporalmente la cadena de suministro. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/crisis-cadena-suministro-supermercados-vacios.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "espana-2030-calor-sequia-inundaciones": {
+    "image": "/images/editorial/espana-2030-calor-sequia-inundaciones.webp",
+    "imageAlt": "Diagrama editorial de España 2030: calor extremo, sequía y lluvias torrenciales; cómo preparar tu casa para un clima más difícil. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/espana-2030-calor-sequia-inundaciones.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "desinformacion-emergencias-deepfakes-alertas-falsas": {
+    "image": "/images/editorial/desinformacion-emergencias-deepfakes-alertas-falsas.webp",
+    "imageAlt": "Diagrama editorial de La próxima gran emergencia podría empezar con una mentira: desinformación, deepfakes y caos informativo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/desinformacion-emergencias-deepfakes-alertas-falsas.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "7-dias-sin-internet": {
+    "image": "/images/editorial/7-dias-sin-internet.webp",
+    "imageAlt": "Diagrama editorial de 7 días sin Internet: el experimento que muestra cuánto dependemos de estar conectados. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/7-dias-sin-internet.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "tarjetas-cajeros-pagos-no-funcionan": {
+    "image": "/images/editorial/tarjetas-cajeros-pagos-no-funcionan.webp",
+    "imageAlt": "Diagrama editorial de Cuando el dinero deja de funcionar: qué hacer si fallan tarjetas, cajeros y pagos móviles. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/tarjetas-cajeros-pagos-no-funcionan.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "primeras-24-horas-gran-emergencia": {
+    "image": "/images/editorial/primeras-24-horas-gran-emergencia.webp",
+    "imageAlt": "Diagrama editorial de Las primeras 24 horas después de una gran emergencia: las decisiones que pueden cambiarlo todo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/primeras-24-horas-gran-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "lluvia-autoconsumo-generadores-normativa": {
+    "image": "/images/editorial/lluvia-autoconsumo-generadores-normativa.webp",
+    "imageAlt": "Diagrama editorial de Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/lluvia-autoconsumo-generadores-normativa.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "peso-reserva-familiar-emergencias": {
+    "image": "/images/editorial/peso-reserva-familiar-emergencias.webp",
+    "imageAlt": "Diagrama editorial de Cuánto pesa una reserva familiar de emergencia y cómo organizarla. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/peso-reserva-familiar-emergencias.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "que-debe-incluir-aplicacion-supervivencia-offline": {
+    "image": "/images/editorial/que-debe-incluir-aplicacion-supervivencia-offline.webp",
+    "imageAlt": "Diagrama editorial de Qué debe incluir una aplicación de supervivencia offline. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/que-debe-incluir-aplicacion-supervivencia-offline.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-prepararse-para-un-apagon": {
+    "image": "/images/editorial/como-prepararse-para-un-apagon.webp",
+    "imageAlt": "Diagrama editorial de Cómo prepararse para un apagón prolongado. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-prepararse-para-un-apagon.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-crear-plan-familiar-emergencia": {
+    "image": "/images/editorial/como-crear-plan-familiar-emergencia.webp",
+    "imageAlt": "Diagrama editorial de Cómo crear un plan familiar de emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-crear-plan-familiar-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "que-es-archivo-mbtiles": {
+    "image": "/images/editorial/que-es-archivo-mbtiles.webp",
+    "imageAlt": "Diagrama editorial de Qué es un archivo MBTiles y para qué sirve. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/que-es-archivo-mbtiles.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-ahorrar-bateria-emergencia": {
+    "image": "/images/editorial/como-ahorrar-bateria-emergencia.webp",
+    "imageAlt": "Diagrama editorial de Cómo ahorrar batería durante una emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-ahorrar-bateria-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-guardar-agua-emergencias": {
+    "image": "/images/editorial/como-guardar-agua-emergencias.webp",
+    "imageAlt": "Diagrama editorial de Cómo guardar agua para emergencias. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-guardar-agua-emergencias.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "que-hacer-durante-dana": {
+    "image": "/images/editorial/que-hacer-durante-dana.webp",
+    "imageAlt": "Diagrama editorial de Qué hacer durante una DANA o inundación. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/que-hacer-durante-dana.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-preparar-ninos-sin-asustarlos": {
+    "image": "/images/editorial/como-preparar-ninos-sin-asustarlos.webp",
+    "imageAlt": "Diagrama editorial de Cómo preparar a los niños sin asustarlos. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-preparar-ninos-sin-asustarlos.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "documentacion-conviene-tener-disponible": {
+    "image": "/images/editorial/documentacion-conviene-tener-disponible.webp",
+    "imageAlt": "Diagrama editorial de Qué documentación conviene tener disponible. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/documentacion-conviene-tener-disponible.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-revisar-kit-emergencia": {
+    "image": "/images/editorial/como-revisar-kit-emergencia.webp",
+    "imageAlt": "Diagrama editorial de Cómo revisar un kit de emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-revisar-kit-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "preparacion-emergencias-casa-principiantes": {
+    "image": "/images/editorial/preparacion-emergencias-casa-principiantes.webp",
+    "imageAlt": "Diagrama editorial de Preparación para emergencias en casa: guía básica para empezar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/preparacion-emergencias-casa-principiantes.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "kit-emergencia-personas-mayores": {
+    "image": "/images/editorial/kit-emergencia-personas-mayores.webp",
+    "imageAlt": "Diagrama editorial de Kit de emergencia para personas mayores: medicación, contactos y autonomía. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/kit-emergencia-personas-mayores.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "radio-frecuencias-emergencia-sin-cobertura": {
+    "image": "/images/editorial/radio-frecuencias-emergencia-sin-cobertura.webp",
+    "imageAlt": "Diagrama editorial de Radio y frecuencias de emergencia cuando no hay cobertura. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/radio-frecuencias-emergencia-sin-cobertura.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "rutas-evacuacion-mapas-offline": {
+    "image": "/images/editorial/rutas-evacuacion-mapas-offline.webp",
+    "imageAlt": "Diagrama editorial de Cómo preparar rutas de evacuación con mapas offline. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/rutas-evacuacion-mapas-offline.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "senales-sos-comunicacion-visual": {
+    "image": "/images/editorial/senales-sos-comunicacion-visual.webp",
+    "imageAlt": "Diagrama editorial de Señales SOS y comunicación visual en emergencias. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/senales-sos-comunicacion-visual.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "gestion-alimentos-sin-electricidad": {
+    "image": "/images/editorial/gestion-alimentos-sin-electricidad.webp",
+    "imageAlt": "Diagrama editorial de Gestión de alimentos sin electricidad durante un apagón. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/gestion-alimentos-sin-electricidad.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "refugio-temporal-casa-frio-calor": {
+    "image": "/images/editorial/refugio-temporal-casa-frio-calor.webp",
+    "imageAlt": "Diagrama editorial de Refugio temporal en casa ante frío o calor extremo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/refugio-temporal-casa-frio-calor.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "simulacro-familiar-emergencia-30-minutos": {
+    "image": "/images/editorial/simulacro-familiar-emergencia-30-minutos.webp",
+    "imageAlt": "Diagrama editorial de Simulacro familiar de emergencia en 30 minutos. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/simulacro-familiar-emergencia-30-minutos.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-gestion-agua-supervivencia": {
+    "image": "/images/editorial/calculadora-gestion-agua-supervivencia.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de gestión de agua para emergencias: qué hace y cómo usarla. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-gestion-agua-supervivencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-captacion-lluvia-supervivencia": {
+    "image": "/images/editorial/calculadora-captacion-lluvia-supervivencia.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de captación de lluvia: litros, superficie y autonomía. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-captacion-lluvia-supervivencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-energia-powerbank-emergencia": {
+    "image": "/images/editorial/calculadora-energia-powerbank-emergencia.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de energía: cuántas cargas da una powerbank en emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-energia-powerbank-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-potabilizacion-quimica-agua": {
+    "image": "/images/editorial/calculadora-potabilizacion-quimica-agua.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de potabilización química: dosis orientativas y límites. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-potabilizacion-quimica-agua.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-destilacion-solar-agua": {
+    "image": "/images/editorial/calculadora-destilacion-solar-agua.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de destilación solar: rendimiento aproximado sin electricidad. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-destilacion-solar-agua.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-cruce-rios-seguridad": {
+    "image": "/images/editorial/calculadora-cruce-rios-seguridad.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de cruce de ríos: evaluar riesgo antes de decidir. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-cruce-rios-seguridad.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-velocidad-necesaria-ruta": {
+    "image": "/images/editorial/calculadora-velocidad-necesaria-ruta.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de velocidad necesaria: llega a tiempo con margen real. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-velocidad-necesaria-ruta.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-sensacion-termica-frio-calor": {
+    "image": "/images/editorial/calculadora-sensacion-termica-frio-calor.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de sensación térmica: frío, calor, viento y humedad. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-sensacion-termica-frio-calor.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-horas-luz-ruta": {
+    "image": "/images/editorial/calculadora-horas-luz-ruta.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de horas de luz: cuánto margen queda antes del anochecer. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-horas-luz-ruta.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-conversor-survival-unidades": {
+    "image": "/images/editorial/calculadora-conversor-survival-unidades.webp",
+    "imageAlt": "Diagrama editorial de Conversor survival: unidades útiles para emergencias y guías offline. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-conversor-survival-unidades.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-silbato-emergencia-senales": {
+    "image": "/images/editorial/calculadora-silbato-emergencia-senales.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de silbato de emergencia: señales sonoras sin cobertura. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-silbato-emergencia-senales.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-senales-humo-supervivencia": {
+    "image": "/images/editorial/calculadora-senales-humo-supervivencia.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de señales de humo: patrones visuales y seguridad. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-senales-humo-supervivencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calculadora-hipotermia-riesgo": {
+    "image": "/images/editorial/calculadora-hipotermia-riesgo.webp",
+    "imageAlt": "Diagrama editorial de Calculadora de hipotermia: señales de alerta y prioridad de ayuda. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calculadora-hipotermia-riesgo.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "apagon-general-espana-pasos": {
+    "image": "/images/editorial/apagon-general-espana-pasos.webp",
+    "imageAlt": "Diagrama editorial de Qué hacer en un apagón general en España paso a paso. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/apagon-general-espana-pasos.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "mochila-emergencia-72-horas-peso-realista": {
+    "image": "/images/editorial/mochila-emergencia-72-horas-peso-realista.webp",
+    "imageAlt": "Diagrama editorial de Mochila de emergencia de 72 horas con peso realista. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/mochila-emergencia-72-horas-peso-realista.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "agua-sin-electricidad-metodos-limites": {
+    "image": "/images/editorial/agua-sin-electricidad-metodos-limites.webp",
+    "imageAlt": "Diagrama editorial de Cómo tratar agua sin electricidad y cuándo ningún método doméstico basta. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/agua-sin-electricidad-metodos-limites.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "gps-movil-sin-internet-mapas-offline": {
+    "image": "/images/editorial/gps-movil-sin-internet-mapas-offline.webp",
+    "imageAlt": "Diagrama editorial de Tu móvil puede saber dónde estás aunque no tenga Internet. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/gps-movil-sin-internet-mapas-offline.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "bateria-10000-mah-cargas-reales": {
+    "image": "/images/editorial/bateria-10000-mah-cargas-reales.webp",
+    "imageAlt": "Diagrama editorial de Una batería de 10000 mAh no promete dos cargas completas. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/bateria-10000-mah-cargas-reales.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "filtros-agua-portatiles-comparativa-riesgo": {
+    "image": "/images/editorial/filtros-agua-portatiles-comparativa-riesgo.webp",
+    "imageAlt": "Diagrama editorial de Filtros de agua portátiles: qué comprar según el riesgo. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/filtros-agua-portatiles-comparativa-riesgo.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu": {
+    "image": "/images/editorial/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu.webp",
+    "imageAlt": "Diagrama editorial de Botiquín para casa: comprarlo hecho o montarlo tú. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "depositos-de-agua-para-emergencias-que-capacidad-elegir": {
+    "image": "/images/editorial/depositos-de-agua-para-emergencias-que-capacidad-elegir.webp",
+    "imageAlt": "Diagrama editorial de Depósitos de agua para emergencias: qué capacidad elegir. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/depositos-de-agua-para-emergencias-que-capacidad-elegir.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "linterna-frontal-vs-de-mano-para-un-apagon": {
+    "image": "/images/editorial/linterna-frontal-vs-de-mano-para-un-apagon.webp",
+    "imageAlt": "Diagrama editorial de Linterna frontal vs de mano para un apagón. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/linterna-frontal-vs-de-mano-para-un-apagon.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "kit-de-emergencia-para-el-coche-que-llevar-en-2026": {
+    "image": "/images/editorial/kit-de-emergencia-para-el-coche-que-llevar-en-2026.webp",
+    "imageAlt": "Diagrama editorial de Kit de emergencia para el coche: qué llevar en 2026. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/kit-de-emergencia-para-el-coche-que-llevar-en-2026.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces": {
+    "image": "/images/editorial/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces.webp",
+    "imageAlt": "Diagrama editorial de Apagón de España de 2025: qué ha cambiado desde entonces. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "mejores-mochilas-de-emergencia-72h-en-espana-2026": {
+    "image": "/images/editorial/mejores-mochilas-de-emergencia-72h-en-espana-2026.webp",
+    "imageAlt": "Diagrama editorial de Mejores mochilas de emergencia 72h en España (2026). No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/mejores-mochilas-de-emergencia-72h-en-espana-2026.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "filtros-de-agua-portatiles-cuales-funcionan-de-verdad": {
+    "image": "/images/editorial/filtros-de-agua-portatiles-cuales-funcionan-de-verdad.webp",
+    "imageAlt": "Diagrama editorial de Filtros de agua portátiles: cuáles funcionan de verdad. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/filtros-de-agua-portatiles-cuales-funcionan-de-verdad.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "generador-electrico-para-casa-cual-comprar-sin-riesgos": {
+    "image": "/images/editorial/generador-electrico-para-casa-cual-comprar-sin-riesgos.webp",
+    "imageAlt": "Diagrama editorial de Generador eléctrico para casa: cuál comprar sin riesgos. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/generador-electrico-para-casa-cual-comprar-sin-riesgos.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "radios-de-manivela-y-a-pilas-para-emergencias": {
+    "image": "/images/editorial/radios-de-manivela-y-a-pilas-para-emergencias.webp",
+    "imageAlt": "Diagrama editorial de Radios de manivela y a pilas para emergencias. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/radios-de-manivela-y-a-pilas-para-emergencias.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "powerbanks-solares-aguantan-un-apagon-largo": {
+    "image": "/images/editorial/powerbanks-solares-aguantan-un-apagon-largo.webp",
+    "imageAlt": "Diagrama editorial de Powerbanks solares: ¿aguantan un apagón largo?. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/powerbanks-solares-aguantan-un-apagon-largo.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "dana-aviso-naranja-o-rojo-que-debes-hacer": {
+    "image": "/images/editorial/dana-aviso-naranja-o-rojo-que-debes-hacer.webp",
+    "imageAlt": "Diagrama editorial de DANA: aviso naranja o rojo, ¿qué debes hacer?. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/dana-aviso-naranja-o-rojo-que-debes-hacer.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "calor-extremo-de-2026-61-dias-bajo-ola-de-calor": {
+    "image": "/images/editorial/calor-extremo-de-2026-61-dias-bajo-ola-de-calor.webp",
+    "imageAlt": "Diagrama editorial de Calor extremo de 2026: 61 días bajo ola de calor. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/calor-extremo-de-2026-61-dias-bajo-ola-de-calor.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026": {
+    "image": "/images/editorial/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026.webp",
+    "imageAlt": "Diagrama editorial de Viviendas y riesgo de incendio forestal: ley en 2026. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "es-alert-por-que-a-veces-no-llega-a-tu-movil": {
+    "image": "/images/editorial/es-alert-por-que-a-veces-no-llega-a-tu-movil.webp",
+    "imageAlt": "Diagrama editorial de ES-Alert: por qué a veces no llega a tu móvil. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/es-alert-por-que-a-veces-no-llega-a-tu-movil.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "semaforos-sin-luz-como-moverte-durante-un-apagon": {
+    "image": "/images/editorial/semaforos-sin-luz-como-moverte-durante-un-apagon.webp",
+    "imageAlt": "Diagrama editorial de Semáforos sin luz: cómo moverte durante un apagón. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/semaforos-sin-luz-como-moverte-durante-un-apagon.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "generador-en-casa-normativa-y-peligros-que-debes-evitar": {
+    "image": "/images/editorial/generador-en-casa-normativa-y-peligros-que-debes-evitar.webp",
+    "imageAlt": "Diagrama editorial de Generador en casa: normativa y peligros que debes evitar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/generador-en-casa-normativa-y-peligros-que-debes-evitar.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "evacuacion-de-vivienda-checklist-paso-a-paso": {
+    "image": "/images/editorial/evacuacion-de-vivienda-checklist-paso-a-paso.webp",
+    "imageAlt": "Diagrama editorial de Evacuación de vivienda: checklist paso a paso. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/evacuacion-de-vivienda-checklist-paso-a-paso.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "sin-cobertura-movil-como-comunicarte-de-verdad": {
+    "image": "/images/editorial/sin-cobertura-movil-como-comunicarte-de-verdad.webp",
+    "imageAlt": "Diagrama editorial de Sin cobertura móvil: cómo comunicarte de verdad. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/sin-cobertura-movil-como-comunicarte-de-verdad.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "preppers-espanoles-que-aprendieron-del-gran-apagon": {
+    "image": "/images/editorial/preppers-espanoles-que-aprendieron-del-gran-apagon.webp",
+    "imageAlt": "Diagrama editorial de Preppers españoles: qué aprendieron del gran apagón. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/preppers-espanoles-que-aprendieron-del-gran-apagon.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "estaban-preparados-los-hogares-espanoles-para-el-apagon": {
+    "image": "/images/editorial/estaban-preparados-los-hogares-espanoles-para-el-apagon.webp",
+    "imageAlt": "Diagrama editorial de ¿Estaban preparados los hogares españoles para el apagón?. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/estaban-preparados-los-hogares-espanoles-para-el-apagon.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos": {
+    "image": "/images/editorial/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos.webp",
+    "imageAlt": "Diagrama editorial de Eclipse del 12 de agosto de 2026: por qué hubo avisos. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro": {
+    "image": "/images/editorial/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro.webp",
+    "imageAlt": "Diagrama editorial de 15 mitos de supervivencia que el cine nos ha enseñado mal. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "verano-de-2026-el-mas-calido-de-la-serie-en-espana": {
+    "image": "/images/editorial/verano-de-2026-el-mas-calido-de-la-serie-en-espana.webp",
+    "imageAlt": "Diagrama editorial de Verano de 2026: el más cálido de la serie en España. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/verano-de-2026-el-mas-calido-de-la-serie-en-espana.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "mascotas-en-emergencias-apagon-calor-y-evacuacion": {
+    "image": "/images/editorial/mascotas-en-emergencias-apagon-calor-y-evacuacion.webp",
+    "imageAlt": "Diagrama editorial de Mascotas en emergencias: apagón, calor y evacuación. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/mascotas-en-emergencias-apagon-calor-y-evacuacion.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia": {
+    "image": "/images/editorial/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia.webp",
+    "imageAlt": "Diagrama editorial de 20 objetos normales que pueden ayudarte en una emergencia. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "plantas-comestibles-y-peligrosas-que-se-pueden-confundir": {
+    "image": "/images/editorial/plantas-comestibles-y-peligrosas-que-se-pueden-confundir.webp",
+    "imageAlt": "Diagrama editorial de Plantas comestibles y peligrosas que se pueden confundir. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/plantas-comestibles-y-peligrosas-que-se-pueden-confundir.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar": {
+    "image": "/images/editorial/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar.webp",
+    "imageAlt": "Diagrama editorial de 5 nudos básicos de supervivencia que merece la pena practicar. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "animales-venenosos-de-espana-cuales-hay-y-que-hacer": {
+    "image": "/images/editorial/animales-venenosos-de-espana-cuales-hay-y-que-hacer.webp",
+    "imageAlt": "Diagrama editorial de Animales venenosos de España: cuáles hay y qué hacer. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/animales-venenosos-de-espana-cuales-hay-y-que-hacer.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas": {
+    "image": "/images/editorial/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas.webp",
+    "imageAlt": "Diagrama editorial de Cómo hacer más segura el agua sin filtro ni pastillas. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas": {
+    "image": "/images/editorial/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas.webp",
+    "imageAlt": "Diagrama editorial de Setas comestibles vs tóxicas: identificación sin falsas reglas. No representa una situación real.",
+    "imageCredit": {
+      "author": "Modo Crisis Survival",
+      "license": "CC BY 4.0",
+      "source": "/images/editorial/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas.svg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  }
+}
