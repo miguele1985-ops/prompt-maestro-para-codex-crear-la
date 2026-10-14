@@ -25,7 +25,7 @@ const base = process.argv[2] || 'http://127.0.0.1:3026';
         assert(await page.evaluate(() => document.querySelector('.site-page').scrollWidth <= innerWidth), `${path}: overflow at ${width}`);
         const anchors = await page.locator('.editorial-toc a').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')).filter(href => href.startsWith('#')));
         for (const href of anchors) assert(await page.evaluate(id => Boolean(document.getElementById(id)), href.slice(1)), `${path}: ${href}`);
-        const capture = slug === 'como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas' || slug === 'es-alert-por-que-a-veces-no-llega-a-tu-movil';
+        const capture = ['como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas', 'es-alert-por-que-a-veces-no-llega-a-tu-movil', 'caza-observacion-fauna-preparacion', 'kit-de-emergencia-para-el-coche-que-llevar-en-2026'].includes(slug);
         if (capture && width === 360) await page.screenshot({ path: `docs/step-two-${slug}-faq-360.png` });
         await page.evaluate(() => document.querySelector('.site-page').scrollTo({ top: 0, behavior: 'instant' }));
         await page.waitForFunction(() => document.querySelector('.site-page').scrollTop === 0);

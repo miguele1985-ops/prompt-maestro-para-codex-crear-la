@@ -10,11 +10,11 @@ La auditoría inicial está en `docs/inventario-editorial.md`: 86 entradas, 14 p
 
 ## Estado real de la implementación
 
-Se han añadido 15 guías originales y revisado 48 artículos existentes, conservando sus URLs. Las 63 piezas trabajadas tienen entre 1.200 y 2.000 palabras de contenido visible, sin contar navegación o pie común. Hay diagramas originales con licencia y variantes WebP para los 101 artículos. El cuaderno incluye descarga PDF y tres fichas imprimibles, sin captación de correo.
+Se han añadido 15 guías originales y revisado 72 artículos existentes, conservando sus URLs. Las 87 piezas trabajadas tienen entre 1.200 y 2.000 palabras de contenido visible, sin contar navegación o pie común. Hay diagramas originales con licencia y variantes WebP para los 101 artículos. El cuaderno incluye descarga PDF y tres fichas imprimibles, sin captación de correo.
 
-La reescritura de todo el catálogo no está terminada: quedan 24 artículos en la cola editorial (12 para mejorar y 12 para reescribir). `docs/inventario-editorial-actual.md` identifica cada URL. La longitud sirve para priorizar, no certifica calidad ni garantiza posicionamiento. No activar una publicación masiva automática ni rellenar los pendientes con párrafos comunes.
+La cola de 72 artículos débiles de la auditoría inicial está cerrada. `docs/inventario-editorial-actual.md` identifica cada URL; no quedan piezas pendientes de ampliación en ese inventario. Las 14 entradas conservadas incluyen herramientas interactivas, que no necesitan relleno. La longitud sirve para priorizar, no certifica calidad ni garantiza posicionamiento. Mantener revisión de fuentes y utilidad, sin publicación masiva automática.
 
-Cuidados, alimentos, confinamiento, ES-Alert, continuidad digital y reservas cuentan ya con revisiones del Paso 2. Priorizar a continuación comunicación sin cobertura, rutas, DANA, evacuación rápida y comparativas pendientes; después fauna, pesca y caza responsable. Revisar fechas, normativa, modelos y fuentes antes de marcar cada pieza como finalizada. El material sanitario requiere especial prudencia y no puede presentarse como revisado por un profesional si no lo está.
+El Paso 2 añade 48 revisiones: cuidados, continuidad digital, avisos, rutas, evacuación, comparativas, naturaleza y aprendizaje de incidentes. Cinco cuerpos documentados se recuperan completos en lugar de mostrar solo el resumen. Seguir revisando fechas, normativa, modelos y fuentes durante el mantenimiento. El material sanitario requiere especial prudencia y no puede presentarse como revisado por un profesional si no lo está.
 
 ## Treinta consultas e intención
 

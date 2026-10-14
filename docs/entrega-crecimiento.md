@@ -4,7 +4,7 @@ Fecha: 14 de octubre de 2026. Rama: `codex/crecimiento-editorial-supervivencia`.
 
 ## Alcance real
 
-Esta entrega no completa la reescritura de todo el catálogo. Se han revisado 48 artículos y creado 15 guías. Quedan 24 piezas pendientes de edición profunda, identificadas individualmente en `inventario-editorial-actual.md`. No se han cambiado sus fechas para fingir una revisión ni borrado sus URLs. El detalle de las 24 revisiones adicionales del Paso 2 está en `paso-2-revision-editorial.md`.
+Esta entrega cierra la cola editorial priorizada de la auditoría inicial: 72 artículos existentes revisados y 15 guías nuevas. No quedan piezas pendientes de ampliación en `inventario-editorial-actual.md`. Las 14 entradas que ya cumplían su función se conservan, incluidas herramientas interactivas. No se borran URLs ni se fingen fechas de revisión. El detalle de las 48 revisiones adicionales del Paso 2 está en `paso-2-revision-editorial.md`.
 
 El inventario inicial tiene 86 artículos: 14 para conservar, 48 para mejorar y 24 para reescribir. La clasificación por longitud es una señal de priorización, no una certificación de calidad. Las calculadoras no necesitan 1.200 palabras de relleno para cumplir su función. No hay exportación de consultas, visitas o conversiones de Search Console disponible.
 
@@ -22,6 +22,9 @@ Las siguientes URLs conservan su dirección. Las piezas trabajadas tienen entre 
 | Paso 2: cuidados | Medicación, mayores, alimentos sin electricidad, confinamiento, refugio doméstico, guardar agua, preparación de apagón y simulacro |
 | Paso 2: continuidad | Ciberataques, suministro, desinformación, primeras 24 horas, pagos, Internet, tormenta solar y regreso desde el trabajo |
 | Paso 2: alertas y aprendizaje | ES-Alert, evacuación doméstica, relatos de preppers, encuestas del apagón, riesgos climáticos, agua sin filtro, setas y objetos domésticos |
+| Paso 2: comunicación | Ahorro de batería, app offline, rutas, SOS, radio, falta de cobertura, evacuación rápida y DANA |
+| Paso 2: equipo y recuperación | Botiquín, iluminación, selección de generador, kit del coche, balance del apagón, avisos por lluvias, normativa del generador y balance del verano |
+| Paso 2: naturaleza y riesgos | Observación de fauna/caza, pesca, calor persistente, vivienda e incendios, movilidad sin semáforos, eclipse, mascotas y animales venenosos |
 
 GPS, batería y peso familiar sustituyen el cuerpo anterior completo. Otras guías conservan su núcleo útil y añaden casos, fichas y preguntas específicas. El renderizado distingue HTML importado, revisiones estructuradas y ampliaciones: no sustituye accidentalmente un artículo largo por su resumen. Tiempo de lectura y `wordCount` reflejan el cuerpo publicado.
 
@@ -60,7 +63,7 @@ Son guías educativas con advertencias, fuentes primarias y ejercicios preventiv
 
 La compilación Next.js y ESLint funcionan; pasan 106 pruebas en 30 archivos tras las revisiones del Paso 2. Se comprobó cada índice de artículo y su metadescripción (máximo 155 caracteres). El rastreo local actualizado valida 208 URLs de sitemap, canonical, un H1 y acceso desde la portada. No certifica que Google vaya a indexarlas.
 
-En la primera fase, Playwright comprobó 360, 414, 768 y 1440 píxeles: 28 combinaciones de página y tamaño, carga de imágenes, ausencia de desbordamiento, progreso y guardado tras navegación. También se verificaron dos primeras visitas móviles con el banner abierto: el área de contenido no se solapaba y el enlace de la app quedaba accesible. Esos resultados están en `growth-experience-check.json`. El Paso 2 añade una comprobación actual de sus 24 artículos a 360, 414 y 768 píxeles: 72 combinaciones, FAQ, anclas, imágenes y ausencia de desbordamiento, en `step-two-responsive-check.json`. Las medidas previas de LCP y CLS son de laboratorio local, no Core Web Vitals de usuarios reales. El rastreo actualizado de 319 destinos internos, incluida la descarga PDF, no encuentra enlaces rotos.
+En la primera fase, Playwright comprobó 360, 414, 768 y 1440 píxeles: 28 combinaciones de página y tamaño, carga de imágenes, ausencia de desbordamiento, progreso y guardado tras navegación. También se verificaron dos primeras visitas móviles con el banner abierto: el área de contenido no se solapaba y el enlace de la app quedaba accesible. Esos resultados están en `growth-experience-check.json`. El Paso 2 añade una comprobación actual de sus 48 artículos a 360, 414 y 768 píxeles: 144 combinaciones, FAQ, anclas, imágenes y ausencia de desbordamiento, en `step-two-responsive-check.json`. Las medidas previas de LCP y CLS son de laboratorio local, no Core Web Vitals de usuarios reales. El rastreo actualizado de 319 destinos internos, incluida la descarga PDF, no encuentra enlaces rotos.
 
 El PDF tiene tres páginas A4: se validó su estructura y se renderizó para inspeccionar las tres páginas. La descarga pública y el archivo entregable contienen los mismos bytes. Para regenerarlo, sirve una compilación actual y ejecuta `node scripts/build-workbook-pdf.cjs http://127.0.0.1:3025`; vuelve a comprobar páginas y diseño.
 
@@ -70,7 +73,7 @@ No se ha validado el adaptador final de Cloudflare en este entorno Windows ni el
 
 ## Pendiente
 
-- Editar las 24 piezas restantes, empezando por comunicación, rutas, DANA y evacuación rápida; después naturaleza y comparativas. Evitar repetición de texto y canibalización de intención.
+- Mantener fuentes, necesidades locales y contenido tras publicar. La cola inicial de ampliación está cerrada; seguir detectando nuevas carencias con datos reales, sin producir artículos por cuota.
 - Revisar vigencia de especificaciones, precios históricos y disponibilidad antes de presentar cualquier oferta como actual.
 - Verificar necesidades jurídicas del responsable con sus datos reales; no inventar NIF, domicilio ni credenciales.
 - Una newsletter requeriría proveedor, consentimiento específico, envío y baja. No se ha añadido un formulario que finja funcionar.

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-14T20:39:50.811Z",
+  "checkedAt": "2026-10-14T21:21:57.623Z",
   "base": "http://127.0.0.1:3026",
   "checks": [
     {
@@ -195,6 +195,198 @@
       "overflow": false
     },
     {
+      "slug": "como-ahorrar-bateria-emergencia",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "rutas-evacuacion-mapas-offline",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "senales-sos-comunicacion-visual",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "radio-frecuencias-emergencia-sin-cobertura",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-10-minutos-que-coger",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-hacer-durante-dana",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "caza-observacion-fauna-preparacion",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "pesca-preparar-salida-responsable",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
       "slug": "medicamentos-tratamientos-emergencias",
       "width": 414,
       "status": 200,
@@ -387,6 +579,198 @@
       "overflow": false
     },
     {
+      "slug": "como-ahorrar-bateria-emergencia",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "rutas-evacuacion-mapas-offline",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "senales-sos-comunicacion-visual",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "radio-frecuencias-emergencia-sin-cobertura",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-10-minutos-que-coger",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-hacer-durante-dana",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "caza-observacion-fauna-preparacion",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "pesca-preparar-salida-responsable",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
       "slug": "medicamentos-tratamientos-emergencias",
       "width": 768,
       "status": 200,
@@ -572,6 +956,198 @@
     },
     {
       "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-ahorrar-bateria-emergencia",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "rutas-evacuacion-mapas-offline",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "senales-sos-comunicacion-visual",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "radio-frecuencias-emergencia-sin-cobertura",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-10-minutos-que-coger",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "que-hacer-durante-dana",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "caza-observacion-fauna-preparacion",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "pesca-preparar-salida-responsable",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "animales-venenosos-de-espana-cuales-hay-y-que-hacer",
       "width": 768,
       "status": 200,
       "headings": 1,

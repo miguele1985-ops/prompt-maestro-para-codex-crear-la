@@ -7,6 +7,7 @@ import { growthRevisions } from '@/content/growth-revisions';
 import originalWords from '@/content/editorial-original-word-counts.json';
 
 export function usesOriginalBody(slug: string) {
+  if (growthRevisions[slug]?.preferOriginal) return true;
   return !Boolean(batchTwoRevisions[slug] || everydayUpdates.has(slug) || articleQualityRevisions[slug] || distinctGuideRevisions[slug] || growthRevisions[slug]?.replace);
 }
 export function sectionWords(sections: BlogSection[]) {
