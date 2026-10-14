@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-14T19:06:04.791Z",
+  "origin": "http://127.0.0.1:3025",
+  "viewports": [
+    360,
+    414,
+    768,
+    1440
+  ],
+  "pageViewportChecks": 28,
+  "freshCookieViewports": [
+    360,
+    414
+  ],
+  "cookieOverlap": false,
+  "progressPersisted": true,
+  "bookmarkPersisted": true,
+  "workbookSheets": 3,
+  "labMeasures": [
+    {
+      "width": 360,
+      "lcp": 548,
+      "cls": 0
+    },
+    {
+      "width": 414,
+      "lcp": 116,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "lcp": 152,
+      "cls": 0
+    },
+    {
+      "width": 1440,
+      "lcp": 196,
+      "cls": 0
+    }
+  ],
+  "note": "Local headless browser measurements, not field Core Web Vitals or traffic predictions."
+}

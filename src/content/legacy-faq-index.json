@@ -1,0 +1,72 @@
+{
+  "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos": [
+    {
+      "question": "¿Fue total en toda España?",
+      "answer": "No. Pudo observarse desde todo el territorio, pero la totalidad se produjo dentro de una franja concreta que atravesó numerosas comunidades. La DGT publicó mapas y recomendaciones para las zonas con mayor concentración."
+    },
+    {
+      "question": "¿Hubo una alerta ES-Alert nacional?",
+      "answer": "Las fuentes oficiales consultadas confirman activación del PLEGEM y dispositivos específicos, pero no respaldan afirmar que se enviara un único ES-Alert nacional a toda España. No debe añadirse esa afirmación sin una fuente específica."
+    },
+    {
+      "question": "¿Qué gafas eran válidas?",
+      "answer": "Protección Civil indicó gafas certificadas según ISO 12312-2, verificando autenticidad y estado de los filtros. Cámaras, prismáticos y telescopios necesitaban filtros solares específicos propios."
+    }
+  ],
+  "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro": [
+    {
+      "question": "¿Todos los trucos de supervivencia de redes son falsos?",
+      "answer": "No. El problema es que vídeos breves suelen eliminar contexto y limitaciones. Comprueba recomendaciones críticas con Protección Civil, Sanidad, AEMET, DGT u organismos sanitarios reconocidos antes de aplicarlas."
+    },
+    {
+      "question": "¿Una vela está prohibida durante un apagón?",
+      "answer": "No es esa la afirmación. CDC recomienda preferir iluminación a batería; si se usa una vela, debe colocarse de forma segura y nunca dejarse desatendida."
+    },
+    {
+      "question": "¿Un kit caro es mejor?",
+      "answer": "No necesariamente. Debe responder a tus riesgos, familia y capacidad física. Una radio que sabes usar, agua bien almacenada y un plan pueden ser más útiles que equipo especializado sin función clara."
+    }
+  ],
+  "verano-de-2026-el-mas-calido-de-la-serie-en-espana": [
+    {
+      "question": "¿Fue más cálido que 2025?",
+      "answer": "Sí. Según AEMET, la media peninsular del verano de 2026 superó en 0,3 °C a la de 2025."
+    },
+    {
+      "question": "¿Cuántos días de ola de calor hubo?",
+      "answer": "AEMET contabilizó 61 días bajo condiciones de ola de calor en Península y Baleares durante 2026, récord frente a los 41 de 2022."
+    },
+    {
+      "question": "¿Cuál fue el mes más extremo?",
+      "answer": "Julio tuvo 25,7 °C de media peninsular y empató con julio de 2022 como mes más cálido de la serie oficial; además fue el julio más seco desde 1961."
+    }
+  ],
+  "mascotas-en-emergencias-apagon-calor-y-evacuacion": [
+    {
+      "question": "¿Debo preparar una mochila exclusiva?",
+      "answer": "Puede ser práctico agrupar el material del animal junto al kit familiar, claramente identificado. Lo importante es poder cogerlo rápidamente y que no dependa de buscar cada objeto por la casa."
+    },
+    {
+      "question": "¿Cuánta agua llevo?",
+      "answer": "No hay una cifra universal para todas las especies y tamaños. Calcula con tu veterinario las necesidades de tu animal y añade margen para calor, viaje y derrames; rota la reserva igual que la familiar."
+    },
+    {
+      "question": "¿Qué hago si necesita medicación diaria?",
+      "answer": "Inclúyela en el plan y consulta al veterinario sobre conservación y reserva razonable. Algunos medicamentos requieren condiciones de temperatura específicas que un apagón puede alterar."
+    }
+  ],
+  "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia": [
+    {
+      "question": "¿Hace falta comprar un kit comercial?",
+      "answer": "No necesariamente. Muchos elementos básicos ya existen en casa. Haz primero inventario y completa solo carencias reales; así evitas duplicar objetos y puedes dedicar presupuesto a necesidades específicas."
+    },
+    {
+      "question": "¿La cinta americana sirve para todo?",
+      "answer": "No. Es útil para fijaciones temporales y organización, pero no sustituye una reparación eléctrica, estructural, de gas o de equipos de seguridad. El contexto determina si una reparación improvisada es aceptable."
+    },
+    {
+      "question": "¿Qué objeto doméstico es más importante?",
+      "answer": "No existe uno universal. Agua segura, información, iluminación, medicación personal y un plan cubren necesidades distintas. La preparación funciona como sistema, no como un truco único."
+    }
+  ]
+}

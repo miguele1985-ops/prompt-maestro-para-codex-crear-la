@@ -10,6 +10,8 @@ import { catalogPageHref, paginatedCatalogs } from '@/content/catalogs';
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.siteUrl.replace(/\/$/, "");
   const entries: MetadataRoute.Sitemap = [
+    { url: `${base}/empieza-aqui` },
+    { url: `${base}/cuaderno-de-campo` },
     { url: `${base}/politica-editorial`, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/mapa-web`, changeFrequency: 'weekly', priority: 0.8 },
     ...paginatedCatalogs().map(({catalog, page}) => ({ url: `${base}${catalogPageHref(catalog, page)}`, changeFrequency: 'weekly' as const, priority: 0.5 })),

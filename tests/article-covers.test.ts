@@ -24,7 +24,7 @@ describe('unique article covers', () => {
       expect(pixels.has(pixelHash), post.slug).toBe(false);
       pixels.add(pixelHash);
       for (const width of [240,360,576,960,1200]) {
-        expect(existsSync(`public${post.image.replace('.jpg', `-${width}.webp`)}`), `${post.slug}: ${width}`).toBe(true);
+        expect(existsSync(`public${post.image.replace(/\.(jpg|png|webp)$/, `-${width}.webp`)}`), `${post.slug}: ${width}`).toBe(true);
       }
       expect(post.imageAlt.length).toBeGreaterThan(15);
     }

@@ -29,9 +29,9 @@ const picks = [
   "radios-de-manivela-y-a-pilas-para-emergencias",
 ];
 const startHere = [
-  "evacuacion-de-vivienda-checklist-paso-a-paso",
-  "depositos-de-agua-para-emergencias-que-capacidad-elegir",
-  "linterna-frontal-vs-de-mano-para-un-apagon",
+  'senderismo-principiantes-planificar-ruta',
+  'mochila-dia-senderismo-lista',
+  'como-crear-plan-familiar-emergencia',
 ];
 const readingPaths = [
   { title: "Un hogar preparado", image: "familia-preparada-natural", description: "Empieza por lo que ya tienes y organiza lo imprescindible.", slugs: ["objetos-de-casa-que-pueden-ayudarte-en-una-emergencia", "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu", "evacuacion-de-vivienda-checklist-paso-a-paso"] },
@@ -80,10 +80,10 @@ export default function HomePage() {
     <div className="survival-journal">
       <section className="journal-cover">
         <picture>
-          <source media="(max-width: 700px)" srcSet="/images/blog/familia-preparada-natural-960.webp" />
+          <source media="(max-width: 700px)" srcSet="/images/blog/aprendizaje-campo-natural-960.webp" />
           <img
-            src="/images/blog/familia-preparada-natural-1600.webp"
-            alt="Una pareja prepara una mochila, agua y radio en su vivienda. Imagen ilustrativa creada con IA."
+            src="/images/blog/aprendizaje-campo-natural-1600.webp"
+            alt="Excursionistas revisan un mapa y observan el entorno antes de continuar por un sendero. Imagen ilustrativa creada con IA."
             width={1536}
             height={1024}
             fetchPriority="high"
@@ -93,16 +93,15 @@ export default function HomePage() {
           <p className="journal-kicker">Preparación cotidiana · Vida al aire libre</p>
           <h1>Modo Crisis Survival</h1>
           <p className="journal-deck">
-            La preparación empieza en casa.
+            Prepárate en casa.
             <br />
-            Y se aprende paso a paso.
+            Decide mejor en el sendero.
           </p>
           <p>
-            Guías de supervivencia, consejos para tu hogar y criterios para elegir el equipo que de
-            verdad necesitas.
+            Supervivencia, senderismo y preparación familiar. Aprende lo importante, practica con criterio y conoce tus límites.
           </p>
           <div className="journal-actions">
-            <Link className="journal-primary" href="#lecturas">
+            <Link className="journal-primary" href="/empieza-aqui">
               <BookOpen size={18} aria-hidden /> Por dónde empezar
             </Link>
             <Link className="journal-secondary-link" href="/comparativas">
@@ -131,6 +130,7 @@ export default function HomePage() {
         </Link>
       </nav>
       <div className="journal-explore-all"><Link href="/temas">Explorar todas las guías y herramientas <ArrowRight size={16} aria-hidden /></Link></div>
+      <section className="growth-entry-band"><div className="journal-section"><p className="eyebrow">Tu próximo paso</p><h2>Una semana. Siete decisiones útiles.</h2><p>Prepara tu casa o tu próxima ruta. Guarda el progreso y vuelve para la siguiente tarea.</p><div className="growth-entry-links"><Link href="/empieza-aqui">Elegir mi recorrido <ArrowRight size={18} aria-hidden /></Link><Link href="/cuaderno-de-campo">Listas para imprimir</Link><Link href="/mi-biblioteca">Mis lecturas guardadas</Link></div></div></section>
       <section className="journal-section" id="lecturas">
         <div className="journal-heading">
           <div>
@@ -138,7 +138,7 @@ export default function HomePage() {
             <h2>¿Qué podrías dejar resuelto hoy?</h2>
           </div>
           <Link href="/supervivencia">
-            Todos los artículos <ArrowRight size={18} aria-hidden />
+            Todas las guías <ArrowRight size={18} aria-hidden />
           </Link>
         </div>
         <div className="journal-feature-grid">
@@ -149,7 +149,7 @@ export default function HomePage() {
       </section>
       <section className="journal-paths-band" aria-labelledby="reading-paths-heading">
         <div className="journal-section">
-          <div className="journal-heading"><div><p className="journal-kicker">Una lectura lleva a la siguiente</p><h2 id="reading-paths-heading">Elige tu punto de partida</h2></div><Link href="/supervivencia">Explorar las 30 guías y más <ArrowRight size={18} aria-hidden /></Link></div>
+          <div className="journal-heading"><div><p className="journal-kicker">Una lectura lleva a la siguiente</p><h2 id="reading-paths-heading">Elige tu punto de partida</h2></div><Link href="/supervivencia">Explorar las guías <ArrowRight size={18} aria-hidden /></Link></div>
           <div className="journal-paths">
             {readingPaths.map((path) => <article key={path.title}>
               <ResponsiveImage src={`/images/blog/${path.image}.jpg`} alt={`${path.title}. Escena ilustrativa generada con IA.`} width={576} height={384} loading="lazy" sizes="(max-width:700px) 90vw, 380px" />

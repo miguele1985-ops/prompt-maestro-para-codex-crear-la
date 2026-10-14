@@ -7,12 +7,11 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPost } from "@/content/blog";
-import { batchTwoRevisions } from "@/content/batch-two";
-import { everydayUpdates } from "@/content/everyday-survival";
-import { articleQualityRevisions } from "@/content/article-quality-revisions";
-import { distinctGuideRevisions } from "@/content/distinct-guide-revisions";
+import { usesOriginalBody, articleWordCount } from '@/lib/article-body';
+import { articleQualityRevisions } from '@/content/article-quality-revisions';
+import { distinctGuideRevisions } from '@/content/distinct-guide-revisions';
 import originals from "@/content/editorial-articles.json";
-import { articleIndex, articleTopic, readingMinutes, relatedArticles } from "@/lib/editorial";
+import { articleIndex, articleTopic, readingMinutes, relatedArticles, articleDescription } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 import { ArticleEquipment } from "@/components/ArticleEquipment";
 import { monetizationPolicy } from "@/lib/monetization";
@@ -20,6 +19,9 @@ import { SurvivalCalculator } from "@/components/SurvivalCalculator";
 import { PlantPhotoGallery } from "@/components/PlantPhotoGallery";
 import { AppDownloadActions } from "@/components/AppDownloadActions";
 import { contentKind, portalTopic, portalTopics, editorialCover } from "@/content/portal";
+import { ArticleActions } from '@/components/ArticleActions';
+import legacyFAQ from '@/content/legacy-faq-index.json';
+import { growthRevisions } from '@/content/growth-revisions';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -34,7 +36,7 @@ export async function generateMetadata({
   if (!post) return {};
   const metadata = pageMetadata({
     title: post.seoTitle || post.title,
-    description: post.excerpt,
+    description: articleDescription(post),
     slug: `supervivencia/${post.slug}`,
     keywords: post.keywords,
     image: post.image,
@@ -53,15 +55,17 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const post = getBlogPost((await params).slug);
   if (!post) notFound();
-  const revised = Boolean(batchTwoRevisions[post.slug] || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug]) || everydayUpdates.has(post.slug);
+  const revised = !usesOriginalBody(post.slug);
   const original = revised ? undefined : (originals as Record<string, string>)[post.slug];
   const info = revised ? undefined : articleIndex[post.slug];
   const sections = original
-    ? []
+    ? growthRevisions[post.slug]?.sections || []
     : post.sections.filter((section) => section.heading !== "Transparencia comercial");
-  const toc = info?.toc ?? sections.map((s, i) => ({ id: `seccion-${i + 1}`, title: s.heading }));
+  const sectionId = (index: number) => `${original ? 'ampliacion' : 'seccion'}-${index + 1}`;
+  const toc = [...(info?.toc || []), ...sections.map((s, i) => ({ id: sectionId(i), title: s.heading })), ...(post.faq?.length ? [{ id: 'preguntas-frecuentes', title: 'Preguntas de esta revisión' }] : [])];
   const related = relatedArticles(post, blogPosts);
   const sources = post.sources ?? info?.sources ?? [];
+  const faq = post.faq || (original ? (legacyFAQ as Record<string, Array<{question: string; answer: string}>>)[post.slug] : undefined);
   const kind=contentKind(post.slug,post.category);
   const parent=kind==='Comparativa'?{label:'Comparativas',href:'/comparativas'}:kind==='Calculadora'?{label:'Herramientas',href:'/herramientas-supervivencia'}:kind==='App'?{label:'App',href:'/aplicacion-supervivencia-offline'}:kind==='Guía'?{label:'Guías',href:'/guias-supervivencia'}:{label:'Artículos',href:'/supervivencia'};
   const topic=portalTopics.find(t=>t[0]===portalTopic(post.slug))!;
@@ -99,6 +103,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {post.updatedAt ? <span>Actualizado: <time dateTime={post.updatedAt}>{new Date(`${post.updatedAt}T12:00:00`).toLocaleDateString("es-ES")}</time></span> : null}
           </div>
         </header>
+        <ArticleActions slug={post.slug} title={post.title} />
         {kind!=='Calculadora'?<figure className="editorial-article-photo">
           <ResponsiveImage
             src={cover.image}
@@ -111,7 +116,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             fetchPriority="high"
           />
           <figcaption>
-            {post.slug === 'eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos' && <>Foto de archivo de 2017, no del eclipse de 2026: NASA/Aubrey Gemignani, dominio público. </>}
+            {post.imageCredit ? <>{post.imageCredit.author}. <a href={post.imageCredit.source}>Fuente SVG</a> · <a href={post.imageCredit.licenseUrl}>{post.imageCredit.license}</a>. </> : null}
+            {!post.imageCredit && post.slug === 'eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos' && <>Foto de archivo de 2017, no del eclipse de 2026: NASA/Aubrey Gemignani, dominio público. </>}
             Imagen ilustrativa. Consulta las fuentes del artículo para contrastar los datos; una
             imagen no permite identificar especies ni verificar un producto.
           </figcaption>
@@ -143,15 +149,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ) : null}
             {sections.map((section, i) => {
               const links = section.links?.filter((l) => !l.sponsored);
-              if (original && !links?.length) return null;
               return (
                 <section
                   className="editorial-text-section"
                   key={section.heading}
-                  id={original ? undefined : `seccion-${i + 1}`}
+                  id={sectionId(i)}
                 >
                    <h2>{section.heading === "Transparencia comercial" ? "Consultar en Amazon" : section.heading}</h2>
-                  {section.heading !== "Transparencia comercial" ? <p>{section.body}</p> : null}
+                  {section.heading !== "Transparencia comercial" ? section.body.split(/\n\n+/).map((paragraph, index) => <p key={index}>{paragraph}</p>) : null}
+                  {section.steps ? <ol>{section.steps.map(step => <li key={step}>{step}</li>)}</ol> : null}
+                  {section.table ? <div className="article-table-scroll" tabIndex={0} role="region" aria-label={section.table.caption}><table><caption>{section.table.caption}</caption><thead><tr>{section.table.headers.map(header => <th scope="col" key={header}>{header}</th>)}</tr></thead><tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => column === 0 ? <th scope="row" key={column}>{cell}</th> : <td key={column}>{cell}</td>)}</tr>)}</tbody></table></div> : null}
                   {section.image ? <figure className={section.image.fullWidth ? "article-field-reference" : "article-app-reference"}>
                     <a href={section.image.src} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar: ${section.image.alt}`}><ResponsiveImage src={section.image.src} alt={section.image.alt} width={section.image.fullWidth ? 1200 : 360} height={section.image.fullWidth ? 900 : 720} loading="lazy" widths={section.image.fullWidth ? [360,576,960,1200] : undefined} sizes={section.image.fullWidth ? "(max-width:760px) 90vw, 760px" : "(max-width:400px) 85vw, 320px"} /></a>
                     <figcaption>{section.image.caption || 'Captura de la aplicación Modo Crisis Survival.'}</figcaption>
@@ -191,6 +198,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               );
             })}
             {post.slug === "plantas-comestibles-y-peligrosas-que-se-pueden-confundir" ? <PlantPhotoGallery /> : null}
+            {post.faq?.length ? <section className="article-faq" id="preguntas-frecuentes"><h2>Preguntas frecuentes</h2>{post.faq.map(item => <details key={item.question}><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>)}</section> : null}
             {post.slug === "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar" ? <p><Link href="/nudos">Consultar las 19 fichas de nudos de la aplicación, adaptadas para la web</Link></p> : null}
             {post.relatedLinks?.length ? (
               <nav className="editorial-resource-links" aria-label="Recursos relacionados con este artículo">
@@ -284,9 +292,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             inLanguage: "es",
             ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
             ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
-            ...(info ? { wordCount: info.words } : {}),
+            wordCount: articleWordCount(post),
           }}
         />
+        {faq?.length ? <SeoJsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }} /> : null}
       </div>
     </div>
   );

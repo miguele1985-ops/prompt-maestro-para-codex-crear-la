@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-10-14T18:59:07.568Z",
+  "sources": [
+    {
+      "title": "National Park Service: planificación de una salida",
+      "url": "https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm"
+    },
+    {
+      "title": "AEMET: predicción de montaña",
+      "url": "https://www.aemet.es/es/eltiempo/prediccion/montana",
+      "status": 200,
+      "resolvedUrl": "https://www.aemet.es/es/eltiempo/prediccion/montana"
+    },
+    {
+      "title": "National Park Service: Hike Smart",
+      "url": "https://www.nps.gov/articles/hiking-safety.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/articles/hiking-safety.htm"
+    },
+    {
+      "title": "IGN: recursos cartográficos",
+      "url": "https://www.ign.es/web/ign/portal/cbg-area-cartografia",
+      "status": 200,
+      "resolvedUrl": "https://www.ign.es/web/ign/portal/cbg-area-cartografia"
+    },
+    {
+      "title": "AESAN: seguridad alimentaria",
+      "url": "https://www.aesan.gob.es/para-la-ciudadania",
+      "status": 200,
+      "resolvedUrl": "https://www.aesan.gob.es/para-la-ciudadania"
+    },
+    {
+      "title": "Protección Civil: Plan Familia Preparada",
+      "url": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf",
+      "status": 200,
+      "resolvedUrl": "https://ficheros.proteccioncivil.es/unidadesFormativas/01_Manal_Plan_Familia_Preparada.pdf"
+    },
+    {
+      "title": "Protección Civil: terremotos y autoprotección",
+      "url": "https://espacios.proteccioncivil.es/web/guest/coordinacion/gestion-riesgos/geologicos/terremotos",
+      "error": "fetch failed"
+    },
+    {
+      "title": "BOE: planificación de Protección Civil ante riesgo de terremotos",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-21145",
+      "status": 200,
+      "resolvedUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-21145"
+    },
+    {
+      "title": "National Park Service: seguridad y tormentas",
+      "url": "https://www.nps.gov/hove/planyourvisit/safety.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/hove/planyourvisit/safety.htm"
+    },
+    {
+      "title": "AEMET: avisos meteorológicos",
+      "url": "https://www.aemet.es/es/eltiempo/prediccion/avisos",
+      "status": 200,
+      "resolvedUrl": "https://www.aemet.es/es/eltiempo/prediccion/avisos"
+    },
+    {
+      "title": "NPS: minimizar el impacto de las hogueras",
+      "url": "https://www.nps.gov/articles/000/idkt-lnt5.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/articles/000/idkt-lnt5.htm"
+    },
+    {
+      "title": "CDC: monóxido de carbono",
+      "url": "https://www.cdc.gov/carbon-monoxide/about/index.html",
+      "status": 200,
+      "resolvedUrl": "https://www.cdc.gov/carbon-monoxide/about/index.html"
+    },
+    {
+      "title": "NPS Yosemite: hornillos y seguridad de camping",
+      "url": "https://www.nps.gov/yose/learn/nature/smokemanagement.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/yose/learn/nature/smokemanagement.htm"
+    },
+    {
+      "title": "NPS: recursos esenciales y refugio de emergencia",
+      "url": "https://www.nps.gov/articles/10essentials.htm",
+      "status": 200,
+      "resolvedUrl": "https://www.nps.gov/articles/10essentials.htm"
+    },
+    {
+      "title": "CDC: higiene durante una emergencia",
+      "url": "https://www.cdc.gov/water-emergency/safety/guidelines-for-personal-hygiene-during-an-emergency.html",
+      "status": 200,
+      "resolvedUrl": "https://www.cdc.gov/water-emergency/safety/guidelines-for-personal-hygiene-during-an-emergency.html"
+    },
+    {
+      "title": "CDC: avisos de agua y usos permitidos",
+      "url": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html",
+      "status": 200,
+      "resolvedUrl": "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+    },
+    {
+      "title": "Guardia Civil: clasificación de armas y herramientas de hoja",
+      "url": "https://web.guardiacivil.es/es/tramites/autorizaciones-de-armas-y-explosivos/clasifica_armas/",
+      "status": 200,
+      "resolvedUrl": "https://web.guardiacivil.es/es/tramites/autorizaciones-de-armas-y-explosivos/clasifica_armas/"
+    },
+    {
+      "title": "Guardia Civil: armas prohibidas",
+      "url": "https://web.guardiacivil.es/es/tramites/autorizaciones-de-armas-y-explosivos/clasifica_armas/armas_prohibidas/",
+      "status": 200,
+      "resolvedUrl": "https://web.guardiacivil.es/es/tramites/autorizaciones-de-armas-y-explosivos/clasifica_armas/armas_prohibidas/"
+    },
+    {
+      "title": "NHS: ampollas, prevención y cuándo consultar",
+      "url": "https://www.nhs.uk/conditions/blisters/",
+      "status": 200,
+      "resolvedUrl": "https://www.nhs.uk/conditions/blisters/"
+    },
+    {
+      "title": "ESA Navipedia: navegación exterior y mapas offline",
+      "url": "https://gssc.esa.int/navipedia/index.php/Outdoor_Navigation",
+      "status": 200,
+      "resolvedUrl": "https://gssc.esa.int/navipedia/index.php/Outdoor_Navigation"
+    },
+    {
+      "title": "Xiaomi: ficha oficial PB1033MI",
+      "url": "https://www.mi.com/my/product/xiaomi-33w-power-bank-10000-integrated-cable/specs/",
+      "status": 200,
+      "resolvedUrl": "https://www.mi.com/my/product/xiaomi-33w-power-bank-10000-integrated-cable/specs/"
+    },
+    {
+      "title": "Comisión Europea: estrategia de preparación y referencia de 72 horas",
+      "url": "https://commission.europa.eu/topics/preparedness_es",
+      "status": 200,
+      "resolvedUrl": "https://commission.europa.eu/topics/preparedness_es"
+    }
+  ],
+  "note": "HTTP availability is not verification of every assertion. Some official providers reject automated requests."
+}

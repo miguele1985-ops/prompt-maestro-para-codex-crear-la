@@ -1,9 +1,6 @@
 import type { BlogPost } from "@/content/blog";
 import originalIndex from "@/content/editorial-index.json";
-import { batchTwoRevisions } from "@/content/batch-two";
-import { everydayUpdates } from "@/content/everyday-survival";
-import { articleQualityRevisions } from "@/content/article-quality-revisions";
-import { distinctGuideRevisions } from "@/content/distinct-guide-revisions";
+import { articleWordCount } from '@/lib/article-body';
 export type EditorialIndex = {
   toc: { id: string; title: string }[];
   words: number;
@@ -13,6 +10,10 @@ export type EditorialIndex = {
   sources: { title: string; url: string }[];
 };
 export const articleIndex = originalIndex as Record<string, EditorialIndex>;
+export function articleDescription(post: BlogPost) {
+  const text = post.metaDescription || post.excerpt;
+  return text.length <= 155 ? text : `${text.slice(0, 151).replace(/\s+\S*$/, '').trim()}...`;
+}
 export const topics = [
   "Todos",
   "Agua",
@@ -28,25 +29,14 @@ export function articleTopic(post: Pick<BlogPost, "slug" | "category" | "title">
   if (value.includes("calculadora")) return "Calculadoras";
   if (/comparativa|comprar|mochila|botiquin|kit-/.test(value)) return "Equipo";
   if (/agua|lluvia|potabiliza/.test(value)) return "Agua";
-  if (/plantas|setas|animales|nudos|naturaleza/.test(value)) return "Naturaleza";
+  if (/plantas|setas|animales|nudos|naturaleza|senderismo|montana|bushcraft|vivac/.test(value)) return "Naturaleza";
   if (/bateria|powerbank|radio|apagon|cobertura|energia|comunicacion/.test(value))
     return "Energía y comunicación";
   if (/aplicacion|app-|mbtiles|mapas-offline/.test(value)) return "Aplicación";
   return "Hogar y familia";
 }
 export function readingMinutes(post: BlogPost) {
-  return (
-    (batchTwoRevisions[post.slug] || everydayUpdates.has(post.slug) || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug] ? undefined : articleIndex[post.slug]?.readingMinutes) ??
-    Math.max(
-      2,
-      Math.ceil(
-        post.sections
-          .map((s) => s.body + " " + (s.bullets || []).join(" "))
-          .join(" ")
-          .split(/\s+/).length / 200,
-      ),
-    )
-  );
+  return Math.max(2, Math.ceil(articleWordCount(post) / 200));
 }
 export function relatedArticles(post: BlogPost, posts: BlogPost[]) {
   const explicit = new Set(post.relatedLinks?.map((link) => link.href) ?? []);

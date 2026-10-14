@@ -10,11 +10,12 @@ import ArticlePage from "../app/supervivencia/[slug]/page";
 import { allContentPages } from "../src/content/pages";
 import { PayPalDonationBlock } from "../src/components/PayPalDonationBlock";
 import originals from "../src/content/editorial-articles.json";
+import { growthRevisions } from '../src/content/growth-revisions';
 
 describe("useful canonical editorial library", () => {
   it("consolidates twelve old introductions without orphaning their addresses", async () => {
     expect(Object.keys(articleAliases)).toHaveLength(12);
-    expect(blogPosts.length + Object.keys(articleAliases).length).toBe(98);
+    expect(blogPosts.length + Object.keys(articleAliases).length).toBe(113);
     const redirects = await nextConfig.redirects!();
     const urls = new Set(sitemap().map(entry => new URL(entry.url).pathname));
     for (const [alias, destination] of Object.entries(articleAliases)) {
@@ -33,7 +34,7 @@ describe("useful canonical editorial library", () => {
     expect(Object.keys(distinctGuideRevisions)).toHaveLength(11);
     for (const [slug, revision] of Object.entries(distinctGuideRevisions)) {
       const post = getBlogPost(slug)!;
-      expect(post.excerpt).toBe(revision.excerpt); expect(post.sections).toHaveLength(6);
+      expect(post.excerpt).toBe(revision.excerpt); expect(post.sections).toHaveLength(6 + (growthRevisions[slug]?.sections.length || 0));
       const markup = renderToStaticMarkup(await ArticlePage({ params: Promise.resolve({ slug }) }));
       expect(markup).toContain(revision.sections[0].heading);
       expect(markup).not.toContain('id="equipo-articulo"');

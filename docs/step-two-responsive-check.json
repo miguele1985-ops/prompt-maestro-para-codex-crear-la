@@ -1,0 +1,583 @@
+{
+  "checkedAt": "2026-10-14T20:39:50.811Z",
+  "base": "http://127.0.0.1:3026",
+  "checks": [
+    {
+      "slug": "medicamentos-tratamientos-emergencias",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-emergencia-personas-mayores",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "gestion-alimentos-sin-electricidad",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "confinamiento-emergencia-casa-que-hacer",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "refugio-temporal-casa-frio-calor",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-guardar-agua-emergencias",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-prepararse-para-un-apagon",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "simulacro-familiar-emergencia-30-minutos",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "ciberataque-masivo-servicios-esenciales",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "crisis-cadena-suministro-supermercados-vacios",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "primeras-24-horas-gran-emergencia",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tarjetas-cajeros-pagos-no-funcionan",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "7-dias-sin-internet",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tormenta-solar-extrema-como-prepararse",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "emergencia-trabajo-volver-casa",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "espana-2030-calor-sequia-inundaciones",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 360,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "medicamentos-tratamientos-emergencias",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-emergencia-personas-mayores",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "gestion-alimentos-sin-electricidad",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "confinamiento-emergencia-casa-que-hacer",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "refugio-temporal-casa-frio-calor",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-guardar-agua-emergencias",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-prepararse-para-un-apagon",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "simulacro-familiar-emergencia-30-minutos",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "ciberataque-masivo-servicios-esenciales",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "crisis-cadena-suministro-supermercados-vacios",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "primeras-24-horas-gran-emergencia",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tarjetas-cajeros-pagos-no-funcionan",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "7-dias-sin-internet",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tormenta-solar-extrema-como-prepararse",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "emergencia-trabajo-volver-casa",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "espana-2030-calor-sequia-inundaciones",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 414,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "medicamentos-tratamientos-emergencias",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "kit-emergencia-personas-mayores",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "gestion-alimentos-sin-electricidad",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "confinamiento-emergencia-casa-que-hacer",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "refugio-temporal-casa-frio-calor",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-guardar-agua-emergencias",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-prepararse-para-un-apagon",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "simulacro-familiar-emergencia-30-minutos",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "ciberataque-masivo-servicios-esenciales",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "crisis-cadena-suministro-supermercados-vacios",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "primeras-24-horas-gran-emergencia",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tarjetas-cajeros-pagos-no-funcionan",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "7-dias-sin-internet",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "tormenta-solar-extrema-como-prepararse",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "emergencia-trabajo-volver-casa",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "espana-2030-calor-sequia-inundaciones",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    },
+    {
+      "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 768,
+      "status": 200,
+      "headings": 1,
+      "faq": 3,
+      "overflow": false
+    }
+  ],
+  "note": "Local responsive rendering and interactions, not search ranking or real-user performance."
+}

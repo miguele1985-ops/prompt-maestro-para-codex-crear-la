@@ -16,7 +16,8 @@ describe('Five preparedness scenarios', () => {
       for (const link of [...(post.relatedLinks || []), ...post.sections.flatMap(s => s.links || [])]) {
         if (link.href.startsWith('/supervivencia/')) expect(getBlogPost(link.href.slice('/supervivencia/'.length).split('#')[0])).toBeDefined();
       }
-      expect(post.sections.some(s => s.links?.some(l => l.href === '#equipo-articulo'))).toBe(true);
+      expect(post.sections.some(s => s.links?.some(l => l.href === '/supervivencia/como-revisar-kit-emergencia'))).toBe(true);
+      expect(post.sections.some(s => s.links?.some(l => l.href === '#equipo-articulo'))).toBe(false);
       expect(equipmentForArticle(post.slug)).toHaveLength(2);
     }
   });
