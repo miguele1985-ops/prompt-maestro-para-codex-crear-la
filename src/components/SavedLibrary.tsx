@@ -14,7 +14,7 @@ export function SavedLibrary({ articles }: { articles: Item[] }) {
     return () => window.removeEventListener('storage', load);
   }, []);
   function remove(slug: string) {
-    try { const next = slugs.filter(item => item !== slug); localStorage.setItem(savedArticlesKey, JSON.stringify(next)); setSlugs(next); }
+    try { const next = readSavedArticles().filter(item => item !== slug); localStorage.setItem(savedArticlesKey, JSON.stringify(next)); setSlugs(next); }
     catch { setMessage('No se pudo modificar el almacenamiento.'); }
   }
   const saved = articles.filter(article => slugs.includes(article.slug));

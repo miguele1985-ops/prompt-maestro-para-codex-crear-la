@@ -5,6 +5,7 @@ import { everydayArticles, everydayAliases, everydayUpdates } from '../src/conte
 import { portalContent } from '../src/content/portal';
 import sitemap from '../app/sitemap';
 import config from '../next.config';
+import { growthRevisions } from '../src/content/growth-revisions';
 
 describe('five everyday survival articles and URL migration', () => {
   it('adds three and expands two without duplicate slugs', () => {
@@ -14,7 +15,8 @@ describe('five everyday survival articles and URL migration', () => {
     expect(new Set(blogPosts.map(p => p.slug)).size).toBe(101);
     for (const entry of everydayArticles) {
       const post = getBlogPost(entry.slug)!;
-      expect(post.sections).toEqual(entry.sections);
+      expect(post.sections.slice(0, entry.sections.length)).toEqual(entry.sections);
+      expect(post.sections).toHaveLength(entry.sections.length + (growthRevisions[entry.slug]?.sections.length || 0));
       expect(post.title).toBe(entry.title);
       expect(existsSync(`public${post.image}`)).toBe(true);
       expect(portalContent.some(p => p.href === `/supervivencia/${post.slug}` && p.kind === 'Artículo')).toBe(true);

@@ -58,7 +58,7 @@ export interface BlogAppUseGuide {
 
 export const blogPosts: BlogPost[] = [
   ...growthArticles,
-  ...everydayArticles.filter(post => !everydayUpdates.has(post.slug)),
+  ...everydayArticles.filter(post => !everydayUpdates.has(post.slug)).map(post => ({ ...post })),
   ...outdoorArticles,
   ...preparednessScenarios,
   ...resilienceArticles.slice(1),

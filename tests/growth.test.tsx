@@ -15,6 +15,7 @@ import { metadata as libraryMetadata } from '../app/mi-biblioteca/page';
 import { monetizationPolicy } from '../src/lib/monetization';
 import { allContentPages } from '../src/content/pages';
 import { articleWordCount } from '../src/lib/article-body';
+import WorkbookPage from '../app/cuaderno-de-campo/page';
 
 const words = (post: typeof blogPosts[number]) => [...post.sections.map(section => [section.heading, section.body, ...(section.bullets || []), ...(section.steps || []), ...(section.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)].join(' ').split(/\s+/).filter(Boolean).length;
 afterEach(() => { cleanup(); localStorage.clear(); vi.unstubAllGlobals(); });
@@ -31,8 +32,8 @@ describe('original growth content', () => {
       for (const link of post.relatedLinks!) expect(getBlogPost(link.href.split('/').at(-1)!)).toBeDefined();
     }
   });
-  it('expands nineteen existing guides without renaming them', () => {
-    expect(Object.keys(growthRevisions)).toHaveLength(19);
+  it('expands twenty-four existing guides without renaming them', () => {
+    expect(Object.keys(growthRevisions)).toHaveLength(24);
     for (const slug of Object.keys(growthRevisions)) {
       const post = getBlogPost(slug)!;
       expect(articleWordCount(post), slug).toBeGreaterThanOrEqual(1200);
@@ -64,6 +65,15 @@ describe('original growth content', () => {
     expect(schema.find(item => item['@type'] === 'Article').wordCount).toBe(articleWordCount(post));
     expect(doc.querySelectorAll('.article-faq details')).toHaveLength(3);
   });
+  it('keeps every article outline and short metadata usable after the revisions', async () => {
+    for (const post of blogPosts) {
+      const doc = new DOMParser().parseFromString(renderToStaticMarkup(await ArticlePage({ params: Promise.resolve({ slug: post.slug }) })), 'text/html');
+      expect(doc.querySelectorAll('h1'), post.slug).toHaveLength(1);
+      for (const link of doc.querySelectorAll('.editorial-toc a[href^="#"]')) expect(doc.getElementById(link.getAttribute('href')!.slice(1)), `${post.slug}: ${link.getAttribute('href')}`).not.toBeNull();
+      const metadata = await generateMetadata({ params: Promise.resolve({ slug: post.slug }) });
+      expect(metadata.description!.length, post.slug).toBeLessThanOrEqual(155);
+    }
+  });
   it('renders visible FAQ, matching schema, Article, Breadcrumb and licensed responsive images', async () => {
     for (const data of growthArticles) {
       const post = getBlogPost(data.slug)!;
@@ -90,10 +100,20 @@ describe('original growth content', () => {
     expect(urls.has('https://www.modocrisissurvival.com/mi-biblioteca')).toBe(false);
     expect(libraryMetadata.robots).toEqual({ index: false, follow: true });
     expect(renderToStaticMarkup(<LibraryPage />)).toContain('Mi biblioteca');
+    const workbook = renderToStaticMarkup(<WorkbookPage />);
+    expect(workbook).toContain('href="/downloads/cuaderno-modo-crisis-survival.pdf"');
+    expect(existsSync('public/downloads/cuaderno-modo-crisis-survival.pdf')).toBe(true);
     for (const slug of ['tormenta-electrica-montana', 'hornillo-camping-monoxido-carbono', 'ampollas-senderismo-prevencion', 'terremoto-plan-familiar']) expect(monetizationPolicy('/supervivencia/' + slug).affiliate).toBe(false);
   });
 });
 describe('reader retention without a tracking account', () => {
+  it('disables actions before hydration and reflects storage updates from another tab', () => {
+    expect(renderToStaticMarkup(<ArticleActions slug="hora-retorno-montana" title="Hora de retorno" />)).toContain('disabled');
+    render(<ArticleActions slug="hora-retorno-montana" title="Hora de retorno" />);
+    localStorage.setItem(savedArticlesKey, JSON.stringify(['hora-retorno-montana']));
+    fireEvent(window, new StorageEvent('storage', { key: savedArticlesKey }));
+    expect(screen.getByRole('button', { name: 'Guardado' }).getAttribute('aria-pressed')).toBe('true');
+  });
   it('stores and removes a selected article only after the reader chooses it', () => {
     const fetch = vi.fn(); vi.stubGlobal('fetch', fetch);
     render(<ArticleActions slug="hora-retorno-montana" title="Hora de retorno" />);

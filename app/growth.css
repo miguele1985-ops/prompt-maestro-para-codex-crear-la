@@ -38,10 +38,12 @@
 .saved-library h2 { font-size:22px; margin:0; }
 .saved-library button { background:none; color:#8f3517; border:0; text-decoration:underline; cursor:pointer; align-self:flex-start; min-height:44px; }
 .workbook { max-width:980px; }
+.workbook-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.article-actions button:disabled { opacity:.6; cursor:wait; }
 .workbook-sheet { border-top:2px solid #a63e13; margin-top:40px; padding-top:24px; }
 .workbook-sheet table { width:100%; border-collapse:collapse; }
 .workbook-sheet th, .workbook-sheet td { text-align:left; padding:14px; border:1px solid #899779; overflow-wrap:anywhere; }
 .workbook-sheet th { width:48%; }
 .workbook-sheet h2 { font-size:26px; }
 @media(max-width:600px) { .learning-route li { grid-template-columns:52px minmax(0,1fr); gap:10px; } .learning-route label { grid-column:2; } .workbook-sheet th,.workbook-sheet td { padding:8px; font-size:12px; } .saved-library li { flex-direction:column; gap:8px; } .growth-entry-band h2 { font-size:26px; } }
-@media print { .site-header,.site-footer,.cookie-banner,.cookie-dock-closed,.workbook-print,.workbook-guide,.workbook header>p { display:none!important; } .site-page { height:auto; overflow:visible; } body,.workbook { background:#fff!important; color:#000!important; } .workbook { padding:0; width:100%; } .workbook-sheet { break-inside:avoid; break-before:page; margin:0; padding-top:0; } .workbook-sheet:nth-of-type(1) { break-before:auto; } .workbook h1 { font-size:28px; } .workbook table { font-size:11pt; } .workbook a[href]:after { content:none; } }
+@media print { .site-header,.site-footer,.cookie-banner,.cookie-dock-closed,.skip-link,.workbook-print,.workbook-guide,.workbook-actions,.workbook header>p { display:none!important; } .site-page { height:auto; overflow:visible; } body,.workbook { background:#fff!important; color:#000!important; } .workbook { padding:0; width:100%; } .workbook-sheet { break-inside:avoid; break-before:page; margin:0; padding-top:0; } .workbook-sheet:nth-of-type(1) { break-before:auto; } .workbook h1 { font-size:28px; } .workbook table { font-size:11pt; } .workbook a[href]:after { content:none; } }

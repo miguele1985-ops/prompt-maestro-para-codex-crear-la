@@ -10,8 +10,14 @@ export function readSavedArticles(): string[] {
 }
 export function ArticleActions({ slug, title }: { slug: string; title: string }) {
   const [saved, setSaved] = useState(false);
+  const [ready, setReady] = useState(false);
   const [status, setStatus] = useState('');
-  useEffect(() => { setSaved(readSavedArticles().includes(slug)); }, [slug]);
+  useEffect(() => {
+    const load = () => { setSaved(readSavedArticles().includes(slug)); setReady(true); };
+    const refresh = (event: StorageEvent) => { if (event.key === savedArticlesKey || event.key === null) load(); };
+    load(); window.addEventListener('storage', refresh);
+    return () => window.removeEventListener('storage', refresh);
+  }, [slug]);
   function toggle() {
     try {
       const next = new Set(readSavedArticles());
@@ -29,5 +35,5 @@ export function ArticleActions({ slug, title }: { slug: string; title: string })
       else { await navigator.clipboard.writeText(url); setStatus('Enlace copiado.'); }
     } catch (error) { if (!(error instanceof DOMException && error.name === 'AbortError')) setStatus('No se pudo compartir. Puedes copiar la dirección del navegador.'); }
   }
-  return <div className="article-actions"><button type="button" onClick={toggle} aria-pressed={saved} title={saved ? 'Retirar de mi biblioteca' : 'Guardar en este navegador'}>{saved ? <Check size={18} aria-hidden /> : <Bookmark size={18} aria-hidden />}{saved ? 'Guardado' : 'Guardar'}</button><button type="button" onClick={share} title="Compartir artículo"><Share2 size={18} aria-hidden />Compartir</button><Link href="/mi-biblioteca">Mi biblioteca</Link><span role="status">{status}</span></div>;
+  return <div className="article-actions"><button type="button" disabled={!ready} onClick={toggle} aria-pressed={saved} title={saved ? 'Retirar de mi biblioteca' : 'Guardar en este navegador'}>{saved ? <Check size={18} aria-hidden /> : <Bookmark size={18} aria-hidden />}{saved ? 'Guardado' : 'Guardar'}</button><button type="button" disabled={!ready} onClick={share} title="Compartir artículo"><Share2 size={18} aria-hidden />Compartir</button><Link href="/mi-biblioteca">Mi biblioteca</Link><span role="status">{status}</span></div>;
 }
