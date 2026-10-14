@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-08T13:38:44.724Z",
-  "environment": "http://127.0.0.1:3023",
-  "sitemapURLs": 185,
-  "articleURLs": 86,
-  "paginatedURLs": 14,
+  "checkedAt": "2026-10-14T19:03:43.258Z",
+  "environment": "http://127.0.0.1:3025",
+  "sitemapURLs": 208,
+  "articleURLs": 101,
+  "paginatedURLs": 20,
   "unreachable": [],
   "viewports": [
     360,
@@ -73,6 +73,21 @@
       "canonical": "https://www.modocrisissurvival.com/catalogo/guias/4"
     },
     {
+      "path": "/catalogo/guias/5",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/guias/5"
+    },
+    {
+      "path": "/catalogo/guias/6",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/guias/6"
+    },
+    {
+      "path": "/catalogo/temas/10",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/10"
+    },
+    {
       "path": "/catalogo/temas/2",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/catalogo/temas/2"
@@ -111,6 +126,21 @@
       "path": "/catalogo/temas/9",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/catalogo/temas/9"
+    },
+    {
+      "path": "/catalogo/temas/agua/2",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/agua/2"
+    },
+    {
+      "path": "/catalogo/temas/comunicacion/2",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/comunicacion/2"
+    },
+    {
+      "path": "/catalogo/temas/energia/2",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/catalogo/temas/energia/2"
     },
     {
       "path": "/catalogo/temas/familia/2",
@@ -158,6 +188,11 @@
       "canonical": "https://www.modocrisissurvival.com/cookies"
     },
     {
+      "path": "/cuaderno-de-campo",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/cuaderno-de-campo"
+    },
+    {
       "path": "/descargar",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/descargar"
@@ -166,6 +201,11 @@
       "path": "/donaciones",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/donaciones"
+    },
+    {
+      "path": "/empieza-aqui",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/empieza-aqui"
     },
     {
       "path": "/funciones",
@@ -413,6 +453,11 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/agua-sin-electricidad-metodos-limites"
     },
     {
+      "path": "/supervivencia/ampollas-senderismo-prevencion",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/ampollas-senderismo-prevencion"
+    },
+    {
       "path": "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer"
@@ -436,6 +481,11 @@
       "path": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu"
+    },
+    {
+      "path": "/supervivencia/brujula-mapa-orientacion-basica",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/brujula-mapa-orientacion-basica"
     },
     {
       "path": "/supervivencia/calculadora-captacion-lluvia-supervivencia",
@@ -508,6 +558,11 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/calor-extremo-de-2026-61-dias-bajo-ola-de-calor"
     },
     {
+      "path": "/supervivencia/capas-ropa-senderismo-frio-lluvia",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/capas-ropa-senderismo-frio-lluvia"
+    },
+    {
       "path": "/supervivencia/caza-observacion-fauna-preparacion",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/caza-observacion-fauna-preparacion"
@@ -516,6 +571,11 @@
       "path": "/supervivencia/ciberataque-masivo-servicios-esenciales",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/ciberataque-masivo-servicios-esenciales"
+    },
+    {
+      "path": "/supervivencia/comida-senderismo-sin-cocinar",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/comida-senderismo-sin-cocinar"
     },
     {
       "path": "/supervivencia/como-ahorrar-bateria-emergencia",
@@ -561,6 +621,11 @@
       "path": "/supervivencia/crisis-cadena-suministro-supermercados-vacios",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/crisis-cadena-suministro-supermercados-vacios"
+    },
+    {
+      "path": "/supervivencia/cuchillo-bushcraft-uso-seguro",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/cuchillo-bushcraft-uso-seguro"
     },
     {
       "path": "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
@@ -628,6 +693,11 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad"
     },
     {
+      "path": "/supervivencia/fuego-bushcraft-seguro-permisos-yesca",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/fuego-bushcraft-seguro-permisos-yesca"
+    },
+    {
       "path": "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos"
@@ -646,6 +716,21 @@
       "path": "/supervivencia/gps-movil-sin-internet-mapas-offline",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/gps-movil-sin-internet-mapas-offline"
+    },
+    {
+      "path": "/supervivencia/higiene-sin-agua-vivienda",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/higiene-sin-agua-vivienda"
+    },
+    {
+      "path": "/supervivencia/hora-retorno-montana",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/hora-retorno-montana"
+    },
+    {
+      "path": "/supervivencia/hornillo-camping-monoxido-carbono",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/hornillo-camping-monoxido-carbono"
     },
     {
       "path": "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
@@ -681,6 +766,11 @@
       "path": "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026"
+    },
+    {
+      "path": "/supervivencia/mochila-dia-senderismo-lista",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/mochila-dia-senderismo-lista"
     },
     {
       "path": "/supervivencia/mochila-emergencia-72-horas-peso-realista",
@@ -768,6 +858,11 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/refugio-temporal-casa-frio-calor"
     },
     {
+      "path": "/supervivencia/revision-mensual-preparacion-familiar",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/revision-mensual-preparacion-familiar"
+    },
+    {
       "path": "/supervivencia/rutas-evacuacion-mapas-offline",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/rutas-evacuacion-mapas-offline"
@@ -781,6 +876,11 @@
       "path": "/supervivencia/senales-sos-comunicacion-visual",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/senales-sos-comunicacion-visual"
+    },
+    {
+      "path": "/supervivencia/senderismo-principiantes-planificar-ruta",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/senderismo-principiantes-planificar-ruta"
     },
     {
       "path": "/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
@@ -808,6 +908,16 @@
       "canonical": "https://www.modocrisissurvival.com/supervivencia/tarjetas-cajeros-pagos-no-funcionan"
     },
     {
+      "path": "/supervivencia/terremoto-plan-familiar",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/terremoto-plan-familiar"
+    },
+    {
+      "path": "/supervivencia/tormenta-electrica-montana",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/tormenta-electrica-montana"
+    },
+    {
       "path": "/supervivencia/tormenta-solar-extrema-como-prepararse",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/tormenta-solar-extrema-como-prepararse"
@@ -816,6 +926,11 @@
       "path": "/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana",
       "status": 200,
       "canonical": "https://www.modocrisissurvival.com/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana"
+    },
+    {
+      "path": "/supervivencia/vivac-emergencia-manta-termica",
+      "status": 200,
+      "canonical": "https://www.modocrisissurvival.com/supervivencia/vivac-emergencia-manta-termica"
     },
     {
       "path": "/supervivencia/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
