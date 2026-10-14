@@ -14,6 +14,7 @@ import LibraryPage from '../app/mi-biblioteca/page';
 import { metadata as libraryMetadata } from '../app/mi-biblioteca/page';
 import { monetizationPolicy } from '../src/lib/monetization';
 import { allContentPages } from '../src/content/pages';
+import { articleWordCount } from '../src/lib/article-body';
 
 const words = (post: typeof blogPosts[number]) => [...post.sections.map(section => [section.heading, section.body, ...(section.bullets || []), ...(section.steps || []), ...(section.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)].join(' ').split(/\s+/).filter(Boolean).length;
 afterEach(() => { cleanup(); localStorage.clear(); vi.unstubAllGlobals(); });
@@ -30,14 +31,38 @@ describe('original growth content', () => {
       for (const link of post.relatedLinks!) expect(getBlogPost(link.href.split('/').at(-1)!)).toBeDefined();
     }
   });
-  it('expands six existing guides without renaming them', () => {
-    expect(Object.keys(growthRevisions)).toHaveLength(6);
+  it('expands nineteen existing guides without renaming them', () => {
+    expect(Object.keys(growthRevisions)).toHaveLength(19);
     for (const slug of Object.keys(growthRevisions)) {
       const post = getBlogPost(slug)!;
-      expect(words(post), slug).toBeGreaterThanOrEqual(1200);
+      expect(articleWordCount(post), slug).toBeGreaterThanOrEqual(1200);
+      expect(articleWordCount(post), slug).toBeLessThanOrEqual(2000);
       expect(post.updatedAt).toBe('2026-10-14');
       expect(post.metaDescription!.length).toBeLessThanOrEqual(155);
     }
+  });
+  it('replaces legacy summaries and recalculates reading time for rewritten guides', async () => {
+    for (const slug of ['gps-movil-sin-internet-mapas-offline', 'bateria-10000-mah-cargas-reales', 'peso-reserva-familiar-emergencias']) {
+      const post = getBlogPost(slug)!;
+      const markup = renderToStaticMarkup(await ArticlePage({ params: Promise.resolve({ slug }) }));
+      const doc = new DOMParser().parseFromString(markup, 'text/html');
+      expect(doc.querySelector('.article-original')).toBeNull();
+      expect(doc.querySelectorAll('.editorial-text-section')).toHaveLength(post.sections.length);
+      for (const link of doc.querySelectorAll('.editorial-toc a[href^="#"]')) expect(doc.getElementById(link.getAttribute('href')!.slice(1))).not.toBeNull();
+      expect(doc.querySelectorAll('.article-faq details')).toHaveLength(3);
+      expect(post.sources!.length).toBeGreaterThan(0);
+    }
+  });
+  it('renders legacy improvements once, with valid anchors and accurate wordCount', async () => {
+    const slug = 'agua-sin-electricidad-metodos-limites';
+    const post = getBlogPost(slug)!;
+    const doc = new DOMParser().parseFromString(renderToStaticMarkup(await ArticlePage({ params: Promise.resolve({ slug }) })), 'text/html');
+    expect(doc.querySelector('.article-original')).not.toBeNull();
+    expect(doc.querySelectorAll('.editorial-text-section')).toHaveLength(growthRevisions[slug].sections.length);
+    for (const link of doc.querySelectorAll('.editorial-toc a[href^="#"]')) expect(doc.getElementById(link.getAttribute('href')!.slice(1))).not.toBeNull();
+    const schema = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(node => JSON.parse(node.textContent!));
+    expect(schema.find(item => item['@type'] === 'Article').wordCount).toBe(articleWordCount(post));
+    expect(doc.querySelectorAll('.article-faq details')).toHaveLength(3);
   });
   it('renders visible FAQ, matching schema, Article, Breadcrumb and licensed responsive images', async () => {
     for (const data of growthArticles) {

@@ -1804,7 +1804,9 @@ for (const [alias, destination] of Object.entries(articleAliases)) {
 for (const [slug, revision] of Object.entries(growthRevisions)) {
   const post = blogPosts.find(item => item.slug === slug);
   if (!post) throw new Error(`Missing growth revision: ${slug}`);
-  Object.assign(post, { sections: [...post.sections, ...revision.sections], faq: revision.faq, metaDescription: revision.description, updatedAt: '2026-10-14' });
+  Object.assign(post, { sections: revision.replace ? revision.sections : [...post.sections, ...revision.sections], faq: revision.faq, metaDescription: revision.description, updatedAt: '2026-10-14' });
+  if (revision.sources) post.sources = revision.sources;
+  if (revision.warning) post.warning = revision.warning;
 }
 
 for (const post of blogPosts) {

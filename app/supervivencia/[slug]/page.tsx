@@ -7,10 +7,9 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { blogPosts, getBlogPost } from "@/content/blog";
-import { batchTwoRevisions } from "@/content/batch-two";
-import { everydayUpdates } from "@/content/everyday-survival";
-import { articleQualityRevisions } from "@/content/article-quality-revisions";
-import { distinctGuideRevisions } from "@/content/distinct-guide-revisions";
+import { usesOriginalBody, articleWordCount } from '@/lib/article-body';
+import { articleQualityRevisions } from '@/content/article-quality-revisions';
+import { distinctGuideRevisions } from '@/content/distinct-guide-revisions';
 import originals from "@/content/editorial-articles.json";
 import { articleIndex, articleTopic, readingMinutes, relatedArticles, articleDescription } from "@/lib/editorial";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
@@ -22,6 +21,7 @@ import { AppDownloadActions } from "@/components/AppDownloadActions";
 import { contentKind, portalTopic, portalTopics, editorialCover } from "@/content/portal";
 import { ArticleActions } from '@/components/ArticleActions';
 import legacyFAQ from '@/content/legacy-faq-index.json';
+import { growthRevisions } from '@/content/growth-revisions';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -55,13 +55,14 @@ export async function generateMetadata({
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const post = getBlogPost((await params).slug);
   if (!post) notFound();
-  const revised = Boolean(batchTwoRevisions[post.slug] || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug]) || everydayUpdates.has(post.slug);
+  const revised = !usesOriginalBody(post.slug);
   const original = revised ? undefined : (originals as Record<string, string>)[post.slug];
   const info = revised ? undefined : articleIndex[post.slug];
   const sections = original
-    ? []
+    ? growthRevisions[post.slug]?.sections || []
     : post.sections.filter((section) => section.heading !== "Transparencia comercial");
-  const toc = info?.toc ?? sections.map((s, i) => ({ id: `seccion-${i + 1}`, title: s.heading }));
+  const sectionId = (index: number) => `${original ? 'ampliacion' : 'seccion'}-${index + 1}`;
+  const toc = [...(info?.toc || []), ...sections.map((s, i) => ({ id: sectionId(i), title: s.heading })), ...(post.faq?.length ? [{ id: 'preguntas-frecuentes', title: 'Preguntas de esta revisión' }] : [])];
   const related = relatedArticles(post, blogPosts);
   const sources = post.sources ?? info?.sources ?? [];
   const faq = post.faq || (original ? (legacyFAQ as Record<string, Array<{question: string; answer: string}>>)[post.slug] : undefined);
@@ -148,12 +149,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             ) : null}
             {sections.map((section, i) => {
               const links = section.links?.filter((l) => !l.sponsored);
-              if (original && !links?.length) return null;
               return (
                 <section
                   className="editorial-text-section"
                   key={section.heading}
-                  id={original ? undefined : `seccion-${i + 1}`}
+                  id={sectionId(i)}
                 >
                    <h2>{section.heading === "Transparencia comercial" ? "Consultar en Amazon" : section.heading}</h2>
                   {section.heading !== "Transparencia comercial" ? section.body.split(/\n\n+/).map((paragraph, index) => <p key={index}>{paragraph}</p>) : null}
@@ -292,7 +292,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             inLanguage: "es",
             ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
             ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
-            ...(info ? { wordCount: info.words } : {}),
+            wordCount: articleWordCount(post),
           }}
         />
         {faq?.length ? <SeoJsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) }} /> : null}

@@ -1,9 +1,6 @@
 import type { BlogPost } from "@/content/blog";
 import originalIndex from "@/content/editorial-index.json";
-import { batchTwoRevisions } from "@/content/batch-two";
-import { everydayUpdates } from "@/content/everyday-survival";
-import { articleQualityRevisions } from "@/content/article-quality-revisions";
-import { distinctGuideRevisions } from "@/content/distinct-guide-revisions";
+import { articleWordCount } from '@/lib/article-body';
 export type EditorialIndex = {
   toc: { id: string; title: string }[];
   words: number;
@@ -39,18 +36,7 @@ export function articleTopic(post: Pick<BlogPost, "slug" | "category" | "title">
   return "Hogar y familia";
 }
 export function readingMinutes(post: BlogPost) {
-  return (
-    (batchTwoRevisions[post.slug] || everydayUpdates.has(post.slug) || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug] ? undefined : articleIndex[post.slug]?.readingMinutes) ??
-    Math.max(
-      2,
-      Math.ceil(
-        [...post.sections
-          .map((s) => [s.body, ...(s.bullets || []), ...(s.steps || []), ...(s.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)]
-          .join(" ")
-          .split(/\s+/).length / 200,
-      ),
-    )
-  );
+  return Math.max(2, Math.ceil(articleWordCount(post) / 200));
 }
 export function relatedArticles(post: BlogPost, posts: BlogPost[]) {
   const explicit = new Set(post.relatedLinks?.map((link) => link.href) ?? []);
