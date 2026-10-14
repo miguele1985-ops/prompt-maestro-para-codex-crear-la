@@ -1807,6 +1807,9 @@ for (const [slug, revision] of Object.entries(growthRevisions)) {
   Object.assign(post, { sections: revision.replace ? revision.sections : [...post.sections, ...revision.sections], faq: revision.faq, metaDescription: revision.description, updatedAt: '2026-10-14' });
   if (revision.sources) post.sources = revision.sources;
   if (revision.warning) post.warning = revision.warning;
+  if (revision.title) post.title = revision.title;
+  if (revision.seoTitle) post.seoTitle = revision.seoTitle;
+  if (revision.excerpt) post.excerpt = revision.excerpt;
 }
 
 for (const post of blogPosts) {

@@ -1,6 +1,8 @@
 const fs = require('node:fs');
 const sharp = require('sharp');
 const posts = require('./audit-article-covers.cjs');
+const selected = process.argv.find(arg => arg.startsWith('--slugs='))?.slice(8).split(',');
+if (selected?.some(slug => !posts.some(post => post.slug === slug))) throw new Error('Unknown article selected');
 const { portalTopic } = require('../src/content/portal.ts');
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const lines = (value, limit) => {
@@ -26,8 +28,8 @@ const visuals = {
 };
 (async () => {
   fs.mkdirSync('public/images/editorial', { recursive: true });
-  const credits = {};
-  for (const post of posts) {
+  const credits = selected ? JSON.parse(fs.readFileSync('src/content/growth-image-credits.json', 'utf8')) : {};
+  for (const post of posts.filter(post => !selected || selected.includes(post.slug))) {
     const topic = portalTopic(post.slug);
     const visual = visuals[topic === 'primeros-auxilios' ? 'primeros' : topic] || visuals.equipo;
     const title = lines(post.title, 25).slice(0, 6);

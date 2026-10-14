@@ -1,2 +1,3 @@
 import { stepTwoCare } from './step-two-care';
-export const stepTwoRevisions = { ...stepTwoCare };
+import { stepTwoContinuity } from './step-two-continuity';
+export const stepTwoRevisions = { ...stepTwoCare, ...stepTwoContinuity };

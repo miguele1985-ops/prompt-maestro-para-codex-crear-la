@@ -198,7 +198,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               );
             })}
             {post.slug === "plantas-comestibles-y-peligrosas-que-se-pueden-confundir" ? <PlantPhotoGallery /> : null}
-            {post.faq?.length ? <section className="article-faq" id="preguntas-frecuentes"><h2>Preguntas frecuentes</h2>{post.faq.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</section> : null}
+            {post.faq?.length ? <section className="article-faq" id="preguntas-frecuentes"><h2>Preguntas frecuentes</h2>{post.faq.map(item => <details key={item.question}><summary><h3>{item.question}</h3></summary><p>{item.answer}</p></details>)}</section> : null}
             {post.slug === "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar" ? <p><Link href="/nudos">Consultar las 19 fichas de nudos de la aplicación, adaptadas para la web</Link></p> : null}
             {post.relatedLinks?.length ? (
               <nav className="editorial-resource-links" aria-label="Recursos relacionados con este artículo">

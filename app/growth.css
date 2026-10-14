@@ -14,6 +14,7 @@
 .article-table-scroll caption { padding:12px; text-align:left; font-weight:700; }
 .article-faq details { border-top:1px solid #899779; padding:16px 0; }
 .article-faq summary { cursor:pointer; font-weight:700; padding:4px 0; }
+.article-faq summary h3 { display:inline; font:inherit; margin:0; color:inherit; }
 .growth-entry-band { background:#243625; color:#f8f6ed; border-top:1px solid #859074; border-bottom:1px solid #859074; }
 .growth-entry-band h2, .growth-entry-band p, .growth-entry-band a { color:#f8f6ed; }
 .growth-entry-band .journal-section { padding-top:32px; padding-bottom:32px; }
