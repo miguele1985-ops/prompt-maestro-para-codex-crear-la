@@ -4,7 +4,7 @@ import { coreRevisions } from './growth-core-revisions';
 import { equipmentRevisions } from './growth-equipment-revisions';
 import { fieldRevisions } from './growth-field-revisions';
 import { stepTwoRevisions } from './step-two-revisions';
-export type Expansion = { sections: BlogSection[]; faq: NonNullable<BlogPost['faq']>; description: string; replace?: boolean; sources?: BlogPost['sources']; warning?: string; title?: string; seoTitle?: string; excerpt?: string };
+export type Expansion = { sections: BlogSection[]; faq: NonNullable<BlogPost['faq']>; description: string; replace?: boolean; preferOriginal?: boolean; sources?: BlogPost['sources']; warning?: string; title?: string; seoTitle?: string; excerpt?: string };
 const s = (heading: string, body: string, extra: Partial<BlogSection> = {}): BlogSection => ({ heading, body, ...extra });
 export const growthRevisions: Record<string, Expansion> = {
   ...technicalRevisions,

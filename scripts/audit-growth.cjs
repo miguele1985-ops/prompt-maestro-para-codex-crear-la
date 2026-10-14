@@ -5,13 +5,9 @@ const current = process.argv.includes('--current');
 const { growthRevisions } = require('../src/content/growth-revisions.ts');
 const { articleDescription } = require('../src/lib/editorial.ts');
 const originals = require('../src/content/editorial-articles.json');
-const { batchTwoRevisions } = require('../src/content/batch-two.ts');
-const { everydayUpdates } = require('../src/content/everyday-survival.ts');
-const { articleQualityRevisions } = require('../src/content/article-quality-revisions.ts');
-const { distinctGuideRevisions } = require('../src/content/distinct-guide-revisions.ts');
-const { articleWordCount } = require('../src/lib/article-body.ts');
+const { articleWordCount, usesOriginalBody } = require('../src/lib/article-body.ts');
 const rows = posts.map(post => {
-  const revised = batchTwoRevisions[post.slug] || everydayUpdates.has(post.slug) || articleQualityRevisions[post.slug] || distinctGuideRevisions[post.slug] || growthRevisions[post.slug]?.replace;
+  const revised = !usesOriginalBody(post.slug);
   const dom = new JSDOM(!revised && originals[post.slug] || '');
   const text = dom.window.document.body.textContent || [...post.sections.map(s => [s.heading, s.body, ...(s.bullets || []), ...(s.steps || []), ...(s.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)].join(' ');
   const words = current ? articleWordCount(post) : text.split(/\s+/).filter(Boolean).length;
