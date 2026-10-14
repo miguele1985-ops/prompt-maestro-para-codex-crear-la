@@ -4,6 +4,7 @@ import "./journal.css";
 import "./editorial.css";
 import "./editorial-brand.css";
 import "./portal.css";
+import "./growth.css";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
