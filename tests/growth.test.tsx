@@ -34,6 +34,8 @@ describe('original growth content', () => {
     }
   });
   it('expands existing guides without renaming them', () => {
+    expect(Object.keys(stepTwoRevisions)).toHaveLength(48);
+    expect(Object.keys(growthRevisions)).toHaveLength(72);
     expect(Object.keys(growthRevisions)).toHaveLength(24 + Object.keys(stepTwoRevisions).length);
     for (const slug of Object.keys(growthRevisions)) {
       const post = getBlogPost(slug)!;

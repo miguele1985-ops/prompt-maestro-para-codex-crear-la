@@ -1,6 +1,7 @@
 import {describe,it,expect} from "vitest";
 import {blogPosts,getBlogPost} from "../src/content/blog";
 import {batchTwoAliases,batchTwoRevisions} from "../src/content/batch-two";
+import {growthRevisions} from "../src/content/growth-revisions";
 import {existsSync} from "node:fs";
 describe("second article batch",()=>{
   it("merges five topics into existing canonical pages without duplicate entries",()=>{
@@ -9,7 +10,9 @@ describe("second article batch",()=>{
       expect(getBlogPost(alias)).toBeUndefined();
       expect(blogPosts.filter(post=>post.slug===canonical)).toHaveLength(1);
       const post=getBlogPost(canonical)!;
-      expect(post.sections).toEqual(batchTwoRevisions[canonical].sections);
+      const base = batchTwoRevisions[canonical].sections;
+      expect(post.sections.slice(0, base.length)).toEqual(base);
+      expect(post.sections.length).toBe(base.length + (growthRevisions[canonical]?.sections.length || 0));
       expect(post.sections.length).toBeGreaterThanOrEqual(5);
       expect(post.sections.some(section=>section.links?.some(link=>link.href.startsWith('https://')))).toBe(true);
       expect(existsSync(`public${post.image}`)).toBe(true);
