@@ -2,7 +2,7 @@ import type { BlogPost } from './blog';
 
 const common = { category: 'Actualidad y preparación', date: '27 septiembre 2026', publishedAt: '2026-09-27', readingTime: '6 min' };
 const cover = (name: string, alt: string) => ({ image: `/images/blog/${name}.jpg`, imageAlt: `${alt}. Escena ilustrativa, no una emergencia real.` });
-const equipment = [{ label: 'Qué comparar antes de comprar material', href: '#equipo-articulo' }];
+const equipment = [{ label: 'Revisar el material que ya tienes', href: '/supervivencia/como-revisar-kit-emergencia' }];
 const app = { heading: 'Del artículo a tu plan familiar', body: 'Guarda los acuerdos, revisa las listas y comprueba los recursos antes de necesitarlos. Modo Crisis Survival puede acompañar la preparación con información y herramientas principalmente offline. Descarga los recursos necesarios y prueba qué abre sin conexión; conserva también una alternativa en papel.', links: [{ label: 'Conocer Modo Crisis Survival y descargar la app', href: '/aplicacion-supervivencia-offline' }, { label: 'Preparar tu checklist', href: '/checklists' }] };
 
 export const preparednessScenarios: BlogPost[] = [

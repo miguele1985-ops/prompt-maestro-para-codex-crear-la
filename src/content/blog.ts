@@ -59,10 +59,10 @@ export interface BlogAppUseGuide {
 export const blogPosts: BlogPost[] = [
   ...growthArticles,
   ...everydayArticles.filter(post => !everydayUpdates.has(post.slug)).map(post => ({ ...post })),
-  ...outdoorArticles,
-  ...preparednessScenarios,
-  ...resilienceArticles.slice(1),
-  ...continuityArticles.filter(post => !continuityUpdates.has(post.slug)),
+  ...outdoorArticles.map(post => ({ ...post })),
+  ...preparednessScenarios.map(post => ({ ...post })),
+  ...resilienceArticles.slice(1).map(post => ({ ...post })),
+  ...continuityArticles.filter(post => !continuityUpdates.has(post.slug)).map(post => ({ ...post })),
   {
     slug: "lluvia-autoconsumo-generadores-normativa",
     title: "Agua de lluvia, autoconsumo y generadores: qué comprobar antes de instalar",

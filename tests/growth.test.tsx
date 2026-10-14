@@ -16,6 +16,7 @@ import { monetizationPolicy } from '../src/lib/monetization';
 import { allContentPages } from '../src/content/pages';
 import { articleWordCount } from '../src/lib/article-body';
 import WorkbookPage from '../app/cuaderno-de-campo/page';
+import { stepTwoRevisions } from '../src/content/step-two-revisions';
 
 const words = (post: typeof blogPosts[number]) => [...post.sections.map(section => [section.heading, section.body, ...(section.bullets || []), ...(section.steps || []), ...(section.table?.rows.flat() || [])].join(' ')), ...(post.faq || []).map(item => `${item.question} ${item.answer}`)].join(' ').split(/\s+/).filter(Boolean).length;
 afterEach(() => { cleanup(); localStorage.clear(); vi.unstubAllGlobals(); });
@@ -32,8 +33,8 @@ describe('original growth content', () => {
       for (const link of post.relatedLinks!) expect(getBlogPost(link.href.split('/').at(-1)!)).toBeDefined();
     }
   });
-  it('expands twenty-four existing guides without renaming them', () => {
-    expect(Object.keys(growthRevisions)).toHaveLength(24);
+  it('expands existing guides without renaming them', () => {
+    expect(Object.keys(growthRevisions)).toHaveLength(24 + Object.keys(stepTwoRevisions).length);
     for (const slug of Object.keys(growthRevisions)) {
       const post = getBlogPost(slug)!;
       expect(articleWordCount(post), slug).toBeGreaterThanOrEqual(1200);
