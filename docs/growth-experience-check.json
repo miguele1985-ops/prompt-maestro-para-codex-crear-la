@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-14T19:06:04.791Z",
-  "origin": "http://127.0.0.1:3025",
+  "checkedAt": "2026-10-15T18:21:07.400Z",
+  "origin": "http://127.0.0.1:3028",
   "viewports": [
     360,
     414,
@@ -19,22 +19,22 @@
   "labMeasures": [
     {
       "width": 360,
-      "lcp": 548,
+      "lcp": 688,
       "cls": 0
     },
     {
       "width": 414,
-      "lcp": 116,
+      "lcp": 96,
       "cls": 0
     },
     {
       "width": 768,
-      "lcp": 152,
+      "lcp": 212,
       "cls": 0
     },
     {
       "width": 1440,
-      "lcp": 196,
+      "lcp": 344,
       "cls": 0
     }
   ],
