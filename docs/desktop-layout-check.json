@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-10-15T18:18:05.836Z",
+  "base": "http://127.0.0.1:3028",
+  "checks": [
+    {
+      "pathname": "/",
+      "viewport": 360,
+      "contentWidth": 328,
+      "occupancy": 91,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 360,
+      "contentWidth": 328,
+      "occupancy": 91,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 360,
+      "contentWidth": 328,
+      "occupancy": 91,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 414,
+      "contentWidth": 382,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 414,
+      "contentWidth": 382,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 414,
+      "contentWidth": 382,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 768,
+      "contentWidth": 707,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 768,
+      "contentWidth": 707,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 768,
+      "contentWidth": 707,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 1024,
+      "contentWidth": 942,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 1024,
+      "contentWidth": 942,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 1024,
+      "contentWidth": 942,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 1280,
+      "contentWidth": 1178,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 1280,
+      "contentWidth": 1178,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 1280,
+      "contentWidth": 1178,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 1440,
+      "contentWidth": 1325,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 1440,
+      "contentWidth": 1325,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 1440,
+      "contentWidth": 1325,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 1920,
+      "contentWidth": 1766,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 1920,
+      "contentWidth": 1766,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 1920,
+      "contentWidth": 1766,
+      "occupancy": 92,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 2560,
+      "contentWidth": 2368,
+      "occupancy": 93,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 2560,
+      "contentWidth": 2368,
+      "occupancy": 93,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 2560,
+      "contentWidth": 2368,
+      "occupancy": 93,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "viewport": 3840,
+      "contentWidth": 3648,
+      "occupancy": 95,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "viewport": 3840,
+      "contentWidth": 3648,
+      "occupancy": 95,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "viewport": 3840,
+      "contentWidth": 3648,
+      "occupancy": 95,
+      "overflow": false
+    }
+  ],
+  "note": "CSS viewport tests. A wide viewport is not a measurement of the user browser zoom setting."
+}
