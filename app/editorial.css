@@ -329,12 +329,13 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16/8;
+  aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 4px;
 }
 .editorial-article-photo figcaption {
-  font-size: 11px;
+  font-size: 13px;
+  line-height: 1.6;
   color: #6b746d;
   padding: 10px 0;
   max-width: 850px;
@@ -518,6 +519,10 @@
     gap: 26px;
   }
 }
+@media (max-width: 900px) {
+  .editorial-reading-layout { display: block; }
+  .editorial-toc { position: static; max-height: none; margin-bottom: 30px; }
+}
 @media (max-width: 700px) {
   .editorial-library-heading h1,
   .editorial-article-heading h1 {
@@ -555,7 +560,7 @@
     font-size: 18px;
   }
   .editorial-article-photo img {
-    aspect-ratio: 8/5;
+    aspect-ratio: 3/2;
   }
   .editorial-breadcrumbs li:last-child {
     display: none;

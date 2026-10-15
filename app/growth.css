@@ -12,6 +12,34 @@
 .article-table-scroll th, .article-table-scroll td { padding:12px; border-bottom:1px solid #899779; text-align:left; vertical-align:top; }
 .article-table-scroll thead { background:#243625; color:#fff; }
 .article-table-scroll caption { padding:12px; text-align:left; font-weight:700; }
+.article-table-scroll table { min-width:0; table-layout:fixed; }
+.article-table-scroll th, .article-table-scroll td { min-width:0; overflow-wrap:anywhere; }
+.article-table-scroll:has(th:nth-child(4)) table { min-width:600px; }
+.editorial-article-shell, .editorial-reading-layout > *, .editorial-text-section { min-width:0; }
+.editorial-prose { max-width:70ch; overflow-wrap:break-word; }
+.editorial-prose :is(figure,picture,img,video,iframe) { max-width:100%; }
+.editorial-prose figure { margin-inline:0; }
+.editorial-prose img { height:auto; }
+.editorial-prose :is(pre, .table-wrap) { max-width:100%; overflow-x:auto; }
+.editorial-article-photo picture, .portal-card picture, .journal-story picture, .editorial-library-grid picture { display:block; width:100%; min-width:0; }
+.editorial-article-photo img { max-height:680px; object-fit:contain; background:var(--forest); }
+.portal-card img, .journal-story img, .editorial-library-grid img { aspect-ratio:3/2; }
+.journal-feature-grid .journal-story:not(:first-child) picture { align-self:start; }
+.journal-feature-grid .journal-story:not(:first-child) img { height:auto; min-height:0; aspect-ratio:3/2; }
+.article-field-reference img { max-height:720px; }
+.article-app-reference { width:min(100%,320px); }
+.editorial-breadcrumbs { overflow-wrap:anywhere; }
+@media(max-width:700px) {
+  .editorial-article-shell { padding-inline:16px; }
+  .editorial-article-heading { padding-top:16px; }
+  .editorial-article-heading h1 { line-height:1.2; overflow-wrap:break-word; }
+  .portal-card-copy { padding:16px; }
+  .journal-story img, .journal-feature-grid .journal-story:not(:first-child) img, .editorial-library-grid img { aspect-ratio:3/2; max-height:none; }
+  .article-table-scroll th, .article-table-scroll td { padding:10px 8px; font-size:14px; line-height:1.55; }
+  .article-table-scroll thead th { font-size:13px; overflow-wrap:normal; hyphens:auto; }
+  .article-actions { gap:8px; }
+  .article-actions button { padding-inline:10px; }
+}
 .article-faq details { border-top:1px solid #899779; padding:16px 0; }
 .article-faq summary { cursor:pointer; font-weight:700; padding:4px 0; }
 .article-faq summary h3 { display:inline; font:inherit; margin:0; color:inherit; }

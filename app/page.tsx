@@ -48,16 +48,17 @@ function posts(slugs: string[]) {
     .map((slug) => blogPosts.find((p) => p.slug === slug))
     .filter((p): p is BlogPost => Boolean(p));
 }
-function ArticleCard({ post }: { post: BlogPost }) {
+function ArticleCard({ post, lead = false }: { post: BlogPost; lead?: boolean }) {
   return (
     <article className="journal-story">
       <Link href={`/supervivencia/${post.slug}`}>
         <ResponsiveImage
           src={post.image}
           alt={post.imageAlt}
-          width={576}
-          height={360}
-          sizes="(max-width: 700px) 94vw, (max-width: 1000px) 46vw, 320px"
+          width={1200}
+          height={800}
+          widths={[240, 360, 576, 960, 1200]}
+          sizes={lead ? "(max-width:700px) calc(100vw - 32px), (max-width:1240px) 56vw, 670px" : "(max-width:700px) calc(100vw - 32px), (max-width:1000px) 46vw, 320px"}
           loading="lazy"
         />
         <div className="journal-story-copy">
@@ -142,8 +143,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="journal-feature-grid">
-          {posts(startHere).map((post) => (
-            <ArticleCard key={post.slug} post={post} />
+          {posts(startHere).map((post, index) => (
+            <ArticleCard key={post.slug} post={post} lead={index === 0} />
           ))}
         </div>
       </section>

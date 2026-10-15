@@ -1,0 +1,2325 @@
+{
+  "checkedAt": "2026-10-15T05:40:23.450Z",
+  "base": "http://127.0.0.1:3027",
+  "viewports": [
+    360,
+    414,
+    768,
+    1440
+  ],
+  "checks": [
+    {
+      "pathname": "/supervivencia/senderismo-principiantes-planificar-ruta",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hora-retorno-montana",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/capas-ropa-senderismo-frio-lluvia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-dia-senderismo-lista",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/brujula-mapa-orientacion-basica",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/comida-senderismo-sin-cocinar",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/revision-mensual-preparacion-familiar",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/terremoto-plan-familiar",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-electrica-montana",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/fuego-bushcraft-seguro-permisos-yesca",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hornillo-camping-monoxido-carbono",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/vivac-emergencia-manta-termica",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/higiene-sin-agua-vivienda",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/cuchillo-bushcraft-uso-seguro",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ampollas-senderismo-prevencion",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/psicologia-emergencia-errores-mentales",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-si-te-pierdes-24-horas",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-mochila-sin-equipo",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/caza-observacion-fauna-preparacion",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/pesca-preparar-salida-responsable",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-solar-extrema-como-prepararse",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/confinamiento-emergencia-casa-que-hacer",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/medicamentos-tratamientos-emergencias",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/emergencia-trabajo-volver-casa",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-10-minutos-que-coger",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ciberataque-masivo-servicios-esenciales",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/crisis-cadena-suministro-supermercados-vacios",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/espana-2030-calor-sequia-inundaciones",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/7-dias-sin-internet",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tarjetas-cajeros-pagos-no-funcionan",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/primeras-24-horas-gran-emergencia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/lluvia-autoconsumo-generadores-normativa",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/peso-reserva-familiar-emergencias",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-prepararse-para-un-apagon",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-crear-plan-familiar-emergencia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-es-archivo-mbtiles",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-ahorrar-bateria-emergencia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-guardar-agua-emergencias",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-durante-dana",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-preparar-ninos-sin-asustarlos",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/documentacion-conviene-tener-disponible",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-revisar-kit-emergencia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preparacion-emergencias-casa-principiantes",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-emergencia-personas-mayores",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radio-frecuencias-emergencia-sin-cobertura",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/rutas-evacuacion-mapas-offline",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senales-sos-comunicacion-visual",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gestion-alimentos-sin-electricidad",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/refugio-temporal-casa-frio-calor",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/simulacro-familiar-emergencia-30-minutos",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-general-espana-pasos",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-emergencia-72-horas-peso-realista",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/agua-sin-electricidad-metodos-limites",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gps-movil-sin-internet-mapas-offline",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/bateria-10000-mah-cargas-reales",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-agua-portatiles-comparativa-riesgo",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/depositos-de-agua-para-emergencias-que-capacidad-elegir",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 360,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/herramientas-supervivencia",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/empieza-aqui",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/cuaderno-de-campo",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/nudos",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/plantas-y-fauna",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/calendario-lunar",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/codigo-morse",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senderismo-principiantes-planificar-ruta",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hora-retorno-montana",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/capas-ropa-senderismo-frio-lluvia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-dia-senderismo-lista",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/brujula-mapa-orientacion-basica",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/comida-senderismo-sin-cocinar",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/revision-mensual-preparacion-familiar",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/terremoto-plan-familiar",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-electrica-montana",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/fuego-bushcraft-seguro-permisos-yesca",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hornillo-camping-monoxido-carbono",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/vivac-emergencia-manta-termica",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/higiene-sin-agua-vivienda",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/cuchillo-bushcraft-uso-seguro",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ampollas-senderismo-prevencion",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/psicologia-emergencia-errores-mentales",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-si-te-pierdes-24-horas",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-mochila-sin-equipo",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/caza-observacion-fauna-preparacion",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/pesca-preparar-salida-responsable",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-solar-extrema-como-prepararse",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/confinamiento-emergencia-casa-que-hacer",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/medicamentos-tratamientos-emergencias",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/emergencia-trabajo-volver-casa",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-10-minutos-que-coger",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ciberataque-masivo-servicios-esenciales",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/crisis-cadena-suministro-supermercados-vacios",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/espana-2030-calor-sequia-inundaciones",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/7-dias-sin-internet",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tarjetas-cajeros-pagos-no-funcionan",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/primeras-24-horas-gran-emergencia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/lluvia-autoconsumo-generadores-normativa",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/peso-reserva-familiar-emergencias",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-prepararse-para-un-apagon",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-crear-plan-familiar-emergencia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-es-archivo-mbtiles",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-ahorrar-bateria-emergencia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-guardar-agua-emergencias",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-durante-dana",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-preparar-ninos-sin-asustarlos",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/documentacion-conviene-tener-disponible",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-revisar-kit-emergencia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preparacion-emergencias-casa-principiantes",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-emergencia-personas-mayores",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radio-frecuencias-emergencia-sin-cobertura",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/rutas-evacuacion-mapas-offline",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senales-sos-comunicacion-visual",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gestion-alimentos-sin-electricidad",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/refugio-temporal-casa-frio-calor",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/simulacro-familiar-emergencia-30-minutos",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-general-espana-pasos",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-emergencia-72-horas-peso-realista",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/agua-sin-electricidad-metodos-limites",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gps-movil-sin-internet-mapas-offline",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/bateria-10000-mah-cargas-reales",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-agua-portatiles-comparativa-riesgo",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/depositos-de-agua-para-emergencias-que-capacidad-elegir",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 414,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/herramientas-supervivencia",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/empieza-aqui",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/cuaderno-de-campo",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/nudos",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/plantas-y-fauna",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/calendario-lunar",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/codigo-morse",
+      "width": 414,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senderismo-principiantes-planificar-ruta",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hora-retorno-montana",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/capas-ropa-senderismo-frio-lluvia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-dia-senderismo-lista",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/brujula-mapa-orientacion-basica",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/comida-senderismo-sin-cocinar",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/revision-mensual-preparacion-familiar",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/terremoto-plan-familiar",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-electrica-montana",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/fuego-bushcraft-seguro-permisos-yesca",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hornillo-camping-monoxido-carbono",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/vivac-emergencia-manta-termica",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/higiene-sin-agua-vivienda",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/cuchillo-bushcraft-uso-seguro",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ampollas-senderismo-prevencion",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/psicologia-emergencia-errores-mentales",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-si-te-pierdes-24-horas",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-mochila-sin-equipo",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/caza-observacion-fauna-preparacion",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/pesca-preparar-salida-responsable",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-solar-extrema-como-prepararse",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/confinamiento-emergencia-casa-que-hacer",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/medicamentos-tratamientos-emergencias",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/emergencia-trabajo-volver-casa",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-10-minutos-que-coger",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ciberataque-masivo-servicios-esenciales",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/crisis-cadena-suministro-supermercados-vacios",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/espana-2030-calor-sequia-inundaciones",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/7-dias-sin-internet",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tarjetas-cajeros-pagos-no-funcionan",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/primeras-24-horas-gran-emergencia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/lluvia-autoconsumo-generadores-normativa",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/peso-reserva-familiar-emergencias",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-prepararse-para-un-apagon",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-crear-plan-familiar-emergencia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-es-archivo-mbtiles",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-ahorrar-bateria-emergencia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-guardar-agua-emergencias",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-durante-dana",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-preparar-ninos-sin-asustarlos",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/documentacion-conviene-tener-disponible",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-revisar-kit-emergencia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preparacion-emergencias-casa-principiantes",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-emergencia-personas-mayores",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radio-frecuencias-emergencia-sin-cobertura",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/rutas-evacuacion-mapas-offline",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senales-sos-comunicacion-visual",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gestion-alimentos-sin-electricidad",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/refugio-temporal-casa-frio-calor",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/simulacro-familiar-emergencia-30-minutos",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-general-espana-pasos",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-emergencia-72-horas-peso-realista",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/agua-sin-electricidad-metodos-limites",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gps-movil-sin-internet-mapas-offline",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/bateria-10000-mah-cargas-reales",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-agua-portatiles-comparativa-riesgo",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/depositos-de-agua-para-emergencias-que-capacidad-elegir",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 768,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/herramientas-supervivencia",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/empieza-aqui",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/cuaderno-de-campo",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/nudos",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/plantas-y-fauna",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/calendario-lunar",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/codigo-morse",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senderismo-principiantes-planificar-ruta",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hora-retorno-montana",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/capas-ropa-senderismo-frio-lluvia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-dia-senderismo-lista",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/brujula-mapa-orientacion-basica",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/comida-senderismo-sin-cocinar",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/revision-mensual-preparacion-familiar",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/terremoto-plan-familiar",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-electrica-montana",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/fuego-bushcraft-seguro-permisos-yesca",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/hornillo-camping-monoxido-carbono",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/vivac-emergencia-manta-termica",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/higiene-sin-agua-vivienda",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/cuchillo-bushcraft-uso-seguro",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ampollas-senderismo-prevencion",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/psicologia-emergencia-errores-mentales",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-si-te-pierdes-24-horas",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-mochila-sin-equipo",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/caza-observacion-fauna-preparacion",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/pesca-preparar-salida-responsable",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tormenta-solar-extrema-como-prepararse",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/confinamiento-emergencia-casa-que-hacer",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/medicamentos-tratamientos-emergencias",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/emergencia-trabajo-volver-casa",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-10-minutos-que-coger",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/ciberataque-masivo-servicios-esenciales",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/crisis-cadena-suministro-supermercados-vacios",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/espana-2030-calor-sequia-inundaciones",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/desinformacion-emergencias-deepfakes-alertas-falsas",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/7-dias-sin-internet",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/tarjetas-cajeros-pagos-no-funcionan",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/primeras-24-horas-gran-emergencia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/lluvia-autoconsumo-generadores-normativa",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/peso-reserva-familiar-emergencias",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-debe-incluir-aplicacion-supervivencia-offline",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-prepararse-para-un-apagon",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-crear-plan-familiar-emergencia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-es-archivo-mbtiles",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-ahorrar-bateria-emergencia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-guardar-agua-emergencias",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/que-hacer-durante-dana",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-preparar-ninos-sin-asustarlos",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/documentacion-conviene-tener-disponible",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-revisar-kit-emergencia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preparacion-emergencias-casa-principiantes",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-emergencia-personas-mayores",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radio-frecuencias-emergencia-sin-cobertura",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/rutas-evacuacion-mapas-offline",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/senales-sos-comunicacion-visual",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gestion-alimentos-sin-electricidad",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/refugio-temporal-casa-frio-calor",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/simulacro-familiar-emergencia-30-minutos",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-general-espana-pasos",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mochila-emergencia-72-horas-peso-realista",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/agua-sin-electricidad-metodos-limites",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/gps-movil-sin-internet-mapas-offline",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/bateria-10000-mah-cargas-reales",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-agua-portatiles-comparativa-riesgo",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/depositos-de-agua-para-emergencias-que-capacidad-elegir",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/linterna-frontal-vs-de-mano-para-un-apagon",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mejores-mochilas-de-emergencia-72h-en-espana-2026",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-electrico-para-casa-cual-comprar-sin-riesgos",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/radios-de-manivela-y-a-pilas-para-emergencias",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/powerbanks-solares-aguantan-un-apagon-largo",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/dana-aviso-naranja-o-rojo-que-debes-hacer",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/es-alert-por-que-a-veces-no-llega-a-tu-movil",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/semaforos-sin-luz-como-moverte-durante-un-apagon",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/generador-en-casa-normativa-y-peligros-que-debes-evitar",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/evacuacion-de-vivienda-checklist-paso-a-paso",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/sin-cobertura-movil-como-comunicarte-de-verdad",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/preppers-espanoles-que-aprendieron-del-gran-apagon",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/estaban-preparados-los-hogares-espanoles-para-el-apagon",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/mascotas-en-emergencias-apagon-calor-y-evacuacion",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+      "width": 1440,
+      "photoLoaded": true,
+      "overflow": false
+    },
+    {
+      "pathname": "/",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/supervivencia",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/temas",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/herramientas-supervivencia",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/empieza-aqui",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/cuaderno-de-campo",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/nudos",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/plantas-y-fauna",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/calendario-lunar",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "pathname": "/codigo-morse",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "note": "Local browser layout checks, not proof of rankings or field Core Web Vitals."
+}
