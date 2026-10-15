@@ -6,7 +6,7 @@ import type { PortalItem } from "@/content/portal";
 import { ResponsiveImage } from "./ResponsiveImage";
 import { catalogPageHref, catalogPageSize } from '@/lib/catalog-pagination';
 
-export function ContentCard({ item }: { item: PortalItem }) {
+export function ContentCard({ item, imageSizes = "(max-width:700px) 92vw, (max-width:1050px) 44vw, (max-width:1599px) 31vw, (max-width:2399px) 24vw, 20vw" }: { item: PortalItem; imageSizes?: string }) {
   return (
     <article className="portal-card">
       <Link href={item.href}>
@@ -16,9 +16,9 @@ export function ContentCard({ item }: { item: PortalItem }) {
             alt={item.alt || item.title}
             width={576}
             height={360}
-            widths={[240, 360, 576, 960]}
+            widths={[240, 360, 576, 960, 1200]}
             loading="lazy"
-            sizes="(max-width:700px) 92vw, (max-width:1050px) 44vw, 360px"
+            sizes={imageSizes}
           />
         ) : (
           <span className="portal-tool-icon">

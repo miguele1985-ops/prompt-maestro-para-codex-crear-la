@@ -48,7 +48,7 @@ function posts(slugs: string[]) {
     .map((slug) => blogPosts.find((p) => p.slug === slug))
     .filter((p): p is BlogPost => Boolean(p));
 }
-function ArticleCard({ post, lead = false }: { post: BlogPost; lead?: boolean }) {
+function ArticleCard({ post }: { post: BlogPost }) {
   return (
     <article className="journal-story">
       <Link href={`/supervivencia/${post.slug}`}>
@@ -58,7 +58,7 @@ function ArticleCard({ post, lead = false }: { post: BlogPost; lead?: boolean })
           width={1200}
           height={800}
           widths={[240, 360, 576, 960, 1200]}
-          sizes={lead ? "(max-width:700px) calc(100vw - 32px), (max-width:1240px) 56vw, 670px" : "(max-width:700px) calc(100vw - 32px), (max-width:1000px) 46vw, 320px"}
+          sizes="(max-width:700px) calc(100vw - 32px), (max-width:1099px) 52vw, 31vw"
           loading="lazy"
         />
         <div className="journal-story-copy">
@@ -143,8 +143,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="journal-feature-grid">
-          {posts(startHere).map((post, index) => (
-            <ArticleCard key={post.slug} post={post} lead={index === 0} />
+          {posts(startHere).map((post) => (
+            <ArticleCard key={post.slug} post={post} />
           ))}
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function HomePage() {
           <div className="journal-heading"><div><p className="journal-kicker">Una lectura lleva a la siguiente</p><h2 id="reading-paths-heading">Elige tu punto de partida</h2></div><Link href="/supervivencia">Explorar las guías <ArrowRight size={18} aria-hidden /></Link></div>
           <div className="journal-paths">
             {readingPaths.map((path) => <article key={path.title}>
-              <ResponsiveImage src={`/images/blog/${path.image}.jpg`} alt={`${path.title}. Escena ilustrativa generada con IA.`} width={576} height={384} loading="lazy" sizes="(max-width:700px) 90vw, 380px" />
+              <ResponsiveImage src={`/images/blog/${path.image}.jpg`} alt={`${path.title}. Escena ilustrativa generada con IA.`} width={1200} height={800} widths={[240,360,576,960,1200]} loading="lazy" sizes="(max-width:700px) 90vw, 31vw" />
               <h3>{path.title}</h3><p>{path.description}</p>
               <ol>{posts(path.slugs).map((post) => <li key={post.slug}><Link href={`/supervivencia/${post.slug}`}><span>{post.title}</span><ArrowRight size={17} aria-hidden /></Link></li>)}</ol>
             </article>)}
@@ -230,11 +230,13 @@ export default function HomePage() {
               },
             ].map((item) => (
               <article key={item.slug}>
-                <img
-                  src={`/images/blog/${item.image}-576.webp`}
+                <ResponsiveImage
+                  src={`/images/blog/${item.image}.jpg`}
                   alt={`Imagen ilustrativa de ${item.title.toLowerCase()}`}
-                  width={576}
-                  height={360}
+                  width={1200}
+                  height={800}
+                  widths={[240,360,576,960,1200]}
+                  sizes="(max-width:700px) 90vw, 31vw"
                   loading="lazy"
                 />
                 <h3>{item.title}</h3>
@@ -274,7 +276,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="journal-section"><div className="journal-heading"><h2>Últimos artículos</h2><Link href="/supervivencia">Todos los artículos</Link></div><div className="portal-grid">{portalContent.filter(p=>p.kind==='Artículo').slice(0,3).map(item=><ContentCard key={item.href} item={item} />)}</div></section>
+      <section className="journal-section"><div className="journal-heading"><h2>Últimos artículos</h2><Link href="/supervivencia">Todos los artículos</Link></div><div className="portal-grid">{portalContent.filter(p=>p.kind==='Artículo').slice(0,3).map(item=><ContentCard key={item.href} item={item} imageSizes="(max-width:700px) 92vw, (max-width:1050px) 44vw, 31vw" />)}</div></section>
       <section className="journal-app">
         <div className="journal-section journal-app-inner">
           <img
