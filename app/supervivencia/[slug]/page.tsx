@@ -109,14 +109,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             src={cover.image}
             alt={cover.alt}
             width={1200}
-            height={750}
+            height={800}
             widths={[360, 576, 960, 1200]}
-            sizes="(max-width:760px) 100vw, 1080px"
+            sizes="(max-width:700px) calc(100vw - 32px), (max-width:1120px) calc(100vw - 48px), 1072px"
             loading="eager"
             fetchPriority="high"
           />
           <figcaption>
-            {post.imageCredit ? <>{post.imageCredit.author}. <a href={post.imageCredit.source}>Fuente SVG</a> · <a href={post.imageCredit.licenseUrl}>{post.imageCredit.license}</a>. </> : null}
+            {post.imageCredit ? <>{post.imageCredit.author}. <a href={post.imageCredit.source}>Ver imagen y fuente</a> · <a href={post.imageCredit.licenseUrl}>{post.imageCredit.license}</a>. </> : null}
             {!post.imageCredit && post.slug === 'eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos' && <>Foto de archivo de 2017, no del eclipse de 2026: NASA/Aubrey Gemignani, dominio público. </>}
             Imagen ilustrativa. Consulta las fuentes del artículo para contrastar los datos; una
             imagen no permite identificar especies ni verificar un producto.

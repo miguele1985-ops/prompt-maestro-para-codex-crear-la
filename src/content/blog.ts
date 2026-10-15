@@ -16,6 +16,7 @@ import { articleAliases, canonicalArticleHref } from './article-consolidation';
 import { articleSourceAdditions } from './article-source-additions';
 import { growthArticles } from './growth-articles';
 import growthImageCredits from './growth-image-credits.json';
+import realisticCoverCredits from './realistic-cover-credits.json';
 import { growthRevisions } from './growth-revisions';
 
 export interface BlogSection {
@@ -1817,6 +1818,8 @@ for (const post of blogPosts) {
   post.sections = post.sections.map(section => ({ ...section, links: section.links?.map(link => ({ ...link, href: canonicalArticleHref(link.href) })) }));
   const image = (growthImageCredits as Record<string, Pick<BlogPost, 'image' | 'imageAlt' | 'imageCredit'>>)[post.slug];
   if (image) Object.assign(post, image);
+  const photograph = (realisticCoverCredits as Record<string, Pick<BlogPost, 'image' | 'imageAlt' | 'imageCredit'>>)[post.slug];
+  if (photograph) Object.assign(post, photograph);
 }
 
 export const orderedBlogPosts = [...blogPosts].sort((a, b) => blogPostDateValue(b).localeCompare(blogPostDateValue(a)));
