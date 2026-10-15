@@ -21,7 +21,7 @@ const base = process.argv[2] || 'http://127.0.0.1:3028';
         const contentWidth = await section.evaluate(node => node.getBoundingClientRect().width);
         if (width >= 1100) assert(contentWidth / width >= .88, `${pathname}: unused desktop width at ${width}`);
         const navigation = page.locator('.desktop-nav');
-        if (width >= 1280) assert(await navigation.evaluate(node => node.scrollWidth <= node.clientWidth + 1), `Clipped desktop navigation at ${width}`);
+        if (await navigation.isVisible()) assert(await navigation.evaluate(node => node.scrollWidth <= node.clientWidth + 1), `Clipped desktop navigation at ${width}`);
         if (pathname === '/') {
           const feature = page.locator('.journal-feature-grid');
           await feature.scrollIntoViewIfNeeded();
