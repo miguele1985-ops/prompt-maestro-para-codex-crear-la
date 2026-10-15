@@ -1,0 +1,706 @@
+[
+  {
+    "slug": "peso-reserva-familiar-emergencias",
+    "image": "/images/editorial/realistic/peso-reserva-familiar-emergencias.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-03-almacenamiento-agua.jpg",
+    "sha256": "7f118051f3458e31cb6ab399f250d9ea382834c6957b3ef856961b1e2b4907ac",
+    "bytes": 44342
+  },
+  {
+    "slug": "psicologia-emergencia-errores-mentales",
+    "image": "/images/editorial/realistic/psicologia-emergencia-errores-mentales.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-psicologia.jpg",
+    "sha256": "176f7e8ff416008ff8f92c7808ed88718ab5b8b500e094c00756d30609b3c28a",
+    "bytes": 133856
+  },
+  {
+    "slug": "que-hacer-si-te-pierdes-24-horas",
+    "image": "/images/editorial/realistic/que-hacer-si-te-pierdes-24-horas.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aprendizaje-campo-natural.jpg",
+    "sha256": "03cafce2653d43fd0170eb6f275f74580a8e9c00f24aa5fe5f9bea375abcda60",
+    "bytes": 292692
+  },
+  {
+    "slug": "sin-mochila-sin-equipo",
+    "image": "/images/editorial/realistic/sin-mochila-sin-equipo.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-ropa-calzado.jpg",
+    "sha256": "50a7b21e5b3370c2bddb96fd6ee09331056828f5c71732ef9d95a9858f05adc6",
+    "bytes": 76904
+  },
+  {
+    "slug": "caza-observacion-fauna-preparacion",
+    "image": "/images/editorial/realistic/caza-observacion-fauna-preparacion.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/caza-observacion-editorial.jpg",
+    "sha256": "d58b7aebaae2aa5d7692ee8c43f1fb2d85b22bd271ecf2bbb42cf9fcd6542de4",
+    "bytes": 373460
+  },
+  {
+    "slug": "pesca-preparar-salida-responsable",
+    "image": "/images/editorial/realistic/pesca-preparar-salida-responsable.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/pesca-ribera-editorial.jpg",
+    "sha256": "ac41cef8bd481b084a1e68980095cddfa027c1c36349e238f24360f358ab662d",
+    "bytes": 313974
+  },
+  {
+    "slug": "tormenta-solar-extrema-como-prepararse",
+    "image": "/images/editorial/realistic/tormenta-solar-extrema-como-prepararse.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-tormenta-solar.jpg",
+    "sha256": "05bbc08d3835b04e6be4acee8786edb9205a6eb433a9304a124aa80466d41b2f",
+    "bytes": 118196
+  },
+  {
+    "slug": "confinamiento-emergencia-casa-que-hacer",
+    "image": "/images/editorial/realistic/confinamiento-emergencia-casa-que-hacer.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-confinamiento.jpg",
+    "sha256": "900c197734de453a4d9e1cd064340e2ce41fbccd1ae3b86a1a76a0577f89882c",
+    "bytes": 141976
+  },
+  {
+    "slug": "medicamentos-tratamientos-emergencias",
+    "image": "/images/editorial/realistic/medicamentos-tratamientos-emergencias.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/botiquin-natural.jpg",
+    "sha256": "ff458d01ff6bb6118196ab492f45289e97b411473e390916375de8e55e716fb8",
+    "bytes": 104536
+  },
+  {
+    "slug": "evacuacion-10-minutos-que-coger",
+    "image": "/images/editorial/realistic/evacuacion-10-minutos-que-coger.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/evacuacion-vivienda-checklist.jpg",
+    "sha256": "5aa6048d3ce2c52a5f84462468f0dbb3523a9deccd35c96f315df355e67d4b83",
+    "bytes": 111686
+  },
+  {
+    "slug": "ciberataque-masivo-servicios-esenciales",
+    "image": "/images/editorial/realistic/ciberataque-masivo-servicios-esenciales.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-ciberataque.jpg",
+    "sha256": "99e1b7afad0e2248c95c2ab1a9aba394e992ac0079aa42fef3ea3b23c98be045",
+    "bytes": 81870
+  },
+  {
+    "slug": "crisis-cadena-suministro-supermercados-vacios",
+    "image": "/images/editorial/realistic/crisis-cadena-suministro-supermercados-vacios.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-04-alimentos-emergencia.jpg",
+    "sha256": "7420a45e51741d45e0c80224eb9d9ff8d2c3276e17480f4754ecbb1d68469ce7",
+    "bytes": 68572
+  },
+  {
+    "slug": "7-dias-sin-internet",
+    "image": "/images/editorial/realistic/7-dias-sin-internet.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-30-comunicaciones-emergencia.jpg",
+    "sha256": "71355f486405ad5b898f292f563c5f1d8dfa300b4de9b076b543d78dea4e43e5",
+    "bytes": 65302
+  },
+  {
+    "slug": "tarjetas-cajeros-pagos-no-funcionan",
+    "image": "/images/editorial/realistic/tarjetas-cajeros-pagos-no-funcionan.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-pagos.jpg",
+    "sha256": "254359f617cad15ec9d66bf95dbe848cbf0ae3a5299a033f9c7a7e887b8539cb",
+    "bytes": 136322
+  },
+  {
+    "slug": "como-prepararse-para-un-apagon",
+    "image": "/images/editorial/realistic/como-prepararse-para-un-apagon.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/preparacion-apagon-editorial.jpg",
+    "sha256": "bb9a6bd2551e3780790e15eaeef33a26dcc09074cf332b17357947c974377619",
+    "bytes": 95812
+  },
+  {
+    "slug": "como-crear-plan-familiar-emergencia",
+    "image": "/images/editorial/realistic/como-crear-plan-familiar-emergencia.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/familia-preparada-natural.jpg",
+    "sha256": "740a9311a4452fae3c15caa522b503c43dd51afcf4642acd84f49ebc150f9d16",
+    "bytes": 68224
+  },
+  {
+    "slug": "como-ahorrar-bateria-emergencia",
+    "image": "/images/editorial/realistic/como-ahorrar-bateria-emergencia.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/energia-comunicacion-natural.jpg",
+    "sha256": "99285295e20ce580985a215d3be0c71809d4e95e5dfb7bd7802fd9723f6e60c5",
+    "bytes": 87486
+  },
+  {
+    "slug": "como-guardar-agua-emergencias",
+    "image": "/images/editorial/realistic/como-guardar-agua-emergencias.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/reserva-agua-natural.jpg",
+    "sha256": "05e53807cd30adaa411839b64109a9d34ef5335ae8576f03ece354464fa160b2",
+    "bytes": 103260
+  },
+  {
+    "slug": "que-hacer-durante-dana",
+    "image": "/images/editorial/realistic/que-hacer-durante-dana.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/lluvia-prevencion-editorial.jpg",
+    "sha256": "5d68930e811ce4b20b4e6b9a097eedc9eee91e00e5f793d5ceb431276fc6e471",
+    "bytes": 217646
+  },
+  {
+    "slug": "como-preparar-ninos-sin-asustarlos",
+    "image": "/images/editorial/realistic/como-preparar-ninos-sin-asustarlos.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-22-ninos-supervivencia.jpg",
+    "sha256": "9147098d82adcf0e005130ce4098041c2613ee033bcc57b83c9fa6e10ce89bd2",
+    "bytes": 51938
+  },
+  {
+    "slug": "documentacion-conviene-tener-disponible",
+    "image": "/images/editorial/realistic/documentacion-conviene-tener-disponible.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-24-documentos-importantes.jpg",
+    "sha256": "dd27d5d91854bbf34471443a3f192f6ce9a8ac47c7794c1c1663a25ce9ac68b8",
+    "bytes": 55376
+  },
+  {
+    "slug": "como-revisar-kit-emergencia",
+    "image": "/images/editorial/realistic/como-revisar-kit-emergencia.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/mochila-natural.jpg",
+    "sha256": "1ad58e0336b7a757b8a88fa4573e5798fc224163d95e1112260b3cd420b3db75",
+    "bytes": 110600
+  },
+  {
+    "slug": "preparacion-emergencias-casa-principiantes",
+    "image": "/images/editorial/realistic/preparacion-emergencias-casa-principiantes.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/mochila-familiar-editorial.jpg",
+    "sha256": "4b77e72b706f40dfc786e8d894f1e57f5a9b67ba47b8d0eda85d9ecee387f97c",
+    "bytes": 102868
+  },
+  {
+    "slug": "radio-frecuencias-emergencia-sin-cobertura",
+    "image": "/images/editorial/realistic/radio-frecuencias-emergencia-sin-cobertura.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-06-radio-emergencia.jpg",
+    "sha256": "b0d0b5d3e7a1ab34f4ca5bd3bde101c794fd78369d4daee4b408b767c5e9ac5a",
+    "bytes": 55028
+  },
+  {
+    "slug": "apagon-general-espana-pasos",
+    "image": "/images/editorial/realistic/apagon-general-espana-pasos.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-apagon-casa.jpg",
+    "sha256": "c9886f99ac5ef925906a0d135e33cd955ecc7b92011825fbfb602f942e2670b9",
+    "bytes": 30612
+  },
+  {
+    "slug": "mochila-emergencia-72-horas-peso-realista",
+    "image": "/images/editorial/realistic/mochila-emergencia-72-horas-peso-realista.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-01-mochila-emergencia-72-horas.jpg",
+    "sha256": "9d9d6370c287d3451953cd661d2fba10b9e509dfbdcfeb7a6e20b1f3eff75b9b",
+    "bytes": 56352
+  },
+  {
+    "slug": "agua-sin-electricidad-metodos-limites",
+    "image": "/images/editorial/realistic/agua-sin-electricidad-metodos-limites.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/agua-sin-filtro-ni-pastillas.jpg",
+    "sha256": "0cef3bc55fc7b51c2162f33256b35855c91269c9b134b13295362537738103e1",
+    "bytes": 168146
+  },
+  {
+    "slug": "gps-movil-sin-internet-mapas-offline",
+    "image": "/images/editorial/realistic/gps-movil-sin-internet-mapas-offline.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-11-navegacion-orientacion.jpg",
+    "sha256": "e72dbbde4bdaac5e736e600e9c0001abe310613f33e457bfb06eb1abb6b6fdda",
+    "bytes": 71164
+  },
+  {
+    "slug": "bateria-10000-mah-cargas-reales",
+    "image": "/images/editorial/realistic/bateria-10000-mah-cargas-reales.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/powerbank-solar-apagon-largo.jpg",
+    "sha256": "10d779f2c7c88f242a94c0b67dd5a4b218e87158b208b30162da9943c5ebcf44",
+    "bytes": 121940
+  },
+  {
+    "slug": "filtros-agua-portatiles-comparativa-riesgo",
+    "image": "/images/editorial/realistic/filtros-agua-portatiles-comparativa-riesgo.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/filtro-natural.jpg",
+    "sha256": "92f2f39dc3d2cc4bfe440e3e1a25735bdac142aa943e8f0da2acde68d52a25f3",
+    "bytes": 108994
+  },
+  {
+    "slug": "botiquin-para-casa-comprarlo-hecho-o-montarlo-tu",
+    "image": "/images/editorial/realistic/botiquin-para-casa-comprarlo-hecho-o-montarlo-tu.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/botiquin-casa-comparativa.jpg",
+    "sha256": "aaa8bd63f63f251fabfe1ca6923edd2e32bb09cacb3db21b3c06efd0d2a5a1fb",
+    "bytes": 208304
+  },
+  {
+    "slug": "depositos-de-agua-para-emergencias-que-capacidad-elegir",
+    "image": "/images/editorial/realistic/depositos-de-agua-para-emergencias-que-capacidad-elegir.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/depositos-agua-emergencias-capacidad.jpg",
+    "sha256": "04b5b036b91e3c00f488ce477441029e566d38f5de5294216d95e76f73dada15",
+    "bytes": 151744
+  },
+  {
+    "slug": "kit-de-emergencia-para-el-coche-que-llevar-en-2026",
+    "image": "/images/editorial/realistic/kit-de-emergencia-para-el-coche-que-llevar-en-2026.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/kit-emergencia-coche-2026.jpg",
+    "sha256": "c8fa903362c9ab1b97b8381e983e280744889be96886d1ab797c2cd93b8c4872",
+    "bytes": 123148
+  },
+  {
+    "slug": "apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces",
+    "image": "/images/editorial/realistic/apagon-de-espana-de-2025-que-ha-cambiado-desde-entonces.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-apagon-historico.jpg",
+    "sha256": "f13abf6428875891f83c9d038df31944c77463c2aba95a60b32117e83c66b27f",
+    "bytes": 153012
+  },
+  {
+    "slug": "mejores-mochilas-de-emergencia-72h-en-espana-2026",
+    "image": "/images/editorial/realistic/mejores-mochilas-de-emergencia-72h-en-espana-2026.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/mochila-emergencia-72h-comparativa.jpg",
+    "sha256": "8f5e48ce4956b852d87e89ef18bbeb67156cea9276c5b829927ac73fb8b36d85",
+    "bytes": 153914
+  },
+  {
+    "slug": "filtros-de-agua-portatiles-cuales-funcionan-de-verdad",
+    "image": "/images/editorial/realistic/filtros-de-agua-portatiles-cuales-funcionan-de-verdad.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/filtros-agua-portatiles-comparativa.jpg",
+    "sha256": "dba2d9c4154c2cb97217e01b3dcc409d714a752e15aa7ae8af423c6f41159b54",
+    "bytes": 200684
+  },
+  {
+    "slug": "generador-electrico-para-casa-cual-comprar-sin-riesgos",
+    "image": "/images/editorial/realistic/generador-electrico-para-casa-cual-comprar-sin-riesgos.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-generador-compra.jpg",
+    "sha256": "7324e0e1148a3831e138b27679549eea4e8889d048587183e4eac8330c80bee7",
+    "bytes": 138712
+  },
+  {
+    "slug": "radios-de-manivela-y-a-pilas-para-emergencias",
+    "image": "/images/editorial/realistic/radios-de-manivela-y-a-pilas-para-emergencias.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/radio-manivela-pilas-emergencia.jpg",
+    "sha256": "7a1c3eb45f0b911c8c66864da0a1c7db7e3d24000a42c71d0626c4f87d177d84",
+    "bytes": 114306
+  },
+  {
+    "slug": "powerbanks-solares-aguantan-un-apagon-largo",
+    "image": "/images/editorial/realistic/powerbanks-solares-aguantan-un-apagon-largo.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-09-energia-solar.jpg",
+    "sha256": "2c407c73c02c42120347ba59b954a9079455a61eb8f579935eb78d3936e4a9da",
+    "bytes": 57784
+  },
+  {
+    "slug": "calor-extremo-de-2026-61-dias-bajo-ola-de-calor",
+    "image": "/images/editorial/realistic/calor-extremo-de-2026-61-dias-bajo-ola-de-calor.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/calor-extremo-verano-emergencia.jpg",
+    "sha256": "0f5a7d033d4468051579b3ef41ed795826e7d61021a9f7cd8f35f25d176688b6",
+    "bytes": 157986
+  },
+  {
+    "slug": "es-alert-por-que-a-veces-no-llega-a-tu-movil",
+    "image": "/images/editorial/realistic/es-alert-por-que-a-veces-no-llega-a-tu-movil.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/es-alert-no-llega-movil.jpg",
+    "sha256": "73d92691a38bfe151b3a727d95141e935ff3e7cf4f8c143ed65ab2995a2bde77",
+    "bytes": 121596
+  },
+  {
+    "slug": "semaforos-sin-luz-como-moverte-durante-un-apagon",
+    "image": "/images/editorial/realistic/semaforos-sin-luz-como-moverte-durante-un-apagon.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/semaforos-sin-luz-apagon.jpg",
+    "sha256": "6ba3bda00fcad878ba09f3e104fd9f6f264bc8206ba41b3674ee32ecba2dd03e",
+    "bytes": 96788
+  },
+  {
+    "slug": "generador-en-casa-normativa-y-peligros-que-debes-evitar",
+    "image": "/images/editorial/realistic/generador-en-casa-normativa-y-peligros-que-debes-evitar.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-generador-normativa.jpg",
+    "sha256": "838b55154a4bd17b5dbe4901ff2d76d0a55cb3771f4bd9277127ca57a08d06d0",
+    "bytes": 152168
+  },
+  {
+    "slug": "estaban-preparados-los-hogares-espanoles-para-el-apagon",
+    "image": "/images/editorial/realistic/estaban-preparados-los-hogares-espanoles-para-el-apagon.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-hogares-preparados.jpg",
+    "sha256": "580485d7f571ed2e69ad16bed4fb8bdbbbfb5bed07cf87b0ded589e9b86d1f43",
+    "bytes": 124522
+  },
+  {
+    "slug": "eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos",
+    "image": "/images/editorial/realistic/eclipse-del-12-de-agosto-de-2026-por-que-hubo-avisos.webp",
+    "origin": "NASA archive, 2017",
+    "previousSource": "/images/blog/cover-eclipse-nasa.jpg",
+    "sha256": "c415c619a4aadfc1c4432aae40d1a346bd8c243efe51e7a9977eadfd0bf14cf7",
+    "bytes": 22736
+  },
+  {
+    "slug": "5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro",
+    "image": "/images/editorial/realistic/5-mitos-de-supervivencia-que-pueden-ponerte-en-peligro.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/cover-mitos-cine.jpg",
+    "sha256": "aa6bc0b072437dde4efd41fbfccd59f737689b4b3028cc0159ff930fa0de00ef",
+    "bytes": 108758
+  },
+  {
+    "slug": "verano-de-2026-el-mas-calido-de-la-serie-en-espana",
+    "image": "/images/editorial/realistic/verano-de-2026-el-mas-calido-de-la-serie-en-espana.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/hogar-calor-natural.jpg",
+    "sha256": "61b82aec85a75b80118fd492b4fddb40711abc4f904d5aaec68d09f618157538",
+    "bytes": 108022
+  },
+  {
+    "slug": "mascotas-en-emergencias-apagon-calor-y-evacuacion",
+    "image": "/images/editorial/realistic/mascotas-en-emergencias-apagon-calor-y-evacuacion.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/mascotas-emergencias-evacuacion.jpg",
+    "sha256": "607d4636e0392193e23b8f6bdae3be1ed51c0c0ae4a1966f50301331f150abb7",
+    "bytes": 178358
+  },
+  {
+    "slug": "objetos-de-casa-que-pueden-ayudarte-en-una-emergencia",
+    "image": "/images/editorial/realistic/objetos-de-casa-que-pueden-ayudarte-en-una-emergencia.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/aportada-29-herramientas-supervivencia.jpg",
+    "sha256": "6e5d9d884334d1e989d1eecdc6de3fcac020fe54e3a4d268e7f0044930497644",
+    "bytes": 74140
+  },
+  {
+    "slug": "plantas-comestibles-y-peligrosas-que-se-pueden-confundir",
+    "image": "/images/editorial/realistic/plantas-comestibles-y-peligrosas-que-se-pueden-confundir.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/plantas-comestibles-peligrosas-confusion.jpg",
+    "sha256": "3f3662ed38f3623d7230655eb1a39c980ab9fb563bdddbf7c34146cc1dfec30f",
+    "bytes": 253164
+  },
+  {
+    "slug": "5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar",
+    "image": "/images/editorial/realistic/5-nudos-basicos-de-supervivencia-que-merece-la-pena-practicar.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/nudos-basicos-supervivencia-practica.jpg",
+    "sha256": "2bf5ccd10138f960afc499e630f58e79ff3874078e94d350b3fe74dc07b3ab60",
+    "bytes": 180192
+  },
+  {
+    "slug": "animales-venenosos-de-espana-cuales-hay-y-que-hacer",
+    "image": "/images/editorial/realistic/animales-venenosos-de-espana-cuales-hay-y-que-hacer.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/animales-venenosos-espana-prevencion.jpg",
+    "sha256": "67e94999ca64d418cee2afdc77beabc52204060df7275657469c5debdd97da89",
+    "bytes": 357872
+  },
+  {
+    "slug": "setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas",
+    "image": "/images/editorial/realistic/setas-comestibles-vs-toxicas-identificacion-sin-falsas-reglas.webp",
+    "origin": "Existing project archive, not documentary photography",
+    "previousSource": "/images/blog/setas-comestibles-toxicas-identificacion.jpg",
+    "sha256": "b1017805be3ec04df59ba90ad1a7a06ee36a292ea7d3902bfc20c391e5ea752c",
+    "bytes": 228126
+  },
+  {
+    "slug": "senderismo-principiantes-planificar-ruta",
+    "image": "/images/editorial/realistic/senderismo-principiantes-planificar-ruta.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Asset: wide 3:2 editorial cover for a Spanish hiking guide for beginners. Authentic documentary-style photograph of two ordinary adult hikers reading a trail sign at the start of a gentle marked Spanish mountain path, pine trees, open morning daylight, natural clothing, visible backpacks. Medium-wide eye-level composition with subjects in central two thirds so responsive crops retain them. Realistic skin, fabric and stone textures, clear detail, no dramatic grading. No text overlays, logos, collage, borders, illustrated diagrams, dangerous cliff edges, or watermark. This is an illustrative scene, not a documented real event.",
+    "sha256": "5a26a81bee5f5b819eecd78bb4f264ffe64f9c131b409b7c1f57dd9eb5f3610f",
+    "bytes": 333344
+  },
+  {
+    "slug": "hora-retorno-montana",
+    "image": "/images/editorial/realistic/hora-retorno-montana.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph for planning a hiking turnaround time. Close view of a real-looking adult hand wearing a plain analog wristwatch beside a folded paper trail map on a flat rock, a gentle mountain trail returning toward a village in the background. Late afternoon clear daylight, crisp natural textures, candid photographic realism, not glossy advertising. Watch and map centrally framed for mobile crops. No collage, illustration, overlaid text, brand marks, danger, watermark or fake emergency.",
+    "sha256": "24b0453725241765c59f2d39a2e30bd6c13db197f8fddf82641bded245ef589f",
+    "bytes": 289094
+  },
+  {
+    "slug": "capas-ropa-senderismo-frio-lluvia",
+    "image": "/images/editorial/realistic/capas-ropa-senderismo-frio-lluvia.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial hiking photograph. An adult woman on a broad safe forest trail fastening the zipper of a muted red waterproof jacket over a blue fleece, backpack beside her, damp leaves and soft cloudy daylight after rain. Mid-length candid composition, her jacket and hands clearly visible centrally; genuine textile detail, human proportions, natural skin and no studio gloss. Not the previous mountain/map scene. No text, logos, montage, snowstorm, dramatic danger, diagrams or watermark.",
+    "sha256": "83ce8ea817c642946aae26a656f03fc66a2a19deaa7b08fa9a6330fb5a8914cb",
+    "bytes": 237566
+  },
+  {
+    "slug": "mochila-dia-senderismo-lista",
+    "image": "/images/editorial/realistic/mochila-dia-senderismo-lista.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 overhead editorial photograph of a compact teal 25 litre day-hiking backpack open on a light gray stone picnic table, neatly arranged water bottle, rolled rain jacket, small headlamp, simple snack, folded map and whistle. No tactical equipment, no axe or weapon, no giant emergency stockpile. Clear soft daylight, realistic worn nylon and ordinary inexpensive equipment, intentional uncluttered arrangement, every main object inside central 80 percent. No labels or overlaid text, brands, illustration, collage or watermark.",
+    "sha256": "462bae40e5a78370ea56c0e24ca469b718005ae955bccf0a07dfd2af9d3f2d3f",
+    "bytes": 278210
+  },
+  {
+    "slug": "brujula-mapa-orientacion-basica",
+    "image": "/images/editorial/realistic/brujula-mapa-orientacion-basica.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial close-up of a transparent baseplate compass resting flat on an unfolded topographic map, a hiker's two natural hands orienting the map on a wooden outdoor table. Green forest blurred subtly behind, overcast neutral daylight, crisp compass and realistic map contours without readable place names. Physical objects correctly proportional, needle and baseplate visible, quiet practical scene. Main subject centered. No fantasy compass, dramatic mountains, text overlays, logos, diagrams, collage or watermark.",
+    "sha256": "15a128222ae2db445bfb7d432e8e1f269f1e093d9f1dad0e27a26bd39d8a94e0",
+    "bytes": 159630
+  },
+  {
+    "slug": "comida-senderismo-sin-cocinar",
+    "image": "/images/editorial/realistic/comida-senderismo-sin-cocinar.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial food photograph: simple no-cook hiking lunch on a clean cloth at a sunny meadow picnic spot, a reusable lunchbox with sandwich, apple, small sealed bag of nuts, plain water bottle, backpack softly visible. Top-down angled camera, appetising but ordinary realistic portions, fresh food, natural midday colors. Subjects in central area for thumbnail readability. No stove or fire, no products or brand packaging, text, collage, illustration, watermark.",
+    "sha256": "de10bd38b4b1d3702e67683dec9d6afb2e50c164cf75704783428d4d0ef56cac",
+    "bytes": 366344
+  },
+  {
+    "slug": "revision-mensual-preparacion-familiar",
+    "image": "/images/editorial/realistic/revision-mensual-preparacion-familiar.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of an older adult and adult daughter checking dates on a modest household emergency supply shelf, reusable water containers, canned food and LED light, a plain paper checklist on a clipboard. Bright ordinary Spanish utility room, realistic shelves and lived-in surfaces, daylight from side, central people and supplies clearly visible. Different scene from mountain or backpack flat lays. No tactical uniforms, hoarding, identifiable brands, legible personal information, captions, collage, illustration or watermark.",
+    "sha256": "df3104f3d1ab350ffdd6f0cc7659319468649fd76daa32996ad0de40bbfa07e0",
+    "bytes": 170578
+  },
+  {
+    "slug": "terremoto-plan-familiar",
+    "image": "/images/editorial/realistic/terremoto-plan-familiar.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph for earthquake preparation, NOT a disaster reportage. Calm bright apartment hallway, an adult checking that a tall bookcase is secured to the wall with a visible furniture restraint, sturdy shoes and compact emergency bag ready near the exit, no furniture blocking route. Natural documentary light, realistic modest Spanish home, central activity clearly readable. No earthquake damage, falling objects, frightened people, drill action, dramatic effects, text overlay, logo, diagram or watermark.",
+    "sha256": "6230be016816b770b7a1edabbbcd3956076b194f687b10291436b2d95bb95f2c",
+    "bytes": 121716
+  },
+  {
+    "slug": "tormenta-electrica-montana",
+    "image": "/images/editorial/realistic/tormenta-electrica-montana.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 landscape editorial photograph of dark approaching storm clouds above a Spanish mountain valley, seen safely from inside a closed mountain visitor centre through a large window. A rain jacket hung indoors and plain weather radio on windowsill establish sheltered observation. Crisp view of valley, realistic subdued daylight but legible details. No people outside, no spectacular lightning bolts, no shelter under trees, no disaster damage, no text, illustration, collage, logo or watermark.",
+    "sha256": "455b75f79c83da00c617bd9b64397ced7716b4fc2debcf497dda2f9551efce3b",
+    "bytes": 166712
+  },
+  {
+    "slug": "fuego-bushcraft-seguro-permisos-yesca",
+    "image": "/images/editorial/realistic/fuego-bushcraft-seguro-permisos-yesca.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial close-up photograph for responsible bushcraft preparation: UNLIT ferro rod with separate scraper, small sealed container of dry tinder and folded plain fire-permit paperwork on a bare stone outdoor campsite worktop. A closed water bottle nearby. No flame, no spark, no fire pit or blade, no dry vegetation nearby. Soft natural daylight, realistic handled equipment and neutral green distant background, crisp central still life, distinct from backpacks. No readable text, logos, illustration, montage or watermark.",
+    "sha256": "239c79686ddbbe10fbdb988d84587e4336c9a82dc5213aa068654c8cbfe8efc6",
+    "bytes": 202796
+  },
+  {
+    "slug": "hornillo-camping-monoxido-carbono",
+    "image": "/images/editorial/realistic/hornillo-camping-monoxido-carbono.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a compact camping gas stove SWITCHED OFF and disconnected from its capped fuel canister on a bare level stone table in a completely open campsite, metal pot beside it, open air visible in every direction. No tent, room, tarp, garage, flame, combustion or demonstration. Realistic small utilitarian equipment, morning light, central still-life with visible safe surroundings, not an advertisement or how-to schematic. No text, logo, collage, illustration or watermark.",
+    "sha256": "0f29c85c1101b566387074d40519d7471c3259c57c8163c95dcbfacf27e8c8b8",
+    "bytes": 226096
+  },
+  {
+    "slug": "vivac-emergencia-manta-termica",
+    "image": "/images/editorial/realistic/vivac-emergencia-manta-termica.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 realistic editorial photograph at an outdoor training session: an adult seated comfortably on an insulating foam pad in a flat sheltered mountain meadow with a silver emergency blanket draped around shoulders, face uncovered, regular warm hiking layers, compact backpack beside. Clear dry early evening light, mountains distant, no injury, no dramatic rescue or cold suffering, no shelter construction, no fire. Subject central and fully readable for mobile thumbnail. No text, logos, diagrams, collage or watermark.",
+    "sha256": "a48dd23a3ad4cc8ca636dfeacac591a344667f1f4a857c834c830f1d94cb6bac",
+    "bytes": 225082
+  },
+  {
+    "slug": "higiene-sin-agua-vivienda",
+    "image": "/images/editorial/realistic/higiene-sin-agua-vivienda.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a modest bathroom preparation shelf for a temporary water interruption: capped clean water container with tap CLOSED, liquid hand soap, folded clean towels, basin, toilet paper and small waste bags. Bright white and sage bathroom, natural window light, realistic everyday affordable supplies and tidy surfaces, no person demonstrating hygiene, no excessive stockpile. Central arrangement, clear texture, no readable labels, brand logos, text overlay, diagram, collage or watermark.",
+    "sha256": "49fa2f0548cf2b058891bbb61b03b2a222e6397cdd8e226d4d70eccdca8ab341",
+    "bytes": 157336
+  },
+  {
+    "slug": "cuchillo-bushcraft-uso-seguro",
+    "image": "/images/editorial/realistic/cuchillo-bushcraft-uso-seguro.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial still-life photograph for safe bushcraft tool storage. A modest wooden-handled outdoor utility knife FULLY INSIDE its closed fitted sheath on a plain workbench, sturdy work gloves beside, small wood offcuts safely separate, first-aid pouch softly behind. No exposed blade, no hand holding tool, no weapon pose, no cutting demonstration. Real material texture, neutral workshop daylight, plain practical equipment, central readable layout. No logos, captions, collage, diagram or watermark.",
+    "sha256": "c5504ef3f6e4699db76b0c596fb4e85684eb73ba5e52a4b3a5c94920d03ae262",
+    "bytes": 169564
+  },
+  {
+    "slug": "ampollas-senderismo-prevencion",
+    "image": "/images/editorial/realistic/ampollas-senderismo-prevencion.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of a hiker on a park bench checking the fit of a hiking boot before a walk, clean hiking socks and small packet of blister dressing set beside on bench. Focus on fully clothed lower legs, hands and footwear, safe ordinary trailhead setting, soft morning light, realistic worn leather and fabric. No bare foot close-up, no wound, blood, treatment procedure or medical claim. Clear central framing. No logos, text, illustration, collage or watermark.",
+    "sha256": "c83ff4bd93de15352dda5d76ab40230819e76b3dfccc48aab1e0004ae76f8a88",
+    "bytes": 208076
+  },
+  {
+    "slug": "emergencia-trabajo-volver-casa",
+    "image": "/images/editorial/realistic/emergencia-trabajo-volver-casa.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of a commuter in an ordinary Spanish office reviewing a paper city map beside a small everyday work bag, walking shoes, water bottle and phone on a desk. City street visible through window in calm afternoon daylight, no disaster visible. Medium-wide side view, real fabric and office textures, central props clear. Distinct urban setting, not outdoor hiking. No text overlay, map labels readable, logos, collage, diagram or watermark.",
+    "sha256": "76efe3b22bbd4a29acad8d45d94d9f5e0a60f5509a5b7c33bf253c082e533e3a",
+    "bytes": 153196
+  },
+  {
+    "slug": "espana-2030-calor-sequia-inundaciones",
+    "image": "/images/editorial/realistic/espana-2030-calor-sequia-inundaciones.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial environmental photograph of a typical Spanish residential street after a short summer rain, wet paving, modest houses with lowered sun shutters, a rain barrel in one courtyard and dry hills visible in distance. Clear natural late afternoon light, realistic Mediterranean setting and textures. No floodwater, destruction, emergency workers, misleading real-event claim or split-screen collage. Quiet visible climate adaptation, no people in danger, text overlay, logo or watermark.",
+    "sha256": "559cf295087046c8cd6795d857048c6c906fc209b37e0bfed8b4414a7db3f252",
+    "bytes": 299828
+  },
+  {
+    "slug": "desinformacion-emergencias-deepfakes-alertas-falsas",
+    "image": "/images/editorial/realistic/desinformacion-emergencias-deepfakes-alertas-falsas.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a woman at a light kitchen table checking a forwarded message on a smartphone while consulting a separate laptop and a handwritten note, radio nearby. Screens show abstract blurred interface blocks ONLY, no readable claims, logos or fake alerts. Thoughtful calm expression, modern ordinary Spanish home, neutral morning light, natural skin and paper texture. Camera over shoulder, central hands and devices, not dramatic hacker imagery. No text overlay, diagram, collage or watermark.",
+    "sha256": "b39e17497be9dd42b9bcd5b51b279133d960fd0caa5d2647fe16de2f72a6a726",
+    "bytes": 133122
+  },
+  {
+    "slug": "primeras-24-horas-gran-emergencia",
+    "image": "/images/editorial/realistic/primeras-24-horas-gran-emergencia.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a small household readiness station on a bright dining table: plain analog clock, LED lantern switched on, paper contact sheet with unreadable writing, capped water bottle, compact first-aid pouch and phone. Two adults softly out of focus calmly organising the room in background. Natural daylight with practical illumination, no actual disaster, no panic or staged damage. Balanced clear central objects, realistic textures, no logos, text overlay, diagram, collage or watermark.",
+    "sha256": "70bb65fbbcc10e5dbace060616b4da894690f195eb35399bfe8ca6ba3be4e5e6",
+    "bytes": 122596
+  },
+  {
+    "slug": "lluvia-autoconsumo-generadores-normativa",
+    "image": "/images/editorial/realistic/lluvia-autoconsumo-generadores-normativa.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial architectural photograph of an ordinary Spanish house courtyard with a rainwater barrel connected to a downpipe, closed lid and closed tap, roof solar panels visible above, simple folder of paperwork on a small outdoor table. Bright cloudy daylight, realistic terracotta and stone textures, tidy but not luxurious. No electric generator in enclosed space, wiring instructions, drinking collected water, labels, logos, montage, diagram or watermark. Not a real installation certification.",
+    "sha256": "e229431f3a530f01226484a7d1329d69b3e4a8d1fb94bda9ae896f30cbc2a62c",
+    "bytes": 215604
+  },
+  {
+    "slug": "que-debe-incluir-aplicacion-supervivencia-offline",
+    "image": "/images/editorial/realistic/que-debe-incluir-aplicacion-supervivencia-offline.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial close photograph of an ordinary smartphone lying beside a compact field notebook, folded local map and small powerbank on a light kitchen table. The screen shows a simple generic grid of muted offline-tool icons without text or any identifiable app UI; no fabricated product claims. Warm natural daylight, real fingerprints and paper textures, main phone central and easy to recognize at thumbnail size. No text overlay, brands, screenshots collage, illustration or watermark.",
+    "sha256": "b402f1ee68dfeda5bf9ec61c3b6b2f13874bb5bf1d3c3aba0b379097f9bde127",
+    "bytes": 130468
+  },
+  {
+    "slug": "que-es-archivo-mbtiles",
+    "image": "/images/editorial/realistic/que-es-archivo-mbtiles.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a laptop on a gray home-office desk displaying an abstract topographic map without readable names, USB memory drive beside and a phone showing the same general terrain map. Close over-shoulder view of an adult checking the devices, no brand UI, no fabricated app screenshot. Cool natural side light, clear real hardware and paper textures, not a cyberattack stock photo. Central laptop and USB visible. No text overlay, logo, collage, diagram or watermark.",
+    "sha256": "5118a198b5d650fd1214a4395c06e5072e6c0d7302668998f3b3269c6d67d365",
+    "bytes": 148656
+  },
+  {
+    "slug": "kit-emergencia-personas-mayores",
+    "image": "/images/editorial/realistic/kit-emergencia-personas-mayores.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of an older man with glasses and his adult daughter calmly organising an accessible emergency bag at a bright dining table, glasses case, hearing-aid case, plain medication pouch with no legible labels, water and written contact card. No medical treatment, exposed pills, patient distress or healthcare uniform. Natural ordinary home, clear central faces and practical objects, realistic skin and fabric detail. No brand, text overlay, collage, diagram or watermark.",
+    "sha256": "aa62cc91603514413dd59fc14108542fcb0d02a437250bab2f6ef44dd0646162",
+    "bytes": 168562
+  },
+  {
+    "slug": "rutas-evacuacion-mapas-offline",
+    "image": "/images/editorial/realistic/rutas-evacuacion-mapas-offline.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph, close overhead view of two simple colored pencils marking alternative routes on a generic paper town map beside house keys, a plain compass and compact packed bag near a home entryway. No readable road names or fabricated official evacuation diagram. Bright practical daylight, realistic pencil and folded paper texture, central map and hands of one adult visible, quiet planning not active emergency. No text overlay, logos, collage, illustration or watermark.",
+    "sha256": "134aa9d270febcd7e0b75246cb46c946796803c2da51538f30a969f52a56a1e7",
+    "bytes": 149090
+  },
+  {
+    "slug": "senales-sos-comunicacion-visual",
+    "image": "/images/editorial/realistic/senales-sos-comunicacion-visual.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 macro editorial equipment photograph of a bright orange safety whistle, small signaling mirror reflecting sky, and compact headlamp on a dark gray flat rock at a trailhead. All items static, no signaling toward aircraft or road, no invented distress code. Crisp natural outdoor light, highly realistic metal, plastic and cord texture, uncluttered central subject with enough surroundings, distinctly different from map scenes. No text, logos, illustrations, collage or watermark.",
+    "sha256": "dfbcab01e339fa4643efc7bf3e1d32c0611a000da61d1f965948807a24239f0e",
+    "bytes": 262626
+  },
+  {
+    "slug": "gestion-alimentos-sin-electricidad",
+    "image": "/images/editorial/realistic/gestion-alimentos-sin-electricidad.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial kitchen photograph of shelf-stable food laid out on a cool light countertop: sealed tins, crackers, jars and manual can opener, a small plain refrigerator thermometer nearby, closed white refrigerator in background. No raw meat, open spoiled food, cooking flame or unsafe storage demonstration. Neutral soft daylight, ordinary modest Spanish kitchen, clear realistic food containers without branding or readable labels. Central composition, no text overlay, collage, diagram or watermark.",
+    "sha256": "5d601ec2f5a383d1174068a970b5998b6f10f278845ce2c10236b2e68c196b14",
+    "bytes": 147092
+  },
+  {
+    "slug": "refugio-temporal-casa-frio-calor",
+    "image": "/images/editorial/realistic/refugio-temporal-casa-frio-calor.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a calm lived-in home room prepared for a temporary power interruption, thick blankets neatly folded on a sofa, rug, closed sun shutters admitting soft daylight, capped water bottles and small LED lamp on a side table. Ordinary apartment, textured fabrics, clear room details, comfortable but realistic. No heater, combustion, candles, fire, dramatic blackout or luxury decor. Distinct wide interior composition, no text, logos, collage, diagram or watermark.",
+    "sha256": "f36a489b5331f1e5e68c3faf16073d7740524dc7730038c63dd821e46008cbf6",
+    "bytes": 212028
+  },
+  {
+    "slug": "simulacro-familiar-emergencia-30-minutos",
+    "image": "/images/editorial/realistic/simulacro-familiar-emergencia-30-minutos.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of a family with two adults and one school-aged child practising a calm household checklist together in a hallway. One adult holds a plain clipboard, child locates a small LED flashlight on an accessible shelf, another adult checks a backpack. Everyday clothing, reassuring relaxed interaction, bright natural daylight. No alarm, real emergency, uniforms or distress. Mid-wide composition with all subjects centrally readable, no labels, overlaid text, logos, diagram, collage or watermark.",
+    "sha256": "37310b7170baa3fb24f63a621fa0232f4e66423cc6f442e2b23128ae5817bc9a",
+    "bytes": 160538
+  },
+  {
+    "slug": "linterna-frontal-vs-de-mano-para-un-apagon",
+    "image": "/images/editorial/realistic/linterna-frontal-vs-de-mano-para-un-apagon.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial comparison photograph of two ordinary lights, a blue headlamp with elastic strap and black handheld LED flashlight, side by side on a plain light gray tabletop with spare batteries. Both switched OFF, whole objects visible, natural window light and crisp functional materials, no glossy advertising, scientific test claims or branded products. Tight central still-life with generous margins for mobile crops. No candles, flames, text, logos, collage, diagram or watermark.",
+    "sha256": "a629cf889d3d5c6e6087199098ed0329d96aa6ff2a6528640d3364a149b73ba4",
+    "bytes": 123228
+  },
+  {
+    "slug": "dana-aviso-naranja-o-rojo-que-debes-hacer",
+    "image": "/images/editorial/realistic/dana-aviso-naranja-o-rojo-que-debes-hacer.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a hand holding a phone with an abstract orange weather warning block, no readable text or official logo, from inside a closed apartment window overlooking heavy rain on an empty Spanish street. Radio and folded jacket on the sill, interior clearly safe and dry. Natural gray daylight, legible real surfaces, no flood, destruction, vehicles in water or real-event claim. No text overlay, montage, diagram or watermark.",
+    "sha256": "74abc74c78bc312576f07798011c6c16f8e550b92d51b6f9e7b5c7ddb0c226a7",
+    "bytes": 184782
+  },
+  {
+    "slug": "viviendas-y-riesgo-de-incendio-forestal-ley-en-2026",
+    "image": "/images/editorial/realistic/viviendas-y-riesgo-de-incendio-forestal-ley-en-2026.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a modest rural Spanish house at the edge of pine woodland, clear stone access path, clean gutters, no vegetation touching facade, adult standing calmly with a maintenance notebook. Bright neutral late-spring daylight, real architecture and landscape details, house and woodland readable together. No fire, smoke, flames, firefighting, disaster damage, legal certification or before-after collage. No text overlay, logos, illustration or watermark.",
+    "sha256": "820baa4fde3bab99096c7508cca955ddeb03bbae2d8360c7d61ddfead008f2e8",
+    "bytes": 390242
+  },
+  {
+    "slug": "evacuacion-de-vivienda-checklist-paso-a-paso",
+    "image": "/images/editorial/realistic/evacuacion-de-vivienda-checklist-paso-a-paso.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of an apartment entry bench with an organised zipped emergency backpack, waterproof document pouch closed, house keys, sturdy closed shoes and a compact pet carrier to one side. Doorway unobstructed, cool early-morning daylight, no person, no fire, smoke, danger or dramatic emergency. Clear functional objects with realistic worn materials, a different overhead angled composition from previous hallway scenes. No text, logos, collage, illustration or watermark.",
+    "sha256": "e68a3663639cdc649f25693940554298a2fde60b8f78552a739dcbcbdcbbb3b6",
+    "bytes": 227226
+  },
+  {
+    "slug": "sin-cobertura-movil-como-comunicarte-de-verdad",
+    "image": "/images/editorial/realistic/sin-cobertura-movil-como-comunicarte-de-verdad.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of two adult walkers at a rural trail car park checking simple handheld radios before departure, paper contact card and a phone lying on a low stone wall. Fully clothed ordinary hikers, no uniforms or tactical pose. Soft cloudy daylight, realistic skin and equipment, clear main subjects and distinct lowland rural background. No transmission frequency labels, rescue claim, text overlay, brand, diagram, collage or watermark.",
+    "sha256": "f603a6824588d7dfa16d3e523f2877179117b7bc08a2c0b49fa422ded749e7df",
+    "bytes": 205356
+  },
+  {
+    "slug": "preppers-espanoles-que-aprendieron-del-gran-apagon",
+    "image": "/images/editorial/realistic/preppers-espanoles-que-aprendieron-del-gran-apagon.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 candid editorial photograph of three ordinary Spanish neighbours of different ages seated at a community table discussing household readiness, compact radio, paper checklist, sealed water bottle and LED light between them. Bright realistic community room, relaxed cooperative atmosphere and natural human expressions, no tactical gear, hoarding, uniforms or disaster scene. Wider eye-level composition distinct from two-person family kitchen scenes. No logos, overlaid text, collage, diagram or watermark.",
+    "sha256": "f50e2415295a47c725a30f0dde234963d7dd585d28e0e626dedcc16569cdc9f4",
+    "bytes": 161956
+  },
+  {
+    "slug": "como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas",
+    "image": "/images/editorial/realistic/como-hacer-mas-segura-el-agua-sin-filtro-ni-pastillas.webp",
+    "origin": "AI illustrative photography",
+    "prompt": "Use case: photorealistic-natural. Wide 3:2 editorial photograph of a stainless steel pot with lid beside a clean capped water container on a plain home kitchen countertop, a folded clean cloth and sink in background. The stove is switched off; no procedural boiling demonstration, chemical mixing, dosage, untreated drinking or claim of potability. Clear neutral morning daylight, everyday realistic water-preparation equipment, central objects with natural metal reflections, different from outdoor filter scenes. No text, labels, logo, collage, diagram or watermark.",
+    "sha256": "64c8757b4ab36ca06d43066c2c350833d644a4d0e89fbc85f3bb0ea80590c4c8",
+    "bytes": 92018
+  }
+]

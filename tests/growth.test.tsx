@@ -111,7 +111,8 @@ describe('original growth content', () => {
       for (const item of post.faq!) expect(doc.body.textContent).toContain(item.answer);
       expect(schema.some(item => item['@type'] === 'Article')).toBe(true);
       expect(schema.some(item => item['@type'] === 'BreadcrumbList')).toBe(true);
-      expect(post.imageCredit?.license).toBe('CC BY 4.0');
+      expect(post.imageCredit?.license).toBe('Imagen ilustrativa generada con IA');
+      expect(post.image).toMatch(/^\/images\/editorial\/realistic\/.+\.webp$/);
       expect(existsSync(`public${post.imageCredit!.source}`)).toBe(true);
       expect(markup).toContain(`href="${post.imageCredit!.source}"`);
       const metadata = await generateMetadata({ params: Promise.resolve({ slug: post.slug }) });

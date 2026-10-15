@@ -29,13 +29,13 @@ export function ResponsiveImage({
   const srcSet = webpSrcSet(src, widths);
 
   if (!srcSet) {
-    return <img {...props} src={src} alt={alt} sizes={sizes} />;
+    return <img decoding="async" {...props} src={src} alt={alt} sizes={sizes} />;
   }
 
   return (
     <picture>
       <source type="image/webp" srcSet={srcSet} sizes={sizes} />
-      <img {...props} src={src} alt={alt} sizes={sizes} />
+      <img decoding="async" {...props} src={src} alt={alt} sizes={sizes} />
     </picture>
   );
 }

@@ -16,6 +16,7 @@ export function ContentCard({ item }: { item: PortalItem }) {
             alt={item.alt || item.title}
             width={576}
             height={360}
+            widths={[240, 360, 576, 960]}
             loading="lazy"
             sizes="(max-width:700px) 92vw, (max-width:1050px) 44vw, 360px"
           />
